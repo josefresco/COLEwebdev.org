@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 44" fill="none" aria-label="Bucking bronco">
+
+  <!-- Body: tilted ellipse — rear upper-right, chest lower-left -->
+  <ellipse cx="26" cy="22" rx="15" ry="7" transform="rotate(-28 26 22)" fill="#5CC035"/>
+
+  <!-- Neck + Head (curves down-left from chest) -->
+  <path d="M 15,28 C 11,26 7,27 5,30 C 3,33 3,37 5,39 C 7,41 10,41 12,39 C 14,36 14,32 15,29 Z" fill="#5CC035"/>
+
+  <!-- Front legs (hanging down from chest) -->
+  <rect x="14" y="29" width="4" height="13" rx="2" fill="#5CC035" transform="rotate(-8 16 29)"/>
+  <rect x="19" y="29" width="4" height="13" rx="2" fill="#5CC035" transform="rotate(5 21 29)"/>
+
+  <!-- Rear legs (kicked up) -->
+  <rect x="34" y="6" width="4" height="12" rx="2" fill="#5CC035" transform="rotate(-22 36 18)"/>
+  <rect x="38" y="4" width="4" height="14" rx="2" fill="#5CC035" transform="rotate(-12 40 18)"/>
+
+  <!-- Tail -->
+  <path d="M 38,14 C 42,8 44,4 44,2" stroke="#5CC035" stroke-width="3" stroke-linecap="round" fill="none"/>
+
+</svg>
