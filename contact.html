@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact — COLEwebdev · Cape Cod Web Design</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+<style>
+/* ── Contact page ── */
+
+/* Intro */
+.ct-intro {
+  padding: 72px 0 0;
+  background: var(--paper);
+}
+.ct-intro-hl {
+  font-family: var(--serif);
+  font-size: clamp(48px, 7vw, 96px);
+  line-height: 1;
+  margin: 14px 0 0;
+  color: var(--ink);
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: -2px;
+}
+
+/* Main grid */
+.ct-main {
+  padding: 56px 0 var(--pad-section);
+  background: var(--paper);
+}
+.ct-grid {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 64px;
+  align-items: start;
+}
+
+/* ── Info panel ── */
+.ct-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: sticky;
+  top: 100px;
+}
+.ct-info-block {
+  padding: 24px 0;
+  border-bottom: 1px solid var(--line);
+}
+.ct-info-block:first-child { padding-top: 0; }
+.ct-info-block:last-child { border-bottom: none; }
+
+.ct-info-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+.ct-phone {
+  font-family: var(--serif);
+  font-size: clamp(28px, 3vw, 38px);
+  color: var(--ink);
+  font-style: italic;
+  line-height: 1.1;
+  text-decoration: none;
+  display: block;
+  transition: color 0.15s;
+}
+.ct-phone:hover { color: var(--brand-blue); }
+
+.ct-detail {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--ink-2);
+}
+.ct-detail a {
+  color: var(--brand-blue);
+  text-decoration: none;
+}
+.ct-detail a:hover { text-decoration: underline; }
+
+.ct-hours-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--ink-2);
+}
+.ct-hours-label { font-weight: 500; color: var(--ink); }
+
+.ct-bronco {
+  margin-top: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--brand-green);
+  background: rgba(92, 192, 53, 0.08);
+  border: 1px solid rgba(92, 192, 53, 0.2);
+  border-radius: 999px;
+  padding: 5px 12px;
+}
+.ct-bronco::before { content: '🤙'; font-style: normal; }
+
+/* ── Form ── */
+.ct-form-wrap {
+  background: white;
+  border-radius: var(--r-xl);
+  padding: 44px 48px 48px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--line);
+}
+.ct-form-title {
+  font-family: var(--serif);
+  font-size: 26px;
+  margin: 0 0 6px;
+  font-weight: 400;
+  color: var(--ink);
+}
+.ct-form-sub {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 0 0 32px;
+}
+.ct-form-sub a { color: var(--brand-blue); text-decoration: none; }
+.ct-form-sub a:hover { text-decoration: underline; }
+
+.ct-form { display: flex; flex-direction: column; gap: 20px; }
+
+.ct-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+.ct-field { display: flex; flex-direction: column; gap: 6px; }
+
+.ct-label {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 500;
+}
+.ct-label .req { color: var(--brand-blue); margin-left: 2px; }
+
+.ct-input,
+.ct-textarea {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1.5px solid var(--line-2);
+  border-radius: var(--r-sm);
+  font-family: var(--sans);
+  font-size: 15px;
+  color: var(--ink);
+  background: var(--paper);
+  transition: border-color 0.15s, background 0.15s;
+  outline: none;
+  box-sizing: border-box;
+  appearance: none;
+}
+.ct-input:focus,
+.ct-textarea:focus {
+  border-color: var(--brand-blue);
+  background: white;
+}
+.ct-input.error,
+.ct-textarea.error { border-color: #dc2626; }
+
+.ct-textarea {
+  resize: vertical;
+  min-height: 120px;
+  line-height: 1.6;
+}
+
+/* Checkbox */
+.ct-check-wrap {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+}
+.ct-check {
+  width: 18px;
+  height: 18px;
+  border: 1.5px solid var(--line-2);
+  border-radius: 4px;
+  flex-shrink: 0;
+  margin-top: 1px;
+  cursor: pointer;
+  accent-color: var(--brand-blue);
+}
+.ct-check-label {
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--ink-2);
+  cursor: pointer;
+}
+
+/* CAPTCHA */
+.ct-captcha {
+  background: var(--paper-2);
+  border: 1px solid var(--line-2);
+  border-radius: var(--r-md);
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.ct-captcha-q {
+  font-size: 13.5px;
+  color: var(--ink-2);
+  line-height: 1.5;
+}
+.ct-captcha-q strong { color: var(--ink); }
+.ct-captcha-input {
+  width: 80px;
+  padding: 8px 12px;
+  border: 1.5px solid var(--line-2);
+  border-radius: var(--r-sm);
+  font-family: var(--sans);
+  font-size: 15px;
+  color: var(--ink);
+  background: white;
+  outline: none;
+  transition: border-color 0.15s;
+}
+.ct-captcha-input:focus { border-color: var(--brand-blue); }
+.ct-captcha-input.error { border-color: #dc2626; }
+
+/* Error message */
+.ct-error-msg {
+  font-size: 12px;
+  color: #dc2626;
+  margin-top: 2px;
+}
+
+/* Submit */
+.ct-submit-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding-top: 4px;
+}
+.ct-submit-note {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+/* Success state */
+.ct-success {
+  text-align: center;
+  padding: 48px 24px;
+}
+.ct-success-icon {
+  width: 56px;
+  height: 56px;
+  background: var(--brand-green);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 24px;
+}
+.ct-success-hl {
+  font-family: var(--serif);
+  font-size: 28px;
+  color: var(--ink);
+  margin: 0 0 10px;
+  font-weight: 400;
+  font-style: italic;
+}
+.ct-success-body {
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.65;
+  max-width: 36ch;
+  margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .ct-grid { grid-template-columns: 1fr; gap: 40px; }
+  .ct-info { position: static; }
+  .ct-form-wrap { padding: 32px 28px 36px; }
+}
+@media (max-width: 560px) {
+  .ct-row { grid-template-columns: 1fr; }
+  .ct-intro-hl { letter-spacing: -1px; }
+}
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="parts-hero.jsx"></script>
+<script type="text/babel" src="parts-services.jsx"></script>
+<script type="text/babel" src="parts-rest.jsx"></script>
+<script type="text/babel" src="contact-page.jsx"></script>
+</body>
+</html>
