@@ -155,19 +155,20 @@ function ProcessPage() {
       <Header />
 
       {/* ── Hero ── */}
-      <section className="proc-hero">
-        <div ref={heroRef} className="proc-hero-bg" />
-        <div className="proc-hero-overlay" />
-        <div className="proc-hero-content shell">
-          <span className="eyebrow">How we work</span>
-          <h1 className="proc-hero-hl">
-            A process built on <em>honesty</em> and craft.
-          </h1>
-          <p className="proc-hero-sub">
-            Each project is unique — many take varying paths to a successful launch. But this is the process we've refined over 20 years that works best for our clients: transparent, collaborative, and always moving forward.
-          </p>
+      <div className="proc-hero">
+        <div ref={heroRef} className="proc-hero-img" />
+        <div className="proc-hero-text">
+          <div className="shell">
+            <span className="eyebrow">How we work</span>
+            <h1 className="proc-hero-hl">
+              A process built on <em>honesty</em> and craft.
+            </h1>
+            <p className="proc-hero-sub">
+              Each project is unique — many take varying paths to a successful launch. But this is the process we've refined over 20 years that works best for our clients: transparent, collaborative, and always moving forward.
+            </p>
+          </div>
         </div>
-      </section>
+      </div>
 
       {/* ── Steps 1–6 ── */}
       {STEPS.map((step, i) => (
