@@ -118,7 +118,7 @@ function ContactPage() {
                   <span>2 – 5 pm by appt.</span>
                 </div>
                 <span className="ct-bronco">
-                  <img src="assets/bronco.svg" alt="" className="ct-bronco-img" aria-hidden="true" />
+                  <img src="assets/horse.png" alt="" className="ct-bronco-img" aria-hidden="true" />
                   If you see our Bronco, we're here
                 </span>
               </div>
