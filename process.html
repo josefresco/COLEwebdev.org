@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Our Process — COLEwebdev · Cape Cod Web Design</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+<style>
+/* ── Process page ── */
+
+/* Hero */
+.proc-hero {
+  position: relative;
+  min-height: 72vh;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+.proc-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('https://www.colewebdev.com/wp-content/uploads/2020/05/colewebdev-website-design-build-cape-cod-sunrise-2020-2.jpg');
+  background-size: cover;
+  background-position: center 40%;
+  transform: scale(1.03);
+  transition: transform 8s ease;
+}
+.proc-hero-bg.loaded { transform: scale(1); }
+.proc-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(14, 42, 68, 0.88) 0%,
+    rgba(14, 42, 68, 0.45) 55%,
+    rgba(14, 42, 68, 0.15) 100%
+  );
+}
+.proc-hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 80px 0 72px;
+  color: white;
+}
+.proc-hero-content .eyebrow { color: var(--brand-green); }
+.proc-hero-content .eyebrow::before { background: var(--brand-green); }
+.proc-hero-hl {
+  font-family: var(--serif);
+  font-size: clamp(40px, 6vw, 76px);
+  line-height: 1.1;
+  margin: 16px 0 20px;
+  font-weight: 400;
+  max-width: 14ch;
+}
+.proc-hero-hl em { font-style: italic; color: rgba(255,255,255,0.75); }
+.proc-hero-sub {
+  font-size: clamp(15px, 1.6vw, 17px);
+  color: rgba(255,255,255,0.75);
+  max-width: 52ch;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Step sections */
+.proc-step {
+  padding: var(--pad-section) 0;
+  position: relative;
+  overflow: hidden;
+}
+.proc-step:nth-child(even) { background: white; }
+
+.proc-step-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: center;
+}
+.proc-step:nth-child(even) .proc-step-inner { direction: rtl; }
+.proc-step:nth-child(even) .proc-step-text { direction: ltr; }
+.proc-step:nth-child(even) .proc-step-media { direction: ltr; }
+
+/* Watermark number */
+.proc-watermark {
+  position: absolute;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(160px, 22vw, 280px);
+  line-height: 1;
+  color: var(--navy);
+  opacity: 0.04;
+  top: -20px;
+  right: -20px;
+  pointer-events: none;
+  user-select: none;
+  letter-spacing: -8px;
+}
+.proc-step:nth-child(even) .proc-watermark { right: auto; left: -20px; }
+
+.proc-step-num {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--brand-blue);
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.proc-step-num::after {
+  content: '';
+  flex: 1;
+  max-width: 40px;
+  height: 1px;
+  background: var(--brand-blue);
+  opacity: 0.4;
+}
+.proc-step-title {
+  font-family: var(--serif);
+  font-size: clamp(28px, 3.5vw, 44px);
+  line-height: 1.15;
+  margin: 0 0 20px;
+  color: var(--ink);
+  font-weight: 400;
+}
+.proc-step-body {
+  font-size: clamp(15px, 1.4vw, 16px);
+  line-height: 1.75;
+  color: var(--ink-2);
+  max-width: 46ch;
+}
+.proc-step-body + .proc-step-body {
+  margin-top: 16px;
+}
+.proc-step-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 22px;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: var(--brand-green);
+  color: white;
+  padding: 5px 12px;
+  border-radius: 999px;
+}
+
+/* Step image */
+.proc-step-media {
+  position: relative;
+}
+.proc-step-img {
+  width: 100%;
+  border-radius: var(--r-xl);
+  box-shadow: var(--shadow-lg);
+  display: block;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+
+/* Production section */
+.proc-production {
+  background: var(--navy);
+  padding: var(--pad-section) 0;
+  position: relative;
+  overflow: hidden;
+}
+.proc-production::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent, transparent 40px,
+    rgba(255,255,255,0.015) 40px, rgba(255,255,255,0.015) 41px
+  );
+}
+.proc-production .eyebrow { color: var(--brand-green); }
+.proc-production .eyebrow::before { background: var(--brand-green); }
+.proc-production-hl {
+  font-family: var(--serif);
+  font-size: clamp(28px, 3.5vw, 44px);
+  color: white;
+  margin: 14px 0 0;
+  font-weight: 400;
+}
+.proc-production-sub {
+  color: rgba(255,255,255,0.65);
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 52ch;
+  margin: 14px 0 56px;
+}
+.proc-phases {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--gap-card);
+}
+.proc-phase {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--r-lg);
+  padding: 32px 24px 28px;
+  text-align: center;
+  backdrop-filter: blur(4px);
+}
+.proc-phase-img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  margin: 0 auto 20px;
+  display: block;
+  filter: brightness(1.1);
+}
+.proc-phase-title {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--brand-green);
+  margin-bottom: 10px;
+}
+.proc-phase-body {
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: rgba(255,255,255,0.7);
+}
+
+/* Testimonial */
+.proc-testi {
+  padding: var(--pad-section) 0;
+  background: var(--paper-2);
+}
+.proc-quote-wrap {
+  max-width: 780px;
+  margin: 0 auto;
+  text-align: center;
+}
+.proc-quote-mark {
+  font-family: var(--serif);
+  font-size: 96px;
+  line-height: 0.5;
+  color: var(--brand-blue);
+  opacity: 0.25;
+  display: block;
+  margin-bottom: 16px;
+}
+.proc-quote {
+  font-family: var(--serif);
+  font-size: clamp(20px, 2.5vw, 28px);
+  line-height: 1.55;
+  color: var(--ink);
+  font-style: italic;
+  margin: 0 0 28px;
+}
+.proc-testi-meta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+.proc-testi-img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  box-shadow: var(--shadow-md);
+}
+.proc-testi-name {
+  font-weight: 600;
+  font-size: 14px;
+}
+.proc-testi-role {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-top: 3px;
+}
+
+/* CTA */
+.proc-cta-section { padding: var(--pad-section) 0; }
+.proc-cta {
+  background: var(--ink);
+  border-radius: var(--r-xl);
+  padding: 64px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 40px;
+  align-items: center;
+}
+.proc-cta-hl {
+  font-family: var(--serif);
+  font-size: clamp(26px, 3vw, 38px);
+  color: white;
+  margin: 0 0 12px;
+  font-weight: 400;
+}
+.proc-cta-hl em { font-style: italic; color: var(--brand-green); }
+.proc-cta-sub {
+  color: rgba(255,255,255,0.65);
+  font-size: 15px;
+  line-height: 1.65;
+  max-width: 48ch;
+  margin: 0;
+}
+.proc-cta-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-end;
+  flex-shrink: 0;
+}
+
+@media (max-width: 960px) {
+  .proc-step-inner {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    direction: ltr !important;
+  }
+  .proc-step:nth-child(even) .proc-step-text { direction: ltr; }
+  .proc-phases { grid-template-columns: repeat(2, 1fr); }
+  .proc-cta { grid-template-columns: 1fr; }
+  .proc-cta-actions { align-items: flex-start; flex-direction: row; flex-wrap: wrap; }
+}
+@media (max-width: 560px) {
+  .proc-phases { grid-template-columns: 1fr 1fr; }
+  .proc-cta { padding: 36px 28px; }
+}
+@media (max-width: 400px) {
+  .proc-phases { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="parts-hero.jsx"></script>
+<script type="text/babel" src="parts-services.jsx"></script>
+<script type="text/babel" src="parts-rest.jsx"></script>
+<script type="text/babel" src="process-page.jsx"></script>
+</body>
+</html>
