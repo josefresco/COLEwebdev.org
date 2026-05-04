@@ -378,19 +378,20 @@ function Footer() {
           <div>
             <h5>Studio</h5>
             <ul>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Process</a></li>
-              <li><a href="#">News</a></li>
-              <li><a href="#">Careers</a></li>
+              <li><a href="index.html">About</a></li>
+              <li><a href="process.html">Process</a></li>
+              <li><a href="portfolio.html">Portfolio</a></li>
+              <li><a href="index.html#news">News</a></li>
+              <li><a href="contact.html">Contact</a></li>
             </ul>
           </div>
           <div>
             <h5>Services</h5>
             <ul>
-              <li><a href="#">Web Design</a></li>
-              <li><a href="#">SEO &amp; Local</a></li>
-              <li><a href="#">AI Studio</a></li>
-              <li><a href="#">Hosting + Care</a></li>
+              <li><a href="index.html#services">Web Design</a></li>
+              <li><a href="index.html#services">SEO &amp; Local</a></li>
+              <li><a href="index.html#services">AI Studio</a></li>
+              <li><a href="index.html#services">Hosting + Care</a></li>
             </ul>
           </div>
           <div>

@@ -34,53 +34,57 @@ function ColeLogo({ height = 34, dark = false }) {
    Header
    ============================================================ */
 function Header() {
+  const path = window.location.pathname;
+  const on = (page) => path.endsWith(page) ? ' is-active' : '';
+  const onHome = (path === '/' || path === '' || path.endsWith('index.html')) ? ' is-active' : '';
+
   return (
     <header className="site-header">
       <nav className="nav">
-        <a href="#" className="nav-logo" aria-label="COLEwebdev — home">
+        <a href="index.html" className="nav-logo" aria-label="COLEwebdev — home">
           <ColeLogo height={32} />
         </a>
         <div className="nav-links">
-          <a className="nav-link is-active" href="#">Home</a>
+          <a className={'nav-link' + onHome} href="index.html">Home</a>
           <div className="nav-item-dropdown">
-            <a className="nav-link" href="#services">Services <span className="caret">▾</span></a>
+            <a className="nav-link" href="index.html#services">Services <span className="caret">▾</span></a>
             <div className="nav-dropdown" role="menu">
-              <a href="#services" className="nav-dd-item">
+              <a href="index.html#services" className="nav-dd-item">
                 <span className="nav-dd-glyph green">◇</span>
                 <div>
                   <div className="nav-dd-title">Web Design</div>
                   <div className="nav-dd-desc">Modern, mobile-first sites built for your business.</div>
                 </div>
               </a>
-              <a href="#services" className="nav-dd-item">
+              <a href="index.html#services" className="nav-dd-item">
                 <span className="nav-dd-glyph orange">⚡</span>
                 <div>
                   <div className="nav-dd-title">SEO &amp; Local Search</div>
                   <div className="nav-dd-desc">Show up when neighbors search for what you sell.</div>
                 </div>
               </a>
-              <a href="#services" className="nav-dd-item">
+              <a href="index.html#services" className="nav-dd-item">
                 <span className="nav-dd-glyph navy">⌘</span>
                 <div>
                   <div className="nav-dd-title">AI Web Apps <span className="nav-dd-pill">NEW</span></div>
                   <div className="nav-dd-desc">Booking, intake, on-site search powered by AI.</div>
                 </div>
               </a>
-              <a href="#services" className="nav-dd-item">
+              <a href="index.html#services" className="nav-dd-item">
                 <span className="nav-dd-glyph green">↻</span>
                 <div>
                   <div className="nav-dd-title">Hosting + Care Plans</div>
                   <div className="nav-dd-desc">Backups, security, updates — and a human to email.</div>
                 </div>
               </a>
-              <a href="#services" className="nav-dd-item">
+              <a href="index.html#services" className="nav-dd-item">
                 <span className="nav-dd-glyph orange">✦</span>
                 <div>
                   <div className="nav-dd-title">Branding</div>
                   <div className="nav-dd-desc">Logos, color, print — so the site fits the rest of you.</div>
                 </div>
               </a>
-              <a href="#services" className="nav-dd-item">
+              <a href="index.html#services" className="nav-dd-item">
                 <span className="nav-dd-glyph navy">◐</span>
                 <div>
                   <div className="nav-dd-title">E-Commerce</div>
@@ -89,15 +93,15 @@ function Header() {
               </a>
             </div>
           </div>
-          <a className="nav-link" href="#work">Portfolio</a>
-          <a className="nav-link" href="#process">Our Process</a>
-          <a className="nav-link" href="#news">News</a>
-          <a className="nav-link" href="#contact">Contact</a>
+          <a className={'nav-link' + on('portfolio.html')} href="portfolio.html">Portfolio</a>
+          <a className={'nav-link' + on('process.html')} href="process.html">Our Process</a>
+          <a className="nav-link" href="index.html#news">News</a>
+          <a className={'nav-link' + on('contact.html')} href="contact.html">Contact</a>
           <a className="nav-link" href="https://www.colewebdev.com/shop/">Shop</a>
         </div>
         <div className="nav-cta">
           <a className="btn btn--ghost btn--sm" href="tel:5084132043">508.413.2043</a>
-          <a className="btn btn--accent btn--sm" href="#cta">Start a Project <span className="arrow">→</span></a>
+          <a className="btn btn--accent btn--sm" href="contact.html">Start a Project <span className="arrow">→</span></a>
         </div>
       </nav>
     </header>);
