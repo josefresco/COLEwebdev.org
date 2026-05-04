@@ -30,7 +30,7 @@ const STEPS = [
     img: 'https://www.colewebdev.com/wp-content/uploads/2020/06/proposal-colewebdev.jpg',
     body: [
       'Once the proposal is agreed upon and a deposit made, we begin planning. Meetings, photoshoots, content creation tasks — everything gets a date on the calendar.',
-      'We've done this enough times to know that a well-planned project is a fast project.',
+      'We\'ve done this enough times to know that a well-planned project is a fast project.',
     ],
   },
   {
@@ -50,7 +50,7 @@ const STEPS = [
     title: 'Your voice. Our expertise. Great copy.',
     img: 'https://www.colewebdev.com/wp-content/uploads/2020/06/content-website-build-cape-cod.jpg',
     body: [
-      'You\'re the expert in your business — and your site needs to sound like it. While we're hard at work designing, we need you to gather and create content: copy, photography, and supporting media.',
+      'You\'re the expert in your business — and your site needs to sound like it. While we\'re hard at work designing, we need you to gather and create content: copy, photography, and supporting media.',
       'Where you need help, we bring in our trusted network of photographers and copywriters to fill the gaps.',
     ],
   },
@@ -60,7 +60,7 @@ const STEPS = [
     title: 'Built right the first time.',
     img: 'https://www.colewebdev.com/wp-content/uploads/2020/06/colewebdev-production-website.jpg',
     body: [
-      'With an approved design and content in hand, we move into the production phase. This is where the project gets detailed — and where COLEwebdev's two-plus decades of experience make the difference.',
+      'With an approved design and content in hand, we move into the production phase. This is where the project gets detailed — and where COLEwebdev\'s two-plus decades of experience make the difference.',
       'Both the client and our team stay in close contact throughout. You see progress weekly, and nothing goes live without your sign-off.',
     ],
   },
