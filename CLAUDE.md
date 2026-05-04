@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 **No build tooling.** This is a client-side React 18 SPA using CDN-loaded React, ReactDOM, and Babel Standalone (in-browser JSX transpilation). There is no `package.json`, no npm scripts, no bundler.
 
-To develop locally, serve the directory over HTTP and open `COLEwebdev Homepage.html`:
+To develop locally, serve the directory over HTTP and open `index.html`:
 ```
 python -m http.server 8080
 # or use VS Code Live Server, npx serve, etc.
@@ -16,7 +16,7 @@ There are no lint, test, or build commands.
 
 ## Entry Point & Load Order
 
-`COLEwebdev Homepage.html` is the sole HTML file. It loads scripts in this exact order (order matters — later scripts depend on earlier ones):
+`index.html` is the sole HTML file. It loads scripts in this exact order (order matters — later scripts depend on earlier ones):
 
 1. `tweaks-panel.jsx` — defines `useTweaks` hook and `TweaksPanel` component
 2. `parts-hero.jsx` — `Header`, `Hero`, `Trust`
