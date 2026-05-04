@@ -381,7 +381,7 @@ function Footer() {
               <li><a href="index.html">About</a></li>
               <li><a href="process.html">Process</a></li>
               <li><a href="portfolio.html">Portfolio</a></li>
-              <li><a href="index.html#news">News</a></li>
+              <li><a href="news.html">News</a></li>
               <li><a href="contact.html">Contact</a></li>
             </ul>
           </div>
