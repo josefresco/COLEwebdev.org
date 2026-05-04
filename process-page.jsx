@@ -20,7 +20,7 @@ const STEPS = [
     badge: 'fixed price',
     body: [
       'Based on the information gathered from the initial consultation we create a written proposal — a concise, easy-to-understand breakdown of exactly what we\'ll build and what it costs.',
-      'No hourly billing. No scope creep. You know the number before we start.',
+      'No scope creep. You know the number before we start.',
     ],
   },
   {
