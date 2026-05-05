@@ -1,7 +1,7 @@
 /* global React, ReactDOM */
 
-/* Update to the direct Printful Quick Store URL once known */
-const SHOP_URL = 'https://www.colewebdev.com/shop/';
+const SHOP_URL = 'https://colewebdev.printful.me/';
+const QUOTE_URL = 'https://www.colewebdev.com/printful-quick-store/#quote';
 
 const CATEGORIES = [
   {
@@ -39,6 +39,28 @@ const POD_FEATURES = [
   { icon: '↗', label: 'Ships to your door' },
   { icon: '↻', label: 'No minimums' },
   { icon: '⌘', label: 'High-quality blanks' },
+];
+
+const SERVICE_STEPS = [
+  'Store Setup',
+  'Product Design',
+  'Set Product Details & Pricing',
+  'Connect Store to Stripe for Payments',
+  'Launch Quick Store',
+];
+
+const WHY_FEATURES = [
+  { icon: '⚡', label: 'Fast Setup', desc: 'We can get your Quick Store setup and ready for orders within 1–2 weeks!' },
+  { icon: '⌘', label: 'All-in-One', desc: 'Printing, shipping and payments are all handled through Printful.' },
+  { icon: '◎', label: 'Zero Capital', desc: 'No inventory. No worries.' },
+  { icon: '✦', label: '355 Products', desc: 'Add your logo to apparel, hats, accessories, home goods and more!' },
+  { icon: '↗', label: 'Get Paid', desc: 'Printful connects with Stripe for secure online payments.' },
+];
+
+const EXAMPLES = [
+  'Buckies Biscotti',
+  'The Southfleet',
+  'Life Cape Cod',
 ];
 
 function ShopPage() {
@@ -147,6 +169,107 @@ function ShopPage() {
             rel="noopener noreferrer"
           >
             Shop online <span className="arrow">→</span>
+          </a>
+        </div>
+      </section>
+
+      {/* Service pitch — Quick Store setup for other businesses */}
+      <section className="sh-service">
+        <div className="shell sh-service-grid">
+          <div className="sh-service-img-wrap">
+            <img
+              src="https://www.colewebdev.com/wp-content/uploads/2024/09/printful-quick-store.jpg"
+              alt="Printful Quick Store setup by COLEwebdev"
+              className="sh-service-img"
+              loading="lazy"
+            />
+          </div>
+          <div className="sh-service-body">
+            <span className="eyebrow">For Your Business</span>
+            <h2 className="sh-service-hl">
+              Get your own<br />
+              <em style={{ color: 'var(--brand-green)' }}>Quick Store.</em>
+            </h2>
+            <p className="sh-service-p">
+              Looking to sell products for your business without the hassle of managing inventory,
+              printing, or shipping? Printful's Quick Store service makes it easy for small
+              businesses to offer merch online — without the complexities and costs of a full
+              eCommerce platform.
+            </p>
+            <p className="sh-service-p">
+              Let COLEwebdev set up a Quick Store for you! We'll take care of everything, from
+              setup to launch, so your products are ready to sell with zero stress.
+            </p>
+            <ul className="sh-service-list">
+              {SERVICE_STEPS.map(step => (
+                <li key={step} className="sh-service-step">
+                  <span className="sh-service-check">✓</span>
+                  {step}
+                </li>
+              ))}
+            </ul>
+            <div>
+              <a
+                className="btn btn--accent"
+                href={QUOTE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Request a Quote <span className="arrow">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Printful Quick Store */}
+      <section className="sh-why">
+        <div className="shell">
+          <div className="sh-why-hd">
+            <h2 className="sh-why-hl">Why Printful Quick Store?</h2>
+          </div>
+          <div className="sh-why-grid">
+            {WHY_FEATURES.map(f => (
+              <div key={f.label} className="sh-why-card">
+                <div className="sh-why-icon">{f.icon}</div>
+                <div className="sh-why-name">{f.label}</div>
+                <div className="sh-why-desc">{f.desc}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Quick Store Examples */}
+      <section className="sh-examples">
+        <div className="shell">
+          <div className="sh-examples-hd">
+            <h2 className="sh-examples-hl">Quick Store Examples</h2>
+            <p className="sh-examples-sub">A few stores we've helped launch</p>
+          </div>
+          <div className="sh-examples-row">
+            {EXAMPLES.map(name => (
+              <div key={name} className="sh-ex-card">
+                <span className="sh-ex-name">{name}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Quote CTA */}
+      <section className="sh-cta sh-cta--quote">
+        <div className="shell sh-cta-inner">
+          <p className="sh-cta-text">
+            Ready to launch your own store? Let's make it happen.
+          </p>
+          <a
+            className="btn btn--accent"
+            href={QUOTE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Request a Quote <span className="arrow">→</span>
           </a>
         </div>
       </section>
