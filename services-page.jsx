@@ -170,7 +170,7 @@ function ServicesPage() {
 
   React.useEffect(() => {
     const img = new Image();
-    img.src = 'assets/hero-cwb-scene.png';
+    img.src = 'https://www.colewebdev.com/wp-content/uploads/2020/05/colewebdev-website-design-build-cape-cod-modern-mountains-1.jpg';
     img.onload = () => {
       if (heroRef.current) heroRef.current.classList.add('loaded');
     };
