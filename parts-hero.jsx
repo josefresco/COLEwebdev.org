@@ -97,7 +97,7 @@ function Header() {
           <a className={'nav-link' + on('process.html')} href="process.html">Our Process</a>
           <a className={'nav-link' + on('news.html')} href="news.html">News</a>
           <a className={'nav-link' + on('contact.html')} href="contact.html">Contact</a>
-          <a className="nav-link" href="https://www.colewebdev.com/shop/">Shop</a>
+          <a className={'nav-link' + on('shop.html')} href="shop.html">Shop</a>
         </div>
         <div className="nav-cta">
           <a className="btn btn--ghost btn--sm" href="tel:5084132043">508.413.2043</a>
