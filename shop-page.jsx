@@ -1,7 +1,7 @@
 /* global React, ReactDOM */
 
-/* Update to the direct Printful Quick Store URL once known */
-const SHOP_URL = 'https://www.colewebdev.com/shop/';
+const SHOP_URL = 'https://colewebdev.printful.me/';
+const QUOTE_URL = 'https://www.colewebdev.com/printful-quick-store/';
 
 const CATEGORIES = [
   {
@@ -39,6 +39,44 @@ const POD_FEATURES = [
   { icon: '↗', label: 'Ships to your door' },
   { icon: '↻', label: 'No minimums' },
   { icon: '⌘', label: 'High-quality blanks' },
+];
+
+const BENEFITS = [
+  {
+    icon: '⚡',
+    bg: 'rgba(242,107,31,0.14)',
+    color: '#F26B1F',
+    title: 'Fast Setup',
+    body: 'We can get your Quick Store set up and ready for orders within 1–2 weeks.',
+  },
+  {
+    icon: '◇',
+    bg: 'rgba(123,192,67,0.14)',
+    color: '#5DA02E',
+    title: 'All-in-One',
+    body: 'Printing, shipping, and payments are all handled through Printful — nothing to manage.',
+  },
+  {
+    icon: '↻',
+    bg: 'rgba(14,42,74,0.10)',
+    color: '#0E2A4A',
+    title: 'Zero Capital',
+    body: 'No inventory to buy, store, or ship. Orders are produced and sent only when placed.',
+  },
+  {
+    icon: '✦',
+    bg: 'rgba(123,192,67,0.14)',
+    color: '#5DA02E',
+    title: '355+ Products',
+    body: 'Add your logo to apparel, hats, accessories, home goods, and more.',
+  },
+  {
+    icon: '⌘',
+    bg: 'rgba(14,42,74,0.10)',
+    color: '#0E2A4A',
+    title: 'Get Paid Securely',
+    body: 'Printful connects directly with Stripe for fast, secure online payments.',
+  },
 ];
 
 function ShopPage() {
@@ -129,6 +167,58 @@ function ShopPage() {
                   <div className="sh-cat-desc">{cat.desc}</div>
                 </div>
               </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Printful */}
+      <section className="sh-why">
+        <div className="shell">
+          <div className="sh-why-hd">
+            <span className="eyebrow">Powered by Printful</span>
+            <h2 className="sh-why-hl">Why Printful Quick Store?</h2>
+          </div>
+          <div className="sh-why-grid">
+            {BENEFITS.map(b => (
+              <div key={b.title} className="sh-why-card">
+                <div className="sh-why-icon" style={{ background: b.bg, color: b.color }}>
+                  {b.icon}
+                </div>
+                <div className="sh-why-title">{b.title}</div>
+                <div className="sh-why-body">{b.body}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Want your own store */}
+      <section className="sh-own">
+        <div className="shell sh-own-inner">
+          <div className="sh-own-body">
+            <span className="eyebrow" style={{ color: 'var(--brand-green)' }}>For businesses</span>
+            <h2 className="sh-own-hl">Want a Printful store for <em>your</em> brand?</h2>
+            <p className="sh-own-p">
+              We set up Printful Quick Stores for businesses across Cape Cod and beyond.
+              Sell branded apparel with your logo — no inventory, no shipping, no hassle.
+              Ready in 1–2 weeks.
+            </p>
+            <a
+              className="btn btn--accent"
+              href={QUOTE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Request a quote <span className="arrow">→</span>
+            </a>
+          </div>
+          <div className="sh-own-steps">
+            {['Store Setup', 'Product Design', 'Pricing & Details', 'Connect Stripe', 'Launch'].map((s, i) => (
+              <div key={s} className="sh-own-step">
+                <span className="sh-own-step-n">{String(i + 1).padStart(2, '0')}</span>
+                <span className="sh-own-step-label">{s}</span>
+              </div>
             ))}
           </div>
         </div>
