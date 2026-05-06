@@ -36,8 +36,41 @@ const EC_FEATURES = [
   { icon: '◎', bg: 'rgba(242,107,31,0.14)', color: '#F26B1F', title: 'Analytics & Reporting', body: 'Sales dashboards, conversion funnels, and customer reports connected to Google Analytics 4 and your platform\'s native tools.' },
   { icon: '◐', bg: 'rgba(123,192,67,0.14)', color: '#5DA02E', title: 'SEO for Products', body: 'Product titles, descriptions, schema markup, and sitemap configuration so your items show up in Google Shopping and organic search.' },
   { icon: '⚡', bg: 'rgba(14,42,74,0.10)', color: '#0E2A4A', title: 'Training & Handoff', body: 'A recorded walkthrough of your store admin so you can add products, run promotions, and fulfill orders confidently on day one.' },
-  { icon: '◇', bg: 'rgba(123,192,67,0.14)', color: '#5DA02E', title: 'Payment Gateways', body: 'We set up and configure Stripe, PayPal, Square, Authorize.net, and more — including testing, webhooks, and currency settings for your region.' },
-  { icon: '✦', bg: 'rgba(242,107,31,0.14)', color: '#F26B1F', title: 'Donations & Payment Forms', body: 'Nonprofit donation pages, event registration fees, deposit collection, and one-time or recurring payment forms — built into your site without a separate platform.' },
+];
+
+const EC_PAYMENTS = [
+  {
+    icon: '⌘',
+    bg: 'rgba(14,42,74,0.10)',
+    color: '#0E2A4A',
+    title: 'Payment Gateways',
+    desc: 'We set up, configure, and test the payment processor that fits your business — handling the technical work so you start accepting payments without the headaches.',
+    features: [
+      'Stripe — cards, Apple Pay, Google Pay, ACH',
+      'PayPal & PayPal Checkout',
+      'Square — online and in-person',
+      'Authorize.net for established merchants',
+      'Webhook configuration and testing',
+      'Multi-currency and regional settings',
+    ],
+    tag: 'Works with: WooCommerce · Shopify · Standalone forms',
+  },
+  {
+    icon: '✦',
+    bg: 'rgba(242,107,31,0.14)',
+    color: '#F26B1F',
+    title: 'Donations & Payment Forms',
+    desc: 'Not every payment needs a full storefront. We build standalone forms for donations, event fees, deposits, and memberships — embedded directly in your site.',
+    features: [
+      'One-time and recurring donation pages',
+      'Event registration with fee collection',
+      'Deposit and retainer forms',
+      'Membership and annual renewal payments',
+      'Custom confirmation emails and receipts',
+      'Compatible with GiveWP, Gravity Forms, and Stripe',
+    ],
+    tag: 'Ideal for: Nonprofits · Events · Service businesses · Clubs',
+  },
 ];
 
 const EC_STATS = [
@@ -115,6 +148,31 @@ function EcommercePage() {
                 <div className="ec-feat-icon" style={{ background: f.bg, color: f.color }}>{f.icon}</div>
                 <div className="ec-feat-title">{f.title}</div>
                 <div className="ec-feat-body">{f.body}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Payments */}
+      <section className="ec-pay">
+        <div className="shell">
+          <div className="ec-pay-hd">
+            <span className="eyebrow">Payments &amp; forms</span>
+            <h2 className="ec-pay-hl">Beyond the storefront.</h2>
+          </div>
+          <div className="ec-pay-grid">
+            {EC_PAYMENTS.map(p => (
+              <div key={p.title} className="ec-pay-card">
+                <div className="ec-pay-card-head">
+                  <div className="ec-pay-icon" style={{ background: p.bg, color: p.color }}>{p.icon}</div>
+                  <div className="ec-pay-name">{p.title}</div>
+                  <div className="ec-pay-desc">{p.desc}</div>
+                </div>
+                <ul className="ec-pay-list">
+                  {p.features.map(f => <li key={f}>{f}</li>)}
+                </ul>
+                <div className="ec-pay-tag">{p.tag}</div>
               </div>
             ))}
           </div>
