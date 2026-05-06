@@ -389,9 +389,9 @@ function Footer() {
           <div>
             <h5>Services</h5>
             <ul>
-              <li><a href="index.html#services">Web Design</a></li>
-              <li><a href="index.html#services">SEO &amp; Local</a></li>
-              <li><a href="index.html#services">AI Studio</a></li>
+              <li><a href="website-design.html">Web Design</a></li>
+              <li><a href="seo.html">SEO &amp; Local</a></li>
+              <li><a href="ai-apps.html">AI Studio</a></li>
               <li><a href="index.html#services">Hosting + Care</a></li>
             </ul>
           </div>

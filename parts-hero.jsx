@@ -47,23 +47,23 @@ function Header() {
         <div className="nav-links">
           <a className={'nav-link' + onHome} href="index.html">Home</a>
           <div className="nav-item-dropdown">
-            <a className="nav-link" href="index.html#services">Services <span className="caret">▾</span></a>
+            <a className={'nav-link' + on('services.html')} href="services.html">Services <span className="caret">▾</span></a>
             <div className="nav-dropdown" role="menu">
-              <a href="index.html#services" className="nav-dd-item">
+              <a href="website-design.html" className="nav-dd-item">
                 <span className="nav-dd-glyph green">◇</span>
                 <div>
                   <div className="nav-dd-title">Web Design</div>
                   <div className="nav-dd-desc">Modern, mobile-first sites built for your business.</div>
                 </div>
               </a>
-              <a href="index.html#services" className="nav-dd-item">
+              <a href="seo.html" className="nav-dd-item">
                 <span className="nav-dd-glyph orange">⚡</span>
                 <div>
                   <div className="nav-dd-title">SEO &amp; Local Search</div>
                   <div className="nav-dd-desc">Show up when neighbors search for what you sell.</div>
                 </div>
               </a>
-              <a href="index.html#services" className="nav-dd-item">
+              <a href="ai-apps.html" className="nav-dd-item">
                 <span className="nav-dd-glyph navy">⌘</span>
                 <div>
                   <div className="nav-dd-title">AI Web Apps <span className="nav-dd-pill">NEW</span></div>
