@@ -29,13 +29,15 @@ const EC_PLATFORMS = [
 
 const EC_FEATURES = [
   { icon: '◇', bg: 'rgba(123,192,67,0.14)', color: '#5DA02E', title: 'Product Setup', body: 'We configure your catalog, variants, and pricing — including digital downloads, variable products, and subscriptions.' },
-  { icon: '⌘', bg: 'rgba(14,42,74,0.10)', color: '#0E2A4A', title: 'Payment Processing', body: 'Stripe, PayPal, and local payment methods configured and tested. PCI compliance handled at the platform level.' },
+  { icon: '⌘', bg: 'rgba(14,42,74,0.10)', color: '#0E2A4A', title: 'Payment Processing', body: 'Stripe, PayPal, Square, and local payment methods configured and tested. PCI compliance handled at the platform level.' },
   { icon: '↻', bg: 'rgba(123,192,67,0.14)', color: '#5DA02E', title: 'Shipping & Tax', body: 'Live shipping rates from UPS, FedEx, and USPS. Tax rules configured for Massachusetts and other states as needed.' },
   { icon: '✦', bg: 'rgba(242,107,31,0.14)', color: '#F26B1F', title: 'Inventory Management', body: 'Stock levels, low-inventory alerts, and backorder handling so you\'re never selling what you don\'t have.' },
   { icon: '↗', bg: 'rgba(14,42,74,0.10)', color: '#0E2A4A', title: 'Mobile Checkout', body: 'A checkout experience optimized for phones — where over 60% of e-commerce traffic comes from. Fast, friction-free, and accessible.' },
   { icon: '◎', bg: 'rgba(242,107,31,0.14)', color: '#F26B1F', title: 'Analytics & Reporting', body: 'Sales dashboards, conversion funnels, and customer reports connected to Google Analytics 4 and your platform\'s native tools.' },
   { icon: '◐', bg: 'rgba(123,192,67,0.14)', color: '#5DA02E', title: 'SEO for Products', body: 'Product titles, descriptions, schema markup, and sitemap configuration so your items show up in Google Shopping and organic search.' },
   { icon: '⚡', bg: 'rgba(14,42,74,0.10)', color: '#0E2A4A', title: 'Training & Handoff', body: 'A recorded walkthrough of your store admin so you can add products, run promotions, and fulfill orders confidently on day one.' },
+  { icon: '◇', bg: 'rgba(123,192,67,0.14)', color: '#5DA02E', title: 'Payment Gateways', body: 'We set up and configure Stripe, PayPal, Square, Authorize.net, and more — including testing, webhooks, and currency settings for your region.' },
+  { icon: '✦', bg: 'rgba(242,107,31,0.14)', color: '#F26B1F', title: 'Donations & Payment Forms', body: 'Nonprofit donation pages, event registration fees, deposit collection, and one-time or recurring payment forms — built into your site without a separate platform.' },
 ];
 
 const EC_STATS = [
@@ -70,7 +72,7 @@ function EcommercePage() {
               </a>
             </div>
             <div className="ec-platform-tags">
-              {['WooCommerce', 'Shopify', 'Stripe', 'PayPal', 'USPS / UPS / FedEx', 'Google Shopping'].map(t => (
+              {['WooCommerce', 'Shopify', 'Stripe', 'PayPal', 'Square', 'Authorize.net', 'USPS / UPS / FedEx', 'Google Shopping'].map(t => (
                 <span key={t} className="ec-platform-tag">{t}</span>
               ))}
             </div>
