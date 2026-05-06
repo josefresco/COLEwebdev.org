@@ -52,7 +52,7 @@ const HOW_STEPS = [
   {
     n: '04',
     label: 'Report',
-    body: 'Monthly ranking and traffic reports with plain-English takeaways and next steps. You always know exactly what's happening.',
+    body: "Monthly ranking and traffic reports with plain-English takeaways and next steps. You always know exactly what's happening.",
   },
 ];
 
