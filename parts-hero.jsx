@@ -70,21 +70,21 @@ function Header() {
                   <div className="nav-dd-desc">Booking, intake, on-site search powered by AI.</div>
                 </div>
               </a>
-              <a href="index.html#services" className="nav-dd-item">
+              <a href="hosting.html" className="nav-dd-item">
                 <span className="nav-dd-glyph green">↻</span>
                 <div>
                   <div className="nav-dd-title">Hosting + Care Plans</div>
                   <div className="nav-dd-desc">Backups, security, updates — and a human to email.</div>
                 </div>
               </a>
-              <a href="index.html#services" className="nav-dd-item">
+              <a href="branding.html" className="nav-dd-item">
                 <span className="nav-dd-glyph orange">✦</span>
                 <div>
                   <div className="nav-dd-title">Branding</div>
                   <div className="nav-dd-desc">Logos, color, print — so the site fits the rest of you.</div>
                 </div>
               </a>
-              <a href="index.html#services" className="nav-dd-item">
+              <a href="ecommerce.html" className="nav-dd-item">
                 <span className="nav-dd-glyph navy">◐</span>
                 <div>
                   <div className="nav-dd-title">E-Commerce</div>

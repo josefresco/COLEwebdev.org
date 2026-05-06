@@ -392,7 +392,9 @@ function Footer() {
               <li><a href="website-design.html">Web Design</a></li>
               <li><a href="seo.html">SEO &amp; Local</a></li>
               <li><a href="ai-apps.html">AI Studio</a></li>
-              <li><a href="index.html#services">Hosting + Care</a></li>
+              <li><a href="hosting.html">Hosting + Care</a></li>
+              <li><a href="branding.html">Branding</a></li>
+              <li><a href="ecommerce.html">E-Commerce</a></li>
             </ul>
           </div>
           <div>
