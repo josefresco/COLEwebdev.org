@@ -16,6 +16,31 @@ const BR_STEPS = [
   { n: '04', title: 'Delivery', body: 'Final files in every format you\'ll ever need — SVG, PNG, PDF, EPS — plus the brand guidelines document.' },
 ];
 
+const LOGO_PORTFOLIO = [
+  { name: 'Pierce Plumbing', img: 'https://www.colewebdev.com/wp-content/uploads/2025/09/logo-branding-design-cape-cod-pierce-plumbing.jpg' },
+  { name: 'In Nature Hair Studio', img: 'https://www.colewebdev.com/wp-content/uploads/2025/09/logo-branding-design-cape-cod-in-nature-hair-studio.jpg' },
+  { name: 'The Center at Nauset', img: 'https://www.colewebdev.com/wp-content/uploads/2025/09/the-center-at-nauset-logo-design-cape-cod.jpg' },
+  { name: 'Dream Chaser Mobile Bar', img: 'https://www.colewebdev.com/wp-content/uploads/2025/09/dream-chaser-mobile-bar-logo-design-cape-cod.jpg' },
+  { name: 'BioActive Technology', img: 'https://www.colewebdev.com/wp-content/uploads/2025/11/bioactive-technology-logo-design-cape-cod-small.jpg' },
+  { name: 'Inn Advisors', img: 'https://www.colewebdev.com/wp-content/uploads/2025/09/logo-branding-design-inn-advisors.jpg' },
+  { name: 'Paws Dream Doggie Daycare', img: 'https://www.colewebdev.com/wp-content/uploads/2024/07/paws-dream-custom-logo-design-cape-cod-small.jpg' },
+  { name: 'Behavioral Health Innovators', img: 'https://www.colewebdev.com/wp-content/uploads/2024/06/custom-logo-design-cape-cod-bhi.jpg' },
+  { name: 'The Teacher Toolbox', img: 'https://www.colewebdev.com/wp-content/uploads/2023/09/the-teacher-toolbox-custom-logo-jpg.webp' },
+  { name: 'Caribbean Millwork', img: 'https://www.colewebdev.com/wp-content/uploads/2022/12/caribbean-millwork-logo-design.png' },
+  { name: 'GROW SMART Cape Cod', img: 'https://www.colewebdev.com/wp-content/uploads/2022/01/grow-smart-cape-cod-logo-design.jpg' },
+  { name: 'Cape Cod Native Plants', img: 'https://www.colewebdev.com/wp-content/uploads/2021/03/cape-cod-logo-design-simple.jpg' },
+  { name: 'Nauset Interfaith Association', img: 'https://www.colewebdev.com/wp-content/uploads/2021/09/nauset-interfaith-logo-simple.jpg' },
+  { name: 'Dr. Mary Coakley-Welch', img: 'https://www.colewebdev.com/wp-content/uploads/2022/02/logo-design-cape-cod-202-1.jpg' },
+  { name: 'Bayshore & Chandler House', img: 'https://www.colewebdev.com/wp-content/uploads/2022/02/logo-design-cape-cod-202-2.jpg' },
+  { name: 'Cape Mediation', img: 'https://www.colewebdev.com/wp-content/uploads/2020/02/cape-mediation-logo-design.jpg' },
+  { name: 'Berkshire Health Group', img: 'https://www.colewebdev.com/wp-content/uploads/2019/10/cape-cod-logo-design-bhg.jpg' },
+  { name: 'M.T. Drywall & Plastering', img: 'https://www.colewebdev.com/wp-content/uploads/2019/10/cape-cod-logo-design-mtd.jpg' },
+  { name: 'George J. MacKoul', img: 'https://www.colewebdev.com/wp-content/uploads/2019/10/cape-cod-logo-design-gm.jpg' },
+  { name: 'Massachusetts Strategic Health Group', img: 'https://www.colewebdev.com/wp-content/uploads/2019/10/cape-cod-logo-design-mshg.jpg' },
+  { name: 'SH Emerald Rental', img: 'https://www.colewebdev.com/wp-content/uploads/2024/06/disney-vacation-rental-kissimmee-florida.jpg' },
+  { name: 'Cape Shores Vacation Rentals', img: 'https://www.colewebdev.com/wp-content/uploads/2019/11/cape-shores-website-logo-design.jpg' },
+];
+
 const DELIVERABLES = [
   'Primary logo (horizontal, stacked, icon-only)',
   'Color palette with hex, RGB, and CMYK values',
@@ -73,6 +98,31 @@ function BrandingPage() {
                 <div className="br-what-body">{item.body}</div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Logo portfolio */}
+      <section className="br-port">
+        <div className="shell">
+          <div className="br-port-hd">
+            <span className="eyebrow">Logo portfolio</span>
+            <h2 className="br-port-hl">A few marks we're proud of.</h2>
+          </div>
+          <div className="br-port-grid">
+            {LOGO_PORTFOLIO.map(item => (
+              <div key={item.name} className="br-port-card">
+                <div className="br-port-img-wrap">
+                  <img src={item.img} alt={item.name} loading="lazy" className="br-port-img" />
+                </div>
+                <div className="br-port-name">{item.name}</div>
+              </div>
+            ))}
+          </div>
+          <div className="br-port-footer">
+            <a className="btn btn--ghost" href="https://www.colewebdev.com/logo-design-portfolio/" target="_blank" rel="noopener noreferrer">
+              View full logo portfolio <span className="arrow">→</span>
+            </a>
           </div>
         </div>
       </section>

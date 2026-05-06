@@ -113,6 +113,71 @@
   flex: 1;
 }
 
+/* Logo portfolio */
+.br-port {
+  padding: 80px 0;
+  background: var(--paper-2);
+  border-top: 1px solid var(--line);
+}
+.br-port-hd { margin-bottom: 48px; }
+.br-port-hl {
+  font-family: var(--serif);
+  font-size: clamp(28px, 3.5vw, 44px);
+  color: var(--ink);
+  font-weight: 400;
+  margin: 8px 0 0;
+}
+.br-port-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.br-port-card {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  transition: transform 0.22s, box-shadow 0.22s;
+}
+.br-port-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+.br-port-img-wrap {
+  aspect-ratio: 4 / 3;
+  background: var(--paper);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 16px;
+}
+.br-port-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.35s ease;
+}
+.br-port-card:hover .br-port-img { transform: scale(1.04); }
+.br-port-name {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding: 10px 14px 12px;
+  border-top: 1px solid var(--line);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.br-port-footer {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
 /* Why branding */
 .br-why {
   padding: 80px 0;
@@ -272,12 +337,14 @@
 /* Responsive */
 @media (max-width: 960px) {
   .br-what-grid { grid-template-columns: repeat(2, 1fr); }
+  .br-port-grid { grid-template-columns: repeat(3, 1fr); }
   .br-why-grid { grid-template-columns: 1fr; gap: 48px; }
   .br-process-grid { grid-template-columns: repeat(2, 1fr); }
   .br-cta-card { padding: 40px 32px; flex-direction: column; align-items: flex-start; }
 }
 @media (max-width: 560px) {
   .br-what-grid { grid-template-columns: 1fr; }
+  .br-port-grid { grid-template-columns: repeat(2, 1fr); }
   .br-process-grid { grid-template-columns: 1fr; }
   .br-deliver-grid { grid-template-columns: 1fr; }
   .br-hero-actions { flex-direction: column; align-items: flex-start; }
