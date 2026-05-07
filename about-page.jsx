@@ -92,7 +92,7 @@ function AboutPage() {
             <div className="ab-story-media">
               <img
                 className="ab-story-img"
-                src="https://www.colewebdev.com/wp-content/uploads/2021/06/colewebdev-photo-shoot-2021-4.jpg"
+                src="https://www.colewebdev.com/wp-content/uploads/2021/04/website-design-deveopment-cape-cod-2021.jpg"
                 alt="COLEwebdev team"
                 loading="lazy"
               />
@@ -116,7 +116,7 @@ function AboutPage() {
             <div className="ab-person">
               <img
                 className="ab-person-img"
-                src="https://www.colewebdev.com/wp-content/uploads/2021/06/colewebdev-photo-shoot-2021-josiah-cole-web-designer.jpg"
+                src="https://www.colewebdev.com/wp-content/uploads/2021/04/josiah-cole-cape-cod-website-designer.jpg"
                 alt="Josiah Cole"
                 loading="lazy"
               />
@@ -135,7 +135,7 @@ function AboutPage() {
             <div className="ab-person">
               <img
                 className="ab-person-img"
-                src="https://www.colewebdev.com/wp-content/uploads/2021/06/colewebdev-photo-shoot-2021-desiree-cole-web-designer.jpg"
+                src="https://www.colewebdev.com/wp-content/uploads/2021/04/desiree-cole-webdiva-cape-cod-website-designer.jpg"
                 alt="Desiree Cole"
                 loading="lazy"
               />
