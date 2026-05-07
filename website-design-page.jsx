@@ -210,6 +210,56 @@ function WebDesignPage() {
         </div>
       </section>
 
+      {/* Approach cards */}
+      <section className="wd-approaches">
+        <div className="shell">
+          <div className="wd-approaches-hd">
+            <span className="eyebrow">Pick your approach</span>
+            <h2 className="wd-approaches-hl">Two ways to build. One standard of quality.</h2>
+          </div>
+          <div className="wd-approaches-grid">
+            <div className="wd-approach-card wd-approach-card--wp">
+              <div className="wd-approach-top">
+                <span className="wd-approach-icon">◐</span>
+                <span className="wd-approach-label">WordPress</span>
+              </div>
+              <h3 className="wd-approach-hl">Built to be <em>managed by you.</em></h3>
+              <p className="wd-approach-body">
+                The right choice when your team needs to update content, run an online store, or grow the site over time. Custom theme, lean plugin stack, and an editor experience built for real people.
+              </p>
+              <ul className="wd-approach-list">
+                <li>Client-managed content</li>
+                <li>WooCommerce e-commerce</li>
+                <li>Scales as your business grows</li>
+                <li>40% of the web — for good reason</li>
+              </ul>
+              <a className="btn btn--primary wd-approach-btn" href="wordpress.html">
+                WordPress Design <span className="arrow">→</span>
+              </a>
+            </div>
+            <div className="wd-approach-card wd-approach-card--tr">
+              <div className="wd-approach-top">
+                <span className="wd-approach-icon">◇</span>
+                <span className="wd-approach-label">Traditional</span>
+              </div>
+              <h3 className="wd-approach-hl">Built for <em>speed and simplicity.</em></h3>
+              <p className="wd-approach-body">
+                Pure HTML, CSS, and JavaScript — hand-coded for businesses that want maximum performance and zero overhead. Nothing to update, nothing to patch, nothing to break.
+              </p>
+              <ul className="wd-approach-list">
+                <li>Loads in under a second</li>
+                <li>Zero attack surface</li>
+                <li>Own it forever — no platform lock-in</li>
+                <li>Precise design control</li>
+              </ul>
+              <a className="btn btn--ghost wd-approach-btn wd-approach-btn--tr" href="traditional.html">
+                Traditional Design <span className="arrow">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="wd-cta-section">
         <div className="shell">

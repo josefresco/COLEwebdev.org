@@ -328,6 +328,103 @@
   flex-shrink: 0;
 }
 
+/* Approach cards */
+.wd-approaches {
+  padding: var(--pad-section) 0;
+  background: var(--paper-2);
+  border-top: 1px solid var(--line);
+}
+.wd-approaches-hd { margin-bottom: 40px; }
+.wd-approaches-hl {
+  font-family: var(--serif);
+  font-size: clamp(26px, 3vw, 38px);
+  color: var(--ink);
+  font-weight: 400;
+  margin: 10px 0 0;
+}
+.wd-approaches-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.wd-approach-card {
+  border-radius: var(--r-xl);
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.wd-approach-card--wp {
+  background: #0E2A4A;
+  border: 1px solid rgba(0,115,170,0.3);
+}
+.wd-approach-card--tr {
+  background: #1E2330;
+  border: 1px solid rgba(108,142,191,0.25);
+}
+.wd-approach-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.wd-approach-icon {
+  font-size: 20px;
+  color: rgba(255,255,255,0.5);
+}
+.wd-approach-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+}
+.wd-approach-hl {
+  font-family: var(--serif);
+  font-size: clamp(22px, 2.4vw, 28px);
+  color: white;
+  font-weight: 400;
+  margin: 0;
+  line-height: 1.2;
+}
+.wd-approach-card--wp .wd-approach-hl em { color: #3EB0EF; font-style: italic; }
+.wd-approach-card--tr .wd-approach-hl em { color: #7BC043; font-style: italic; }
+.wd-approach-body {
+  font-size: 14px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.65);
+  margin: 0;
+}
+.wd-approach-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+.wd-approach-list li {
+  font-size: 13px;
+  color: rgba(255,255,255,0.55);
+  padding-left: 16px;
+  position: relative;
+}
+.wd-approach-list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: rgba(255,255,255,0.25);
+}
+.wd-approach-btn { align-self: flex-start; margin-top: 4px; }
+.wd-approach-btn--tr {
+  color: rgba(255,255,255,0.75);
+  border-color: rgba(255,255,255,0.25);
+}
+.wd-approach-btn--tr:hover {
+  color: white;
+  border-color: rgba(255,255,255,0.6);
+}
+
 /* Responsive */
 @media (max-width: 960px) {
   .wd-split {
@@ -337,6 +434,7 @@
   }
   .wd-split--rev > * { direction: ltr; }
   .wd-posts-grid { grid-template-columns: 1fr; }
+  .wd-approaches-grid { grid-template-columns: 1fr; }
   .wd-cta { grid-template-columns: 1fr; }
   .wd-cta-actions { align-items: flex-start; flex-direction: row; flex-wrap: wrap; }
 }

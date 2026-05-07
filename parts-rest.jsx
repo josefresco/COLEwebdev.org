@@ -378,7 +378,7 @@ function Footer() {
           <div>
             <h5>Studio</h5>
             <ul>
-              <li><a href="index.html">About</a></li>
+              <li><a href="about.html">About Us</a></li>
               <li><a href="process.html">Process</a></li>
               <li><a href="portfolio.html">Portfolio</a></li>
               <li><a href="news.html">News</a></li>
@@ -395,6 +395,8 @@ function Footer() {
               <li><a href="hosting.html">Hosting + Care</a></li>
               <li><a href="branding.html">Branding</a></li>
               <li><a href="ecommerce.html">E-Commerce</a></li>
+              <li><a href="wordpress.html">WordPress Design</a></li>
+              <li><a href="traditional.html">Traditional Web Design</a></li>
             </ul>
           </div>
           <div>

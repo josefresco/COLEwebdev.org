@@ -13,7 +13,7 @@ const SERVICES = [
       'From a 4-page coastal contractor site to a 60-page nonprofit hub — we design, build, and launch it end to end. No outsourcing. No page builders. Just a site that looks and works exactly like your business.',
       'Every project starts with a real consultation, ends with hands-on training, and includes everything: design proofs, mobile layout, CMS setup, and a thorough hand-off.',
     ],
-    detail: 'From $2,400 · Fixed price · 100% custom',
+    detail: 'Fixed price · 100% custom',
     href: 'https://www.colewebdev.com/services/website-design-build/',
   },
   {
@@ -41,7 +41,7 @@ const SERVICES = [
       'Got a site that just needs new photos, updated hours, or a fresh page? We handle quick-turn edits, new pages, and content refreshes — billed by the hour or by a block of time.',
       'Already a hosting client? Many routine updates are included. Just send us an email.',
     ],
-    detail: 'Billed by the hour · Fast turnaround · No contracts',
+    detail: 'Fast turnaround · No contracts',
     href: 'https://www.colewebdev.com/services/updates/',
   },
   {
@@ -83,7 +83,7 @@ const SERVICES = [
       "Not sure what your next move should be? Have a site that isn't performing? We offer focused consulting sessions to review your current site, identify opportunities, and give you a concrete plan — with no obligation to hire us for anything else.",
       "We've been building websites since 2000. We've seen every problem — and we know what actually fixes them.",
     ],
-    detail: 'Hourly · Site audits · Strategy sessions · CMS training',
+    detail: 'Site audits · Strategy sessions · CMS training',
     href: 'https://www.colewebdev.com/services/consulting/',
   },
   {
@@ -195,6 +195,40 @@ function ServicesPage() {
           </div>
         </div>
       </div>
+
+      {/* Service page cards */}
+      <section className="svc-pages">
+        <div className="shell">
+          <div className="svc-pages-hd">
+            <span className="eyebrow">Dedicated service pages</span>
+            <h2 className="svc-pages-hl">Explore each service in detail.</h2>
+          </div>
+          <div className="svc-pages-grid">
+            {[
+              { icon: '◇', glyph: 'green', name: 'Web Design + Build', desc: 'Custom sites built around your brand, not a template.', href: 'website-design.html' },
+              { icon: '◐', glyph: 'navy', name: 'WordPress Design', desc: 'Custom themes, lean plugin stack, client-managed.', href: 'wordpress.html' },
+              { icon: '◇', glyph: 'blue', name: 'Traditional Design', desc: 'Hand-coded HTML/CSS — fast, secure, no CMS.', href: 'traditional.html' },
+              { icon: '◎', glyph: 'navy', name: 'E-Commerce', desc: 'WooCommerce & Shopify storefronts that sell.', href: 'ecommerce.html' },
+              { icon: '↻', glyph: 'green', name: 'Hosting + Care Plans', desc: 'Managed hosting with a human on the other end.', href: 'hosting.html' },
+              { icon: '⌘', glyph: 'navy', name: 'AI Studio', desc: 'Booking, intake, and search powered by AI.', href: 'ai-apps.html', pill: 'NEW' },
+              { icon: '⚡', glyph: 'orange', name: 'SEO & Local Search', desc: 'Show up when neighbors search for what you sell.', href: 'seo.html' },
+              { icon: '✦', glyph: 'orange', name: 'Branding', desc: 'Logos, color, print — so the site fits the rest of you.', href: 'branding.html' },
+            ].map(page => (
+              <a key={page.name} className="svc-page-card" href={page.href}>
+                <div className={`svc-page-icon svc-page-icon--${page.glyph}`}>{page.icon}</div>
+                <div className="svc-page-body">
+                  <div className="svc-page-name">
+                    {page.name}
+                    {page.pill && <span className="svc-page-pill">{page.pill}</span>}
+                  </div>
+                  <div className="svc-page-desc">{page.desc}</div>
+                </div>
+                <span className="svc-page-arrow">→</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Service sections */}
       {SERVICES.map((svc, i) => (

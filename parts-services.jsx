@@ -42,7 +42,7 @@ function Services() {
             <h3>Web Design</h3>
             <p>Your goals, audience, and market drive the brief — then we design something built to perform, not just to look good.</p>
             <div className="meta-row">
-              <span>From $2,400</span>
+              <span>Fixed price</span>
               <span className="arrow-pill" style={{ background: 'var(--paper)', color: 'var(--ink)' }}>→</span>
             </div>
           </div>
@@ -86,7 +86,7 @@ function Services() {
             <h3>Hosting + Care Plans</h3>
             <p>Right plan, right fit — everything handled behind the scenes, with a real person reachable when something needs attention.</p>
             <div className="meta-row">
-              <span>From $39/mo</span>
+              <span>Flexible plans</span>
               <span className="arrow-pill" style={{ background: 'var(--paper)', color: 'var(--ink)' }}>→</span>
             </div>
           </div>

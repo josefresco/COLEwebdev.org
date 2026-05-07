@@ -91,10 +91,25 @@ function Header() {
                   <div className="nav-dd-desc">WooCommerce &amp; Shopify storefronts that ship.</div>
                 </div>
               </a>
+              <a href="wordpress.html" className="nav-dd-item">
+                <span className="nav-dd-glyph navy">◐</span>
+                <div>
+                  <div className="nav-dd-title">WordPress Design</div>
+                  <div className="nav-dd-desc">Custom themes, lean plugin stack, client-managed.</div>
+                </div>
+              </a>
+              <a href="traditional.html" className="nav-dd-item">
+                <span className="nav-dd-glyph green">◇</span>
+                <div>
+                  <div className="nav-dd-title">Traditional Web Design</div>
+                  <div className="nav-dd-desc">Hand-coded HTML/CSS — fast, secure, no CMS.</div>
+                </div>
+              </a>
             </div>
           </div>
           <a className={'nav-link' + on('portfolio.html')} href="portfolio.html">Portfolio</a>
           <a className={'nav-link' + on('process.html')} href="process.html">Our Process</a>
+          <a className={'nav-link' + on('about.html')} href="about.html">About Us</a>
           <a className={'nav-link' + on('news.html')} href="news.html">News</a>
           <a className={'nav-link' + on('contact.html')} href="contact.html">Contact</a>
           <a className={'nav-link' + on('shop.html')} href="shop.html">Shop</a>
@@ -126,11 +141,11 @@ function HeroMarquee() {
   const items = [
   { name: 'Cape Cod Aquatics', tag: 'CASE STUDY', t: 't-tide' },
   { name: 'Lower Cape Outreach', tag: 'NONPROFIT', t: 't-pine' },
-  { name: 'Sandy Neck Coastal', tag: 'TOURISM', t: 't-coast' },
-  { name: 'Cole Construction', tag: 'CONTRACTOR', t: 't-dune' },
-  { name: 'Nantucket Outfitters', tag: 'OUTDOOR', t: 't-pine' },
-  { name: 'Dennis Chamber', tag: 'COMMUNITY', t: 't-coast' },
-  { name: 'Truro Vineyards', tag: 'HOSPITALITY', t: 't-sun' },
+  { name: 'Dolphin Fleet Whale Watch', tag: 'TOURISM', t: 't-coast' },
+  { name: 'Ryley Construction', tag: 'CONTRACTOR', t: 't-dune' },
+  { name: 'Idle Times Bike Shop', tag: 'RETAIL', t: 't-pine' },
+  { name: 'Wellfleet Chamber', tag: 'COMMUNITY', t: 't-coast' },
+  { name: 'Nauset Beach Inn', tag: 'HOSPITALITY', t: 't-sun' },
   { name: 'Wellfleet Drive-In', tag: 'LOCAL', t: 't-tide' }];
 
   return (
