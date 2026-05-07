@@ -129,11 +129,27 @@ function Header() {
             </div>
           </div>
           <a className={'nav-link' + on('portfolio.html')} href="portfolio.html">Portfolio</a>
-          <a className={'nav-link' + on('process.html')} href="process.html">Our Process</a>
-          <a className={'nav-link' + on('about.html')} href="about.html">About Us</a>
+          <div className="nav-item-dropdown">
+            <a className={'nav-link' + (on('about.html') || on('process.html'))} href="about.html">About Us <span className="caret">▾</span></a>
+            <div className="nav-dropdown nav-dropdown--sm" role="menu">
+              <a href="about.html" className="nav-dd-item">
+                <span className="nav-dd-glyph green">◇</span>
+                <div>
+                  <div className="nav-dd-title">About Us</div>
+                  <div className="nav-dd-desc">Our team, story, and community roots.</div>
+                </div>
+              </a>
+              <a href="process.html" className="nav-dd-item">
+                <span className="nav-dd-glyph navy">⌘</span>
+                <div>
+                  <div className="nav-dd-title">Our Process</div>
+                  <div className="nav-dd-desc">How we scope, build, and hand off every project.</div>
+                </div>
+              </a>
+            </div>
+          </div>
           <a className={'nav-link' + on('news.html')} href="news.html">News</a>
           <a className={'nav-link' + on('contact.html')} href="contact.html">Contact</a>
-          <a className={'nav-link' + on('shop.html')} href="shop.html">Shop</a>
         </div>
         <div className="nav-cta">
           <a className="btn btn--ghost btn--sm" href="tel:5084132043">508.413.2043</a>
@@ -182,11 +198,10 @@ function Header() {
               </div>
 
               <a className="mobile-nav-link" href="portfolio.html" onClick={close}>Portfolio</a>
-              <a className="mobile-nav-link" href="process.html" onClick={close}>Our Process</a>
               <a className="mobile-nav-link" href="about.html" onClick={close}>About Us</a>
+              <a className="mobile-nav-link" href="process.html" onClick={close}>Our Process</a>
               <a className="mobile-nav-link" href="news.html" onClick={close}>News</a>
               <a className="mobile-nav-link" href="contact.html" onClick={close}>Contact</a>
-              <a className="mobile-nav-link" href="shop.html" onClick={close}>Shop</a>
             </nav>
             <div className="mobile-menu-cta">
               <a className="btn btn--accent" href="contact.html" onClick={close}>

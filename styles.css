@@ -540,6 +540,16 @@ p, li {
   justify-content: center;
 }
 
+/* Partial collapse 921–1240px */
+@media (max-width: 1240px) {
+  .nav { padding: 8px 8px 8px 16px; }
+  .nav-link { padding: 6px 9px; font-size: 13px; }
+  .nav-cta .btn--sm { padding: 7px 14px; font-size: 13px; }
+}
+
+/* Small dropdown variant (About Us) */
+.nav-dropdown--sm { min-width: 240px; }
+
 @media (max-width: 920px) {
   .nav-links { display: none; }
   .nav-cta .btn--ghost { display: none; }
