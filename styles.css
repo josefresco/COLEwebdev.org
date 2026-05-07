@@ -439,6 +439,24 @@ p, li {
   to   { transform: translateY(0);     opacity: 1; }
 }
 
+/* Close button */
+.mobile-menu-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.7);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+.mobile-menu-close:hover { background: rgba(255,255,255,0.15); color: white; }
+
 /* Mobile nav links */
 .mobile-nav {
   display: flex;
