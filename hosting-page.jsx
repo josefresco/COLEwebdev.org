@@ -82,6 +82,13 @@ function HostingPage() {
                 508.413.2043
               </a>
             </div>
+            <div className="hc-partners">
+              <span className="hc-partners-label">Hosting partners</span>
+              <div className="hc-partners-logos">
+                <img src="assets/wpengine-logo-white.svg" alt="WP Engine" className="hc-partner-logo" />
+                <img src="assets/pressable-logo-v8-light@2x.png" alt="Pressable" className="hc-partner-logo" />
+              </div>
+            </div>
           </div>
         </div>
       </div>
