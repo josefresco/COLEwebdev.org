@@ -200,7 +200,7 @@ function Estimator() {
   };
 
   return (
-    <section className="section" id="estimate" style={{ padding: "60px 0" }}>
+    <section className="section" id="estimate">
       <div className="shell">
         <div className="estimator">
           <div className="estimator-grid">

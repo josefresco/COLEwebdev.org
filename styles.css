@@ -96,11 +96,12 @@ button { font-family: inherit; cursor: pointer; }
 }
 
 .section {
-  padding: var(--pad-section) 0;
+  padding-top: var(--pad-section);
+  padding-bottom: 0;
   position: relative;
 }
 
-.section--tight { padding: calc(var(--pad-section) * 0.55) 0; }
+.section--tight { padding-top: calc(var(--pad-section) * 0.55); padding-bottom: 0; }
 
 /* ----- Type ----- */
 
@@ -1065,7 +1066,7 @@ p, li {
 /* ===========================
    AI Studio strip — compact, brand blue
    =========================== */
-.section--tight { padding-top: 24px; padding-bottom: 24px; }
+.section--tight { padding-top: 24px; }
 
 .ai-strip {
   position: relative;
