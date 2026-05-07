@@ -27,7 +27,7 @@ const SERVICES = [
       "WordPress powers over 40% of the web for a reason. We build clean, fast, maintainable WordPress sites — not bloated, plugin-heavy ones that slow down over time.",
       "You'll be able to edit your own content from day one. We build editor experiences that make sense for people who aren't developers.",
     ],
-    detail: 'Easy to manage · Plugin-lite · WP Engine ready',
+    detail: 'Easy to manage · Plugin-lite · Fast &amp; secure',
     href: 'https://www.colewebdev.com/services/wordpress/',
   },
   {
@@ -66,10 +66,10 @@ const SERVICES = [
     headline: 'Managed hosting with a human on the other end.',
     img: 'https://www.colewebdev.com/wp-content/uploads/2020/06/security-website-cape-cod-1.png',
     body: [
-      'Fast, secure hosting backed by people who actually pick up the phone. We offer managed WordPress hosting through WP Engine, plus static site hosting — with weekly backups, SSL, and ongoing core updates included.',
+      'Fast, secure hosting backed by people who actually pick up the phone. We offer managed WordPress hosting — with weekly backups, SSL, and ongoing core updates included.',
       'Plans start at $39/mo. No annual contracts. Cancel any time.',
     ],
-    detail: 'From $39/mo · WP Engine · Weekly backups · SSL included',
+    detail: 'From $39/mo · Weekly backups · SSL included',
     href: 'https://www.colewebdev.com/services/hosting-domains/',
   },
   {

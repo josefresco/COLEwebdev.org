@@ -30,7 +30,6 @@ function Services() {
             <div className="meta-row">
               <div className="stack">
                 <span className="tag" style={{ background: 'rgba(255,255,255,0.08)', color: 'white', borderColor: 'rgba(255,255,255,0.15)' }}>WORDPRESS</span>
-                <span className="tag" style={{ background: 'rgba(255,255,255,0.08)', color: 'white', borderColor: 'rgba(255,255,255,0.15)' }}>NEXT.JS</span>
                 <span className="tag" style={{ background: 'rgba(255,255,255,0.08)', color: 'white', borderColor: 'rgba(255,255,255,0.15)' }}>SHOPIFY</span>
               </div>
               <span className="arrow-pill">→</span>
@@ -85,7 +84,7 @@ function Services() {
           <div className="card svc-card lg">
             <div className="icon green">↻</div>
             <h3>Hosting + Care Plans</h3>
-            <p>WP Engine, static, or our own — plus weekly backups, security, updates, and a human who answers when you email.</p>
+            <p>Managed hosting that fits your site — plus weekly backups, security, updates, and a human who answers when you email.</p>
             <div className="meta-row">
               <span>From $39/mo</span>
               <span className="arrow-pill" style={{ background: 'var(--paper)', color: 'var(--ink)' }}>→</span>
