@@ -39,7 +39,7 @@
   --aurora-4: #2192BC;
 
   /* Density (overridden by tweak) */
-  --pad-section: 120px;
+  --pad-section: 64px;
   --pad-card: 28px;
   --gap-card: 22px;
 
@@ -60,7 +60,7 @@
 }
 
 [data-density="compact"] {
-  --pad-section: 80px;
+  --pad-section: 48px;
   --pad-card: 20px;
   --gap-card: 16px;
 }
@@ -96,12 +96,11 @@ button { font-family: inherit; cursor: pointer; }
 }
 
 .section {
-  padding-top: var(--pad-section);
-  padding-bottom: 0;
+  padding: var(--pad-section) 0;
   position: relative;
 }
 
-.section--tight { padding-top: calc(var(--pad-section) * 0.55); padding-bottom: 0; }
+.section--tight { padding: calc(var(--pad-section) * 0.55) 0; }
 
 /* ----- Type ----- */
 
@@ -1066,7 +1065,7 @@ p, li {
 /* ===========================
    AI Studio strip — compact, brand blue
    =========================== */
-.section--tight { padding-top: 24px; }
+.section--tight { padding: 24px 0; }
 
 .ai-strip {
   position: relative;
@@ -1466,7 +1465,7 @@ p, li {
 
 /* Responsive type bumps */
 @media (max-width: 600px) {
-  :root { --pad-section: 64px; }
+  :root { --pad-section: 40px; }
   .shell { padding: 0 18px; }
 }
 
