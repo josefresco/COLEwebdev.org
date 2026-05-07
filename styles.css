@@ -542,7 +542,7 @@ p, li {
 
 @media (max-width: 920px) {
   .nav-links { display: none; }
-  .nav-cta { display: none; }
+  .nav-cta .btn--ghost { display: none; }
   .nav-hamburger { display: flex; }
   .site-header { margin-top: 8px; }
   .nav { padding: 8px 8px 8px 16px; border-radius: 16px; }
