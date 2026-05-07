@@ -49,7 +49,6 @@ const PLANS = [
       'Image optimization',
       'E-commerce check (if applicable)',
       'Cloudflare and license review',
-      'Priority support between visits',
     ],
   },
 ];
