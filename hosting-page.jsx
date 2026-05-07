@@ -22,6 +22,7 @@ const BASE_FEATURES = [
   '404s, redirects, and sitemap reviewed',
   'Local backup copy downloaded',
   'E-commerce check (if applicable)',
+  'License review',
 ];
 
 const PLANS = [
@@ -46,7 +47,6 @@ const PLANS = [
       ...BASE_FEATURES,
       'Google Analytics review',
       'Image optimization',
-      'Cloudflare and license review',
     ],
   },
 ];
