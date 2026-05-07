@@ -66,10 +66,10 @@ const SERVICES = [
     headline: 'Managed hosting with a human on the other end.',
     img: 'https://www.colewebdev.com/wp-content/uploads/2020/06/security-website-cape-cod-1.png',
     body: [
-      'Fast, secure hosting backed by people who actually pick up the phone. We offer managed WordPress hosting — with weekly backups, SSL, and ongoing core updates included.',
-      'Plans start at $39/mo. No annual contracts. Cancel any time.',
+      'Fast, secure hosting backed by people who actually pick up the phone. We offer managed WordPress hosting — with daily backups, SSL, and ongoing core updates included.',
+      'No annual contracts. Cancel any time.',
     ],
-    detail: 'From $39/mo · Weekly backups · SSL included',
+    detail: 'Daily backups · SSL included · No contracts',
     href: 'https://www.colewebdev.com/services/hosting-domains/',
   },
   {
