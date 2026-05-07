@@ -26,7 +26,7 @@ function Services() {
               <span className="tag" style={{ background: 'rgba(255,255,255,0.08)', color: 'white', borderColor: 'rgba(255,255,255,0.15)' }}>FLAGSHIP</span>
             </div>
             <h3>Custom websites built by people who pick up the phone.</h3>
-            <p>From a 4-page coastal contractor site to a 60-page nonprofit hub — we design, build, and maintain it end to end. No outsourcing. No tickets. Just Cole.</p>
+            <p>Small businesses and nonprofits across Cape Cod trust us with their entire web presence — from first mockup to launch and ongoing care. One team, no tickets, no surprises.</p>
             <div className="meta-row">
               <div className="stack">
                 <span className="tag" style={{ background: 'rgba(255,255,255,0.08)', color: 'white', borderColor: 'rgba(255,255,255,0.15)' }}>WORDPRESS</span>
