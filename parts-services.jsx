@@ -40,7 +40,7 @@ function Services() {
           <div className="card svc-card sm">
             <div className="icon green">◇</div>
             <h3>Web Design</h3>
-            <p>Modern, mobile-first layouts that look like your business — not a template.</p>
+            <p>We learn your goals, your audience, and your market — then design something built to perform, not just to look good.</p>
             <div className="meta-row">
               <span>From $2,400</span>
               <span className="arrow-pill" style={{ background: 'var(--paper)', color: 'var(--ink)' }}>→</span>
@@ -51,7 +51,7 @@ function Services() {
           <div className="card svc-card sm">
             <div className="icon navy">⚡</div>
             <h3>SEO &amp; Local Search</h3>
-            <p>Show up when your neighbor searches for what you sell. Ethical, measurable, no smoke.</p>
+            <p>We assess where you stand, understand what your customers are searching for, and build a strategy that earns lasting, measurable visibility.</p>
             <div className="meta-row">
               <span>Monthly Care</span>
               <span className="arrow-pill" style={{ background: 'var(--paper)', color: 'var(--ink)' }}>→</span>
@@ -62,7 +62,7 @@ function Services() {
           <div className="card svc-card sm">
             <div className="icon green">◎</div>
             <h3>Google Ads</h3>
-            <p>Targeted campaigns that bring in calls and clicks — managed monthly, with real reporting.</p>
+            <p>We evaluate your market and goals, build campaigns around what actually converts, and manage them month to month with honest reporting.</p>
             <div className="meta-row">
               <span>Pay-per-click</span>
               <span className="arrow-pill" style={{ background: 'var(--paper)', color: 'var(--ink)' }}>→</span>
@@ -73,7 +73,7 @@ function Services() {
           <div className="card svc-card sm">
             <div className="icon navy">◍</div>
             <h3>Social Media Consulting</h3>
-            <p>A plan you can actually keep up with — content cadence, voice, and tools to make posting easy.</p>
+            <p>We assess where your audience is and what your business can sustain — then build a strategy you can actually stick to.</p>
             <div className="meta-row">
               <span>Coaching · Audits</span>
               <span className="arrow-pill" style={{ background: 'var(--paper)', color: 'var(--ink)' }}>→</span>
@@ -84,7 +84,7 @@ function Services() {
           <div className="card svc-card lg">
             <div className="icon green">↻</div>
             <h3>Hosting + Care Plans</h3>
-            <p>Managed hosting that fits your site — plus weekly backups, security, updates, and a human who answers when you email.</p>
+            <p>We match the right plan to your site, handle everything behind the scenes, and stay reachable when something needs attention.</p>
             <div className="meta-row">
               <span>From $39/mo</span>
               <span className="arrow-pill" style={{ background: 'var(--paper)', color: 'var(--ink)' }}>→</span>
@@ -95,7 +95,7 @@ function Services() {
           <div className="card svc-card sm">
             <div className="icon navy">✎</div>
             <h3>Website Updates</h3>
-            <p>Quick-turn edits, new pages, and content refreshes — billed by the hour or by the block.</p>
+            <p>We scope your needs honestly, turn work around fast, and make sure every change integrates cleanly with what's already there.</p>
             <div className="meta-row">
               <span>By request</span>
               <span className="arrow-pill" style={{ background: 'var(--paper)', color: 'var(--ink)' }}>→</span>
@@ -106,7 +106,7 @@ function Services() {
           <div className="card svc-card sm">
             <div className="icon green">↑</div>
             <h3>Speed Optimization</h3>
-            <p>Faster pages, better Core Web Vitals, fewer bounces. We measure first, then tune.</p>
+            <p>We audit what's slowing your site down, diagnose the root causes, and implement targeted fixes that make a measurable difference.</p>
             <div className="meta-row">
               <span>One-time tune-up</span>
               <span className="arrow-pill" style={{ background: 'var(--paper)', color: 'var(--ink)' }}>→</span>
@@ -117,7 +117,7 @@ function Services() {
           <div className="card svc-card sm">
             <div className="icon green">◐</div>
             <h3>E-Commerce</h3>
-            <p>WooCommerce &amp; Shopify storefronts that ship the order and not your time.</p>
+            <p>We match you with the right platform for your business, handle the full setup, and hand off a store that's ready to sell on day one.</p>
             <div className="meta-row">
               <span>Catalog ready</span>
               <span className="arrow-pill" style={{ background: 'var(--paper)', color: 'var(--ink)' }}>→</span>
@@ -128,7 +128,7 @@ function Services() {
           <div className="card svc-card sm">
             <div className="icon navy">✦</div>
             <h3>Branding</h3>
-            <p>Logos, color systems, print collateral — so the website fits the rest of you.</p>
+            <p>We learn what makes your business distinct, then build a visual identity that holds together consistently across every surface — digital and print.</p>
             <div className="meta-row">
               <span>Project-based</span>
               <span className="arrow-pill" style={{ background: 'var(--paper)', color: 'var(--ink)' }}>→</span>
@@ -139,7 +139,7 @@ function Services() {
           <div className="card svc-card sm">
             <div className="icon green">⌘</div>
             <h3>AI Web Apps <span className="tag" style={{ marginLeft: 6, verticalAlign: 'middle', background: 'rgba(33,146,188,0.12)', color: 'var(--brand-blue)', borderColor: 'rgba(33,146,188,0.2)' }}>NEW</span></h3>
-            <p>Booking assistants, smart search, content drafting — practical AI woven into your site.</p>
+            <p>We evaluate where AI can genuinely save your customers time or your team effort, then build and integrate a solution that fits seamlessly into your site.</p>
             <div className="meta-row">
               <span>Add-on</span>
               <span className="arrow-pill" style={{ background: 'var(--paper)', color: 'var(--ink)' }}>→</span>
