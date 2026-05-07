@@ -22,6 +22,7 @@ const PLANS = [
       'Cache cleared and front-end checked',
       'Security scan',
       'Console check for errors',
+      'E-commerce check (if applicable)',
     ],
   },
   {
@@ -33,8 +34,9 @@ const PLANS = [
       'Everything in Bi-Annual',
       'Local backup copy downloaded',
       'Forms, links, and mobile layout tested',
-      'Speed check and light optimization',
+      'Speed test and light optimization',
       '404s, redirects, and sitemap reviewed',
+      'E-commerce check (if applicable)',
     ],
   },
   {
