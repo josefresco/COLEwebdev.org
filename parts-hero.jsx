@@ -33,10 +33,31 @@ function ColeLogo({ height = 34, dark = false }) {
 /* ============================================================
    Header
    ============================================================ */
+const SERVICE_LINKS = [
+  { href: 'website-design.html', title: 'Web Design' },
+  { href: 'seo.html', title: 'SEO & Local Search' },
+  { href: 'ai-apps.html', title: 'AI Web Apps', pill: 'NEW' },
+  { href: 'hosting.html', title: 'Hosting + Care Plans' },
+  { href: 'branding.html', title: 'Branding' },
+  { href: 'ecommerce.html', title: 'E-Commerce' },
+  { href: 'wordpress.html', title: 'WordPress Design' },
+  { href: 'traditional.html', title: 'Traditional Web Design' },
+];
+
 function Header() {
+  const [menuOpen, setMenuOpen] = React.useState(false);
+  const [servicesOpen, setServicesOpen] = React.useState(false);
+
   const path = window.location.pathname;
   const on = (page) => path.endsWith(page) ? ' is-active' : '';
   const onHome = (path === '/' || path === '' || path.endsWith('index.html')) ? ' is-active' : '';
+
+  const close = () => { setMenuOpen(false); setServicesOpen(false); };
+
+  React.useEffect(() => {
+    document.body.style.overflow = menuOpen ? 'hidden' : '';
+    return () => { document.body.style.overflow = ''; };
+  }, [menuOpen]);
 
   return (
     <header className="site-header">
@@ -118,7 +139,60 @@ function Header() {
           <a className="btn btn--ghost btn--sm" href="tel:5084132043">508.413.2043</a>
           <a className="btn btn--accent btn--sm" href="contact.html">Start a Project <span className="arrow">→</span></a>
         </div>
+        <button
+          className={'nav-hamburger' + (menuOpen ? ' is-open' : '')}
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+          aria-expanded={menuOpen}
+        >
+          <span /><span /><span />
+        </button>
       </nav>
+
+      {menuOpen && (
+        <div className="mobile-menu" onClick={(e) => { if (e.target === e.currentTarget) close(); }}>
+          <div className="mobile-menu-inner">
+            <nav className="mobile-nav">
+              <a className="mobile-nav-link" href="index.html" onClick={close}>Home</a>
+
+              <div className="mobile-nav-section">
+                <button
+                  className={'mobile-nav-link mobile-nav-toggle' + (servicesOpen ? ' is-open' : '')}
+                  onClick={() => setServicesOpen(!servicesOpen)}
+                >
+                  Services
+                  <span className="mobile-nav-caret">▾</span>
+                </button>
+                {servicesOpen && (
+                  <div className="mobile-nav-sub">
+                    {SERVICE_LINKS.map(s => (
+                      <a key={s.href} className="mobile-nav-sub-link" href={s.href} onClick={close}>
+                        {s.title}
+                        {s.pill && <span className="mobile-nav-pill">{s.pill}</span>}
+                      </a>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              <a className="mobile-nav-link" href="portfolio.html" onClick={close}>Portfolio</a>
+              <a className="mobile-nav-link" href="process.html" onClick={close}>Our Process</a>
+              <a className="mobile-nav-link" href="about.html" onClick={close}>About Us</a>
+              <a className="mobile-nav-link" href="news.html" onClick={close}>News</a>
+              <a className="mobile-nav-link" href="contact.html" onClick={close}>Contact</a>
+              <a className="mobile-nav-link" href="shop.html" onClick={close}>Shop</a>
+            </nav>
+            <div className="mobile-menu-cta">
+              <a className="btn btn--accent" href="contact.html" onClick={close}>
+                Start a Project <span className="arrow">→</span>
+              </a>
+              <a className="btn btn--ghost mobile-menu-phone" href="tel:5084132043" onClick={close}>
+                508.413.2043
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
     </header>);
 }
 
