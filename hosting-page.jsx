@@ -35,7 +35,6 @@ const PLANS = [
       'Forms, links, and mobile layout tested',
       'Speed check and light optimization',
       '404s, redirects, and sitemap reviewed',
-      'Search console check',
     ],
   },
   {
