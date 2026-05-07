@@ -309,17 +309,18 @@ function LeadForm() {
    ============================================================ */
 function AIShowcase() {
   return (
-    <section className="section section--tight" id="ai" style={{ padding: "20px 0px 140px", height: "255px" }}>
+    <section className="section" id="ai">
       <div className="shell">
         <div className="ai-strip">
-          <div className="ai-strip-lead">
+          <div className="ai-strip-left">
             <span className="ai-strip-tag">New · AI Studio</span>
+            <h3 className="ai-strip-hl">AI that does <em>real work</em> for your business.</h3>
             <p className="ai-strip-copy">
-              Practical AI add-ons for small businesses — booking assistants, smart search, content co-pilots. Built, hosted, explained in plain English.
+              We identify where AI can genuinely improve your customer experience or save your team time — then build and integrate it into your site.
             </p>
           </div>
-          <a className="ai-strip-link" href="#">
-            See live demos <span className="arrow">→</span>
+          <a className="ai-strip-link" href="ai-apps.html">
+            Explore AI Studio <span className="arrow">→</span>
           </a>
         </div>
       </div>

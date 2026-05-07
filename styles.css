@@ -1068,44 +1068,73 @@ p, li {
 .section--tight { padding-top: 24px; padding-bottom: 24px; }
 
 .ai-strip {
+  position: relative;
+  overflow: hidden;
+  background: #060E1A;
+  border-radius: var(--r-xl);
+  padding: 44px 52px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
+  gap: 32px;
   flex-wrap: wrap;
-  background: var(--brand-blue);
-  color: white;
-  border-radius: var(--r-lg);
-  padding: 18px 24px;
 }
-.ai-strip-lead {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  flex-wrap: wrap;
-  flex: 1 1 480px;
+.ai-strip::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 55% 90% at -5% 110%, rgba(123,192,67,0.22), transparent 55%),
+    radial-gradient(ellipse 40% 60% at 105% -10%, rgba(33,146,188,0.18), transparent 50%);
+  pointer-events: none;
+}
+.ai-strip::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.045) 1px, transparent 1px);
+  background-size: 24px 24px;
+  pointer-events: none;
+}
+.ai-strip-left {
+  position: relative;
+  z-index: 1;
+  flex: 1 1 400px;
   min-width: 0;
 }
 .ai-strip-tag {
   font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: 0.12em;
+  font-size: 10px;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  background: rgba(255,255,255,0.16);
-  border: 1px solid rgba(255,255,255,0.22);
-  color: white;
-  padding: 5px 10px;
+  background: rgba(123,192,67,0.14);
+  border: 1px solid rgba(123,192,67,0.28);
+  color: #7BC043;
+  padding: 4px 11px;
   border-radius: 999px;
   white-space: nowrap;
-  flex-shrink: 0;
+  display: inline-block;
 }
+.ai-strip-hl {
+  font-family: var(--serif);
+  font-size: clamp(22px, 2.4vw, 30px);
+  color: white;
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 14px 0 10px;
+  letter-spacing: -0.3px;
+}
+.ai-strip-hl em { color: #7BC043; font-style: italic; }
 .ai-strip-copy {
-  font-size: 15px;
-  line-height: 1.5;
-  color: rgba(255,255,255,0.92);
+  font-size: 14px;
+  line-height: 1.65;
+  color: rgba(255,255,255,0.58);
   margin: 0;
+  max-width: 480px;
 }
 .ai-strip-link {
+  position: relative;
+  z-index: 1;
   font-size: 14px;
   font-weight: 500;
   color: white;
@@ -1113,15 +1142,17 @@ p, li {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 8px 14px;
-  border: 1px solid rgba(255,255,255,0.35);
+  padding: 10px 20px;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.2);
   border-radius: 999px;
   transition: background .15s ease, border-color .15s ease;
   white-space: nowrap;
+  flex-shrink: 0;
 }
 .ai-strip-link:hover {
-  background: rgba(255,255,255,0.12);
-  border-color: rgba(255,255,255,0.55);
+  background: rgba(255,255,255,0.13);
+  border-color: rgba(255,255,255,0.45);
 }
 
 /* ===========================
