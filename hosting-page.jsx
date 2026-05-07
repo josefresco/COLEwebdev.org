@@ -87,6 +87,7 @@ function HostingPage() {
               <div className="hc-partners-logos">
                 <img src="assets/wpengine-logo-white.svg" alt="WP Engine" className="hc-partner-logo" />
                 <img src="assets/pressable-logo-v8-light@2x.png" alt="Pressable" className="hc-partner-logo" />
+                <img src="assets/hostgator-logo.png" alt="HostGator" className="hc-partner-logo" />
               </div>
             </div>
           </div>
