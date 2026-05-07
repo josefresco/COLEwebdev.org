@@ -11,43 +11,41 @@ const HC_INCLUDES = [
   { icon: '⚡', bg: 'rgba(14,42,74,0.10)', color: '#0E2A4A', title: 'Priority Support', body: 'A real person to email when something looks off. Care Plan clients jump the queue — you\'re not waiting behind new project work.' },
 ];
 
+const BASE_FEATURES = [
+  'Backup created and verified',
+  'WordPress core, theme, and plugin updates',
+  'Cache cleared and front-end checked',
+  'Security scan',
+  'Console check for errors',
+  'Forms, links, and mobile layout tested',
+  'Speed test and light optimization',
+  '404s, redirects, and sitemap reviewed',
+  'Local backup copy downloaded',
+  'E-commerce check (if applicable)',
+];
+
 const PLANS = [
   {
     name: 'Bi-Annual',
     freq: 'Twice a year',
-    desc: 'Core maintenance for stable sites that don\'t change often — done right, twice a year.',
-    features: [
-      'Backup created and verified',
-      'WordPress core, theme, and plugin updates',
-      'Cache cleared and front-end checked',
-      'Security scan',
-      'Console check for errors',
-      'E-commerce check (if applicable)',
-    ],
+    desc: 'Full maintenance for stable sites that don\'t change often — done right, twice a year.',
+    features: BASE_FEATURES,
   },
   {
     name: 'Quarterly',
     freq: 'Four times a year',
     featured: true,
-    desc: 'Our most popular plan — thorough maintenance four times a year with a local backup copy each visit.',
-    features: [
-      'Everything in Bi-Annual',
-      'Local backup copy downloaded',
-      'Forms, links, and mobile layout tested',
-      'Speed test and light optimization',
-      '404s, redirects, and sitemap reviewed',
-      'E-commerce check (if applicable)',
-    ],
+    desc: 'Our most popular plan — consistent care four times a year for actively managed sites.',
+    features: BASE_FEATURES,
   },
   {
     name: 'Monthly',
     freq: 'Every month',
-    desc: 'Full-coverage care for businesses whose site is active, revenue-generating, or frequently updated.',
+    desc: 'Everything in our standard visit, plus deeper reviews for sites that are always in motion.',
     features: [
-      'Everything in Quarterly',
+      ...BASE_FEATURES,
       'Google Analytics review',
       'Image optimization',
-      'E-commerce check (if applicable)',
       'Cloudflare and license review',
     ],
   },
