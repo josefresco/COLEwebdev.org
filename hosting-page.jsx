@@ -22,7 +22,6 @@ const PLANS = [
       'Cache cleared and front-end checked',
       'Security scan',
       'Console check for errors',
-      'Written summary after each visit',
     ],
   },
   {
