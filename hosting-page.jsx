@@ -13,40 +13,43 @@ const HC_INCLUDES = [
 
 const PLANS = [
   {
-    name: 'Basic Care',
-    desc: 'Hosting and essentials for simple WordPress sites that don\'t change often.',
+    name: 'Bi-Annual',
+    freq: 'Twice a year',
+    desc: 'A twice-yearly checkup for stable sites that don\'t change often.',
     features: [
-      'Managed WordPress hosting',
-      'Daily automated backups',
-      'Core + plugin updates monthly',
-      'Uptime monitoring',
-      'Security scanning',
-      'Monthly report email',
+      'Full site and navigation review',
+      'Core, theme, and plugin updates',
+      'Backup verification',
+      'Security scan and report',
+      'Performance check',
+      'Written summary after each visit',
     ],
   },
   {
-    name: 'Standard Care',
+    name: 'Quarterly',
+    freq: 'Four times a year',
     featured: true,
-    desc: 'Our most popular plan — everything in Basic plus active support and content edits.',
+    desc: 'Our most popular plan — consistent maintenance with support between scheduled visits.',
     features: [
-      'Everything in Basic Care',
-      'Up to 1 hr content edits / month',
+      'Everything in Bi-Annual',
+      'Page, form, and link testing',
+      'Content accuracy review',
+      'Uptime and speed monitoring',
+      'Analytics summary',
       'Priority email support',
-      'Speed optimization',
-      'Google Analytics review',
-      'Quarterly strategy call',
     ],
   },
   {
-    name: 'Premium Care',
-    desc: 'For businesses that rely heavily on their site and need hands-on, proactive service.',
+    name: 'Monthly',
+    freq: 'Every month',
+    desc: 'Hands-on, ongoing care for businesses that rely on their site every day.',
     features: [
-      'Everything in Standard Care',
-      'Up to 3 hrs content edits / month',
+      'Everything in Quarterly',
+      'Monthly written report',
+      'SEO health monitoring',
+      'E-commerce review (if applicable)',
       'Phone + email support',
-      'SEO health checks',
-      'E-commerce support',
-      'Monthly strategy call',
+      'Strategy check-in each visit',
     ],
   },
 ];
@@ -111,7 +114,7 @@ function HostingPage() {
           <div className="hc-plans-hd">
             <span className="eyebrow">Care Plans</span>
             <h2 className="hc-plans-hl">Pick the level of care that fits.</h2>
-            <p className="hc-plans-sub">All plans are month-to-month. No contracts.</p>
+            <p className="hc-plans-sub">Choose the frequency that fits your site and your schedule. No long-term contracts.</p>
           </div>
           <div className="hc-plans-grid">
             {PLANS.map(plan => (
@@ -119,6 +122,7 @@ function HostingPage() {
                 <div className="hc-plan-head">
                   {plan.featured && <div className="hc-plan-badge">Most popular</div>}
                   <div className="hc-plan-name">{plan.name}</div>
+                  <div className="hc-plan-freq">{plan.freq}</div>
                   <div className="hc-plan-desc">{plan.desc}</div>
                 </div>
                 <div className="hc-plan-body">
