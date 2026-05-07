@@ -114,17 +114,6 @@ function Services() {
             </div>
           </div>
 
-          {/* Email Newsletter Design */}
-          <div className="card svc-card sm">
-            <div className="icon navy">✉</div>
-            <h3>Email Newsletter Design</h3>
-            <p>Branded templates and campaigns in Mailchimp, Klaviyo, or ConvertKit — built to look like you.</p>
-            <div className="meta-row">
-              <span>Templates · Sends</span>
-              <span className="arrow-pill" style={{ background: 'var(--paper)', color: 'var(--ink)' }}>→</span>
-            </div>
-          </div>
-
           {/* E-Commerce */}
           <div className="card svc-card sm">
             <div className="icon green">◐</div>
