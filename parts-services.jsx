@@ -248,11 +248,27 @@ function Estimator() {
 
 function LeadForm() {
   const [submitted, setSubmitted] = useStateS(false);
+  const [error, setError] = useStateS(null);
+  const [loading, setLoading] = useStateS(false);
   const [form, setForm] = useStateS({ name: '', email: '', phone: '', project: PROJECT_TYPES[0], message: '' });
   const update = (k) => (e) => setForm((f) => ({ ...f, [k]: e.target.value }));
-  const submit = (e) => {
+  const submit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
+    setError(null);
+    setLoading(true);
+    try {
+      const res = await fetch('https://formspree.io/f/xnjwgqld', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({ name: form.name, email: form.email, phone: form.phone, project: form.project, message: form.message }),
+      });
+      if (!res.ok) throw new Error('Submit failed');
+      setSubmitted(true);
+    } catch {
+      setError('Something went wrong — please try again or call 508.413.2043.');
+    } finally {
+      setLoading(false);
+    }
   };
   if (submitted) {
     return (
@@ -294,11 +310,14 @@ function LeadForm() {
         <label>Tell us about it</label>
         <textarea required value={form.message} onChange={update('message')} placeholder="A few sentences about your business and what you need." />
       </div>
+      {error && <p style={{ fontSize: 13, color: '#c0392b', marginTop: 10 }}>{error}</p>}
       <div className="estimator-actions">
         <span style={{ fontFamily: 'var(--mono)', fontSize: 11, color: 'var(--muted)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
           We reply within 1 business day
         </span>
-        <button className="btn btn--accent btn--sm" type="submit">Send it <span className="arrow">→</span></button>
+        <button className="btn btn--accent btn--sm" type="submit" disabled={loading}>
+          {loading ? 'Sending…' : <>Send it <span className="arrow">→</span></>}
+        </button>
       </div>
     </form>);
 

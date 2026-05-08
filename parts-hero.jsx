@@ -227,7 +227,7 @@ function HeroMarquee() {
   { name: 'Idle Times Bike Shop', tag: 'RETAIL', t: 't-pine' },
   { name: 'Wellfleet Chamber', tag: 'COMMUNITY', t: 't-coast' },
   { name: 'Nauset Beach Inn', tag: 'HOSPITALITY', t: 't-sun' },
-  { name: 'Wellfleet Drive-In', tag: 'LOCAL', t: 't-tide' }];
+  { name: 'WOMR Radio', tag: 'NONPROFIT', t: 't-tide' }];
 
   return (
     <div className="hero-marquee-wrap">
@@ -347,9 +347,7 @@ function Trust() {
   const marks = [
     { name: 'Cape Cod Aquatics', italic: true },
     { name: 'LOWER CAPE OUTREACH', italic: false },
-    { name: "Wellfleet Drive-In", italic: true },
     { name: 'TRURO VINEYARDS', italic: false },
-    { name: 'Sandy Neck Coastal', italic: true },
     { name: 'DENNIS CHAMBER', italic: false },
     { name: 'SVdP Cape Cod', italic: true },
     { name: 'HOG ISLAND BEER', italic: false },
@@ -359,8 +357,8 @@ function Trust() {
     { name: 'Sylvestre Outdoors', italic: true },
     { name: 'CAPE COD TOWEL CO.', italic: false },
     { name: 'Dr. Moldover', italic: true },
-    { name: 'NANTUCKET OUTFITTERS', italic: false },
-    { name: 'Cole Construction', italic: true },
+    { name: 'WOMR Radio', italic: false },
+    { name: 'Nauset Beach Inn', italic: true },
   ];
 
   // duplicate for seamless loop
