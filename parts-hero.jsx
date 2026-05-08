@@ -112,20 +112,6 @@ function Header() {
                   <div className="nav-dd-desc">WooCommerce &amp; Shopify storefronts that ship.</div>
                 </div>
               </a>
-              <a href="wordpress.html" className="nav-dd-item">
-                <span className="nav-dd-glyph navy">◐</span>
-                <div>
-                  <div className="nav-dd-title">WordPress Design</div>
-                  <div className="nav-dd-desc">Custom themes, lean plugin stack, client-managed.</div>
-                </div>
-              </a>
-              <a href="traditional.html" className="nav-dd-item">
-                <span className="nav-dd-glyph green">◇</span>
-                <div>
-                  <div className="nav-dd-title">Traditional Web Design</div>
-                  <div className="nav-dd-desc">Hand-coded HTML/CSS — fast, secure, no CMS.</div>
-                </div>
-              </a>
             </div>
           </div>
           <a className={'nav-link' + on('portfolio.html')} href="portfolio.html">Portfolio</a>
