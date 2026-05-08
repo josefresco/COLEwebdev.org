@@ -202,7 +202,7 @@ function SeoPage() {
             <div className="seo-testi-meta">
               <img
                 className="seo-testi-img"
-                src="https://www.colewebdev.com/wp-content/uploads/2020/04/womr-website-design-build-wordpress-ecommerce-cape-cod-xsmall.jpg"
+                src="assets/womr-website-design-build-wordpress-ecommerce-cape-cod-xsmall.jpg"
                 alt="WOMR"
                 loading="lazy"
               />

@@ -5,7 +5,7 @@ const STEPS = [
     n: '01',
     name: 'Consultation',
     title: 'A real conversation. No pitch deck.',
-    img: 'https://www.colewebdev.com/wp-content/uploads/2020/06/consultation-colewebdev.jpg',
+    img: 'assets/consultation-colewebdev.jpg',
     badge: '1 hour · free',
     body: [
       'It all begins with a real, down-to-earth conversation between you and the web experts at COLEwebdev. We offer every business 1 free hour of consultation time.',
@@ -16,7 +16,7 @@ const STEPS = [
     n: '02',
     name: 'Proposal',
     title: 'A fixed price. In writing. No surprises.',
-    img: 'https://www.colewebdev.com/wp-content/uploads/2020/06/planning-colewebdev.jpg',
+    img: 'assets/planning-colewebdev.jpg',
     badge: 'fixed price',
     body: [
       'Based on the information gathered from the initial consultation we create a written proposal — a concise, easy-to-understand breakdown of exactly what we\'ll build and what it costs.',
@@ -27,7 +27,7 @@ const STEPS = [
     n: '03',
     name: 'Planning',
     title: 'Every detail scheduled before a pixel moves.',
-    img: 'https://www.colewebdev.com/wp-content/uploads/2020/06/proposal-colewebdev.jpg',
+    img: 'assets/proposal-colewebdev.jpg',
     body: [
       'Once the proposal is agreed upon and a deposit made, we begin planning. Meetings, photoshoots, content creation tasks — everything gets a date on the calendar.',
       'We\'ve done this enough times to know that a well-planned project is a fast project.',
@@ -37,7 +37,7 @@ const STEPS = [
     n: '04',
     name: 'Design',
     title: '100% custom. Built around your brand.',
-    img: 'https://www.colewebdev.com/wp-content/uploads/2020/06/website-design-build-cape-cod-colewebdev.jpg',
+    img: 'assets/website-design-build-cape-cod-colewebdev.jpg',
     badge: '100% custom',
     body: [
       'The first and most important project element to begin is the design. Based on the current state of your logo and branding, COLEwebdev works with you to create something attractive and effective.',
@@ -48,7 +48,7 @@ const STEPS = [
     n: '05',
     name: 'Content',
     title: 'Your voice. Our expertise. Great copy.',
-    img: 'https://www.colewebdev.com/wp-content/uploads/2020/06/content-website-build-cape-cod.jpg',
+    img: 'assets/content-website-build-cape-cod.jpg',
     body: [
       'You\'re the expert in your business — and your site needs to sound like it. While we\'re hard at work designing, we need you to gather and create content: copy, photography, and supporting media.',
       'Where you need help, we bring in our trusted network of photographers and copywriters to fill the gaps.',
@@ -58,7 +58,7 @@ const STEPS = [
     n: '06',
     name: 'Production',
     title: 'Built right the first time.',
-    img: 'https://www.colewebdev.com/wp-content/uploads/2020/06/colewebdev-production-website.jpg',
+    img: 'assets/colewebdev-production-website.jpg',
     body: [
       'With an approved design and content in hand, we move into the production phase. This is where the project gets detailed — and where COLEwebdev\'s two-plus decades of experience make the difference.',
       'Both the client and our team stay in close contact throughout. You see progress weekly, and nothing goes live without your sign-off.',
@@ -69,22 +69,22 @@ const STEPS = [
 const PHASES = [
   {
     title: 'Security',
-    img: 'https://www.colewebdev.com/wp-content/uploads/2020/06/security-website-cape-cod-1.png',
+    img: 'assets/security-website-cape-cod-1.png',
     body: 'SSL certificates, secure password practices, and software hardening. We\'ve defended against every type of web security issue — and we make sure you won\'t face them.',
   },
   {
     title: 'Pre-Launch',
-    img: 'https://www.colewebdev.com/wp-content/uploads/2020/06/website-pre-launch-cape-cod-circle.png',
+    img: 'assets/website-pre-launch-cape-cod-circle.png',
     body: 'Email setup, visitor tracking, third-party integrations, and social media connections — all the details that make the actual launch day smooth.',
   },
   {
     title: 'Launch',
-    img: 'https://www.colewebdev.com/wp-content/uploads/2020/06/website-launch-cape-cod-circle.png',
+    img: 'assets/website-launch-cape-cod-circle.png',
     body: 'At an agreed-upon date the website goes live. Where it makes sense, we\'ll plan a soft launch first — giving us room for final tweaks before the public announcement.',
   },
   {
     title: 'Post-Launch',
-    img: 'https://www.colewebdev.com/wp-content/uploads/2020/06/website-post-launch-cape-cod-circle.png',
+    img: 'assets/website-post-launch-cape-cod-circle.png',
     body: 'Training, search engine registration, old-page redirects, and everything else that can only happen after the site is live. We don\'t disappear at the finish line.',
   },
 ];
@@ -144,7 +144,7 @@ function ProcessPage() {
 
   React.useEffect(() => {
     const img = new Image();
-    img.src = 'https://www.colewebdev.com/wp-content/uploads/2020/05/colewebdev-website-design-build-cape-cod-sunrise-2020-2.jpg';
+    img.src = 'assets/colewebdev-website-design-build-cape-cod-sunrise-2020-2.jpg';
     img.onload = () => {
       if (heroRef.current) heroRef.current.classList.add('loaded');
     };
@@ -208,7 +208,7 @@ function ProcessPage() {
             <div className="proc-testi-meta">
               <img
                 className="proc-testi-img"
-                src="https://www.colewebdev.com/wp-content/uploads/2024/07/disney-vacation-rental-website-design-build-cape-cod-xsmll.jpg"
+                src="assets/disney-vacation-rental-website-design-build-cape-cod-xsmll.jpg"
                 alt="SH Emerald Rental"
                 loading="lazy"
               />

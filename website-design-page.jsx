@@ -1,6 +1,6 @@
 /* global React, ReactDOM */
 
-const WD_HERO_IMG = 'https://www.colewebdev.com/wp-content/uploads/2020/05/website-design-wordpress-cape-cod-website-6.jpg';
+const WD_HERO_IMG = 'assets/website-design-wordpress-cape-cod-website-6.jpg';
 
 const DEVELOPMENT_POINTS = [
   {
@@ -27,7 +27,7 @@ const RECENT_POSTS = [
     title: 'A Fresh Look for the Truro Historical Society Website',
     date: 'Apr 30, 2026',
     category: 'New Website Launch',
-    img: 'https://www.colewebdev.com/wp-content/uploads/2025/05/truro-historical-society-custom-website-launch-cape-cod-small.jpg',
+    img: 'assets/truro-historical-society-custom-website-launch-cape-cod-small.jpg',
     excerpt: 'The Truro Historical Society recently received a much-needed website redesign that brings new life to its online presence while honoring the town\'s rich history.',
     href: 'https://www.colewebdev.com/a-fresh-look-for-the-truro-historical-society-website/',
     cta: 'View our portfolio',
@@ -37,7 +37,7 @@ const RECENT_POSTS = [
     title: 'Do People Still Hire Web Designers?',
     date: 'Apr 15, 2026',
     category: 'News',
-    img: 'https://www.colewebdev.com/wp-content/uploads/2021/06/colewebdev-photo-shoot-2021-4.jpg',
+    img: 'assets/colewebdev-photo-shoot-2021-4.jpg',
     excerpt: 'Short answer: yes — more than ever. But why people hire them, and what they expect, has evolved.',
     href: 'https://www.colewebdev.com/do-people-still-hire-web-designers/',
     cta: 'Read more',
@@ -148,7 +148,7 @@ function WebDesignPage() {
               <a href="https://womr.org/" target="_blank" rel="noopener noreferrer">
                 <img
                   className="wd-testi-img"
-                  src="https://www.colewebdev.com/wp-content/uploads/2020/04/womr-website-design-build-wordpress-ecommerce-cape-cod-xsmall.jpg"
+                  src="assets/womr-website-design-build-wordpress-ecommerce-cape-cod-xsmall.jpg"
                   alt="WOMR"
                   loading="lazy"
                 />

@@ -213,8 +213,8 @@ function Estimator() {
               <div style={{ marginTop: 28, display: 'flex', alignItems: 'center', gap: 14 }}>
                 <div style={{ display: 'flex', gap: 0 }}>
                   {[
-                  { src: 'https://www.colewebdev.com/wp-content/uploads/2021/04/josiah-cole-cape-cod-website-designer.jpg', alt: 'Josiah Cole', ring: '#5CC035' },
-                  { src: 'https://www.colewebdev.com/wp-content/uploads/2021/04/desiree-cole-webdiva-cape-cod-website-designer.jpg', alt: 'Desiree Cole', ring: '#2192BC' }].
+                  { src: 'assets/josiah-cole-cape-cod-website-designer.jpg', alt: 'Josiah Cole', ring: '#5CC035' },
+                  { src: 'assets/desiree-cole-webdiva-cape-cod-website-designer.jpg', alt: 'Desiree Cole', ring: '#2192BC' }].
                   map((p, i) =>
                   <img
                     key={i}
