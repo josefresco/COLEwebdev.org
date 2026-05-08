@@ -1,7 +1,6 @@
 /* global React, ReactDOM */
 
-/* Replace with your Formspree endpoint once set up at formspree.io */
-const FORM_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID';
+const FORM_ENDPOINT = 'https://formspree.io/f/xnjwgqld';
 
 const INITIAL = {
   name: '', company: '', email: '', phone: '',
