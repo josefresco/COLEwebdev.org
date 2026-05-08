@@ -410,11 +410,7 @@ function PortfolioPage() {
       <section className="pf-section">
         <div className="shell">
           <div className="pf-meta-row">
-            <span className="pf-count">
-              Showing {filtered.length} of {PROJECTS.length} projects
-              {active !== 'all' ? ` · ${filterLabel}` : ''}
-            </span>
-            <a
+            <
               href="https://www.colewebdev.com/portfolio/"
               target="_blank"
               rel="noopener"
