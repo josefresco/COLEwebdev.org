@@ -97,7 +97,7 @@ function WebDesignPage() {
           <div className="wd-split-media">
             <img
               className="wd-split-img"
-              src="https://www.colewebdev.com/wp-content/uploads/2020/04/website-design-cape-cod-2020.png"
+              src="assets/cape-cod-aquatics-website-small.jpg"
               alt="Cape Cod Website Design"
               loading="lazy"
             />
@@ -111,7 +111,7 @@ function WebDesignPage() {
           <div className="wd-split-media">
             <img
               className="wd-split-img"
-              src="https://www.colewebdev.com/wp-content/uploads/2020/06/2-a.png"
+              src="assets/colewebdev-team-2021.jpg"
               alt="Cape Cod Website Development"
               loading="lazy"
             />
