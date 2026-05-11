@@ -134,6 +134,7 @@ function Header() {
               </a>
             </div>
           </div>
+          <a className={'nav-link' + on('whitepapers.html')} href="whitepapers.html">Whitepapers</a>
           <a className={'nav-link' + on('news.html')} href="news.html">News</a>
           <a className={'nav-link' + on('contact.html')} href="contact.html">Contact</a>
         </div>
@@ -186,6 +187,7 @@ function Header() {
               <a className="mobile-nav-link" href="portfolio.html" onClick={close}>Portfolio</a>
               <a className="mobile-nav-link" href="about.html" onClick={close}>About Us</a>
               <a className="mobile-nav-link" href="process.html" onClick={close}>Our Process</a>
+              <a className="mobile-nav-link" href="whitepapers.html" onClick={close}>Whitepapers</a>
               <a className="mobile-nav-link" href="news.html" onClick={close}>News</a>
               <a className="mobile-nav-link" href="contact.html" onClick={close}>Contact</a>
             </nav>
