@@ -41,17 +41,6 @@ const LOGO_PORTFOLIO = [
   { name: 'Cape Shores Vacation Rentals', img: 'https://www.colewebdev.com/wp-content/uploads/2019/11/cape-shores-website-logo-design.jpg' },
 ];
 
-const DELIVERABLES = [
-  'Primary logo (horizontal, stacked, icon-only)',
-  'Color palette with hex, RGB, and CMYK values',
-  'Typography spec with licensed font files',
-  'Business card design (print-ready PDF)',
-  'Letterhead & envelope (print-ready PDF)',
-  'Brand guidelines PDF',
-  'All source files (AI / EPS)',
-  'Web-ready assets (SVG, PNG @ 1x, 2x)',
-];
-
 const SWATCHES = ['#F26B1F', '#FFC79A', '#0E2A4A', '#5DA02E', '#F5F1EB', '#1A1612'];
 
 function BrandingPage() {
@@ -171,24 +160,6 @@ function BrandingPage() {
                 <span className="br-step-n">{s.n}</span>
                 <div className="br-step-title">{s.title}</div>
                 <div className="br-step-body">{s.body}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Deliverables */}
-      <section className="br-deliver">
-        <div className="shell">
-          <div className="br-deliver-hd">
-            <span className="eyebrow">What you receive</span>
-            <h2 className="br-deliver-hl">Every file you'll ever need.</h2>
-          </div>
-          <div className="br-deliver-grid">
-            {DELIVERABLES.map(d => (
-              <div key={d} className="br-deliver-item">
-                <span className="br-deliver-dot" />
-                <span className="br-deliver-label">{d}</span>
               </div>
             ))}
           </div>
