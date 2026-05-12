@@ -414,7 +414,7 @@ function PortfolioPage() {
               Showing {filtered.length} of {PROJECTS.length} projects
               {active !== 'all' ? ` · ${filterLabel}` : ''}
             </span>
-            <
+            <a
               href="https://www.colewebdev.com/portfolio/"
               target="_blank"
               rel="noopener"
