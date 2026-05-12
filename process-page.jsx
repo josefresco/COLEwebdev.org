@@ -4,7 +4,7 @@ const STEPS = [
   {
     n: '01',
     name: 'Consultation',
-    title: 'A real conversation. No pitch deck.',
+    title: 'A real conversation. No confusing buzzwords.',
     img: 'assets/consultation-colewebdev.jpg',
     badge: '1 hour · free',
     body: [
