@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Disallow: /devtools/
+Disallow: /badge-preview.html
+Disallow: /process-hero-preview.html
+
+Sitemap: https://colewebdev.org/sitemap.xml

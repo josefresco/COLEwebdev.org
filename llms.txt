@@ -1,0 +1,47 @@
+# COLEwebdev
+
+> Cape Cod's full-service web design and development studio. Custom websites, WordPress, e-commerce, SEO, hosting, and AI integrations — built for small businesses and nonprofits since 2006.
+
+COLEwebdev is a husband-and-wife web studio based in Eastham, Massachusetts, on Cape Cod. Founded in 2006 by Josiah and Desiree Cole, the studio has launched 700+ websites for small businesses, nonprofits, and community organizations across the Outer Cape and beyond. Every project goes through Josiah and Desiree directly — no account managers, no outsourcing.
+
+Phone: 508-413-2043
+Email: info@colewebdev.com
+Location: Eastham, MA 02642 (serving all of Cape Cod)
+Google rating: 5★ (70+ reviews)
+
+## Services
+
+- [Website Design + Build](https://colewebdev.org/website-design.html): 100% custom design and development, no templates. Fixed price, end-to-end.
+- [WordPress Websites](https://colewebdev.org/wordpress.html): Custom WordPress themes, lean plugin stack, client-managed content.
+- [Traditional Web Design](https://colewebdev.org/traditional.html): Hand-coded HTML/CSS/JS — maximum performance, zero CMS overhead.
+- [E-Commerce](https://colewebdev.org/ecommerce.html): WooCommerce and Shopify storefronts built to convert.
+- [SEO & Local Search](https://colewebdev.org/seo.html): Local SEO, Google Ads, and search strategy for Cape Cod businesses.
+- [Website Hosting + Care Plans](https://colewebdev.org/hosting.html): Managed WordPress hosting with daily backups, SSL, and human support.
+- [Branding](https://colewebdev.org/branding.html): Logo, color, print — brand identity that works across every surface.
+- [AI Studio](https://colewebdev.org/ai-apps.html): Booking, intake, and search powered by AI, integrated into existing sites.
+- [All Services](https://colewebdev.org/services.html): Full overview of all services.
+
+## Portfolio
+
+- [Portfolio](https://colewebdev.org/portfolio.html): 32 featured projects across industries including hospitality, nonprofit, retail, healthcare, and community organizations on Cape Cod.
+
+## Resources
+
+- [Whitepapers](https://colewebdev.org/whitepapers.html): Eight in-depth guides on web design strategy — What Web Design Does, Investment Value, DIY vs Pro, 3 Types of Web Design, 7 Golden Rules, 5 Essential Principles, The 7 C's Framework, Building a Better FAQ.
+- [News](https://colewebdev.org/news.html): Recent website launches, industry news, and resources for Cape Cod business owners.
+
+## Company
+
+- [About Us](https://colewebdev.org/about.html): Studio story, team bios for Josiah and Desiree Cole, awards, and community memberships.
+- [Our Process](https://colewebdev.org/process.html): How COLEwebdev scopes, designs, builds, launches, and hands off every project.
+- [Contact](https://colewebdev.org/contact.html): Start a project, request a quote, or schedule a free first-hour consultation.
+
+## Key Facts
+
+- Founded: 2006
+- Location: Eastham, MA (Cape Cod)
+- Founders: Josiah Cole (CTO/Webmaster) and Desiree Cole (CEO/Web Diva)
+- Projects launched: 700+
+- Specialties: Cape Cod small businesses, nonprofits, seasonal businesses, hospitality
+- Technologies: WordPress, WooCommerce, Shopify, HTML/CSS/JS, AI integrations
+- First consultation: Free (no commitment)
