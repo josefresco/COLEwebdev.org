@@ -13,7 +13,7 @@ const BR_STEPS = [
   { n: '01', title: 'Discovery', body: 'We learn your business, your audience, your competitors, and what makes you different. A brand brief captures it all before design begins.' },
   { n: '02', title: 'Concepts', body: 'Two to three distinct directions — each with logo, color, and type applied to a real context. Not abstract mood boards.' },
   { n: '03', title: 'Refinement', body: 'You choose a direction and we sharpen it. Two rounds of revisions to get the details exactly right.' },
-  { n: '04', title: 'Delivery', body: 'Final files in every format you\'ll ever need — SVG, PNG, PDF, EPS — plus the brand guidelines document.' },
+  { n: '04', title: 'Delivery', body: 'Final files in every format you\'ll ever need — SVG, PNG, PDF, and EPS.' },
 ];
 
 const LOGO_PORTFOLIO = [
