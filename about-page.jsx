@@ -80,7 +80,7 @@ function AboutPage() {
                 COLEwebdev was founded in 2006 by Josiah and Desiree Cole in Eastham, Massachusetts. What started as a small local web shop has grown into a full-service digital studio — one that still answers the phone, still shows up in person, and still treats every client like a neighbor.
               </p>
               <p className="ab-story-p">
-                We've built websites for contractors and nonprofits, restaurants and retail shops, healthcare practices and harbor masters. Our clients range from single-person operations on Route 6 to organizations with reach across the country — but the work ethic is the same for all of them.
+                We've built websites for contractors and nonprofits, restaurants and retail shops, healthcare practices and harbor masters. Our clients range from single-person operations to organizations with reach across the country — but the work ethic is the same for all of them.
               </p>
               <p className="ab-story-p">
                 We're not a faceless agency. There's no account manager between you and the people doing the work. You talk to us directly, and we stay involved from brief to launch to everything that comes after.
