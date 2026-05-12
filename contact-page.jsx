@@ -138,7 +138,7 @@ function ContactPage() {
                   <h2 className="ct-form-title">Questions or comments?</h2>
                   <p className="ct-form-sub">
                     Use this form for general inquiries. For a project quote, use our{' '}
-                    <a href="https://www.colewebdev.com/request-a-quote/" target="_blank" rel="noopener">
+                    <a href="quote.html">
                       Request a Quote
                     </a>{' '}
                     form.
