@@ -3,7 +3,7 @@
 const BR_WHAT = [
   { icon: '◇', bg: 'rgba(242,107,31,0.14)', color: '#F26B1F', title: 'Logo Design', body: 'A mark built for your business — wordmarks, icons, and combination logos designed to work everywhere from a business card to a billboard.' },
   { icon: '✦', bg: 'rgba(242,107,31,0.14)', color: '#F26B1F', title: 'Color System', body: 'A primary palette plus supporting tints and neutrals. Every color chosen for accessibility, emotion, and consistency across print and screen.' },
-  { icon: '◐', bg: 'rgba(14,42,74,0.10)', color: '#0E2A4A', title: 'Typography', body: 'Font pairings selected to match your brand voice — and licensed for web, print, and digital use. No generic Google Fonts default.' },
+  { icon: '◐', bg: 'rgba(14,42,74,0.10)', color: '#0E2A4A', title: 'Typography', body: 'Font pairings selected to match your brand voice — and licensed for web, print, and digital use.' },
   { icon: '↗', bg: 'rgba(242,107,31,0.14)', color: '#F26B1F', title: 'Print Collateral', body: 'Business cards, letterhead, envelopes, flyers, and menus — designed to match your digital presence and ready to send to any printer.' },
   { icon: '⌘', bg: 'rgba(14,42,74,0.10)', color: '#0E2A4A', title: 'Brand Guidelines', body: 'A single document your whole team can reference — logo usage rules, color codes, type specs, and do/don\'t examples.' },
   { icon: '↻', bg: 'rgba(242,107,31,0.14)', color: '#F26B1F', title: 'Brand Refresh', body: 'Already have a logo but it feels dated? We modernize what you have — keeping the equity you\'ve built while bringing it up to current standards.' },
