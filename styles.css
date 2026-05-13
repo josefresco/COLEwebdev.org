@@ -1914,3 +1914,269 @@ p, li {
   .nl-inner { flex-direction: column; align-items: flex-start; gap: 18px; }
   .nl-btn { align-self: stretch; text-align: center; }
 }
+
+/* ── Whitepaper Article Page (wpa-) ── */
+.wpa-hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 34vh;
+  display: flex;
+  align-items: center;
+}
+.wpa-hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 50% 60% at 100% 0%, rgba(33,146,188,0.15), transparent 55%),
+    radial-gradient(ellipse 45% 55% at 0% 100%, rgba(14,42,74,0.25), transparent 55%),
+    linear-gradient(145deg, #061828 0%, #0E2A4A 100%);
+}
+.wpa-hero-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(90deg, transparent, transparent 79px, rgba(255,255,255,0.013) 79px, rgba(255,255,255,0.013) 80px),
+    repeating-linear-gradient(0deg, transparent, transparent 79px, rgba(255,255,255,0.013) 79px, rgba(255,255,255,0.013) 80px);
+}
+.wpa-hero-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 72px 0 56px;
+}
+.wpa-breadcrumb {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.42);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 28px;
+  transition: color 0.15s;
+}
+.wpa-breadcrumb:hover { color: rgba(255,255,255,0.78); }
+.wpa-hero-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 28px;
+}
+.wpa-hero-num {
+  font-family: var(--serif);
+  font-size: 110px;
+  line-height: 0.78;
+  font-style: italic;
+  color: rgba(255,255,255,0.06);
+  flex-shrink: 0;
+  user-select: none;
+}
+.wpa-eyebrow { color: rgba(255,255,255,0.48); }
+.wpa-hero-hl {
+  font-family: var(--serif);
+  font-size: clamp(28px, 4.5vw, 52px);
+  line-height: 1.1;
+  color: white;
+  font-weight: 400;
+  margin: 10px 0 10px;
+  letter-spacing: -0.5px;
+}
+.wpa-hero-sub {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.42);
+  margin: 0;
+}
+.wpa-body {
+  padding: var(--pad-section) 0;
+  background: var(--paper);
+}
+.wpa-layout {
+  display: grid;
+  grid-template-columns: 1fr 272px;
+  gap: 56px;
+  align-items: start;
+}
+.wpa-summary {
+  font-family: var(--serif);
+  font-size: clamp(17px, 2vw, 21px);
+  line-height: 1.65;
+  color: var(--ink);
+  font-style: italic;
+  margin: 0 0 48px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--line);
+}
+.wpa-section { margin-bottom: 44px; }
+.wpa-section:last-of-type { margin-bottom: 0; }
+.wpa-section-hl {
+  font-family: var(--serif);
+  font-size: clamp(20px, 2.2vw, 26px);
+  font-weight: 400;
+  color: var(--ink);
+  margin: 0 0 16px;
+  line-height: 1.2;
+}
+.wpa-section-p {
+  font-size: 15.5px;
+  line-height: 1.82;
+  color: var(--ink-2);
+  margin: 0 0 16px;
+}
+.wpa-section-p:last-child { margin-bottom: 0; }
+.wpa-takeaway {
+  margin-top: 52px;
+  padding: 22px 26px;
+  border-left: 3px solid #5CC035;
+  background: rgba(92,192,53,0.07);
+  border-radius: 0 var(--r-lg) var(--r-lg) 0;
+}
+.wpa-takeaway-label {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #3a8a1a;
+  display: block;
+  margin-bottom: 10px;
+}
+.wpa-takeaway-body {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--ink);
+  font-weight: 500;
+  margin: 0;
+}
+.wpa-mobile-ctas { display: none; margin-top: 40px; gap: 12px; flex-direction: column; }
+.wpa-sidebar {
+  position: sticky;
+  top: 96px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.wpa-back {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 2px;
+  transition: color 0.15s;
+}
+.wpa-back:hover { color: var(--brand-blue); }
+.wpa-card {
+  border-radius: var(--r-xl);
+  padding: 22px 20px;
+}
+.wpa-card--quote {
+  background: linear-gradient(145deg, #061828 0%, #0E2A4A 100%);
+  border: 1px solid rgba(255,255,255,0.06);
+}
+.wpa-card--nl {
+  background: rgba(92,192,53,0.07);
+  border: 1px solid rgba(92,192,53,0.2);
+}
+.wpa-card-eyebrow {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin: 0 0 8px;
+}
+.wpa-card--quote .wpa-card-eyebrow { color: #5CC035; }
+.wpa-card--nl .wpa-card-eyebrow { color: #3a8a1a; }
+.wpa-card-hl {
+  font-family: var(--serif);
+  font-size: 19px;
+  font-weight: 400;
+  margin: 0 0 10px;
+  line-height: 1.2;
+}
+.wpa-card--quote .wpa-card-hl { color: white; }
+.wpa-card--nl .wpa-card-hl { color: var(--ink); }
+.wpa-card-sub {
+  font-size: 13px;
+  line-height: 1.65;
+  margin: 0 0 16px;
+}
+.wpa-card--quote .wpa-card-sub { color: rgba(255,255,255,0.52); }
+.wpa-card--nl .wpa-card-sub { color: var(--ink-2); }
+.wpa-card-btn {
+  display: block;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+.wpa-card-note {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.32);
+  text-align: center;
+  margin-top: 10px;
+}
+.wpa-nl-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 14px;
+  background: rgba(92,192,53,0.12);
+  border: 1px solid rgba(92,192,53,0.32);
+  border-radius: var(--r-md);
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #2d6e14;
+  text-decoration: none;
+  transition: background 0.15s, border-color 0.15s;
+}
+.wpa-nl-btn:hover { background: rgba(92,192,53,0.2); border-color: rgba(92,192,53,0.5); }
+.wpa-nav {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+.wpa-nav-item {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 13px 16px;
+  text-decoration: none;
+  transition: background 0.15s;
+  border-bottom: 1px solid var(--line);
+}
+.wpa-nav-item:last-child { border-bottom: none; }
+.wpa-nav-item:hover { background: var(--paper-2); }
+.wpa-nav-dir {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.wpa-nav-title {
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.35;
+}
+@media (max-width: 900px) {
+  .wpa-layout { grid-template-columns: 1fr; gap: 0; }
+  .wpa-sidebar { display: none; }
+  .wpa-mobile-ctas { display: flex; }
+  .wpa-hero-num { display: none; }
+}

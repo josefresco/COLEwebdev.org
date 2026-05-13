@@ -1,6 +1,6 @@
-/* global React, ReactDOM */
+/* global window */
 
-const WHITEPAPERS = window.WHITEPAPERS_DATA || [
+window.WHITEPAPERS_DATA = [
   {
     id: 'what-web-design-does',
     num: '01',
@@ -304,94 +304,3 @@ const WHITEPAPERS = window.WHITEPAPERS_DATA || [
     takeaway: 'A FAQ isn\'t just a support tool — it\'s an SEO asset and a conversion resource. Write it for the visitor who is 80% convinced but has one lingering hesitation. Answer that hesitation directly, and you\'ll close more inquiries.',
   },
 ];
-
-function WhitepaperCard({ wp }) {
-  return (
-    <a className="wh-card" href={`wp-${wp.id}.html`}>
-      <span className="wh-card-num">{wp.num}</span>
-      <h3 className="wh-card-title">{wp.title}</h3>
-      <p className="wh-card-summary">{wp.summary}</p>
-      <span className="wh-card-cta">Read <span className="arrow">→</span></span>
-    </a>
-  );
-}
-
-
-function WhitepapersPage() {
-  return (
-    <React.Fragment>
-      <Header />
-
-      {/* Hero */}
-      <div className="wh-hero">
-        <div className="wh-hero-bg" aria-hidden="true" />
-        <div className="wh-hero-content">
-          <div className="shell">
-            <span className="eyebrow wh-eyebrow">Resources</span>
-            <h1 className="wh-hero-hl">
-              Web Design <em>Whitepapers.</em>
-            </h1>
-            <p className="wh-hero-sub">
-              Eight in-depth guides on web design, strategy, and the decisions that separate sites that perform from sites that don't. Written for Cape Cod business owners — practical, direct, and jargon-free.
-            </p>
-            <div className="wh-hero-meta">
-              <span className="wh-hero-tag">8 guides</span>
-              <span className="wh-hero-tag">Free to read</span>
-              <span className="wh-hero-tag">By COLEwebdev</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Card grid */}
-      <section className="wh-grid-section">
-        <div className="shell">
-          <div className="wh-grid-hd">
-            <span className="eyebrow">Table of Contents</span>
-            <h2 className="wh-grid-hl">Choose a topic to explore.</h2>
-          </div>
-          <div className="wh-grid">
-            {WHITEPAPERS.map(wp => (
-              <WhitepaperCard key={wp.id} wp={wp} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-
-      {/* CTA */}
-      <section className="wh-cta-section">
-        <div className="shell">
-          <div className="wh-cta">
-            <div>
-              <h2 className="wh-cta-hl">
-                Ready to put this into <em>practice?</em>
-              </h2>
-              <p className="wh-cta-sub">
-                The first hour is free. No commitment, no pitch — just a real conversation about your website with people who've been doing this since 2000.
-              </p>
-            </div>
-            <div className="wh-cta-actions">
-              <a className="btn btn--accent" href="contact.html">
-                Start a conversation <span className="arrow">→</span>
-              </a>
-              <a
-                className="btn btn--ghost"
-                href="tel:5084132043"
-                style={{ color: 'rgba(255,255,255,0.7)', borderColor: 'rgba(255,255,255,0.2)' }}
-              >
-                508.413.2043
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <NewsletterBanner />
-      <Footer />
-    </React.Fragment>
-  );
-}
-
-const whRoot = ReactDOM.createRoot(document.getElementById('root'));
-whRoot.render(<WhitepapersPage />);
