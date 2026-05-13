@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Privacy Policy — COLEwebdev · Cape Cod Web Design</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Privacy Policy — COLEwebdev",
+  "url": "https://colewebdev.org/privacy.html",
+  "description": "COLEwebdev privacy policy. Learn how we collect, use, and protect the information you share with us through our website forms.",
+  "provider": { "@type": "ProfessionalService", "name": "COLEwebdev", "url": "https://colewebdev.org/" }
+}
+</script>
+<style>
+/* ── Privacy Policy page ── */
+
+.pp-hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 30vh;
+  display: flex;
+  align-items: center;
+}
+.pp-hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 50% 60% at 100% 0%, rgba(33,146,188,0.16), transparent 55%),
+    radial-gradient(ellipse 45% 55% at 0% 100%, rgba(14,42,74,0.25), transparent 55%),
+    linear-gradient(145deg, #061828 0%, #0E2A4A 100%);
+}
+.pp-hero-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(90deg, transparent, transparent 79px, rgba(255,255,255,0.013) 79px, rgba(255,255,255,0.013) 80px),
+    repeating-linear-gradient(0deg, transparent, transparent 79px, rgba(255,255,255,0.013) 79px, rgba(255,255,255,0.013) 80px);
+}
+.pp-hero-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 80px 0 64px;
+}
+.pp-eyebrow { color: rgba(255,255,255,0.5); }
+.pp-hero-hl {
+  font-family: var(--serif);
+  font-size: clamp(36px, 5.5vw, 64px);
+  line-height: 1.05;
+  color: white;
+  font-weight: 400;
+  margin: 12px 0 16px;
+  letter-spacing: -1px;
+}
+.pp-hero-meta {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+}
+
+/* Body */
+.pp-body {
+  padding: var(--pad-section) 0;
+  background: var(--paper);
+}
+.pp-layout {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+/* Sidebar TOC */
+.pp-toc {
+  position: sticky;
+  top: 100px;
+}
+.pp-toc-label {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 14px;
+  display: block;
+}
+.pp-toc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.pp-toc-list a {
+  font-size: 13px;
+  color: var(--ink-2);
+  text-decoration: none;
+  padding: 5px 8px;
+  border-radius: var(--r-sm);
+  display: block;
+  transition: background 0.15s, color 0.15s;
+  line-height: 1.4;
+}
+.pp-toc-list a:hover {
+  background: var(--paper-2);
+  color: var(--brand-blue);
+}
+
+/* Content */
+.pp-content {
+  max-width: 680px;
+}
+.pp-section {
+  margin-bottom: 52px;
+}
+.pp-section:last-child { margin-bottom: 0; }
+.pp-section-hl {
+  font-family: var(--serif);
+  font-size: clamp(20px, 2.2vw, 26px);
+  color: var(--ink);
+  font-weight: 400;
+  margin: 0 0 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+  scroll-margin-top: 100px;
+}
+.pp-p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--ink-2);
+  margin: 0 0 14px;
+}
+.pp-p:last-child { margin-bottom: 0; }
+.pp-list {
+  margin: 8px 0 14px 0;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.pp-list li {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--ink-2);
+}
+.pp-list li strong { color: var(--ink); font-weight: 500; }
+
+.pp-callout {
+  background: rgba(33,146,188,0.06);
+  border: 1px solid rgba(33,146,188,0.18);
+  border-left: 3px solid var(--brand-blue);
+  border-radius: 0 var(--r-md) var(--r-md) 0;
+  padding: 16px 20px;
+  margin: 16px 0;
+}
+.pp-callout p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--ink-2);
+  margin: 0;
+}
+.pp-callout p + p { margin-top: 8px; }
+
+.pp-contact-block {
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: 24px 28px;
+  margin-top: 16px;
+}
+.pp-contact-row {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.pp-contact-row:last-child { margin-bottom: 0; }
+.pp-contact-label {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  min-width: 52px;
+}
+.pp-contact-val {
+  font-size: 14px;
+  color: var(--ink);
+}
+.pp-contact-val a { color: var(--brand-blue); text-decoration: none; }
+.pp-contact-val a:hover { text-decoration: underline; }
+
+/* Responsive */
+@media (max-width: 860px) {
+  .pp-layout { grid-template-columns: 1fr; gap: 32px; }
+  .pp-toc { position: static; display: none; }
+  .pp-content { max-width: 100%; }
+}
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="parts-hero.jsx"></script>
+<script type="text/babel" src="parts-services.jsx"></script>
+<script type="text/babel" src="parts-rest.jsx"></script>
+<script type="text/babel" src="privacy-page.jsx"></script>
+</body>
+</html>

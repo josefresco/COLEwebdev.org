@@ -454,7 +454,7 @@ function Footer() {
         <div className="footer-bottom">
           <span>© 2006–2026 COLEwebdev · Made on Cape Cod</span>
           <span style={{ display: 'flex', gap: 18 }}>
-            <a href="#">Privacy</a>
+            <a href="privacy.html">Privacy</a>
             <a href="#">Sitemap</a>
             <a href="#">Accessibility</a>
           </span>
