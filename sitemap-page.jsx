@@ -9,6 +9,7 @@ const SITE_MAP = [
       { title: 'Our Process', href: 'process.html', desc: 'How a COLEwebdev project works, start to finish' },
       { title: 'Portfolio', href: 'portfolio.html', desc: 'Past projects and client work' },
       { title: 'News', href: 'news.html', desc: 'Project launches, articles, and studio updates' },
+      { title: 'Newsletter Archive', href: 'newsletter.html', desc: 'Every quarterly newsletter issue since 2020' },
       { title: 'Shop', href: 'shop.html', desc: 'Web-related products and resources' },
       { title: 'Contact', href: 'contact.html', desc: 'Get in touch — phone, email, studio address' },
       { title: 'Request a Quote', href: 'quote.html', desc: 'Start a project — tell us what you need' },

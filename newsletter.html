@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Newsletter Archive — COLEwebdev · Cape Cod Web Design</title>
+<meta name="description" content="Every COLEwebdev newsletter issue — web design tips, Cape Cod business news, and company updates since 2020. Subscribe for free." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Newsletter Archive — COLEwebdev",
+  "url": "https://colewebdev.org/newsletter.html",
+  "description": "Archive of every COLEwebdev quarterly newsletter issue, with web design tips and Cape Cod business news.",
+  "provider": { "@type": "ProfessionalService", "name": "COLEwebdev", "url": "https://colewebdev.org/" }
+}
+</script>
+<style>
+/* ── Newsletter Archive (na-) ── */
+.na-hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 30vh;
+  display: flex;
+  align-items: center;
+}
+.na-hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 55% 60% at 100% 0%, rgba(92,192,53,0.16), transparent 55%),
+    radial-gradient(ellipse 45% 50% at 0% 100%, rgba(14,42,74,0.25), transparent 55%),
+    linear-gradient(145deg, #061828 0%, #0E2A4A 100%);
+}
+.na-hero-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(90deg, transparent, transparent 79px, rgba(255,255,255,0.012) 79px, rgba(255,255,255,0.012) 80px),
+    repeating-linear-gradient(0deg, transparent, transparent 79px, rgba(255,255,255,0.012) 79px, rgba(255,255,255,0.012) 80px);
+}
+.na-hero-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 72px 0 60px;
+}
+.na-eyebrow { color: rgba(255,255,255,0.5); }
+.na-hero-hl {
+  font-family: var(--serif);
+  font-size: clamp(32px, 5vw, 58px);
+  line-height: 1.05;
+  color: white;
+  font-weight: 400;
+  margin: 12px 0 10px;
+  letter-spacing: -0.5px;
+}
+.na-hero-sub {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.38);
+  margin: 0 0 24px;
+}
+.na-signup-btn { display: inline-flex; }
+
+/* Body */
+.na-body {
+  padding: var(--pad-section) 0;
+  background: var(--paper);
+}
+.na-layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+/* Sidebar */
+.na-sidebar {
+  position: sticky;
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.na-sidebar-card {
+  background: var(--navy);
+  border-radius: var(--r-lg);
+  padding: 24px 22px;
+}
+.na-sidebar-label {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin: 0 0 10px;
+}
+.na-sidebar-blurb {
+  font-size: 13px;
+  line-height: 1.65;
+  color: rgba(255,255,255,0.6);
+  margin: 0 0 18px;
+}
+.na-sidebar-btn { width: 100%; justify-content: center; }
+
+/* Year nav */
+.na-year-nav { }
+.na-year-nav-label {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  display: block;
+  margin-bottom: 10px;
+}
+.na-year-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.na-year-nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 10px;
+  border-radius: var(--r-sm);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink-2);
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+}
+.na-year-nav-link:hover { background: var(--paper-2); color: var(--brand-blue); }
+.na-year-nav-count {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--muted);
+  font-weight: 400;
+}
+
+/* Issue list */
+.na-issues { min-width: 0; }
+.na-year-group { margin-bottom: 52px; scroll-margin-top: 100px; }
+.na-year-group:last-child { margin-bottom: 0; }
+.na-year-hl {
+  font-family: var(--serif);
+  font-size: clamp(22px, 2.5vw, 30px);
+  font-weight: 400;
+  color: var(--ink);
+  margin: 0 0 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+}
+.na-issue-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.na-issue-item {
+  display: grid;
+  grid-template-columns: 110px 1fr auto;
+  align-items: center;
+  gap: 16px;
+  padding: 13px 12px;
+  border-radius: var(--r-md);
+  transition: background 0.15s;
+}
+.na-issue-item:hover { background: var(--paper-2); }
+.na-issue-date {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  white-space: nowrap;
+}
+.na-issue-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink);
+  text-decoration: none;
+  line-height: 1.4;
+  transition: color 0.15s;
+}
+.na-issue-title:hover { color: var(--brand-blue); }
+.na-issue-read {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--brand-blue);
+  text-decoration: none;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+.na-issue-item:hover .na-issue-read { opacity: 1; }
+
+@media (max-width: 900px) {
+  .na-layout { grid-template-columns: 1fr; gap: 40px; }
+  .na-sidebar { position: static; flex-direction: row; flex-wrap: wrap; }
+  .na-sidebar-card { flex: 1; min-width: 240px; }
+  .na-year-nav { flex: 1; min-width: 200px; }
+}
+@media (max-width: 580px) {
+  .na-issue-item { grid-template-columns: 1fr auto; grid-template-rows: auto auto; }
+  .na-issue-date { grid-column: 1; grid-row: 2; font-size: 10px; }
+  .na-issue-title { grid-column: 1 / 3; grid-row: 1; }
+  .na-issue-read { grid-column: 2; grid-row: 2; opacity: 1; }
+}
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="parts-hero.jsx"></script>
+<script type="text/babel" src="parts-services.jsx"></script>
+<script type="text/babel" src="parts-rest.jsx"></script>
+<script type="text/babel" src="newsletter-page.jsx"></script>
+</body>
+</html>
