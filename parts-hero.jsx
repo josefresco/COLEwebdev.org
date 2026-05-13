@@ -44,9 +44,188 @@ const SERVICE_LINKS = [
   { href: 'traditional.html', title: 'Traditional Web Design' },
 ];
 
+/* ============================================================
+   Site search data — all indexed pages
+   ============================================================ */
+const SEARCH_DATA = [
+  { title: 'Home', desc: 'COLEwebdev — Cape Cod web design since 2006.', category: 'Company', href: 'index.html' },
+  { title: 'Services', desc: 'Full overview of web design, SEO, hosting, and AI services.', category: 'Company', href: 'services.html' },
+  { title: 'Contact', desc: 'Start a project or ask a question.', category: 'Company', href: 'contact.html' },
+  { title: 'Portfolio', desc: 'Recent websites and client work.', category: 'Company', href: 'portfolio.html' },
+  { title: 'About Us', desc: 'Our team, story, and community roots.', category: 'Company', href: 'about.html' },
+  { title: 'Our Process', desc: 'How we scope, build, and hand off every project.', category: 'Company', href: 'process.html' },
+  { title: 'News', desc: 'Web design tips, updates, and articles.', category: 'Company', href: 'news.html' },
+  { title: 'Request a Quote', desc: 'Get a fast, no-obligation project estimate.', category: 'Company', href: 'quote.html' },
+  { title: 'Web Design', desc: 'Modern, mobile-first websites built for your business.', category: 'Services', href: 'website-design.html' },
+  { title: 'SEO & Local Search', desc: 'Show up when neighbors search for what you sell.', category: 'Services', href: 'seo.html' },
+  { title: 'AI Web Apps', desc: 'Booking, intake, and on-site search powered by AI.', category: 'Services', href: 'ai-apps.html' },
+  { title: 'Hosting + Care Plans', desc: 'Backups, security, updates — and a human to email.', category: 'Services', href: 'hosting.html' },
+  { title: 'Branding', desc: 'Logos, color, print — so the site fits the rest of you.', category: 'Services', href: 'branding.html' },
+  { title: 'E-Commerce', desc: 'WooCommerce and Shopify storefronts that ship.', category: 'Services', href: 'ecommerce.html' },
+  { title: 'WordPress Design', desc: 'Custom WordPress builds that are easy to manage.', category: 'Services', href: 'wordpress.html' },
+  { title: 'Traditional Web Design', desc: 'Static HTML/CSS sites — fast, secure, no CMS needed.', category: 'Services', href: 'traditional.html' },
+  { title: 'What Web Design Actually Does', desc: 'How a professional website drives real business results.', category: 'Whitepapers', href: 'wp-what-web-design-does.html' },
+  { title: 'Is a Website Worth the Investment?', desc: 'A clear-eyed look at ROI for small business websites.', category: 'Whitepapers', href: 'wp-investment-value.html' },
+  { title: 'DIY vs. Professional Web Design', desc: 'When to build it yourself and when to hire a pro.', category: 'Whitepapers', href: 'wp-diy-vs-pro.html' },
+  { title: 'Three Types of Small Business Websites', desc: 'Brochure, lead gen, or e-commerce — which fits you?', category: 'Whitepapers', href: 'wp-three-types.html' },
+  { title: 'Seven Golden Rules of Web Design', desc: 'Time-tested principles for sites people actually use.', category: 'Whitepapers', href: 'wp-seven-golden-rules.html' },
+  { title: 'Five Principles of Effective Web Design', desc: 'The fundamentals behind every great site we build.', category: 'Whitepapers', href: 'wp-five-principles.html' },
+  { title: 'The Seven Cs of Web Design', desc: 'A framework for evaluating and improving any website.', category: 'Whitepapers', href: 'wp-seven-cs.html' },
+  { title: 'Web Design FAQ Guide', desc: 'Answers to the questions clients ask most often.', category: 'Whitepapers', href: 'wp-faq-guide.html' },
+  { title: 'Privacy Policy', desc: 'How we collect and use your data.', category: 'Legal', href: 'privacy.html' },
+  { title: 'Accessibility Statement', desc: 'Our WCAG 2.1 AA commitment and features.', category: 'Legal', href: 'accessibility.html' },
+  { title: 'Site Map', desc: 'Every page on colewebdev.org, organized.', category: 'Legal', href: 'sitemap.html' },
+];
+
+/* ============================================================
+   Cookie Consent Banner (EU / CA only — timezone detection)
+   ============================================================ */
+function CookieBanner() {
+  const [visible, setVisible] = React.useState(false);
+
+  React.useEffect(() => {
+    if (localStorage.getItem('ck_consent')) return;
+    const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
+    if (tz.startsWith('Europe/') || tz === 'America/Los_Angeles') {
+      setVisible(true);
+    }
+  }, []);
+
+  const dismiss = (val) => {
+    localStorage.setItem('ck_consent', val);
+    setVisible(false);
+  };
+
+  if (!visible) return null;
+
+  return (
+    <div className="ck-banner" role="region" aria-label="Cookie consent">
+      <div className="ck-inner">
+        <p className="ck-msg">
+          We use essential cookies to keep the site working. No tracking or advertising cookies are used.{' '}
+          <a href="privacy.html">Privacy Policy</a>
+        </p>
+        <div className="ck-actions">
+          <button className="ck-btn ck-btn--accept" onClick={() => dismiss('accepted')}>Accept</button>
+          <button className="ck-btn ck-btn--decline" onClick={() => dismiss('declined')}>Decline</button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ============================================================
+   Site Search Modal (Fuse.js, lazy-loaded)
+   ============================================================ */
+function SearchModal({ onClose }) {
+  const [query, setQuery] = React.useState('');
+  const [results, setResults] = React.useState([]);
+  const [fuse, setFuse] = React.useState(null);
+  const [activeIdx, setActiveIdx] = React.useState(0);
+  const inputRef = React.useRef(null);
+
+  React.useEffect(() => {
+    const init = () => setFuse(new window.Fuse(SEARCH_DATA, { keys: ['title', 'desc', 'category'], threshold: 0.35 }));
+    if (window.Fuse) { init(); return; }
+    const s = document.createElement('script');
+    s.src = 'https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js';
+    s.onload = init;
+    document.head.appendChild(s);
+  }, []);
+
+  React.useEffect(() => {
+    if (inputRef.current) inputRef.current.focus();
+  }, []);
+
+  React.useEffect(() => {
+    const onKey = (e) => { if (e.key === 'Escape') onClose(); };
+    document.addEventListener('keydown', onKey);
+    return () => document.removeEventListener('keydown', onKey);
+  }, [onClose]);
+
+  const handleInput = (e) => {
+    const q = e.target.value;
+    setQuery(q);
+    setActiveIdx(0);
+    if (!fuse || !q.trim()) { setResults([]); return; }
+    setResults(fuse.search(q).slice(0, 8).map(r => r.item));
+  };
+
+  const handleKey = (e) => {
+    if (!results.length) return;
+    if (e.key === 'ArrowDown') { e.preventDefault(); setActiveIdx(i => Math.min(i + 1, results.length - 1)); }
+    if (e.key === 'ArrowUp') { e.preventDefault(); setActiveIdx(i => Math.max(i - 1, 0)); }
+    if (e.key === 'Enter' && results[activeIdx]) { window.location.href = results[activeIdx].href; }
+  };
+
+  return (
+    <div className="srch-overlay" onClick={(e) => { if (e.target === e.currentTarget) onClose(); }} role="dialog" aria-modal="true" aria-label="Search">
+      <div className="srch-modal">
+        <div className="srch-header">
+          <div className="srch-input-wrap">
+            <span className="srch-icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <circle cx="6.5" cy="6.5" r="5" stroke="currentColor" strokeWidth="1.5"/>
+                <path d="M10 10L14 14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+              </svg>
+            </span>
+            <input
+              ref={inputRef}
+              className="srch-input"
+              type="search"
+              placeholder="Search pages, services, guides…"
+              value={query}
+              onChange={handleInput}
+              onKeyDown={handleKey}
+              aria-label="Search site"
+              autoComplete="off"
+            />
+          </div>
+          <button className="srch-close" onClick={onClose} aria-label="Close search">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path d="M1 1L13 13M13 1L1 13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+            </svg>
+          </button>
+        </div>
+        <div className="srch-results" role="listbox">
+          {!query.trim() ? (
+            <div className="srch-empty">Type to search pages, services, and guides.</div>
+          ) : results.length === 0 ? (
+            <div className="srch-empty">No results for "<strong>{query}</strong>"</div>
+          ) : (
+            results.map((r, i) => (
+              <a
+                key={r.href}
+                className={'srch-result' + (i === activeIdx ? ' is-active' : '')}
+                href={r.href}
+                role="option"
+                aria-selected={i === activeIdx}
+                onMouseEnter={() => setActiveIdx(i)}
+              >
+                <span className="srch-result-cat">{r.category}</span>
+                <span className="srch-result-title">{r.title}</span>
+                <span className="srch-result-desc">{r.desc}</span>
+              </a>
+            ))
+          )}
+        </div>
+        <div className="srch-footer">
+          <span className="srch-hint">↑↓ navigate</span>
+          <span className="srch-hint">↵ open</span>
+          <span className="srch-hint">esc close</span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ============================================================
+   Header
+   ============================================================ */
 function Header() {
   const [menuOpen, setMenuOpen] = React.useState(false);
   const [servicesOpen, setServicesOpen] = React.useState(false);
+  const [searchOpen, setSearchOpen] = React.useState(false);
 
   const path = window.location.pathname;
   const on = (page) => path.endsWith(page) ? ' is-active' : '';
@@ -60,7 +239,9 @@ function Header() {
   }, [menuOpen]);
 
   return (
-    <header className="site-header">
+    <React.Fragment>
+      <CookieBanner />
+      <header className="site-header">
       <nav className="nav">
         <a href="index.html" className="nav-logo" aria-label="COLEwebdev — home">
           <ColeLogo height={32} />
@@ -139,6 +320,12 @@ function Header() {
           <a className={'nav-link' + on('contact.html')} href="contact.html">Contact</a>
         </div>
         <div className="nav-cta">
+          <button className="nav-search-btn" onClick={() => setSearchOpen(true)} aria-label="Search site">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <circle cx="6.5" cy="6.5" r="5" stroke="currentColor" strokeWidth="1.5"/>
+              <path d="M10 10L14 14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+            </svg>
+          </button>
           <a className="btn btn--ghost btn--sm" href="tel:5084132043">508.413.2043</a>
           <a className="btn btn--accent btn--sm" href="contact.html">Start a Project <span className="arrow">→</span></a>
         </div>
@@ -202,7 +389,9 @@ function Header() {
           </div>
         </div>
       )}
-    </header>);
+      </header>
+      {searchOpen && <SearchModal onClose={() => setSearchOpen(false)} />}
+    </React.Fragment>);
 }
 
 /* ============================================================
