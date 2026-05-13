@@ -204,6 +204,7 @@ function EcommercePage() {
         </div>
       </section>
 
+      <NewsletterBanner />
       <Footer />
     </React.Fragment>
   );

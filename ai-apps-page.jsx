@@ -225,6 +225,7 @@ function AiAppsPage() {
         </div>
       </section>
 
+      <NewsletterBanner />
       <Footer />
     </React.Fragment>
   );

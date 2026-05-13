@@ -28,6 +28,7 @@ function App() {
         <Testimonial />
         <News />
       </main>
+      <NewsletterBanner />
       <Footer />
       <TweaksPanel title="Tweaks">
         <TweakSection title="Hero variant">

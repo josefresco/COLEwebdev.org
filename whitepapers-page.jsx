@@ -448,6 +448,7 @@ function WhitepapersPage() {
         </div>
       </section>
 
+      <NewsletterBanner />
       <Footer />
     </React.Fragment>
   );

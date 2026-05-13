@@ -266,6 +266,7 @@ function NewsPage() {
         </div>
       </section>
 
+      <NewsletterBanner />
       <Footer />
     </React.Fragment>
   );

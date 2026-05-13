@@ -288,6 +288,7 @@ function WebDesignPage() {
         </div>
       </section>
 
+      <NewsletterBanner />
       <Footer />
     </React.Fragment>
   );

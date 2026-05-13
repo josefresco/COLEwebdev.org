@@ -263,6 +263,7 @@ function ServicesPage() {
         </div>
       </section>
 
+      <NewsletterBanner />
       <Footer />
     </React.Fragment>
   );

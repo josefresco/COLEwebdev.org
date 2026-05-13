@@ -442,6 +442,7 @@ function PortfolioPage() {
         </div>
       </section>
 
+      <NewsletterBanner />
       <Footer />
     </React.Fragment>
   );

@@ -358,6 +358,41 @@ function CTA() {
 }
 
 /* ============================================================
+   Newsletter Banner
+   ============================================================ */
+function NewsletterBanner() {
+  return (
+    <section className="nl-banner">
+      <div className="shell">
+        <div className="nl-inner">
+          <div className="nl-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+              <polyline points="2,4 12,13 22,4" />
+            </svg>
+          </div>
+          <div className="nl-text">
+            <p className="nl-hl">
+              Stay in the loop.
+              <span className="nl-badge">Quarterly</span>
+            </p>
+            <p className="nl-sub">Web design tips, project launches, and Cape Cod business news — four times a year. No spam, ever.</p>
+          </div>
+          <a
+            className="btn btn--primary nl-btn"
+            href="https://enewsletter.colewebdev.com/signup"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Subscribe Free <span className="arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ============================================================
    Footer
    ============================================================ */
 function Footer() {
@@ -464,4 +499,4 @@ function Footer() {
 
 }
 
-Object.assign(window, { Process, Portfolio, Testimonial, News, CTA, Footer });
+Object.assign(window, { Process, Portfolio, Testimonial, News, CTA, NewsletterBanner, Footer });

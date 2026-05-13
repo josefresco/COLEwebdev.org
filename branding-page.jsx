@@ -186,6 +186,7 @@ function BrandingPage() {
         </div>
       </section>
 
+      <NewsletterBanner />
       <Footer />
     </React.Fragment>
   );

@@ -245,6 +245,7 @@ function ProcessPage() {
         </div>
       </section>
 
+      <NewsletterBanner />
       <Footer />
     </React.Fragment>
   );

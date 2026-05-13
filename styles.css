@@ -1858,3 +1858,59 @@ p, li {
   color: var(--brand-blue);
   transform: translateY(-1px);
 }
+
+/* ── Newsletter Banner ── */
+.nl-banner {
+  background: linear-gradient(135deg, #061828 0%, #0E2A4A 100%);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  padding: 40px 0;
+}
+.nl-inner {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+.nl-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: rgba(92,192,53,0.14);
+  border: 1px solid rgba(92,192,53,0.28);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  color: #5CC035;
+}
+.nl-text { flex: 1; min-width: 0; }
+.nl-hl {
+  font-family: var(--serif);
+  font-size: 21px;
+  font-weight: 400;
+  color: white;
+  margin: 0 0 5px;
+}
+.nl-sub {
+  font-size: 13.5px;
+  color: rgba(255,255,255,0.52);
+  margin: 0;
+  line-height: 1.55;
+}
+.nl-badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #5CC035;
+  background: rgba(92,192,53,0.12);
+  border: 1px solid rgba(92,192,53,0.22);
+  border-radius: 999px;
+  padding: 3px 10px;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+.nl-btn { flex-shrink: 0; white-space: nowrap; }
+@media (max-width: 640px) {
+  .nl-inner { flex-direction: column; align-items: flex-start; gap: 18px; }
+  .nl-btn { align-self: stretch; text-align: center; }
+}

@@ -321,6 +321,7 @@ function WordPressPage() {
         </div>
       </section>
 
+      <NewsletterBanner />
       <Footer />
     </React.Fragment>
   );

@@ -286,6 +286,7 @@ function TraditionalPage() {
         </div>
       </section>
 
+      <NewsletterBanner />
       <Footer />
     </React.Fragment>
   );
