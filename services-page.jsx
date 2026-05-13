@@ -36,7 +36,7 @@ const SERVICES = [
     icon: '✎',
     name: 'Website Updates',
     headline: 'Keep your site current — without the headache.',
-    img: 'assets/content-website-build-cape-cod.jpg',
+    img: 'assets/josiah-chromebook-iphone.png',
     body: [
       'Got a site that just needs new photos, updated hours, or a fresh page? We handle quick-turn edits, new pages, and content refreshes — billed by the hour or by a block of time.',
       'Already a hosting client? Many routine updates are included. Just send us an email.',

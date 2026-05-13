@@ -48,7 +48,7 @@ const STEPS = [
     n: '05',
     name: 'Content',
     title: 'Your voice. Our expertise. Great copy.',
-    img: 'assets/content-website-build-cape-cod.jpg',
+    img: 'assets/josiah-chromebook-iphone.png',
     body: [
       'You\'re the expert in your business — and your site needs to sound like it. While we\'re hard at work designing, we need you to gather and create content: copy, photography, and supporting media.',
       'Where you need help, we bring in our trusted network of photographers and copywriters to fill the gaps.',
