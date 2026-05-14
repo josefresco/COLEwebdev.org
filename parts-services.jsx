@@ -225,7 +225,9 @@ function Estimator() {
                       objectFit: 'cover', objectPosition: 'center top',
                       border: `3px solid var(--paper-2)`,
                       boxShadow: `0 0 0 2px ${p.ring}, 0 4px 10px rgba(14,42,74,0.12)`,
-                      marginLeft: i === 0 ? 0 : -12,
+                      marginLeft: i === 0 ? 0 : -8,
+                      zIndex: i === 0 ? 0 : 1,
+                      position: 'relative',
                       background: 'var(--paper-2)',
                       display: 'block'
                     }} />

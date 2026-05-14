@@ -266,8 +266,9 @@ p, li {
   font-size: 22px;
   font-style: italic;
   font-weight: 500;
+  flex-shrink: 0;
 }
-.nav-logo img { height: 36px !important; width: auto !important; }
+.nav-logo img { height: 36px !important; width: auto !important; max-width: none !important; }
 .nav-logo svg { width: auto !important; height: 32px !important; max-width: 220px; }
 .nav-links {
   display: flex;
@@ -553,6 +554,7 @@ p, li {
 @media (max-width: 920px) {
   .nav-links { display: none; }
   .nav-cta .btn--ghost { display: none; }
+  .nav-cta .nav-search-btn { display: none; }
   .nav-hamburger { display: flex; }
   .site-header { margin-top: 8px; }
   .nav { padding: 8px 8px 8px 16px; border-radius: 16px; }

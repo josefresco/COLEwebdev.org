@@ -103,11 +103,14 @@
   object-fit: cover;
   object-position: center top;
   border: 3px solid white;
-  box-shadow: 0 0 0 2px var(--brand-green), 0 4px 10px rgba(14,42,74,0.12);
+  box-shadow: 0 0 0 2px var(--brand-green), 0 2px 8px rgba(14,42,74,0.15);
+  position: relative;
+  z-index: 0;
 }
 .rq-avatar + .rq-avatar {
-  margin-left: -12px;
-  box-shadow: 0 0 0 2px var(--brand-blue), 0 4px 10px rgba(14,42,74,0.12);
+  margin-left: -8px;
+  box-shadow: 0 0 0 2px var(--brand-blue), 0 2px 8px rgba(14,42,74,0.15);
+  z-index: 1;
 }
 .rq-sidebar-note {
   font-size: 13.5px;
