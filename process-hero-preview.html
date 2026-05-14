@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Process Hero — Layout Options</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+<style>
+/* ── Shared hero content styles ── */
+:root {
+  --img: url('https://www.colewebdev.com/wp-content/uploads/2020/05/colewebdev-website-design-build-cape-cod-sunrise-2020-2.jpg');
+}
+
+body { margin: 0; }
+
+.variant-label {
+  background: var(--ink);
+  color: white;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 10px 28px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.variant-label strong { color: var(--brand-green); font-size: 14px; }
+
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.eyebrow::before {
+  content: '';
+  width: 18px;
+  height: 1.5px;
+  background: currentColor;
+  display: block;
+}
+
+/* ════════════════════════════════════════
+   A — SPLIT PANEL
+   ════════════════════════════════════════ */
+.hero-a {
+  display: grid;
+  grid-template-columns: 45fr 55fr;
+  min-height: 72vh;
+}
+.hero-a-panel {
+  background: var(--navy);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 72px 56px 72px 28px;
+  position: relative;
+}
+.hero-a-panel::after {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0; right: -1px;
+  width: 60px;
+  background: linear-gradient(to right, var(--navy), transparent);
+  z-index: 1;
+}
+.hero-a-img {
+  background: var(--img) center 40% / cover no-repeat;
+}
+.hero-a .eyebrow { color: var(--brand-green); }
+.hero-a-hl {
+  font-family: var(--serif);
+  font-size: clamp(34px, 4vw, 60px);
+  line-height: 1.1;
+  margin: 16px 0 20px;
+  font-weight: 400;
+  color: white;
+  max-width: 14ch;
+}
+.hero-a-hl em { font-style: italic; color: rgba(255,255,255,0.65); }
+.hero-a-sub {
+  font-size: 15px;
+  color: rgba(255,255,255,0.65);
+  max-width: 42ch;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ════════════════════════════════════════
+   B — LEFT GRADIENT WIPE
+   ════════════════════════════════════════ */
+.hero-b {
+  position: relative;
+  min-height: 72vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.hero-b-bg {
+  position: absolute;
+  inset: 0;
+  background: var(--img) center 40% / cover no-repeat;
+}
+.hero-b-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(14, 42, 68, 0.97) 0%,
+    rgba(14, 42, 68, 0.85) 35%,
+    rgba(14, 42, 68, 0.3)  58%,
+    transparent            75%
+  );
+}
+.hero-b-content {
+  position: relative;
+  z-index: 1;
+  padding: 80px 0;
+  max-width: 52%;
+}
+.hero-b .eyebrow { color: var(--brand-green); }
+.hero-b-hl {
+  font-family: var(--serif);
+  font-size: clamp(34px, 4.5vw, 68px);
+  line-height: 1.1;
+  margin: 16px 0 20px;
+  font-weight: 400;
+  color: white;
+  max-width: 14ch;
+}
+.hero-b-hl em { font-style: italic; color: rgba(255,255,255,0.65); }
+.hero-b-sub {
+  font-size: 15px;
+  color: rgba(255,255,255,0.7);
+  max-width: 44ch;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ════════════════════════════════════════
+   C — FROSTED CARD
+   ════════════════════════════════════════ */
+.hero-c {
+  position: relative;
+  min-height: 72vh;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+.hero-c-bg {
+  position: absolute;
+  inset: 0;
+  background: var(--img) center 40% / cover no-repeat;
+}
+.hero-c-content {
+  position: relative;
+  z-index: 1;
+  padding: 48px 0 56px;
+  width: 100%;
+}
+.hero-c-card {
+  display: inline-block;
+  background: rgba(14, 42, 68, 0.55);
+  backdrop-filter: blur(18px) saturate(1.4);
+  -webkit-backdrop-filter: blur(18px) saturate(1.4);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 20px;
+  padding: 36px 44px 40px;
+  max-width: 540px;
+}
+.hero-c .eyebrow { color: var(--brand-green); }
+.hero-c-hl {
+  font-family: var(--serif);
+  font-size: clamp(28px, 3.5vw, 52px);
+  line-height: 1.15;
+  margin: 14px 0 16px;
+  font-weight: 400;
+  color: white;
+}
+.hero-c-hl em { font-style: italic; color: rgba(255,255,255,0.65); }
+.hero-c-sub {
+  font-size: 14.5px;
+  color: rgba(255,255,255,0.72);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ════════════════════════════════════════
+   D — IMAGE AS ACCENT, TEXT BELOW
+   ════════════════════════════════════════ */
+.hero-d {
+  display: flex;
+  flex-direction: column;
+}
+.hero-d-img {
+  height: 44vh;
+  background: var(--img) center 40% / cover no-repeat;
+  position: relative;
+  flex-shrink: 0;
+}
+.hero-d-img::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 80px;
+  background: linear-gradient(to bottom, transparent, var(--paper));
+}
+.hero-d-text {
+  background: var(--paper);
+  padding: 52px 0 64px;
+}
+.hero-d .eyebrow { color: var(--brand-blue); }
+.hero-d-hl {
+  font-family: var(--serif);
+  font-size: clamp(34px, 4.5vw, 64px);
+  line-height: 1.1;
+  margin: 16px 0 20px;
+  font-weight: 400;
+  color: var(--ink);
+  max-width: 16ch;
+}
+.hero-d-hl em { font-style: italic; color: var(--brand-blue); }
+.hero-d-sub {
+  font-size: 16px;
+  color: var(--muted);
+  max-width: 52ch;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ── Shell ── */
+.shell {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+</style>
+</head>
+<body>
+
+<!-- ── OPTION A: SPLIT PANEL ── -->
+<div class="variant-label">
+  <strong>A</strong> — Split Panel · Navy left, image right, no overlay needed
+</div>
+<div class="hero-a">
+  <div class="hero-a-panel">
+    <div style="position:relative;z-index:2">
+      <span class="eyebrow">How we work</span>
+      <h1 class="hero-a-hl">A process built on <em>honesty</em> and craft.</h1>
+      <p class="hero-a-sub">Each project is unique — many take varying paths to a successful launch. But this is the process we've refined over 20 years that works best for our clients.</p>
+    </div>
+  </div>
+  <div class="hero-a-img"></div>
+</div>
+
+<!-- ── OPTION B: LEFT GRADIENT WIPE ── -->
+<div class="variant-label">
+  <strong>B</strong> — Left Gradient Wipe · Solid navy fades to transparent, image unobscured on right
+</div>
+<div class="hero-b">
+  <div class="hero-b-bg"></div>
+  <div class="hero-b-overlay"></div>
+  <div class="hero-b-content shell">
+    <span class="eyebrow">How we work</span>
+    <h1 class="hero-b-hl">A process built on <em>honesty</em> and craft.</h1>
+    <p class="hero-b-sub">Each project is unique — many take varying paths to a successful launch. But this is the process we've refined over 20 years that works best for our clients.</p>
+  </div>
+</div>
+
+<!-- ── OPTION C: FROSTED CARD ── -->
+<div class="variant-label">
+  <strong>C</strong> — Frosted Card · Blur-glass card over unobstructed image
+</div>
+<div class="hero-c">
+  <div class="hero-c-bg"></div>
+  <div class="hero-c-content shell">
+    <div class="hero-c-card">
+      <span class="eyebrow">How we work</span>
+      <h1 class="hero-c-hl">A process built on <em>honesty</em> and craft.</h1>
+      <p class="hero-c-sub">Each project is unique — many take varying paths to a successful launch. But this is the process we've refined over 20 years that works best for our clients.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ── OPTION D: IMAGE AS ACCENT ── -->
+<div class="variant-label">
+  <strong>D</strong> — Image as Accent · Photo decorative only, text on solid background below
+</div>
+<div class="hero-d">
+  <div class="hero-d-img"></div>
+  <div class="hero-d-text">
+    <div class="shell">
+      <span class="eyebrow">How we work</span>
+      <h1 class="hero-d-hl">A process built on <em>honesty</em> and craft.</h1>
+      <p class="hero-d-sub">Each project is unique — many take varying paths to a successful launch. But this is the process we've refined over 20 years that works best for our clients.</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

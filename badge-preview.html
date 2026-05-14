@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Bronco Badge Preview</title>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css"/>
+<style>
+  body { background: var(--paper); padding: 48px; font-family: var(--sans); }
+  h2 { font-family: var(--mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin: 0 0 12px; }
+  .row { display: flex; flex-direction: column; gap: 40px; max-width: 360px; }
+  .option { display: flex; flex-direction: column; gap: 12px; }
+  .label { font-family: var(--mono); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+
+  /* copied from contact.html so it renders identically */
+  .ct-bronco {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--brand-green);
+    background: rgba(92,192,53,.08);
+    border: 1px solid rgba(92,192,53,.2);
+    border-radius: 999px;
+    padding: 5px 12px;
+  }
+  .ct-bronco-img {
+    height: 22px;
+    width: auto;
+    display: block;
+    flex-shrink: 0;
+  }
+
+  /* hours context so it doesn't look naked */
+  .context {
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 20px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .ctx-label { font-family: var(--mono); font-size: 10px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+  .ctx-row { display: flex; justify-content: space-between; font-size: 14px; color: var(--ink-2); }
+</style>
+</head>
+<body>
+
+<div class="row">
+
+  <div class="option">
+    <div class="label">Option A — Ford Bronco truck (bronco.png)</div>
+    <div class="context">
+      <div class="ctx-label">Hours</div>
+      <div class="ctx-row"><span style="font-weight:500;color:var(--ink)">Mon – Fri</span><span>9 am – 5 pm</span></div>
+      <div class="ctx-row"><span style="font-weight:500;color:var(--ink)">Sat</span><span>2 – 5 pm by appt.</span></div>
+      <span class="ct-bronco" style="margin-top:8px">
+        <img src="uploads/bronco.png" alt="" class="ct-bronco-img"/>
+        If you see our Bronco, we're here
+      </span>
+    </div>
+  </div>
+
+  <div class="option">
+    <div class="label">Option B — Bucking horse silhouette (horse.png)</div>
+    <div class="context">
+      <div class="ctx-label">Hours</div>
+      <div class="ctx-row"><span style="font-weight:500;color:var(--ink)">Mon – Fri</span><span>9 am – 5 pm</span></div>
+      <div class="ctx-row"><span style="font-weight:500;color:var(--ink)">Sat</span><span>2 – 5 pm by appt.</span></div>
+      <span class="ct-bronco" style="margin-top:8px">
+        <img src="uploads/horse.png" alt="" class="ct-bronco-img"/>
+        If you see our Bronco, we're here
+      </span>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
