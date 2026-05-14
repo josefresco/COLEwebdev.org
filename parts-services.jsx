@@ -155,13 +155,14 @@ function Services() {
    AI Quote Estimator (live, uses window.claude)
    ============================================================ */
 const PROJECT_TYPES = [
-'5-page small business site',
-'WordPress redesign',
-'E-commerce / Shopify',
-'Nonprofit hub',
-'Booking / scheduling',
-'AI assistant on existing site',
-'Custom web app'];
+'New Website',
+'Redesign',
+'Updates',
+'Marketing',
+'Consulting',
+'eCommerce',
+'AI',
+'Other'];
 
 
 function Estimator() {
