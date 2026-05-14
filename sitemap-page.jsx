@@ -10,6 +10,7 @@ const SITE_MAP = [
       { title: 'Portfolio', href: 'portfolio.html', desc: 'Past projects and client work' },
       { title: 'News', href: 'news.html', desc: 'Project launches, articles, and studio updates' },
       { title: 'Newsletter Archive', href: 'newsletter.html', desc: 'Every quarterly newsletter issue since 2020' },
+      { title: 'FAQ', href: 'faq.html', desc: 'Straight answers to the questions we get asked most' },
       { title: 'Shop', href: 'shop.html', desc: 'Web-related products and resources' },
       { title: 'Contact', href: 'contact.html', desc: 'Get in touch — phone, email, studio address' },
       { title: 'Request a Quote', href: 'quote.html', desc: 'Start a project — tell us what you need' },

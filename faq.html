@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>FAQ — COLEwebdev · Cape Cod Web Design</title>
+<meta name="description" content="Answers to the questions Cape Cod business owners ask us most — website cost, timelines, self-editing, e-commerce, SEO, and social media." />
+<link rel="canonical" href="https://colewebdev.org/faq.html" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "name": "Web Design FAQ — COLEwebdev",
+  "url": "https://colewebdev.org/faq.html",
+  "mainEntity": [
+    { "@type": "Question", "name": "How much does a website cost?", "acceptedAnswer": { "@type": "Answer", "text": "Our websites typically range from $1,500 for a simple brochure site to $8,000+ for a fully custom e-commerce build. We start every project with a free consultation to scope the work and give you a real number before anything is signed." } },
+    { "@type": "Question", "name": "How long does it take to build a website?", "acceptedAnswer": { "@type": "Answer", "text": "Most projects take 4–8 weeks from kickoff to launch. The biggest variable is how quickly we receive content — copy, photos, and your logo — from you." } },
+    { "@type": "Question", "name": "Can I edit my website myself after it's built?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. WordPress builds include a straightforward admin dashboard where you can update text, add blog posts, and swap images without touching code." } },
+    { "@type": "Question", "name": "Can you build me an online store?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We build e-commerce sites on WooCommerce and Shopify. We'll recommend the right platform based on your products, workflow, and budget." } },
+    { "@type": "Question", "name": "Will my new website show up on Google?", "acceptedAnswer": { "@type": "Answer", "text": "Every site we build is SEO-ready out of the box. Getting to the top of Google for competitive searches takes ongoing SEO work, which we offer as a separate monthly service." } },
+    { "@type": "Question", "name": "Do you manage social media?", "acceptedAnswer": { "@type": "Answer", "text": "We don't offer ongoing social media management, but we connect your website to your social profiles and make sure your site is the hub everything points back to." } }
+  ],
+  "provider": { "@type": "ProfessionalService", "name": "COLEwebdev", "url": "https://colewebdev.org/" }
+}
+</script>
+<style>
+/* ── FAQ page (fq-) ── */
+.fq-hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 30vh;
+  display: flex;
+  align-items: center;
+}
+.fq-hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 50% 55% at 100% 0%, rgba(33,146,188,0.18), transparent 55%),
+    radial-gradient(ellipse 45% 50% at 0% 100%, rgba(14,42,74,0.22), transparent 55%),
+    linear-gradient(145deg, #061828 0%, #0E2A4A 100%);
+}
+.fq-hero-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(90deg, transparent, transparent 79px, rgba(255,255,255,0.012) 79px, rgba(255,255,255,0.012) 80px),
+    repeating-linear-gradient(0deg, transparent, transparent 79px, rgba(255,255,255,0.012) 79px, rgba(255,255,255,0.012) 80px);
+}
+.fq-hero-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 72px 0 60px;
+}
+.fq-eyebrow { color: rgba(255,255,255,0.5); }
+.fq-hero-hl {
+  font-family: var(--serif);
+  font-size: clamp(32px, 5vw, 58px);
+  line-height: 1.05;
+  color: white;
+  font-weight: 400;
+  margin: 12px 0 14px;
+  letter-spacing: -0.5px;
+}
+.fq-hero-sub {
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.55);
+  margin: 0;
+  max-width: 480px;
+}
+
+/* Body layout */
+.fq-body {
+  padding: var(--pad-section) 0;
+  background: var(--paper);
+}
+.fq-layout {
+  display: grid;
+  grid-template-columns: 1fr 272px;
+  gap: 64px;
+  align-items: start;
+}
+
+/* FAQ content */
+.fq-content { min-width: 0; }
+.fq-category { margin-bottom: 56px; scroll-margin-top: 100px; }
+.fq-category:last-child { margin-bottom: 0; }
+.fq-cat-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+}
+.fq-cat-glyph {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--r-md);
+  display: grid;
+  place-items: center;
+  font-size: 15px;
+  flex-shrink: 0;
+}
+.fq-cat-glyph--green  { background: rgba(92,192,53,0.12);  color: #4a9e27; }
+.fq-cat-glyph--blue   { background: rgba(33,146,188,0.12); color: var(--brand-blue); }
+.fq-cat-glyph--orange { background: rgba(242,107,31,0.12); color: #d45f18; }
+.fq-cat-glyph--navy   { background: rgba(14,42,74,0.08);   color: var(--navy); }
+.fq-cat-hl {
+  font-family: var(--serif);
+  font-size: clamp(18px, 2vw, 24px);
+  font-weight: 400;
+  color: var(--ink);
+  margin: 0;
+}
+.fq-items {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Accordion */
+.faq-item {
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  overflow: hidden;
+  transition: border-color 0.15s;
+}
+.faq-item.is-open { border-color: var(--brand-blue); }
+.faq-q {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--sans);
+  font-size: 14.5px;
+  font-weight: 500;
+  color: var(--ink);
+  transition: background 0.15s;
+  line-height: 1.4;
+}
+.faq-q:hover { background: var(--paper-2); }
+.faq-item.is-open .faq-q { background: var(--paper-2); }
+.faq-chevron {
+  font-size: 18px;
+  color: var(--brand-blue);
+  flex-shrink: 0;
+  line-height: 1;
+  font-weight: 300;
+}
+.faq-a {
+  padding: 0 20px 18px;
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--ink-2);
+  background: var(--paper-2);
+  border-top: 1px solid var(--line);
+}
+
+/* Sidebar */
+.fq-sidebar {
+  position: sticky;
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.fq-sidebar-card {
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: 22px 24px;
+}
+.fq-sidebar-card--dark {
+  background: var(--navy);
+  border-color: transparent;
+}
+.fq-sidebar-eyebrow {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin: 0 0 8px;
+}
+.fq-sidebar-card:not(.fq-sidebar-card--dark) .fq-sidebar-eyebrow {
+  color: var(--muted);
+}
+.fq-sidebar-hl {
+  font-family: var(--serif);
+  font-size: 18px;
+  font-weight: 400;
+  color: white;
+  margin: 0 0 10px;
+  line-height: 1.3;
+}
+.fq-sidebar-note {
+  font-size: 13px;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.6;
+  margin: 0 0 18px;
+}
+.fq-sidebar-btn { width: 100%; justify-content: center; }
+.fq-sidebar-phone {
+  display: block;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--ink);
+  text-decoration: none;
+  margin: 4px 0 4px;
+  letter-spacing: -0.3px;
+}
+.fq-sidebar-phone:hover { color: var(--brand-blue); }
+.fq-sidebar-hours {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* Jump nav */
+.fq-jump-nav {
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: 18px 20px;
+}
+.fq-jump-label {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  display: block;
+  margin-bottom: 10px;
+}
+.fq-jump-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.fq-jump-link {
+  display: block;
+  font-size: 13px;
+  color: var(--ink-2);
+  text-decoration: none;
+  padding: 5px 8px;
+  border-radius: var(--r-sm);
+  transition: background 0.15s, color 0.15s;
+}
+.fq-jump-link:hover { background: white; color: var(--brand-blue); }
+
+@media (max-width: 900px) {
+  .fq-layout { grid-template-columns: 1fr; }
+  .fq-sidebar { position: static; }
+  .fq-sidebar-card--dark { order: -1; }
+}
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="parts-hero.jsx"></script>
+<script type="text/babel" src="parts-services.jsx"></script>
+<script type="text/babel" src="parts-rest.jsx"></script>
+<script type="text/babel" src="faq-page.jsx"></script>
+</body>
+</html>
