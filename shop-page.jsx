@@ -77,7 +77,7 @@ function ShopPage() {
       {/* Intro */}
       <section className="sh-intro">
         <div className="shell">
-          <span className="eyebrow">Printful Quick Store · Live Demo</span>
+          <span className="eyebrow">COLEwebdev Merch</span>
           <h1 className="sh-intro-hl">The Shop.</h1>
         </div>
       </section>
@@ -94,28 +94,25 @@ function ShopPage() {
             />
           </div>
           <div className="sh-hero-body">
-            <span className="tag dot tag--green">Platform demo · Fully functional</span>
+            <span className="tag dot tag--green">NEW · Branded merch</span>
             <h2 className="sh-hero-hl">
-              We built this store to<br /><em style={{ color: 'var(--brand-green)' }}>learn the platform.</em>
+              COLEwebdev is now<br />offering{' '}
+              <em style={{ color: 'var(--brand-green)' }}>merch!</em>
             </h2>
             <p className="sh-hero-p">
-              This is our own Printful Quick Store — created to get hands-on with the platform
-              before recommending it to clients. It's fully functional: real products, real
-              checkout, real fulfillment. If you'd like to pick up some COLEwebdev gear, go for
-              it. But the main point is to show you exactly what a Quick Store looks and feels
-              like before you commit to building one.
+              We've launched an online store through Printful's Quick Store service. Every order
+              is printed on demand and shipped directly to your door — no minimums, no hassle.
+              We also use this store as a live demonstrator for clients considering a Quick Store
+              of their own.
             </p>
-            <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap' }}>
+            <div>
               <a
                 className="btn btn--accent"
                 href={SHOP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Browse the store <span className="arrow">→</span>
-              </a>
-              <a className="btn btn--ghost" href="contact.html">
-                Get one for your brand <span className="arrow">→</span>
+                Shop online <span className="arrow">→</span>
               </a>
             </div>
           </div>
