@@ -333,7 +333,7 @@ function CTA() {
               <span className="eyebrow" style={{ color: 'rgba(255,255,255,0.85)' }}>Ready when you are</span>
               <h2 style={{ marginTop: 14 }}>Let's build something <span className="italic">your customers</span> will love.</h2>
               <p style={{ marginTop: 16, maxWidth: '52ch' }}>
-                Free 20-minute call. No pitch deck, no salesperson — just a conversation about what you're trying to do, with someone who's been doing this since 2000.
+                Call us today, no commitment.
               </p>
               <div className="actions">
                 <a className="btn btn--primary" href="#">Schedule a call <span className="arrow">→</span></a>
