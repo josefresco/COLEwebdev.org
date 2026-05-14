@@ -210,7 +210,7 @@ function Estimator() {
               <p className="lede" style={{ marginTop: 16 }}>
                 Whether it's a fresh build, a redesign of a tired site, or a small fix — drop us a note. We'll reply within one business day with next steps and a ballpark.
               </p>
-              <div style={{ marginTop: 28, display: 'flex', alignItems: 'center', gap: 22 }}>
+              <div style={{ marginTop: 28, display: 'flex', alignItems: 'flex-start', gap: 16 }}>
                 <div style={{ display: 'flex', gap: 0 }}>
                   {[
                   { src: 'assets/josiah-cole-cape-cod-website-designer.jpg', alt: 'Josiah Cole', ring: '#5CC035' },
@@ -234,7 +234,7 @@ function Estimator() {
 
                   )}
                 </div>
-                <div style={{ fontSize: 13, color: 'var(--ink-2)', lineHeight: 1.4 }}>
+                <div style={{ fontSize: 13, color: 'var(--ink-2)', lineHeight: 1.4, paddingTop: 6 }}>
                   Every project goes through Josiah &amp; Desiree.<br />You'll always talk to a real human — that's the deal.
                 </div>
               </div>
