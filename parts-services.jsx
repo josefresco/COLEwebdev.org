@@ -210,7 +210,7 @@ function Estimator() {
               <p className="lede" style={{ marginTop: 16 }}>
                 Whether it's a fresh build, a redesign of a tired site, or a small fix — drop us a note. We'll reply within one business day with next steps and a ballpark.
               </p>
-              <div style={{ marginTop: 28, display: 'flex', alignItems: 'center', gap: 14 }}>
+              <div style={{ marginTop: 28, display: 'flex', alignItems: 'center', gap: 22 }}>
                 <div style={{ display: 'flex', gap: 0 }}>
                   {[
                   { src: 'assets/josiah-cole-cape-cod-website-designer.jpg', alt: 'Josiah Cole', ring: '#5CC035' },
