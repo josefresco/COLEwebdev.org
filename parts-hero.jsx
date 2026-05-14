@@ -72,6 +72,8 @@ const SEARCH_DATA = [
   { title: 'Five Principles of Effective Web Design', desc: 'The fundamentals behind every great site we build.', category: 'Whitepapers', href: 'wp-five-principles.html' },
   { title: 'The Seven Cs of Web Design', desc: 'A framework for evaluating and improving any website.', category: 'Whitepapers', href: 'wp-seven-cs.html' },
   { title: 'Web Design FAQ Guide', desc: 'Answers to the questions clients ask most often.', category: 'Whitepapers', href: 'wp-faq-guide.html' },
+  { title: 'How to Choose a Web Designer', desc: 'What to look for, what to ask, and what to avoid when hiring.', category: 'Whitepapers', href: 'wp-how-to-choose.html' },
+  { title: 'What Makes a Good Website?', desc: 'The elements that separate sites that work from sites that don\'t.', category: 'Whitepapers', href: 'wp-what-makes-good-website.html' },
   { title: 'Privacy Policy', desc: 'How we collect and use your data.', category: 'Legal', href: 'privacy.html' },
   { title: 'Accessibility Statement', desc: 'Our WCAG 2.1 AA commitment and features.', category: 'Legal', href: 'accessibility.html' },
   { title: 'Site Map', desc: 'Every page on colewebdev.org, organized.', category: 'Legal', href: 'sitemap.html' },

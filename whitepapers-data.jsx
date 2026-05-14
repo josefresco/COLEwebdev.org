@@ -303,4 +303,102 @@ window.WHITEPAPERS_DATA = [
     ],
     takeaway: 'A FAQ isn\'t just a support tool — it\'s an SEO asset and a conversion resource. Write it for the visitor who is 80% convinced but has one lingering hesitation. Answer that hesitation directly, and you\'ll close more inquiries.',
   },
+  {
+    id: 'how-to-choose',
+    num: '09',
+    title: 'How to Choose a Web Designer',
+    subtitle: 'What to Look For, What to Ask, and What to Avoid',
+    summary: 'Hiring the wrong web designer can cost you months and thousands of dollars. This guide walks you through what actually separates good candidates from bad ones — and the questions that reveal the difference.',
+    sections: [
+      {
+        heading: 'Start with the Portfolio',
+        body: [
+          'A portfolio is the most honest thing a web designer can show you. Before reading any proposal or attending any sales call, look at work the designer has actually shipped. Does it look current? Does it load quickly? Does it work on your phone? Click through several sites and ask yourself whether you\'d trust them with your credit card or your phone number.',
+          'Industry match matters less than execution quality. A designer who built excellent sites for restaurants can build an excellent site for a contractor. What transfers is the underlying discipline — structural thinking, attention to detail, performance awareness — not the niche.',
+        ],
+      },
+      {
+        heading: 'Questions to Ask Before You Hire',
+        body: [
+          'What is your process from kickoff to launch? A designer with a clear, documented process is less likely to go silent for three weeks or deliver something that bears no resemblance to what you discussed. Ask for specifics: how many revision rounds, what do you need from me and when, what happens if I miss a deadline?',
+          'Who will actually do the work? Agencies sometimes sell you on a senior designer and hand the project to a junior. Ask directly. Will you be designing this site? If not, who will? Can I speak with them? References matter too — ask for two or three past clients you can contact directly, not just testimonials on a website.',
+          'What happens after launch? A designer who disappears after handing over the files is a problem when your contact form stops working six months later. Ask about hosting, maintenance, and what a small content update costs.',
+        ],
+      },
+      {
+        heading: 'Red Flags to Watch For',
+        body: [
+          'No portfolio, or a portfolio that links to broken sites. Promising Google page-one rankings within 30 days. Contracts that give the agency ownership of your domain or content. Quotes that don\'t itemize what you\'re getting. High-pressure sales tactics around urgency ("this price is only good today").',
+          'Be cautious of designers who talk about aesthetics before asking about your business. A good web professional will ask: who are your customers, what do you want them to do on your site, what does success look like? If those questions never come up, the designer is building something that satisfies them, not you.',
+        ],
+      },
+      {
+        heading: 'Local vs. Remote: Does It Matter?',
+        body: [
+          'For most projects, remote collaboration works fine. Video calls, shared documents, and staging environments make geography largely irrelevant to the output quality. A great designer in Portland can build a better site than a mediocre one down the street.',
+          'That said, local has real advantages for Cape Cod businesses: shared context, existing relationships with local photographers and printers, understanding of seasonal business patterns, and the ability to meet in person when a complex problem benefits from a whiteboard. We\'ve built sites for clients across the country, and we\'ve also built hundreds for businesses within fifteen miles of our office. Both work. The question is what you value.',
+        ],
+      },
+      {
+        heading: 'Understanding Quotes and Proposals',
+        body: [
+          'A professional proposal should itemize deliverables, timeline milestones, revision policy, and payment schedule. Vague proposals that only name a total price are a warning sign — it means the scope isn\'t clearly defined, which means disagreements are coming.',
+          'Extremely low quotes usually mean one of three things: the work will be rushed, the scope is narrower than you think, or it\'s a template with your logo swapped in. Extremely high quotes don\'t guarantee quality either. The right price is one that\'s fully itemized and tied to a clear scope of work. Ask what\'s not included as much as what is.',
+        ],
+      },
+    ],
+    takeaway: 'The right web designer asks about your business goals before asking about aesthetics. They have a portfolio of shipped work, a clear process, and references you can actually call. Don\'t hire on price alone — hire on evidence.',
+  },
+  {
+    id: 'what-makes-good-website',
+    num: '10',
+    title: 'What Makes a Good Website?',
+    subtitle: 'The Elements That Separate Sites That Work from Sites That Don\'t',
+    summary: 'Not all websites are created equal. Some generate calls, inquiries, and sales every day while others sit idle. The difference usually isn\'t budget — it\'s decisions. Here\'s what those decisions are.',
+    sections: [
+      {
+        heading: 'First Impressions: The 5-Second Rule',
+        body: [
+          'Research consistently shows that visitors form a lasting opinion of a website within five seconds of landing on it. That opinion is almost entirely visual and emotional — not rational. A site that looks dated, cluttered, or low-quality triggers an immediate instinct to leave, regardless of how strong the underlying business is.',
+          'In practice, this means your homepage needs to communicate three things almost instantly: what you do, who you serve, and why you\'re credible. Not through paragraphs of text, but through design, imagery, and a headline that speaks directly to the visitor\'s situation. If someone lands on your homepage and can\'t tell within five seconds what you do, the site is underperforming.',
+        ],
+      },
+      {
+        heading: 'Clear Purpose and Messaging',
+        body: [
+          'Every page on your site should have one job. The homepage makes the case for your business. The services page details what you offer. The contact page removes every possible barrier to reaching you. When pages try to do too many things simultaneously, they accomplish none of them effectively.',
+          'Messaging clarity means writing for the customer, not for yourself. Business owners often write website copy full of jargon and self-congratulation that means nothing to a visitor who found the site through a Google search. The visitor doesn\'t care about your mission statement. They care whether you can solve their problem. Good web copy answers that question in the first sentence.',
+        ],
+      },
+      {
+        heading: 'Speed and Performance',
+        body: [
+          'Page speed is both a user experience issue and an SEO issue. Google uses page speed as a ranking signal — slow sites rank lower. And 53% of mobile users abandon a site that takes more than three seconds to load. A beautiful site that loads in eight seconds is a site that most of your visitors never actually see.',
+          'Speed problems typically come from a few sources: large uncompressed images, too many third-party scripts, bloated plugin stacks, or hosting that\'s too cheap. Each adds milliseconds that compound. A good web developer builds with performance as a constraint from day one, not as an afterthought.',
+        ],
+      },
+      {
+        heading: 'Mobile Experience',
+        body: [
+          'More than 60% of web traffic now comes from mobile devices. For businesses that depend on local search — restaurants, contractors, retailers, service providers — the number is often higher. A site that works well on a laptop but requires pinching and horizontal scrolling on a phone is failing the majority of its visitors.',
+          'Mobile-first design means designing for the smallest screen before scaling up, not retrofitting a desktop site for phones. Navigation should be thumb-friendly, text should be readable without zooming, and phone numbers should be tappable links. These aren\'t advanced features — they\'re baseline expectations.',
+        ],
+      },
+      {
+        heading: 'Trust Signals',
+        body: [
+          'Visitors make subconscious trust assessments every time they land on a new website. The signals they\'re reading include: how current the design looks, whether there are real photos of people and the business, whether reviews and testimonials are present, whether contact information is easy to find, and whether the site has HTTPS security.',
+          'For local service businesses, trust signals are particularly important because customers are often making a purchase decision that involves letting someone into their home or business. A website that looks like it hasn\'t been updated since 2015, has no reviews, and lists only a Gmail address will lose customers to a competitor whose site projects confidence — even if the competitor is objectively less skilled.',
+        ],
+      },
+      {
+        heading: 'Clear Calls to Action',
+        body: [
+          'A call to action is the instruction you give a visitor about what to do next. Every page should have one primary CTA — and it should be obvious, not buried. "Call us at 508.413.2043," "Request a free quote," "Book a table" — clear, specific, and prominent.',
+          'The most common mistake is having too many competing CTAs that dilute each other, or having no CTA at all and assuming the visitor will figure out the next step on their own. They won\'t. The business that makes it easiest to take the next step gets the call. Everything else being equal, the simpler the path to contact, the more contacts you get.',
+        ],
+      },
+    ],
+    takeaway: 'A good website is defined not by how it looks but by what it does. Every element should earn its place by serving the visitor\'s goal or your business goal. When in doubt, simplify.',
+  },
 ];

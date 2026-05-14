@@ -42,6 +42,8 @@ const SITE_MAP = [
       { title: '06 · 5 Essential Principles of Effective Web Design', href: 'wp-five-principles.html', desc: 'The foundations every business website needs' },
       { title: "07 · The 7 C's of Web Design", href: 'wp-seven-cs.html', desc: 'A framework for building complete digital experiences' },
       { title: '08 · Building a Better FAQ', href: 'wp-faq-guide.html', desc: 'Questions that convert — and get found on Google' },
+      { title: '09 · How to Choose a Web Designer', href: 'wp-how-to-choose.html', desc: 'What to look for, what to ask, and what to avoid' },
+      { title: '10 · What Makes a Good Website?', href: 'wp-what-makes-good-website.html', desc: 'The elements that separate sites that work from sites that don\'t' },
     ],
   },
   {
