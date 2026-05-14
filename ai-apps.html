@@ -163,14 +163,15 @@
 /* What we build */
 .ai-builds {
   padding: 80px 0;
-  background: var(--paper-2);
-  border-top: 1px solid var(--line);
+  background: var(--navy);
+  border-top: 1px solid rgba(255,255,255,0.06);
 }
 .ai-builds-hd { margin-bottom: 48px; }
+.ai-builds .eyebrow { color: rgba(255,255,255,0.5); }
 .ai-builds-hl {
   font-family: var(--serif);
   font-size: clamp(28px, 3.5vw, 44px);
-  color: var(--ink);
+  color: white;
   font-weight: 400;
   margin: 8px 0 0;
 }
@@ -361,8 +362,9 @@
 /* AIEO cross-sell */
 .ai-aieo {
   padding: 80px 0;
-  background: linear-gradient(135deg, #0A1F36 0%, #0E2A4A 60%, #1a3a5c 100%);
-  border-top: 1px solid rgba(255,255,255,0.06);
+  background: linear-gradient(150deg, rgba(123,192,67,0.09) 0%, rgba(123,192,67,0.03) 60%, transparent 100%),
+    var(--paper);
+  border-top: 3px solid var(--brand-green);
 }
 .ai-aieo-inner {
   max-width: 780px;
@@ -378,17 +380,17 @@
   font-size: 10px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  background: rgba(242,107,31,0.25);
-  color: #F26B1F;
-  border: 1px solid rgba(242,107,31,0.35);
+  background: rgba(242,107,31,0.12);
+  color: #D05A12;
+  border: 1px solid rgba(242,107,31,0.3);
   padding: 4px 12px;
   border-radius: 999px;
 }
-.ai-aieo-eyebrow { color: rgba(255,255,255,0.45); }
+.ai-aieo-eyebrow { color: var(--muted); }
 .ai-aieo-hl {
   font-family: var(--serif);
   font-size: clamp(30px, 4vw, 52px);
-  color: white;
+  color: var(--ink);
   font-weight: 400;
   margin: 0 0 24px;
   line-height: 1.1;
@@ -396,7 +398,7 @@
 .ai-aieo-p {
   font-size: 15px;
   line-height: 1.75;
-  color: rgba(255,255,255,0.65);
+  color: var(--ink-2);
   margin: 0 0 16px;
 }
 
