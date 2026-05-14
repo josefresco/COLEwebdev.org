@@ -3,27 +3,25 @@
 const SHOP_URL = 'https://colewebdev.printful.me/';
 const QUOTE_URL = 'https://www.colewebdev.com/printful-quick-store/';
 
-const CDN = 'https://cdn.printful.me/t/quick-stores/products/w400/';
-
 const PRODUCTS = [
-  { name: 'Handwritten COLEwebdev Crop Top', price: 'From $22.50', img: CDN + '14375022-666-68da7d8400f2e__360' },
-  { name: '80/20 CWD Retro',                 price: 'From $53.00', img: CDN + '5716-602-68518a4729ed9__360' },
-  { name: 'Retro CWD',                        price: 'From $22.00', img: CDN + '14375022-71-6851889b54d02__360' },
-  { name: 'Modern CWD',                       price: 'From $18.50', img: CDN + '14375022-71-685187b6616ce__360' },
-  { name: 'CWD Racing Crop Top',              price: 'From $22.50', img: CDN + '14375022-666-685186468666b__360' },
-  { name: '80/20 CWD Oversized Hoodie',       price: 'From $61.50', img: CDN + '14375022-734-66ec32046e595__360' },
-  { name: '80/20 CWD Comfort Hoodie',         price: 'From $53.00', img: CDN + '5716-602-66ec2f0b6d45f__360' },
-  { name: '80/20 CWD Rocks Hoodie',           price: 'From $74.50', img: CDN + '5716-765-66ec2f556ad7c__360' },
-  { name: 'CWD Ask More of Your Website Hoodie', price: 'From $52.50', img: CDN + '14375022-380-66eae8207ee8a__360' },
-  { name: 'CWD Hoodie',                       price: 'From $57.50', img: CDN + '14375022-380-66eae77891c43__360' },
-  { name: 'CWD Rocks V-Neck T-Shirt',         price: 'From $32.50', img: CDN + '14375022-782-66e9e642bf4cc__360' },
-  { name: 'CWD Rocks Zip Hoodie',             price: 'From $53.00', img: CDN + '14375022-692-66e9e529a24ec__360' },
-  { name: 'CWD Tote Bag',                     price: 'From $30.00', img: CDN + '14375022-367-66e9e3e6bd158__360' },
-  { name: 'CWD Rocks Trucker Cap',            price: 'From $25.00', img: CDN + '14375022-100-66e9e2f19fca2__360' },
-  { name: 'CWD Retro T-Shirt',               price: 'From $25.00', img: CDN + '14375022-71-66e9e1ccc88ce__360' },
-  { name: 'CWD Retro Crop Top',              price: 'From $29.50', img: CDN + '14375022-666-66e9e12fc1646__360' },
-  { name: 'CWD Rocks Black T-Shirt',         price: 'From $34.00', img: CDN + '14375022-733-66e9dfe05e659__360' },
-  { name: 'CWD Rocks',                        price: 'From $64.50', img: CDN + '5716-294-66e9e0433df44__360' },
+  { name: 'Handwritten COLEwebdev Crop Top',    price: 'From $22.50', img: 'assets/shop-01.webp' },
+  { name: '80/20 CWD Retro',                    price: 'From $53.00', img: 'assets/shop-02.webp' },
+  { name: 'Retro CWD',                          price: 'From $22.00', img: 'assets/shop-03.webp' },
+  { name: 'Modern CWD',                         price: 'From $18.50', img: 'assets/shop-04.webp' },
+  { name: 'CWD Racing Crop Top',                price: 'From $22.50', img: 'assets/shop-05.webp' },
+  { name: '80/20 CWD Oversized Hoodie',         price: 'From $61.50', img: 'assets/shop-06.webp' },
+  { name: '80/20 CWD Comfort Hoodie',           price: 'From $53.00', img: 'assets/shop-07.webp' },
+  { name: '80/20 CWD Rocks Hoodie',             price: 'From $74.50', img: 'assets/shop-08.webp' },
+  { name: 'CWD Ask More of Your Website Hoodie',price: 'From $52.50', img: 'assets/shop-09.webp' },
+  { name: 'CWD Hoodie',                         price: 'From $57.50', img: 'assets/shop-10.webp' },
+  { name: 'CWD Rocks V-Neck T-Shirt',           price: 'From $32.50', img: 'assets/shop-11.webp' },
+  { name: 'CWD Rocks Zip Hoodie',               price: 'From $53.00', img: 'assets/shop-12.webp' },
+  { name: 'CWD Tote Bag',                       price: 'From $30.00', img: 'assets/shop-13.webp' },
+  { name: 'CWD Rocks Trucker Cap',              price: 'From $25.00', img: 'assets/shop-14.webp' },
+  { name: 'CWD Retro T-Shirt',                  price: 'From $25.00', img: 'assets/shop-15.webp' },
+  { name: 'CWD Retro Crop Top',                 price: 'From $29.50', img: 'assets/shop-16.webp' },
+  { name: 'CWD Rocks Black T-Shirt',            price: 'From $34.00', img: 'assets/shop-17.webp' },
+  { name: 'CWD Rocks',                          price: 'From $64.50', img: 'assets/shop-18.webp' },
 ];
 
 const POD_FEATURES = [
