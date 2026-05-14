@@ -304,7 +304,7 @@ function Header() {
           </div>
           <a className={'nav-link' + on('portfolio.html')} href="portfolio.html">Portfolio</a>
           <div className="nav-item-dropdown">
-            <a className={'nav-link' + (on('about.html') || on('process.html'))} href="about.html">About Us <span className="caret">▾</span></a>
+            <a className={'nav-link' + (on('about.html') || on('process.html') || on('newsletter.html'))} href="about.html">About Us <span className="caret">▾</span></a>
             <div className="nav-dropdown nav-dropdown--sm" role="menu">
               <a href="about.html" className="nav-dd-item">
                 <span className="nav-dd-glyph green">◇</span>
@@ -318,6 +318,13 @@ function Header() {
                 <div>
                   <div className="nav-dd-title">Our Process</div>
                   <div className="nav-dd-desc">How we scope, build, and hand off every project.</div>
+                </div>
+              </a>
+              <a href="newsletter.html" className="nav-dd-item">
+                <span className="nav-dd-glyph orange">↻</span>
+                <div>
+                  <div className="nav-dd-title">Newsletter Archive</div>
+                  <div className="nav-dd-desc">Browse every issue of the COLEwebdev newsletter.</div>
                 </div>
               </a>
             </div>
@@ -381,6 +388,7 @@ function Header() {
               <a className="mobile-nav-link" href="portfolio.html" onClick={close}>Portfolio</a>
               <a className="mobile-nav-link" href="about.html" onClick={close}>About Us</a>
               <a className="mobile-nav-link" href="process.html" onClick={close}>Our Process</a>
+              <a className="mobile-nav-link" href="newsletter.html" onClick={close}>Newsletter Archive</a>
               <a className="mobile-nav-link" href="whitepapers.html" onClick={close}>Whitepapers</a>
               <a className="mobile-nav-link" href="news.html" onClick={close}>News</a>
               <a className="mobile-nav-link" href="contact.html" onClick={close}>Contact</a>
