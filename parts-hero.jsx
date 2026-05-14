@@ -453,7 +453,7 @@ function HeroGridCards() {
     <div className="hero-grid-cards" style={{ height: '100%' }}>
       <div className="gc feature">
         <span className="tag" style={{ background: 'rgba(255,255,255,0.1)', color: 'white', borderColor: 'rgba(255,255,255,0.15)' }}>NEW · AI WEB APPS</span>
-        <h3>From idea to <i style={{ color: '#FFC79A' }}>working app</i><br />in two weeks.</h3>
+        <h3>From idea to <i style={{ color: '#FFC79A' }}>working app</i><br />in record time.</h3>
       </div>
       <div className="gc">
         <div style={{ width: 36, height: 36, borderRadius: 10, background: 'rgba(123,192,67,0.18)', color: '#5DA02E', display: 'grid', placeItems: 'center' }}>◇</div>

@@ -65,7 +65,7 @@ const HOW_STEPS = [
   {
     n: '03',
     title: 'Build',
-    body: 'Most apps ship in two weeks. You see a working prototype by day five. Real feedback, real iterations — no black box.',
+    body: 'Most apps ship in record time. You see a working prototype by day five. Real feedback, real iterations — no black box.',
   },
   {
     n: '04',
@@ -97,7 +97,7 @@ function AiAppsPage() {
           <div className="shell">
             <span className="eyebrow ai-eyebrow">Services · AI Web Apps</span>
             <h1 className="ai-hero-hl">
-              From idea to <em>working app</em><br />in two weeks.
+              From idea to <em>working app</em><br />in record time.
             </h1>
             <p className="ai-hero-sub">
               Booking systems, intake forms, on-site search, and AI assistants — built into your website and trained on your business. We make the tools that free up your time.
