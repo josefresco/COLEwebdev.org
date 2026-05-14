@@ -110,70 +110,78 @@
   color: var(--ink-2);
 }
 
-/* Categories */
-.sh-cats {
+/* Product grid */
+.sh-prods {
   padding: 72px 0;
   background: var(--paper);
 }
-.sh-cats-hd {
+.sh-prods-hd {
   margin-bottom: 40px;
 }
-.sh-cats-hl {
+.sh-prods-hl {
   font-family: var(--serif);
   font-size: clamp(26px, 3vw, 38px);
   color: var(--ink);
   font-weight: 400;
   margin: 0 0 6px;
 }
-.sh-cats-sub {
-  font-size: 14px;
+.sh-prods-sub {
+  font-size: 13px;
   color: var(--muted);
   font-family: var(--mono);
   letter-spacing: 0.04em;
 }
-.sh-cats-grid {
+.sh-prods-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
-.sh-cat-card {
-  background: white;
-  border: 1px solid var(--line);
-  border-radius: var(--r-xl);
-  padding: 28px 24px;
+.sh-prod-card {
+  text-decoration: none;
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  text-decoration: none;
+  gap: 0;
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: white;
   box-shadow: var(--shadow-sm);
   transition: transform 0.22s ease, box-shadow 0.22s ease;
 }
-.sh-cat-card:hover {
+.sh-prod-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-md);
 }
-.sh-cat-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
-  display: grid;
-  place-items: center;
-  font-size: 18px;
-  flex-shrink: 0;
+.sh-prod-img-wrap {
+  aspect-ratio: 1 / 1;
+  background: var(--paper-2);
+  overflow: hidden;
 }
-.sh-cat-name {
-  font-family: var(--serif);
-  font-size: 21px;
+.sh-prod-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+.sh-prod-card:hover .sh-prod-img { transform: scale(1.05); }
+.sh-prod-info {
+  padding: 14px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.sh-prod-name {
+  font-size: 13.5px;
   color: var(--ink);
-  margin-bottom: 4px;
-  font-weight: 400;
+  line-height: 1.35;
+  font-weight: 500;
 }
-.sh-cat-desc {
+.sh-prod-price {
   font-family: var(--mono);
   font-size: 11px;
-  letter-spacing: 0.04em;
-  line-height: 1.55;
-  color: var(--muted);
+  letter-spacing: 0.05em;
+  color: var(--brand-green);
 }
 
 /* Why Printful */
@@ -311,15 +319,16 @@
 /* Responsive */
 @media (max-width: 1100px) {
   .sh-why-grid { grid-template-columns: repeat(3, 1fr); }
+  .sh-prods-grid { grid-template-columns: repeat(3, 1fr); }
 }
 @media (max-width: 960px) {
   .sh-hero-grid { grid-template-columns: 1fr; gap: 40px; }
-  .sh-cats-grid { grid-template-columns: repeat(2, 1fr); }
+  .sh-prods-grid { grid-template-columns: repeat(2, 1fr); }
   .sh-why-grid { grid-template-columns: repeat(2, 1fr); }
   .sh-own-inner { grid-template-columns: 1fr; gap: 40px; }
 }
 @media (max-width: 560px) {
-  .sh-cats-grid { grid-template-columns: 1fr; }
+  .sh-prods-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
   .sh-why-grid { grid-template-columns: 1fr; }
   .sh-intro-hl { letter-spacing: -1px; }
   .sh-cta-inner { flex-direction: column; align-items: flex-start; }

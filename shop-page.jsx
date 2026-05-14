@@ -3,35 +3,27 @@
 const SHOP_URL = 'https://colewebdev.printful.me/';
 const QUOTE_URL = 'https://www.colewebdev.com/printful-quick-store/';
 
-const CATEGORIES = [
-  {
-    name: 'T-Shirts',
-    desc: 'Soft, breathable tees for every season.',
-    icon: '◇',
-    bg: 'rgba(123,192,67,0.14)',
-    color: '#5DA02E',
-  },
-  {
-    name: 'Hoodies',
-    desc: 'Cozy fleece built for Cape Cod mornings.',
-    icon: '◐',
-    bg: 'rgba(14,42,74,0.10)',
-    color: '#0E2A4A',
-  },
-  {
-    name: 'Hats',
-    desc: 'Classic fits, all-season wearability.',
-    icon: '▲',
-    bg: 'rgba(242,107,31,0.14)',
-    color: '#F26B1F',
-  },
-  {
-    name: 'Tote Bags',
-    desc: "Sturdy canvas, perfect for the Farmers' Market.",
-    icon: '✦',
-    bg: 'rgba(123,192,67,0.14)',
-    color: '#5DA02E',
-  },
+const CDN = 'https://cdn.printful.me/t/quick-stores/products/w400/';
+
+const PRODUCTS = [
+  { name: 'Handwritten COLEwebdev Crop Top', price: 'From $22.50', img: CDN + '14375022-666-68da7d8400f2e__360' },
+  { name: '80/20 CWD Retro',                 price: 'From $53.00', img: CDN + '5716-602-68518a4729ed9__360' },
+  { name: 'Retro CWD',                        price: 'From $22.00', img: CDN + '14375022-71-6851889b54d02__360' },
+  { name: 'Modern CWD',                       price: 'From $18.50', img: CDN + '14375022-71-685187b6616ce__360' },
+  { name: 'CWD Racing Crop Top',              price: 'From $22.50', img: CDN + '14375022-666-685186468666b__360' },
+  { name: '80/20 CWD Oversized Hoodie',       price: 'From $61.50', img: CDN + '14375022-734-66ec32046e595__360' },
+  { name: '80/20 CWD Comfort Hoodie',         price: 'From $53.00', img: CDN + '5716-602-66ec2f0b6d45f__360' },
+  { name: '80/20 CWD Rocks Hoodie',           price: 'From $74.50', img: CDN + '5716-765-66ec2f556ad7c__360' },
+  { name: 'CWD Ask More of Your Website Hoodie', price: 'From $52.50', img: CDN + '14375022-380-66eae8207ee8a__360' },
+  { name: 'CWD Hoodie',                       price: 'From $57.50', img: CDN + '14375022-380-66eae77891c43__360' },
+  { name: 'CWD Rocks V-Neck T-Shirt',         price: 'From $32.50', img: CDN + '14375022-782-66e9e642bf4cc__360' },
+  { name: 'CWD Rocks Zip Hoodie',             price: 'From $53.00', img: CDN + '14375022-692-66e9e529a24ec__360' },
+  { name: 'CWD Tote Bag',                     price: 'From $30.00', img: CDN + '14375022-367-66e9e3e6bd158__360' },
+  { name: 'CWD Rocks Trucker Cap',            price: 'From $25.00', img: CDN + '14375022-100-66e9e2f19fca2__360' },
+  { name: 'CWD Retro T-Shirt',               price: 'From $25.00', img: CDN + '14375022-71-66e9e1ccc88ce__360' },
+  { name: 'CWD Retro Crop Top',              price: 'From $29.50', img: CDN + '14375022-666-66e9e12fc1646__360' },
+  { name: 'CWD Rocks Black T-Shirt',         price: 'From $34.00', img: CDN + '14375022-733-66e9dfe05e659__360' },
+  { name: 'CWD Rocks',                        price: 'From $64.50', img: CDN + '5716-294-66e9e0433df44__360' },
 ];
 
 const POD_FEATURES = [
@@ -140,31 +132,35 @@ function ShopPage() {
         </div>
       </div>
 
-      {/* Categories */}
-      <section className="sh-cats">
+      {/* Product grid */}
+      <section className="sh-prods">
         <div className="shell">
-          <div className="sh-cats-hd">
-            <h2 className="sh-cats-hl">What's in the store</h2>
-            <p className="sh-cats-sub">Click any category to browse &amp; order</p>
+          <div className="sh-prods-hd">
+            <h2 className="sh-prods-hl">All products</h2>
+            <p className="sh-prods-sub">{PRODUCTS.length} items · Printed on demand · Ships to your door</p>
           </div>
-          <div className="sh-cats-grid">
-            {CATEGORIES.map(cat => (
+          <div className="sh-prods-grid">
+            {PRODUCTS.map(p => (
               <a
-                key={cat.name}
-                className="sh-cat-card"
+                key={p.name}
+                className="sh-prod-card"
                 href={SHOP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <div
-                  className="sh-cat-icon"
-                  style={{ background: cat.bg, color: cat.color }}
-                >
-                  {cat.icon}
+                <div className="sh-prod-img-wrap">
+                  <img
+                    className="sh-prod-img"
+                    src={p.img}
+                    alt={p.name}
+                    loading="lazy"
+                    width="400"
+                    height="400"
+                  />
                 </div>
-                <div>
-                  <div className="sh-cat-name">{cat.name}</div>
-                  <div className="sh-cat-desc">{cat.desc}</div>
+                <div className="sh-prod-info">
+                  <div className="sh-prod-name">{p.name}</div>
+                  <div className="sh-prod-price">{p.price}</div>
                 </div>
               </a>
             ))}
