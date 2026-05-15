@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AIEO — AI Engine Optimization for Cape Cod Businesses · COLEwebdev</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<meta name="description" content="AIEO — AI Engine Optimization for Cape Cod businesses. Get your website cited by ChatGPT, Perplexity, Gemini, and Claude. COLEwebdev applies proven AIEO techniques." />
+<link rel="canonical" href="https://colewebdev.org/aieo.html" />
+<link rel="stylesheet" href="styles.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "AI Engine Optimization (AIEO)",
+  "url": "https://colewebdev.org/aieo.html",
+  "description": "AIEO — structured content, schema markup, E-E-A-T signals, and citation building to get your business found and cited by AI search engines.",
+  "provider": { "@type": "ProfessionalService", "name": "COLEwebdev", "url": "https://colewebdev.org/" },
+  "areaServed": { "@type": "State", "name": "Cape Cod, Massachusetts" },
+  "serviceType": "AI Engine Optimization"
+}
+</script>
+<style>
+/* ── AIEO page ── */
+
+/* Hero */
+.aieo-hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 56vh;
+  display: flex;
+  align-items: center;
+}
+.aieo-hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 65% 75% at 105% 0%, rgba(123,192,67,0.30), transparent 50%),
+    radial-gradient(ellipse 45% 55% at -5% 100%, rgba(14,42,74,0.35), transparent 55%),
+    linear-gradient(150deg, #0A1F36 0%, #0E2A4A 55%, #0d2212 100%);
+}
+.aieo-hero-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(255,255,255,0.02) 39px, rgba(255,255,255,0.02) 40px),
+    repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255,255,255,0.02) 39px, rgba(255,255,255,0.02) 40px);
+}
+.aieo-hero-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 100px 0 88px;
+}
+.aieo-eyebrow { color: rgba(255,255,255,0.55); }
+.aieo-hero-hl {
+  font-family: var(--serif);
+  font-size: clamp(40px, 6vw, 76px);
+  line-height: 1.05;
+  color: white;
+  font-weight: 400;
+  margin: 12px 0 20px;
+  letter-spacing: -1px;
+}
+.aieo-hero-hl em { color: #7BC043; font-style: italic; }
+.aieo-hero-sub {
+  font-size: 17px;
+  line-height: 1.65;
+  color: rgba(255,255,255,0.7);
+  max-width: 580px;
+  margin: 0 0 36px;
+}
+.aieo-hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+.aieo-ghost { color: rgba(255,255,255,0.85); border-color: rgba(255,255,255,0.3); }
+.aieo-ghost:hover { border-color: rgba(255,255,255,0.7); color: white; }
+.aieo-hero-tags { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 40px; }
+.aieo-hero-tag {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  border: 1px solid rgba(255,255,255,0.15);
+  padding: 5px 12px;
+  border-radius: 999px;
+}
+
+/* What is AIEO */
+.aieo-what {
+  padding: 88px 0;
+  background: var(--paper);
+  border-top: 1px solid var(--line);
+}
+.aieo-what-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+.aieo-what-hl {
+  font-family: var(--serif);
+  font-size: clamp(26px, 3.2vw, 42px);
+  color: var(--ink);
+  font-weight: 400;
+  margin: 8px 0 24px;
+  line-height: 1.15;
+}
+.aieo-what-p {
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--ink-2);
+  margin: 0 0 18px;
+}
+.aieo-engines {
+  background: var(--navy);
+  border-radius: var(--r-xl);
+  padding: 32px 36px;
+}
+.aieo-engines-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin: 0 0 20px;
+}
+.aieo-engine-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.aieo-engine-row:last-child { border-bottom: none; }
+.aieo-engine-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #7BC043;
+  flex-shrink: 0;
+}
+.aieo-engine-name {
+  font-size: 14px;
+  color: rgba(255,255,255,0.85);
+}
+
+/* Tactics */
+.aieo-tactics {
+  padding: 88px 0;
+  background: var(--navy);
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+.aieo-tactics-hd { margin-bottom: 52px; max-width: 680px; }
+.aieo-tactics-hd .eyebrow { color: rgba(255,255,255,0.5); }
+.aieo-tactics-hl {
+  font-family: var(--serif);
+  font-size: clamp(28px, 3.5vw, 44px);
+  color: white;
+  font-weight: 400;
+  margin: 8px 0 16px;
+}
+.aieo-tactics-sub {
+  font-size: 15px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.6);
+  margin: 0;
+}
+.aieo-tactics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.aieo-tactic-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: var(--r-xl);
+  padding: 26px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: background 0.2s;
+}
+.aieo-tactic-card:hover { background: rgba(255,255,255,0.09); }
+.aieo-tactic-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  font-size: 17px;
+  flex-shrink: 0;
+}
+.aieo-tactic-title {
+  font-family: var(--serif);
+  font-size: 19px;
+  color: white;
+  font-weight: 400;
+}
+.aieo-tactic-desc {
+  font-size: 13px;
+  line-height: 1.65;
+  color: rgba(255,255,255,0.58);
+}
+
+/* AIEO vs SEO */
+.aieo-vs {
+  padding: 88px 0;
+  background: var(--paper-2);
+  border-top: 1px solid var(--line);
+}
+.aieo-vs-hd { margin-bottom: 40px; }
+.aieo-vs-hl {
+  font-family: var(--serif);
+  font-size: clamp(26px, 3.2vw, 40px);
+  color: var(--ink);
+  font-weight: 400;
+  margin: 8px 0 12px;
+}
+.aieo-vs-sub {
+  font-size: 15px;
+  color: var(--ink-2);
+  margin: 0;
+}
+.aieo-vs-table {
+  border: 1px solid var(--line);
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  background: white;
+}
+.aieo-vs-header {
+  display: grid;
+  grid-template-columns: 140px 1fr 1fr;
+  background: var(--paper-2);
+  border-bottom: 1px solid var(--line);
+}
+.aieo-vs-col-label {
+  padding: 14px 24px;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.aieo-vs-col-label--aieo { color: var(--brand-green); }
+.aieo-vs-row {
+  display: grid;
+  grid-template-columns: 140px 1fr 1fr;
+  border-bottom: 1px solid var(--line);
+}
+.aieo-vs-row:last-child { border-bottom: none; }
+.aieo-vs-row-label {
+  padding: 16px 24px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border-right: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+}
+.aieo-vs-cell {
+  padding: 16px 24px;
+  font-size: 14px;
+  color: var(--ink-2);
+  display: flex;
+  align-items: center;
+  border-right: 1px solid var(--line);
+}
+.aieo-vs-cell--aieo {
+  color: var(--ink);
+  font-weight: 500;
+  border-right: none;
+}
+
+/* Why now */
+.aieo-now {
+  padding: 80px 0;
+  background: linear-gradient(150deg, rgba(123,192,67,0.08) 0%, rgba(123,192,67,0.03) 60%, transparent 100%), var(--paper);
+  border-top: 3px solid var(--brand-green);
+}
+.aieo-now-inner { max-width: 760px; }
+.aieo-now-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: rgba(123,192,67,0.15);
+  color: #5DA02E;
+  border: 1px solid rgba(123,192,67,0.3);
+  padding: 4px 12px;
+  border-radius: 999px;
+  margin-bottom: 20px;
+}
+.aieo-now-hl {
+  font-family: var(--serif);
+  font-size: clamp(28px, 3.5vw, 44px);
+  color: var(--ink);
+  font-weight: 400;
+  margin: 0 0 24px;
+  line-height: 1.15;
+}
+.aieo-now-p {
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--ink-2);
+  margin: 0 0 16px;
+}
+
+/* CTA */
+.aieo-cta { padding: 80px 0; background: var(--navy); }
+.aieo-cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--r-xl);
+  padding: 52px 60px;
+}
+.aieo-cta-hl {
+  font-family: var(--serif);
+  font-size: clamp(24px, 3vw, 38px);
+  color: white;
+  font-weight: 400;
+  font-style: italic;
+  margin: 0 0 10px;
+}
+.aieo-cta-sub { font-size: 15px; color: rgba(255,255,255,0.6); margin: 0; max-width: 420px; }
+.aieo-cta-actions { display: flex; gap: 14px; flex-wrap: wrap; flex-shrink: 0; }
+
+/* Responsive */
+@media (max-width: 960px) {
+  .aieo-what-grid { grid-template-columns: 1fr; gap: 40px; }
+  .aieo-tactics-grid { grid-template-columns: repeat(2, 1fr); }
+  .aieo-vs-header { grid-template-columns: 110px 1fr 1fr; }
+  .aieo-vs-row { grid-template-columns: 110px 1fr 1fr; }
+  .aieo-vs-row-label { padding: 14px 16px; }
+  .aieo-vs-cell { padding: 14px 16px; }
+  .aieo-cta-inner { padding: 40px 32px; flex-direction: column; align-items: flex-start; }
+}
+@media (max-width: 600px) {
+  .aieo-tactics-grid { grid-template-columns: 1fr; }
+  .aieo-vs-header { grid-template-columns: 90px 1fr 1fr; }
+  .aieo-vs-row { grid-template-columns: 90px 1fr 1fr; }
+  .aieo-hero-actions { flex-direction: column; align-items: flex-start; }
+}
+</style>
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="COLEwebdev" />
+<meta property="og:title" content="AIEO — AI Engine Optimization for Cape Cod Businesses · COLEwebdev" />
+<meta property="og:description" content="AIEO — AI Engine Optimization for Cape Cod businesses. Get your website cited by ChatGPT, Perplexity, Gemini, and Claude. COLEwebdev applies proven AIEO techniques." />
+<meta property="og:url" content="https://colewebdev.org/aieo.html" />
+<meta property="og:image" content="https://colewebdev.org/assets/josiah-chromebook-iphone.png" />
+</head>
+<body>
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="parts-hero.jsx"></script>
+<script type="text/babel" src="parts-services.jsx"></script>
+<script type="text/babel" src="parts-rest.jsx"></script>
+<script type="text/babel" src="aieo-page.jsx"></script>
+</body>
+</html>
