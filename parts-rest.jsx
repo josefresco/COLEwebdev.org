@@ -218,7 +218,7 @@ function Testimonial() {
             <span className="eyebrow">What clients say</span>
             <h2 style={{ marginTop: 14, fontSize: 'clamp(28px, 3vw, 42px)' }}>Twenty years of <span className="italic">happy neighbors.</span></h2>
           </div>
-          <div className="testi-stat" style={{ minWidth: 180 }}>
+          <div className="testi-stat testi-stat--hd" style={{ minWidth: 180 }}>
             <div className="num" style={{ fontSize: 36 }}>5.0★</div>
             <div className="label">Google · 60+ reviews</div>
           </div>

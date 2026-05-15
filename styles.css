@@ -1814,6 +1814,7 @@ p, li {
 }
 @media (max-width: 920px) {
   .testi-slide { grid-template-columns: 1fr; gap: 24px; }
+  .testi-stat--hd { display: none; }
 }
 .testi-controls {
   display: flex;

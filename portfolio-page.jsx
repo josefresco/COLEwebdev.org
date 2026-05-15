@@ -377,6 +377,9 @@ function PortfolioPage() {
       <Header />
 
       <section className="pfhero">
+        <img className="pfhero-img" src="assets/portfolio-hero.jpg" alt="" aria-hidden="true" />
+        <div className="pfhero-overlay" aria-hidden="true" />
+        <div className="pfhero-content">
         <div className="shell">
           <div className="pfhero-grid">
             <div>
@@ -406,6 +409,7 @@ function PortfolioPage() {
               </div>
             </div>
           </div>
+        </div>
         </div>
       </section>
 
