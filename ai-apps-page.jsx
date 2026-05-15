@@ -20,7 +20,7 @@ const BUILD_TYPES = [
     bg: 'rgba(242,107,31,0.14)',
     color: '#F26B1F',
     title: 'Progressive Web Apps',
-    body: 'Fast, installable web applications that work offline and feel native — without App Store gatekeeping or platform-specific development costs.',
+    body: 'Fast, installable web applications that feel native — without App Store gatekeeping or platform-specific development costs.',
   },
   {
     icon: '◎',
