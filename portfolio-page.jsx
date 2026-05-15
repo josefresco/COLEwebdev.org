@@ -358,6 +358,13 @@ function PfCard({ project, index }) {
 
 function PortfolioPage() {
   const [active, setActive] = React.useState('all');
+  const heroRef = React.useRef(null);
+
+  React.useEffect(() => {
+    const img = new Image();
+    img.src = 'assets/portfolio-hero.jpg';
+    img.onload = () => { if (heroRef.current) heroRef.current.classList.add('loaded'); };
+  }, []);
 
   const counts = React.useMemo(() => {
     const c = { all: PROJECTS.length };
@@ -377,39 +384,38 @@ function PortfolioPage() {
       <Header />
 
       <section className="pfhero">
-        <img className="pfhero-img" src="assets/portfolio-hero.jpg" alt="" aria-hidden="true" />
-        <div className="pfhero-overlay" aria-hidden="true" />
-        <div className="pfhero-content">
-        <div className="shell">
-          <div className="pfhero-grid">
-            <div>
-              <span className="eyebrow">Our Work</span>
-              <p className="pfhero-num">700<sup>+</sup></p>
-              <p className="pfhero-sub">
-                Sites launched for small businesses on Cape Cod &amp; the Islands since 2006.
-                The projects below are a sampling — our complete portfolio spans every
-                industry, budget, and build type we've worked in.
-              </p>
-            </div>
-            <div className="pfhero-right">
-              <p className="pfhero-label">Filter by category</p>
-              <div className="pf-filters">
-                {FILTERS.map(f => (
-                  <button
-                    key={f.key}
-                    className={`pf-filter${active === f.key ? ' active' : ''}`}
-                    onClick={() => setActive(f.key)}
-                  >
-                    {f.label}
-                    {counts[f.key] != null && (
-                      <span className="ct">{counts[f.key]}</span>
-                    )}
-                  </button>
-                ))}
+        <div ref={heroRef} className="pfhero-img" />
+        <div className="pfhero-text">
+          <div className="shell">
+            <div className="pfhero-grid">
+              <div>
+                <span className="eyebrow">Our Work</span>
+                <p className="pfhero-num">700<sup>+</sup></p>
+                <p className="pfhero-sub">
+                  Sites launched for small businesses on Cape Cod &amp; the Islands since 2006.
+                  The projects below are a sampling — our complete portfolio spans every
+                  industry, budget, and build type we've worked in.
+                </p>
+              </div>
+              <div className="pfhero-right">
+                <p className="pfhero-label">Filter by category</p>
+                <div className="pf-filters">
+                  {FILTERS.map(f => (
+                    <button
+                      key={f.key}
+                      className={`pf-filter${active === f.key ? ' active' : ''}`}
+                      onClick={() => setActive(f.key)}
+                    >
+                      {f.label}
+                      {counts[f.key] != null && (
+                        <span className="ct">{counts[f.key]}</span>
+                      )}
+                    </button>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
-        </div>
         </div>
       </section>
 

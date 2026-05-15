@@ -14,31 +14,32 @@
 /* ── Portfolio page ── */
 
 .pfhero {
-  position: relative;
-  overflow: hidden;
-  padding: 0;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid var(--line);
 }
 .pfhero-img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 30%;
-  display: block;
-}
-.pfhero-overlay {
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(100deg, rgba(10,31,54,0.95) 0%, rgba(10,31,54,0.80) 55%, rgba(10,31,54,0.45) 100%),
-    linear-gradient(0deg, rgba(10,31,54,0.6) 0%, transparent 40%);
-}
-.pfhero-content {
+  height: 48vh;
+  min-height: 280px;
+  background-image: url('assets/portfolio-hero.jpg');
+  background-size: cover;
+  background-position: center 30%;
   position: relative;
-  z-index: 1;
-  padding: 88px 0 64px;
+  flex-shrink: 0;
+  transform: scale(1.03);
+  transition: transform 8s ease;
+}
+.pfhero-img.loaded { transform: scale(1); }
+.pfhero-img::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 120px;
+  background: linear-gradient(to bottom, transparent, var(--paper));
+}
+.pfhero-text {
+  background: var(--paper);
+  padding: 52px 0 64px;
 }
 .pfhero-grid {
   display: grid;
@@ -50,7 +51,7 @@
   font-family: var(--serif);
   font-size: clamp(96px, 14vw, 160px);
   line-height: 0.9;
-  color: white;
+  color: var(--navy);
   font-style: italic;
   letter-spacing: -4px;
   margin: 0;
@@ -67,11 +68,10 @@
 .pfhero-sub {
   margin: 12px 0 0;
   font-size: clamp(15px, 1.8vw, 18px);
-  color: rgba(255,255,255,0.68);
+  color: var(--muted);
   max-width: 40ch;
   line-height: 1.6;
 }
-.pfhero .eyebrow { color: rgba(255,255,255,0.55); }
 .pfhero-right {
   display: flex;
   flex-direction: column;
@@ -84,7 +84,7 @@
   font-size: 10px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.45);
+  color: var(--muted);
   margin: 0;
 }
 .pf-filters {
