@@ -36,12 +36,12 @@ function ColeLogo({ height = 34, dark = false }) {
 const SERVICE_LINKS = [
   { href: 'website-design.html', title: 'Web Design' },
   { href: 'seo.html', title: 'SEO & Local Search' },
-  { href: 'ai-apps.html', title: 'AI Web Apps', pill: 'NEW' },
   { href: 'hosting.html', title: 'Hosting + Care Plans' },
   { href: 'branding.html', title: 'Branding' },
   { href: 'ecommerce.html', title: 'E-Commerce' },
   { href: 'wordpress.html', title: 'WordPress Design' },
   { href: 'traditional.html', title: 'Traditional Web Design' },
+  { href: 'ai-apps.html', title: 'AI Studio', pill: 'NEW' },
 ];
 
 /* ============================================================
@@ -58,7 +58,7 @@ const SEARCH_DATA = [
   { title: 'Request a Quote', desc: 'Get a fast, no-obligation project estimate.', category: 'Company', href: 'quote.html' },
   { title: 'Web Design', desc: 'Modern, mobile-first websites built for your business.', category: 'Services', href: 'website-design.html' },
   { title: 'SEO & Local Search', desc: 'Show up when neighbors search for what you sell.', category: 'Services', href: 'seo.html' },
-  { title: 'AI Web Apps', desc: 'Booking, intake, and on-site search powered by AI.', category: 'Services', href: 'ai-apps.html' },
+  { title: 'AI Studio', desc: 'Chatbots, plugins, PWAs, extensions, and custom business tools.', category: 'Services', href: 'ai-apps.html' },
   { title: 'Hosting + Care Plans', desc: 'Backups, security, updates — and a human to email.', category: 'Services', href: 'hosting.html' },
   { title: 'Branding', desc: 'Logos, color, print — so the site fits the rest of you.', category: 'Services', href: 'branding.html' },
   { title: 'E-Commerce', desc: 'WooCommerce and Shopify storefronts that ship.', category: 'Services', href: 'ecommerce.html' },
@@ -272,13 +272,6 @@ function Header() {
                   <div className="nav-dd-desc">Show up when neighbors search for what you sell.</div>
                 </div>
               </a>
-              <a href="ai-apps.html" className="nav-dd-item">
-                <span className="nav-dd-glyph navy">⌘</span>
-                <div>
-                  <div className="nav-dd-title">AI Web Apps <span className="nav-dd-pill">NEW</span></div>
-                  <div className="nav-dd-desc">Booking, intake, on-site search powered by AI.</div>
-                </div>
-              </a>
               <a href="hosting.html" className="nav-dd-item">
                 <span className="nav-dd-glyph green">↻</span>
                 <div>
@@ -298,6 +291,13 @@ function Header() {
                 <div>
                   <div className="nav-dd-title">E-Commerce</div>
                   <div className="nav-dd-desc">WooCommerce &amp; Shopify storefronts that ship.</div>
+                </div>
+              </a>
+              <a href="ai-apps.html" className="nav-dd-item">
+                <span className="nav-dd-glyph navy">⌘</span>
+                <div>
+                  <div className="nav-dd-title">AI Studio <span className="nav-dd-pill">NEW</span></div>
+                  <div className="nav-dd-desc">Chatbots, plugins, PWAs, extensions, and custom business tools.</div>
                 </div>
               </a>
             </div>
