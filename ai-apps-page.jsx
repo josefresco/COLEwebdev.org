@@ -102,8 +102,10 @@ function NeuralCanvas() {
     let lastSignal = 0;
 
     function resize() {
-      canvas.width = canvas.offsetWidth;
-      canvas.height = canvas.offsetHeight;
+      const p = canvas.parentElement;
+      const r = p.getBoundingClientRect();
+      canvas.width  = Math.round(r.width)  || p.offsetWidth  || 800;
+      canvas.height = Math.round(r.height) || p.offsetHeight || 400;
     }
 
     function mkNodes() {
@@ -223,9 +225,12 @@ function NeuralCanvas() {
       animId = requestAnimationFrame(draw);
     }
 
-    resize();
-    mkNodes();
-    animId = requestAnimationFrame(draw);
+    // Defer to next rAF so layout is complete before we read dimensions
+    animId = requestAnimationFrame(() => {
+      resize();
+      mkNodes();
+      animId = requestAnimationFrame(draw);
+    });
 
     const ro = new ResizeObserver(() => { resize(); mkNodes(); });
     ro.observe(canvas.parentElement);
