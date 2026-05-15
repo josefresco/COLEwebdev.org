@@ -92,13 +92,13 @@ function NeuralCanvas() {
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
 
-    const NODE_COUNT = 58;
-    const MAX_DIST = 155;
-    const SIGNAL_INTERVAL = 1800; // ms between new signals
+    const NODE_COUNT = 65;
+    const MAX_DIST = 180;
+    const SIGNAL_INTERVAL = 1600;
 
     let animId;
     let nodes = [];
-    let signals = []; // traveling data pulses along edges
+    let signals = [];
     let lastSignal = 0;
 
     function resize() {
@@ -112,115 +112,119 @@ function NeuralCanvas() {
       nodes = Array.from({ length: NODE_COUNT }, () => ({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 0.35,
-        vy: (Math.random() - 0.5) * 0.35,
-        r: Math.random() * 1.4 + 0.8,
+        vx: (Math.random() - 0.5) * 0.4,
+        vy: (Math.random() - 0.5) * 0.4,
+        r: Math.random() * 2.5 + 1.5,
         phase: Math.random() * Math.PI * 2,
-        speed: 0.018 + Math.random() * 0.018,
-        bright: Math.random() > 0.82,
+        speed: 0.02 + Math.random() * 0.02,
+        bright: Math.random() > 0.78,
       }));
     }
 
     function spawnSignal(now) {
-      // pick a random edge that's currently within range
       const candidates = [];
       for (let i = 0; i < nodes.length; i++) {
         for (let j = i + 1; j < nodes.length; j++) {
           const dx = nodes[i].x - nodes[j].x;
           const dy = nodes[i].y - nodes[j].y;
-          if (Math.sqrt(dx * dx + dy * dy) < MAX_DIST) candidates.push([i, j]);
+          if (dx * dx + dy * dy < MAX_DIST * MAX_DIST) candidates.push([i, j]);
         }
       }
       if (!candidates.length) return;
       const [a, b] = candidates[Math.floor(Math.random() * candidates.length)];
-      signals.push({ from: a, to: b, t: 0, speed: 0.012 + Math.random() * 0.014 });
+      signals.push({ from: a, to: b, t: 0, speed: 0.014 + Math.random() * 0.014 });
     }
 
     function draw(now) {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      try {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      // Connections
-      for (let i = 0; i < nodes.length; i++) {
-        const ni = nodes[i];
-        for (let j = i + 1; j < nodes.length; j++) {
-          const nj = nodes[j];
-          const dx = ni.x - nj.x;
-          const dy = ni.y - nj.y;
-          const dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < MAX_DIST) {
-            const a = (1 - dist / MAX_DIST) * 0.28;
-            ctx.strokeStyle = `rgba(123,192,67,${a})`;
-            ctx.lineWidth = 0.65;
-            ctx.beginPath();
-            ctx.moveTo(ni.x, ni.y);
-            ctx.lineTo(nj.x, nj.y);
-            ctx.stroke();
+        // Connections
+        for (let i = 0; i < nodes.length; i++) {
+          const ni = nodes[i];
+          for (let j = i + 1; j < nodes.length; j++) {
+            const nj = nodes[j];
+            const dx = ni.x - nj.x;
+            const dy = ni.y - nj.y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < MAX_DIST) {
+              const a = (1 - dist / MAX_DIST) * 0.5;
+              ctx.strokeStyle = `rgba(123,192,67,${a})`;
+              ctx.lineWidth = 0.9;
+              ctx.beginPath();
+              ctx.moveTo(ni.x, ni.y);
+              ctx.lineTo(nj.x, nj.y);
+              ctx.stroke();
+            }
           }
         }
-      }
 
-      // Data pulse signals
-      if (now - lastSignal > SIGNAL_INTERVAL) { spawnSignal(now); lastSignal = now; }
-      signals = signals.filter(s => s.t <= 1);
-      for (const s of signals) {
-        s.t += s.speed;
-        const from = nodes[s.from];
-        const to = nodes[s.to];
-        if (!from || !to) continue;
-        const px = from.x + (to.x - from.x) * s.t;
-        const py = from.y + (to.y - from.y) * s.t;
-        // trail
-        const trailLen = 0.18;
-        const t0 = Math.max(0, s.t - trailLen);
-        const tx = from.x + (to.x - from.x) * t0;
-        const ty = from.y + (to.y - from.y) * t0;
-        const grad = ctx.createLinearGradient(tx, ty, px, py);
-        grad.addColorStop(0, 'rgba(123,192,67,0)');
-        grad.addColorStop(1, 'rgba(123,192,67,0.85)');
-        ctx.strokeStyle = grad;
-        ctx.lineWidth = 1.4;
-        ctx.beginPath();
-        ctx.moveTo(tx, ty);
-        ctx.lineTo(px, py);
-        ctx.stroke();
-        // dot
-        const grd = ctx.createRadialGradient(px, py, 0, px, py, 5);
-        grd.addColorStop(0, 'rgba(180,255,100,0.95)');
-        grd.addColorStop(1, 'rgba(123,192,67,0)');
-        ctx.fillStyle = grd;
-        ctx.beginPath();
-        ctx.arc(px, py, 5, 0, Math.PI * 2);
-        ctx.fill();
-      }
-
-      // Nodes
-      for (const n of nodes) {
-        n.x += n.vx;
-        n.y += n.vy;
-        n.phase += n.speed;
-        if (n.x < 0) n.x = canvas.width;
-        if (n.x > canvas.width) n.x = 0;
-        if (n.y < 0) n.y = canvas.height;
-        if (n.y > canvas.height) n.y = 0;
-
-        const pulse = 0.55 + Math.sin(n.phase) * 0.28;
-        const alpha = (n.bright ? 0.92 : 0.55) * pulse;
-
-        if (n.bright) {
-          const g = ctx.createRadialGradient(n.x, n.y, 0, n.x, n.y, n.r * 7);
-          g.addColorStop(0, `rgba(123,192,67,${0.22 * pulse})`);
-          g.addColorStop(1, 'rgba(123,192,67,0)');
-          ctx.fillStyle = g;
+        // Data pulse signals
+        if (now - lastSignal > SIGNAL_INTERVAL) { spawnSignal(now); lastSignal = now; }
+        signals = signals.filter(s => s.t <= 1);
+        for (const s of signals) {
+          s.t += s.speed;
+          const from = nodes[s.from];
+          const to   = nodes[s.to];
+          if (!from || !to) continue;
+          const px = from.x + (to.x - from.x) * s.t;
+          const py = from.y + (to.y - from.y) * s.t;
+          const trailLen = 0.2;
+          const t0 = Math.max(0, s.t - trailLen);
+          const tx = from.x + (to.x - from.x) * t0;
+          const ty = from.y + (to.y - from.y) * t0;
+          // Avoid zero-length gradient (degenerate case at t=0)
+          if (Math.abs(px - tx) > 0.5 || Math.abs(py - ty) > 0.5) {
+            const grad = ctx.createLinearGradient(tx, ty, px, py);
+            grad.addColorStop(0, 'rgba(123,192,67,0)');
+            grad.addColorStop(1, 'rgba(123,192,67,0.9)');
+            ctx.strokeStyle = grad;
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.moveTo(tx, ty);
+            ctx.lineTo(px, py);
+            ctx.stroke();
+          }
+          // Leading dot
+          const grd = ctx.createRadialGradient(px, py, 0, px, py, 6);
+          grd.addColorStop(0, 'rgba(200,255,120,1)');
+          grd.addColorStop(1, 'rgba(123,192,67,0)');
+          ctx.fillStyle = grd;
           ctx.beginPath();
-          ctx.arc(n.x, n.y, n.r * 7, 0, Math.PI * 2);
+          ctx.arc(px, py, 6, 0, Math.PI * 2);
           ctx.fill();
         }
 
-        ctx.fillStyle = `rgba(123,192,67,${alpha})`;
-        ctx.beginPath();
-        ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
-        ctx.fill();
-      }
+        // Nodes
+        for (const n of nodes) {
+          n.x += n.vx;
+          n.y += n.vy;
+          n.phase += n.speed;
+          if (n.x < 0) n.x = canvas.width;
+          if (n.x > canvas.width) n.x = 0;
+          if (n.y < 0) n.y = canvas.height;
+          if (n.y > canvas.height) n.y = 0;
+
+          const pulse = 0.6 + Math.sin(n.phase) * 0.3;
+          const alpha = (n.bright ? 1.0 : 0.7) * pulse;
+
+          if (n.bright) {
+            const glowR = n.r * 9;
+            const g = ctx.createRadialGradient(n.x, n.y, 0, n.x, n.y, glowR);
+            g.addColorStop(0, `rgba(123,192,67,${0.35 * pulse})`);
+            g.addColorStop(1, 'rgba(123,192,67,0)');
+            ctx.fillStyle = g;
+            ctx.beginPath();
+            ctx.arc(n.x, n.y, glowR, 0, Math.PI * 2);
+            ctx.fill();
+          }
+
+          ctx.fillStyle = `rgba(180,230,100,${alpha})`;
+          ctx.beginPath();
+          ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
+          ctx.fill();
+        }
+      } catch (e) { /* keep loop alive on any draw error */ }
 
       animId = requestAnimationFrame(draw);
     }
