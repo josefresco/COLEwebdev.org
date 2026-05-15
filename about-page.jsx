@@ -36,7 +36,7 @@ function AboutPage() {
           <div className="shell">
             <span className="eyebrow ab-eyebrow">About Us</span>
             <h1 className="ab-hero-hl">
-              Cape Cod's web team, <em>since 2006.</em>
+              Cape Cod's top web team, <em>since 2006.</em>
             </h1>
             <p className="ab-hero-sub">
               A husband-and-wife studio based in Eastham, MA — building websites for small businesses, nonprofits, and communities across the Outer Cape and beyond for over two decades.
