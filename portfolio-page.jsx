@@ -384,6 +384,8 @@ function PortfolioPage() {
               <p className="pfhero-num">700<sup>+</sup></p>
               <p className="pfhero-sub">
                 Sites launched for small businesses on Cape Cod &amp; the Islands since 2006.
+                The projects below are a sampling — our complete portfolio spans every
+                industry, budget, and build type we've worked in.
               </p>
             </div>
             <div className="pfhero-right">
