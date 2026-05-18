@@ -50,6 +50,7 @@ function BrandingPage() {
 
       {/* Hero */}
       <div className="br-hero">
+        <img className="br-hero-img" src="assets/branding-hero.jpg" alt="" aria-hidden="true" />
         <div className="br-hero-bg" aria-hidden="true" />
         <div className="br-hero-content">
           <div className="shell">

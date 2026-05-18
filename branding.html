@@ -32,13 +32,22 @@
   display: flex;
   align-items: center;
 }
+.br-hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+  display: block;
+}
 .br-hero-bg {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 80% 60% at 110% -10%, rgba(242,107,31,0.40), transparent 55%),
-    radial-gradient(ellipse 50% 60% at -10% 110%, rgba(255,199,154,0.15), transparent 55%),
-    linear-gradient(150deg, #1A0E06 0%, #2A1508 50%, #1C0E05 100%);
+    radial-gradient(ellipse 80% 60% at 110% -10%, rgba(242,107,31,0.35), transparent 55%),
+    radial-gradient(ellipse 50% 60% at -10% 110%, rgba(255,199,154,0.12), transparent 55%),
+    linear-gradient(150deg, rgba(26,14,6,0.91) 0%, rgba(42,21,8,0.88) 50%, rgba(28,14,5,0.91) 100%);
 }
 .br-hero-bg::before {
   content: '';
