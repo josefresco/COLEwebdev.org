@@ -94,6 +94,7 @@ function TraditionalPage() {
 
       {/* Hero */}
       <div className="tr-hero">
+        <img className="tr-hero-img" src="assets/traditional-hero.jpg" alt="" aria-hidden="true" />
         <div className="tr-hero-bg" aria-hidden="true" />
         <div className="tr-hero-content">
           <div className="shell">
