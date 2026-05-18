@@ -118,6 +118,7 @@ function ConsultingPage() {
 
       {/* Hero */}
       <div className="cn-hero">
+        <img className="cn-hero-img" src="assets/consulting-hero.jpg" alt="" aria-hidden="true" />
         <div className="cn-hero-bg" aria-hidden="true" />
         <div className="cn-hero-content">
           <div className="shell">
