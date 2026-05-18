@@ -54,7 +54,8 @@ const SEARCH_DATA = [
   { title: 'Portfolio', desc: 'Recent websites and client work.', category: 'Company', href: 'portfolio.html' },
   { title: 'About Us', desc: 'Our team, story, and community roots.', category: 'Company', href: 'about.html' },
   { title: 'Our Process', desc: 'How we scope, build, and hand off every project.', category: 'Company', href: 'process.html' },
-  { title: 'News', desc: 'Web design tips, updates, and articles.', category: 'Company', href: 'news.html' },
+  { title: 'News & Blog', desc: 'Web design tips, updates, and articles.', category: 'Company', href: 'news.html' },
+  { title: 'Social News', desc: 'Live updates from our Bluesky feed.', category: 'Company', href: 'social-news.html' },
   { title: 'Request a Quote', desc: 'Get a fast, no-obligation project estimate.', category: 'Company', href: 'quote.html' },
   { title: 'Web Design', desc: 'Modern, mobile-first websites built for your business.', category: 'Services', href: 'website-design.html' },
   { title: 'SEO & Local Search', desc: 'Show up when neighbors search for what you sell.', category: 'Services', href: 'seo.html' },
@@ -330,7 +331,25 @@ function Header() {
             </div>
           </div>
           <a className={'nav-link' + on('whitepapers.html')} href="whitepapers.html">Whitepapers</a>
-          <a className={'nav-link' + on('news.html')} href="news.html">News</a>
+          <div className="nav-item-dropdown">
+            <a className={'nav-link' + (on('news.html') || on('social-news.html'))} href="news.html">News <span className="caret">▾</span></a>
+            <div className="nav-dropdown nav-dropdown--sm" role="menu">
+              <a href="news.html" className="nav-dd-item">
+                <span className="nav-dd-glyph green">◇</span>
+                <div>
+                  <div className="nav-dd-title">News &amp; Blog</div>
+                  <div className="nav-dd-desc">Web design tips, updates, and articles.</div>
+                </div>
+              </a>
+              <a href="social-news.html" className="nav-dd-item">
+                <span className="nav-dd-glyph navy">✦</span>
+                <div>
+                  <div className="nav-dd-title">Social News</div>
+                  <div className="nav-dd-desc">Live updates from our Bluesky feed.</div>
+                </div>
+              </a>
+            </div>
+          </div>
           <a className={'nav-link' + on('contact.html')} href="contact.html">Contact</a>
         </div>
         <div className="nav-cta">
@@ -390,7 +409,8 @@ function Header() {
               <a className="mobile-nav-link" href="process.html" onClick={close}>Our Process</a>
               <a className="mobile-nav-link" href="newsletter.html" onClick={close}>Newsletter Archive</a>
               <a className="mobile-nav-link" href="whitepapers.html" onClick={close}>Whitepapers</a>
-              <a className="mobile-nav-link" href="news.html" onClick={close}>News</a>
+              <a className="mobile-nav-link" href="news.html" onClick={close}>News &amp; Blog</a>
+              <a className="mobile-nav-link" href="social-news.html" onClick={close}>Social News</a>
               <a className="mobile-nav-link" href="contact.html" onClick={close}>Contact</a>
             </nav>
             <div className="mobile-menu-cta">

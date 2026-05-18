@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Social News — COLEwebdev · Cape Cod Web Design</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<meta name="description" content="Live updates from the COLEwebdev team on Bluesky — web design tips, Cape Cod small business news, and what we're working on." />
+<link rel="canonical" href="https://colewebdev.org/social-news.html" />
+<link rel="stylesheet" href="styles.css" />
+<style>
+/* ── Social News page ── */
+
+.sn-intro {
+  padding: 72px 0 40px;
+  background: var(--paper);
+}
+.sn-intro-hl {
+  font-family: var(--serif);
+  font-size: clamp(48px, 7vw, 96px);
+  line-height: 1;
+  margin: 14px 0 16px;
+  color: var(--ink);
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: -2px;
+}
+.sn-intro-sub {
+  font-size: 16px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+.sn-follow-link {
+  color: var(--brand-blue);
+  font-weight: 500;
+  text-decoration: none;
+}
+.sn-follow-link:hover { text-decoration: underline; }
+
+.sn-main {
+  padding: 20px 0 var(--pad-section);
+  background: var(--paper);
+}
+.sn-feed {
+  max-width: 640px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Post card */
+.sn-post {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: var(--r-xl);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: box-shadow 0.2s ease;
+}
+.sn-post:hover { box-shadow: var(--shadow-md); }
+
+.sn-repost-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: -4px;
+}
+
+.sn-post-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.sn-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 1px solid var(--line);
+}
+.sn-author { flex: 1; min-width: 0; }
+.sn-author-name {
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--ink);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.sn-author-handle {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+.sn-time {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+.sn-post-text {
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--ink);
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* Embed: images */
+.sn-embed-imgs {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 3px;
+  border-radius: var(--r-md);
+  overflow: hidden;
+}
+.sn-embed-img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+/* Embed: link card */
+.sn-embed-link {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  overflow: hidden;
+  text-decoration: none;
+  transition: border-color 0.15s;
+}
+.sn-embed-link:hover { border-color: var(--brand-blue); }
+.sn-embed-link-img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  display: block;
+}
+.sn-embed-link-body {
+  padding: 12px 14px;
+  background: var(--paper-2);
+}
+.sn-embed-link-title {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--ink);
+  margin-bottom: 4px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.sn-embed-link-desc {
+  font-size: 12.5px;
+  color: var(--muted);
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 4px;
+}
+.sn-embed-link-uri {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* Post footer */
+.sn-post-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+}
+.sn-stats { display: flex; gap: 16px; }
+.sn-stat {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0.05em;
+}
+.sn-view-link {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--brand-blue);
+  text-decoration: none;
+}
+.sn-view-link:hover { text-decoration: underline; }
+
+/* Loading / empty */
+.sn-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 80px 0;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.sn-state-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--brand-green);
+  animation: sn-pulse 1.2s ease-in-out infinite;
+}
+@keyframes sn-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.7); }
+}
+
+.sn-load-more {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+@media (max-width: 560px) {
+  .sn-post { padding: 18px; }
+  .sn-intro-hl { letter-spacing: -1px; }
+}
+</style>
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="COLEwebdev" />
+<meta property="og:title" content="Social News — COLEwebdev · Cape Cod Web Design" />
+<meta property="og:description" content="Live updates from the COLEwebdev team on Bluesky — web design tips, Cape Cod small business news, and what we're working on." />
+<meta property="og:url" content="https://colewebdev.org/social-news.html" />
+<meta property="og:image" content="https://colewebdev.org/assets/josiah-chromebook-iphone.png" />
+</head>
+<body>
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="parts-hero.jsx"></script>
+<script type="text/babel" src="parts-services.jsx"></script>
+<script type="text/babel" src="parts-rest.jsx"></script>
+<script type="text/babel" src="social-news-page.jsx"></script>
+</body>
+</html>
