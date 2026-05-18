@@ -305,7 +305,7 @@ function Header() {
           </div>
           <a className={'nav-link' + on('portfolio.html')} href="portfolio.html">Portfolio</a>
           <div className="nav-item-dropdown">
-            <a className={'nav-link' + (on('about.html') || on('process.html') || on('newsletter.html'))} href="about.html">About Us <span className="caret">▾</span></a>
+            <a className={'nav-link' + (on('about.html') || on('process.html'))} href="about.html">About Us <span className="caret">▾</span></a>
             <div className="nav-dropdown nav-dropdown--sm" role="menu">
               <a href="about.html" className="nav-dd-item">
                 <span className="nav-dd-glyph green">◇</span>
@@ -321,18 +321,11 @@ function Header() {
                   <div className="nav-dd-desc">How we scope, build, and hand off every project.</div>
                 </div>
               </a>
-              <a href="newsletter.html" className="nav-dd-item">
-                <span className="nav-dd-glyph orange">↻</span>
-                <div>
-                  <div className="nav-dd-title">Newsletter Archive</div>
-                  <div className="nav-dd-desc">Browse every issue of the COLEwebdev newsletter.</div>
-                </div>
-              </a>
             </div>
           </div>
           <a className={'nav-link' + on('whitepapers.html')} href="whitepapers.html">Whitepapers</a>
           <div className="nav-item-dropdown">
-            <a className={'nav-link' + (on('news.html') || on('social-news.html'))} href="news.html">News <span className="caret">▾</span></a>
+            <a className={'nav-link' + (on('news.html') || on('social-news.html') || on('newsletter.html'))} href="news.html">News <span className="caret">▾</span></a>
             <div className="nav-dropdown nav-dropdown--sm" role="menu">
               <a href="news.html" className="nav-dd-item">
                 <span className="nav-dd-glyph green">◇</span>
@@ -346,6 +339,13 @@ function Header() {
                 <div>
                   <div className="nav-dd-title">Social News</div>
                   <div className="nav-dd-desc">Live updates from our Bluesky feed.</div>
+                </div>
+              </a>
+              <a href="newsletter.html" className="nav-dd-item">
+                <span className="nav-dd-glyph orange">↻</span>
+                <div>
+                  <div className="nav-dd-title">Newsletter Archive</div>
+                  <div className="nav-dd-desc">Browse every issue of the COLEwebdev newsletter.</div>
                 </div>
               </a>
             </div>
