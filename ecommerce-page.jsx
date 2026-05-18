@@ -87,10 +87,28 @@ const EC_PORTFOLIO = [
     href: 'https://www.idletimesbikes.com/',
   },
   {
-    title: "Cuffy's of Cape Cod",
+    title: 'Black River Caviar',
     meta: 'Cape Cod, MA',
-    img: 'https://www.colewebdev.com/wp-content/uploads/2018/09/cuffys-cape-cod-website-design.jpg',
-    href: 'https://cuffys.com/',
+    img: 'https://www.colewebdev.com/wp-content/uploads/2024/04/black-river-caviar-website-design-cape-cod-e1713366172573.jpg',
+    href: 'https://www.blackrivercaviar.com/',
+  },
+  {
+    title: 'Bird Watchers General Store',
+    meta: 'Cape Cod, MA',
+    img: 'https://www.colewebdev.com/wp-content/uploads/2024/04/cape-cod-ecommerce-website-design-bwgs.jpg',
+    href: 'https://www.birdwatchersgeneralstore.com/',
+  },
+  {
+    title: 'Truro Vineyards',
+    meta: 'Truro, MA',
+    img: 'https://www.colewebdev.com/wp-content/uploads/2021/05/truro-vineyards-website-design-cape-cod-xsmall.jpg',
+    href: 'https://trurovineyardsofcapecod.com/',
+  },
+  {
+    title: 'Sea Light Photos',
+    meta: 'Cape Cod, MA',
+    img: 'https://www.colewebdev.com/wp-content/uploads/2024/05/cape-cod-website-design-build-photographer-smll.jpg',
+    href: 'https://sealightphotos.com/',
   },
 ];
 
