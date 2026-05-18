@@ -73,6 +73,27 @@ const EC_PAYMENTS = [
   },
 ];
 
+const EC_PORTFOLIO = [
+  {
+    title: 'The Cape Cod Towel Co.',
+    meta: 'Cape Cod, MA',
+    img: 'https://www.colewebdev.com/wp-content/uploads/2024/07/cape-cod-towel-company-website-design-xsmll.jpg',
+    href: 'https://capecodtowelco.com/',
+  },
+  {
+    title: 'Idle Times Bike Shop',
+    meta: 'Outer Cape, MA',
+    img: 'https://www.colewebdev.com/wp-content/uploads/2024/11/idle-times-bike-shop-website-revamp-cape-cod-2024-smll.jpg',
+    href: 'https://www.idletimesbikes.com/',
+  },
+  {
+    title: "Cuffy's of Cape Cod",
+    meta: 'Cape Cod, MA',
+    img: 'https://www.colewebdev.com/wp-content/uploads/2018/09/cuffys-cape-cod-website-design.jpg',
+    href: 'https://cuffys.com/',
+  },
+];
+
 const EC_STATS = [
   { num: '60%+', label: 'of e-commerce purchases now happen on a mobile device' },
   { num: '$6.3T', label: 'global e-commerce revenue projected for 2024 — small businesses are part of it' },
@@ -190,6 +211,30 @@ function EcommercePage() {
           ))}
         </div>
       </div>
+
+      {/* Portfolio examples */}
+      <section className="ec-portfolio">
+        <div className="shell">
+          <div className="ec-portfolio-hd">
+            <span className="eyebrow">Our work</span>
+            <h2 className="ec-portfolio-hl">E-commerce sites we've built.</h2>
+          </div>
+          <div className="ec-portfolio-grid">
+            {EC_PORTFOLIO.map(p => (
+              <a key={p.href} href={p.href} target="_blank" rel="noopener noreferrer" className="ec-pf-card">
+                <div className="ec-pf-thumb">
+                  <img src={p.img} alt={p.title} loading="lazy" />
+                </div>
+                <div className="ec-pf-body">
+                  <div className="ec-pf-title">{p.title}</div>
+                  <div className="ec-pf-loc">{p.meta}</div>
+                  <span className="ec-pf-link">View site →</span>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* CTA */}
       <section className="ec-cta">
