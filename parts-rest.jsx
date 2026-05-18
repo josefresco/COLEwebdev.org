@@ -398,6 +398,13 @@ function NewsletterBanner() {
 function Footer() {
   return (
     <footer className="footer">
+      <svg className="footer-waves" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 560" preserveAspectRatio="xMidYMid slice">
+        <path d="M0,160 C240,110 480,210 720,160 C960,110 1200,210 1440,160" stroke="rgba(255,255,255,0.07)" strokeWidth="1.5" fill="none"/>
+        <path d="M-80,300 C180,250 480,360 760,300 C1040,245 1260,350 1520,300" stroke="rgba(255,255,255,0.05)" strokeWidth="1.2" fill="none"/>
+        <path d="M0,400 C300,360 600,440 900,400 C1200,360 1360,430 1440,400" stroke="rgba(255,255,255,0.04)" strokeWidth="1" fill="none"/>
+        <path d="M-160,80 C120,50 400,120 680,80 C960,40 1200,120 1440,85" stroke="rgba(255,255,255,0.035)" strokeWidth="1.5" fill="none"/>
+        <path d="M0,490 C200,470 440,510 680,490 C920,470 1160,510 1440,490" stroke="rgba(255,255,255,0.03)" strokeWidth="0.8" fill="none"/>
+      </svg>
       <div className="shell">
         <div className="footer-grid">
           <div className="footer-brand">
