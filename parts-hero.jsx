@@ -42,6 +42,7 @@ const SERVICE_LINKS = [
   { href: 'wordpress.html', title: 'WordPress Design' },
   { href: 'traditional.html', title: 'Traditional Web Design' },
   { href: 'ai-apps.html', title: 'AI Studio', pill: 'NEW' },
+  { href: 'consulting.html', title: 'Consulting' },
 ];
 
 /* ============================================================
@@ -60,6 +61,7 @@ const SEARCH_DATA = [
   { title: 'Web Design', desc: 'Modern, mobile-first websites built for your business.', category: 'Services', href: 'website-design.html' },
   { title: 'SEO & Local Search', desc: 'Show up when neighbors search for what you sell.', category: 'Services', href: 'seo.html' },
   { title: 'AI Studio', desc: 'Chatbots, plugins, PWAs, extensions, and custom business tools.', category: 'Services', href: 'ai-apps.html' },
+  { title: 'Consulting', desc: 'Website strategy, audits, business advice, and training.', category: 'Services', href: 'consulting.html' },
   { title: 'Hosting + Care Plans', desc: 'Backups, security, updates — and a human to email.', category: 'Services', href: 'hosting.html' },
   { title: 'Branding', desc: 'Logos, color, print — so the site fits the rest of you.', category: 'Services', href: 'branding.html' },
   { title: 'E-Commerce', desc: 'WooCommerce and Shopify storefronts that ship.', category: 'Services', href: 'ecommerce.html' },
@@ -299,6 +301,13 @@ function Header() {
                 <div>
                   <div className="nav-dd-title">AI Studio <span className="nav-dd-pill">NEW</span></div>
                   <div className="nav-dd-desc">Chatbots, plugins, PWAs, extensions, and custom business tools.</div>
+                </div>
+              </a>
+              <a href="consulting.html" className="nav-dd-item">
+                <span className="nav-dd-glyph green">◇</span>
+                <div>
+                  <div className="nav-dd-title">Consulting</div>
+                  <div className="nav-dd-desc">Website strategy, audits, business advice, and training.</div>
                 </div>
               </a>
             </div>
