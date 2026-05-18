@@ -1874,6 +1874,8 @@ p, li {
   transform: translateY(-1px);
 }
 
+.nl-banner + .footer { margin-top: 0; }
+
 /* ── Newsletter Banner ── */
 .nl-banner {
   background: linear-gradient(135deg, #061828 0%, #0E2A4A 100%);
