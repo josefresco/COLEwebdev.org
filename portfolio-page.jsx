@@ -13,7 +13,7 @@ const PROJECTS = [
   /* ── With real images ──────────────────────────────────── */
   {
     title: 'Cape Cod Aquatics',
-    meta: 'Cape Cod, MA · 2026',
+    meta: 'South Yarmouth, MA · 2026',
     cat: 'wordpress',
     tags: [{ label: 'NEW LAUNCH', cls: 'tag--navy' }, { label: 'WELLNESS' }, { label: 'WORDPRESS' }],
     img: 'https://www.colewebdev.com/wp-content/uploads/2025/10/cape-cod-aquatics-website-design-build-small.jpg',
@@ -77,7 +77,7 @@ const PROJECTS = [
   },
   {
     title: 'Idle Times Bike Shop',
-    meta: 'Outer Cape, MA',
+    meta: 'Wellfleet, MA',
     cat: 'ecommerce',
     tags: [{ label: 'E-COMMERCE', cls: 'tag--orange' }, { label: 'RETAIL' }],
     img: 'https://www.colewebdev.com/wp-content/uploads/2024/11/idle-times-bike-shop-website-revamp-cape-cod-2024-smll.jpg',
@@ -241,7 +241,7 @@ const PROJECTS = [
   },
   {
     title: 'APCC',
-    meta: 'Cape Cod, MA',
+    meta: 'Orleans, MA',
     cat: 'nonprofit',
     tags: [{ label: 'NONPROFIT', cls: 'tag--green' }, { label: 'ENVIRONMENT' }],
     img: 'https://www.colewebdev.com/wp-content/uploads/2020/07/apcc-new-website-launch-design-cape-cod.jpg',
@@ -332,7 +332,7 @@ function PfCard({ project, index }) {
     <article className={`pf-card${visible ? ' in' : ''}`}>
       <div className="pf-thumb">
         {project.img
-          ? <img src={project.img} alt={project.title} loading="lazy" />
+          ? <img src={project.img} alt={project.title + (project.meta ? ' — web design ' + project.meta : '')} loading="lazy" />
           : (
             <div className={`pf-ph ${PH_CLASS[project.cat] || 'ph-wp'}`}>
               <span className="pf-init">{getInitials(project.title)}</span>

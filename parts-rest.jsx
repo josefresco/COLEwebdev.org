@@ -116,7 +116,7 @@ function Portfolio() {
     img: 'https://www.colewebdev.com/wp-content/uploads/2024/11/idle-times-bike-shop-website-revamp-cape-cod-2024-smll.jpg',
     tags: [{ label: 'E-COMMERCE', cls: 'tag--orange' }, { label: 'RETAIL' }],
     title: 'Idle Times Bike Shop',
-    meta: 'Outer Cape, MA',
+    meta: 'Wellfleet, MA',
     href: 'https://www.idletimesbikes.com/',
     cta: 'View site →'
   }];
@@ -438,6 +438,8 @@ function Footer() {
               <li><a href="hosting.html">Hosting + Care</a></li>
               <li><a href="branding.html">Branding</a></li>
               <li><a href="ecommerce.html">E-Commerce</a></li>
+              <li><a href="consulting.html">Consulting</a></li>
+              <li><a href="service-area.html">Service Area</a></li>
             </ul>
           </div>
           <div>

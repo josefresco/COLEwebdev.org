@@ -6,7 +6,8 @@ const SERVICES = [
   { glyph: '↻', color: 'green', title: 'Hosting + Care Plans', desc: 'Backups, security, and updates — with a human to call.' },
   { glyph: '◐', color: 'navy', title: 'E-Commerce', desc: 'Sell online with WooCommerce or Shopify.' },
   { glyph: '✦', color: 'orange', title: 'Branding', desc: 'Logos, color systems, and print that matches your site.' },
-  { glyph: '⌘', color: 'navy', title: 'AI Web Apps', desc: 'Booking, intake, and smart tools built into your site.' },
+  { glyph: '⌘', color: 'navy', title: 'AI Studio', desc: 'Chatbots, booking tools, and custom AI integrations for your site.' },
+  { glyph: '◎', color: 'green', title: 'Consulting', desc: 'Website strategy, audits, and business advice from two Cape Cod founders.' },
 ];
 
 function LocationPage() {

@@ -22,7 +22,7 @@
       "description": "Cape Cod web design, WordPress, e-commerce, SEO, and AI integrations for small businesses and nonprofits."
     },
     {
-      "@type": "ProfessionalService",
+      "@type": ["LocalBusiness", "ProfessionalService"],
       "@id": "https://colewebdev.org/#business",
       "name": "COLEwebdev",
       "url": "https://colewebdev.org/",
@@ -42,15 +42,31 @@
         "latitude": 41.8362,
         "longitude": -69.9774
       },
-      "areaServed": {
-        "@type": "GeoCircle",
-        "geoMidpoint": {
-          "@type": "GeoCoordinates",
-          "latitude": 41.8362,
-          "longitude": -69.9774
-        },
-        "geoRadius": "80000"
-      },
+      "areaServed": [
+        { "@type": "City", "name": "Barnstable", "addressRegion": "MA" },
+        { "@type": "City", "name": "Bourne", "addressRegion": "MA" },
+        { "@type": "City", "name": "Brewster", "addressRegion": "MA" },
+        { "@type": "City", "name": "Chatham", "addressRegion": "MA" },
+        { "@type": "City", "name": "Dennis", "addressRegion": "MA" },
+        { "@type": "City", "name": "Eastham", "addressRegion": "MA" },
+        { "@type": "City", "name": "Falmouth", "addressRegion": "MA" },
+        { "@type": "City", "name": "Harwich", "addressRegion": "MA" },
+        { "@type": "City", "name": "Mashpee", "addressRegion": "MA" },
+        { "@type": "City", "name": "Orleans", "addressRegion": "MA" },
+        { "@type": "City", "name": "Provincetown", "addressRegion": "MA" },
+        { "@type": "City", "name": "Sandwich", "addressRegion": "MA" },
+        { "@type": "City", "name": "Truro", "addressRegion": "MA" },
+        { "@type": "City", "name": "Wellfleet", "addressRegion": "MA" },
+        { "@type": "City", "name": "Yarmouth", "addressRegion": "MA" }
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+          "opens": "09:00",
+          "closes": "17:00"
+        }
+      ],
       "priceRange": "$$",
       "currenciesAccepted": "USD",
       "paymentAccepted": "Check, Credit Card, Bank Transfer",
@@ -71,7 +87,9 @@
       "sameAs": [
         "https://www.facebook.com/colewebdev",
         "https://www.instagram.com/colewebdev",
-        "https://www.linkedin.com/in/josiahcole/"
+        "https://www.linkedin.com/in/josiahcole/",
+        "https://x.com/colewebdev",
+        "https://bsky.app/profile/colewebdev.bsky.social"
       ],
       "aggregateRating": {
         "@type": "AggregateRating",
