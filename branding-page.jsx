@@ -174,6 +174,15 @@ function BrandingPage() {
             <div>
               <h2 className="br-cta-hl">Ready to look the part?</h2>
               <p className="br-cta-sub">Tell us about your business and we'll scope a branding project that fits your goals and your budget.</p>
+              <p className="br-area-note">
+                Serving businesses across all 15 Cape Cod towns.{' '}
+                <a href="service-area.html">See our full service area →</a>
+              </p>
+              <div className="br-related">
+                <span className="br-related-label">Related:</span>
+                <a href="website-design.html" className="br-related-link">Brand done? Now build the site.</a>
+                <a href="ecommerce.html" className="br-related-link">Selling online?</a>
+              </div>
             </div>
             <div className="br-cta-actions">
               <a className="btn btn--accent" href="contact.html">

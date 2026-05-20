@@ -152,6 +152,17 @@
 .sa-town-desc { font-size: 13px; line-height: 1.6; color: var(--ink-2); flex: 1; }
 .sa-town-link { font-size: 12px; color: var(--brand-green); font-weight: 500; }
 
+/* Services */
+.sa-svcs { padding: 80px 0; background: var(--paper-2); border-top: 1px solid var(--line); }
+.sa-svcs-hd { margin-bottom: 40px; }
+.sa-svcs-hl { font-family: var(--serif); font-size: clamp(26px, 3vw, 40px); color: var(--ink); font-weight: 400; margin: 8px 0 0; }
+.sa-svcs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.sa-svc-card { background: white; border: 1px solid var(--line); border-radius: var(--r-xl); padding: 24px 22px; display: flex; flex-direction: column; gap: 10px; text-decoration: none; color: inherit; transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s; }
+.sa-svc-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--brand-green); }
+.sa-svc-glyph { font-size: 22px; color: var(--brand-green); line-height: 1; }
+.sa-svc-title { font-family: var(--serif); font-size: 18px; color: var(--ink); font-weight: 400; }
+.sa-svc-desc { font-size: 13px; color: var(--ink-2); line-height: 1.5; }
+
 /* Beyond */
 .sa-beyond {
   padding: 80px 0;
@@ -245,12 +256,14 @@
 @media (max-width: 960px) {
   .sa-towns-grid { grid-template-columns: repeat(2, 1fr); }
   .sa-beyond-list { grid-template-columns: repeat(2, 1fr); }
+  .sa-svcs-grid { grid-template-columns: repeat(2, 1fr); }
   .sa-why-grid { grid-template-columns: 1fr; gap: 48px; }
   .sa-cta-inner { flex-direction: column; align-items: flex-start; }
 }
 @media (max-width: 560px) {
   .sa-towns-grid { grid-template-columns: 1fr; }
   .sa-beyond-list { grid-template-columns: 1fr; }
+  .sa-svcs-grid { grid-template-columns: 1fr; }
   .sa-hero-actions { flex-direction: column; align-items: flex-start; }
 }
 </style>

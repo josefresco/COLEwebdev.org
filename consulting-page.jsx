@@ -240,6 +240,11 @@ function ConsultingPage() {
           <div>
             <h2 className="cn-cta-hl">Ready to talk through what's next?</h2>
             <p className="cn-cta-sub">The first hour is free. No commitment — just a real conversation with the people who will actually give you straight answers.</p>
+            <div className="cn-related">
+              <span className="cn-related-label">Related:</span>
+              <a href="website-design.html" className="cn-related-link">Ready to build?</a>
+              <a href="seo.html" className="cn-related-link">Want to improve your rankings?</a>
+            </div>
           </div>
           <a className="btn btn--accent" href="contact.html">
             Start a conversation <span className="arrow">→</span>

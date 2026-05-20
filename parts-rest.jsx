@@ -140,7 +140,7 @@ function Portfolio() {
           {items.map((it, i) =>
           <div className={`pf-card ${it.span}`} key={i}>
               <div className={`thumb ${it.t}`}>
-                <img className="thumb-img" src={it.img} alt={it.title} loading="lazy" />
+                <img className="thumb-img" src={it.img} alt={it.title + (it.meta ? ' — web design ' + it.meta : '')} loading="lazy" />
                 <span className="ph-label">[ {it.title.toUpperCase()} ]</span>
               </div>
               <div className="body">
@@ -151,7 +151,12 @@ function Portfolio() {
                 </div>
                 <h4>{it.title}</h4>
                 <div className="row">
-                  <span>{it.meta}</span>
+                  {(() => {
+                    const TH = { 'Hyannis': 'hyannis-web-design.html', 'South Yarmouth': 'yarmouth-web-design.html', 'Wellfleet': 'wellfleet-web-design.html', 'Orleans': 'orleans-web-design.html', 'Truro': 'truro-web-design.html', 'Eastham': 'eastham-web-design.html', 'Provincetown': 'provincetown-web-design.html', 'Falmouth': 'falmouth-web-design.html', 'Dennis': 'dennis-web-design.html' };
+                    const town = (it.meta || '').replace(/,.*$/, '').trim();
+                    const th = TH[town];
+                    return th ? <a href={th} style={{ color: 'var(--muted)', textDecoration: 'none', fontSize: 'inherit' }}>{it.meta}</a> : <span>{it.meta}</span>;
+                  })()}
                   <a href={it.ctaHref || it.href} target="_blank" rel="noopener" style={{ color: 'var(--orange)', textDecoration: 'none' }}>{it.cta}</a>
                 </div>
               </div>

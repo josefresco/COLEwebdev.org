@@ -270,6 +270,15 @@ function TraditionalPage() {
               <p className="tr-cta-sub">
                 The first hour is free. No pitch deck, no commitment — just a conversation about what you need, with people who've been hand-coding sites since 2000.
               </p>
+              <p className="tr-area-note">
+                Serving businesses across all 15 Cape Cod towns.{' '}
+                <a href="service-area.html">See our full service area →</a>
+              </p>
+              <div className="tr-related">
+                <span className="tr-related-label">Related:</span>
+                <a href="website-design.html" className="tr-related-link">See our full design work</a>
+                <a href="wordpress.html" className="tr-related-link">Compare WordPress options</a>
+              </div>
             </div>
             <div className="tr-cta-actions">
               <a className="btn btn--accent" href="contact.html">

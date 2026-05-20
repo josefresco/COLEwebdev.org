@@ -182,6 +182,15 @@ function HostingPage() {
           <div>
             <h2 className="hc-cta-hl">Already have a site with us?</h2>
             <p className="hc-cta-sub">Adding a Care Plan to an existing project takes one conversation.</p>
+            <p className="hc-area-note">
+              Serving businesses across all 15 Cape Cod towns.{' '}
+              <a href="service-area.html">See our full service area →</a>
+            </p>
+            <div className="hc-related">
+              <span className="hc-related-label">Related:</span>
+              <a href="website-design.html" className="hc-related-link">Need a new site too?</a>
+              <a href="consulting.html" className="hc-related-link">Already have a site?</a>
+            </div>
           </div>
           <a className="btn btn--accent" href="contact.html">
             Talk to us <span className="arrow">→</span>

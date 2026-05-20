@@ -345,6 +345,14 @@
   margin: 0;
 }
 
+/* Service area note + related links */
+.hc-area-note { font-size: 13px; color: var(--muted); margin: 8px 0 0; }
+.hc-area-note a { color: var(--brand-green); }
+.hc-related { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--line); }
+.hc-related-label { font-size: 11px; font-family: var(--mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+.hc-related-link { font-size: 13px; color: var(--ink-2); text-decoration: none; }
+.hc-related-link:hover { color: var(--ink); }
+
 /* Responsive */
 @media (max-width: 960px) {
   .hc-includes-grid { grid-template-columns: repeat(2, 1fr); }

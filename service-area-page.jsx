@@ -93,6 +93,32 @@ function ServiceAreaPage() {
         </div>
       </section>
 
+      {/* Services */}
+      <section className="sa-svcs">
+        <div className="shell">
+          <div className="sa-svcs-hd">
+            <span className="eyebrow">What we offer</span>
+            <h2 className="sa-svcs-hl">Everything Cape Cod businesses need online.</h2>
+          </div>
+          <div className="sa-svcs-grid">
+            {[
+              { title: 'Web Design', desc: 'Custom, mobile-first websites built from scratch.', href: 'website-design.html', glyph: '◇' },
+              { title: 'SEO & Local Search', desc: 'Show up in Google when Cape Cod customers search.', href: 'seo.html', glyph: '⚡' },
+              { title: 'E-Commerce', desc: 'Sell online with WooCommerce or Shopify.', href: 'ecommerce.html', glyph: '◐' },
+              { title: 'Branding', desc: 'Logos, color systems, and print that holds together.', href: 'branding.html', glyph: '✦' },
+              { title: 'Hosting + Care Plans', desc: 'Backups, updates, and a human to call.', href: 'hosting.html', glyph: '↻' },
+              { title: 'Consulting', desc: 'Strategy, audits, and advice from two Cape Cod founders.', href: 'consulting.html', glyph: '◎' },
+            ].map(s => (
+              <a key={s.title} href={s.href} className="sa-svc-card">
+                <span className="sa-svc-glyph">{s.glyph}</span>
+                <div className="sa-svc-title">{s.title}</div>
+                <div className="sa-svc-desc">{s.desc}</div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Why local matters */}
       <section className="sa-why">
         <div className="shell sa-why-grid">

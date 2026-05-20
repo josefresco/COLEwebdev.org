@@ -439,6 +439,15 @@ function AiAppsPage() {
               <p className="ai-cta-sub">
                 Tell us what you're trying to automate, improve, or build. We'll tell you what's realistic — and what's still hype.
               </p>
+              <p className="ai-area-note">
+                Serving businesses across all 15 Cape Cod towns.{' '}
+                <a href="service-area.html">See our full service area →</a>
+              </p>
+              <div className="ai-related">
+                <span className="ai-related-label">Related:</span>
+                <a href="website-design.html" className="ai-related-link">Start with a strong website foundation.</a>
+                <a href="consulting.html" className="ai-related-link">Not sure what you need?</a>
+              </div>
             </div>
             <div className="ai-cta-actions">
               <a className="btn btn--accent" href="contact.html">

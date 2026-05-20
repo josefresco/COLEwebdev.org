@@ -261,6 +261,15 @@ function EcommercePage() {
           <div>
             <h2 className="ec-cta-hl">Ready to start selling online?</h2>
             <p className="ec-cta-sub">Tell us what you sell and we'll recommend the right platform and scope a project from there.</p>
+            <p className="ec-area-note">
+              Serving businesses across all 15 Cape Cod towns.{' '}
+              <a href="service-area.html">See our full service area →</a>
+            </p>
+            <div className="ec-related">
+              <span className="ec-related-label">Related:</span>
+              <a href="branding.html" className="ec-related-link">Need a brand that matches?</a>
+              <a href="seo.html" className="ec-related-link">Get found on Google.</a>
+            </div>
           </div>
           <a className="btn btn--accent" href="contact.html">
             Start a conversation <span className="arrow">→</span>

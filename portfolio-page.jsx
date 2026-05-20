@@ -312,6 +312,35 @@ const PH_CLASS = {
   services:    'ph-sv',
 };
 
+const TOWN_HREFS = {
+  'Barnstable': 'hyannis-web-design.html',
+  'Hyannis': 'hyannis-web-design.html',
+  'Falmouth': 'falmouth-web-design.html',
+  'Chatham': 'chatham-web-design.html',
+  'Dennis': 'dennis-web-design.html',
+  'Harwich': 'harwich-web-design.html',
+  'Brewster': 'brewster-web-design.html',
+  'Yarmouth': 'yarmouth-web-design.html',
+  'Yarmouth Port': 'yarmouth-web-design.html',
+  'South Yarmouth': 'yarmouth-web-design.html',
+  'Sandwich': 'sandwich-web-design.html',
+  'Bourne': 'bourne-web-design.html',
+  'Mashpee': 'mashpee-web-design.html',
+  'Truro': 'truro-web-design.html',
+  'Wellfleet': 'wellfleet-web-design.html',
+  'South Wellfleet': 'wellfleet-web-design.html',
+  'Eastham': 'eastham-web-design.html',
+  'Orleans': 'orleans-web-design.html',
+  'Provincetown': 'provincetown-web-design.html',
+  'Cape Cod': 'cape-cod-web-design.html',
+};
+
+function townHref(meta) {
+  if (!meta) return null;
+  const town = meta.replace(/,.*$/, '').trim();
+  return TOWN_HREFS[town] || null;
+}
+
 function getInitials(title) {
   const words = title.replace(/[^a-zA-Z\s]/g, '').split(/\s+/).filter(Boolean);
   if (words.length >= 2) return words[0][0].toUpperCase() + words[1][0].toUpperCase();
@@ -347,7 +376,12 @@ function PfCard({ project, index }) {
           ))}
         </div>
         <h3 className="pf-title">{project.title}</h3>
-        {project.meta && <div className="pf-loc">{project.meta}</div>}
+        {project.meta && (() => {
+          const th = townHref(project.meta);
+          return th
+            ? <a href={th} className="pf-loc pf-loc--link">{project.meta}</a>
+            : <div className="pf-loc">{project.meta}</div>;
+        })()}
         <a href={href} target="_blank" rel="noopener" className="pf-cta">
           {project.ctaLabel} <span className="pf-arrow">→</span>
         </a>

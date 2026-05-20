@@ -432,6 +432,14 @@
   flex-shrink: 0;
 }
 
+/* Service area note + related links */
+.seo-area-note { font-size: 13px; color: rgba(255,255,255,0.45); margin: 8px 0 0; }
+.seo-area-note a { color: var(--brand-green); }
+.seo-related { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); }
+.seo-related-label { font-size: 11px; font-family: var(--mono); letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.4); }
+.seo-related-link { font-size: 13px; color: rgba(255,255,255,0.7); text-decoration: none; }
+.seo-related-link:hover { color: white; }
+
 /* Responsive */
 @media (max-width: 1024px) {
   .seo-why-grid { grid-template-columns: 240px 1fr; gap: 56px; }

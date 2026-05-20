@@ -1,13 +1,13 @@
 /* global React, ReactDOM */
 
 const SERVICES = [
-  { glyph: '◇', color: 'green', title: 'Web Design', desc: 'Modern, mobile-first websites built from scratch — no templates.' },
-  { glyph: '⚡', color: 'orange', title: 'SEO & Local Search', desc: 'Show up when your neighbors search for what you do.' },
-  { glyph: '↻', color: 'green', title: 'Hosting + Care Plans', desc: 'Backups, security, and updates — with a human to call.' },
-  { glyph: '◐', color: 'navy', title: 'E-Commerce', desc: 'Sell online with WooCommerce or Shopify.' },
-  { glyph: '✦', color: 'orange', title: 'Branding', desc: 'Logos, color systems, and print that matches your site.' },
-  { glyph: '⌘', color: 'navy', title: 'AI Studio', desc: 'Chatbots, booking tools, and custom AI integrations for your site.' },
-  { glyph: '◎', color: 'green', title: 'Consulting', desc: 'Website strategy, audits, and business advice from two Cape Cod founders.' },
+  { glyph: '◇', color: 'green', title: 'Web Design', desc: 'Modern, mobile-first websites built from scratch — no templates.', href: 'website-design.html' },
+  { glyph: '⚡', color: 'orange', title: 'SEO & Local Search', desc: 'Show up when your neighbors search for what you do.', href: 'seo.html' },
+  { glyph: '↻', color: 'green', title: 'Hosting + Care Plans', desc: 'Backups, security, and updates — with a human to call.', href: 'hosting.html' },
+  { glyph: '◐', color: 'navy', title: 'E-Commerce', desc: 'Sell online with WooCommerce or Shopify.', href: 'ecommerce.html' },
+  { glyph: '✦', color: 'orange', title: 'Branding', desc: 'Logos, color systems, and print that matches your site.', href: 'branding.html' },
+  { glyph: '⌘', color: 'navy', title: 'AI Studio', desc: 'Chatbots, booking tools, and custom AI integrations for your site.', href: 'ai-apps.html' },
+  { glyph: '◎', color: 'green', title: 'Consulting', desc: 'Website strategy, audits, and business advice from two Cape Cod founders.', href: 'consulting.html' },
 ];
 
 function LocationPage() {
@@ -111,13 +111,13 @@ function LocationPage() {
           <h2 className="lp-section-hl">Full-service web design for {loc.city}.</h2>
           <div className="lp-services-grid">
             {SERVICES.map((s, i) => (
-              <div key={i} className="lp-service-card">
+              <a key={i} className="lp-service-card" href={s.href}>
                 <span className={'lp-service-glyph lp-glyph--' + s.color}>{s.glyph}</span>
                 <div>
                   <div className="lp-service-title">{s.title}</div>
                   <div className="lp-service-desc">{s.desc}</div>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
           <div className="lp-services-cta">
@@ -178,6 +178,7 @@ function LocationPage() {
                 )
               ))}
               <a className="lp-nearby-link" href="cape-cod-web-design.html">All of Cape Cod</a>
+              <a className="lp-nearby-link lp-nearby-area" href="service-area.html">Full service area →</a>
             </div>
           </div>
         </section>

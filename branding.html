@@ -357,6 +357,14 @@
 }
 .br-cta-actions { display: flex; gap: 14px; flex-wrap: wrap; flex-shrink: 0; }
 
+/* Service area note + related links */
+.br-area-note { font-size: 13px; color: rgba(255,255,255,0.45); margin: 8px 0 0; }
+.br-area-note a { color: var(--brand-green); }
+.br-related { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); }
+.br-related-label { font-size: 11px; font-family: var(--mono); letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.4); }
+.br-related-link { font-size: 13px; color: rgba(255,255,255,0.7); text-decoration: none; }
+.br-related-link:hover { color: white; }
+
 /* Responsive */
 @media (max-width: 960px) {
   .br-what-grid { grid-template-columns: repeat(2, 1fr); }

@@ -226,6 +226,15 @@ function SeoPage() {
               <p className="seo-cta-sub">
                 We'll take a look at your current rankings, your Google Business Profile, and your biggest opportunities — at no charge. No commitment required.
               </p>
+              <p className="seo-area-note">
+                Serving businesses across all 15 Cape Cod towns.{' '}
+                <a href="service-area.html">See our full service area →</a>
+              </p>
+              <div className="seo-related">
+                <span className="seo-related-label">Related:</span>
+                <a href="website-design.html" className="seo-related-link">SEO works best on a fast, well-built site.</a>
+                <a href="consulting.html" className="seo-related-link">Not sure where to start?</a>
+              </div>
             </div>
             <div className="seo-cta-actions">
               <a className="btn btn--primary" href="index.html#cta">
