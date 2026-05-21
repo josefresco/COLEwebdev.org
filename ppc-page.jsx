@@ -1,61 +1,68 @@
 /* global React, ReactDOM */
 
-const PPC_SERVICES = [
+const PPC_OFFERINGS = [
   {
-    icon: '◎',
-    bg: 'rgba(242,107,31,0.14)',
-    color: '#D05A12',
-    name: 'Campaign Architecture',
-    body: 'Campaigns structured around tightly themed ad groups — not one broad campaign that bleeds budget across loosely matched searches.',
+    type: 'One-time',
+    name: 'Campaign Setup',
+    desc: 'Full build of a new Google Ads campaign from scratch — keyword research, ad group structure, negative keyword foundation, responsive search ad copy, and bidding configuration. Conversion tracking is verified before anything goes live.',
+    includes: [
+      'Keyword and negative keyword research',
+      'Campaign and ad group architecture',
+      'Responsive search ad copy (3+ variants per group)',
+      'Bidding strategy configuration',
+      'Pre-launch conversion tracking verification',
+    ],
   },
   {
-    icon: '✦',
-    bg: 'rgba(14,42,74,0.10)',
-    color: '#0E2A4A',
-    name: 'Keyword Strategy',
-    body: 'Exact, phrase, and broad match types used intentionally — with a negative keyword list built before launch and expanded every week.',
+    type: 'Ongoing monthly',
+    featured: true,
+    name: 'Campaign Management',
+    desc: 'Monthly management of active campaigns — weekly search term reviews, bid adjustments, A/B ad testing, negative keyword expansion, and a plain-English report with results and next steps.',
+    includes: [
+      'Weekly search term and negative keyword reviews',
+      'Bid and budget adjustments based on performance data',
+      'Ad copy testing and rotation',
+      'Monthly report: CPC, cost-per-conversion, call volume',
+      'Written recommendations for the following month',
+    ],
   },
   {
-    icon: '◇',
-    bg: 'rgba(123,192,67,0.14)',
-    color: '#5DA02E',
-    name: 'Ad Copy & Testing',
-    body: 'Responsive search ads written with message match in mind. Headline and description variations tested systematically, not randomly.',
+    type: 'One-time · à la carte',
+    full: true,
+    name: 'Campaign Optimization',
+    desc: "A focused audit and cleanup for campaigns already running but underperforming. We review search terms, wasted spend, quality scores, conversion setup, and landing pages — then fix what's causing the waste in a single engagement. No ongoing retainer required.",
+    includes: [
+      'Full search term and wasted spend audit',
+      'Negative keyword cleanup and expansion',
+      'Quality score and ad relevance review',
+      'Landing page and message match assessment',
+      'Conversion tracking verification or repair',
+      'Written summary of findings and completed fixes',
+    ],
   },
   {
-    icon: '⌘',
-    bg: 'rgba(242,107,31,0.14)',
-    color: '#D05A12',
-    name: 'Landing Page Design',
-    body: 'Purpose-built pages for each campaign — fast load, headline that mirrors the ad, single CTA. No generic homepage sends.',
+    type: 'One-time',
+    name: 'Landing Page Creation',
+    desc: 'A purpose-built landing page tied to a specific campaign — not your homepage. Designed for message match, mobile speed, and a single conversion action. Includes call tracking integration.',
+    includes: [
+      'Campaign-specific headline and copy',
+      'Mobile-first, fast-loading page build',
+      'Single call-to-action layout',
+      'Call tracking number integration',
+      'Form setup with lead notification',
+    ],
   },
   {
-    icon: '↗',
-    bg: 'rgba(14,42,74,0.10)',
-    color: '#0E2A4A',
-    name: 'Conversion Tracking',
-    body: 'GA4 and Google Ads conversion events configured before campaigns go live. Calls, forms, and purchases all attributed correctly.',
-  },
-  {
-    icon: '↻',
-    bg: 'rgba(123,192,67,0.14)',
-    color: '#5DA02E',
-    name: 'Bid Management',
-    body: 'Manual and Smart bidding strategies applied based on what the conversion data supports. Bids are reviewed and adjusted weekly.',
-  },
-  {
-    icon: '◐',
-    bg: 'rgba(242,107,31,0.14)',
-    color: '#D05A12',
-    name: 'Negative Keyword Management',
-    body: 'Weekly search term reviews to find and block irrelevant queries. This is where most agencies fail — and where most budgets leak.',
-  },
-  {
-    icon: '⚙',
-    bg: 'rgba(14,42,74,0.10)',
-    color: '#0E2A4A',
-    name: 'Monthly Reporting',
-    body: 'Cost-per-click, cost-per-conversion, and call attribution presented plainly so you know exactly what your ad spend is producing.',
+    type: 'One-time',
+    name: 'Conversion Tracking Setup',
+    desc: 'Configuration of GA4, Google Ads conversion actions, and call tracking so every lead source is measured. A prerequisite for Smart bidding and meaningful reporting — most small business accounts skip this entirely.',
+    includes: [
+      'GA4 goal configuration and verification',
+      'Google Ads conversion action setup',
+      'Call tracking number installation',
+      'Google Tag Manager configuration',
+      'Post-setup data verification report',
+    ],
   },
 ];
 
@@ -195,22 +202,28 @@ function PpcPage() {
         </div>
       </section>
 
-      {/* Services grid */}
-      <section className="ppc-svcs">
+      {/* Service offerings */}
+      <section className="ppc-offerings">
         <div className="shell">
-          <div className="ppc-svcs-hd">
-            <span className="eyebrow">What we manage</span>
-            <h2 className="ppc-svcs-hl">Eight things we handle every month.</h2>
-            <p className="ppc-svcs-sub">
-              Paid search isn't a one-time setup. These are the tasks that need active attention — not quarterly reviews.
+          <div className="ppc-offerings-hd">
+            <span className="eyebrow">Services</span>
+            <h2 className="ppc-offerings-hl">Five ways to engage.</h2>
+            <p className="ppc-offerings-sub">
+              You can hire us for a full ongoing campaign or for a single piece of the puzzle. Every service can stand alone.
             </p>
           </div>
-          <div className="ppc-svcs-grid">
-            {PPC_SERVICES.map(s => (
-              <div key={s.name} className="ppc-svc-card">
-                <div className="ppc-svc-icon" style={{ background: s.bg, color: s.color }}>{s.icon}</div>
-                <div className="ppc-svc-name">{s.name}</div>
-                <div className="ppc-svc-body">{s.body}</div>
+          <div className="ppc-offerings-grid">
+            {PPC_OFFERINGS.map(o => (
+              <div key={o.name} className={['ppc-offering-card', o.featured && 'ppc-offering-card--featured', o.full && 'ppc-offering-card--full'].filter(Boolean).join(' ')}>
+                <div className="ppc-offering-top">
+                  <span className={'ppc-offering-type' + (o.featured ? ' ppc-offering-type--featured' : '')}>{o.type}</span>
+                  {o.featured && <span className="ppc-offering-rec">Most common</span>}
+                </div>
+                <div className="ppc-offering-name">{o.name}</div>
+                <div className="ppc-offering-desc">{o.desc}</div>
+                <ul className="ppc-offering-list">
+                  {o.includes.map(item => <li key={item}>{item}</li>)}
+                </ul>
               </div>
             ))}
           </div>
