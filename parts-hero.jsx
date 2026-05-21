@@ -37,6 +37,7 @@ const SERVICE_LINKS = [
   { href: 'website-design.html', title: 'Web Design' },
   { href: 'seo.html', title: 'SEO & Local Search' },
   { href: 'ppc.html', title: 'PPC & Google Ads' },
+  { href: 'cape-cod-marketing.html', title: 'Cape Cod Marketing' },
   { href: 'hosting.html', title: 'Hosting + Care Plans' },
   { href: 'branding.html', title: 'Branding' },
   { href: 'ecommerce.html', title: 'E-Commerce' },
