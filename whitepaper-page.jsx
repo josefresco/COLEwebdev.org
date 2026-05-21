@@ -32,7 +32,7 @@ function WhitepaperPage() {
         <div className="wpa-hero-bg" aria-hidden="true" />
         <div className="wpa-hero-content">
           <div className="shell">
-            <a href="whitepapers.html" className="wpa-breadcrumb">← Web Design Whitepapers</a>
+            <a href={wp.backHref || 'whitepapers.html'} className="wpa-breadcrumb">← {wp.backLabel || 'Web Design Whitepapers'}</a>
             <div className="wpa-hero-row">
               <span className="wpa-hero-num" aria-hidden="true">{wp.num}</span>
               <div>

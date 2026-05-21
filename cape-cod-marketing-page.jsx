@@ -12,6 +12,7 @@ const SERVICES = [
     color: 'orange',
     title: 'PPC / Google Ads',
     desc: 'Paid search campaigns built for measurable return. Every dollar tracked, every click accounted for.',
+    href: 'ppc.html',
   },
   {
     glyph: '✦',
@@ -120,14 +121,15 @@ function CapeCodeMarketingPage() {
           <div className="mkt-services-grid">
             {SERVICES.map(s => {
               const c = GLYPHCOLOR[s.color];
+              const Tag = s.href ? 'a' : 'div';
               return (
-                <div key={s.title} className="mkt-service-card">
+                <Tag key={s.title} className="mkt-service-card" {...(s.href ? { href: s.href } : {})}>
                   <div className="mkt-service-icon" style={{ background: c.bg, color: c.color }}>
                     {s.glyph}
                   </div>
                   <div className="mkt-service-title">{s.title}</div>
                   <div className="mkt-service-desc">{s.desc}</div>
-                </div>
+                </Tag>
               );
             })}
           </div>

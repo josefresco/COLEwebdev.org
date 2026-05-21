@@ -36,6 +36,7 @@ function ColeLogo({ height = 34, dark = false }) {
 const SERVICE_LINKS = [
   { href: 'website-design.html', title: 'Web Design' },
   { href: 'seo.html', title: 'SEO & Local Search' },
+  { href: 'ppc.html', title: 'PPC & Google Ads' },
   { href: 'hosting.html', title: 'Hosting + Care Plans' },
   { href: 'branding.html', title: 'Branding' },
   { href: 'ecommerce.html', title: 'E-Commerce' },
@@ -60,6 +61,7 @@ const SEARCH_DATA = [
   { title: 'Request a Quote', desc: 'Get a fast, no-obligation project estimate.', category: 'Company', href: 'quote.html' },
   { title: 'Web Design', desc: 'Modern, mobile-first websites built for your business.', category: 'Services', href: 'website-design.html' },
   { title: 'SEO & Local Search', desc: 'Show up when neighbors search for what you sell.', category: 'Services', href: 'seo.html' },
+  { title: 'PPC & Google Ads', desc: 'Paid search management — negatives, landing pages, and conversion tracking.', category: 'Services', href: 'ppc.html' },
   { title: 'AI Studio', desc: 'Chatbots, plugins, PWAs, extensions, and custom business tools.', category: 'Services', href: 'ai-apps.html' },
   { title: 'Consulting', desc: 'Website strategy, audits, business advice, and training.', category: 'Services', href: 'consulting.html' },
   { title: 'Hosting + Care Plans', desc: 'Backups, security, updates — and a human to email.', category: 'Services', href: 'hosting.html' },
@@ -75,6 +77,7 @@ const SEARCH_DATA = [
   { title: 'Five Principles of Effective Web Design', desc: 'The fundamentals behind every great site we build.', category: 'Whitepapers', href: 'wp-five-principles.html' },
   { title: 'The Seven Cs of Web Design', desc: 'A framework for evaluating and improving any website.', category: 'Whitepapers', href: 'wp-seven-cs.html' },
   { title: 'Web Design FAQ Guide', desc: 'Answers to the questions clients ask most often.', category: 'Whitepapers', href: 'wp-faq-guide.html' },
+  { title: 'Google Ads Waste Guide', desc: 'Why most Google Ads accounts waste budget — and how to fix it.', category: 'Whitepapers', href: 'wp-google-ads-guide.html' },
   { title: 'How to Choose a Web Designer', desc: 'What to look for, what to ask, and what to avoid when hiring.', category: 'Whitepapers', href: 'wp-how-to-choose.html' },
   { title: 'What Makes a Good Website?', desc: 'The elements that separate sites that work from sites that don\'t.', category: 'Whitepapers', href: 'wp-what-makes-good-website.html' },
   { title: 'Cape Cod Web Design', desc: 'Local web design studio serving all 15 Cape Cod towns since 2006.', category: 'Location', href: 'cape-cod-web-design.html' },

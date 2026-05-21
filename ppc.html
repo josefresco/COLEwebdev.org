@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>PPC & Google Ads — COLEwebdev · Cape Cod</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<meta name="description" content="Google Ads management for Cape Cod businesses — negative keyword strategy, optimized landing pages, and real conversion tracking. Stop wasting ad spend." />
+<link rel="canonical" href="https://colewebdev.org/ppc.html" />
+<link rel="stylesheet" href="styles.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "PPC & Google Ads Management",
+  "url": "https://colewebdev.org/ppc.html",
+  "description": "Google Ads management for Cape Cod small businesses — negative keyword strategy, optimized landing pages, and conversion tracking that makes every dollar accountable.",
+  "provider": { "@type": "ProfessionalService", "name": "COLEwebdev", "url": "https://colewebdev.org/" },
+  "areaServed": { "@type": "State", "name": "Cape Cod, Massachusetts" },
+  "serviceType": "PPC & Google Ads Management"
+}
+</script>
+<style>
+/* ── PPC & Google Ads page ── */
+
+.ppc-hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 52vh;
+  display: flex;
+  align-items: center;
+}
+.ppc-hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 60% at 110% -5%, rgba(242,107,31,0.42), transparent 55%),
+    radial-gradient(ellipse 50% 70% at -8% 110%, rgba(14,90,160,0.20), transparent 55%),
+    linear-gradient(155deg, #0A1F38 0%, #0E2748 55%, #112950 100%);
+}
+.ppc-hero-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(60deg, transparent, transparent 58px, rgba(255,255,255,0.015) 58px, rgba(255,255,255,0.015) 59px);
+}
+.ppc-hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 100px 0 88px;
+  width: 100%;
+}
+.ppc-eyebrow { color: rgba(255,255,255,0.6); }
+.ppc-hero-hl {
+  font-family: var(--serif);
+  font-size: clamp(38px, 5.5vw, 74px);
+  line-height: 1.07;
+  margin: 16px 0 22px;
+  font-weight: 400;
+  color: white;
+  max-width: 18ch;
+  letter-spacing: -0.5px;
+}
+.ppc-hero-hl em { font-style: italic; color: #F26B1F; }
+.ppc-hero-sub {
+  font-size: clamp(15px, 1.6vw, 17px);
+  color: rgba(255,255,255,0.72);
+  max-width: 52ch;
+  line-height: 1.72;
+  margin: 0 0 36px;
+}
+.ppc-hero-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.ppc-ghost {
+  color: rgba(255,255,255,0.7) !important;
+  border-color: rgba(255,255,255,0.22) !important;
+}
+.ppc-tags { display: flex; gap: 10px; margin-top: 32px; flex-wrap: wrap; }
+.ppc-tag {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 5px 13px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.18);
+  color: rgba(255,255,255,0.65);
+}
+
+/* The problem section */
+.ppc-problem {
+  padding: 80px 0;
+  background: var(--paper);
+}
+.ppc-problem-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+.ppc-problem-hl {
+  font-family: var(--serif);
+  font-size: clamp(26px, 3.2vw, 40px);
+  color: var(--ink);
+  font-weight: 400;
+  margin: 8px 0 20px;
+  line-height: 1.2;
+}
+.ppc-problem-hl em { font-style: italic; color: #D05A12; }
+.ppc-problem-body { font-size: 15px; line-height: 1.75; color: var(--ink-2); margin: 0 0 16px; }
+.ppc-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid var(--line);
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  background: white;
+  box-shadow: var(--shadow-sm);
+}
+.ppc-stat {
+  padding: 28px 32px;
+  border-bottom: 1px solid var(--line);
+}
+.ppc-stat:last-child { border-bottom: none; }
+.ppc-stat-num {
+  font-family: var(--serif);
+  font-size: clamp(34px, 4vw, 52px);
+  color: #D05A12;
+  font-style: italic;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.ppc-stat-label { font-size: 13.5px; color: var(--ink-2); line-height: 1.5; }
+
+/* Services grid */
+.ppc-svcs {
+  padding: 80px 0;
+  background: white;
+  border-top: 1px solid var(--line);
+}
+.ppc-svcs-hd { margin-bottom: 48px; }
+.ppc-svcs-hl {
+  font-family: var(--serif);
+  font-size: clamp(28px, 3.2vw, 42px);
+  color: var(--ink);
+  font-weight: 400;
+  margin: 12px 0 10px;
+}
+.ppc-svcs-sub {
+  font-size: 16px;
+  color: var(--muted);
+  max-width: 52ch;
+  line-height: 1.6;
+  margin: 0;
+}
+.ppc-svcs-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.ppc-svc-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--r-xl);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: transform 0.22s, box-shadow 0.22s;
+}
+.ppc-svc-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.ppc-svc-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 11px;
+  display: grid;
+  place-items: center;
+  font-size: 17px;
+  flex-shrink: 0;
+}
+.ppc-svc-name {
+  font-family: var(--serif);
+  font-size: 18px;
+  color: var(--ink);
+  font-weight: 400;
+}
+.ppc-svc-body { font-size: 13px; line-height: 1.65; color: var(--muted); }
+
+/* Three Pillars */
+.ppc-pillars {
+  padding: 80px 0;
+  background: var(--navy);
+  position: relative;
+  overflow: hidden;
+}
+.ppc-pillars::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(60deg, transparent, transparent 58px, rgba(255,255,255,0.015) 58px, rgba(255,255,255,0.015) 59px);
+}
+.ppc-pillars-hd {
+  margin-bottom: 52px;
+  position: relative;
+  z-index: 1;
+}
+.ppc-pillars .eyebrow { color: #F26B1F; }
+.ppc-pillars .eyebrow::before { background: #F26B1F; }
+.ppc-pillars-hl {
+  font-family: var(--serif);
+  font-size: clamp(28px, 3.2vw, 42px);
+  color: white;
+  font-weight: 400;
+  margin: 12px 0 0;
+}
+.ppc-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  position: relative;
+  z-index: 1;
+}
+.ppc-pillar {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: var(--r-xl);
+  padding: 36px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  backdrop-filter: blur(4px);
+}
+.ppc-pillar-num {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #F26B1F;
+}
+.ppc-pillar-title {
+  font-family: var(--serif);
+  font-size: 22px;
+  color: white;
+  font-weight: 400;
+  line-height: 1.25;
+}
+.ppc-pillar-body {
+  font-size: 14px;
+  line-height: 1.68;
+  color: rgba(255,255,255,0.72);
+}
+.ppc-pillar-detail {
+  font-size: 13px;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.50);
+  padding-top: 10px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.ppc-pillars-guide {
+  margin-top: 40px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  padding-top: 32px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.ppc-guide-note {
+  font-size: 15px;
+  color: rgba(255,255,255,0.65);
+  margin: 0 0 18px;
+  line-height: 1.6;
+}
+.ppc-guide-note strong { color: rgba(255,255,255,0.9); }
+
+/* How we work */
+.ppc-how {
+  padding: 80px 0;
+  background: var(--paper-2);
+  border-top: 1px solid var(--line);
+}
+.ppc-how-hd { margin-bottom: 48px; }
+.ppc-how-hl {
+  font-family: var(--serif);
+  font-size: clamp(28px, 3.2vw, 42px);
+  color: var(--ink);
+  font-weight: 400;
+  margin: 12px 0 0;
+}
+.ppc-how-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.ppc-step {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: var(--r-xl);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.ppc-step-num {
+  font-family: var(--serif);
+  font-size: 44px;
+  line-height: 1;
+  font-style: italic;
+  color: var(--line-2);
+}
+.ppc-step-label {
+  font-family: var(--serif);
+  font-size: 20px;
+  color: var(--ink);
+  font-weight: 400;
+}
+.ppc-step-body { font-size: 13px; line-height: 1.65; color: var(--muted); }
+
+/* Commitments */
+.ppc-commit {
+  padding: 80px 0;
+  background: var(--paper);
+  border-top: 1px solid var(--line);
+}
+.ppc-commit-hd { margin-bottom: 48px; }
+.ppc-commit-hl {
+  font-family: var(--serif);
+  font-size: clamp(28px, 3.2vw, 42px);
+  color: var(--ink);
+  font-weight: 400;
+  margin: 12px 0 0;
+}
+.ppc-commit-hl em { font-style: italic; color: #D05A12; }
+.ppc-commit-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+.ppc-commit-card {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: var(--r-xl);
+  padding: 28px;
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  box-shadow: var(--shadow-sm);
+}
+.ppc-commit-check {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(242,107,31,0.12);
+  color: #D05A12;
+  display: grid;
+  place-items: center;
+  font-size: 14px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.ppc-commit-label {
+  font-family: var(--serif);
+  font-size: 19px;
+  color: var(--ink);
+  font-weight: 400;
+  margin-bottom: 6px;
+}
+.ppc-commit-desc { font-size: 14px; line-height: 1.65; color: var(--muted); margin: 0; }
+
+/* CTA */
+.ppc-cta-section { padding: 80px 0; background: white; border-top: 1px solid var(--line); }
+.ppc-cta {
+  background: var(--ink);
+  border-radius: var(--r-xl);
+  padding: 64px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 40px;
+  align-items: center;
+}
+.ppc-cta-hl {
+  font-family: var(--serif);
+  font-size: clamp(24px, 3vw, 38px);
+  color: white;
+  margin: 0 0 12px;
+  font-weight: 400;
+}
+.ppc-cta-hl em { font-style: italic; color: #F26B1F; }
+.ppc-cta-sub {
+  color: rgba(255,255,255,0.65);
+  font-size: 15px;
+  line-height: 1.65;
+  max-width: 48ch;
+  margin: 0;
+}
+.ppc-cta-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-end;
+  flex-shrink: 0;
+}
+.ppc-area-note { font-size: 13px; color: rgba(255,255,255,0.45); margin: 8px 0 0; }
+.ppc-area-note a { color: #F26B1F; }
+.ppc-related { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); }
+.ppc-related-label { font-size: 11px; font-family: var(--mono); letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.4); }
+.ppc-related-link { font-size: 13px; color: rgba(255,255,255,0.7); text-decoration: none; }
+.ppc-related-link:hover { color: white; }
+
+/* Responsive */
+@media (max-width: 960px) {
+  .ppc-problem-grid { grid-template-columns: 1fr; gap: 48px; }
+  .ppc-svcs-grid { grid-template-columns: repeat(2, 1fr); }
+  .ppc-pillars-grid { grid-template-columns: 1fr; }
+  .ppc-how-steps { grid-template-columns: repeat(2, 1fr); }
+  .ppc-cta { grid-template-columns: 1fr; }
+  .ppc-cta-actions { align-items: flex-start; flex-direction: row; flex-wrap: wrap; }
+}
+@media (max-width: 560px) {
+  .ppc-svcs-grid { grid-template-columns: 1fr; }
+  .ppc-how-steps { grid-template-columns: 1fr; }
+  .ppc-commit-grid { grid-template-columns: 1fr; }
+  .ppc-cta { padding: 36px 28px; }
+  .ppc-hero-actions { flex-direction: column; align-items: flex-start; }
+}
+</style>
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="COLEwebdev" />
+<meta property="og:title" content="PPC & Google Ads — COLEwebdev · Cape Cod" />
+<meta property="og:description" content="Google Ads management for Cape Cod businesses — negative keyword strategy, optimized landing pages, and real conversion tracking. Stop wasting ad spend." />
+<meta property="og:url" content="https://colewebdev.org/ppc.html" />
+<meta property="og:image" content="https://colewebdev.org/assets/josiah-chromebook-iphone.png" />
+</head>
+<body>
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="parts-hero.jsx"></script>
+<script type="text/babel" src="parts-services.jsx"></script>
+<script type="text/babel" src="parts-rest.jsx"></script>
+<script type="text/babel" src="ppc-page.jsx"></script>
+</body>
+</html>

@@ -303,6 +303,57 @@ const WHITEPAPERS = window.WHITEPAPERS_DATA || [
     ],
     takeaway: 'A FAQ isn\'t just a support tool — it\'s an SEO asset and a conversion resource. Write it for the visitor who is 80% convinced but has one lingering hesitation. Answer that hesitation directly, and you\'ll close more inquiries.',
   },
+  {
+    id: 'google-ads-guide',
+    num: '09',
+    title: 'Why Your Google Ads Are Wasting Money',
+    subtitle: 'Negative Keywords, Landing Pages & Conversion Tracking',
+    summary: 'Most small business Google Ads accounts waste 30–60% of their budget on clicks that were never going to convert. Three structural problems cause most of it — and all three are fixable.',
+    backLabel: 'PPC & Google Ads',
+    backHref: 'ppc.html',
+    sections: [
+      {
+        heading: 'The Scope of the Problem',
+        body: [
+          'Google Ads can be one of the highest-ROI marketing channels for a small business — or one of the fastest ways to burn through a budget with nothing to show for it. The difference usually comes down to three structural problems that most small business accounts share: no meaningful negative keyword management, paid traffic landing on the wrong pages, and conversion tracking that is missing or broken.',
+          'These aren\'t obscure technical details. They\'re fundamentals that any competent campaign manager should address from day one. When they\'re missing, a campaign generates spend but not returns. The fix isn\'t more budget — it\'s fixing the structure first.',
+        ],
+      },
+      {
+        heading: 'Negative Keywords: Stopping the Waste at the Source',
+        body: [
+          'When you run a Google Ads campaign with broad or phrase match keywords, Google will show your ad for searches that are similar to — but not identical to — your target terms. Without negative keywords, a landscaping company targeting "lawn care" will pay for clicks from "lawn care jobs near me," "DIY lawn care tips," and "lawn care Tucson." None of those searchers were ever going to become customers.',
+          'Negative keywords are search terms you explicitly exclude from triggering your ads. A well-managed account builds a negative list before launch — blocking obvious irrelevant terms — and then reviews the search term report weekly to catch new waste as it appears. Most unmanaged accounts have never had a negative keyword added after initial setup.',
+          'For local businesses, negative keywords also include geographic exclusions. A Cape Cod restaurant doesn\'t need to show ads to someone searching from Boston unless they\'re specifically targeting people planning a trip to the Cape. Without geographic negative management, you can pay for traffic from people who will never visit your business.',
+        ],
+      },
+      {
+        heading: 'Landing Pages: Where the Click Actually Goes',
+        body: [
+          'A searcher who clicks "web design Cape Cod" has a specific intent. They want to learn about web design services on Cape Cod. If that click lands on your homepage — which covers everything your company does — you\'ve broken message match. The visitor sees a general page when they expected a specific answer, and most of them leave immediately.',
+          'Message match is the alignment between what an ad promises and what the landing page delivers. A well-optimized landing page mirrors the ad headline, focuses on a single service or offer, loads in under three seconds on mobile, and has one clear call to action. No navigation pulling visitors off to other pages, no competing offers — just the single action you want the visitor to take.',
+          'Industry benchmarks consistently show that dedicated landing pages convert 2–5 times better than homepage sends. For a campaign spending $1,000 per month, that difference can mean two leads versus ten. Adding call tracking to the landing page closes another gap: most small businesses cannot tell you whether their phone rang because of an ad click or something else.',
+        ],
+      },
+      {
+        heading: 'Conversion Tracking: Knowing What\'s Actually Working',
+        body: [
+          'Google Ads has a powerful bidding system that can automatically optimize toward conversions — finding the people most likely to call, submit a form, or make a purchase. But this system only works if conversions are being tracked. Without proper conversion data, Google\'s bidding algorithms are operating blind, and reporting can\'t tell you which campaigns, keywords, or ads are producing real business outcomes.',
+          'Setting up conversion tracking correctly means configuring GA4 goals, linking them to Google Ads, creating Google Ads conversion actions for phone calls and form submissions, and verifying that data flows through correctly. It also means defining what counts as a conversion — not just pageviews or session duration, but actions with real business value.',
+          'An often-missed component is call tracking. A significant share of local business conversions happen over the phone, not through web forms. Without a tracking number on your landing page, those conversions are invisible in Google Ads reporting. You\'ll see clicks and spend, but you won\'t be able to attribute the calls they generated — and bidding strategies will optimize for the wrong signals.',
+        ],
+      },
+      {
+        heading: 'What a Fixed Account Looks Like',
+        body: [
+          'A well-structured account starts with a negative keyword list built before launch, so the first dollar of budget isn\'t wasted on irrelevant clicks. It has conversion tracking configured and verified — GA4, Google Ads goals, and call tracking — before any ads go live. Every campaign points to a dedicated landing page with message match, not the homepage.',
+          'Then it stays managed: weekly search term reviews to expand negatives, monthly performance analysis to identify which campaigns and keywords are producing cost-efficient conversions, and periodic landing page tests to improve conversion rates. Paid search is not a set-it-and-forget-it channel — the ongoing work is where most of the improvement happens.',
+          'If you have an existing campaign, auditing it for these three issues is a reasonable first step before spending more. In most accounts, waste and structural problems are visible within the first hour of review.',
+        ],
+      },
+    ],
+    takeaway: 'Fix the three structural problems first — negative keywords, landing page message match, and conversion tracking — before you increase your ad budget. More spend into a broken structure produces more waste, not more leads.',
+  },
 ];
 
 function WhitepaperCard({ wp }) {
