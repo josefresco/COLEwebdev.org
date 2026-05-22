@@ -279,6 +279,20 @@ function Header() {
                   <div className="nav-dd-desc">Show up when neighbors search for what you sell.</div>
                 </div>
               </a>
+              <a href="ppc.html" className="nav-dd-item">
+                <span className="nav-dd-glyph orange">◎</span>
+                <div>
+                  <div className="nav-dd-title">PPC &amp; Google Ads</div>
+                  <div className="nav-dd-desc">Paid search — negatives, landing pages, conversion tracking.</div>
+                </div>
+              </a>
+              <a href="cape-cod-marketing.html" className="nav-dd-item">
+                <span className="nav-dd-glyph green">↗</span>
+                <div>
+                  <div className="nav-dd-title">Cape Cod Marketing</div>
+                  <div className="nav-dd-desc">SEO, paid ads, social, analytics, and lead capture.</div>
+                </div>
+              </a>
               <a href="hosting.html" className="nav-dd-item">
                 <span className="nav-dd-glyph green">↻</span>
                 <div>
