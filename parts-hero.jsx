@@ -36,7 +36,6 @@ function ColeLogo({ height = 34, dark = false }) {
 const SERVICE_LINKS = [
   { href: 'website-design.html', title: 'Web Design' },
   { href: 'seo.html', title: 'SEO & Local Search' },
-  { href: 'ppc.html', title: 'PPC & Google Ads' },
   { href: 'cape-cod-marketing.html', title: 'Cape Cod Marketing' },
   { href: 'hosting.html', title: 'Hosting + Care Plans' },
   { href: 'branding.html', title: 'Branding' },
@@ -277,13 +276,6 @@ function Header() {
                 <div>
                   <div className="nav-dd-title">SEO &amp; Local Search</div>
                   <div className="nav-dd-desc">Show up when neighbors search for what you sell.</div>
-                </div>
-              </a>
-              <a href="ppc.html" className="nav-dd-item">
-                <span className="nav-dd-glyph orange">◎</span>
-                <div>
-                  <div className="nav-dd-title">PPC &amp; Google Ads</div>
-                  <div className="nav-dd-desc">Paid search — negatives, landing pages, conversion tracking.</div>
                 </div>
               </a>
               <a href="cape-cod-marketing.html" className="nav-dd-item">
