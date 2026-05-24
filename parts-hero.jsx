@@ -54,6 +54,7 @@ const SEARCH_DATA = [
   { title: 'Services', desc: 'Full overview of web design, SEO, hosting, and AI services.', category: 'Company', href: 'services.html' },
   { title: 'Contact', desc: 'Start a project or ask a question.', category: 'Company', href: 'contact.html' },
   { title: 'Portfolio', desc: 'Recent websites and client work.', category: 'Company', href: 'portfolio.html' },
+  { title: 'Testimonials', desc: 'What Cape Cod business owners say about working with us.', category: 'Company', href: 'testimonials.html' },
   { title: 'About Us', desc: 'Our team, story, and community roots.', category: 'Company', href: 'about.html' },
   { title: 'Our Process', desc: 'How we scope, build, and hand off every project.', category: 'Company', href: 'process.html' },
   { title: 'News & Blog', desc: 'Web design tips, updates, and articles.', category: 'Company', href: 'news.html' },
@@ -435,6 +436,7 @@ function Header() {
               </div>
 
               <a className="mobile-nav-link" href="portfolio.html" onClick={close}>Portfolio</a>
+              <a className="mobile-nav-link" href="testimonials.html" onClick={close}>Testimonials</a>
               <a className="mobile-nav-link" href="about.html" onClick={close}>About Us</a>
               <a className="mobile-nav-link" href="process.html" onClick={close}>Our Process</a>
               <a className="mobile-nav-link" href="newsletter.html" onClick={close}>Newsletter Archive</a>

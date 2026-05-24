@@ -2160,6 +2160,43 @@ p, li {
   transition: background 0.15s, border-color 0.15s;
 }
 .wpa-nl-btn:hover { background: rgba(92,192,53,0.2); border-color: rgba(92,192,53,0.5); }
+.wpa-card--links {
+  background: white;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-sm);
+}
+.wpa-card--links .wpa-card-eyebrow { color: var(--brand-blue); }
+.wpa-related-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.wpa-related-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink);
+  padding: 8px 10px;
+  border-radius: var(--r-sm);
+  background: var(--paper);
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+}
+.wpa-related-link:hover { background: var(--paper-2); color: var(--brand-blue); }
+.wpa-mobile-related { display: flex; flex-direction: column; gap: 6px; }
+.wpa-mobile-related-label {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 2px;
+}
 .wpa-nav {
   background: white;
   border: 1px solid var(--line);

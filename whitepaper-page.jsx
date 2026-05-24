@@ -1,5 +1,30 @@
 /* global React, ReactDOM */
 
+const WP_RELATED_LINKS = {
+  'what-web-design-does':    [{ text: 'Website Design + Build', href: 'website-design.html' }, { text: 'Our Process', href: 'process.html' }],
+  'investment-value':        [{ text: 'Request a Quote', href: 'quote.html' }, { text: 'Website Design + Build', href: 'website-design.html' }],
+  'diy-vs-pro':              [{ text: 'WordPress Design', href: 'wordpress.html' }, { text: 'Traditional Design', href: 'traditional.html' }, { text: 'Request a Quote', href: 'quote.html' }],
+  'three-types':             [{ text: 'WordPress Design', href: 'wordpress.html' }, { text: 'Traditional Design', href: 'traditional.html' }, { text: 'E-Commerce', href: 'ecommerce.html' }],
+  'seven-golden-rules':      [{ text: 'Website Design + Build', href: 'website-design.html' }, { text: 'Our Process', href: 'process.html' }],
+  'five-principles':         [{ text: 'Website Design + Build', href: 'website-design.html' }, { text: 'SEO & Local Search', href: 'seo.html' }],
+  'seven-cs':                [{ text: 'Website Design + Build', href: 'website-design.html' }, { text: 'Cape Cod Marketing', href: 'cape-cod-marketing.html' }],
+  'faq-guide':               [{ text: 'Our Services', href: 'services.html' }, { text: 'Contact Us', href: 'contact.html' }],
+  'how-to-choose':           [{ text: 'Our Process', href: 'process.html' }, { text: 'Portfolio', href: 'portfolio.html' }, { text: 'Contact Us', href: 'contact.html' }],
+  'what-makes-good-website': [{ text: 'Website Design + Build', href: 'website-design.html' }, { text: 'Our Process', href: 'process.html' }],
+  'google-ads-guide':        [{ text: 'PPC & Google Ads', href: 'ppc.html' }, { text: 'Cape Cod Marketing', href: 'cape-cod-marketing.html' }],
+  'website-cost':            [{ text: 'Request a Quote', href: 'quote.html' }, { text: 'Website Design + Build', href: 'website-design.html' }],
+  'web-design-expensive':    [{ text: 'Request a Quote', href: 'quote.html' }, { text: 'Website Design + Build', href: 'website-design.html' }, { text: 'Our Process', href: 'process.html' }],
+  'how-long-website':        [{ text: 'Our Process', href: 'process.html' }, { text: 'Request a Quote', href: 'quote.html' }],
+  'when-to-redesign':        [{ text: 'Website Design + Build', href: 'website-design.html' }, { text: 'Request a Quote', href: 'quote.html' }],
+  'website-vs-social':       [{ text: 'Website Design + Build', href: 'website-design.html' }, { text: 'Cape Cod Marketing', href: 'cape-cod-marketing.html' }],
+  'wordpress-vs-squarespace':[{ text: 'WordPress Design', href: 'wordpress.html' }, { text: 'Request a Quote', href: 'quote.html' }],
+  'design-vs-development':   [{ text: 'Website Design + Build', href: 'website-design.html' }, { text: 'Our Process', href: 'process.html' }],
+  'not-showing-on-google':   [{ text: 'SEO & Local Search', href: 'seo.html' }, { text: 'Cape Cod Marketing', href: 'cape-cod-marketing.html' }],
+  'how-long-seo':            [{ text: 'SEO & Local Search', href: 'seo.html' }, { text: 'Cape Cod Marketing', href: 'cape-cod-marketing.html' }],
+  'is-my-website-working':   [{ text: 'SEO & Local Search', href: 'seo.html' }, { text: 'Cape Cod Marketing', href: 'cape-cod-marketing.html' }, { text: 'Request a Quote', href: 'quote.html' }],
+  'shopify-vs-woocommerce':  [{ text: 'E-Commerce', href: 'ecommerce.html' }, { text: 'WordPress Design', href: 'wordpress.html' }, { text: 'Request a Quote', href: 'quote.html' }],
+};
+
 function WhitepaperPage() {
   const id = window.CURRENT_WP_ID;
   const all = window.WHITEPAPERS_DATA || [];
@@ -7,6 +32,31 @@ function WhitepaperPage() {
   const wp = all[idx];
   const prev = idx > 0 ? all[idx - 1] : null;
   const next = idx < all.length - 1 ? all[idx + 1] : null;
+  const relatedLinks = WP_RELATED_LINKS[id] || [];
+
+  React.useEffect(function() {
+    if (!wp) return;
+    var faqSchema = {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: wp.sections.map(function(sec) {
+        return {
+          '@type': 'Question',
+          name: sec.heading,
+          acceptedAnswer: { '@type': 'Answer', text: sec.body.join(' ') },
+        };
+      }),
+    };
+    var script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.id = 'wpa-faq-schema';
+    script.textContent = JSON.stringify(faqSchema);
+    document.head.appendChild(script);
+    return function() {
+      var el = document.getElementById('wpa-faq-schema');
+      if (el) el.remove();
+    };
+  }, [wp ? wp.id : null]);
 
   if (!wp) {
     return (
@@ -84,6 +134,18 @@ function WhitepaperPage() {
                 >
                   Subscribe to Newsletter <span className="arrow">→</span>
                 </a>
+                {relatedLinks.length > 0 && (
+                  <div className="wpa-mobile-related">
+                    <p className="wpa-mobile-related-label">Related services</p>
+                    {relatedLinks.map(function(link) {
+                      return (
+                        <a key={link.href} href={link.href} className="wpa-related-link">
+                          {link.text} <span className="arrow">→</span>
+                        </a>
+                      );
+                    })}
+                  </div>
+                )}
                 {(prev || next) && (
                   <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
                     {prev && (
@@ -130,6 +192,24 @@ function WhitepaperPage() {
                   Subscribe Free <span className="arrow">→</span>
                 </a>
               </div>
+
+              {/* Related services */}
+              {relatedLinks.length > 0 && (
+                <div className="wpa-card wpa-card--links">
+                  <p className="wpa-card-eyebrow">Related services</p>
+                  <ul className="wpa-related-list">
+                    {relatedLinks.map(function(link) {
+                      return (
+                        <li key={link.href}>
+                          <a href={link.href} className="wpa-related-link">
+                            {link.text} <span className="arrow">→</span>
+                          </a>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              )}
 
               {/* Prev / Next */}
               {(prev || next) && (
