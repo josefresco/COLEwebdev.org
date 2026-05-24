@@ -298,7 +298,7 @@ function News() {
             <span className="eyebrow">News &amp; Resources</span>
             <h2>Reading from <span className="italic">the studio.</span></h2>
           </div>
-          <a className="btn btn--ghost" href="#">All articles <span className="arrow">→</span></a>
+          <a className="btn btn--ghost" href="news.html">All articles <span className="arrow">→</span></a>
         </div>
 
         <div className="news-grid">
@@ -427,6 +427,7 @@ function Footer() {
             <ul>
               <li><a href="about.html">About Us</a></li>
               <li><a href="portfolio.html">Portfolio</a></li>
+              <li><a href="testimonials.html">Testimonials</a></li>
               <li><a href="whitepapers.html">Whitepapers</a></li>
               <li><a href="news.html">News</a></li>
               <li><a href="faq.html">FAQ</a></li>

@@ -278,6 +278,8 @@ function TraditionalPage() {
                 <span className="tr-related-label">Related:</span>
                 <a href="website-design.html" className="tr-related-link">See our full design work</a>
                 <a href="wordpress.html" className="tr-related-link">Compare WordPress options</a>
+                <a href="wp-three-types.html" className="tr-related-link">The 3 types of web design →</a>
+                <a href="wp-website-cost.html" className="tr-related-link">How much does a website cost? →</a>
               </div>
             </div>
             <div className="tr-cta-actions">

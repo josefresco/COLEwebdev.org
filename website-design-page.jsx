@@ -275,6 +275,12 @@ function WebDesignPage() {
                 Serving businesses across all 15 Cape Cod towns.{' '}
                 <a href="service-area.html">See our full service area →</a>
               </p>
+              <div className="wd-cta-guides">
+                <span className="wd-cta-guides-label">Further reading:</span>
+                <a href="wp-website-cost.html" className="wd-cta-guide-link">How much does a website cost? →</a>
+                <a href="wp-how-long-website.html" className="wd-cta-guide-link">How long does a website take to build? →</a>
+                <a href="wp-what-web-design-does.html" className="wd-cta-guide-link">What does web design actually do? →</a>
+              </div>
             </div>
             <div className="wd-cta-actions">
               <a className="btn btn--primary" href="index.html#cta">

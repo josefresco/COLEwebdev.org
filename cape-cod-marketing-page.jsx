@@ -198,6 +198,12 @@ function CapeCodeMarketingPage() {
               <p className="mkt-cta-sub">
                 Tell us where you are and where you want to be. We'll build a plan that gets you there.
               </p>
+              <div className="mkt-cta-guides">
+                <span className="mkt-cta-guides-label">Further reading:</span>
+                <a href="wp-google-ads-guide.html" className="mkt-cta-guide-link">Why your Google Ads are wasting money →</a>
+                <a href="wp-how-long-seo.html" className="mkt-cta-guide-link">How long does SEO take to work? →</a>
+                <a href="wp-not-showing-on-google.html" className="mkt-cta-guide-link">Why isn't my site showing up on Google? →</a>
+              </div>
             </div>
             <div className="mkt-cta-actions">
               <a className="btn btn--accent" href="quote.html">

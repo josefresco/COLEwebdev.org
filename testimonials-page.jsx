@@ -171,6 +171,23 @@ function TestimonialsPage() {
         </div>
       </section>
 
+      {/* Services strip */}
+      <section className="tm-services">
+        <div className="shell">
+          <p className="tm-services-label">What we build</p>
+          <div className="tm-services-row">
+            <a href="website-design.html" className="tm-service-chip">Website Design + Build</a>
+            <a href="wordpress.html" className="tm-service-chip">WordPress</a>
+            <a href="traditional.html" className="tm-service-chip">Traditional HTML</a>
+            <a href="ecommerce.html" className="tm-service-chip">E-Commerce</a>
+            <a href="seo.html" className="tm-service-chip">SEO & Local Search</a>
+            <a href="cape-cod-marketing.html" className="tm-service-chip">Cape Cod Marketing</a>
+            <a href="hosting.html" className="tm-service-chip">Hosting + Care</a>
+            <a href="branding.html" className="tm-service-chip">Branding</a>
+          </div>
+        </div>
+      </section>
+
       {/* Google CTA */}
       <section className="tm-google-cta">
         <div className="shell">

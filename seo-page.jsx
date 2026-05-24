@@ -234,6 +234,8 @@ function SeoPage() {
                 <span className="seo-related-label">Related:</span>
                 <a href="website-design.html" className="seo-related-link">SEO works best on a fast, well-built site.</a>
                 <a href="consulting.html" className="seo-related-link">Not sure where to start?</a>
+                <a href="wp-how-long-seo.html" className="seo-related-link">How long does SEO take? →</a>
+                <a href="wp-not-showing-on-google.html" className="seo-related-link">Why isn't my site showing up on Google? →</a>
               </div>
             </div>
             <div className="seo-cta-actions">

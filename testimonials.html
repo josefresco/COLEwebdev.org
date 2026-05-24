@@ -167,6 +167,42 @@
   align-self: flex-start;
 }
 
+/* Services strip */
+.tm-services {
+  padding: 32px 0;
+  background: white;
+  border-top: 1px solid var(--line);
+}
+.tm-services-label {
+  font-family: var(--mono);
+  font-size: 9.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 14px;
+}
+.tm-services-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.tm-service-chip {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 6px 14px;
+  text-decoration: none;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+.tm-service-chip:hover {
+  background: var(--paper-2);
+  border-color: var(--brand-blue);
+  color: var(--brand-blue);
+}
+
 /* Google CTA */
 .tm-google-cta {
   padding: 48px 0;

@@ -304,6 +304,11 @@ function WordPressPage() {
               <p className="wp-cta-sub">
                 The first hour is free. No commitment, no sales pitch — a real conversation about what you need, with people who've been building WordPress sites since version 1.0.
               </p>
+              <div className="wp-cta-related">
+                <span className="wp-cta-related-label">Further reading:</span>
+                <a href="wp-wordpress-vs-squarespace.html" className="wp-cta-related-link">WordPress vs. Squarespace →</a>
+                <a href="wp-three-types.html" className="wp-cta-related-link">The 3 types of web design →</a>
+              </div>
             </div>
             <div className="wp-cta-actions">
               <a className="btn btn--accent" href="contact.html">
