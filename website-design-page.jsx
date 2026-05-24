@@ -275,11 +275,6 @@ function WebDesignPage() {
                 Serving businesses across all 15 Cape Cod towns.{' '}
                 <a href="service-area.html">See our full service area →</a>
               </p>
-              <div className="wd-related">
-                <span className="wd-related-label">Related:</span>
-                <a href="seo.html" className="wd-related-link">SEO &amp; Local Search</a>
-                <a href="wordpress.html" className="wd-related-link">WordPress Design</a>
-              </div>
             </div>
             <div className="wd-cta-actions">
               <a className="btn btn--primary" href="index.html#cta">
