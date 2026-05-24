@@ -14,6 +14,24 @@ function LocationPage() {
   const loc = (window.LOCATIONS_DATA || []).find(l => l.id === window.CURRENT_LOCATION_ID);
   if (!loc) return <div style={{ padding: 40 }}>Location not found.</div>;
 
+  React.useEffect(() => {
+    if (!loc.faq || loc.faq.length === 0) return;
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.id = 'lp-faq-schema';
+    script.textContent = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: loc.faq.map(item => ({
+        '@type': 'Question',
+        name: item.q,
+        acceptedAnswer: { '@type': 'Answer', text: item.a },
+      })),
+    });
+    document.head.appendChild(script);
+    return () => { const el = document.getElementById('lp-faq-schema'); if (el) el.remove(); };
+  }, []);
+
   return (
     <React.Fragment>
       <Header />
@@ -43,9 +61,16 @@ function LocationPage() {
             <div className="lp-intro-main">
               <p className="lp-intro-lead">{loc.intro}</p>
               <p className="lp-intro-body">{loc.localContext}</p>
+              {loc.industries && loc.industries.length > 0 && (
+                <div className="lp-industries">
+                  {loc.industries.map((ind, i) => (
+                    <span key={i} className="lp-industry-chip">{ind}</span>
+                  ))}
+                </div>
+              )}
               <div className="lp-intro-stats">
                 <div className="lp-stat">
-                  <div className="lp-stat-num">26</div>
+                  <div className="lp-stat-num">20</div>
                   <div className="lp-stat-label">Years on the job</div>
                 </div>
                 <div className="lp-stat">
@@ -53,7 +78,7 @@ function LocationPage() {
                   <div className="lp-stat-label">Sites launched</div>
                 </div>
                 <div className="lp-stat">
-                  <div className="lp-stat-num">5.0★</div>
+                  <div className="lp-stat-num">4.8★</div>
                   <div className="lp-stat-label">Google rating</div>
                 </div>
               </div>
@@ -151,7 +176,7 @@ function LocationPage() {
                 { label: 'Studio location', val: 'Eastham, MA 02642' },
                 { label: 'In business since', val: '2006' },
                 { label: 'Sites launched', val: '700+' },
-                { label: 'Google rating', val: '5.0 ★' },
+                { label: 'Google rating', val: '4.8 ★' },
                 { label: 'Response time', val: '1 business day' },
               ].map((item, i) => (
                 <div key={i} className="lp-why-row">
@@ -179,6 +204,24 @@ function LocationPage() {
               ))}
               <a className="lp-nearby-link" href="cape-cod-web-design.html">All of Cape Cod</a>
               <a className="lp-nearby-link lp-nearby-area" href="service-area.html">Full service area →</a>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* FAQ */}
+      {loc.faq && loc.faq.length > 0 && (
+        <section className="lp-faq">
+          <div className="shell">
+            <p className="lp-section-label">FAQ</p>
+            <h2 className="lp-section-hl">Common questions from {loc.city} businesses.</h2>
+            <div className="lp-faq-list">
+              {loc.faq.map((item, i) => (
+                <div key={i} className="lp-faq-item">
+                  <h3 className="lp-faq-q">{item.q}</h3>
+                  <p className="lp-faq-a">{item.a}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>

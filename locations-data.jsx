@@ -10,12 +10,28 @@ window.LOCATIONS_DATA = [
     heroSub: 'We\'re your neighbors. COLEwebdev has been based in Eastham since 2006.',
     intro: 'COLEwebdev is headquartered at 3960 State Hwy in Eastham — we\'re not a distant agency, we\'re the web design shop down the road. For nearly two decades, we\'ve helped Eastham businesses build websites that bring in customers year-round, not just in July and August.',
     localContext: 'Eastham businesses face a familiar challenge: a compressed summer season and a quieter off-season that demands smarter marketing. A well-built website is one of the best tools a local business has for extending reach beyond the tourist rush — ranking in Google for year-round searches, capturing off-season inquiries, and building the kind of credibility that earns repeat visitors before they even arrive.',
+    industries: ['Restaurants', 'Accommodations', 'Marine', 'Contractors', 'Nonprofits', 'Retail'],
     clients: [
       { name: 'Friendly Fisherman', type: 'Restaurant', href: 'https://friendlyfishermaneastham.com/' },
       { name: 'Cape Cod Biochemical', type: 'Science & Research', href: 'https://capecodbiochemical.com/' },
       { name: 'Eastham Public Library', type: 'Public Library', href: 'https://easthamlibrary.org/' },
       { name: 'Eastham Turnip Festival', type: 'Community Event', href: 'http://easthamturnipfestival.com/' },
       { name: 'Eastham 400', type: 'Nonprofit / History', href: '#' },
+      { name: 'Brewster Sand & Gravel', type: 'Contractor / Materials', href: '#' },
+    ],
+    faq: [
+      {
+        q: 'Do you build websites for Eastham businesses specifically?',
+        a: 'Yes — and we\'re your neighbors. COLEwebdev has been based at 3960 State Hwy in Eastham since 2006. We know the town, we know the seasonal patterns, and we\'re minutes from most businesses on the Outer Cape. Every project is handled personally by Josiah and Desiree Cole.',
+      },
+      {
+        q: 'How do you help Eastham businesses stay visible in the off-season?',
+        a: 'Year-round visibility comes down to SEO and smart content strategy. We build Eastham business websites that rank for the searches your customers make in October and February, not just July. That means targeting service-oriented keywords, building local authority in Google, and making sure your site is set up to capture leads when foot traffic slows.',
+      },
+      {
+        q: 'How much does a website cost for an Eastham small business?',
+        a: 'Most Eastham business websites fall in the $3,000–$8,000 range depending on scope and complexity. The right answer depends on what your site needs to do. We offer a free consultation and a written quote with no obligation — and our guide on website cost breaks down exactly what drives pricing.',
+      },
     ],
     nearbyTowns: [
       { name: 'Orleans', href: 'orleans-web-design.html' },
@@ -35,11 +51,27 @@ window.LOCATIONS_DATA = [
     heroSub: 'Serving Orleans businesses from our studio minutes away in Eastham.',
     intro: 'Orleans is the commercial hub of the Lower Cape — where Route 6 and Route 28 converge, where year-round residents shop, eat, and hire. We\'ve built websites for Orleans businesses across hospitality, restaurants, contractors, and medical services, and we understand what it takes to reach both local residents and seasonal visitors.',
     localContext: 'Orleans has something many Cape towns don\'t: a strong year-round customer base alongside seasonal traffic. That means a good website has to do two jobs — rank for local searches that drive regular business, and convert visitors who are planning a Cape trip. We build with both audiences in mind: fast, mobile-friendly sites that show up in Google and give every visitor a reason to choose you.',
+    industries: ['Restaurants', 'Healthcare', 'Retail', 'Contractors', 'Hospitality', 'Marine'],
     clients: [
       { name: 'Nauset Beach Inn', type: 'Hospitality', href: 'https://www.nausetbeachinn.com/' },
       { name: 'Mahoney\'s Atlantic', type: 'Garden Center', href: 'https://mahoneysatlantic.com/' },
       { name: 'Animal Hospital of Orleans', type: 'Veterinary', href: '#' },
       { name: 'Timmerwerk', type: 'Custom Millwork', href: 'https://timmerwerkcc.com/' },
+      { name: 'Ring Bros. Marketplace', type: 'Retail', href: '#' },
+    ],
+    faq: [
+      {
+        q: 'Do you build websites for Orleans businesses?',
+        a: 'Absolutely. Orleans is minutes from our Eastham studio, and we\'ve built websites for businesses across Orleans hospitality, retail, healthcare, and professional services. We know the Lower Cape market — the year-round residents, the summer influx, and the searches that drive both.',
+      },
+      {
+        q: 'We\'re a seasonal restaurant in Orleans — what should our website prioritize?',
+        a: 'Seasonal businesses need to capture visitors early in their planning cycle — often weeks before the season starts. That means strong SEO for searches like "restaurants in Orleans MA," a clear mobile-first design for visitors browsing on their phones, and fast-loading pages that don\'t lose impatient summer guests. We build for all of that.',
+      },
+      {
+        q: 'Do you handle SEO for Orleans businesses?',
+        a: 'Yes — local SEO is one of our core services, and it\'s especially valuable in a competitive market like Orleans where visitors research online before they arrive. We optimize for the searches your customers are actually running, build local authority in Google, and track results month over month.',
+      },
     ],
     nearbyTowns: [
       { name: 'Eastham', href: 'eastham-web-design.html' },
@@ -59,9 +91,24 @@ window.LOCATIONS_DATA = [
     heroSub: 'From oyster farms to art galleries — websites built for Wellfleet\'s unique character.',
     intro: 'Wellfleet is unlike anywhere else on the Cape — a working waterfront, a thriving arts scene, and one of the most distinctive communities on the Outer Cape. We\'ve worked with Wellfleet organizations ranging from the Chamber of Commerce to the Food Pantry, and we understand the mix of residents, artists, and seasonal visitors that make up a Wellfleet audience.',
     localContext: 'Wellfleet businesses benefit enormously from strong online presence — visitors plan their trips well in advance, and the businesses that show up in search early win the reservation, the gallery visit, or the oyster tour. A professional website also helps Wellfleet\'s year-round economy by keeping local businesses findable after Labor Day, when the crowds thin but the community remains.',
+    industries: ['Restaurants', 'Art Galleries', 'Marine & Aquaculture', 'Accommodations', 'Nonprofits', 'Retail'],
     clients: [
       { name: 'Wellfleet Chamber of Commerce', type: 'Chamber / Community', href: 'https://www.wellfleetchamber.com/' },
       { name: 'Wellfleet Food Pantry', type: 'Nonprofit', href: '#' },
+    ],
+    faq: [
+      {
+        q: 'Do you build websites for Wellfleet businesses and organizations?',
+        a: 'Yes — we\'ve worked with Wellfleet organizations including the Chamber of Commerce, and we understand what makes this market distinct. Wellfleet attracts a specific kind of visitor who values authenticity and quality, and your website needs to reflect that before they ever arrive.',
+      },
+      {
+        q: 'Our business is very visual — an oyster farm or art gallery. How do you handle that?',
+        a: 'Visual businesses need websites that lead with imagery without sacrificing load speed. We build sites with optimized photography, thoughtful layout, and fast delivery — so your gallery or farm looks stunning on every device, including the phones visitors are browsing on when they plan their Outer Cape trip.',
+      },
+      {
+        q: 'How do we rank in Google searches for Wellfleet specifically?',
+        a: 'Local SEO for a small town like Wellfleet is highly achievable because there\'s less competition than in bigger markets. We optimize your Google Business Profile, build locally-relevant content, and structure your site so Google understands exactly where you are and what you offer. Most Wellfleet clients see meaningful ranking improvement within 3–6 months.',
+      },
     ],
     nearbyTowns: [
       { name: 'Eastham', href: 'eastham-web-design.html' },
@@ -81,12 +128,28 @@ window.LOCATIONS_DATA = [
     heroSub: 'High-season traffic. Year-round business. Websites built for both.',
     intro: 'Provincetown runs on hospitality, art, and tourism — and every business on Commercial Street knows that online presence is make-or-break before a visitor ever packs their bags. We\'ve built websites for Provincetown businesses ranging from the Chamber of Commerce to specialty tourism experiences, and we know what converts a curious browser into a paying guest.',
     localContext: 'Provincetown\'s market is intensely competitive online. Visitors research everything before they arrive — where to eat, where to stay, what to do — and the businesses with the strongest web presence win the booking. That means a Provincetown website needs to be fast, visually strong, mobile-perfect, and optimized for the searches your customers are running. We build all of that in.',
+    industries: ['Hospitality', 'Restaurants', 'Tourism & Events', 'Arts & Culture', 'Retail', 'Nightlife'],
     clients: [
       { name: 'Provincetown Chamber of Commerce', type: 'Chamber / Tourism', href: '#' },
       { name: 'Veterinary Wellness Center of Ptown', type: 'Veterinary', href: '#' },
       { name: 'Ptown Bachelorette', type: 'Tourism / Events', href: 'https://ptownbachelorette.com/' },
       { name: 'Dolphin Fleet Whale Watch', type: 'Ecotourism', href: 'https://whalewatch.com/' },
       { name: 'St. Mary of the Harbor', type: 'Religious Organization', href: '#' },
+      { name: 'WOMR 92.1 FM', type: 'Community Radio', href: '#' },
+    ],
+    faq: [
+      {
+        q: 'Do you build websites for Provincetown businesses?',
+        a: 'Yes — we\'ve worked with Provincetown businesses across hospitality, tourism, nonprofit, and arts. P-town\'s market demands websites that are visually compelling, mobile-perfect, and fast enough to load on spotty summer connections. We build for exactly that.',
+      },
+      {
+        q: 'Our site gets crushed with summer traffic. Will it hold up?',
+        a: 'The hosting infrastructure we use is built to handle traffic spikes without slowing down or going offline. Server-level caching, a global CDN, and auto-scaling mean your site stays fast whether you\'re getting 10 visitors or 10,000 on a peak summer Saturday.',
+      },
+      {
+        q: 'How important is mobile design for Provincetown visitors?',
+        a: 'Critical. The majority of Provincetown visitors browse and book on their phones, often while already on Commercial Street. Every site we build is mobile-first — designed for the small screen, fast on mobile connections, and built so a visitor can find your menu, make a reservation, or get directions in seconds.',
+      },
     ],
     nearbyTowns: [
       { name: 'Wellfleet', href: 'wellfleet-web-design.html' },
@@ -106,6 +169,7 @@ window.LOCATIONS_DATA = [
     heroSub: 'Built here. For businesses here. Since 2006.',
     intro: 'COLEwebdev has been designing and building websites for Cape Cod businesses for nearly two decades. From Bourne to Provincetown, we\'ve worked with hundreds of small businesses, nonprofits, restaurants, contractors, and tourism operators across all fifteen towns — and we bring that local experience to every project we take on.',
     localContext: 'Cape Cod\'s economy is unique: intensely seasonal, deeply local, and increasingly dependent on online discovery. Whether you\'re a year-round service business trying to rank on Google, a restaurant capturing summer reservations, or a nonprofit building community, your website is your most important marketing tool. We build sites that work for the Cape Cod market specifically — fast on mobile, optimized for local search, and designed to convert visitors into customers.',
+    industries: ['Restaurants', 'Hospitality', 'Marine', 'Nonprofits', 'Contractors', 'Retail', 'Healthcare', 'Tourism'],
     clients: [
       { name: 'Dolphin Fleet Whale Watch', type: 'Ecotourism', href: 'https://whalewatch.com/' },
       { name: 'Idle Times Bike Shop', type: 'Retail', href: 'https://www.idletimesbikes.com/' },
@@ -115,6 +179,20 @@ window.LOCATIONS_DATA = [
       { name: 'Hog Island Beer', type: 'Brewery', href: 'https://hogislandbeerco.com/' },
       { name: 'APCC', type: 'Environmental Nonprofit', href: 'https://apcc.org/' },
       { name: 'Center for Coastal Studies', type: 'Research / Nonprofit', href: 'https://coastalstudies.org/' },
+    ],
+    faq: [
+      {
+        q: 'Do you serve all 15 Cape Cod towns?',
+        a: 'Yes — we serve every town on the Cape, from Bourne to Provincetown. Our studio is based in Eastham, which puts us within easy reach of the Outer, Lower, Mid, and Upper Cape. Most client meetings happen over video, but we\'re always available in person for local clients.',
+      },
+      {
+        q: 'What makes web design different for Cape Cod businesses?',
+        a: 'Seasonality is the biggest factor. Cape Cod businesses need websites that rank year-round but convert aggressively in the summer window, handle the traffic spikes of peak season, and stay findable in the off-season when local residents are still searching. We\'ve been building for exactly this market since 2006.',
+      },
+      {
+        q: 'Do you offer SEO specifically for Cape Cod local search?',
+        a: 'Yes — local SEO is one of our core services. We optimize for the searches Cape Cod visitors and residents are running: town-specific searches, seasonal queries, "near me" mobile searches, and the Google Maps results that drive foot traffic. We track rankings and report results monthly.',
+      },
     ],
     nearbyTowns: [
       { name: 'Eastham', href: 'eastham-web-design.html' },
@@ -135,9 +213,24 @@ window.LOCATIONS_DATA = [
     heroSub: 'The Cape\'s commercial center deserves a website that works as hard as you do.',
     intro: 'Hyannis is the economic engine of Cape Cod — home to the ferry terminals, the regional airport, the largest concentration of retail and medical services on the Cape, and a year-round population that keeps businesses running long after the summer crowds leave. We\'ve built websites for Hyannis businesses serving both locals and the millions of visitors who pass through each year.',
     localContext: 'Hyannis businesses operate in one of the most competitive local markets on the Cape. Between the Main Street corridor, the Hyannis Port area, and the Route 132 commercial strip, customers have more choices here than anywhere else on the peninsula. A strong website — one that ranks well on Google, loads fast on mobile, and clearly communicates what makes your business different — is what separates the businesses that thrive year-round from the ones that coast on summer foot traffic.',
+    industries: ['Medical & Healthcare', 'Retail', 'Restaurants', 'Professional Services', 'Hospitality', 'Nonprofits'],
     clients: [
       { name: 'SVdP Cape Cod', type: 'Nonprofit', href: 'https://www.svdpcapecod.com/' },
       { name: 'Cape Cod Aquatics', type: 'Retail / Wellness', href: 'https://capecodaquatics.com/' },
+    ],
+    faq: [
+      {
+        q: 'Do you build websites for Hyannis businesses?',
+        a: 'Yes — we\'ve built websites for Hyannis businesses across medical, nonprofit, retail, and professional services. Hyannis is the Cape\'s most competitive market online, and we build sites that are designed to rank and convert in that environment.',
+      },
+      {
+        q: 'We have a medical or professional services practice in Hyannis — what do we need?',
+        a: 'Professional service businesses in Hyannis need websites that establish credibility immediately — clear credentials, clean design, fast loading, and easy contact options. HIPAA considerations, service-specific landing pages, and Google Business optimization are all part of how we approach healthcare and professional clients.',
+      },
+      {
+        q: 'How do you handle the year-round vs. seasonal mix in Hyannis?',
+        a: 'Hyannis is unique on the Cape — it has substantial year-round foot traffic and local commerce that other towns don\'t. We build Hyannis websites to serve both audiences: local residents searching for everyday services, and visitors who arrive by ferry or plane and need quick answers on their phones. The result is a site that works in January and August.',
+      },
     ],
     nearbyTowns: [
       { name: 'Yarmouth', href: 'yarmouth-web-design.html' },
@@ -157,9 +250,24 @@ window.LOCATIONS_DATA = [
     heroSub: 'From Woods Hole to Falmouth Heights — websites built for the Upper Cape.',
     intro: 'Falmouth is one of the Cape\'s most diverse towns — a thriving arts community, the world-famous scientific enclave at Woods Hole, a busy marina district, and beach neighborhoods that draw visitors from Boston and beyond. We\'ve built websites for Falmouth organizations across arts, law, healthcare, and hospitality, and we know what it takes to connect with both the year-round community and the summer influx.',
     localContext: 'Falmouth\'s geography works in two directions: a robust local population that needs services year-round, and a steady stream of summer visitors attracted to its beaches, the Shining Sea Bikeway, and the annual Falmouth Road Race. Businesses here need websites that serve both audiences — local SEO that puts you in front of residents on every device, and a polished first impression for the visitor who just discovered you on their phone while driving down Route 28.',
+    industries: ['Healthcare', 'Arts & Culture', 'Legal & Professional', 'Marine', 'Restaurants', 'Accommodations'],
     clients: [
       { name: 'Falmouth Jazz', type: 'Arts & Culture', href: 'https://falmouthjazz.org/' },
       { name: 'Safe Harbor Law', type: 'Legal', href: 'https://safeharborlaw.com/' },
+    ],
+    faq: [
+      {
+        q: 'Do you build websites for Falmouth businesses and organizations?',
+        a: 'Yes — we\'ve worked with Falmouth arts organizations, legal practices, and local businesses, and we understand the diversity of the Falmouth market. From the scientific community at Woods Hole to the beachgoers at Falmouth Heights, your audience is more varied than most Cape towns, and we build for that range.',
+      },
+      {
+        q: 'Falmouth has a big annual event cycle — Road Race, Jazz Fest. How do we capitalize on that?',
+        a: 'Events drive search traffic. The weeks before the Falmouth Road Race, Jazz by the Sea, and other major events are peak planning time for visitors, and businesses that show up in Google for those searches win customers before they even arrive. We build event-aware landing pages and optimize timing so your site captures that surge.',
+      },
+      {
+        q: 'Do you work with Woods Hole or STEM-related organizations in Falmouth?',
+        a: 'Yes — we\'ve worked with research organizations and nonprofits with technically sophisticated audiences. We know how to build websites that communicate credibility to an educated, discerning audience while still being accessible, fast, and easy to navigate for first-time visitors.',
+      },
     ],
     nearbyTowns: [
       { name: 'Mashpee', href: 'mashpee-web-design.html' },
@@ -179,7 +287,24 @@ window.LOCATIONS_DATA = [
     heroSub: 'Refined, high-converting websites for the Cape\'s most discerning market.',
     intro: 'Chatham is the crown jewel of the Cape — a town where classic New England charm, upscale hospitality, and a genuinely loyal visitor base create one of the most desirable markets on the Outer Cape. Visitors who come to Chatham come back, and businesses here have the opportunity to build lasting relationships that extend well beyond a single summer. We build websites that reflect the quality your customers already expect.',
     localContext: 'Chatham\'s clientele is sophisticated. They research before they book, they read reviews, and they form strong opinions about a business before they ever walk through the door. That means your website isn\'t just a brochure — it\'s the first and most lasting impression you make. We build Chatham business websites that match the character of the town: polished, informative, fast, and built to rank for the searches your ideal customers are making months before they arrive.',
-    clients: [],
+    industries: ['Hospitality & Inns', 'Restaurants', 'Boutique Retail', 'Real Estate', 'Marine', 'Arts & Culture'],
+    clients: [
+      { name: 'Oyster River Boatyard', type: 'Marine / Boatyard', href: '#' },
+    ],
+    faq: [
+      {
+        q: 'Do you build websites for Chatham businesses?',
+        a: 'Yes — Chatham is one of the Cape\'s most premium markets, and we build websites that match that standard. Polished design, fast performance, strong SEO, and mobile-first layouts are the baseline. We understand Chatham visitors are discerning and they\'ll judge your business by your website before they ever visit.',
+      },
+      {
+        q: 'Our Chatham business is high-end. Can you match that aesthetic?',
+        a: 'Absolutely. We don\'t use templates. Every website we build is designed from scratch with your specific brand, audience, and market in mind. For Chatham businesses, that typically means refined typography, high-quality photography integration, clean layouts, and the kind of attention to detail that reflects the character of the town.',
+      },
+      {
+        q: 'How long before the summer season should we have a new website ready?',
+        a: 'Ideally, 3–4 months before peak season — not just to have the site live, but to give Google time to index it and for your rankings to establish. A site launched in June doesn\'t benefit from the early-season search traffic that starts building in March and April. We help you plan your timeline accordingly.',
+      },
+    ],
     nearbyTowns: [
       { name: 'Orleans', href: 'orleans-web-design.html' },
       { name: 'Harwich', href: 'harwich-web-design.html' },
@@ -198,8 +323,23 @@ window.LOCATIONS_DATA = [
     heroSub: 'Six villages, two shores, one web studio that knows the Mid-Cape inside and out.',
     intro: 'Dennis is a Mid-Cape town with real variety — from the bayside serenity of Dennis Village and East Dennis to the busy beaches and summer nightlife of Dennis Port on Nantucket Sound. That range of neighborhoods means Dennis businesses serve an equally broad mix of customers: families, retirees, summer renters, and year-round locals. We build websites that speak to all of them.',
     localContext: 'Dennis has one of the Cape\'s longest summer seasons thanks to its warm south-side beaches, and that creates real opportunities for businesses that get their online presence right early in the planning cycle. Most visitors book accommodations and restaurants weeks before they arrive — which means the business with the best website, the strongest Google ranking, and the clearest call-to-action wins before the season even begins. We help Dennis businesses show up when it counts.',
+    industries: ['Restaurants', 'Accommodations', 'Retail', 'Contractors', 'Arts & Theater', 'Seasonal Tourism'],
     clients: [
       { name: 'The Marshside', type: 'Restaurant', href: 'https://themarshside.com/' },
+    ],
+    faq: [
+      {
+        q: 'Do you build websites for Dennis businesses?',
+        a: 'Yes — Dennis is a core part of our Mid-Cape service area, and we understand the distinct character of its six villages. Whether you\'re on the bayside in Dennis Village or on the south shore in Dennis Port, we build websites tailored to your specific location and customer base.',
+      },
+      {
+        q: 'The Cape Playhouse and arts scene are big in Dennis. Can you build websites for arts organizations?',
+        a: 'Absolutely. We\'ve built websites for arts organizations, festivals, and nonprofits across Cape Cod. Arts organizations have specific needs — event calendars, ticketing integration, photo and video galleries, and donor-facing content — and we handle all of it. We understand how to make an arts organization look as compelling online as it is in person.',
+      },
+      {
+        q: 'Dennis Port gets busy in summer and quiet in winter. How do we handle that on our website?',
+        a: 'We build Dennis business websites with year-round strategy in mind. That means SEO content that targets off-season searches, email capture so you can stay in touch with summer customers through the winter, and clear messaging about what\'s open and when. We help you turn a great summer into year-round momentum.',
+      },
     ],
     nearbyTowns: [
       { name: 'Yarmouth', href: 'yarmouth-web-design.html' },
@@ -219,7 +359,22 @@ window.LOCATIONS_DATA = [
     heroSub: 'Quiet cranberry bogs, busy harbors — we build websites for all of Harwich.',
     intro: 'Harwich is a town of contrasts: working cranberry bogs and award-winning restaurants, a busy commercial fishing harbor at Harwich Port and quiet residential neighborhoods inland. It\'s a place where the working Cape and the vacationing Cape exist side-by-side, and where local businesses have to serve both. We build websites that work for Harwich\'s full range of customers and industries.',
     localContext: 'Harwich Port is one of the Cape\'s most walkable village centers, which means foot traffic for businesses that are there — but foot traffic alone isn\'t enough in a market where customers search before they stroll. A well-optimized website ensures that when someone searches for a restaurant in Harwich, a contractor in Harwich Port, or a charter boat out of Saquatucket Harbor, your business is the one they find. We make that happen.',
+    industries: ['Marine & Fishing', 'Restaurants', 'Contractors', 'Accommodations', 'Cranberry & Agriculture', 'Retail'],
     clients: [],
+    faq: [
+      {
+        q: 'Do you build websites for Harwich businesses?',
+        a: 'Yes — Harwich is part of our core service area on the Lower Cape. We understand the Harwich Port village economy, the marine businesses around Saquatucket Harbor, and the residential contractor market that runs year-round. We build websites for all of them.',
+      },
+      {
+        q: 'We run a charter fishing or marine business out of Harwich Port. What does our website need?',
+        a: 'Marine and charter businesses need websites that load fast on mobile (because your customers are on their phones at the dock), have clear booking or contact flows, and rank for local fishing and charter searches. Photos of the boat, catch, and crew do a lot of the selling — we make sure your site showcases all of it.',
+      },
+      {
+        q: 'We\'re a year-round contractor in Harwich. Do we really need a strong website?',
+        a: 'Absolutely. Harwich has a large year-round residential population that hires contractors for renovations, roofing, landscaping, and more — and they search Google before they call anyone. A clean, professional website with clear services, local testimonials, and easy contact will consistently generate leads that word-of-mouth alone can\'t match.',
+      },
+    ],
     nearbyTowns: [
       { name: 'Chatham', href: 'chatham-web-design.html' },
       { name: 'Dennis', href: 'dennis-web-design.html' },
@@ -238,7 +393,22 @@ window.LOCATIONS_DATA = [
     heroSub: 'Old Cape Cod character, modern web presence — built for Brewster businesses.',
     intro: 'Brewster embodies old Cape Cod — the tidal flats of Cape Cod Bay, the Cape Cod Rail Trail, the antique shops and inns along Route 6A, and a character that draws visitors who want something quieter and more authentic than the busier Mid-Cape towns. We build websites for Brewster businesses that capture that character while delivering the performance that modern customers expect.',
     localContext: 'Brewster\'s visitors are planners. They choose Brewster specifically because it\'s not Hyannis — they\'re looking for a particular kind of Cape experience, and they research it carefully before they book. That means a Brewster business website needs to do more than just exist — it needs to tell your story, rank for the right searches, and give that careful planner every reason to choose you. We build websites that convert those researching visitors into paying customers.',
+    industries: ['Inns & B&Bs', 'Restaurants', 'Antiques & Retail', 'Contractors', 'Nonprofits', 'Outdoor Recreation'],
     clients: [],
+    faq: [
+      {
+        q: 'Do you build websites for Brewster businesses?',
+        a: 'Yes — we\'ve worked with Brewster businesses and understand the Route 6A corridor market. Brewster visitors are intentional travelers who research their destinations carefully, and your website is usually their first contact with your business. We make that first impression count.',
+      },
+      {
+        q: 'We run an inn or B&B on Route 6A in Brewster. What do we need from our website?',
+        a: 'Hospitality websites in Brewster need to do three things well: show the property beautifully, communicate availability and booking clearly, and rank for searches like "Brewster MA inns" and "Cape Cod B&B Route 6A." We build for all three — with fast photo loading, integrated booking calls-to-action, and local SEO built in from day one.',
+      },
+      {
+        q: 'How do we compete with larger hotels and OTA listings like Booking.com?',
+        a: 'Your own website should be your best booking channel — it\'s the one where you keep 100% of the revenue. We build Brewster accommodation sites with direct booking CTAs, compelling storytelling, and SEO that puts you in front of visitors who are actively choosing between properties. A well-built direct site consistently outperforms OTA dependency over time.',
+      },
+    ],
     nearbyTowns: [
       { name: 'Orleans', href: 'orleans-web-design.html' },
       { name: 'Dennis', href: 'dennis-web-design.html' },
@@ -257,8 +427,23 @@ window.LOCATIONS_DATA = [
     heroSub: 'High-traffic, high-competition Mid-Cape — we build websites that stand out.',
     intro: 'Yarmouth is one of the Cape\'s busiest corridors — Route 28 through South Yarmouth is lined with motels, restaurants, and retailers that have been competing for the same summer customers for generations. But the landscape has changed: that competition now starts online, months before anyone drives Route 28. We build Yarmouth business websites designed to win that early attention and turn it into real revenue.',
     localContext: 'Yarmouth Port on the north side and South Yarmouth and West Yarmouth on the south represent two very different markets in the same town. The north side is quieter, village-scale, and increasingly sought-after by visitors looking for a more refined Cape experience. The south side is high-volume, family-friendly, and dependent on the Route 28 economy. We build websites that understand your specific location and customer — and optimize for the searches that actually bring them to your door.',
+    industries: ['Hotels & Motels', 'Restaurants', 'Retail', 'Family Entertainment', 'Contractors', 'Service Businesses'],
     clients: [
       { name: 'Cape Cod Foundation', type: 'Nonprofit', href: 'https://capecodfoundation.org/' },
+    ],
+    faq: [
+      {
+        q: 'Do you build websites for Yarmouth businesses?',
+        a: 'Yes — Yarmouth is one of the Cape\'s most active commercial markets and we\'ve worked with businesses across the Route 28 corridor and Yarmouth Port. We understand the difference between the north and south sides of town and build websites that speak to your specific location and customers.',
+      },
+      {
+        q: 'Route 28 is crowded with competitors. How does a good website actually help?',
+        a: 'When visitors are deciding where to eat or stay in Yarmouth, most of that decision happens before they get in the car — on their phones, comparing Google results, reading reviews, and clicking through websites. The business with the fastest, clearest, most trustworthy site wins that decision. We build Yarmouth websites that win.',
+      },
+      {
+        q: 'We\'re a motel or accommodation on Route 28. What should our website focus on?',
+        a: 'Accommodation sites in Yarmouth need to make a fast, compelling visual case and then get out of the visitor\'s way. That means beautiful property photos, clear room and pricing information, a prominent booking or contact button, and strong Google Maps visibility. We build for all of that, and we\'ll help you drive direct bookings rather than paying commission to OTAs.',
+      },
     ],
     nearbyTowns: [
       { name: 'Dennis', href: 'dennis-web-design.html' },
@@ -278,7 +463,22 @@ window.LOCATIONS_DATA = [
     heroSub: 'The Cape\'s oldest town. A modern web studio ready to serve it.',
     intro: 'Sandwich is where Cape Cod begins — the oldest town on the Cape, home to the Sandwich Glass Museum, Heritage Museums & Gardens, and a historic village center that draws visitors who appreciate history and craftsmanship. It\'s also a gateway community with strong year-round residential neighborhoods and a growing business district along Route 6A and Route 130. We build websites for both the heritage character and the everyday local economy.',
     localContext: 'Sandwich businesses benefit from two distinct visitor streams: day-trippers and short-stay visitors who come specifically for the town\'s historic attractions, and the steady flow of travelers arriving on-Cape via the Sagamore Bridge who stop before venturing further. Both groups search online first. A well-built website with strong local SEO means your business shows up for those searches — whether someone is planning a museum trip or just looking for a good lunch after crossing the bridge.',
+    industries: ['Heritage & Tourism', 'Restaurants', 'Retail', 'Contractors', 'Accommodations', 'Professional Services'],
     clients: [],
+    faq: [
+      {
+        q: 'Do you build websites for Sandwich businesses?',
+        a: 'Yes — Sandwich is our gateway to the Upper Cape market and we understand the town\'s unique character. From the historic Route 6A village to the Route 130 commercial corridor, we build websites for Sandwich businesses that balance heritage character with modern performance.',
+      },
+      {
+        q: 'We\'re near the Sagamore Bridge — how do we capture that passing traffic?',
+        a: 'Travelers crossing the Sagamore Bridge and searching for a nearby place to eat, shop, or stop are a real opportunity for Sandwich businesses. Local SEO that ranks for "restaurants near Sagamore Bridge" or "Sandwich MA" searches, combined with Google Maps optimization, puts your business in front of those travelers at exactly the right moment.',
+      },
+      {
+        q: 'Sandwich has a lot of historic character. Can our website reflect that while still being modern?',
+        a: 'Absolutely — and that\'s actually a competitive advantage. Sandwich\'s heritage sets it apart from the busier commercial Cape towns, and your website can lean into that authenticity while being fast, mobile-first, and easy to navigate. We build websites that honor your brand character and still perform at the highest technical standard.',
+      },
+    ],
     nearbyTowns: [
       { name: 'Bourne', href: 'bourne-web-design.html' },
       { name: 'Falmouth', href: 'falmouth-web-design.html' },
@@ -297,7 +497,22 @@ window.LOCATIONS_DATA = [
     heroSub: 'Gateway to the Cape. Your business deserves a website that captures that traffic.',
     intro: 'Bourne sits at the crossroads of on-Cape and off-Cape — home to both the Bourne and Sagamore Bridges, the Cape Cod Canal, and some of the most transited road corridors in New England. Millions of vehicles pass through Bourne each year, many of them driven by people who need exactly what local businesses offer. We build Bourne business websites that capture that passing traffic and convert it into customers.',
     localContext: 'Bourne is often underestimated as a business market because so much of its traffic is passing through — but that\'s exactly the opportunity. Someone crossing the Bourne Bridge and searching for a marina, a restaurant, a hardware store, or a contractor shouldn\'t find your competitor first. Strong local SEO and a fast, clear website make sure they find you. We build websites for Bourne businesses that turn geographic advantage into real revenue.',
+    industries: ['Marine & Boating', 'Retail', 'Restaurants', 'Contractors', 'Service Businesses', 'Canal-Area Tourism'],
     clients: [],
+    faq: [
+      {
+        q: 'Do you build websites for Bourne businesses?',
+        a: 'Yes — Bourne\'s position as the gateway to the Cape makes it a unique and underserved market. We build websites for Bourne businesses that capture both the through-traffic and the strong year-round residential community, using local SEO and clear design to turn visibility into customers.',
+      },
+      {
+        q: 'We\'re a marina or marine business in Bourne. What does our site need?',
+        a: 'Marine businesses in Bourne serve a mix of seasonal boaters and year-round fishing and commercial clients. Your website needs to clearly communicate services, slips, and seasonal availability, rank for boating and marina searches in the Cape Cod Canal area, and load fast on mobile for customers who are already on the water or at the dock.',
+      },
+      {
+        q: 'We\'re a service contractor based in Bourne. Is a website worth the investment?',
+        a: 'Yes — consistently. Bourne has a large year-round residential population that hires contractors, plumbers, electricians, and landscapers. That work is found on Google. A professional website with local SEO, clear services, and a simple contact form will generate leads that cold calling and yard signs can\'t match. We\'ve seen it work for contractors throughout the Cape.',
+      },
+    ],
     nearbyTowns: [
       { name: 'Sandwich', href: 'sandwich-web-design.html' },
       { name: 'Falmouth', href: 'falmouth-web-design.html' },
@@ -316,7 +531,22 @@ window.LOCATIONS_DATA = [
     heroSub: 'Fast-growing, year-round community — websites built for where Mashpee is headed.',
     intro: 'Mashpee is one of the Cape\'s fastest-growing towns — the Mashpee Commons development has brought a genuine town-center feel to what was once primarily a pass-through community, and the surrounding residential growth has created a large, year-round consumer base hungry for local services. We build websites for Mashpee businesses that serve both the established community and the new residents arriving every year.',
     localContext: 'Mashpee Commons has fundamentally changed how people shop and dine on the Upper Cape — it\'s now a destination in its own right, not just a strip mall. But the businesses that do best in Mashpee are the ones that show up in Google before someone even gets in the car. Whether you\'re inside the Commons or elsewhere in town, strong local SEO and a well-designed website are what drive new customers to your door in a market that still has plenty of room to grow.',
+    industries: ['Retail', 'Restaurants', 'Professional Services', 'Healthcare', 'Contractors', 'Fitness & Wellness'],
     clients: [],
+    faq: [
+      {
+        q: 'Do you build websites for Mashpee businesses?',
+        a: 'Yes — Mashpee is one of the Cape\'s fastest-growing markets and we build websites for businesses across Mashpee Commons and the broader town. We understand the year-round customer base and the newer residential growth that\'s driving demand for local services.',
+      },
+      {
+        q: 'We\'re a business in Mashpee Commons. How do we stand out in that competitive environment?',
+        a: 'Mashpee Commons draws strong foot traffic, but the customers who spend the most are the ones who searched for you specifically — not just the ones who wandered past. A well-optimized website puts you in front of Mashpee residents searching for your type of business, builds trust before they walk in, and drives repeat visits through email capture and online presence.',
+      },
+      {
+        q: 'Mashpee is growing fast. How do we position our website to capture new residents?',
+        a: 'New residents search for local services immediately after moving — doctors, dentists, contractors, restaurants, gyms. Local SEO that targets Mashpee-specific searches, a clear and professional website, and Google Business optimization mean you show up for those first searches. We build websites that establish your business as the obvious local choice from day one.',
+      },
+    ],
     nearbyTowns: [
       { name: 'Falmouth', href: 'falmouth-web-design.html' },
       { name: 'Sandwich', href: 'sandwich-web-design.html' },
@@ -335,9 +565,24 @@ window.LOCATIONS_DATA = [
     heroSub: 'Where the Outer Cape narrows — websites built for Truro\'s unique community.',
     intro: 'Truro is one of the smallest towns in Massachusetts by population, but it punches well above its weight as a destination — artists, writers, and discerning visitors have been drawn to its dramatic cliffs, undeveloped beaches, and unhurried pace for generations. We\'ve built websites for Truro organizations including the Historical Society and the renowned Truro Vineyards, and we understand what it takes to reach Truro\'s sophisticated, intentional audience.',
     localContext: 'Truro businesses serve a visitor who has made a deliberate choice — they\'ve passed through Wellfleet and Eastham to get here, and they came on purpose. That means your customers are already sold on the destination; your website\'s job is to make sure they find you specifically, understand what you offer, and have every reason to stop in. We build Truro business websites that match the quality and character of the town — understated, authentic, and effective.',
+    industries: ['Hospitality & Vacation Rentals', 'Arts & Galleries', 'Wineries & Food', 'Nonprofits', 'Outdoor Recreation', 'Retail'],
     clients: [
       { name: 'Truro Historical Society', type: 'Nonprofit', href: 'https://trurohistoricalsociety.org/' },
       { name: 'Truro Vineyards', type: 'Hospitality', href: 'https://trurovineyardsofcapecod.com/' },
+    ],
+    faq: [
+      {
+        q: 'Do you build websites for Truro businesses and organizations?',
+        a: 'Yes — we\'ve built websites for Truro organizations including the Historical Society and Truro Vineyards, and we understand this market well. Truro attracts a visitor who values authenticity and quality, and your website needs to reflect that from the first click.',
+      },
+      {
+        q: 'Truro is small. Is local SEO even worth it for a town this size?',
+        a: 'Absolutely — in fact, local SEO is more achievable in a small town like Truro because the competition is lighter. Ranking for "Truro MA winery" or "Outer Cape galleries" is very attainable, and the visitors who find you through those searches are already interested in exactly what you offer. Small towns can punch well above their weight online.',
+      },
+      {
+        q: 'We offer vacation rentals in Truro. How do we compete with VRBO and Airbnb?',
+        a: 'Your own website is your best booking channel — it\'s where you keep 100% of the revenue instead of paying platform fees. We build vacation rental websites that showcase the property beautifully, explain what makes Truro special, and drive direct bookings through strong SEO and a clear contact flow. Many Truro rental owners run successful direct-booking operations this way.',
+      },
     ],
     nearbyTowns: [
       { name: 'Provincetown', href: 'provincetown-web-design.html' },
