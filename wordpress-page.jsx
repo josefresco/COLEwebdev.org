@@ -306,6 +306,7 @@ function WordPressPage() {
               </p>
               <div className="wp-cta-related">
                 <span className="wp-cta-related-label">Further reading:</span>
+                <a href="wordpress-hosting.html" className="wp-cta-related-link">Our WordPress hosting →</a>
                 <a href="wp-wordpress-vs-squarespace.html" className="wp-cta-related-link">WordPress vs. Squarespace →</a>
                 <a href="wp-three-types.html" className="wp-cta-related-link">The 3 types of web design →</a>
               </div>

@@ -66,6 +66,7 @@ const SEARCH_DATA = [
   { title: 'AI Studio', desc: 'Chatbots, plugins, PWAs, extensions, and custom business tools.', category: 'Services', href: 'ai-apps.html' },
   { title: 'Consulting', desc: 'Website strategy, audits, business advice, and training.', category: 'Services', href: 'consulting.html' },
   { title: 'Hosting + Care Plans', desc: 'Backups, security, updates — and a human to email.', category: 'Services', href: 'hosting.html' },
+  { title: 'WordPress Hosting', desc: 'Isolated environments, global CDN, staging, and 99.95% uptime.', category: 'Services', href: 'wordpress-hosting.html' },
   { title: 'Branding', desc: 'Logos, color, print — so the site fits the rest of you.', category: 'Services', href: 'branding.html' },
   { title: 'E-Commerce', desc: 'WooCommerce and Shopify storefronts that ship.', category: 'Services', href: 'ecommerce.html' },
   { title: 'WordPress Design', desc: 'Custom WordPress builds that are easy to manage.', category: 'Services', href: 'wordpress.html' },
@@ -302,6 +303,13 @@ function Header() {
                 <div>
                   <div className="nav-dd-title">Hosting + Care Plans</div>
                   <div className="nav-dd-desc">Backups, security, updates — and a human to email.</div>
+                </div>
+              </a>
+              <a href="wordpress-hosting.html" className="nav-dd-item">
+                <span className="nav-dd-glyph blue">⬡</span>
+                <div>
+                  <div className="nav-dd-title">WordPress Hosting</div>
+                  <div className="nav-dd-desc">Isolated environments, CDN, staging, 99.95% uptime.</div>
                 </div>
               </a>
               <a href="branding.html" className="nav-dd-item">

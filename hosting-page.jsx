@@ -188,6 +188,7 @@ function HostingPage() {
             </p>
             <div className="hc-related">
               <span className="hc-related-label">Related:</span>
+              <a href="wordpress-hosting.html" className="hc-related-link">About our hosting infrastructure →</a>
               <a href="website-design.html" className="hc-related-link">Need a new site too?</a>
               <a href="consulting.html" className="hc-related-link">Already have a site?</a>
             </div>
