@@ -292,6 +292,35 @@ function ContactPage() {
         </div>
       </section>
 
+      {/* Map */}
+      <section className="ct-map">
+        <div className="shell">
+          <div className="ct-map-hd">
+            <span className="eyebrow">Find us</span>
+            <h2 className="ct-map-hl">3960 State Hwy, Eastham, MA</h2>
+            <p className="ct-map-sub">
+              On Route 6, north of the Eastham rotary.{' '}
+              <a
+                href="https://www.openstreetmap.org/?mlat=41.8484&mlon=-69.9865#map=16/41.8484/-69.9865"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Open in OpenStreetMap →
+              </a>
+            </p>
+          </div>
+          <div className="ct-map-frame-wrap">
+            <iframe
+              className="ct-map-frame"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=-70.010%2C41.835%2C-69.965%2C41.862&layer=mapnik&marker=41.8484%2C-69.9865"
+              loading="lazy"
+              referrerPolicy="no-referrer"
+              title="COLEwebdev studio — 3960 State Hwy, Eastham MA"
+            />
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </React.Fragment>
   );
