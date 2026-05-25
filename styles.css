@@ -2568,6 +2568,67 @@ p, li {
 .lp-nearby-area:hover { border-color: var(--brand-green); background: rgba(123,192,67,0.06); }
 .lp-nearby-plain { font-size: 13px; color: var(--muted); padding: 6px 14px; border: 1px solid var(--line); border-radius: 999px; }
 
+/* Founder personal connection */
+.lp-founder {
+  padding: var(--pad-section) 0;
+  background: var(--navy);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.lp-founder-grid {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 64px;
+  align-items: center;
+}
+.lp-founder-img-wrap {
+  position: relative;
+}
+.lp-founder-img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: var(--r-xl);
+  display: block;
+  filter: grayscale(15%);
+}
+.lp-founder-eyebrow { color: rgba(255,255,255,0.4); }
+.lp-founder-hl {
+  font-family: var(--serif);
+  font-size: clamp(26px, 3.2vw, 40px);
+  font-weight: 400;
+  color: white;
+  margin: 10px 0 24px;
+  line-height: 1.18;
+}
+.lp-founder-p {
+  font-size: 15.5px;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.72);
+  margin: 0 0 18px;
+  max-width: 620px;
+}
+.lp-founder-byline {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.12);
+}
+.lp-founder-name {
+  font-size: 15px;
+  font-weight: 500;
+  color: white;
+}
+.lp-founder-role {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .06em;
+  color: rgba(255,255,255,0.4);
+}
+
 /* Industries chips */
 .lp-industries { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0 28px; }
 .lp-industry-chip { font-size: 12px; font-weight: 500; letter-spacing: .03em; padding: 5px 13px; border-radius: 999px; background: rgba(0,115,170,0.08); color: var(--brand-blue); border: 1px solid rgba(0,115,170,0.18); }
@@ -2582,6 +2643,7 @@ p, li {
 
 /* Responsive */
 @media (max-width: 960px) {
+  .lp-founder-grid { grid-template-columns: 200px 1fr; gap: 40px; }
   .lp-intro-grid { grid-template-columns: 1fr; gap: 40px; }
   .lp-intro-sidebar { order: -1; }
   .lp-cta-card { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: center; }
@@ -2590,6 +2652,8 @@ p, li {
   .lp-why-grid { grid-template-columns: 1fr; gap: 32px; }
 }
 @media (max-width: 700px) {
+  .lp-founder-grid { grid-template-columns: 1fr; gap: 32px; }
+  .lp-founder-img { aspect-ratio: 4/3; }
   .lp-client-grid { grid-template-columns: 1fr 1fr; }
   .lp-services-grid { grid-template-columns: 1fr 1fr; }
   .lp-cta-card { grid-template-columns: 1fr; }

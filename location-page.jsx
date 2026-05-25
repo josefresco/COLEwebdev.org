@@ -99,6 +99,35 @@ function LocationPage() {
         </div>
       </section>
 
+      {/* Founder personal connection */}
+      {loc.founderStory && (
+        <section className="lp-founder">
+          <div className="shell">
+            <div className="lp-founder-grid">
+              <div className="lp-founder-img-wrap">
+                <img
+                  src={loc.founderStory.img}
+                  alt={loc.founderStory.name}
+                  className="lp-founder-img"
+                  loading="lazy"
+                />
+              </div>
+              <div className="lp-founder-body">
+                <span className="eyebrow lp-founder-eyebrow">From the founders</span>
+                <h2 className="lp-founder-hl">{loc.founderStory.headline}</h2>
+                {loc.founderStory.body.map((p, i) => (
+                  <p key={i} className="lp-founder-p">{p}</p>
+                ))}
+                <div className="lp-founder-byline">
+                  <span className="lp-founder-name">{loc.founderStory.name}</span>
+                  <span className="lp-founder-role">{loc.founderStory.role}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Local clients */}
       {loc.clients && loc.clients.length > 0 && (
         <section className="lp-clients">

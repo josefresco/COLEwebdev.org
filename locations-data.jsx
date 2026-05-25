@@ -91,6 +91,16 @@ window.LOCATIONS_DATA = [
     heroSub: 'From oyster farms to art galleries — websites built for Wellfleet\'s unique character.',
     intro: 'Wellfleet is unlike anywhere else on the Cape — a working waterfront, a thriving arts scene, and one of the most distinctive communities on the Outer Cape. We\'ve worked with Wellfleet organizations ranging from the Chamber of Commerce to the Food Pantry, and we understand the mix of residents, artists, and seasonal visitors that make up a Wellfleet audience.',
     localContext: 'Wellfleet businesses benefit enormously from strong online presence — visitors plan their trips well in advance, and the businesses that show up in search early win the reservation, the gallery visit, or the oyster tour. A professional website also helps Wellfleet\'s year-round economy by keeping local businesses findable after Labor Day, when the crowds thin but the community remains.',
+    founderStory: {
+      name: 'Desiree Cole',
+      role: 'Co-Founder & Designer',
+      img: 'assets/desiree-cole-webdiva-cape-cod-website-designer.jpg',
+      headline: 'Wellfleet is where Desiree grew up.',
+      body: [
+        'COLEwebdev co-founder and lead designer Desiree Cole was raised in Wellfleet — the oyster flats and tidal creeks, the drive-in, the galleries, the kind of small community where everyone knows everyone and the character of the place runs unmistakably deep. Her family\'s roots in Wellfleet shaped the way she sees design: the natural palette of the Outer Cape, the balance between rustic and refined, the quiet confidence of things built to last.',
+        'When Desiree designs a website for a Wellfleet business, that background is present in every decision — the way the site feels before a word is read, what it chooses to emphasize, how it earns trust from a visitor who came to Wellfleet specifically because they value authenticity. She knows what this town looks like, what it stands for, and what a Wellfleet business deserves.',
+      ],
+    },
     industries: ['Restaurants', 'Art Galleries', 'Marine & Aquaculture', 'Accommodations', 'Nonprofits', 'Retail'],
     clients: [
       { name: 'Wellfleet Chamber of Commerce', type: 'Chamber / Community', href: 'https://www.wellfleetchamber.com/' },
@@ -565,6 +575,16 @@ window.LOCATIONS_DATA = [
     heroSub: 'Where the Outer Cape narrows — websites built for Truro\'s unique community.',
     intro: 'Truro is one of the smallest towns in Massachusetts by population, but it punches well above its weight as a destination — artists, writers, and discerning visitors have been drawn to its dramatic cliffs, undeveloped beaches, and unhurried pace for generations. We\'ve built websites for Truro organizations including the Historical Society and the renowned Truro Vineyards, and we understand what it takes to reach Truro\'s sophisticated, intentional audience.',
     localContext: 'Truro businesses serve a visitor who has made a deliberate choice — they\'ve passed through Wellfleet and Eastham to get here, and they came on purpose. That means your customers are already sold on the destination; your website\'s job is to make sure they find you specifically, understand what you offer, and have every reason to stop in. We build Truro business websites that match the quality and character of the town — understated, authentic, and effective.',
+    founderStory: {
+      name: 'Josiah Cole',
+      role: 'Co-Founder & Developer',
+      img: 'assets/josiah-cole-cape-cod-website-designer.jpg',
+      headline: 'Truro is where Josiah grew up.',
+      body: [
+        'COLEwebdev co-founder Josiah Cole was raised in Truro — the narrowing of the Cape between bay and ocean, where the light in late afternoon hits the cliffs differently than anywhere else in New England and where the pace of life is something you feel before you can describe it. His family\'s roots here go back generations, and growing up in one of the smallest, most distinctively Cape Cod of all the Cape Cod towns shaped how he thinks about craft, character, and building things that belong to a place.',
+        'When Josiah builds a website for a Truro business, it\'s not an abstraction. He knows the beaches you\'re describing, the kind of visitor your business attracts, and what it means for something to feel right for Truro rather than just right in general. That context doesn\'t come from market research. It comes from growing up here.',
+      ],
+    },
     industries: ['Hospitality & Vacation Rentals', 'Arts & Galleries', 'Wineries & Food', 'Nonprofits', 'Outdoor Recreation', 'Retail'],
     clients: [
       { name: 'Truro Historical Society', type: 'Nonprofit', href: 'https://trurohistoricalsociety.org/' },
