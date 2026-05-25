@@ -107,6 +107,11 @@ function CapeCodeMarketingPage() {
         </div>
       </div>
 
+      <SummaryStrip
+        summary="Search, paid ads, social, design, and analytics — all under one roof, with a local team that knows Cape Cod's market, seasons, and customers."
+        points={['SEO', 'Google Ads', 'Social Media', 'Local Team']}
+      />
+
       {/* Services */}
       <section className="mkt-services">
         <div className="shell">

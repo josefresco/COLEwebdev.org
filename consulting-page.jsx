@@ -146,6 +146,11 @@ function ConsultingPage() {
         </div>
       </div>
 
+      <SummaryStrip
+        summary="35+ years of web and business experience applied to your specific challenge — strategy, audits, platform decisions, and one-on-one coaching for Cape Cod businesses."
+        points={['Website Strategy', 'Website Audits', 'Business Coaching', 'Platform Advice']}
+      />
+
       {/* What we offer */}
       <section className="cn-offers">
         <div className="shell">
