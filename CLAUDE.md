@@ -145,11 +145,13 @@ Each page HTML file has an inline `<style>` block. All selectors for that page a
 
 ## Hosting & Deployment
 
+**Platform:** GitHub Pages
 **Repository:** `https://github.com/josefresco/COLEwebdev.org` (branch: `main`)
-
 **Live site:** `https://colewebdev.org`
+**DNS:** A `CNAME` file in the repo root maps the custom domain. Do not delete or modify it.
 
-> **Confirm deployment method here.** The repo has no CI/CD config files (no `.github/workflows/`, no `netlify.toml`). Update this section once confirmed — e.g. "FTP sync from main via [tool]", "GitHub Pages", "manual upload via cPanel", etc.
+### How deployment works
+Push to `main` → GitHub Pages automatically serves the updated files. There is no build step, no CI pipeline, no cache invalidation to trigger. Static files are served directly from the repo root. Propagation is typically under 60 seconds.
 
 ### Git workflow
 ```
@@ -157,13 +159,17 @@ git pull origin main          # always pull before starting work
 # ... make changes ...
 git add <specific files>
 git commit -m "feat(scope): description"
-git push origin main
+git push origin main          # this is the deploy
 ```
 
-Always add specific files by name — avoid `git add .` to prevent accidentally committing preview files or local artifacts (`badge-preview.html`, `process-hero-preview.html`, etc.).
+Always add specific files by name — avoid `git add .` to prevent accidentally committing preview files or local artifacts (`badge-preview.html`, `process-hero-preview.html`, the `devtools/` directory, etc.).
 
 ### After pushing
-Once deployed, verify the change is live by hard-refreshing the affected page in an incognito window. The `styles.css` link in `index.html` uses a cache-busting query string (`?v=9`) — increment this version number when making significant CSS changes that affect the homepage.
+Verify the change is live by hard-refreshing the affected page in an incognito window (`Ctrl+Shift+R`). If a CSS change on the homepage isn't appearing, increment the cache-busting version in `index.html`:
+```html
+<link rel="stylesheet" href="styles.css?v=10" />
+```
+Other pages link to `styles.css` without a version string and are served fresh on each push.
 
 ---
 
