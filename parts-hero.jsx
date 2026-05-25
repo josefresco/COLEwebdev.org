@@ -93,6 +93,7 @@ const SEARCH_DATA = [
   { title: 'How Long Does SEO Take to Work?', desc: 'Realistic timelines and what good SEO looks like in progress.', category: 'Whitepapers', href: 'wp-how-long-seo.html' },
   { title: 'How Do I Know If My Website Is Working?', desc: 'The right metrics — and what "working" actually means.', category: 'Whitepapers', href: 'wp-is-my-website-working.html' },
   { title: 'Shopify vs. WooCommerce', desc: 'A practical e-commerce comparison for small businesses.', category: 'Whitepapers', href: 'wp-shopify-vs-woocommerce.html' },
+  { title: 'Maine Web Design', desc: 'Web design for Maine businesses — Farmington roots, Aroostook County presence.', category: 'Location', href: 'maine-web-design.html' },
   { title: 'Cape Cod Web Design', desc: 'Local web design studio serving all 15 Cape Cod towns since 2006.', category: 'Location', href: 'cape-cod-web-design.html' },
   { title: 'Eastham Web Design', desc: 'COLEwebdev is based in Eastham — your local web design studio.', category: 'Location', href: 'eastham-web-design.html' },
   { title: 'Orleans Web Design', desc: 'Custom websites for Orleans, MA businesses.', category: 'Location', href: 'orleans-web-design.html' },
