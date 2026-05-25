@@ -153,6 +153,11 @@ function EcommercePage() {
         </div>
       </div>
 
+      <SummaryStrip
+        summary="WooCommerce and Shopify storefronts fully built and configured for real sales — products, payments, shipping, and checkout all set up and handed off."
+        points={['WooCommerce', 'Shopify', 'Full Setup', 'Training Included']}
+      />
+
       {/* Platforms */}
       <section className="ec-platforms">
         <div className="shell">

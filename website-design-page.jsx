@@ -73,6 +73,11 @@ function WebDesignPage() {
         </div>
       </div>
 
+      <SummaryStrip
+        summary="100% custom websites for Cape Cod businesses — no templates, no shortcuts. Design, development, mobile optimization, and launch support all included."
+        points={['100% Custom Design', 'SEO-Ready', 'Fixed Price', 'Mobile-First']}
+      />
+
       {/* Website Design section */}
       <section className="wd-section">
         <div className="shell wd-split">

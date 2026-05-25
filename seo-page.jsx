@@ -92,6 +92,11 @@ function SeoPage() {
         </div>
       </div>
 
+      <SummaryStrip
+        summary="Ethical local SEO that puts Cape Cod businesses in front of customers when they search — measured in real rankings, calls, and results you can see."
+        points={['Local SEO', 'Google Business Profile', 'Monthly Reports', 'No Black Hat']}
+      />
+
       {/* Why local search matters */}
       <section className="seo-why">
         <div className="shell seo-why-grid">

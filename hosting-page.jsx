@@ -94,6 +94,11 @@ function HostingPage() {
         </div>
       </div>
 
+      <SummaryStrip
+        summary="Managed WordPress hosting with daily backups, security monitoring, monthly updates, and a real team to call — so you can run your business, not your server."
+        points={['Daily Backups', 'Security Monitoring', 'WordPress Updates', 'Priority Support']}
+      />
+
       {/* What's included */}
       <section className="hc-includes">
         <div className="shell">

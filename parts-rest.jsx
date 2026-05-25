@@ -512,4 +512,25 @@ function Footer() {
 
 }
 
-Object.assign(window, { Process, Portfolio, Testimonial, News, CTA, NewsletterBanner, Footer });
+/* ============================================================
+   Summary Strip — TL;DR band for service & location pages
+   ============================================================ */
+function SummaryStrip({ summary, points }) {
+  return (
+    <div className="ss-strip">
+      <div className="shell">
+        <div className="ss-inner">
+          <span className="ss-label">AT A GLANCE</span>
+          <p className="ss-summary">{summary}</p>
+          {points && points.length > 0 && (
+            <div className="ss-points">
+              {points.map((p, i) => <span key={i} className="ss-point">{p}</span>)}
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+Object.assign(window, { Process, Portfolio, Testimonial, News, CTA, NewsletterBanner, Footer, SummaryStrip });

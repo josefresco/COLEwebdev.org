@@ -54,6 +54,11 @@ function LocationPage() {
         </div>
       </div>
 
+      <SummaryStrip
+        summary={`Web design for ${loc.city} businesses — custom-built sites, local SEO, and ongoing support from Cape Cod's longest-running web studio.`}
+        points={['Local Studio', '20 Years Experience', '700+ Sites Built', '4.8★ Google']}
+      />
+
       {/* Intro + context */}
       <section className="lp-intro">
         <div className="shell">

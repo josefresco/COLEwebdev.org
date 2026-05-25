@@ -125,6 +125,11 @@ function TraditionalPage() {
         </div>
       </div>
 
+      <SummaryStrip
+        summary="Hand-coded HTML, CSS, and JavaScript — built line by line for businesses that want maximum speed, security, and design precision without a CMS or plugin stack."
+        points={['No CMS', 'Lightning Fast', 'Maximum Security', 'No Plugins']}
+      />
+
       {/* Why Traditional */}
       <section className="tr-why">
         <div className="shell">

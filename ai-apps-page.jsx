@@ -280,6 +280,11 @@ function AiAppsPage() {
         </div>
       </div>
 
+      <SummaryStrip
+        summary="Custom AI apps, chatbots, and integrations built around your specific workflow — not generic off-the-shelf tools. Practical AI that small businesses can actually rely on."
+        points={['Custom-Built', 'WordPress Integration', 'Practical AI', 'No-Code Handoff']}
+      />
+
       {/* Philosophy */}
       <section className="ai-phil">
         <div className="shell ai-phil-grid">

@@ -73,6 +73,11 @@ function BrandingPage() {
         </div>
       </div>
 
+      <SummaryStrip
+        summary="Logos, color systems, typography, and print collateral built to work together — so your brand looks as professional offline as it does on your website."
+        points={['Logo Design', 'Color Systems', 'Print-Ready', 'Brand Guidelines']}
+      />
+
       {/* What we do */}
       <section className="br-what">
         <div className="shell">

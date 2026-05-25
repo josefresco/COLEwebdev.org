@@ -132,6 +132,11 @@ function WordPressPage() {
         </div>
       </div>
 
+      <SummaryStrip
+        summary="WordPress designed lean, custom-themed, and handed off so you can actually manage it — built on the CMS that powers 40% of the web, done right."
+        points={['Custom Theme', 'Client-Managed', 'WooCommerce-Ready', 'Plugin-Lite']}
+      />
+
       {/* Why WordPress */}
       <section className="wp-why">
         <div className="shell">

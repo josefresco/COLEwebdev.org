@@ -167,6 +167,11 @@ function PpcPage() {
         </div>
       </div>
 
+      <SummaryStrip
+        summary="Google Ads management focused on eliminating waste — tight keyword targeting, purpose-built landing pages, and real conversion tracking that connects to your actual results."
+        points={['Google Ads', 'Negative Keywords', 'Conversion Tracking', 'Cape Cod PPC']}
+      />
+
       {/* The problem */}
       <section className="ppc-problem">
         <div className="shell ppc-problem-grid">

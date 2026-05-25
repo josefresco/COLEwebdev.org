@@ -25,6 +25,10 @@ const WP_RELATED_LINKS = {
   'shopify-vs-woocommerce':  [{ text: 'E-Commerce', href: 'ecommerce.html' }, { text: 'WordPress Design', href: 'wordpress.html' }, { text: 'Request a Quote', href: 'quote.html' }],
 };
 
+function slugify(s) {
+  return s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+}
+
 function WhitepaperPage() {
   const id = window.CURRENT_WP_ID;
   const all = window.WHITEPAPERS_DATA || [];
@@ -33,6 +37,7 @@ function WhitepaperPage() {
   const prev = idx > 0 ? all[idx - 1] : null;
   const next = idx < all.length - 1 ? all[idx + 1] : null;
   const relatedLinks = WP_RELATED_LINKS[id] || [];
+  const [open, setOpen] = React.useState(true);
 
   React.useEffect(function() {
     if (!wp) return;
@@ -95,6 +100,50 @@ function WhitepaperPage() {
         </div>
       </div>
 
+      {/* Guide Panel — TL;DR + jump links */}
+      <div className="wpa-guide-wrap">
+        <div className="shell">
+          <div className="wpa-guide-panel">
+            <button
+              className="wpa-guide-toggle"
+              onClick={function() { setOpen(function(o) { return !o; }); }}
+              aria-expanded={open}
+            >
+              <div className="wpa-guide-toggle-left">
+                <span className="wpa-guide-toggle-label">In this guide</span>
+                <span className="wpa-guide-count">{wp.sections.length} sections</span>
+              </div>
+              <svg
+                className={'wpa-guide-chevron' + (open ? ' open' : '')}
+                width="16" height="16" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" strokeWidth="2"
+                strokeLinecap="round" strokeLinejoin="round"
+                aria-hidden="true"
+              >
+                <polyline points="6,9 12,15 18,9" />
+              </svg>
+            </button>
+            <div className={'wpa-guide-body' + (open ? ' open' : '')}>
+              <div className="wpa-guide-body-inner">
+                <p className="wpa-guide-tldr">{wp.summary}</p>
+                <ol className="wpa-guide-links">
+                  {wp.sections.map(function(sec, i) {
+                    return (
+                      <li key={i}>
+                        <a className="wpa-guide-link" href={'#' + slugify(sec.heading)}>
+                          <span className="wpa-guide-link-num">{String(i + 1).padStart(2, '0')}</span>
+                          {sec.heading}
+                        </a>
+                      </li>
+                    );
+                  })}
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Body */}
       <section className="wpa-body">
         <div className="shell">
@@ -106,7 +155,7 @@ function WhitepaperPage() {
 
               {wp.sections.map(function(sec, i) {
                 return (
-                  <div key={i} className="wpa-section">
+                  <div key={i} className="wpa-section" id={slugify(sec.heading)}>
                     <h2 className="wpa-section-hl">{sec.heading}</h2>
                     {sec.body.map(function(p, j) {
                       return <p key={j} className="wpa-section-p">{p}</p>;

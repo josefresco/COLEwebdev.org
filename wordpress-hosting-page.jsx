@@ -132,6 +132,11 @@ function WPHostingPage() {
         </div>
       </div>
 
+      <SummaryStrip
+        summary="Purpose-built WordPress infrastructure — isolated environments, global CDN, daily backups, staging, and enterprise security. Not shared hosting with a WordPress installer bolted on."
+        points={['Isolated Hosting', 'Global CDN', 'Staging Included', 'Daily Backups']}
+      />
+
       {/* Features grid */}
       <section className="wph-features">
         <div className="shell">
