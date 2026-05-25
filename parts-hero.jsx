@@ -35,8 +35,7 @@ function ColeLogo({ height = 34, dark = false }) {
    ============================================================ */
 const SERVICE_LINKS = [
   { href: 'website-design.html', title: 'Web Design' },
-  { href: 'seo.html', title: 'SEO & Local Search' },
-  { href: 'cape-cod-marketing.html', title: 'Cape Cod Marketing' },
+  { href: 'marketing.html', title: 'Marketing' },
   { href: 'hosting.html', title: 'Hosting + Care Plans' },
   { href: 'branding.html', title: 'Branding' },
   { href: 'ecommerce.html', title: 'E-Commerce' },
@@ -61,7 +60,7 @@ const SEARCH_DATA = [
   { title: 'Social News', desc: 'Live updates from our Bluesky feed.', category: 'Company', href: 'social-news.html' },
   { title: 'Request a Quote', desc: 'Get a fast, no-obligation project estimate.', category: 'Company', href: 'quote.html' },
   { title: 'Web Design', desc: 'Modern, mobile-first websites built for your business.', category: 'Services', href: 'website-design.html' },
-  { title: 'SEO & Local Search', desc: 'Show up when neighbors search for what you sell.', category: 'Services', href: 'seo.html' },
+  { title: 'Marketing', desc: 'SEO, Google Ads, social media, analytics, and lead capture — one local team.', category: 'Services', href: 'marketing.html' },
   { title: 'PPC & Google Ads', desc: 'Paid search management — negatives, landing pages, and conversion tracking.', category: 'Services', href: 'ppc.html' },
   { title: 'AI Studio', desc: 'Chatbots, plugins, PWAs, extensions, and custom business tools.', category: 'Services', href: 'ai-apps.html' },
   { title: 'Consulting', desc: 'Website strategy, audits, business advice, and training.', category: 'Services', href: 'consulting.html' },
@@ -285,17 +284,10 @@ function Header() {
                   <div className="nav-dd-desc">Modern, mobile-first sites built for your business.</div>
                 </div>
               </a>
-              <a href="seo.html" className="nav-dd-item">
-                <span className="nav-dd-glyph orange">⚡</span>
+              <a href="marketing.html" className="nav-dd-item">
+                <span className="nav-dd-glyph orange">↗</span>
                 <div>
-                  <div className="nav-dd-title">SEO &amp; Local Search</div>
-                  <div className="nav-dd-desc">Show up when neighbors search for what you sell.</div>
-                </div>
-              </a>
-              <a href="cape-cod-marketing.html" className="nav-dd-item">
-                <span className="nav-dd-glyph green">↗</span>
-                <div>
-                  <div className="nav-dd-title">Cape Cod Marketing</div>
+                  <div className="nav-dd-title">Marketing</div>
                   <div className="nav-dd-desc">SEO, paid ads, social, analytics, and lead capture.</div>
                 </div>
               </a>
