@@ -394,6 +394,23 @@ function WhitepapersPage() {
         </div>
       </div>
 
+      {/* Table of Contents */}
+      <section className="wh-toc">
+        <div className="shell">
+          <p className="wh-toc-label">Jump to any guide</p>
+          <ol className="wh-toc-list">
+            {WHITEPAPERS.map(wp => (
+              <li key={wp.id} className="wh-toc-item">
+                <a href={`wp-${wp.id}.html`} className="wh-toc-link">
+                  <span className="wh-toc-num">{wp.num}</span>
+                  <span className="wh-toc-title">{wp.title}</span>
+                </a>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
       {/* Card grid */}
       <section className="wh-grid-section">
         <div className="shell">
