@@ -25,6 +25,25 @@ const WP_RELATED_LINKS = {
   'shopify-vs-woocommerce':  [{ text: 'E-Commerce', href: 'ecommerce.html' }, { text: 'WordPress Design', href: 'wordpress.html' }, { text: 'Request a Quote', href: 'quote.html' }],
 };
 
+const WP_IMAGES = {
+  'what-web-design-does': {
+    infographic: 'assets/wp-what-web-design-does-infographic.png',
+    infographicAlt: 'The Strategic Power of Web Design — infographic',
+  },
+  'diy-vs-pro': {
+    photo: 'assets/wp-diy-vs-pro-photo.png',
+    photoAlt: 'A business owner weighing DIY vs hiring a professional web designer',
+    infographic: 'assets/wp-diy-vs-pro-infographic.png',
+    infographicAlt: 'DIY vs Professional Web Design — comparison infographic',
+  },
+  'investment-value': {
+    photo: 'assets/wp-investment-value-photo.png',
+    photoAlt: 'Stacking coins representing the return on investment from a professional website',
+    infographic: 'assets/wp-investment-value-infographic.png',
+    infographicAlt: 'Website: Cost or Investment? — infographic',
+  },
+};
+
 function slugify(s) {
   return s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 }
@@ -37,6 +56,7 @@ function WhitepaperPage() {
   const prev = idx > 0 ? all[idx - 1] : null;
   const next = idx < all.length - 1 ? all[idx + 1] : null;
   const relatedLinks = WP_RELATED_LINKS[id] || [];
+  const images = WP_IMAGES[id] || null;
   const [open, setOpen] = React.useState(true);
 
   React.useEffect(function() {
@@ -153,6 +173,17 @@ function WhitepaperPage() {
             <article className="wpa-article">
               <p className="wpa-summary">{wp.summary}</p>
 
+              {images && images.infographic && (
+                <figure className="wpa-infographic">
+                  <img
+                    src={images.infographic}
+                    alt={images.infographicAlt}
+                    className="wpa-infographic-img"
+                    loading="lazy"
+                  />
+                </figure>
+              )}
+
               {wp.sections.map(function(sec, i) {
                 return (
                   <div key={i} className="wpa-section" id={slugify(sec.heading)}>
@@ -215,6 +246,17 @@ function WhitepaperPage() {
             {/* Sidebar */}
             <aside className="wpa-sidebar">
               <a href="whitepapers.html" className="wpa-back">← All Guides</a>
+
+              {images && images.photo && (
+                <figure className="wpa-sidebar-photo">
+                  <img
+                    src={images.photo}
+                    alt={images.photoAlt}
+                    className="wpa-sidebar-photo-img"
+                    loading="lazy"
+                  />
+                </figure>
+              )}
 
               {/* Quote CTA */}
               <div className="wpa-card wpa-card--quote">

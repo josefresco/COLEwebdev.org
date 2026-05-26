@@ -2819,3 +2819,25 @@ p, li {
 @media (max-width: 600px) {
   .wpa-guide-links { grid-template-columns: 1fr; }
 }
+
+/* Whitepaper infographic */
+.wpa-infographic { margin: 32px 0; }
+.wpa-infographic-img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-md);
+  display: block;
+}
+
+/* Whitepaper sidebar photo */
+.wpa-sidebar-photo {
+  margin: 0 0 20px;
+  border-radius: var(--r-lg);
+  overflow: hidden;
+}
+.wpa-sidebar-photo-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
