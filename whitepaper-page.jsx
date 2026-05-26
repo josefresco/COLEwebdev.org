@@ -42,6 +42,14 @@ const WP_IMAGES = {
     infographic: 'assets/wp-investment-value-infographic.png',
     infographicAlt: 'Website: Cost or Investment? — infographic',
   },
+  'three-types': {
+    infographic: 'assets/wp-three-types-infographic.png',
+    infographicAlt: 'The 3 Types of Web Design — infographic',
+  },
+  'seven-golden-rules': {
+    infographic: 'assets/wp-seven-golden-rules-infographic.png',
+    infographicAlt: 'The 7 Golden Rules of Web Design — infographic',
+  },
 };
 
 function slugify(s) {
