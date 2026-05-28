@@ -269,6 +269,7 @@ function Header() {
 
   return (
     <React.Fragment>
+      <div className="site-ghost" aria-hidden="true" />
       <CookieBanner />
       <header className="site-header">
       <nav className="nav">

@@ -2841,3 +2841,18 @@ p, li {
   height: auto;
   display: block;
 }
+
+/* Site-wide ghost logo watermark */
+.site-ghost {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 52vmin;
+  height: 52vmin;
+  background: url('assets/logo-ghost.png') no-repeat center center / contain;
+  opacity: 0.07;
+  mix-blend-mode: screen;
+  pointer-events: none;
+  z-index: 0;
+}
