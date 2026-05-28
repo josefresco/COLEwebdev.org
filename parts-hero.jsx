@@ -40,7 +40,6 @@ const SERVICE_LINKS = [
   { href: 'branding.html', title: 'Branding' },
   { href: 'ecommerce.html', title: 'E-Commerce' },
   { href: 'wordpress.html', title: 'WordPress Design' },
-  { href: 'wordpress-speed.html', title: 'WordPress Speed' },
   { href: 'traditional.html', title: 'Traditional Web Design' },
   { href: 'ai-apps.html', title: 'AI Studio', pill: 'NEW' },
   { href: 'consulting.html', title: 'Consulting' },
@@ -305,13 +304,6 @@ function Header() {
                 <div>
                   <div className="nav-dd-title">WordPress Hosting</div>
                   <div className="nav-dd-desc">Isolated environments, CDN, staging, 99.95% uptime.</div>
-                </div>
-              </a>
-              <a href="wordpress-speed.html" className="nav-dd-item">
-                <span className="nav-dd-glyph green">⚡</span>
-                <div>
-                  <div className="nav-dd-title">WordPress Speed</div>
-                  <div className="nav-dd-desc">Core Web Vitals, caching, image optimization, plugin audits.</div>
                 </div>
               </a>
               <a href="branding.html" className="nav-dd-item">
