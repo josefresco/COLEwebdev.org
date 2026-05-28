@@ -37,6 +37,7 @@ const SERVICE_LINKS = [
   { href: 'website-design.html', title: 'Web Design' },
   { href: 'marketing.html', title: 'Marketing' },
   { href: 'hosting.html', title: 'Hosting + Care Plans' },
+  { href: 'updates.html', title: 'Updates & Maintenance' },
   { href: 'branding.html', title: 'Branding' },
   { href: 'ecommerce.html', title: 'E-Commerce' },
   { href: 'wordpress.html', title: 'WordPress Design' },
@@ -65,6 +66,7 @@ const SEARCH_DATA = [
   { title: 'AI Studio', desc: 'Chatbots, plugins, PWAs, extensions, and custom business tools.', category: 'Services', href: 'ai-apps.html' },
   { title: 'Consulting', desc: 'Website strategy, audits, business advice, and training.', category: 'Services', href: 'consulting.html' },
   { title: 'Hosting + Care Plans', desc: 'Backups, security, updates — and a human to email.', category: 'Services', href: 'hosting.html' },
+  { title: 'Updates & Maintenance', desc: 'Hourly content edits — text, images, pages, forms. No monthly commitment.', category: 'Services', href: 'updates.html' },
   { title: 'WordPress Hosting', desc: 'Isolated environments, global CDN, staging, and 99.95% uptime.', category: 'Services', href: 'wordpress-hosting.html' },
   { title: 'Branding', desc: 'Logos, color, print — so the site fits the rest of you.', category: 'Services', href: 'branding.html' },
   { title: 'E-Commerce', desc: 'WooCommerce and Shopify storefronts that ship.', category: 'Services', href: 'ecommerce.html' },
@@ -298,6 +300,13 @@ function Header() {
                 <div>
                   <div className="nav-dd-title">Hosting + Care Plans</div>
                   <div className="nav-dd-desc">Backups, security, updates — and a human to email.</div>
+                </div>
+              </a>
+              <a href="updates.html" className="nav-dd-item">
+                <span className="nav-dd-glyph blue">✎</span>
+                <div>
+                  <div className="nav-dd-title">Updates &amp; Maintenance</div>
+                  <div className="nav-dd-desc">Hourly edits — text, images, pages, forms. No retainer.</div>
                 </div>
               </a>
               <a href="wordpress-hosting.html" className="nav-dd-item">
