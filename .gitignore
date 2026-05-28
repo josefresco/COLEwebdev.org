@@ -1,3 +1,25 @@
 .claude/
 uploads/
 devtools/node_modules/
+
+# OS artifacts
+Thumbs.db
+.DS_Store
+desktop.ini
+__MACOSX/
+
+# Archives and temp dumps
+*.zip
+*.tar.gz
+
+# Preview / scratch files
+*-preview.html
+*-draft.html
+scratch/
+temp/
+tmp/
+
+# Editor artifacts
+*.bak
+*.swp
+*.tmp
