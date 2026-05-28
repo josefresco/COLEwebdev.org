@@ -25,7 +25,7 @@ const UM_PROCESS = [
   {
     num: '03',
     title: 'Done and confirmed',
-    body: 'Changes are made, you review, and we invoice for actual time spent. Most small edits are done same or next business day.',
+    body: 'Changes are made, you review, and we invoice for actual time spent.',
   },
 ];
 
@@ -76,7 +76,7 @@ function UpdatesPage() {
               </a>
             </div>
             <div className="um-hero-note">
-              Billed at our standard hourly rate · Most edits completed same or next business day
+              Billed at our standard hourly rate
             </div>
           </div>
         </div>
@@ -84,7 +84,7 @@ function UpdatesPage() {
 
       <SummaryStrip
         summary="Hourly-rate website edits — text updates, image swaps, new pages, form changes, and more. No monthly commitment. You request it, we do it, we invoice for actual time."
-        points={['Hourly Rate', 'No Retainer', 'Same-Day Turnaround', 'Any CMS']}
+        points={['Hourly Rate', 'No Retainer', 'Any CMS', 'No Commitment']}
       />
 
       {/* What we update */}
