@@ -256,6 +256,23 @@ function WPHostingPage() {
         </div>
       </section>
 
+      {/* Speed optimization tie-in */}
+      <section className="wph-speed">
+        <div className="shell wph-speed-inner">
+          <div className="wph-speed-badge">⚡</div>
+          <div className="wph-speed-text">
+            <span className="eyebrow wph-speed-eyebrow">Also available</span>
+            <h2 className="wph-speed-hl">Need a faster WordPress site?</h2>
+            <p className="wph-speed-body">
+              Great hosting is the foundation — but if your site is still slow after moving to proper infrastructure, that's a code problem, not a server problem. Our WordPress Speed Optimization service digs into Core Web Vitals, image compression, plugin bloat, and database cleanup to get your PageSpeed score where it should be.
+            </p>
+            <a className="btn btn--primary" href="wordpress-speed.html">
+              WordPress Speed Optimization <span className="arrow">→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="wph-cta">
         <div className="shell wph-cta-inner">

@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>WordPress Speed Optimization — COLEwebdev · Cape Cod</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<meta name="description" content="WordPress speed optimization from COLEwebdev — Core Web Vitals, image optimization, caching, plugin audits, and database cleanup. Faster sites rank higher and convert more." />
+<link rel="canonical" href="https://colewebdev.org/wordpress-speed.html" />
+<link rel="stylesheet" href="styles.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "WordPress Speed Optimization",
+  "url": "https://colewebdev.org/wordpress-speed.html",
+  "description": "WordPress performance optimization including Core Web Vitals, image compression, server-level caching, plugin audits, and database cleanup. Fully managed by COLEwebdev.",
+  "provider": { "@type": "ProfessionalService", "name": "COLEwebdev", "url": "https://colewebdev.org/" },
+  "areaServed": { "@type": "State", "name": "Cape Cod, Massachusetts" },
+  "serviceType": "WordPress Speed Optimization"
+}
+</script>
+<style>
+/* ── WordPress Speed Optimization page (wps-) ── */
+
+/* Hero */
+.wps-hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 56vh;
+  display: flex;
+  align-items: center;
+}
+.wps-hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 50% 60% at 105% 5%, rgba(123,192,67,0.3), transparent 55%),
+    radial-gradient(ellipse 40% 50% at -5% 95%, rgba(14,42,74,0.5), transparent 55%),
+    linear-gradient(155deg, #061020 0%, #0A1F36 50%, #0D2840 100%);
+}
+.wps-hero-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(255,255,255,0.02) 39px, rgba(255,255,255,0.02) 40px),
+    repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255,255,255,0.02) 39px, rgba(255,255,255,0.02) 40px);
+}
+.wps-hero-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 100px 0 88px;
+}
+.wps-eyebrow { color: rgba(255,255,255,0.5); }
+.wps-hero-hl {
+  font-family: var(--serif);
+  font-size: clamp(40px, 6vw, 76px);
+  line-height: 1.05;
+  color: white;
+  font-weight: 400;
+  margin: 12px 0 20px;
+  letter-spacing: -1px;
+}
+.wps-hero-hl em { color: #7BC043; font-style: italic; }
+.wps-hero-sub {
+  font-size: 17px;
+  line-height: 1.65;
+  color: rgba(255,255,255,0.7);
+  max-width: 580px;
+  margin: 0 0 36px;
+}
+.wps-hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 48px; }
+.wps-ghost { color: rgba(255,255,255,0.8); border-color: rgba(255,255,255,0.25); }
+.wps-ghost:hover { border-color: rgba(255,255,255,0.6); color: white; }
+
+/* Spec strip */
+.wps-spec-strip {
+  display: flex;
+  gap: 0;
+  flex-wrap: wrap;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  width: fit-content;
+}
+.wps-spec {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 16px 28px;
+  border-right: 1px solid rgba(255,255,255,0.12);
+}
+.wps-spec:last-child { border-right: none; }
+.wps-spec-val {
+  font-family: var(--serif);
+  font-size: 22px;
+  color: #7BC043;
+  font-style: italic;
+  line-height: 1;
+}
+.wps-spec-label {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+}
+
+/* Core Web Vitals */
+.wps-vitals {
+  padding: 88px 0;
+  background: var(--paper-2);
+  border-top: 1px solid var(--line);
+}
+.wps-vitals-hd { margin-bottom: 52px; max-width: 680px; }
+.wps-vitals-hl {
+  font-family: var(--serif);
+  font-size: clamp(28px, 3.5vw, 44px);
+  color: var(--ink);
+  font-weight: 400;
+  margin: 8px 0 16px;
+  line-height: 1.15;
+}
+.wps-vitals-sub { font-size: 15px; line-height: 1.7; color: var(--ink-2); margin: 0; }
+.wps-vitals-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.wps-vital-card {
+  background: var(--navy);
+  border-radius: var(--r-xl);
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.wps-vital-key {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+}
+.wps-vital-target {
+  font-family: var(--serif);
+  font-size: clamp(32px, 4vw, 48px);
+  color: #7BC043;
+  font-style: italic;
+  line-height: 1;
+  margin: 4px 0 2px;
+}
+.wps-vital-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  line-height: 1.3;
+}
+.wps-vital-desc {
+  font-size: 13px;
+  line-height: 1.65;
+  color: rgba(255,255,255,0.6);
+  margin: 4px 0 0;
+}
+
+/* Optimizations */
+.wps-opts {
+  padding: 88px 0;
+  background: var(--paper);
+  border-top: 1px solid var(--line);
+}
+.wps-opts-hd { margin-bottom: 52px; max-width: 680px; }
+.wps-opts-hl {
+  font-family: var(--serif);
+  font-size: clamp(28px, 3.5vw, 44px);
+  color: var(--ink);
+  font-weight: 400;
+  margin: 8px 0 16px;
+}
+.wps-opts-sub { font-size: 15px; line-height: 1.7; color: var(--ink-2); margin: 0; }
+.wps-opts-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.wps-opt-card {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: var(--r-xl);
+  padding: 24px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.22s, box-shadow 0.22s;
+}
+.wps-opt-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.wps-opt-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+.wps-opt-title {
+  font-family: var(--serif);
+  font-size: 18px;
+  color: var(--ink);
+  font-weight: 400;
+  line-height: 1.2;
+}
+.wps-opt-body {
+  font-size: 13px;
+  line-height: 1.65;
+  color: var(--ink-2);
+}
+
+/* Process */
+.wps-process {
+  padding: 88px 0;
+  background: var(--paper-2);
+  border-top: 1px solid var(--line);
+}
+.wps-process-hd { margin-bottom: 52px; }
+.wps-process-hl {
+  font-family: var(--serif);
+  font-size: clamp(26px, 3.2vw, 40px);
+  color: var(--ink);
+  font-weight: 400;
+  margin: 8px 0 0;
+}
+.wps-process-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+}
+.wps-step {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: var(--r-xl);
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.wps-step-num {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  color: var(--brand-green);
+  text-transform: uppercase;
+}
+.wps-step-title {
+  font-family: var(--serif);
+  font-size: 22px;
+  color: var(--ink);
+  font-weight: 400;
+}
+.wps-step-body {
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--ink-2);
+  margin: 0;
+}
+
+/* Hosting tie-in */
+.wps-hosting {
+  padding: 88px 0;
+  background: var(--paper);
+  border-top: 1px solid var(--line);
+}
+.wps-hosting-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+.wps-hosting-eyebrow { color: var(--brand-blue); }
+.wps-hosting-hl {
+  font-family: var(--serif);
+  font-size: clamp(26px, 3.2vw, 40px);
+  color: var(--ink);
+  font-weight: 400;
+  margin: 8px 0 20px;
+  line-height: 1.15;
+}
+.wps-hosting-body {
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--ink-2);
+  margin: 0 0 16px;
+}
+.wps-hosting-body:last-of-type { margin-bottom: 28px; }
+.wps-hosting-panel {
+  background: var(--navy);
+  border-radius: var(--r-xl);
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.wps-hosting-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  font-size: 14px;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.4;
+}
+.wps-hosting-check {
+  color: #7BC043;
+  font-size: 13px;
+  flex-shrink: 0;
+  padding-top: 1px;
+}
+
+/* CTA */
+.wps-cta {
+  padding: 80px 0;
+  background: var(--navy);
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.wps-cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--r-xl);
+  padding: 52px 60px;
+}
+.wps-cta-hl {
+  font-family: var(--serif);
+  font-size: clamp(22px, 2.8vw, 34px);
+  color: white;
+  font-weight: 400;
+  font-style: italic;
+  margin: 0 0 10px;
+}
+.wps-cta-sub {
+  font-size: 15px;
+  color: rgba(255,255,255,0.6);
+  margin: 0;
+  max-width: 420px;
+}
+.wps-cta-related {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.wps-cta-related-label {
+  font-size: 11px;
+  font-family: var(--mono);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+}
+.wps-cta-related-link { font-size: 13px; color: rgba(255,255,255,0.7); text-decoration: none; }
+.wps-cta-related-link:hover { color: white; }
+.wps-cta-actions { display: flex; gap: 14px; flex-wrap: wrap; flex-shrink: 0; }
+.wps-cta-ghost { color: rgba(255,255,255,0.7); border-color: rgba(255,255,255,0.2); }
+.wps-cta-ghost:hover { color: white; border-color: rgba(255,255,255,0.5); }
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .wps-opts-grid { grid-template-columns: repeat(2, 1fr); }
+  .wps-process-steps { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 960px) {
+  .wps-vitals-grid { grid-template-columns: 1fr; }
+  .wps-hosting-inner { grid-template-columns: 1fr; gap: 48px; }
+  .wps-cta-inner { padding: 40px 32px; flex-direction: column; align-items: flex-start; }
+  .wps-spec-strip { width: 100%; }
+  .wps-spec { flex: 1; }
+}
+@media (max-width: 600px) {
+  .wps-opts-grid { grid-template-columns: 1fr; }
+  .wps-process-steps { grid-template-columns: 1fr; }
+  .wps-hero-actions { flex-direction: column; align-items: flex-start; }
+  .wps-spec-strip { flex-direction: column; }
+  .wps-spec { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.12); }
+  .wps-spec:last-child { border-bottom: none; }
+}
+</style>
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="COLEwebdev" />
+<meta property="og:title" content="WordPress Speed Optimization — COLEwebdev · Cape Cod" />
+<meta property="og:description" content="Core Web Vitals, image optimization, caching, plugin audits, and database cleanup. Faster WordPress sites rank higher and convert more visitors." />
+<meta property="og:url" content="https://colewebdev.org/wordpress-speed.html" />
+<meta property="og:image" content="https://colewebdev.org/assets/website-design-wordpress-cape-cod-website-6.jpg" />
+</head>
+<body>
+<div id="root"></div>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="parts-hero.jsx"></script>
+<script type="text/babel" src="parts-services.jsx"></script>
+<script type="text/babel" src="parts-rest.jsx"></script>
+<script type="text/babel" src="wordpress-speed-page.jsx"></script>
+</body>
+</html>

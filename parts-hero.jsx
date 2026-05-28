@@ -40,6 +40,7 @@ const SERVICE_LINKS = [
   { href: 'branding.html', title: 'Branding' },
   { href: 'ecommerce.html', title: 'E-Commerce' },
   { href: 'wordpress.html', title: 'WordPress Design' },
+  { href: 'wordpress-speed.html', title: 'WordPress Speed' },
   { href: 'traditional.html', title: 'Traditional Web Design' },
   { href: 'ai-apps.html', title: 'AI Studio', pill: 'NEW' },
   { href: 'consulting.html', title: 'Consulting' },
@@ -69,6 +70,7 @@ const SEARCH_DATA = [
   { title: 'Branding', desc: 'Logos, color, print — so the site fits the rest of you.', category: 'Services', href: 'branding.html' },
   { title: 'E-Commerce', desc: 'WooCommerce and Shopify storefronts that ship.', category: 'Services', href: 'ecommerce.html' },
   { title: 'WordPress Design', desc: 'Custom WordPress builds that are easy to manage.', category: 'Services', href: 'wordpress.html' },
+  { title: 'WordPress Speed Optimization', desc: 'Core Web Vitals, image optimization, caching, and plugin audits.', category: 'Services', href: 'wordpress-speed.html' },
   { title: 'Traditional Web Design', desc: 'Static HTML/CSS sites — fast, secure, no CMS needed.', category: 'Services', href: 'traditional.html' },
   { title: 'What Web Design Actually Does', desc: 'How a professional website drives real business results.', category: 'Whitepapers', href: 'wp-what-web-design-does.html' },
   { title: 'Is a Website Worth the Investment?', desc: 'A clear-eyed look at ROI for small business websites.', category: 'Whitepapers', href: 'wp-investment-value.html' },
@@ -303,6 +305,13 @@ function Header() {
                 <div>
                   <div className="nav-dd-title">WordPress Hosting</div>
                   <div className="nav-dd-desc">Isolated environments, CDN, staging, 99.95% uptime.</div>
+                </div>
+              </a>
+              <a href="wordpress-speed.html" className="nav-dd-item">
+                <span className="nav-dd-glyph green">⚡</span>
+                <div>
+                  <div className="nav-dd-title">WordPress Speed</div>
+                  <div className="nav-dd-desc">Core Web Vitals, caching, image optimization, plugin audits.</div>
                 </div>
               </a>
               <a href="branding.html" className="nav-dd-item">
