@@ -70,6 +70,7 @@ const SEARCH_DATA = [
   { title: 'E-Commerce', desc: 'WooCommerce and Shopify storefronts that ship.', category: 'Services', href: 'ecommerce.html' },
   { title: 'WordPress Design', desc: 'Custom WordPress builds that are easy to manage.', category: 'Services', href: 'wordpress.html' },
   { title: 'WordPress Speed Optimization', desc: 'Core Web Vitals, image optimization, caching, and plugin audits.', category: 'Services', href: 'wordpress-speed.html' },
+  { title: 'Web Accessibility (WCAG)', desc: 'WCAG 2.1 AA audits, remediation, and ADA compliance for business websites.', category: 'Services', href: 'web-accessibility.html' },
   { title: 'Traditional Web Design', desc: 'Static HTML/CSS sites — fast, secure, no CMS needed.', category: 'Services', href: 'traditional.html' },
   { title: 'What Web Design Actually Does', desc: 'How a professional website drives real business results.', category: 'Whitepapers', href: 'wp-what-web-design-does.html' },
   { title: 'Is a Website Worth the Investment?', desc: 'A clear-eyed look at ROI for small business websites.', category: 'Whitepapers', href: 'wp-investment-value.html' },

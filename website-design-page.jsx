@@ -265,6 +265,25 @@ function WebDesignPage() {
         </div>
       </section>
 
+      {/* Accessibility callout */}
+      <section className="wd-a11y">
+        <div className="shell">
+          <div className="wd-a11y-inner">
+            <div className="wd-a11y-icon">◑</div>
+            <div>
+              <span className="eyebrow wd-a11y-eyebrow">Built to WCAG 2.1 AA</span>
+              <h3 className="wd-a11y-hl">Every site we build is accessible from day one.</h3>
+              <p className="wd-a11y-body">
+                Keyboard navigation, screen reader compatibility, color contrast, and semantic HTML are part of our standard build — not an afterthought. We also offer standalone WCAG audits and remediation for existing sites built by others.
+              </p>
+              <a href="web-accessibility.html" className="wd-a11y-link">
+                Web Accessibility Services <span className="arrow">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="wd-cta-section">
         <div className="shell">

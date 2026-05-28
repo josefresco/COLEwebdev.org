@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Web Accessibility Services — WCAG 2.1 AA · COLEwebdev</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<meta name="description" content="WCAG 2.1 AA accessibility audits, remediation, and monitoring from COLEwebdev. Protect your business from ADA exposure and build websites that work for every user." />
+<link rel="canonical" href="https://colewebdev.org/web-accessibility.html" />
+<link rel="stylesheet" href="styles.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Web Accessibility Services",
+  "url": "https://colewebdev.org/web-accessibility.html",
+  "description": "WCAG 2.1 AA compliance audits, remediation, and ongoing monitoring. Keyboard navigation, color contrast, screen reader testing, and ADA compliance for business websites.",
+  "provider": { "@type": "ProfessionalService", "name": "COLEwebdev", "url": "https://colewebdev.org/" },
+  "areaServed": { "@type": "State", "name": "Cape Cod, Massachusetts" },
+  "serviceType": "Web Accessibility Audit"
+}
+</script>
+<style>
+/* ── Web Accessibility service page (wca-) ── */
+
+/* Hero */
+.wca-hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 54vh;
+  display: flex;
+  align-items: center;
+}
+.wca-hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 50% 65% at 100% 0%, rgba(0,115,170,0.4), transparent 55%),
+    radial-gradient(ellipse 40% 50% at 0% 100%, rgba(92,192,53,0.15), transparent 50%),
+    linear-gradient(150deg, #061828 0%, #092030 55%, #0A2840 100%);
+}
+.wca-hero-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(255,255,255,0.02) 39px, rgba(255,255,255,0.02) 40px),
+    repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255,255,255,0.02) 39px, rgba(255,255,255,0.02) 40px);
+}
+.wca-hero-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 100px 0 88px;
+}
+.wca-eyebrow { color: rgba(255,255,255,0.5); }
+.wca-hero-hl {
+  font-family: var(--serif);
+  font-size: clamp(40px, 6vw, 76px);
+  line-height: 1.05;
+  color: white;
+  font-weight: 400;
+  margin: 12px 0 20px;
+  letter-spacing: -1px;
+}
+.wca-hero-hl em { color: #5CC035; font-style: italic; }
+.wca-hero-sub {
+  font-size: 17px;
+  line-height: 1.65;
+  color: rgba(255,255,255,0.7);
+  max-width: 600px;
+  margin: 0 0 36px;
+}
+.wca-hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 32px; }
+.wca-ghost { color: rgba(255,255,255,0.8); border-color: rgba(255,255,255,0.25); }
+.wca-ghost:hover { border-color: rgba(255,255,255,0.6); color: white; }
+.wca-hero-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+.wca-tag {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 4px;
+  color: rgba(255,255,255,0.55);
+}
+
+/* Why it matters */
+.wca-why {
+  padding: 88px 0;
+  background: var(--paper-2);
+  border-top: 1px solid var(--line);
+}
+.wca-why-hd { margin-bottom: 52px; max-width: 700px; }
+.wca-why-hl {
+  font-family: var(--serif);
+  font-size: clamp(26px, 3.2vw, 40px);
+  color: var(--ink);
+  font-weight: 400;
+  margin: 8px 0 0;
+  line-height: 1.15;
+}
+.wca-why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.wca-benefit-card {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: var(--r-xl);
+  padding: 36px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-shadow: var(--shadow-sm);
+}
+.wca-benefit-stat {
+  font-family: var(--serif);
+  font-size: clamp(36px, 5vw, 56px);
+  color: var(--brand-blue);
+  font-style: italic;
+  line-height: 1;
+}
+.wca-benefit-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-family: var(--mono);
+}
+.wca-benefit-body {
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--ink-2);
+  margin: 4px 0 0;
+}
+
+/* Conformance levels */
+.wca-levels {
+  padding: 88px 0;
+  background: var(--paper);
+  border-top: 1px solid var(--line);
+}
+.wca-levels-hd { margin-bottom: 52px; max-width: 680px; }
+.wca-levels-hl {
+  font-family: var(--serif);
+  font-size: clamp(26px, 3.2vw, 40px);
+  color: var(--ink);
+  font-weight: 400;
+  margin: 8px 0 12px;
+}
+.wca-levels-sub { font-size: 15px; line-height: 1.7; color: var(--ink-2); margin: 0; }
+.wca-levels-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.wca-level-card {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: var(--r-xl);
+  padding: 32px 28px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.wca-level-card.is-active {
+  border-color: var(--brand-blue);
+  background: var(--navy);
+}
+.wca-level-badge {
+  position: absolute;
+  top: -1px;
+  right: 20px;
+  background: var(--brand-blue);
+  color: white;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 0 0 6px 6px;
+}
+.wca-level-key {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.is-active .wca-level-key { color: rgba(255,255,255,0.5); }
+.wca-level-label {
+  font-family: var(--serif);
+  font-size: 26px;
+  color: var(--ink);
+  font-weight: 400;
+}
+.is-active .wca-level-label { color: white; }
+.wca-level-desc {
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--ink-2);
+  margin: 4px 0 0;
+}
+.is-active .wca-level-desc { color: rgba(255,255,255,0.65); }
+
+/* Audit grid */
+.wca-audit {
+  padding: 88px 0;
+  background: var(--paper-2);
+  border-top: 1px solid var(--line);
+}
+.wca-audit-hd { margin-bottom: 52px; max-width: 680px; }
+.wca-audit-hl {
+  font-family: var(--serif);
+  font-size: clamp(26px, 3.2vw, 40px);
+  color: var(--ink);
+  font-weight: 400;
+  margin: 8px 0 12px;
+}
+.wca-audit-sub { font-size: 15px; line-height: 1.7; color: var(--ink-2); margin: 0; }
+.wca-audit-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.wca-audit-card {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: var(--r-xl);
+  padding: 24px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.22s, box-shadow 0.22s;
+}
+.wca-audit-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.wca-audit-icon {
+  font-size: 20px;
+  color: var(--brand-blue);
+  line-height: 1;
+}
+.wca-audit-title {
+  font-family: var(--serif);
+  font-size: 17px;
+  color: var(--ink);
+  font-weight: 400;
+  line-height: 1.2;
+}
+.wca-audit-body { font-size: 13px; line-height: 1.65; color: var(--ink-2); }
+
+/* Process */
+.wca-process {
+  padding: 88px 0;
+  background: var(--paper);
+  border-top: 1px solid var(--line);
+}
+.wca-process-hd { margin-bottom: 52px; }
+.wca-process-hl {
+  font-family: var(--serif);
+  font-size: clamp(26px, 3.2vw, 40px);
+  color: var(--ink);
+  font-weight: 400;
+  margin: 8px 0 0;
+}
+.wca-process-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+}
+.wca-step {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: var(--r-xl);
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.wca-step-num {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  color: var(--brand-blue);
+  text-transform: uppercase;
+}
+.wca-step-title {
+  font-family: var(--serif);
+  font-size: 22px;
+  color: var(--ink);
+  font-weight: 400;
+}
+.wca-step-body { font-size: 13px; line-height: 1.7; color: var(--ink-2); margin: 0; }
+
+/* Built-in callout */
+.wca-builtin {
+  padding: 88px 0;
+  background: var(--paper-2);
+  border-top: 1px solid var(--line);
+}
+.wca-builtin-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+.wca-builtin-eyebrow { color: var(--brand-green); }
+.wca-builtin-hl {
+  font-family: var(--serif);
+  font-size: clamp(24px, 3vw, 36px);
+  color: var(--ink);
+  font-weight: 400;
+  margin: 8px 0 20px;
+  line-height: 1.15;
+}
+.wca-builtin-body { font-size: 15px; line-height: 1.75; color: var(--ink-2); margin: 0 0 16px; }
+.wca-builtin-body:last-of-type { margin-bottom: 28px; }
+.wca-builtin-checklist {
+  background: var(--navy);
+  border-radius: var(--r-xl);
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.wca-builtin-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  font-size: 14px;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.4;
+}
+.wca-builtin-check { color: #5CC035; font-size: 13px; flex-shrink: 0; padding-top: 1px; }
+
+/* CTA */
+.wca-cta {
+  padding: 80px 0;
+  background: var(--navy);
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.wca-cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--r-xl);
+  padding: 52px 60px;
+}
+.wca-cta-hl {
+  font-family: var(--serif);
+  font-size: clamp(22px, 2.8vw, 34px);
+  color: white;
+  font-weight: 400;
+  font-style: italic;
+  margin: 0 0 10px;
+}
+.wca-cta-sub { font-size: 15px; color: rgba(255,255,255,0.6); margin: 0; max-width: 400px; }
+.wca-cta-related {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.wca-cta-related-label {
+  font-size: 11px;
+  font-family: var(--mono);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+}
+.wca-cta-related-link { font-size: 13px; color: rgba(255,255,255,0.7); text-decoration: none; }
+.wca-cta-related-link:hover { color: white; }
+.wca-cta-actions { display: flex; gap: 14px; flex-wrap: wrap; flex-shrink: 0; }
+.wca-cta-ghost { color: rgba(255,255,255,0.7); border-color: rgba(255,255,255,0.2); }
+.wca-cta-ghost:hover { color: white; border-color: rgba(255,255,255,0.5); }
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .wca-audit-grid { grid-template-columns: repeat(2, 1fr); }
+  .wca-process-steps { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 960px) {
+  .wca-why-grid { grid-template-columns: 1fr; }
+  .wca-levels-grid { grid-template-columns: 1fr; }
+  .wca-builtin-inner { grid-template-columns: 1fr; gap: 48px; }
+  .wca-cta-inner { padding: 40px 32px; flex-direction: column; align-items: flex-start; }
+}
+@media (max-width: 600px) {
+  .wca-audit-grid { grid-template-columns: 1fr; }
+  .wca-process-steps { grid-template-columns: 1fr; }
+  .wca-hero-actions { flex-direction: column; align-items: flex-start; }
+}
+</style>
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="COLEwebdev" />
+<meta property="og:title" content="Web Accessibility Services — WCAG 2.1 AA · COLEwebdev" />
+<meta property="og:description" content="WCAG 2.1 AA compliance audits, remediation, and monitoring. Protect your business from ADA exposure and build websites that work for every user." />
+<meta property="og:url" content="https://colewebdev.org/web-accessibility.html" />
+<meta property="og:image" content="https://colewebdev.org/assets/portfolio-hero.jpg" />
+</head>
+<body>
+<div id="root"></div>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="parts-hero.jsx"></script>
+<script type="text/babel" src="parts-services.jsx"></script>
+<script type="text/babel" src="parts-rest.jsx"></script>
+<script type="text/babel" src="web-accessibility-page.jsx"></script>
+</body>
+</html>
