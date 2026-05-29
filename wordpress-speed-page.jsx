@@ -13,7 +13,7 @@ const WPS_OPTIMIZATIONS = [
     bg: 'rgba(242,107,31,0.12)',
     color: '#F26B1F',
     title: 'Server-Level Caching',
-    body: 'Page cache, object cache, and browser cache configured at the server layer — not through a conflicting plugin. Pages load in milliseconds for returning visitors.',
+    body: 'Page cache, object cache, and browser cache configured at the server layer, not through a conflicting plugin. Pages load in milliseconds for returning visitors.',
   },
   {
     icon: '◧',
@@ -34,28 +34,28 @@ const WPS_OPTIMIZATIONS = [
     bg: 'rgba(242,107,31,0.12)',
     color: '#F26B1F',
     title: 'Database Optimization',
-    body: 'Clean out post revisions, spam comments, orphaned data, and expired transients. A lean database is a fast database — especially for dynamic pages.',
+    body: 'Clean out post revisions, spam comments, orphaned data, and expired transients. A lean database is a fast database, especially for dynamic pages.',
   },
   {
     icon: '✦',
     bg: 'rgba(123,192,67,0.14)',
     color: '#5DA02E',
     title: 'Core Web Vitals',
-    body: 'LCP, INP, and CLS addressed specifically — not just overall PageSpeed. Google uses these signals in ranking, and they directly affect how visitors perceive your site.',
+    body: 'LCP, INP, and CLS addressed specifically, not just overall PageSpeed. Google uses these signals in ranking, and they directly affect how visitors perceive your site.',
   },
   {
     icon: '⬡',
     bg: 'rgba(14,42,74,0.10)',
     color: '#0E2A4A',
     title: 'CDN Configuration',
-    body: 'Static assets — images, CSS, fonts, JS — delivered from global edge nodes closest to your visitors. Fewer round trips, faster everything.',
+    body: 'Static assets (images, CSS, fonts, JS) delivered from global edge nodes closest to your visitors. Fewer round trips, faster everything.',
   },
   {
     icon: '◐',
     bg: 'rgba(123,192,67,0.14)',
     color: '#5DA02E',
     title: 'Hosting Upgrade Path',
-    body: 'Sometimes the bottleneck is the server itself. If your current host is the problem, we can migrate you to purpose-built WordPress infrastructure — no downtime.',
+    body: 'Sometimes the bottleneck is the server itself. If your current host is the problem, we can migrate you to purpose-built WordPress infrastructure. No downtime.',
   },
 ];
 
@@ -64,7 +64,7 @@ const WPS_VITALS = [
     key: 'LCP',
     name: 'Largest Contentful Paint',
     target: '< 2.5s',
-    desc: 'How fast the main content loads. The metric most closely tied to perceived speed — and the one visitors notice most.',
+    desc: 'How fast the main content loads. The metric most closely tied to perceived speed, and the one visitors notice first.',
   },
   {
     key: 'INP',
@@ -84,7 +84,7 @@ const WPS_PROCESS = [
   {
     num: '01',
     title: 'Audit',
-    body: 'PageSpeed Insights, GTmetrix, and manual profiling to identify every bottleneck — not just what tools flag, but what\'s actually slowing your specific site.',
+    body: 'PageSpeed Insights, GTmetrix, and manual profiling to identify every bottleneck: not just what automated tools flag, but what\'s actually slowing your specific site.',
   },
   {
     num: '02',
@@ -125,7 +125,7 @@ function WPSpeedPage() {
               Your WordPress site, <em>faster.</em>
             </h1>
             <p className="wps-hero-sub">
-              Most WordPress sites leave 40–60 PageSpeed points on the table. We audit, diagnose, and fix the real bottlenecks — images, caching, plugins, code, and Core Web Vitals — so your site loads fast and ranks better.
+              Most WordPress sites leave 40–60 PageSpeed points on the table. We audit and fix what's actually slowing yours down: images, caching, plugins, code, and Core Web Vitals.
             </p>
             <div className="wps-hero-actions">
               <a className="btn btn--accent" href="quote.html">
@@ -150,7 +150,7 @@ function WPSpeedPage() {
       </div>
 
       <SummaryStrip
-        summary="We audit and fix the real bottlenecks holding your WordPress site back — images, caching, plugins, code, and Core Web Vitals — so you rank better and convert more."
+        summary="We audit and fix the real bottlenecks: images, caching, plugins, code, and Core Web Vitals. Faster sites rank better and convert more."
         points={['Core Web Vitals', 'Image Optimization', 'Plugin Audit', 'Staging Tested']}
       />
 
@@ -161,7 +161,7 @@ function WPSpeedPage() {
             <span className="eyebrow">Why it matters</span>
             <h2 className="wps-vitals-hl">Google ranks fast sites higher. Visitors leave slow ones.</h2>
             <p className="wps-vitals-sub">
-              Core Web Vitals are the three metrics Google uses to measure page experience. A poor score hurts your search rankings and your conversion rate — simultaneously. We target all three.
+              Core Web Vitals are the three metrics Google uses to measure page experience. A poor score hurts your search rankings and your conversion rate at the same time. We target all three.
             </p>
           </div>
           <div className="wps-vitals-grid">
@@ -184,7 +184,7 @@ function WPSpeedPage() {
         <div className="shell">
           <div className="wps-opts-hd">
             <span className="eyebrow">What we optimize</span>
-            <h2 className="wps-opts-hl">Every layer of the stack — not just the obvious stuff.</h2>
+            <h2 className="wps-opts-hl">Every layer of the stack, not just the obvious stuff.</h2>
             <p className="wps-opts-sub">
               Speed isn't one fix. It's a stack of small improvements that compound. We address all of them.
             </p>
@@ -234,7 +234,7 @@ function WPSpeedPage() {
               No amount of code minification overcomes a slow server. If your hosting is the root cause, optimization fixes the symptoms but doesn't cure the problem.
             </p>
             <p className="wps-hosting-body">
-              Our WordPress Hosting pairs server-level caching, a global CDN, and purpose-built infrastructure with every speed optimization we do — so the gains stick.
+              Our WordPress Hosting pairs server-level caching, a global CDN, and purpose-built infrastructure with every speed optimization we do. The gains stick.
             </p>
             <a className="btn btn--primary" href="wordpress-hosting.html">
               See WordPress Hosting <span className="arrow">→</span>
@@ -255,7 +255,7 @@ function WPSpeedPage() {
             </div>
             <div className="wps-hosting-row">
               <span className="wps-hosting-check">✓</span>
-              <span>Modern PHP 8.x — always current</span>
+              <span>Modern PHP 8.x, always current</span>
             </div>
             <div className="wps-hosting-row">
               <span className="wps-hosting-check">✓</span>
@@ -274,7 +274,7 @@ function WPSpeedPage() {
         <div className="shell wps-cta-inner">
           <div>
             <h2 className="wps-cta-hl">Ready to find out what's slowing your site down?</h2>
-            <p className="wps-cta-sub">We'll audit your site and tell you exactly what's hurting your score — and what it'll take to fix it.</p>
+            <p className="wps-cta-sub">We'll audit your site and tell you exactly what's hurting your score, and what it'll take to fix it.</p>
             <div className="wps-cta-related">
               <span className="wps-cta-related-label">Related:</span>
               <a href="wordpress-hosting.html" className="wps-cta-related-link">WordPress Hosting →</a>

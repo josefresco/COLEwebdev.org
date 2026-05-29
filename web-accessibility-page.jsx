@@ -2,12 +2,12 @@
 
 const WCA_AUDIT_ITEMS = [
   { icon: '⌨', title: 'Keyboard Navigation', body: 'Every link, button, and form element reachable and operable without a mouse. Tab order is logical and matches visual layout.' },
-  { icon: '◑', title: 'Color Contrast', body: 'All text meets WCAG AA contrast ratios — 4.5:1 for normal text, 3:1 for large text. We test against all backgrounds, including gradients.' },
+  { icon: '◑', title: 'Color Contrast', body: 'All text meets WCAG AA contrast ratios: 4.5:1 for normal text, 3:1 for large text. We test against all backgrounds, including gradients.' },
   { icon: '◻', title: 'Alt Text', body: 'Every meaningful image has a descriptive alt attribute. Decorative images are properly hidden from screen readers with empty alt and aria-hidden.' },
   { icon: '◈', title: 'Form Accessibility', body: 'All inputs have associated labels. Error messages are clear, specific, and don\'t rely on color alone. Required fields are explicitly marked.' },
   { icon: '▣', title: 'Focus Indicators', body: 'Visible focus styles maintained throughout. No CSS that removes the browser\'s default outline without providing a better replacement.' },
-  { icon: '≡', title: 'Heading Structure', body: 'A single H1 per page, logical H2–H6 hierarchy. Headings communicate structure, not just size — screen readers use them as navigation landmarks.' },
-  { icon: '◎', title: 'ARIA & Semantics', body: 'Native HTML semantics used first. ARIA attributes added only where native elements fall short — roles, states, and properties applied correctly.' },
+  { icon: '≡', title: 'Heading Structure', body: 'A single H1 per page, logical H2–H6 hierarchy. Headings communicate structure, not just size. Screen readers use them as navigation landmarks.' },
+  { icon: '◎', title: 'ARIA & Semantics', body: 'Native HTML semantics used first. ARIA attributes added only where native elements fall short, with roles, states, and properties applied correctly.' },
   { icon: '↔', title: 'Zoom & Reflow', body: 'Content remains readable and usable at 200% zoom without horizontal scrolling. Text resizes without loss of content or functionality.' },
 ];
 
@@ -30,16 +30,16 @@ const WCA_BENEFITS = [
 ];
 
 const WCA_PROCESS = [
-  { num: '01', title: 'Audit', body: 'Automated scan plus manual review by a developer. Automated tools catch roughly 30% of issues — the rest require human judgment. We do both.' },
+  { num: '01', title: 'Audit', body: 'Automated scan plus manual review by a developer. Automated tools catch roughly 30% of issues; the rest require human judgment. We do both.' },
   { num: '02', title: 'Report', body: 'A prioritized list of issues by severity (critical, serious, moderate) with specific fix instructions for each one. Not a generic checklist.' },
-  { num: '03', title: 'Remediate', body: 'We fix the issues in code — not just flag them. Every change tested across screen readers (NVDA, VoiceOver) and keyboard-only navigation.' },
+  { num: '03', title: 'Remediate', body: 'We fix the issues in code, not just flag them. Every change tested across screen readers (NVDA, VoiceOver) and keyboard-only navigation.' },
   { num: '04', title: 'Verify', body: 'Re-test after remediation and document conformance. Ongoing monitoring available as part of a Care Plan so new content doesn\'t re-introduce issues.' },
 ];
 
 const WCA_LEVELS = [
   { level: 'A', label: 'Minimum', desc: 'The floor. Non-negotiable criteria that, if missing, make a site unusable for some users. Every site should pass Level A.', active: false },
   { level: 'AA', label: 'Recommended', desc: 'The standard we target for all client work. Required by most accessibility laws and regulations worldwide, including ADA enforcement guidance.', active: true },
-  { level: 'AAA', label: 'Enhanced', desc: 'The highest level — aspirational for most sites. Some criteria are content-specific and not achievable for all page types.', active: false },
+  { level: 'AAA', label: 'Enhanced', desc: 'The highest level, aspirational for most sites. Some criteria are content-specific and not achievable for all page types.', active: false },
 ];
 
 function WCAPage() {
@@ -57,7 +57,7 @@ function WCAPage() {
               Websites built <em>for everyone.</em>
             </h1>
             <p className="wca-hero-sub">
-              WCAG 2.1 AA compliance audits, remediation, and ongoing monitoring. Protect your business from ADA exposure, reach a broader audience, and build sites that work for all users — not just the able-bodied ones.
+              WCAG 2.1 AA compliance audits, remediation, and ongoing monitoring. Protect your business from ADA exposure, reach more customers, and build sites that actually work for everyone.
             </p>
             <div className="wca-hero-actions">
               <a className="btn btn--accent" href="quote.html">
@@ -78,7 +78,7 @@ function WCAPage() {
       </div>
 
       <SummaryStrip
-        summary="WCAG 2.1 AA audits, remediation, and monitoring — so your site is usable by everyone, protected from ADA exposure, and better ranked by search engines."
+        summary="WCAG 2.1 AA audits, remediation, and monitoring. Your site becomes usable by everyone, protected from ADA exposure, and better ranked on Google."
         points={['WCAG 2.1 AA', 'ADA Protection', 'Screen Reader Tested', 'SEO Benefit']}
       />
 
@@ -176,7 +176,7 @@ function WCAPage() {
             <span className="eyebrow wca-builtin-eyebrow">New builds</span>
             <h2 className="wca-builtin-hl">Every new COLEwebdev site is built to WCAG 2.1 AA from day one.</h2>
             <p className="wca-builtin-body">
-              Accessibility isn't a post-launch audit for the sites we build — it's a development standard. Semantic HTML, proper contrast, keyboard navigation, and screen reader compatibility are part of our build checklist on every project.
+              Accessibility isn't a post-launch audit for the sites we build; it's a development standard. Semantic HTML, proper contrast, keyboard navigation, and screen reader compatibility are part of our build checklist on every project.
             </p>
             <p className="wca-builtin-body">
               The audit and remediation service is for existing sites built by others, or for clients who need a third-party conformance report for legal or procurement purposes.
@@ -203,7 +203,7 @@ function WCAPage() {
         <div className="shell wca-cta-inner">
           <div>
             <h2 className="wca-cta-hl">Not sure if your site is accessible?</h2>
-            <p className="wca-cta-sub">We'll audit it and tell you exactly where it falls short — and what it takes to fix it.</p>
+            <p className="wca-cta-sub">We'll audit it and tell you exactly where it falls short, and what it takes to fix it.</p>
             <div className="wca-cta-related">
               <span className="wca-cta-related-label">Related:</span>
               <a href="website-design.html" className="wca-cta-related-link">Web Design →</a>

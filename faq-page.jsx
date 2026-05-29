@@ -9,15 +9,15 @@ const FAQ_CATEGORIES = [
     questions: [
       {
         q: 'How much does a website cost?',
-        a: 'Our websites typically range from $1,500 for a simple brochure site to $8,000+ for a fully custom e-commerce build. The honest answer is: it depends on what you need. We start every project with a free consultation to scope the work and give you a real number before anything is signed — no surprises, no hidden fees.',
+        a: 'Our websites typically range from $1,500 for a simple brochure site to $8,000+ for a fully custom e-commerce build. The honest answer is: it depends on what you need. We start every project with a free consultation to scope the work and give you a real number before anything is signed. No surprises, no hidden fees.',
       },
       {
         q: 'Are there ongoing costs after launch?',
-        a: 'Yes — hosting, domain registration, and optional care plan maintenance are recurring costs. Hosting starts at $30/month and includes backups, security monitoring, and a human you can actually email. We walk you through every ongoing cost before your project starts so you know exactly what you\'re committing to.',
+        a: 'Yes. Hosting, domain registration, and optional care plan maintenance are recurring costs. Hosting starts at $30/month and includes backups, security monitoring, and a human you can actually email. We walk you through every ongoing cost before your project starts so you know exactly what you\'re committing to.',
       },
       {
         q: 'Do you offer payment plans?',
-        a: 'Yes. We split projects into two or three installments tied to milestones — typically a deposit to kick things off, a payment at design approval, and a final payment at launch. We can work with you on a schedule that fits your budget.',
+        a: 'Yes. We split projects into two or three installments tied to milestones: a deposit to kick things off, a payment at design approval, and a final payment at launch. We can work with you on a schedule that fits your budget.',
       },
     ],
   },
@@ -29,11 +29,11 @@ const FAQ_CATEGORIES = [
     questions: [
       {
         q: 'How long does it take to build a website?',
-        a: 'Most projects take 4–8 weeks from kickoff to launch. Simple brochure sites can move faster; custom builds with e-commerce or integrations take longer. The biggest variable is almost always how quickly we receive content — copy, photos, and your logo — from you.',
+        a: 'Most projects take 4–8 weeks from kickoff to launch. Simple brochure sites can move faster; custom builds with e-commerce or integrations take longer. The biggest variable is almost always how quickly we receive content (copy, photos, and your logo) from you.',
       },
       {
         q: 'What slows a project down?',
-        a: 'Content. The number one delay on nearly every project is waiting on text and images from the client. We help with this — we can write copy, source stock photography, and do a professional photo shoot — but the faster you can provide what we need, the faster your site goes live.',
+        a: 'Content. The number one delay on nearly every project is waiting on text and images from the client. We help with this (we can write copy, source stock photography, and do a professional photo shoot), but the faster you can provide what we need, the faster your site goes live.',
       },
       {
         q: 'Can I see the site before it goes live?',
@@ -49,15 +49,15 @@ const FAQ_CATEGORIES = [
     questions: [
       {
         q: 'Can I edit my website myself after it\'s built?',
-        a: 'Yes — if you want to. WordPress builds include a straightforward admin dashboard where you can update text, add blog posts, swap images, and more without touching code. If you\'d rather hand that off to us, our care plans include a set number of content updates each month.',
+        a: 'Yes, if you want to. WordPress builds include a straightforward admin dashboard where you can update text, add blog posts, swap images, and more without touching code. If you\'d rather hand that off to us, our care plans include a set number of content updates each month.',
       },
       {
         q: 'Who owns the website when it\'s done?',
-        a: 'You do — full stop. When your project is complete, you own the design, the code, and all the content. We never hold your site hostage or lock you into proprietary systems. If you ever want to move to a different host or developer, we\'ll help you make that transition.',
+        a: 'You do. Full stop. When your project is complete, you own the design, the code, and all the content. We never hold your site hostage or lock you into proprietary systems. If you ever want to move to a different host or developer, we\'ll help you make that transition.',
       },
       {
         q: 'What if I need changes after launch?',
-        a: 'Small tweaks are part of normal life — we get it. You can hire us for one-off updates, or sign up for a monthly care plan that covers routine changes, security updates, and backups. Either way, you\'re never stranded.',
+        a: 'Small tweaks are part of normal life. We get it. You can hire us for one-off updates, or sign up for a monthly care plan that covers routine changes, security updates, and backups. Either way, you\'re never stranded.',
       },
     ],
   },
@@ -73,11 +73,11 @@ const FAQ_CATEGORIES = [
       },
       {
         q: 'What does an online store cost?',
-        a: 'E-commerce builds start around $3,500 and go up depending on the number of products, custom features, and payment integrations. There are also platform fees to factor in — Shopify starts at $29/month, while WooCommerce is free but requires hosting. We\'ll lay out the full picture before you commit.',
+        a: 'E-commerce builds start around $3,500 and go up depending on the number of products, custom features, and payment integrations. There are also platform fees to factor in: Shopify starts at $29/month, while WooCommerce is free but requires hosting. We\'ll lay out the full picture before you commit.',
       },
       {
         q: 'Can I sell services and take deposits online?',
-        a: 'Yes. We set up booking flows, deposit collection, and service packages regularly — especially for Cape Cod hospitality, tourism, and service businesses. If you want customers to pay, schedule, or sign up online, we can build that.',
+        a: 'Yes. We set up booking flows, deposit collection, and service packages regularly, especially for Cape Cod hospitality, tourism, and service businesses. If you want customers to pay, schedule, or sign up online, we can build that.',
       },
     ],
   },
@@ -89,11 +89,11 @@ const FAQ_CATEGORIES = [
     questions: [
       {
         q: 'Will my new website show up on Google?',
-        a: 'Every site we build is SEO-ready out of the box — proper page titles, meta descriptions, fast load times, mobile-first design, and structured data markup. That\'s a solid foundation. Getting to the top of Google for competitive searches takes ongoing SEO work, which we offer as a separate monthly service.',
+        a: 'Every site we build is SEO-ready out of the box: proper page titles, meta descriptions, fast load times, mobile-first design, and structured data markup. That\'s a solid foundation. Getting to the top of Google for competitive searches takes ongoing SEO work, which we offer as a separate monthly service.',
       },
       {
         q: 'Do you offer SEO services?',
-        a: 'Yes. We offer local SEO packages built specifically for Cape Cod small businesses — optimizing your Google Business Profile, building local citations, writing keyword-targeted content, and tracking your rankings month over month. We focus on the searches that actually bring in customers, not vanity metrics.',
+        a: 'Yes. We offer local SEO packages built specifically for Cape Cod small businesses: optimizing your Google Business Profile, building local citations, writing keyword-targeted content, and tracking your rankings month over month. We focus on the searches that actually bring in customers, not vanity metrics.',
       },
       {
         q: 'How long does SEO take to work?',
@@ -109,15 +109,15 @@ const FAQ_CATEGORIES = [
     questions: [
       {
         q: 'Do you manage social media?',
-        a: 'We don\'t offer ongoing social media management — that\'s a full-time job and outside our wheelhouse. What we do: connect your website to your social profiles, add sharing tools, and make sure your site is the hub everything points back to. For hands-on social management, we\'re happy to refer you to someone we trust.',
+        a: 'We don\'t offer ongoing social media management. That\'s a full-time job and outside our wheelhouse. What we do: connect your website to your social profiles, add sharing tools, and make sure your site is the hub everything points back to. For hands-on social management, we\'re happy to refer you to someone we trust.',
       },
       {
         q: 'How does my website connect to social media?',
-        a: 'Your website is your home base — social drives people to it. We make sure your site has Open Graph tags so links you share on Facebook, Instagram, and LinkedIn preview correctly. We can also wire up your blog or news feed so new posts are easy to share, and set up tracking so you know which social channels actually send you traffic.',
+        a: 'Your website is your home base. Social drives people to it. We make sure your site has Open Graph tags so links you share on Facebook, Instagram, and LinkedIn preview correctly. We can also wire up your blog or news feed so new posts are easy to share, and set up tracking so you know which social channels actually send you traffic.',
       },
       {
         q: 'Should I even have a website if I have a Facebook page?',
-        a: 'Yes — and this matters. Facebook owns your audience. If they change their algorithm, suspend your account, or shut down tomorrow, you lose everything. Your website is the one place online that you own outright. Social media is a tool to drive people there, not a replacement for it.',
+        a: 'Yes, and this matters. Facebook owns your audience. If they change their algorithm, suspend your account, or shut down tomorrow, you lose everything. Your website is the one place online that you own outright. Social media is a tool to drive people there, not a replacement for it.',
       },
     ],
   },
@@ -129,15 +129,15 @@ const FAQ_CATEGORIES = [
     questions: [
       {
         q: 'What does a website care plan include?',
-        a: 'Our care plans cover everything that keeps a WordPress site healthy: monthly core and plugin updates, daily automated backups to off-site storage, security monitoring, uptime alerts, and a monthly plain-English report on your site\'s status. Plans also include a bank of support hours each month for content edits and small changes — so you have someone to call when something needs updating.',
+        a: 'Our care plans cover everything that keeps a WordPress site healthy: monthly core and plugin updates, daily automated backups to off-site storage, security monitoring, uptime alerts, and a monthly plain-English report on your site\'s status. Plans also include a bank of support hours each month for content edits and small changes, so you have someone to call when something needs updating.',
       },
       {
         q: 'What happens if my site gets hacked?',
-        a: 'Hacks happen, even on well-maintained sites. If you\'re on one of our care plans, we handle the cleanup: removing malicious code, restoring from a clean backup, identifying the attack vector, and patching the vulnerability. For sites not on a plan, cleanup is billed as an emergency service. Prevention is dramatically cheaper — which is why we recommend ongoing maintenance for any site that handles customer contact or business data.',
+        a: 'Hacks happen, even on well-maintained sites. If you\'re on one of our care plans, we handle the cleanup: removing malicious code, restoring from a clean backup, identifying the attack vector, and patching the vulnerability. For sites not on a plan, cleanup is billed as an emergency service. Prevention is dramatically cheaper, which is why we recommend ongoing maintenance for any site that handles customer contact or business data.',
       },
       {
         q: 'Can I move my site to a different host later?',
-        a: 'Yes — and we\'ll help you. You own your site and we\'ll never hold it hostage to our hosting. If you want to move to a different provider, we\'ll migrate your files, database, and DNS settings. We do ask for notice so we can do it cleanly during a low-traffic period.',
+        a: 'Yes, and we\'ll help you. You own your site and we\'ll never hold it hostage to our hosting. If you want to move to a different provider, we\'ll migrate your files, database, and DNS settings. We do ask for notice so we can do it cleanly during a low-traffic period.',
       },
     ],
   },
@@ -153,11 +153,11 @@ const FAQ_CATEGORIES = [
       },
       {
         q: 'I\'ve heard WordPress sites are slow. Is that true?',
-        a: 'A poorly built WordPress site can be slow — bloated themes, too many plugins, no caching, unoptimized images. A well-built WordPress site, properly configured with server-side caching, a lightweight theme, and optimized assets, is fast. Our WordPress builds score 90+ on Google PageSpeed. The platform isn\'t the problem; the implementation is.',
+        a: 'A poorly built WordPress site can be slow: bloated themes, too many plugins, no caching, unoptimized images. A well-built WordPress site, properly configured with server-side caching, a lightweight theme, and optimized assets, is fast. Our WordPress builds score 90+ on Google PageSpeed. The platform isn\'t the problem; the implementation is.',
       },
       {
         q: 'Do WordPress updates break things?',
-        a: 'They can, if applied carelessly. The right workflow is: take a backup first, update in a staging environment before pushing to production, and test the key pages after each update cycle. This is exactly what our WordPress care plans do. Done properly, updates almost never cause problems — and when they do, a fresh backup makes recovery a matter of minutes, not days.',
+        a: 'They can, if applied carelessly. The right workflow is: take a backup first, update in a staging environment before pushing to production, and test the key pages after each update cycle. This is exactly what our WordPress care plans do. Done properly, updates almost never cause problems. When they do, a fresh backup makes recovery a matter of minutes, not days.',
       },
     ],
   },
@@ -169,15 +169,15 @@ const FAQ_CATEGORIES = [
     questions: [
       {
         q: 'Why is my website slow, and does it matter?',
-        a: 'The most common culprits: large unoptimized images, bloated plugins or themes, no server-side caching, and too many third-party scripts (analytics, chat widgets, ad tags). Speed matters because 53% of mobile visitors abandon a page that takes more than 3 seconds to load — and Google uses page speed as a ranking signal. A slow site loses traffic at both ends: fewer visitors find it, and more of the ones who do leave before seeing your content.',
+        a: 'The most common culprits: large unoptimized images, bloated plugins or themes, no server-side caching, and too many third-party scripts (analytics, chat widgets, ad tags). Speed matters because 53% of mobile visitors abandon a page that takes more than 3 seconds to load. Google also uses page speed as a ranking signal. A slow site loses traffic at both ends: fewer visitors find it, and more of the ones who do leave before seeing your content.',
       },
       {
         q: 'What are Core Web Vitals and why should I care?',
-        a: 'Core Web Vitals are three specific performance metrics Google measures on your site: Largest Contentful Paint (how fast the main content appears), Cumulative Layout Shift (whether the page jumps around while loading), and Interaction to Next Paint (how quickly the page responds to clicks). Since 2021, these are official Google ranking signals — sites that score well have a measurable advantage in search results over slower competitors.',
+        a: 'Core Web Vitals are three specific performance metrics Google measures on your site: Largest Contentful Paint (how fast the main content appears), Cumulative Layout Shift (whether the page jumps around while loading), and Interaction to Next Paint (how quickly the page responds to clicks). Since 2021, these are official Google ranking signals; sites that score well have a measurable advantage in search results over slower competitors.',
       },
       {
         q: 'Can you fix my existing site\'s speed, or does it need to be rebuilt?',
-        a: 'Often fixable without a rebuild. A WordPress speed optimization audit typically covers image compression, enabling proper caching, removing unused plugins, deferring render-blocking scripts, and switching to a faster hosting environment. Many sites go from a PageSpeed score in the 40s to the 80s or 90s without any design changes. We assess first and quote specifically — we won\'t recommend a rebuild if an optimization pass will achieve the goal.',
+        a: 'Often fixable without a rebuild. A WordPress speed optimization audit typically covers image compression, enabling proper caching, removing unused plugins, deferring render-blocking scripts, and switching to a faster hosting environment. Many sites go from a PageSpeed score in the 40s to the 80s or 90s without any design changes. We assess first and quote specifically. We won\'t recommend a rebuild if an optimization pass will achieve the goal.',
       },
     ],
   },
@@ -189,15 +189,15 @@ const FAQ_CATEGORIES = [
     questions: [
       {
         q: 'Does my business website need to be ADA accessible?',
-        a: 'Likely yes. Courts have increasingly ruled that business websites are "places of public accommodation" under Title III of the ADA — meaning businesses that operate online can be subject to ADA accessibility claims. Over 4,500 ADA website lawsuits were filed in 2023, most targeting small and medium businesses in retail, hospitality, food service, and healthcare. The legal exposure is real, and the cost of retrofitting an inaccessible site is significantly higher than building it correctly from the start.',
+        a: 'Likely yes. Courts have increasingly ruled that business websites are "places of public accommodation" under Title III of the ADA, meaning businesses that operate online can be subject to ADA accessibility claims. Over 4,500 ADA website lawsuits were filed in 2023, most targeting small and medium businesses in retail, hospitality, food service, and healthcare. The legal exposure is real, and the cost of retrofitting an inaccessible site is significantly higher than building it correctly from the start.',
       },
       {
         q: 'What is WCAG and what level do we need to meet?',
-        a: 'WCAG — the Web Content Accessibility Guidelines — is the international standard for web accessibility, published by the W3C. It\'s organized into levels A, AA, and AAA. Level AA is the standard used by most courts, regulators, and government requirements when evaluating compliance. Meeting WCAG 2.1 AA means your site works for users with visual, auditory, motor, and cognitive disabilities — including those using screen readers, keyboard-only navigation, or screen magnification.',
+        a: 'WCAG (the Web Content Accessibility Guidelines) is the international standard for web accessibility, published by the W3C. It\'s organized into levels A, AA, and AAA. Level AA is the standard used by most courts, regulators, and government requirements when evaluating compliance. Meeting WCAG 2.1 AA means your site works for users with visual, auditory, motor, and cognitive disabilities, including those using screen readers, keyboard-only navigation, or screen magnification.',
       },
       {
         q: 'Can\'t I just install an accessibility widget to be compliant?',
-        a: 'No — and this is important. Accessibility overlay products (AccessiBe, UserWay, and others) that add a toolbar to your site do not achieve real WCAG compliance. The National Federation of the Blind, blind users, and independent testers have all documented that these tools fail to address the substantive issues affecting actual disabled users. Courts have ruled against defendants whose only accommodation was an overlay. Real compliance requires an audit and remediation in the underlying code.',
+        a: 'No, and this is important. Accessibility overlay products (AccessiBe, UserWay, and others) that add a toolbar to your site do not achieve real WCAG compliance. The National Federation of the Blind, blind users, and independent testers have all documented that these tools fail to address the substantive issues affecting actual disabled users. Courts have ruled against defendants whose only accommodation was an overlay. Real compliance requires an audit and remediation in the underlying code.',
       },
     ],
   },

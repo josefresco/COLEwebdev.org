@@ -1,7 +1,7 @@
 /* global React, ReactDOM */
 
 const UM_EDIT_TYPES = [
-  { icon: '✎', title: 'Text & Copy Edits', body: 'Update page copy, headlines, bios, service descriptions, pricing, hours, addresses — any text on any page.' },
+  { icon: '✎', title: 'Text & Copy Edits', body: 'Update page copy, headlines, bios, service descriptions, pricing, hours, addresses. Any text on any page.' },
   { icon: '◻', title: 'Image Swaps', body: 'Replace photos, swap a hero image, upload new headshots or product images. We handle resizing and optimization.' },
   { icon: '+', title: 'New Pages & Sections', body: 'Add a new service page, a team member section, a landing page, or a content block to an existing page.' },
   { icon: '⊟', title: 'Form Changes', body: 'Update contact form fields, add a new form, change where submissions go, or wire up a new notification email.' },
@@ -15,7 +15,7 @@ const UM_PROCESS = [
   {
     num: '01',
     title: 'Submit your request',
-    body: 'Email or call with what needs to change. A quick list or a screenshot with annotations — whatever is easiest for you.',
+    body: 'Email or call with what needs to change. A quick list or a screenshot with annotations. Whatever is easiest for you.',
   },
   {
     num: '02',
@@ -65,7 +65,7 @@ function UpdatesPage() {
               Need something changed? <em>We'll handle it.</em>
             </h1>
             <p className="um-hero-sub">
-              Simple, hourly-rate edits for businesses that need content updated, pages added, or small changes made — without committing to a monthly plan. You tell us what to fix. We fix it.
+              Simple, hourly-rate edits for businesses that need content updated, pages added, or small changes made, without committing to a monthly plan. You tell us what to fix. We fix it.
             </p>
             <div className="um-hero-actions">
               <a className="btn btn--accent" href="contact.html">
@@ -83,7 +83,7 @@ function UpdatesPage() {
       </div>
 
       <SummaryStrip
-        summary="Hourly-rate website edits — text updates, image swaps, new pages, form changes, and more. No monthly commitment. You request it, we do it, we invoice for actual time."
+        summary="Hourly-rate website edits: text updates, image swaps, new pages, form changes, and more. No monthly commitment. You request it, we do it, we invoice for actual time."
         points={['Hourly Rate', 'No Retainer', 'Any CMS', 'No Commitment']}
       />
 
@@ -139,7 +139,7 @@ function UpdatesPage() {
             <span className="eyebrow um-careplan-eyebrow">High volume of edits?</span>
             <h2 className="um-careplan-hl">A Care Plan may be more cost-effective.</h2>
             <p className="um-careplan-body">
-              If you find yourself requesting edits every month, our Care Plans bundle ongoing updates, WordPress maintenance, backups, security monitoring, and priority support into a single monthly rate — often at a lower effective hourly cost than ad-hoc billing.
+              If you find yourself requesting edits every month, our Care Plans bundle ongoing updates, WordPress maintenance, backups, security monitoring, and priority support into a single monthly rate, often at a lower effective hourly cost than ad-hoc billing.
             </p>
             <a className="btn btn--primary" href="hosting.html">
               See Hosting + Care Plans <span className="arrow">→</span>

@@ -314,21 +314,21 @@ function Header() {
                 <span className="nav-dd-glyph green">↻</span>
                 <div>
                   <div className="nav-dd-title">Hosting + Care Plans</div>
-                  <div className="nav-dd-desc">Backups, security, updates — and a human to email.</div>
+                  <div className="nav-dd-desc">Backups, security, updates, and a human to email.</div>
                 </div>
               </a>
               <a href="updates.html" className="nav-dd-item">
                 <span className="nav-dd-glyph blue">✎</span>
                 <div>
                   <div className="nav-dd-title">Updates &amp; Maintenance</div>
-                  <div className="nav-dd-desc">Hourly edits — text, images, pages, forms. No retainer.</div>
+                  <div className="nav-dd-desc">Hourly edits: text, images, pages, forms. No retainer.</div>
                 </div>
               </a>
               <a href="branding.html" className="nav-dd-item">
                 <span className="nav-dd-glyph orange">✦</span>
                 <div>
                   <div className="nav-dd-title">Branding</div>
-                  <div className="nav-dd-desc">Logos, color, print — so the site fits the rest of you.</div>
+                  <div className="nav-dd-desc">Logos, color, print. So the site fits the rest of you.</div>
                 </div>
               </a>
               <a href="ecommerce.html" className="nav-dd-item">

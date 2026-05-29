@@ -8,7 +8,7 @@ function Process() {
   { n: '01', title: 'Conversation', body: 'A free 20-min call. We learn your business; you learn how we work. No pitch deck.', tags: ['DISCOVERY'] },
   { n: '02', title: 'Plan & Price', body: 'A simple, written scope and a fixed price. We start when you say go.', tags: ['SCOPE', 'FIXED'] },
   { n: '03', title: 'Design & Build', body: 'You see progress every Friday. We use real content, not Lorem Ipsum.', tags: ['WEEKLY DEMO'] },
-  { n: '04', title: 'Launch & Care', body: 'Go-live, training, and a Care Plan that keeps things working — not a hand-off and ghost.', tags: ['ONGOING'] }];
+  { n: '04', title: 'Launch & Care', body: 'Go-live, training, and a Care Plan that keeps things working. Not a hand-off and ghost.', tags: ['ONGOING'] }];
 
   return (
     <section className="section bg-shapes" id="process">
@@ -130,7 +130,7 @@ function Portfolio() {
             <span className="eyebrow">Recent work</span>
             <h2>700 sites later, <span className="italic">still picky.</span></h2>
             <p className="lede" style={{ marginTop: 16 }}>
-              A small slice of what we've shipped — for restaurants, contractors, nonprofits, retailers, and outfitters across the Cape and Islands.
+              A small slice of what we've shipped: restaurants, contractors, nonprofits, retailers, and outfitters across the Cape and Islands.
             </p>
           </div>
           <a className="btn btn--ghost" href="https://www.colewebdev.com/portfolio/">View full portfolio <span className="arrow">→</span></a>
@@ -381,7 +381,7 @@ function NewsletterBanner() {
               Stay in the loop.
               <span className="nl-badge">Quarterly</span>
             </p>
-            <p className="nl-sub">Web design tips, project launches, and Cape Cod business news — four times a year. No spam, ever.</p>
+            <p className="nl-sub">Web design tips, project launches, and Cape Cod business news. Four times a year. No spam, ever.</p>
           </div>
           <a
             className="btn btn--primary nl-btn"
