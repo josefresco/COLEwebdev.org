@@ -862,4 +862,184 @@ window.WHITEPAPERS_DATA = [
     ],
     takeaway: 'Shopify wins on speed-to-launch and simplicity. WooCommerce wins on long-term cost, control, and flexibility. Most growing small businesses are better served by WooCommerce — but Shopify is the right answer when you need to launch now.',
   },
+  {
+    id: 'core-web-vitals',
+    num: '23',
+    title: 'What Are Core Web Vitals?',
+    subtitle: 'Google\'s Speed Metrics — and What They Mean for Your Rankings',
+    summary: 'Core Web Vitals are the three performance metrics Google uses to evaluate page experience. Understanding them is the first step toward fixing the scores that affect your rankings.',
+    sections: [
+      {
+        heading: 'Why Google Created Core Web Vitals',
+        body: [
+          'In 2021, Google formalized three specific metrics — Largest Contentful Paint, Cumulative Layout Shift, and Interaction to Next Paint — as official ranking signals under the umbrella of "Core Web Vitals." The decision reflected something the industry had known for years: fast, stable pages convert better, and Google\'s business depends on sending users to pages that deliver good experiences.',
+          'Before Core Web Vitals, site speed was measured by crude proxies like total load time. The new metrics are more nuanced — they measure real user perception rather than arbitrary file download timing. A site can load in 2 seconds but still fail Core Web Vitals if the visible content appears slowly or if elements shift around while the user is trying to click something.',
+        ],
+      },
+      {
+        heading: 'LCP: Largest Contentful Paint',
+        body: [
+          'Largest Contentful Paint measures how long it takes for the main content of a page — usually a hero image or above-the-fold heading — to become visible to the user. Google\'s threshold is 2.5 seconds for a "Good" score. Anything above 4 seconds is rated "Poor."',
+          'The most common causes of slow LCP are unoptimized hero images (large JPEGs or PNGs that aren\'t served in modern formats like WebP), render-blocking scripts that delay everything on the page, and slow server response times. Improving LCP almost always starts with image optimization and eliminating third-party scripts that block rendering.',
+        ],
+      },
+      {
+        heading: 'CLS: Cumulative Layout Shift',
+        body: [
+          'Cumulative Layout Shift measures visual stability — specifically, whether elements on the page unexpectedly jump around while the content is loading. If you\'ve ever tapped a button on your phone only to have something load and push the button down at the last second, that\'s a high CLS experience. Google considers a score under 0.1 "Good."',
+          'CLS is typically caused by images or ads without defined dimensions (so the browser doesn\'t reserve space for them), web fonts that cause text to reflow when they load, or dynamically injected content that pushes other elements down. The fix usually involves adding width and height attributes to images, using font-display settings to prevent layout shifts, and reserving space for any dynamic content.',
+        ],
+      },
+      {
+        heading: 'INP: Interaction to Next Paint',
+        body: [
+          'Interaction to Next Paint replaced the older First Input Delay metric in 2024. It measures how quickly a page responds to user interactions — clicks, taps, keyboard inputs — throughout the entire visit. A good INP score is under 200 milliseconds.',
+          'Poor INP is almost always caused by JavaScript that blocks the main thread: heavy scripts executing simultaneously, large React or Vue bundles, analytics libraries, tag managers, and ad scripts all competing for processing time. Improving INP requires auditing and reducing JavaScript execution — removing unused scripts, deferring non-critical code, and in some cases replacing heavy frontend frameworks with lighter alternatives.',
+        ],
+      },
+      {
+        heading: 'How to Check Your Core Web Vitals',
+        body: [
+          'Google PageSpeed Insights (free) gives you both lab data and field data for any URL. Lab data comes from a simulated test; field data (when available) comes from real users visiting your site via Chrome. The field data matters more for SEO purposes.',
+          'Google Search Console provides aggregate Core Web Vitals reports under the "Experience" section, showing how your real pages are performing across mobile and desktop. If Search Console shows pages in the "Poor" or "Needs Improvement" buckets, those pages are likely being deprioritized in rankings relative to faster competitors.',
+        ],
+      },
+    ],
+    takeaway: 'Core Web Vitals are real ranking signals, not vanity metrics. LCP measures how fast your content appears, CLS measures how stable the layout is while loading, and INP measures how responsive the page is to user interaction. Improving all three improves both rankings and conversion rates.',
+  },
+  {
+    id: 'website-accessibility',
+    num: '24',
+    title: 'Website Accessibility and ADA Compliance',
+    subtitle: 'What Small Businesses Need to Know About WCAG and Legal Risk',
+    summary: 'ADA-related website lawsuits have increased dramatically. Here\'s what accessibility means in practice, what the legal exposure looks like, and what it actually takes to build a compliant site.',
+    sections: [
+      {
+        heading: 'What Website Accessibility Means',
+        body: [
+          'Website accessibility refers to designing and building sites that can be used by people with visual, auditory, motor, and cognitive disabilities. This includes users who rely on screen readers to navigate (because they can\'t see the screen), users who navigate by keyboard only (because they can\'t use a mouse), and users with low vision who need high-contrast text and scalable fonts.',
+          'The international standard for web accessibility is WCAG — the Web Content Accessibility Guidelines, published by the W3C. WCAG 2.1 Level AA is the benchmark most courts and regulators use when evaluating accessibility. It defines specific technical requirements across four principles: content must be Perceivable, Operable, Understandable, and Robust.',
+        ],
+      },
+      {
+        heading: 'The ADA Legal Landscape',
+        body: [
+          'Title III of the Americans with Disabilities Act requires that "places of public accommodation" be accessible to people with disabilities. Courts have increasingly ruled that websites qualify as places of public accommodation — meaning businesses that operate primarily or exclusively online can be subject to ADA claims if their websites aren\'t accessible.',
+          'ADA website lawsuits have increased dramatically: from a few hundred per year in 2017 to over 4,500 filed in 2023. Most target small and medium-sized businesses, not large corporations. Retail, hospitality, food service, and healthcare websites are among the most frequently targeted. Defendants typically face demand letters seeking remediation plus legal fees — settlements commonly range from $5,000 to $25,000 before attorney costs.',
+        ],
+      },
+      {
+        heading: 'Common Accessibility Failures',
+        body: [
+          'The most frequently cited WCAG failures are: missing alt text on images (screen reader users hear nothing), poor color contrast between text and background, forms without accessible labels, videos without captions, keyboard navigation traps (elements that can be clicked but not tabbed to), and PDF documents that aren\'t screen-reader accessible.',
+          'None of these are difficult to fix if caught during development. All of them are significantly more expensive to retrofit into an existing site than to build correctly from the start. A site built to WCAG 2.1 AA from day one costs no more than one that ignores accessibility — but retrofitting an existing site typically costs 30–50% of a full rebuild.',
+        ],
+      },
+      {
+        heading: 'Accessibility Overlays: A Warning',
+        body: [
+          'A category of products called "accessibility overlays" — JavaScript plugins that claim to make your site accessible automatically — has become popular as a quick fix. Products like AccessiBe, UserWay, and others typically cost $50–$500/year and inject a toolbar onto your site that applies automated fixes.',
+          'The accessibility community, including the National Federation of the Blind, has formally opposed these overlays. Independent testing consistently shows they don\'t achieve WCAG compliance — they address some automated checks while missing the substantive issues that affect real disabled users. Courts have also ruled against defendants whose only accessibility accommodation was an overlay. Don\'t rely on an overlay as legal protection.',
+        ],
+      },
+      {
+        heading: 'What a Real Accessibility Audit Covers',
+        body: [
+          'A genuine accessibility audit evaluates the site against WCAG 2.1 Level AA success criteria using both automated scanning and manual testing with actual assistive technology. Automated tools (axe, WAVE, Lighthouse) catch roughly 30–40% of issues. The rest require human judgment — can a screen reader user actually navigate this checkout flow? Can a keyboard-only user complete this form?',
+          'After the audit, issues are categorized by severity (Critical, Serious, Moderate, Minor) and a remediation plan is developed. Critical and Serious issues — those that block access entirely for disabled users — are addressed first. An audit report that just lists automated findings without manual testing and severity prioritization isn\'t worth much for legal protection or actual user experience.',
+        ],
+      },
+    ],
+    takeaway: 'Website accessibility is both the right thing to do and a genuine legal obligation for businesses that operate online. WCAG 2.1 AA is the standard. Overlays don\'t provide real compliance. An audit by a human using assistive technology is the only way to know where you actually stand.',
+  },
+  {
+    id: 'google-maps-ranking',
+    num: '25',
+    title: 'How to Improve Your Google Maps Ranking',
+    subtitle: 'Local SEO for Small Businesses That Need to Be Found',
+    summary: 'Google Maps is often the first thing a local customer sees when they search for your type of business. Here\'s how the ranking works and what actually moves your position.',
+    sections: [
+      {
+        heading: 'How Google Decides Who Shows Up in Maps',
+        body: [
+          'Google\'s local search algorithm uses three primary factors to decide which businesses appear in the Map Pack (the three-business box that appears at the top of local search results): relevance, distance, and prominence. Relevance is how well your profile matches the search query. Distance is how far the business is from the searcher\'s location. Prominence is how well-known and trusted the business is, based on reviews, links, and content signals.',
+          'You have direct control over relevance and prominence. Distance is fixed — though choosing the right service area in your profile affects when you appear for searches in areas near (but not at) your location. Optimizing for relevance and prominence consistently moves businesses from the seventh position into the top three.',
+        ],
+      },
+      {
+        heading: 'Optimizing Your Google Business Profile',
+        body: [
+          'Your Google Business Profile (formerly Google My Business) is the primary input for Maps ranking. Start with completeness: fill out every field. Business name should match your actual business name exactly — keyword stuffing ("Joe\'s Plumbing | Best Cape Cod Plumber") violates Google\'s guidelines and can result in suspension. Categories matter significantly: choose your primary category carefully, and add all relevant secondary categories.',
+          'Add photos consistently. Businesses with more photos receive more clicks. Weekly photo updates signal an active, maintained profile. Your business description (750 characters) should describe what you do and where you serve it in plain language. Hours, phone number, and website URL must be accurate — inconsistency across directories erodes trust.',
+        ],
+      },
+      {
+        heading: 'The Review Strategy That Actually Works',
+        body: [
+          'Review quantity, recency, and quality all factor into prominence. A business with 150 reviews averaging 4.8 stars outranks a competitor with 20 reviews averaging 5.0. Recency matters — a business that got 200 reviews five years ago and hasn\'t earned one since signals declining quality to Google\'s algorithm.',
+          'The most effective review strategy is direct, timely asking. After a project, job, or transaction completes, ask the customer directly: "Would you mind leaving us a review on Google? Here\'s the link." Make it one step — send them to your Google review link, not to Google\'s homepage. Reply to every review, positive and negative. Responses signal engagement and give you a natural opportunity to add keywords.',
+        ],
+      },
+      {
+        heading: 'Local Citations and Directory Consistency',
+        body: [
+          'A local citation is any mention of your business name, address, and phone number on an external website. Yelp, TripAdvisor, Angi, the Better Business Bureau, your chamber of commerce website, and local news sites all constitute citations. Consistent citations across directories reinforce Google\'s confidence in your business data.',
+          'Inconsistency hurts. If your address appears differently across directories ("3960 State Hwy" vs. "3960 State Highway"), Google may discount those citations. An audit of your top 50 local citations — correcting errors and filling in missing listings — is one of the highest-ROI local SEO tasks for businesses that haven\'t done it.',
+        ],
+      },
+      {
+        heading: 'Your Website\'s Role in Maps Rankings',
+        body: [
+          'Your website contributes to Maps prominence through what\'s on it. A local business\'s site should include: the full business name, address, and phone number (NAP) in text form on every page (not just in an image), location-specific content that uses town names and service-area keywords naturally, and pages dedicated to the specific services you want to rank for locally.',
+          'Schema markup — specifically LocalBusiness schema — tells Google structured data about your business. This goes beyond what your business profile shows: it can specify hours, payment methods, geo-coordinates, and service areas in a format Google reads directly. A website without LocalBusiness schema is leaving Maps ranking signals on the table.',
+        ],
+      },
+    ],
+    takeaway: 'Google Maps ranking comes down to a complete, active Google Business Profile, a steady stream of genuine reviews, consistent citations across local directories, and a website that reinforces your local relevance with properly structured content and schema markup.',
+  },
+  {
+    id: 'wordpress-maintenance',
+    num: '26',
+    title: 'What Is WordPress Maintenance?',
+    subtitle: 'Why Your WordPress Site Needs Ongoing Care — and What Happens When It Doesn\'t',
+    summary: 'WordPress powers over 40% of the web, and over 90% of hacked websites run outdated software. Maintenance isn\'t optional for a site that handles customer inquiries, bookings, or any kind of business data.',
+    sections: [
+      {
+        heading: 'What WordPress Maintenance Actually Involves',
+        body: [
+          'WordPress maintenance covers four ongoing categories: core software updates, plugin and theme updates, backups, and security monitoring. Each category addresses a distinct risk. Core updates patch security vulnerabilities in WordPress itself. Plugin updates do the same for the third-party code your site depends on. Backups ensure that any failure — server crash, hack, bad update — can be undone without rebuilding from scratch. Security monitoring watches for signs of compromise.',
+          'Beyond these fundamentals, maintenance also includes periodic performance checks (page speed, Core Web Vitals), uptime monitoring (being alerted when the site goes offline instead of finding out from a customer), and database optimization. A well-maintained WordPress site runs faster, stays secure, and rarely has emergencies. An unmaintained one accumulates technical debt that compounds into expensive problems.',
+        ],
+      },
+      {
+        heading: 'The Real Cost of Skipping Updates',
+        body: [
+          'The most common argument for skipping WordPress updates is "if it\'s working, don\'t touch it." This misunderstands how WordPress security works. WordPress plugins account for the vast majority of site compromises — and the most common attack vector is known vulnerabilities in outdated plugins. When a vulnerability is published in a popular plugin, automated bots begin scanning the web for sites running that version within hours.',
+          'The second argument is fear: "What if the update breaks something?" This is a legitimate concern, which is why proper maintenance always involves taking a backup before applying updates, and testing on a staging environment for complex sites. An update that breaks something in a staging environment is a minor inconvenience. A hack that injects SEO spam into your site pages, sends your domain to a blacklist, and requires a professional cleanup costs $500–$2,000 and 2–4 weeks of SEO recovery. The math isn\'t close.',
+        ],
+      },
+      {
+        heading: 'Backups: What "Real" Backup Looks Like',
+        body: [
+          'Hosting backups are not the same as managed backups. Most shared hosts take occasional server snapshots — but these are unreliable, rarely tested, and often located on the same server infrastructure as your site. If the server fails completely, the backup may be inaccessible.',
+          'Proper WordPress backup means: daily automated backups to an off-site location (separate cloud storage, not the same server), retention of at least 30 days of history (so you can roll back past a problem that wasn\'t caught immediately), and tested restores. A backup you\'ve never tested is a backup you don\'t know works. At COLEwebdev, our care plan clients have their backups tested quarterly and stored in two separate off-site locations.',
+        ],
+      },
+      {
+        heading: 'Security Monitoring: What It Catches',
+        body: [
+          'Security monitoring watches for file changes, malware injection, blacklist status changes, and suspicious login activity. Most WordPress compromises aren\'t immediately obvious — attackers often prefer quiet access over visible damage. A hacked site might continue appearing normal to visitors while serving spam pages to Google, redirecting mobile users to malware sites, or being used as a spam relay.',
+          'Monitoring catches these by comparing your site\'s files against known-good baselines, watching for unexpected administrative accounts, and checking your domain against major malware and spam blacklists daily. When something changes, you\'re alerted before a customer reports it or before Google flags your site.',
+        ],
+      },
+      {
+        heading: 'DIY Maintenance vs. a Care Plan',
+        body: [
+          'Technically capable business owners can maintain WordPress themselves — applying updates, managing backups, and reviewing security reports. The question is whether it\'s a good use of your time. A typical maintenance routine takes 1–2 hours per month if done properly, and longer when something goes wrong.',
+          'A WordPress care plan delegates all of that for a flat monthly rate. COLEwebdev\'s care plans include all of the above — updates, backups, security monitoring, uptime alerts, and a monthly plain-English report — plus a bank of hours each month for content updates or small changes. For most small business owners, the time savings alone justify the cost before the security protection is even factored in.',
+        ],
+      },
+    ],
+    takeaway: 'WordPress maintenance isn\'t optional once your site handles real business data, customer inquiries, or booking. The cost of proper maintenance is a fraction of the cost of a successful hack or a data loss event. The right question isn\'t "can I afford maintenance?" — it\'s "can I afford not to have it?"',
+  },
 ];

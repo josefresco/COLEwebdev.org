@@ -23,6 +23,10 @@ const WP_RELATED_LINKS = {
   'how-long-seo':            [{ text: 'SEO & Local Search', href: 'seo.html' }, { text: 'Cape Cod Marketing', href: 'cape-cod-marketing.html' }],
   'is-my-website-working':   [{ text: 'SEO & Local Search', href: 'seo.html' }, { text: 'Cape Cod Marketing', href: 'cape-cod-marketing.html' }, { text: 'Request a Quote', href: 'quote.html' }],
   'shopify-vs-woocommerce':  [{ text: 'E-Commerce', href: 'ecommerce.html' }, { text: 'WordPress Design', href: 'wordpress.html' }, { text: 'Request a Quote', href: 'quote.html' }],
+  'core-web-vitals':         [{ text: 'WordPress Speed Optimization', href: 'wordpress-speed.html' }, { text: 'WordPress Design', href: 'wordpress.html' }, { text: 'Hosting + Care Plans', href: 'hosting.html' }],
+  'website-accessibility':   [{ text: 'Web Accessibility (WCAG)', href: 'web-accessibility.html' }, { text: 'Website Design + Build', href: 'website-design.html' }, { text: 'Contact Us', href: 'contact.html' }],
+  'google-maps-ranking':     [{ text: 'SEO & Local Search', href: 'seo.html' }, { text: 'Cape Cod Marketing', href: 'cape-cod-marketing.html' }, { text: 'Request a Quote', href: 'quote.html' }],
+  'wordpress-maintenance':   [{ text: 'Hosting + Care Plans', href: 'hosting.html' }, { text: 'Updates & Maintenance', href: 'updates.html' }, { text: 'WordPress Design', href: 'wordpress.html' }],
 };
 
 const WP_IMAGES = {

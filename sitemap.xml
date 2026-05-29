@@ -309,6 +309,34 @@
   </url>
 
   <url>
+    <loc>https://colewebdev.org/wp-core-web-vitals.html</loc>
+    <lastmod>2026-05-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.65</priority>
+  </url>
+
+  <url>
+    <loc>https://colewebdev.org/wp-website-accessibility.html</loc>
+    <lastmod>2026-05-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.65</priority>
+  </url>
+
+  <url>
+    <loc>https://colewebdev.org/wp-google-maps-ranking.html</loc>
+    <lastmod>2026-05-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.65</priority>
+  </url>
+
+  <url>
+    <loc>https://colewebdev.org/wp-wordpress-maintenance.html</loc>
+    <lastmod>2026-05-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.65</priority>
+  </url>
+
+  <url>
     <loc>https://colewebdev.org/ppc.html</loc>
     <lastmod>2026-05-24</lastmod>
     <changefreq>monthly</changefreq>
