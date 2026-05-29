@@ -121,6 +121,86 @@ const FAQ_CATEGORIES = [
       },
     ],
   },
+  {
+    id: 'hosting',
+    label: 'Hosting & Maintenance',
+    glyph: '↻',
+    color: 'green',
+    questions: [
+      {
+        q: 'What does a website care plan include?',
+        a: 'Our care plans cover everything that keeps a WordPress site healthy: monthly core and plugin updates, daily automated backups to off-site storage, security monitoring, uptime alerts, and a monthly plain-English report on your site\'s status. Plans also include a bank of support hours each month for content edits and small changes — so you have someone to call when something needs updating.',
+      },
+      {
+        q: 'What happens if my site gets hacked?',
+        a: 'Hacks happen, even on well-maintained sites. If you\'re on one of our care plans, we handle the cleanup: removing malicious code, restoring from a clean backup, identifying the attack vector, and patching the vulnerability. For sites not on a plan, cleanup is billed as an emergency service. Prevention is dramatically cheaper — which is why we recommend ongoing maintenance for any site that handles customer contact or business data.',
+      },
+      {
+        q: 'Can I move my site to a different host later?',
+        a: 'Yes — and we\'ll help you. You own your site and we\'ll never hold it hostage to our hosting. If you want to move to a different provider, we\'ll migrate your files, database, and DNS settings. We do ask for notice so we can do it cleanly during a low-traffic period.',
+      },
+    ],
+  },
+  {
+    id: 'wordpress',
+    label: 'WordPress',
+    glyph: '◇',
+    color: 'orange',
+    questions: [
+      {
+        q: 'Does my business need WordPress, or will a simpler site work?',
+        a: 'It depends on how often your content changes and who needs to update it. WordPress is the right choice when you want to update pages yourself without a developer, when you\'re running a blog or news section, or when you need a plugin ecosystem (booking, forms, e-commerce). For businesses with stable content that rarely changes, a leaner hand-coded site can be faster and easier to maintain. We build both and recommend what actually fits your situation.',
+      },
+      {
+        q: 'I\'ve heard WordPress sites are slow. Is that true?',
+        a: 'A poorly built WordPress site can be slow — bloated themes, too many plugins, no caching, unoptimized images. A well-built WordPress site, properly configured with server-side caching, a lightweight theme, and optimized assets, is fast. Our WordPress builds score 90+ on Google PageSpeed. The platform isn\'t the problem; the implementation is.',
+      },
+      {
+        q: 'Do WordPress updates break things?',
+        a: 'They can, if applied carelessly. The right workflow is: take a backup first, update in a staging environment before pushing to production, and test the key pages after each update cycle. This is exactly what our WordPress care plans do. Done properly, updates almost never cause problems — and when they do, a fresh backup makes recovery a matter of minutes, not days.',
+      },
+    ],
+  },
+  {
+    id: 'performance',
+    label: 'Performance & Speed',
+    glyph: '◈',
+    color: 'navy',
+    questions: [
+      {
+        q: 'Why is my website slow, and does it matter?',
+        a: 'The most common culprits: large unoptimized images, bloated plugins or themes, no server-side caching, and too many third-party scripts (analytics, chat widgets, ad tags). Speed matters because 53% of mobile visitors abandon a page that takes more than 3 seconds to load — and Google uses page speed as a ranking signal. A slow site loses traffic at both ends: fewer visitors find it, and more of the ones who do leave before seeing your content.',
+      },
+      {
+        q: 'What are Core Web Vitals and why should I care?',
+        a: 'Core Web Vitals are three specific performance metrics Google measures on your site: Largest Contentful Paint (how fast the main content appears), Cumulative Layout Shift (whether the page jumps around while loading), and Interaction to Next Paint (how quickly the page responds to clicks). Since 2021, these are official Google ranking signals — sites that score well have a measurable advantage in search results over slower competitors.',
+      },
+      {
+        q: 'Can you fix my existing site\'s speed, or does it need to be rebuilt?',
+        a: 'Often fixable without a rebuild. A WordPress speed optimization audit typically covers image compression, enabling proper caching, removing unused plugins, deferring render-blocking scripts, and switching to a faster hosting environment. Many sites go from a PageSpeed score in the 40s to the 80s or 90s without any design changes. We assess first and quote specifically — we won\'t recommend a rebuild if an optimization pass will achieve the goal.',
+      },
+    ],
+  },
+  {
+    id: 'accessibility',
+    label: 'Accessibility & Compliance',
+    glyph: '◑',
+    color: 'blue',
+    questions: [
+      {
+        q: 'Does my business website need to be ADA accessible?',
+        a: 'Likely yes. Courts have increasingly ruled that business websites are "places of public accommodation" under Title III of the ADA — meaning businesses that operate online can be subject to ADA accessibility claims. Over 4,500 ADA website lawsuits were filed in 2023, most targeting small and medium businesses in retail, hospitality, food service, and healthcare. The legal exposure is real, and the cost of retrofitting an inaccessible site is significantly higher than building it correctly from the start.',
+      },
+      {
+        q: 'What is WCAG and what level do we need to meet?',
+        a: 'WCAG — the Web Content Accessibility Guidelines — is the international standard for web accessibility, published by the W3C. It\'s organized into levels A, AA, and AAA. Level AA is the standard used by most courts, regulators, and government requirements when evaluating compliance. Meeting WCAG 2.1 AA means your site works for users with visual, auditory, motor, and cognitive disabilities — including those using screen readers, keyboard-only navigation, or screen magnification.',
+      },
+      {
+        q: 'Can\'t I just install an accessibility widget to be compliant?',
+        a: 'No — and this is important. Accessibility overlay products (AccessiBe, UserWay, and others) that add a toolbar to your site do not achieve real WCAG compliance. The National Federation of the Blind, blind users, and independent testers have all documented that these tools fail to address the substantive issues affecting actual disabled users. Courts have ruled against defendants whose only accommodation was an overlay. Real compliance requires an audit and remediation in the underlying code.',
+      },
+    ],
+  },
 ];
 
 function FAQItem({ q, a }) {
