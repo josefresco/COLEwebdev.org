@@ -132,7 +132,7 @@ window.INDUSTRY_DATA = [
       { icon: '◈', title: 'Online Ordering', body: "Toast, Square, or platform-specific online ordering integrated for takeout and delivery. Keeps the transaction on your site rather than sending customers to a third-party app." },
     ],
     clients: [
-      { name: 'Friendly Fisherman', type: 'Seafood Restaurant', href: 'https://friendlyfishermaneastham.com/' },
+      { name: 'Basco Grill', type: 'Restaurant', href: 'https://bascogrill.com/' },
       { name: 'The Marshside', type: 'Restaurant', href: 'https://themarshside.com/' },
       { name: 'Hog Island Beer Co.', type: 'Brewery & Restaurant', href: 'https://hogislandbeerco.com/' },
     ],
