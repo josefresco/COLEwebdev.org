@@ -284,6 +284,35 @@ function WebDesignPage() {
         </div>
       </section>
 
+      {/* Industries */}
+      <section className="wd-industries">
+        <div className="shell">
+          <div className="wd-industries-hd">
+            <span className="eyebrow">By industry</span>
+            <h2 className="wd-industries-hl">We know your industry, not just web design.</h2>
+            <p className="wd-industries-sub">Different businesses need different websites. We've built for Cape Cod's most active sectors and we understand what works in each one.</p>
+          </div>
+          <div className="wd-industries-grid">
+            {[
+              { icon: '◇', name: 'Nonprofits', href: 'cape-cod-nonprofit-web-design.html' },
+              { icon: '◷', name: 'Churches', href: 'cape-cod-church-web-design.html' },
+              { icon: '◎', name: 'Hospitality', href: 'cape-cod-hospitality-web-design.html' },
+              { icon: '≡', name: 'Restaurants', href: 'cape-cod-restaurant-web-design.html' },
+              { icon: '▣', name: 'Real Estate', href: 'cape-cod-real-estate-web-design.html' },
+              { icon: '◈', name: 'Chambers of Commerce', href: 'cape-cod-chamber-web-design.html' },
+            ].map(function(ind) {
+              return (
+                <a key={ind.name} href={ind.href} className="wd-industry-chip">
+                  <span className="wd-industry-chip-icon">{ind.icon}</span>
+                  <span className="wd-industry-chip-name">{ind.name}</span>
+                  <span className="wd-industry-chip-arrow">→</span>
+                </a>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="wd-cta-section">
         <div className="shell">

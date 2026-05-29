@@ -449,6 +449,17 @@ function Footer() {
             </ul>
           </div>
           <div>
+            <h5>Industries</h5>
+            <ul>
+              <li><a href="cape-cod-nonprofit-web-design.html">Nonprofits</a></li>
+              <li><a href="cape-cod-church-web-design.html">Churches</a></li>
+              <li><a href="cape-cod-hospitality-web-design.html">Hospitality</a></li>
+              <li><a href="cape-cod-restaurant-web-design.html">Restaurants</a></li>
+              <li><a href="cape-cod-real-estate-web-design.html">Real Estate</a></li>
+              <li><a href="cape-cod-chamber-web-design.html">Chambers</a></li>
+            </ul>
+          </div>
+          <div>
             <h5>Connect</h5>
             <ul>
               <li><a href="tel:5084132043">508.413.2043</a></li>

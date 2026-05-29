@@ -244,6 +244,27 @@ function LocationPage() {
       )}
 
       {/* FAQ */}
+      {/* Industries strip */}
+      <section className="lp-ind-strip">
+        <div className="shell">
+          <p className="lp-section-label">By industry</p>
+          <div className="lp-ind-list">
+            {[
+              { name: 'Nonprofits', href: 'cape-cod-nonprofit-web-design.html' },
+              { name: 'Churches', href: 'cape-cod-church-web-design.html' },
+              { name: 'Hospitality', href: 'cape-cod-hospitality-web-design.html' },
+              { name: 'Restaurants', href: 'cape-cod-restaurant-web-design.html' },
+              { name: 'Real Estate', href: 'cape-cod-real-estate-web-design.html' },
+              { name: 'Chambers', href: 'cape-cod-chamber-web-design.html' },
+            ].map(function(ind, i) {
+              return (
+                <a key={i} href={ind.href} className="lp-ind-link">{ind.name} →</a>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
       {loc.faq && loc.faq.length > 0 && (
         <section className="lp-faq">
           <div className="shell">

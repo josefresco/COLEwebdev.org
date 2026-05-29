@@ -1576,7 +1576,7 @@ p, li {
 }
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
   gap: 36px;
   margin-bottom: 60px;
 }
@@ -2566,6 +2566,21 @@ p, li {
 .lp-nearby-link:hover { background: var(--paper-2); border-color: var(--brand-blue); }
 .lp-nearby-area { color: var(--brand-green); border-color: rgba(123,192,67,0.35); }
 .lp-nearby-area:hover { border-color: var(--brand-green); background: rgba(123,192,67,0.06); }
+
+/* Industry strip on location pages */
+.lp-ind-strip { padding: 32px 0; background: var(--paper-2); border-top: 1px solid var(--line); }
+.lp-ind-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.lp-ind-link {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--brand-blue);
+  text-decoration: none;
+  background: rgba(0,115,170,0.07);
+  border-radius: 999px;
+  padding: 6px 14px;
+  transition: background 0.18s;
+}
+.lp-ind-link:hover { background: rgba(0,115,170,0.15); }
 .lp-nearby-plain { font-size: 13px; color: var(--muted); padding: 6px 14px; border: 1px solid var(--line); border-radius: 999px; }
 
 /* Founder personal connection */
