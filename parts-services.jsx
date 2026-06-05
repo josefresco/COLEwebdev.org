@@ -1,4 +1,4 @@
-﻿/* global React */
+/* global React */
 const { useState: useStateS, useEffect: useEffectS, useRef: useRefS } = React;
 
 /* ============================================================
@@ -21,7 +21,7 @@ function Services() {
 
         <div className="bento">
           {/* Flagship: Custom Websites */}
-          <div className="card svc-card feature xl">
+          <a className="card svc-card feature xl" href="website-design.html">
             <div>
               <span className="tag" style={{ background: 'rgba(255,255,255,0.08)', color: 'white', borderColor: 'rgba(255,255,255,0.15)' }}>FLAGSHIP</span>
             </div>
@@ -34,10 +34,10 @@ function Services() {
               </div>
               <span className="arrow-pill">â†’</span>
             </div>
-          </div>
+          </a>
 
           {/* Web Design */}
-          <div className="card svc-card sm">
+          <a className="card svc-card sm" href="website-design.html">
             <div className="icon green">â—‡</div>
             <h3>Web Design</h3>
             <p>Your goals, audience, and market drive the brief â€” then we design something built to perform, not just to look good.</p>
@@ -45,10 +45,10 @@ function Services() {
               <span>Fixed price</span>
               <span className="arrow-pill" style={{ background: 'var(--paper)', color: 'var(--ink)' }}>â†’</span>
             </div>
-          </div>
+          </a>
 
           {/* SEO */}
-          <div className="card svc-card sm">
+          <a className="card svc-card sm" href="seo.html">
             <div className="icon navy">âš¡</div>
             <h3>SEO &amp; Local Search</h3>
             <p>Understanding what your customers are actually searching for comes first â€” then we build a strategy around real data, not guesswork.</p>
@@ -56,10 +56,10 @@ function Services() {
               <span>Monthly Care</span>
               <span className="arrow-pill" style={{ background: 'var(--paper)', color: 'var(--ink)' }}>â†’</span>
             </div>
-          </div>
+          </a>
 
           {/* Google Ads */}
-          <div className="card svc-card sm">
+          <a className="card svc-card sm" href="ppc.html">
             <div className="icon green">â—Ž</div>
             <h3>Google Ads</h3>
             <p>Every campaign is built around what actually converts for your market, then managed month to month with honest, transparent reporting.</p>
@@ -67,10 +67,10 @@ function Services() {
               <span>Pay-per-click</span>
               <span className="arrow-pill" style={{ background: 'var(--paper)', color: 'var(--ink)' }}>â†’</span>
             </div>
-          </div>
+          </a>
 
           {/* Social Media Consulting */}
-          <div className="card svc-card sm">
+          <a className="card svc-card sm" href="marketing.html">
             <div className="icon navy">â—</div>
             <h3>Social Media Consulting</h3>
             <p>The right strategy fits your audience and your capacity â€” not a generic posting schedule that falls apart in three weeks.</p>
@@ -78,10 +78,10 @@ function Services() {
               <span>Coaching Â· Audits</span>
               <span className="arrow-pill" style={{ background: 'var(--paper)', color: 'var(--ink)' }}>â†’</span>
             </div>
-          </div>
+          </a>
 
           {/* Hosting + Care (slightly larger â€” keeps signature service prominent) */}
-          <div className="card svc-card lg">
+          <a className="card svc-card lg" href="hosting.html">
             <div className="icon green">â†»</div>
             <h3>Hosting + Care Plans</h3>
             <p>Right plan, right fit â€” everything handled behind the scenes, with a real person reachable when something needs attention.</p>
@@ -89,10 +89,10 @@ function Services() {
               <span>Flexible plans</span>
               <span className="arrow-pill" style={{ background: 'var(--paper)', color: 'var(--ink)' }}>â†’</span>
             </div>
-          </div>
+          </a>
 
           {/* Website Updates */}
-          <div className="card svc-card sm">
+          <a className="card svc-card sm" href="updates.html">
             <div className="icon navy">âœŽ</div>
             <h3>Website Updates</h3>
             <p>Whatever needs changing gets scoped honestly, turned around fast, and integrated cleanly with what's already there.</p>
@@ -100,10 +100,10 @@ function Services() {
               <span>By request</span>
               <span className="arrow-pill" style={{ background: 'var(--paper)', color: 'var(--ink)' }}>â†’</span>
             </div>
-          </div>
+          </a>
 
           {/* Speed Optimization */}
-          <div className="card svc-card sm">
+          <a className="card svc-card sm" href="wordpress-speed.html">
             <div className="icon green">â†‘</div>
             <h3>Speed Optimization</h3>
             <p>A full audit of what's slowing your site down, followed by targeted fixes that make a real, measurable difference.</p>
@@ -111,10 +111,10 @@ function Services() {
               <span>One-time tune-up</span>
               <span className="arrow-pill" style={{ background: 'var(--paper)', color: 'var(--ink)' }}>â†’</span>
             </div>
-          </div>
+          </a>
 
           {/* E-Commerce */}
-          <div className="card svc-card sm">
+          <a className="card svc-card sm" href="ecommerce.html">
             <div className="icon green">â—</div>
             <h3>E-Commerce</h3>
             <p>Right platform, full setup, clean handoff â€” your store is ready to sell on day one.</p>
@@ -122,10 +122,10 @@ function Services() {
               <span>Catalog ready</span>
               <span className="arrow-pill" style={{ background: 'var(--paper)', color: 'var(--ink)' }}>â†’</span>
             </div>
-          </div>
+          </a>
 
           {/* Branding */}
-          <div className="card svc-card sm">
+          <a className="card svc-card sm" href="branding.html">
             <div className="icon navy">âœ¦</div>
             <h3>Branding</h3>
             <p>What makes your business distinct shapes every decision â€” logo, color, print â€” built to hold together across every surface.</p>
@@ -133,10 +133,10 @@ function Services() {
               <span>Project-based</span>
               <span className="arrow-pill" style={{ background: 'var(--paper)', color: 'var(--ink)' }}>â†’</span>
             </div>
-          </div>
+          </a>
 
           {/* AI Web Apps â€” minimized */}
-          <div className="card svc-card sm">
+          <a className="card svc-card sm" href="ai-apps.html">
             <div className="icon green">âŒ˜</div>
             <h3>AI Web Apps <span className="tag" style={{ marginLeft: 6, verticalAlign: 'middle', background: 'rgba(33,146,188,0.12)', color: 'var(--brand-blue)', borderColor: 'rgba(33,146,188,0.2)' }}>NEW</span></h3>
             <p>Where AI can genuinely save time â€” for your customers or your team â€” that's where we focus, then build something that fits into your site without friction.</p>
@@ -144,7 +144,7 @@ function Services() {
               <span>Add-on</span>
               <span className="arrow-pill" style={{ background: 'var(--paper)', color: 'var(--ink)' }}>â†’</span>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </section>);
@@ -242,7 +242,7 @@ function Estimator() {
             </div>
 
             <LeadForm />
-          </div>
+          </a>
         </div>
       </div>
     </section>);
