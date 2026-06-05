@@ -96,7 +96,7 @@ function QuotePage() {
               <div className="rq-success-icon">✓</div>
               <h1 className="rq-success-hl">Quote request received.</h1>
               <p className="rq-success-sub">
-                Thanks, {form.name.split(' ')[0] || 'there'}! We'll review your project details and get back to you within one business day. If it's urgent, call us at <strong>508.413.2043</strong>.
+                Thanks, {form.name.split(' ')[0] || 'there'}! We'll review your project details and get back to you quickly. If it's urgent, call us at <strong>508.413.2043</strong>.
               </p>
               <a className="btn btn--primary" href="index.html">Back to home <span className="arrow">→</span></a>
             </div>
@@ -119,7 +119,7 @@ function QuotePage() {
             <span className="eyebrow rq-eyebrow">Get Started</span>
             <h1 className="rq-hero-hl">Request a <em>Quote.</em></h1>
             <p className="rq-hero-sub">
-              Tell us about your project and we'll get back to you within one business day with a real scope and a fair price.
+              Tell us about your project and we'll get back to you quickly with a real scope and a fair price.
             </p>
           </div>
         </div>
@@ -304,7 +304,7 @@ function QuotePage() {
                   <p className="rq-error">Something went wrong — please try again or call us at 508.413.2043.</p>
                 )}
                 <div className="rq-submit-row">
-                  <span className="rq-submit-note">We reply within 1 business day</span>
+                  <span className="rq-submit-note">We reply fast</span>
                   <button className="btn btn--primary" type="submit" disabled={status === 'submitting'}>
                     {status === 'submitting' ? 'Sending…' : <>Submit quote request <span className="arrow">→</span></>}
                   </button>

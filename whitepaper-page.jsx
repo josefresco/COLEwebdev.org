@@ -274,7 +274,7 @@ function WhitepaperPage() {
               <div className="wpa-card wpa-card--quote">
                 <p className="wpa-card-eyebrow">Ready to build?</p>
                 <h2 className="wpa-card-hl">Put this into practice.</h2>
-                <p className="wpa-card-sub">Tell us about your project — we'll get back to you within one business day with a real scope and a fair price.</p>
+                <p className="wpa-card-sub">Tell us about your project — we'll get back to you quickly with a real scope and a fair price.</p>
                 <a href="quote.html" className="btn btn--primary wpa-card-btn">
                   Request a Quote <span className="arrow">→</span>
                 </a>

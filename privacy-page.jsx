@@ -82,7 +82,7 @@ function PrivacyPage() {
                 <h2 className="pp-section-hl">How we use it</h2>
                 <p className="pp-p">The information you submit is used solely to:</p>
                 <ul className="pp-list">
-                  <li><strong>Respond to your inquiry</strong> — we reply to contact form submissions within one business day</li>
+                  <li><strong>Respond to your inquiry</strong> — we reply to contact form submissions promptly</li>
                   <li><strong>Prepare a project proposal</strong> — quote request details inform our scope and pricing</li>
                   <li><strong>Send our newsletter</strong> — only if you explicitly opt in; you can unsubscribe at any time</li>
                 </ul>

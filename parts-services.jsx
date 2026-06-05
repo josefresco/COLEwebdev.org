@@ -194,7 +194,7 @@ function Estimator() {
       if (!parsed) throw new Error('Could not parse estimate');
       setResult(parsed);
     } catch (e) {
-      setError("We couldn't reach the estimator just now. Hit â€œRequest a quoteâ€ below and we'll get back to you within a day.");
+      setError("We couldn't reach the estimator just now. Hit "Request a quote" below and we'll get back to you quickly.");
     } finally {
       setLoading(false);
     }
@@ -209,7 +209,7 @@ function Estimator() {
               <span className="eyebrow">Start a website project</span>
               <h2 style={{ marginTop: 14 }}>Tell us about your <span className="italic">website.</span></h2>
               <p className="lede" style={{ marginTop: 16 }}>
-                Whether it's a fresh build, a redesign of a tired site, or a small fix — drop us a note. We'll reply within one business day with next steps and a ballpark.
+                Whether it's a fresh build, a redesign of a tired site, or a small fix — drop us a note. We'll reply quickly with next steps and a ballpark.
               </p>
               <div style={{ marginTop: 28, display: 'flex', alignItems: 'flex-start', gap: 16 }}>
                 <div style={{ display: 'flex', gap: 0, flexShrink: 0, width: 88 }}>
@@ -280,7 +280,7 @@ function LeadForm() {
           <div style={{ width: 44, height: 44, borderRadius: 999, background: 'rgba(123,192,67,0.18)', color: 'var(--green-deep)', display: 'grid', placeItems: 'center', fontSize: 22, marginBottom: 16 }}>âœ“</div>
           <h4 style={{ fontFamily: 'var(--serif)', fontSize: 28, marginBottom: 8 }}>Thanks, {form.name.split(' ')[0] || 'there'}!</h4>
           <p style={{ fontSize: 15, color: 'var(--ink-2)', lineHeight: 1.55, marginBottom: 16 }}>
-            We got your note and will get back to you within one business day. If it's urgent, give us a ring at <b>508.413.2043</b>.
+            We got your note and will get back to you quickly. If it's urgent, give us a ring at <b>508.413.2043</b>.
           </p>
           <button className="btn btn--ghost btn--sm" onClick={() => setSubmitted(false)} type="button">Send another â†’</button>
         </div>
@@ -316,7 +316,7 @@ function LeadForm() {
       {error && <p style={{ fontSize: 13, color: '#c0392b', marginTop: 10 }}>{error}</p>}
       <div className="estimator-actions">
         <span style={{ fontFamily: 'var(--mono)', fontSize: 11, color: 'var(--muted)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
-          We reply within 1 business day
+          We reply fast
         </span>
         <button className="btn btn--accent btn--sm" type="submit" disabled={loading}>
           {loading ? 'Sendingâ€¦' : <>Send it <span className="arrow">â†’</span></>}

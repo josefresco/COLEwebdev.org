@@ -130,7 +130,7 @@ function ContactPage() {
                   <div className="ct-success-icon">✓</div>
                   <h2 className="ct-success-hl">Message received.</h2>
                   <p className="ct-success-body">
-                    Thanks for reaching out — we'll be in touch within one business day.
+                    Thanks for reaching out — we'll be in touch shortly.
                   </p>
                 </div>
               ) : (
@@ -279,7 +279,7 @@ function ContactPage() {
                         {status !== 'submitting' && <span className="arrow"> →</span>}
                       </button>
                       <span className="ct-submit-note">
-                        We respond within one business day.
+                        We respond fast.
                       </span>
                     </div>
 

@@ -108,7 +108,7 @@ function AccessibilityPage() {
                   </div>
                 </div>
                 <p className="ac-p" style={{ marginTop: 20 }}>
-                  We aim to respond to accessibility feedback within <strong>2 business days</strong>. We will work to provide the information or functionality you need through an accessible alternative if necessary.
+                  We aim to respond to accessibility feedback promptly. We will work to provide the information or functionality you need through an accessible alternative if necessary.
                 </p>
               </div>
 
