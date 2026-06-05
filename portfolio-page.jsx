@@ -81,7 +81,7 @@ const PROJECTS = [
     cat: 'ecommerce',
     tags: [{ label: 'E-COMMERCE', cls: 'tag--orange' }, { label: 'RETAIL' }],
     img: 'https://www.colewebdev.com/wp-content/uploads/2024/11/idle-times-bike-shop-website-revamp-cape-cod-2024-smll.jpg',
-    href: 'https://www.idletimesbikes.com/',
+    href: 'https://rentals.idletimesbikes.com/bike-rentals/',
     ctaLabel: 'View site',
   },
 

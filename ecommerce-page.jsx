@@ -84,7 +84,7 @@ const EC_PORTFOLIO = [
     title: 'Idle Times Bike Shop',
     meta: 'Outer Cape, MA',
     img: 'https://www.colewebdev.com/wp-content/uploads/2024/11/idle-times-bike-shop-website-revamp-cape-cod-2024-smll.jpg',
-    href: 'https://www.idletimesbikes.com/',
+    href: 'https://rentals.idletimesbikes.com/bike-rentals/',
   },
   {
     title: 'Black River Caviar',

@@ -182,7 +182,7 @@ window.LOCATIONS_DATA = [
     industries: ['Restaurants', 'Hospitality', 'Marine', 'Nonprofits', 'Contractors', 'Retail', 'Healthcare', 'Tourism'],
     clients: [
       { name: 'Dolphin Fleet Whale Watch', type: 'Ecotourism', href: 'https://whalewatch.com/' },
-      { name: 'Idle Times Bike Shop', type: 'Retail', href: 'https://www.idletimesbikes.com/' },
+      { name: 'Idle Times Bike Shop', type: 'Retail', href: 'https://rentals.idletimesbikes.com/bike-rentals/' },
       { name: 'Cape Cod Foundation', type: 'Nonprofit', href: 'https://www.capecodfoundation.org/' },
       { name: 'Ryley Construction', type: 'Contractor', href: 'https://ryleyconstruction.com/' },
       { name: 'Truro Vineyards', type: 'Winery', href: 'https://trurovineyardsofcapecod.com/' },

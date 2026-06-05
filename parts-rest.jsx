@@ -117,7 +117,7 @@ function Portfolio() {
     tags: [{ label: 'E-COMMERCE', cls: 'tag--orange' }, { label: 'RETAIL' }],
     title: 'Idle Times Bike Shop',
     meta: 'Wellfleet, MA',
-    href: 'https://www.idletimesbikes.com/',
+    href: 'https://rentals.idletimesbikes.com/bike-rentals/',
     cta: 'View site →'
   }];
 
@@ -185,16 +185,16 @@ const TESTIMONIALS = [
     role: 'Cape Cod Aquatics',
   },
   {
-    quote: "Friendly, fast, and fair. They redesigned our site, set up SEO, and walked us through everything in plain English. We get more calls now than we ever did from the old site.",
-    initials: 'TS',
-    name: 'Tom S.',
+    quote: "COLEwebdev is flat out awesome. Easy to work with, understood me, my business, and my goals. Super responsive and super helpful. I'd recommend to anyone looking to build a customer-centric, professional website — give them a call. My experience could not have been better.",
+    initials: 'GS',
+    name: 'George Sylvestre',
     role: 'Sylvestre Outdoors',
   },
   {
-    quote: "We're a small nonprofit, so every dollar matters. The team was patient, generous with their time, and built us a site that finally feels like us. Five stars and then some.",
-    initials: 'AR',
-    name: 'Anne R.',
-    role: 'Truro Historical Society',
+    quote: "We struck gold with Josiah. Finding smart, responsive website help can be difficult on Cape Cod. Not any more. Josiah and COLEwebdev have been the best thing to happen to Ring Bros. Marketplace.",
+    initials: 'LF',
+    name: 'Lori Flanagan',
+    role: 'Ring Bros. Marketplace',
   },
   {
     quote: "Reliable, creative, local. Cole has been our go-to for years for everything web — design, hosting, the occasional emergency. We trust them completely.",
