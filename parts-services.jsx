@@ -242,7 +242,7 @@ function Estimator() {
             </div>
 
             <LeadForm />
-          </a>
+          </div>
         </div>
       </div>
     </section>);
