@@ -211,7 +211,7 @@ function LocationPage() {
                 { label: 'In business since', val: '2006' },
                 { label: 'Sites launched', val: '700+' },
                 { label: 'Google rating', val: '4.8 ★' },
-                { label: 'Response time', val: '1 business day' },
+                { label: 'Response time', val: 'FAST' },
               ].map((item, i) => (
                 <div key={i} className="lp-why-row">
                   <span className="lp-why-row-label">{item.label}</span>

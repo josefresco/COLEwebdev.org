@@ -124,7 +124,7 @@ function MainePage() {
                   { label: 'In business since', val: '2006' },
                   { label: 'Sites launched', val: '700+' },
                   { label: 'Google rating', val: '4.8 ★' },
-                  { label: 'Response time', val: '1 business day' },
+                  { label: 'Response time', val: 'FAST' },
                 ].map((f, i) => (
                   <div key={i} className="mn-fact-row">
                     <span className="mn-fact-label">{f.label}</span>

@@ -141,7 +141,7 @@ function QuotePage() {
                 <div className="rq-sidebar-divider" />
                 <div className="rq-sidebar-item">
                   <span className="rq-sidebar-label">Response time</span>
-                  <span className="rq-sidebar-val">1 business day</span>
+                  <span className="rq-sidebar-val">FAST</span>
                 </div>
                 <div className="rq-sidebar-item">
                   <span className="rq-sidebar-label">First consultation</span>
