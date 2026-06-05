@@ -179,10 +179,10 @@ const TESTIMONIALS = [
     role: 'Dr. Moldover · drmoldover.com',
   },
   {
-    quote: "Cole built our site, hosts it, updates it, and answers the phone when something breaks. After twenty years of dealing with web people, I finally found one who actually cares.",
-    initials: 'KC',
-    name: 'Kathy C.',
-    role: 'Cape Cod Aquatics',
+    quote: "COLEwebdev did an outstanding job designing our website and hosts it as well. As our business grows they have seamlessly updated our site to reflect our new services. They are very easy to work with and accommodate changes and updates quickly. We highly recommend them!",
+    initials: 'KB',
+    name: 'Kegan Berner',
+    role: 'Oyster River Boatyard',
   },
   {
     quote: "COLEwebdev is flat out awesome. Easy to work with, understood me, my business, and my goals. Super responsive and super helpful. I'd recommend to anyone looking to build a customer-centric, professional website — give them a call. My experience could not have been better.",
@@ -197,10 +197,10 @@ const TESTIMONIALS = [
     role: 'Ring Bros. Marketplace',
   },
   {
-    quote: "Reliable, creative, local. Cole has been our go-to for years for everything web — design, hosting, the occasional emergency. We trust them completely.",
-    initials: 'MD',
-    name: 'Mike D.',
-    role: "Dyer's Beach House",
+    quote: "Working with Desiree and Joe was a breeze. They completely overhauled my business website and did a wonderful job. I receive compliments regularly from customers about the site and its usefulness. We are beyond happy with the finished product and the results it has generated for us!",
+    initials: 'AT',
+    name: 'Amberlyn Tubman',
+    role: 'Brewster Sand & Gravel',
   },
 ];
 
