@@ -91,7 +91,7 @@ function LocationPage() {
             <aside className="lp-intro-sidebar">
               <div className="lp-cta-card">
                 <p className="lp-cta-label">Start a project</p>
-                <p className="lp-cta-hl">Get a free estimate in 24 hours.</p>
+                <p className="lp-cta-hl">Get a free estimate from experts not salespeople</p>
                 <p className="lp-cta-note">No commitment. Just a real conversation about your project.</p>
                 <a className="btn btn--accent lp-cta-btn" href="quote.html">
                   Request a Quote <span className="arrow">→</span>

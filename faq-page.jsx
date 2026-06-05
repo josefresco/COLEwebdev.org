@@ -265,7 +265,7 @@ function FAQPage() {
             <aside className="fq-sidebar">
               <div className="fq-sidebar-card fq-sidebar-card--dark">
                 <p className="fq-sidebar-eyebrow">Ready to start?</p>
-                <p className="fq-sidebar-hl">Get a free estimate in 24 hours.</p>
+                <p className="fq-sidebar-hl">Get a free estimate from experts not salespeople</p>
                 <p className="fq-sidebar-note">No pitch deck. No obligation. Just a real conversation about your project.</p>
                 <a className="btn btn--accent fq-sidebar-btn" href="quote.html">
                   Request a Quote <span className="arrow">→</span>
