@@ -314,7 +314,6 @@ function ContactPage() {
               className="ct-map-frame"
               src="https://www.openstreetmap.org/export/embed.html?bbox=-70.010%2C41.835%2C-69.965%2C41.862&layer=mapnik&marker=41.8484%2C-69.9865"
               loading="lazy"
-              referrerPolicy="no-referrer"
               title="COLEwebdev studio — 3960 State Hwy, Eastham MA"
             />
           </div>
