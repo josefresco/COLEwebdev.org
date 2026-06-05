@@ -103,6 +103,42 @@ const TESTIMONIALS = [
     quote: 'Such excellent service! Knowledgeable and supportive through the whole process of website redesign. Highly recommend.',
     category: 'Small Business',
   },
+  {
+    name: 'Ann Mahoney',
+    business: '',
+    quote: 'If I could, I would give COLEweb 10 stars! After several years of paying for total web maintenance including security, menu changes, special promotions, etc. we decided that we wanted more control. After a complimentary consultation, we knew that COLEweb would be the perfect team to help us accomplish our goals. The transition process was quick and seamless — Desiree and Josiah are pros! They are highly knowledgeable about all things related to websites: design and maintenance, security, marketing strategies, and performance analysis. They provided excellent advice, an abundance of patience and support, and personal, quick response to all our questions and concerns. We also appreciate that they are a local family business with a genuine concern and commitment to the success of our business.',
+    category: 'Small Business',
+  },
+  {
+    name: 'Chris MacDonald',
+    business: '',
+    quote: 'We had a website project that was high importance but a budget that I didn\'t think would get us what we were looking for. So grateful to have been referred to Desiree and COLEwebdev. They listened to our needs and delivered a final product that exceeded expectations at a cost that was beyond reasonable. The best part of the experience was that Desiree completely took this project off my plate and owned it at a time when I had zero bandwidth to contribute. I never had to check in to see how things were progressing, never had to explain our vision after the first meeting. I felt like I was their #1 priority at all times and would recommend to ANYONE.',
+    category: 'Small Business',
+  },
+  {
+    name: 'Dennis Bowman',
+    business: '',
+    quote: 'COLEwebdev designed and developed our first ever website for our small environmental nonprofit. Working with diverse boards of non-profits can be challenging, but they patiently worked with us as we defined and refined our requirements, offering great insights along the way. Then, COLEwebdev rapidly created a creative overall design and high quality pages to produce a website that rivals much larger organizations. Their professionalism, quick response, and flexibility were all simply outstanding. We would highly recommend COLEwebdev!',
+    category: 'Nonprofit',
+  },
+  {
+    name: 'Cathrine Macort',
+    business: '',
+    quote: 'Our non-profit organization has been working with Josiah and Desiree at COLEwebdev for more than seven years and two website overhauls. They are incredibly knowledgeable and professional, and always complete projects on time and on budget. Whether the job is big or small, they always provide terrific customer service, outlining clearly all available options and price points, and presenting them in a format that is easy for the most technologically-challenged to understand. We cannot recommend them highly enough!',
+    category: 'Nonprofit',
+  },
+  {
+    name: 'Martina Mehl',
+    business: '',
+    quote: 'I am a huge fan of the team at COLEwebdev. In addition to being terrific web designers and developers they provide excellent support. Even when faced with a challenge they find a way to problem solve and explain things to us mere mortals — working with them is a pleasure!',
+    category: 'Small Business',
+  },
+  {
+    name: 'Stephen Clark',
+    business: '',
+    quote: 'Desiree and the Cole group did a fantastic job with our website. They were able to walk us through the process and knew exactly what we wanted. So much easier than trying to create and manage that on our own. Very reasonable from a cost perspective as well. Wouldn\'t go anywhere else for such an important element of our business.',
+    category: 'Small Business',
+  },
 ];
 
 function StarRow() {
