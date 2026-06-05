@@ -1,4 +1,4 @@
-/* global React */
+﻿/* global React */
 const { useState: useStateS, useEffect: useEffectS, useRef: useRefS } = React;
 
 /* ============================================================
@@ -13,7 +13,7 @@ function Services() {
             <span className="eyebrow">What we do</span>
             <h2>A small studio with a <span className="italic">deep</span> bench.</h2>
             <p className="lede">
-              From custom websites to ongoing care, search, ads, and email â€” one team that picks up the phone. We pick the right tool for the job and stick around to make sure it keeps working.
+              From custom websites to ongoing care, search, ads, and email — one team that picks up the phone. We pick the right tool for the job and stick around to make sure it keeps working.
             </p>
           </div>
           <a className="btn btn--ghost" href="services.html">All services <span className="arrow">â†’</span></a>
@@ -26,7 +26,7 @@ function Services() {
               <span className="tag" style={{ background: 'rgba(255,255,255,0.08)', color: 'white', borderColor: 'rgba(255,255,255,0.15)' }}>FLAGSHIP</span>
             </div>
             <h3>Custom websites built by people who pick up the phone.</h3>
-            <p>Small businesses and nonprofits across Cape Cod trust us with their entire web presence â€” from first mockup to launch and ongoing care. One team, no tickets, no surprises.</p>
+            <p>Small businesses and nonprofits across Cape Cod trust us with their entire web presence — from first mockup to launch and ongoing care. One team, no tickets, no surprises.</p>
             <div className="meta-row">
               <div className="stack">
                 <span className="tag" style={{ background: 'rgba(255,255,255,0.08)', color: 'white', borderColor: 'rgba(255,255,255,0.15)' }}>WORDPRESS</span>
@@ -40,7 +40,7 @@ function Services() {
           <a className="card svc-card sm" href="website-design.html">
             <div className="icon green">â—‡</div>
             <h3>Web Design</h3>
-            <p>Your goals, audience, and market drive the brief â€” then we design something built to perform, not just to look good.</p>
+            <p>Your goals, audience, and market drive the brief — then we design something built to perform, not just to look good.</p>
             <div className="meta-row">
               <span>Fixed price</span>
               <span className="arrow-pill" style={{ background: 'var(--paper)', color: 'var(--ink)' }}>â†’</span>
@@ -51,7 +51,7 @@ function Services() {
           <a className="card svc-card sm" href="seo.html">
             <div className="icon navy">âš¡</div>
             <h3>SEO &amp; Local Search</h3>
-            <p>Understanding what your customers are actually searching for comes first â€” then we build a strategy around real data, not guesswork.</p>
+            <p>Understanding what your customers are actually searching for comes first — then we build a strategy around real data, not guesswork.</p>
             <div className="meta-row">
               <span>Monthly Care</span>
               <span className="arrow-pill" style={{ background: 'var(--paper)', color: 'var(--ink)' }}>â†’</span>
@@ -73,18 +73,18 @@ function Services() {
           <a className="card svc-card sm" href="marketing.html">
             <div className="icon navy">â—</div>
             <h3>Social Media Consulting</h3>
-            <p>The right strategy fits your audience and your capacity â€” not a generic posting schedule that falls apart in three weeks.</p>
+            <p>The right strategy fits your audience and your capacity — not a generic posting schedule that falls apart in three weeks.</p>
             <div className="meta-row">
               <span>Coaching Â· Audits</span>
               <span className="arrow-pill" style={{ background: 'var(--paper)', color: 'var(--ink)' }}>â†’</span>
             </div>
           </a>
 
-          {/* Hosting + Care (slightly larger â€” keeps signature service prominent) */}
+          {/* Hosting + Care (slightly larger — keeps signature service prominent) */}
           <a className="card svc-card lg" href="hosting.html">
             <div className="icon green">â†»</div>
             <h3>Hosting + Care Plans</h3>
-            <p>Right plan, right fit â€” everything handled behind the scenes, with a real person reachable when something needs attention.</p>
+            <p>Right plan, right fit — everything handled behind the scenes, with a real person reachable when something needs attention.</p>
             <div className="meta-row">
               <span>Flexible plans</span>
               <span className="arrow-pill" style={{ background: 'var(--paper)', color: 'var(--ink)' }}>â†’</span>
@@ -117,7 +117,7 @@ function Services() {
           <a className="card svc-card sm" href="ecommerce.html">
             <div className="icon green">â—</div>
             <h3>E-Commerce</h3>
-            <p>Right platform, full setup, clean handoff â€” your store is ready to sell on day one.</p>
+            <p>Right platform, full setup, clean handoff — your store is ready to sell on day one.</p>
             <div className="meta-row">
               <span>Catalog ready</span>
               <span className="arrow-pill" style={{ background: 'var(--paper)', color: 'var(--ink)' }}>â†’</span>
@@ -128,18 +128,18 @@ function Services() {
           <a className="card svc-card sm" href="branding.html">
             <div className="icon navy">âœ¦</div>
             <h3>Branding</h3>
-            <p>What makes your business distinct shapes every decision â€” logo, color, print â€” built to hold together across every surface.</p>
+            <p>What makes your business distinct shapes every decision — logo, color, print — built to hold together across every surface.</p>
             <div className="meta-row">
               <span>Project-based</span>
               <span className="arrow-pill" style={{ background: 'var(--paper)', color: 'var(--ink)' }}>â†’</span>
             </div>
           </a>
 
-          {/* AI Web Apps â€” minimized */}
+          {/* AI Web Apps — minimized */}
           <a className="card svc-card sm" href="ai-apps.html">
             <div className="icon green">âŒ˜</div>
             <h3>AI Web Apps <span className="tag" style={{ marginLeft: 6, verticalAlign: 'middle', background: 'rgba(33,146,188,0.12)', color: 'var(--brand-blue)', borderColor: 'rgba(33,146,188,0.2)' }}>NEW</span></h3>
-            <p>Where AI can genuinely save time â€” for your customers or your team â€” that's where we focus, then build something that fits into your site without friction.</p>
+            <p>Where AI can genuinely save time — for your customers or your team — that's where we focus, then build something that fits into your site without friction.</p>
             <div className="meta-row">
               <span>Add-on</span>
               <span className="arrow-pill" style={{ background: 'var(--paper)', color: 'var(--ink)' }}>â†’</span>
@@ -175,13 +175,13 @@ function Estimator() {
   const ask = async () => {
     setError(null);
     if (!window.claude || !window.claude.complete) {
-      setError('AI estimator is offline â€” please request a manual quote below.');
+      setError('AI estimator is offline — please request a manual quote below.');
       return;
     }
     setLoading(true);
     setResult(null);
     try {
-      const prompt = `You are a friendly Cape Cod web design estimator for COLEwebdev. The user has selected project type: "${active}".\nTheir description: "${desc || '(no extra detail)'}".\n\nRespond ONLY with valid JSON, no preamble or code fences. Schema:\n{\n  "low": <integer USD>,\n  "high": <integer USD>,\n  "headline": "<one short line â€” friendly, plainspoken, not jargon>",\n  "includes": ["<3-5 short bullets of what's typically included>"],\n  "timeline": "<rough timeline in weeks>",\n  "next": "<one-sentence call to action>"\n}\n\nGuidelines: Small biz brochure $2400-4800. Custom WordPress redesign $4000-9000. Shopify $5000-12000. Nonprofit hub $6000-14000. Booking $5000-10000. AI add-on $2500-6000. Custom web app $9000-25000. Adjust by complexity in description. Use real-feeling numbers.`;
+      const prompt = `You are a friendly Cape Cod web design estimator for COLEwebdev. The user has selected project type: "${active}".\nTheir description: "${desc || '(no extra detail)'}".\n\nRespond ONLY with valid JSON, no preamble or code fences. Schema:\n{\n  "low": <integer USD>,\n  "high": <integer USD>,\n  "headline": "<one short line — friendly, plainspoken, not jargon>",\n  "includes": ["<3-5 short bullets of what's typically included>"],\n  "timeline": "<rough timeline in weeks>",\n  "next": "<one-sentence call to action>"\n}\n\nGuidelines: Small biz brochure $2400-4800. Custom WordPress redesign $4000-9000. Shopify $5000-12000. Nonprofit hub $6000-14000. Booking $5000-10000. AI add-on $2500-6000. Custom web app $9000-25000. Adjust by complexity in description. Use real-feeling numbers.`;
       const txt = await window.claude.complete(prompt);
       // try to extract JSON
       let parsed;
@@ -209,7 +209,7 @@ function Estimator() {
               <span className="eyebrow">Start a website project</span>
               <h2 style={{ marginTop: 14 }}>Tell us about your <span className="italic">website.</span></h2>
               <p className="lede" style={{ marginTop: 16 }}>
-                Whether it's a fresh build, a redesign of a tired site, or a small fix â€” drop us a note. We'll reply within one business day with next steps and a ballpark.
+                Whether it's a fresh build, a redesign of a tired site, or a small fix — drop us a note. We'll reply within one business day with next steps and a ballpark.
               </p>
               <div style={{ marginTop: 28, display: 'flex', alignItems: 'flex-start', gap: 16 }}>
                 <div style={{ display: 'flex', gap: 0, flexShrink: 0, width: 88 }}>
@@ -236,7 +236,7 @@ function Estimator() {
                   )}
                 </div>
                 <div style={{ fontSize: 13, color: 'var(--ink-2)', lineHeight: 1.4, paddingTop: 6 }}>
-                  Every project goes through Josiah &amp; Desiree.<br />You'll always talk to a real human â€” that's the deal.
+                  Every project goes through Josiah &amp; Desiree.<br />You'll always talk to a real human — that's the deal.
                 </div>
               </div>
             </div>
@@ -268,7 +268,7 @@ function LeadForm() {
       if (!res.ok) throw new Error('Submit failed');
       setSubmitted(true);
     } catch {
-      setError('Something went wrong â€” please try again or call 508.413.2043.');
+      setError('Something went wrong — please try again or call 508.413.2043.');
     } finally {
       setLoading(false);
     }
@@ -338,7 +338,7 @@ function AIShowcase() {
             <span className="ai-strip-tag">New Â· AI Studio</span>
             <h3 className="ai-strip-hl">AI that does <em>real work</em> for your business.</h3>
             <p className="ai-strip-copy">
-              We identify where AI can genuinely improve your customer experience or save your team time â€” then build and integrate it into your site.
+              We identify where AI can genuinely improve your customer experience or save your team time — then build and integrate it into your site.
             </p>
           </div>
           <a className="ai-strip-link" href="ai-apps.html">
