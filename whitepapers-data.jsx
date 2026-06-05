@@ -1,4 +1,4 @@
-﻿/* global window */
+/* global window */
 
 window.WHITEPAPERS_DATA = [
   {
@@ -70,7 +70,7 @@ window.WHITEPAPERS_DATA = [
       {
         heading: 'Thinking About Return on Investment',
         body: [
-          'If a new website costs $5,000 and generates one additional client per month at an average project value of $800, it pays for itself in about 6 months. These aren't hypothetical numbers; they're the kinds of outcomes we\'ve seen for COLEwebdev clients who moved from aging DIY sites to custom-built ones.',
+          'If a new website costs $5,000 and generates one additional client per month at an average project value of $800, it pays for itself in about 6 months. These aren\'t hypothetical numbers; they\'re the kinds of outcomes we\'ve seen for COLEwebdev clients who moved from aging DIY sites to custom-built ones.',
           'Think about what a single additional lead is worth to your business. Then ask whether a better website could realistically deliver one more per month. That\'s the right frame for the investment decision.',
         ],
       },
@@ -95,7 +95,7 @@ window.WHITEPAPERS_DATA = [
         heading: 'Where DIY Falls Short',
         body: [
           'The limitations of template platforms compound over time. Performance is often poor: template platforms load generic code that hurts speed, which hurts SEO. Customization hits walls quickly: the design looks like a template because it is one.',
-          'Search optimization is where DIY struggles most. SEO requires thoughtful site architecture, page speed, structured content, and proper metadata. Template platforms can handle the basics, but they're not optimized for competing on search; they're optimized for getting you online fast.',
+          'Search optimization is where DIY struggles most. SEO requires thoughtful site architecture, page speed, structured content, and proper metadata. Template platforms can handle the basics, but they\'re not optimized for competing on search; they\'re optimized for getting you online fast.',
         ],
       },
       {
@@ -158,7 +158,7 @@ window.WHITEPAPERS_DATA = [
     num: '05',
     title: 'The 7 Golden Rules of Web Design',
     subtitle: 'Timeless Principles for Sites That Actually Work',
-    summary: 'These seven principles have held up across two decades of web design evolution. They won't make your site trendy; they'll make it effective.',
+    summary: 'These seven principles have held up across two decades of web design evolution. They won\'t make your site trendy; they\'ll make it effective.',
     sections: [
       {
         heading: 'Rules 1–3: Simplicity, UX, and Consistency',
@@ -188,7 +188,7 @@ window.WHITEPAPERS_DATA = [
         ],
       },
     ],
-    takeaway: 'The golden rules aren't constraints; they're a framework for making design decisions confidently. When in doubt, ask: does this make things simpler, clearer, faster, or more consistent?',
+    takeaway: 'The golden rules aren\'t constraints; they\'re a framework for making design decisions confidently. When in doubt, ask: does this make things simpler, clearer, faster, or more consistent?',
   },
   {
     id: 'five-principles',
@@ -214,7 +214,7 @@ window.WHITEPAPERS_DATA = [
       {
         heading: 'Mobile-First: Design for the Majority',
         body: [
-          'Mobile-first isn't just a design philosophy; it's a response to data. Most of your visitors are on their phones, especially if they found you through a local search. A site that doesn\'t work seamlessly on mobile is losing more than half its potential customers before they read a single word of copy.',
+          'Mobile-first isn\'t just a design philosophy; it\'s a response to data. Most of your visitors are on their phones, especially if they found you through a local search. A site that doesn\'t work seamlessly on mobile is losing more than half its potential customers before they read a single word of copy.',
         ],
       },
       {
@@ -225,7 +225,7 @@ window.WHITEPAPERS_DATA = [
         ],
       },
     ],
-    takeaway: 'Clarity, speed, mobile design, visual hierarchy, and navigation aren't features; they're foundations. A site missing any one of them is underperforming, regardless of how good the rest looks.',
+    takeaway: 'Clarity, speed, mobile design, visual hierarchy, and navigation aren\'t features; they\'re foundations. A site missing any one of them is underperforming, regardless of how good the rest looks.',
   },
   {
     id: 'seven-cs',
@@ -252,7 +252,7 @@ window.WHITEPAPERS_DATA = [
         heading: 'Communication and Connection',
         body: [
           'Communication covers all the channels through which the site facilitates contact: forms, phone numbers, chat, email links. Too many small business sites bury contact information. Communication should be frictionless. Put the phone number in the header. Make the contact form short. Don\'t require an account to send an inquiry.',
-          'Connection describes the site's integration with the broader web: links from other sites, local directory listings, schema markup that helps search engines understand the business. A well-connected site is more findable and more trustworthy in Google\'s eyes.',
+          'Connection describes the site\'s integration with the broader web: links from other sites, local directory listings, schema markup that helps search engines understand the business. A well-connected site is more findable and more trustworthy in Google\'s eyes.',
         ],
       },
       {
@@ -301,7 +301,7 @@ window.WHITEPAPERS_DATA = [
         ],
       },
     ],
-    takeaway: 'A FAQ isn't just a support tool; it's an SEO asset and a conversion resource. Write it for the visitor who is 80% convinced but has one lingering hesitation. Answer that hesitation directly, and you\'ll close more inquiries.',
+    takeaway: 'A FAQ isn\'t just a support tool; it\'s an SEO asset and a conversion resource. Write it for the visitor who is 80% convinced but has one lingering hesitation. Answer that hesitation directly, and you\'ll close more inquiries.',
   },
   {
     id: 'how-to-choose',
@@ -347,14 +347,14 @@ window.WHITEPAPERS_DATA = [
         ],
       },
     ],
-    takeaway: 'The right web designer asks about your business goals before asking about aesthetics. They have a portfolio of shipped work, a clear process, and references you can actually call. Don't hire on price alone; hire on evidence.',
+    takeaway: 'The right web designer asks about your business goals before asking about aesthetics. They have a portfolio of shipped work, a clear process, and references you can actually call. Don\'t hire on price alone; hire on evidence.',
   },
   {
     id: 'what-makes-good-website',
     num: '10',
     title: 'What Makes a Good Website?',
     subtitle: 'The Elements That Separate Sites That Work from Sites That Don\'t',
-    summary: 'Not all websites are created equal. Some generate calls, inquiries, and sales every day while others sit idle. The difference usually isn't budget; it's decisions. Here\'s what those decisions are.',
+    summary: 'Not all websites are created equal. Some generate calls, inquiries, and sales every day while others sit idle. The difference usually isn\'t budget; it\'s decisions. Here\'s what those decisions are.',
     sections: [
       {
         heading: 'First Impressions: The 5-Second Rule',
@@ -381,7 +381,7 @@ window.WHITEPAPERS_DATA = [
         heading: 'Mobile Experience',
         body: [
           'More than 60% of web traffic now comes from mobile devices. For businesses that depend on local search (restaurants, contractors, retailers, service providers), the number is often higher. A site that works well on a laptop but requires pinching and horizontal scrolling on a phone is failing the majority of its visitors.',
-          'Mobile-first design means designing for the smallest screen before scaling up, not retrofitting a desktop site for phones. Navigation should be thumb-friendly, text should be readable without zooming, and phone numbers should be tappable links. these aren't advanced features; they're baseline expectations.',
+          'Mobile-first design means designing for the smallest screen before scaling up, not retrofitting a desktop site for phones. Navigation should be thumb-friendly, text should be readable without zooming, and phone numbers should be tappable links. these aren\'t advanced features; they\'re baseline expectations.',
         ],
       },
       {
@@ -492,7 +492,7 @@ window.WHITEPAPERS_DATA = [
       {
         heading: 'What the Invoice Doesn\'t Show',
         body: [
-          'A web design proposal for $6,000 looks expensive until you consider what it represents. you're not buying an hour of someone's time; you're buying the accumulated knowledge of someone who has spent years learning how users behave online, what visual signals build trust, how to structure a site that converts, how to build for mobile performance, and how to navigate all the technical decisions that determine whether a site ranks in search.',
+          'A web design proposal for $6,000 looks expensive until you consider what it represents. you\'re not buying an hour of someone\'s time; you\'re buying the accumulated knowledge of someone who has spent years learning how users behave online, what visual signals build trust, how to structure a site that converts, how to build for mobile performance, and how to navigate all the technical decisions that determine whether a site ranks in search.',
           'That expertise is the reason the result performs. A junior developer with a template can produce a site that looks similar on first glance, but the underlying decisions about page architecture, content hierarchy, performance optimization, and conversion design are different. Those differences show up in the analytics, not in screenshots.',
         ],
       },
@@ -939,7 +939,7 @@ window.WHITEPAPERS_DATA = [
         heading: 'Accessibility Overlays: A Warning',
         body: [
           'A category of products called "accessibility overlays" (JavaScript plugins that claim to make your site accessible automatically) has become popular as a quick fix. Products like AccessiBe, UserWay, and others typically cost $50–$500/year and inject a toolbar onto your site that applies automated fixes.',
-          'The accessibility community, including the National Federation of the Blind, has formally opposed these overlays. Independent testing consistently shows they don't achieve WCAG compliance; they address some automated checks while missing the substantive issues that affect real disabled users. Courts have also ruled against defendants whose only accessibility accommodation was an overlay. Don\'t rely on an overlay as legal protection.',
+          'The accessibility community, including the National Federation of the Blind, has formally opposed these overlays. Independent testing consistently shows they don\'t achieve WCAG compliance; they address some automated checks while missing the substantive issues that affect real disabled users. Courts have also ruled against defendants whose only accessibility accommodation was an overlay. Don\'t rely on an overlay as legal protection.',
         ],
       },
       {
@@ -1028,7 +1028,7 @@ window.WHITEPAPERS_DATA = [
       {
         heading: 'Security Monitoring: What It Catches',
         body: [
-          'Security monitoring watches for file changes, malware injection, blacklist status changes, and suspicious login activity. Most WordPress compromises aren't immediately obvious; attackers often prefer quiet access over visible damage. A hacked site might continue appearing normal to visitors while serving spam pages to Google, redirecting mobile users to malware sites, or being used as a spam relay.',
+          'Security monitoring watches for file changes, malware injection, blacklist status changes, and suspicious login activity. Most WordPress compromises aren\'t immediately obvious; attackers often prefer quiet access over visible damage. A hacked site might continue appearing normal to visitors while serving spam pages to Google, redirecting mobile users to malware sites, or being used as a spam relay.',
           'Monitoring catches these by comparing your site\'s files against known-good baselines, watching for unexpected administrative accounts, and checking your domain against major malware and spam blacklists daily. When something changes, you\'re alerted before a customer reports it or before Google flags your site.',
         ],
       },
@@ -1036,7 +1036,7 @@ window.WHITEPAPERS_DATA = [
         heading: 'DIY Maintenance vs. a Care Plan',
         body: [
           'Technically capable business owners can maintain WordPress themselves, applying updates, managing backups, and reviewing security reports. The question is whether it\'s a good use of your time. A typical maintenance routine takes 1–2 hours per month if done properly, and longer when something goes wrong.',
-          'A WordPress care plan delegates all of that for a flat monthly rate. COLEwebdev's care plans include all of the above (updates, backups, security monitoring, uptime alerts, and a monthly plain-English report) plus a bank of hours each month for content updates or small changes. For most small business owners, the time savings alone justify the cost before the security protection is even factored in.',
+          'A WordPress care plan delegates all of that for a flat monthly rate. COLEwebdev\'s care plans include all of the above (updates, backups, security monitoring, uptime alerts, and a monthly plain-English report) plus a bank of hours each month for content updates or small changes. For most small business owners, the time savings alone justify the cost before the security protection is even factored in.',
         ],
       },
     ],
