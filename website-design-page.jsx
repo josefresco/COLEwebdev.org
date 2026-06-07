@@ -5,19 +5,19 @@ const WD_HERO_IMG = 'assets/website-design-wordpress-cape-cod-website-6.jpg';
 const DEVELOPMENT_POINTS = [
   {
     label: 'Copy',
-    body: 'Must be well written for both the actual human visitor and for the search bots from Google, Yahoo, and Microsoft. Having a well-formatted copy with a balance of keywords is essential for high search rank.',
+    body: 'Written for real people and search engines alike. Strong copy is the foundation of organic rankings — and the reason visitors stay.',
   },
   {
     label: 'Photography',
-    body: 'Imagery used must be as professional and high quality as possible. Photography is the most critical factor in good design, and the customer\'s perception of your business is greatly affected by this one element.',
+    body: 'The single biggest influence on perceived quality. Professional images raise the bar instantly — there\'s no shortcut around it.',
   },
   {
     label: 'Audio & Video',
-    body: 'Rich media are becoming standard practice for even small businesses. Featuring video or audio using progressive delivery systems adds a competitive edge to any website.',
+    body: 'Table stakes for competitive businesses. We embed media cleanly without adding load time.',
   },
   {
     label: 'Custom Graphics',
-    body: 'Should be an extension of the design and of your business branding. Graphics help the consumer navigate the site, and give a nice final touch to the design of a professional site.',
+    body: 'An extension of your brand, not decoration. The right graphics guide visitors and tie the whole site together.',
   },
 ];
 
@@ -87,16 +87,10 @@ function WebDesignPage() {
               Design that looks great and <em>works harder.</em>
             </h2>
             <p className="wd-body">
-              The design of a website must achieve several things in order to accomplish the desired response from a customer. Most importantly it needs to <strong>look great</strong> — the design must reflect the nature of the company's image and relate to the desired customer.
+              Every design reflects your business's identity and speaks directly to the customers you want to reach. Good-looking isn't enough — the layout has to be logical, easy to navigate, and built to convert.
             </p>
             <p className="wd-body">
-              Second, the design must be well laid out, logical, and allow for easy navigation throughout the entire site. And lastly, the design must be effective at closing the sale — whether that's a sale of a product, a completed inquiry form, or a logged email address.
-            </p>
-            <p className="wd-body">
-              COLEwebdev offers <strong>100% custom design solutions</strong>, with no templates or low-cost shortcuts that don't fit your business image and branding. We take great effort to create a unique design for your website that is beautiful and functional.
-            </p>
-            <p className="wd-body">
-              Our <strong>experience</strong> in web design, user interfaces, and graphic design means we can assist you in coordinating your online and offline branding to ensure each element works in a cohesive manner. Logo design, banner ad creation, eNewsletter layout, and custom social media graphics are all available to COLEwebdev clients.
+              We build <strong>100% custom</strong> — no templates, no off-the-shelf shortcuts. Whether you're starting from scratch or coordinating a site with existing print and brand work, we take the time to make it right.
             </p>
           </div>
           <div className="wd-split-media">
@@ -127,7 +121,7 @@ function WebDesignPage() {
               Production built on <em>content that converts.</em>
             </h2>
             <p className="wd-body">
-              Website production includes all elements essential to building and updating a website and its features — the copy, images, video, audio, and custom graphics that support the design. The content that fills your site is an essential factor in how well it performs.
+              Content is what makes a site work — the copy, photography, video, and graphics that fill every page. Get these right and everything else performs better.
             </p>
             <ul className="wd-points">
               {DEVELOPMENT_POINTS.map(pt => (
