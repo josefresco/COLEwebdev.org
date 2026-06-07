@@ -21,6 +21,24 @@ const DEVELOPMENT_POINTS = [
   },
 ];
 
+const PROCESS_STEPS = [
+  {
+    num: '01',
+    label: 'Free Consultation',
+    body: 'We start with a no-cost conversation to understand your goals, audience, and timeline. No pitch — just a real look at what you need.',
+  },
+  {
+    num: '02',
+    label: 'Design & Build',
+    body: 'We design from scratch, present mockups, refine with your feedback, then build to production. One fixed price, no surprise invoices.',
+  },
+  {
+    num: '03',
+    label: 'Launch & Support',
+    body: 'We handle the launch and stay available for questions, updates, and ongoing care after the site goes live.',
+  },
+];
+
 const RECENT_POSTS = [
   {
     type: 'Recent Website Launch',
@@ -67,7 +85,7 @@ function WebDesignPage() {
             <span className="eyebrow">Services</span>
             <h1 className="wd-hero-hl">Website Design <em>+ Build.</em></h1>
             <p className="wd-hero-sub">
-              100% custom design solutions — no templates, no shortcuts. Built to look great, navigate easily, and close the sale.
+              100% custom design solutions — no templates, no shortcuts. Built to look great, navigate easily, and get visitors to take action.
             </p>
           </div>
         </div>
@@ -104,7 +122,7 @@ function WebDesignPage() {
         </div>
       </section>
 
-      {/* Website Development section */}
+      {/* What's Included section */}
       <section className="wd-section wd-section--alt">
         <div className="shell wd-split wd-split--rev">
           <div className="wd-split-media">
@@ -116,9 +134,9 @@ function WebDesignPage() {
             />
           </div>
           <div className="wd-split-text">
-            <span className="eyebrow">Website Development</span>
+            <span className="eyebrow">What's Included</span>
             <h2 className="wd-section-hl">
-              Production built on <em>content that converts.</em>
+              Every build comes with <em>content that converts.</em>
             </h2>
             <p className="wd-body">
               Content is what makes a site work — the copy, photography, video, and graphics that fill every page. Get these right and everything else performs better.
@@ -135,76 +153,26 @@ function WebDesignPage() {
         </div>
       </section>
 
-      {/* Testimonial */}
-      <section className="wd-testi">
+      {/* Process snapshot */}
+      <section className="wd-process">
         <div className="shell">
-          <div className="wd-testi-inner">
-            <div className="wd-testi-eyebrow">What people are saying</div>
-            <blockquote className="wd-quote">
-              "Josiah and Desiree do great work with a personal touch. From the initial proposal, through the design process, to maintenance and service once the site was up and running, the folks at COLEwebdev have always been there to answer all our questions and solve any problems. Highly recommended for any small to medium-sized business that needs their web presence improved."
-            </blockquote>
-            <div className="wd-testi-meta">
-              <a href="https://womr.org/" target="_blank" rel="noopener noreferrer">
-                <img
-                  className="wd-testi-img"
-                  src="assets/womr-website-design-build-wordpress-ecommerce-cape-cod-xsmall.jpg"
-                  alt="WOMR"
-                  loading="lazy"
-                />
-              </a>
-              <div>
-                <div className="wd-testi-name">Matty Dread</div>
-                <div className="wd-testi-role">WOMR · womr.org</div>
-              </div>
-            </div>
-            <p className="wd-testi-note">
-              Are you a happy client? Please write a{' '}
-              <a href="https://tinyurl.com/ybhyf3jp" target="_blank" rel="noopener noreferrer">
-                Google Review
-              </a>{' '}
-              to let others know how you feel.
-            </p>
+          <div className="wd-process-hd">
+            <span className="eyebrow">How it works</span>
+            <h2 className="wd-process-hl">From first call to launch day.</h2>
           </div>
-        </div>
-      </section>
-
-      {/* Recent launch + news */}
-      <section className="wd-posts">
-        <div className="shell">
-          <div className="wd-posts-grid">
-            {RECENT_POSTS.map(post => (
-              <div key={post.title} className="wd-post-card">
-                <div className="wd-post-type">{post.type}</div>
-                <a href={post.href} target="_blank" rel="noopener noreferrer">
-                  <img
-                    className="wd-post-img"
-                    src={post.img}
-                    alt={post.title}
-                    loading="lazy"
-                  />
-                </a>
-                <div className="wd-post-body">
-                  <div className="wd-post-meta">
-                    <span className="wd-post-date">{post.date}</span>
-                    <span className="wd-post-cat">{post.category}</span>
-                  </div>
-                  <h3 className="wd-post-title">
-                    <a href={post.href} target="_blank" rel="noopener noreferrer">
-                      {post.title}
-                    </a>
-                  </h3>
-                  <p className="wd-post-excerpt">{post.excerpt}</p>
-                  <a
-                    className="btn btn--ghost btn--sm wd-post-link"
-                    href={post.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {post.cta} <span className="arrow">→</span>
-                  </a>
+          <div className="wd-process-steps">
+            {PROCESS_STEPS.map(step => (
+              <div key={step.num} className="wd-process-step">
+                <div className="wd-process-num">{step.num}</div>
+                <div className="wd-process-info">
+                  <div className="wd-process-label">{step.label}</div>
+                  <p className="wd-process-body">{step.body}</p>
                 </div>
               </div>
             ))}
+          </div>
+          <div className="wd-process-more">
+            <a href="process.html" className="wd-process-link">See the full process <span className="arrow">→</span></a>
           </div>
         </div>
       </section>
@@ -259,6 +227,77 @@ function WebDesignPage() {
         </div>
       </section>
 
+      {/* Testimonial */}
+      <section className="wd-testi">
+        <div className="shell">
+          <div className="wd-testi-inner">
+            <div className="wd-testi-eyebrow">What people are saying</div>
+            <blockquote className="wd-quote">
+              "Josiah and Desiree do great work with a personal touch. From the initial proposal, through the design process, to maintenance and service once the site was up and running, the folks at COLEwebdev have always been there to answer all our questions and solve any problems. Highly recommended for any small to medium-sized business that needs their web presence improved."
+            </blockquote>
+            <div className="wd-testi-meta">
+              <a href="https://womr.org/" target="_blank" rel="noopener noreferrer">
+                <img
+                  className="wd-testi-img"
+                  src="assets/womr-website-design-build-wordpress-ecommerce-cape-cod-xsmall.jpg"
+                  alt="WOMR"
+                  loading="lazy"
+                />
+              </a>
+              <div>
+                <div className="wd-testi-name">Matty Dread</div>
+                <div className="wd-testi-role">WOMR · womr.org</div>
+              </div>
+            </div>
+            <div className="wd-testi-stars">
+              <span className="wd-stars">★★★★★</span>
+              <span className="wd-stars-label">4.8 · 72 Google reviews</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Recent launch + news */}
+      <section className="wd-posts">
+        <div className="shell">
+          <div className="wd-posts-grid">
+            {RECENT_POSTS.map(post => (
+              <div key={post.title} className="wd-post-card">
+                <div className="wd-post-type">{post.type}</div>
+                <a href={post.href} target="_blank" rel="noopener noreferrer">
+                  <img
+                    className="wd-post-img"
+                    src={post.img}
+                    alt={post.title}
+                    loading="lazy"
+                  />
+                </a>
+                <div className="wd-post-body">
+                  <div className="wd-post-meta">
+                    <span className="wd-post-date">{post.date}</span>
+                    <span className="wd-post-cat">{post.category}</span>
+                  </div>
+                  <h3 className="wd-post-title">
+                    <a href={post.href} target="_blank" rel="noopener noreferrer">
+                      {post.title}
+                    </a>
+                  </h3>
+                  <p className="wd-post-excerpt">{post.excerpt}</p>
+                  <a
+                    className="btn btn--ghost btn--sm wd-post-link"
+                    href={post.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {post.cta} <span className="arrow">→</span>
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Accessibility callout */}
       <section className="wd-a11y">
         <div className="shell">
@@ -294,6 +333,7 @@ function WebDesignPage() {
               { icon: '≡', name: 'Restaurants', href: 'cape-cod-restaurant-web-design.html' },
               { icon: '▣', name: 'Real Estate', href: 'cape-cod-real-estate-web-design.html' },
               { icon: '◈', name: 'Chambers of Commerce', href: 'cape-cod-chamber-web-design.html' },
+              { icon: '▲', name: 'Contractors', href: 'cape-cod-contractor-web-design.html' },
             ].map(function(ind) {
               return (
                 <a key={ind.name} href={ind.href} className="wd-industry-chip">
