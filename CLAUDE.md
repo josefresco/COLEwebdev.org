@@ -21,7 +21,7 @@ There are no lint, test, or build commands. What you edit is what ships.
 
 ## Project Scale
 
-- **~72 HTML pages** — homepage, 10+ service pages, 22 whitepaper guides, 16 town landing pages, utility pages
+- **~72 HTML pages** — homepage, 10+ service pages, 26 whitepaper guides, 16 town landing pages, utility pages
 - **~40 JSX files** — one per page plus shared parts
 - **~70 assets** in `assets/` — local brand images (logos, team photos, hero images)
 - **1 global stylesheet** — `styles.css` (~55KB); page-specific styles live in inline `<style>` blocks inside each HTML file
@@ -81,7 +81,7 @@ Every page follows the same structure:
 Two page types use a single renderer with per-page data injected via a global variable:
 
 **Whitepaper guides** (`wp-*.html` + `whitepaper-page.jsx`):
-- Data lives in `whitepapers-data.jsx` → `window.WHITEPAPERS_DATA` (array of 22 objects)
+- Data lives in `whitepapers-data.jsx` → `window.WHITEPAPERS_DATA` (array of 26 objects)
 - Each guide HTML sets `window.CURRENT_WP_ID = 'guide-id'` before loading the renderer
 - The listing page (`whitepapers.html`) uses `whitepapers-page.jsx` (separate renderer)
 

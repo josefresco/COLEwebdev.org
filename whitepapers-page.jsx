@@ -383,10 +383,10 @@ function WhitepapersPage() {
               Web Design <em>Whitepapers.</em>
             </h1>
             <p className="wh-hero-sub">
-              22 in-depth guides on web design, SEO, marketing, and e-commerce — covering the questions Cape Cod business owners ask most. Practical, direct, and jargon-free.
+              26 in-depth guides on web design, SEO, marketing, and e-commerce — covering the questions Cape Cod business owners ask most. Practical, direct, and jargon-free.
             </p>
             <div className="wh-hero-meta">
-              <span className="wh-hero-tag">22 guides</span>
+              <span className="wh-hero-tag">26 guides</span>
               <span className="wh-hero-tag">Free to read</span>
               <span className="wh-hero-tag">By COLEwebdev</span>
             </div>
