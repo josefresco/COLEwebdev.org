@@ -2,12 +2,12 @@
 const { useState, useEffect, useRef } = React;
 
 /* ============================================================
-   Analytics — GA4 (G-SCB191SGFW)
+   Analytics — GA4 (G-6BC2DK7FDY)
    Loads on every page. Tracks page views, phone clicks, email clicks.
    Form submit events are fired per-form in their own success handlers.
    ============================================================ */
 (function () {
-  var G = 'G-SCB191SGFW';
+  var G = 'G-6BC2DK7FDY';
   var s = document.createElement('script');
   s.async = true;
   s.src = 'https://www.googletagmanager.com/gtag/js?id=' + G;
