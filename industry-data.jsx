@@ -62,6 +62,10 @@ window.INDUSTRY_DATA = [
     ],
     clients: [
       { name: 'St. Mary of the Harbor', type: 'Episcopal Church', href: '#' },
+      { name: 'Christ Episcopal Church', type: 'Episcopal Church', href: 'https://christepiscopalharwich.org/' },
+      { name: 'St. James Chapel', type: 'Chapel — Wellfleet', href: 'https://www.stjameschapelwellfleet.org/' },
+      { name: 'SVdP St. Joseph Falmouth', type: 'Catholic Church', href: 'https://svdpstjosephfalmouth.org/' },
+      { name: 'Nauset Interfaith Council', type: 'Interfaith Organization', href: 'https://nausetinterfaith.org/' },
     ],
     faq: [
       { q: 'Can we accept tithes and offerings through the website?', a: "Yes. We integrate with platforms like Tithe.ly, Pushpay, and Stripe to accept one-time and recurring gifts directly through your site. We configure mobile-optimized checkout, giving categories (general fund, missions, building fund), and confirmation emails. Setup is straightforward and the experience for givers is simple." },
