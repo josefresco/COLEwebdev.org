@@ -113,7 +113,7 @@ window.LOCATIONS_DATA = [
       },
       {
         q: 'Our business is very visual — an oyster farm or art gallery. How do you handle that?',
-        a: 'Visual businesses need websites that lead with imagery without sacrificing load speed. We build sites with optimized photography, thoughtful layout, and fast delivery — so your gallery or farm looks stunning on every device, including the phones visitors are browsing on when they plan their Outer Cape trip.',
+        a: 'Visual businesses need websites that lead with imagery without sacrificing load speed. We build sites with optimized photography, thoughtful layout, and fast delivery — so your gallery or farm looks its best on every device, including the phones visitors are browsing on when they plan their Outer Cape trip.',
       },
       {
         q: 'How do we rank in Google searches for Wellfleet specifically?',
