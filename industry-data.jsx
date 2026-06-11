@@ -248,7 +248,7 @@ window.INDUSTRY_DATA = [
       { name: 'Dirtworks Cape Cod', type: 'Excavation', href: 'https://www.dirtworkscapecod.com/' },
     ],
     faq: [
-      { q: 'How long does it take to build a contractor website?', a: "Most contractor websites are live within 4–6 weeks of kickoff. The timeline depends on how quickly we can gather your project photos and service details. We have a structured intake process that makes this as fast and painless as possible — you will not be waiting on us." },
+      { q: 'How long does it take to build a contractor website?', a: "Most contractor websites are live within 6–8 weeks of kickoff — quality takes time! The timeline depends on how quickly we can gather your project photos and service details. We have a structured intake process that makes this as smooth as possible — you will not be waiting on us." },
       { q: 'Do you help with Google and local SEO?', a: "Yes. Every site we build includes on-page SEO setup: page titles, meta descriptions, structured data, and the technical foundation Google needs to rank. We also set up and optimize your Google Business Profile as part of the project. For ongoing SEO, we offer separate monthly plans." },
       { q: 'Can we add new project photos ourselves after launch?', a: "Yes. All contractor sites are built on WordPress so you can add photos, update services, and post news without any developer involvement. We provide hands-on training at handoff and written documentation you can reference whenever you need it." },
     ],
