@@ -207,6 +207,9 @@ window.INDUSTRY_DATA = [
     ],
     clients: [
       { name: 'Wellfleet Chamber of Commerce', type: 'Chamber', href: 'https://www.wellfleetchamber.com/' },
+      { name: 'Truro Chamber of Commerce', type: 'Chamber', href: 'https://www.trurochamberofcommerce.com/' },
+      { name: 'Cape Cod Canal Chamber', type: 'Chamber', href: 'https://www.capecodcanalchamber.org/' },
+      { name: 'Eastham Chamber of Commerce', type: 'Chamber', href: 'https://easthamchamber.com/' },
       { name: 'Provincetown Chamber of Commerce', type: 'Chamber', href: '#' },
     ],
     faq: [
