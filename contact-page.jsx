@@ -53,6 +53,7 @@ function ContactPage() {
       if (res.ok) {
         setStatus('success');
         setFields(INITIAL);
+        if (window.gtag) window.gtag('event', 'form_submit', { event_category: 'lead', form_name: 'contact' });
       } else {
         setStatus('error');
       }

@@ -81,6 +81,7 @@ function QuotePage() {
       });
       if (!res.ok) throw new Error();
       setStatus('success');
+      if (window.gtag) window.gtag('event', 'form_submit', { event_category: 'lead', form_name: 'quote_request' });
     } catch {
       setStatus('error');
     }

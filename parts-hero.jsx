@@ -2,6 +2,33 @@
 const { useState, useEffect, useRef } = React;
 
 /* ============================================================
+   Analytics — GA4 (G-SCB191SGFW)
+   Loads on every page. Tracks page views, phone clicks, email clicks.
+   Form submit events are fired per-form in their own success handlers.
+   ============================================================ */
+(function () {
+  var G = 'G-SCB191SGFW';
+  var s = document.createElement('script');
+  s.async = true;
+  s.src = 'https://www.googletagmanager.com/gtag/js?id=' + G;
+  document.head.appendChild(s);
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function () { window.dataLayer.push(arguments); };
+  window.gtag('js', new Date());
+  window.gtag('config', G);
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a[href]');
+    if (!a) return;
+    var href = a.getAttribute('href') || '';
+    if (href.startsWith('tel:')) {
+      window.gtag('event', 'phone_call', { event_category: 'engagement', event_label: href.replace('tel:', '') });
+    } else if (href.startsWith('mailto:')) {
+      window.gtag('event', 'email_click', { event_category: 'engagement', event_label: href.replace('mailto:', '') });
+    }
+  });
+}());
+
+/* ============================================================
    Logo / brand W mark
    ============================================================ */
 /* Standalone "W" mark — used in small spots */

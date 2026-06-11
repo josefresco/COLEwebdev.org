@@ -102,8 +102,8 @@ function PrivacyPage() {
 
               <div className="pp-section" id="analytics">
                 <h2 className="pp-section-hl">Analytics &amp; cookies</h2>
-                <p className="pp-p">COLEwebdev does not currently use any analytics tracking on this website. No Google Analytics, no pixel tracking, no session recording tools are installed.</p>
-                <p className="pp-p">We do not set any cookies of our own. Third-party CDN providers (Google Fonts, unpkg) may set cookies subject to their own policies; we have no control over this.</p>
+                <p className="pp-p">This website uses Google Analytics 4 (GA4) to collect anonymized data about page views, phone link clicks, email link clicks, and form submissions. This data is used to understand how visitors use the site and to improve it. Google Analytics sets cookies on your device to distinguish visits. You can opt out using the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">Google Analytics opt-out browser add-on</a>.</p>
+                <p className="pp-p">No session recording, heatmapping, or ad pixel tracking (Meta Pixel, etc.) is installed. We do not set any cookies of our own beyond those set by Google Analytics. Third-party CDN providers (Google Fonts, unpkg) may set cookies subject to their own policies; we have no control over this.</p>
               </div>
 
               <div className="pp-section" id="email">

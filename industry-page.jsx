@@ -40,6 +40,7 @@ function IndLeadForm({ industry }) {
       });
       if (!res.ok) throw new Error();
       setStatus('success');
+      if (window.gtag) window.gtag('event', 'form_submit', { event_category: 'lead', form_name: 'industry_lead', industry: industry });
     } catch {
       setStatus('error');
     }

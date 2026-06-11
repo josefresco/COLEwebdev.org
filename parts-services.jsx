@@ -267,6 +267,7 @@ function LeadForm() {
       });
       if (!res.ok) throw new Error('Submit failed');
       setSubmitted(true);
+      if (window.gtag) window.gtag('event', 'form_submit', { event_category: 'lead', form_name: 'estimator' });
     } catch {
       setError('Something went wrong — please try again or call 508.413.2043.');
     } finally {
