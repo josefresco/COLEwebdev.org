@@ -1,4 +1,78 @@
-﻿/* global React, ReactDOM */
+/* global React, ReactDOM */
+
+const IND_FORM_ENDPOINT = 'https://formspree.io/f/xnjwgqld';
+
+const IND_REVIEWS = [
+  {
+    name: 'Ann Mahoney',
+    quote: "If I could, I would give COLEweb 10 stars! Desiree and Josiah were absolutely amazing from start to finish. I couldn't be happier with how everything came together.",
+  },
+  {
+    name: 'Martina Mehl',
+    quote: "I am a huge fan of the team at COLEwebdev. They created an incredible website for my practice that has truly impressed my clients.",
+  },
+  {
+    name: 'Stephen Clark',
+    quote: "Desiree and the Cole group did a fantastic job building our website. Very professional, personal, and communicative. Wouldn't go anywhere else.",
+  },
+];
+
+function IndLeadForm({ industry }) {
+  const [form, setForm] = React.useState({ name: '', email: '', phone: '', message: '' });
+  const [status, setStatus] = React.useState('idle');
+
+  const set = (k) => (e) => setForm(function(f) { return Object.assign({}, f, { [k]: e.target.value }); });
+
+  const submit = async function(e) {
+    e.preventDefault();
+    setStatus('submitting');
+    try {
+      const res = await fetch(IND_FORM_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          _subject: industry + ' Lead — COLEwebdev',
+          name: form.name,
+          email: form.email,
+          phone: form.phone,
+          message: form.message,
+        }),
+      });
+      if (!res.ok) throw new Error();
+      setStatus('success');
+    } catch {
+      setStatus('error');
+    }
+  };
+
+  if (status === 'success') {
+    return (
+      <div className="ind-lead-card ind-lead-success">
+        <div className="ind-lead-success-icon">✓</div>
+        <p className="ind-lead-success-hl">Got it, thanks!</p>
+        <p className="ind-lead-success-sub">We'll be in touch quickly.</p>
+      </div>
+    );
+  }
+
+  return (
+    <form className="ind-lead-card" onSubmit={submit} noValidate>
+      <p className="ind-lead-card-hl">Get a Free Quote</p>
+      <p className="ind-lead-card-sub">No obligation. We reply fast.</p>
+      <div className="ind-lead-fields">
+        <input className="ind-lead-input" type="text" placeholder="Your name *" required value={form.name} onChange={set('name')} />
+        <input className="ind-lead-input" type="email" placeholder="Email address *" required value={form.email} onChange={set('email')} />
+        <input className="ind-lead-input" type="tel" placeholder="Phone number" value={form.phone} onChange={set('phone')} />
+        <textarea className="ind-lead-input ind-lead-textarea" placeholder="Tell us about your project..." rows={3} value={form.message} onChange={set('message')} />
+      </div>
+      {status === 'error' && <p className="ind-lead-error">Something went wrong — please try again or call 508.413.2043.</p>}
+      <button className="btn btn--accent ind-lead-btn" type="submit" disabled={status === 'submitting'}>
+        {status === 'submitting' ? 'Sending…' : <React.Fragment>Request a Quote <span className="arrow">→</span></React.Fragment>}
+      </button>
+      <p className="ind-lead-footer-note">Or call <a href="tel:5084132043">508.413.2043</a></p>
+    </form>
+  );
+}
 
 function IndFAQItem({ q, a }) {
   const [open, setOpen] = React.useState(false);
@@ -14,10 +88,10 @@ function IndFAQItem({ q, a }) {
 }
 
 function IndustryPage() {
-  const ind = (window.INDUSTRY_DATA || []).find(i => i.id === window.CURRENT_INDUSTRY_ID);
+  const ind = (window.INDUSTRY_DATA || []).find(function(i) { return i.id === window.CURRENT_INDUSTRY_ID; });
   if (!ind) return <div style={{ padding: 40 }}>Industry not found.</div>;
 
-  React.useEffect(() => {
+  React.useEffect(function() {
     if (!ind.faq || ind.faq.length === 0) return;
     const script = document.createElement('script');
     script.type = 'application/ld+json';
@@ -25,39 +99,48 @@ function IndustryPage() {
     script.textContent = JSON.stringify({
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
-      mainEntity: ind.faq.map(item => ({
-        '@type': 'Question',
-        name: item.q,
-        acceptedAnswer: { '@type': 'Answer', text: item.a },
-      })),
+      mainEntity: ind.faq.map(function(item) {
+        return {
+          '@type': 'Question',
+          name: item.q,
+          acceptedAnswer: { '@type': 'Answer', text: item.a },
+        };
+      }),
     });
     document.head.appendChild(script);
-    return () => { const el = document.getElementById('ind-faq-schema'); if (el) el.remove(); };
+    return function() { const el = document.getElementById('ind-faq-schema'); if (el) el.remove(); };
   }, []);
 
   return (
     <React.Fragment>
       <Header />
 
-      {/* Hero */}
+      {/* Hero — two-column with inline lead form */}
       <div className="ind-hero">
         <div className="ind-hero-bg" aria-hidden="true" />
         <div className="ind-hero-content">
           <div className="shell">
-            <span className="eyebrow ind-eyebrow">Industries · {ind.industry}</span>
-            <h1 className="ind-hero-hl">{ind.heroHeadline}</h1>
-            <p className="ind-hero-sub">{ind.heroSub}</p>
-            <div className="ind-hero-actions">
-              <a className="btn btn--accent" href="quote.html">Get a Free Quote <span className="arrow">→</span></a>
-              <a className="btn btn--ghost ind-ghost" href="tel:5084132043">508.413.2043</a>
+            <div className="ind-hero-grid">
+              <div className="ind-hero-left">
+                <span className="eyebrow ind-eyebrow">Industries · {ind.industry}</span>
+                <h1 className="ind-hero-hl">{ind.heroHeadline}</h1>
+                <p className="ind-hero-sub">{ind.heroSub}</p>
+                <div className="ind-hero-chips">
+                  <span className="ind-chip">20 Years Experience</span>
+                  <span className="ind-chip">200+ Active Sites</span>
+                  <span className="ind-chip">4.8★ Google</span>
+                  <span className="ind-chip">Cape Cod Local</span>
+                </div>
+              </div>
+              <IndLeadForm industry={ind.industry} />
             </div>
           </div>
         </div>
       </div>
 
       <SummaryStrip
-        summary={`COLEwebdev has been building websites for Cape Cod ${ind.industry.toLowerCase()} since 2006. Custom-built, mobile-first, and built to rank.`}
-        points={['Local Studio', '20 Years Experience', '700+ Sites Built', '4.8★ Google']}
+        summary={'COLEwebdev has been building websites for Cape Cod ' + ind.industry.toLowerCase() + ' since 2006. Custom-built, mobile-first, and built to rank.'}
+        points={['Local Studio', '20 Years Experience', '200+ Sites Managed', '4.8★ Google']}
       />
 
       {/* Why it matters */}
@@ -131,6 +214,30 @@ function IndustryPage() {
           </div>
         </section>
       )}
+
+      {/* Reviews */}
+      <section className="ind-reviews">
+        <div className="shell">
+          <div className="ind-reviews-hd">
+            <span className="eyebrow ind-reviews-eyebrow">What clients say</span>
+            <h2 className="ind-reviews-hl">Trusted by Cape Cod businesses for 20 years.</h2>
+          </div>
+          <div className="ind-reviews-grid">
+            {IND_REVIEWS.map(function(r) {
+              return (
+                <div key={r.name} className="ind-review-card">
+                  <div className="ind-review-stars">★★★★★</div>
+                  <p className="ind-review-quote">"{r.quote}"</p>
+                  <p className="ind-review-name">— {r.name}</p>
+                </div>
+              );
+            })}
+          </div>
+          <div className="ind-reviews-footer">
+            <a href="testimonials.html" className="ind-reviews-link">Read all 70+ Google reviews →</a>
+          </div>
+        </div>
+      </section>
 
       {/* FAQ */}
       <section className="ind-faq">
