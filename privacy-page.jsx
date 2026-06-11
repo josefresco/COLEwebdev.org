@@ -109,8 +109,8 @@ function PrivacyPage() {
               <div className="pp-section" id="email">
                 <h2 className="pp-section-hl">Email &amp; newsletter</h2>
                 <p className="pp-p">If you opt in to our newsletter on any form, you will receive our quarterly COLEwebdev eNewsletter — periodic updates about web design, launches, and Cape Cod business topics. We send no more than four issues per year.</p>
-                <p className="pp-p">You can unsubscribe at any time by replying to any newsletter email with "unsubscribe" or by emailing us directly at <a href="mailto:info@colewebdev.com">info@colewebdev.com</a>.</p>
-                <p className="pp-p">We do not send promotional emails to contacts who have not opted in.</p>
+                <p className="pp-p">If you submit a contact, quote, or lead form on this site, we may follow up regarding your inquiry and send you occasional promotional content about our services, offers, and web design resources. This is in addition to any direct response to your submission.</p>
+                <p className="pp-p">You can opt out of promotional emails at any time by replying with "unsubscribe" or by emailing <a href="mailto:info@colewebdev.com">info@colewebdev.com</a>. Opting out of promotional emails does not affect transactional replies to your inquiry.</p>
               </div>
 
               <div className="pp-section" id="retention">
