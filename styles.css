@@ -3367,3 +3367,12 @@ p, li {
 @media (max-width: 580px) {
   .ind-reviews-grid { grid-template-columns: 1fr; }
 }
+
+/* Shared privacy disclosure line — used below every form submit button */
+.form-privacy {
+  font-size: 11px;
+  color: var(--ink-2);
+  margin-top: 10px;
+  line-height: 1.4;
+}
+.form-privacy a { color: inherit; text-decoration: underline; }

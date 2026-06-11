@@ -283,6 +283,7 @@ function ContactPage() {
                         We respond fast.
                       </span>
                     </div>
+                    <p className="form-privacy">By submitting, you agree to our <a href="privacy.html">Privacy Policy</a>. We never share your information.</p>
 
                   </form>
                 </React.Fragment>

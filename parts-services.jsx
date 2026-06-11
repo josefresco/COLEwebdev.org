@@ -323,6 +323,7 @@ function LeadForm() {
           {loading ? 'Sending…' : <>Send it <span className="arrow">→</span></>}
         </button>
       </div>
+      <p className="form-privacy">By submitting, you agree to our <a href="privacy.html">Privacy Policy</a>. We never share your information.</p>
     </form>);
 
 }

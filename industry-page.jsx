@@ -71,6 +71,7 @@ function IndLeadForm({ industry }) {
         {status === 'submitting' ? 'Sending…' : <React.Fragment>Request a Quote <span className="arrow">→</span></React.Fragment>}
       </button>
       <p className="ind-lead-footer-note">Or call <a href="tel:5084132043">508.413.2043</a></p>
+      <p className="form-privacy">By submitting, you agree to our <a href="privacy.html">Privacy Policy</a>.</p>
     </form>
   );
 }
