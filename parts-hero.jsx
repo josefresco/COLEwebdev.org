@@ -34,15 +34,19 @@ function ColeLogo({ height = 34, dark = false }) {
    Header
    ============================================================ */
 const SERVICE_LINKS = [
-  { href: 'website-design.html', title: 'Web Design' },
-  { href: 'marketing.html', title: 'Marketing' },
-  { href: 'hosting.html', title: 'Hosting + Care Plans' },
-  { href: 'updates.html', title: 'Updates & Maintenance' },
-  { href: 'branding.html', title: 'Branding' },
-  { href: 'ecommerce.html', title: 'E-Commerce' },
+  { groupLabel: 'Design & Build' },
+  { href: 'website-design.html', title: 'Web Design + Build' },
   { href: 'wordpress.html', title: 'WordPress Design' },
   { href: 'traditional.html', title: 'Traditional Web Design' },
+  { href: 'ecommerce.html', title: 'E-Commerce' },
+  { groupLabel: 'Grow & Market' },
+  { href: 'seo.html', title: 'SEO & Local Search' },
+  { href: 'marketing.html', title: 'Marketing' },
+  { href: 'branding.html', title: 'Branding' },
   { href: 'ai-apps.html', title: 'AI Studio', pill: 'NEW' },
+  { groupLabel: 'Care & Support' },
+  { href: 'hosting.html', title: 'Hosting + Care Plans' },
+  { href: 'updates.html', title: 'Updates & Maintenance' },
   { href: 'consulting.html', title: 'Consulting' },
 ];
 
@@ -307,60 +311,89 @@ function Header() {
           <div className="nav-item-dropdown">
             <a className={'nav-link' + on('services.html')} href="services.html">Services <span className="caret">▾</span></a>
             <div className="nav-dropdown" role="menu">
+              {/* Design & Build */}
+              <div className="nav-dd-group">Design &amp; Build</div>
               <a href="website-design.html" className="nav-dd-item">
                 <span className="nav-dd-glyph green">◇</span>
                 <div>
-                  <div className="nav-dd-title">Web Design</div>
-                  <div className="nav-dd-desc">Modern, mobile-first sites built for your business.</div>
+                  <div className="nav-dd-title">Web Design + Build</div>
+                  <div className="nav-dd-desc">Custom sites built around your brand, not a template.</div>
+                </div>
+              </a>
+              <a href="wordpress.html" className="nav-dd-item">
+                <span className="nav-dd-glyph navy">◐</span>
+                <div>
+                  <div className="nav-dd-title">WordPress Design</div>
+                  <div className="nav-dd-desc">Custom themes, lean plugin stack, client-managed.</div>
+                </div>
+              </a>
+              <a href="traditional.html" className="nav-dd-item">
+                <span className="nav-dd-glyph blue">◇</span>
+                <div>
+                  <div className="nav-dd-title">Traditional Web Design</div>
+                  <div className="nav-dd-desc">Hand-coded HTML/CSS — fast, secure, no CMS needed.</div>
+                </div>
+              </a>
+              <a href="ecommerce.html" className="nav-dd-item">
+                <span className="nav-dd-glyph navy">◎</span>
+                <div>
+                  <div className="nav-dd-title">E-Commerce</div>
+                  <div className="nav-dd-desc">WooCommerce &amp; Shopify storefronts that sell.</div>
+                </div>
+              </a>
+
+              {/* Grow & Market */}
+              <div className="nav-dd-group nav-dd-group--sep">Grow &amp; Market</div>
+              <a href="seo.html" className="nav-dd-item">
+                <span className="nav-dd-glyph orange">⚡</span>
+                <div>
+                  <div className="nav-dd-title">SEO &amp; Local Search</div>
+                  <div className="nav-dd-desc">Show up when neighbors search for what you sell.</div>
                 </div>
               </a>
               <a href="marketing.html" className="nav-dd-item">
                 <span className="nav-dd-glyph orange">↗</span>
                 <div>
                   <div className="nav-dd-title">Marketing</div>
-                  <div className="nav-dd-desc">SEO, paid ads, social, analytics, and lead capture.</div>
-                </div>
-              </a>
-              <a href="hosting.html" className="nav-dd-item">
-                <span className="nav-dd-glyph green">↻</span>
-                <div>
-                  <div className="nav-dd-title">Hosting + Care Plans</div>
-                  <div className="nav-dd-desc">Backups, security, updates, and a human to email.</div>
-                </div>
-              </a>
-              <a href="updates.html" className="nav-dd-item">
-                <span className="nav-dd-glyph blue">✎</span>
-                <div>
-                  <div className="nav-dd-title">Updates &amp; Maintenance</div>
-                  <div className="nav-dd-desc">Hourly edits: text, images, pages, forms. No retainer.</div>
+                  <div className="nav-dd-desc">Paid ads, social, email, analytics, and lead capture.</div>
                 </div>
               </a>
               <a href="branding.html" className="nav-dd-item">
                 <span className="nav-dd-glyph orange">✦</span>
                 <div>
                   <div className="nav-dd-title">Branding</div>
-                  <div className="nav-dd-desc">Logos, color, print. So the site fits the rest of you.</div>
-                </div>
-              </a>
-              <a href="ecommerce.html" className="nav-dd-item">
-                <span className="nav-dd-glyph navy">◐</span>
-                <div>
-                  <div className="nav-dd-title">E-Commerce</div>
-                  <div className="nav-dd-desc">WooCommerce &amp; Shopify storefronts that ship.</div>
+                  <div className="nav-dd-desc">Logos, color, print — so the site fits the rest of you.</div>
                 </div>
               </a>
               <a href="ai-apps.html" className="nav-dd-item">
                 <span className="nav-dd-glyph navy">⌘</span>
                 <div>
                   <div className="nav-dd-title">AI Studio <span className="nav-dd-pill">NEW</span></div>
-                  <div className="nav-dd-desc">Chatbots, plugins, PWAs, extensions, and custom business tools.</div>
+                  <div className="nav-dd-desc">Chatbots, intake forms, booking tools, and custom apps.</div>
+                </div>
+              </a>
+
+              {/* Care & Support */}
+              <div className="nav-dd-group nav-dd-group--sep">Care &amp; Support</div>
+              <a href="hosting.html" className="nav-dd-item">
+                <span className="nav-dd-glyph green">↻</span>
+                <div>
+                  <div className="nav-dd-title">Hosting + Care Plans</div>
+                  <div className="nav-dd-desc">Managed hosting with a human on the other end.</div>
+                </div>
+              </a>
+              <a href="updates.html" className="nav-dd-item">
+                <span className="nav-dd-glyph blue">✎</span>
+                <div>
+                  <div className="nav-dd-title">Updates &amp; Maintenance</div>
+                  <div className="nav-dd-desc">Quick-turn edits — text, images, pages, forms.</div>
                 </div>
               </a>
               <a href="consulting.html" className="nav-dd-item">
                 <span className="nav-dd-glyph green">◇</span>
                 <div>
                   <div className="nav-dd-title">Consulting</div>
-                  <div className="nav-dd-desc">Website strategy, audits, business advice, and training.</div>
+                  <div className="nav-dd-desc">Strategy sessions, site audits, and CMS training.</div>
                 </div>
               </a>
             </div>
@@ -463,7 +496,9 @@ function Header() {
                 </button>
                 {servicesOpen && (
                   <div className="mobile-nav-sub">
-                    {SERVICE_LINKS.map(s => (
+                    {SERVICE_LINKS.map((s, i) => s.groupLabel ? (
+                      <div key={s.groupLabel} className={'mobile-nav-group' + (i > 0 ? ' mobile-nav-group--sep' : '')}>{s.groupLabel}</div>
+                    ) : (
                       <a key={s.href} className="mobile-nav-sub-link" href={s.href} onClick={close}>
                         {s.title}
                         {s.pill && <span className="mobile-nav-pill">{s.pill}</span>}

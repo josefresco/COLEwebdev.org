@@ -5,19 +5,37 @@ const WD_HERO_IMG = 'assets/website-design-wordpress-cape-cod-website-6.jpg';
 const DEVELOPMENT_POINTS = [
   {
     label: 'Copy',
-    body: 'Must be well written for both the actual human visitor and for the search bots from Google, Yahoo, and Microsoft. Having a well-formatted copy with a balance of keywords is essential for high search rank.',
+    body: 'Written for real people and search engines alike. Strong copy is the foundation of organic rankings — and the reason visitors stay.',
   },
   {
     label: 'Photography',
-    body: 'Imagery used must be as professional and high quality as possible. Photography is the most critical factor in good design, and the customer\'s perception of your business is greatly affected by this one element.',
+    body: 'The single biggest influence on perceived quality. Professional images raise the bar instantly — there\'s no shortcut around it.',
   },
   {
     label: 'Audio & Video',
-    body: 'Rich media are becoming standard practice for even small businesses. Featuring video or audio using progressive delivery systems adds a competitive edge to any website.',
+    body: 'Table stakes for competitive businesses. We embed media cleanly without adding load time.',
   },
   {
     label: 'Custom Graphics',
-    body: 'Should be an extension of the design and of your business branding. Graphics help the consumer navigate the site, and give a nice final touch to the design of a professional site.',
+    body: 'An extension of your brand, not decoration. The right graphics guide visitors and tie the whole site together.',
+  },
+];
+
+const PROCESS_STEPS = [
+  {
+    num: '01',
+    label: 'Free Consultation',
+    body: 'We start with a no-cost conversation to understand your goals, audience, and timeline. No pitch — just a real look at what you need.',
+  },
+  {
+    num: '02',
+    label: 'Design & Build',
+    body: 'We design from scratch, present mockups, refine with your feedback, then build to production. One fixed price, no surprise invoices.',
+  },
+  {
+    num: '03',
+    label: 'Launch & Support',
+    body: 'We handle the launch and stay available for questions, updates, and ongoing care after the site goes live.',
   },
 ];
 
@@ -67,7 +85,7 @@ function WebDesignPage() {
             <span className="eyebrow">Services</span>
             <h1 className="wd-hero-hl">Website Design <em>+ Build.</em></h1>
             <p className="wd-hero-sub">
-              100% custom design solutions — no templates, no shortcuts. Built to look great, navigate easily, and close the sale.
+              100% custom design solutions — no templates, no shortcuts. Built to look great, navigate easily, and get visitors to take action.
             </p>
           </div>
         </div>
@@ -87,16 +105,10 @@ function WebDesignPage() {
               Design that looks great and <em>works harder.</em>
             </h2>
             <p className="wd-body">
-              The design of a website must achieve several things in order to accomplish the desired response from a customer. Most importantly it needs to <strong>look great</strong> — the design must reflect the nature of the company's image and relate to the desired customer.
+              Every design reflects your business's identity and speaks directly to the customers you want to reach. Good-looking isn't enough — the layout has to be logical, easy to navigate, and built to convert.
             </p>
             <p className="wd-body">
-              Second, the design must be well laid out, logical, and allow for easy navigation throughout the entire site. And lastly, the design must be effective at closing the sale — whether that's a sale of a product, a completed inquiry form, or a logged email address.
-            </p>
-            <p className="wd-body">
-              COLEwebdev offers <strong>100% custom design solutions</strong>, with no templates or low-cost shortcuts that don't fit your business image and branding. We take great effort to create a unique design for your website that is beautiful and functional.
-            </p>
-            <p className="wd-body">
-              Our <strong>experience</strong> in web design, user interfaces, and graphic design means we can assist you in coordinating your online and offline branding to ensure each element works in a cohesive manner. Logo design, banner ad creation, eNewsletter layout, and custom social media graphics are all available to COLEwebdev clients.
+              We build <strong>100% custom</strong> — no templates, no off-the-shelf shortcuts. Whether you're starting from scratch or coordinating a site with existing print and brand work, we take the time to make it right.
             </p>
           </div>
           <div className="wd-split-media">
@@ -110,7 +122,7 @@ function WebDesignPage() {
         </div>
       </section>
 
-      {/* Website Development section */}
+      {/* What's Included section */}
       <section className="wd-section wd-section--alt">
         <div className="shell wd-split wd-split--rev">
           <div className="wd-split-media">
@@ -122,12 +134,12 @@ function WebDesignPage() {
             />
           </div>
           <div className="wd-split-text">
-            <span className="eyebrow">Website Development</span>
+            <span className="eyebrow">What's Included</span>
             <h2 className="wd-section-hl">
-              Production built on <em>content that converts.</em>
+              Every build comes with <em>content that converts.</em>
             </h2>
             <p className="wd-body">
-              Website production includes all elements essential to building and updating a website and its features — the copy, images, video, audio, and custom graphics that support the design. The content that fills your site is an essential factor in how well it performs.
+              Content is what makes a site work — the copy, photography, video, and graphics that fill every page. Get these right and everything else performs better.
             </p>
             <ul className="wd-points">
               {DEVELOPMENT_POINTS.map(pt => (
@@ -141,76 +153,26 @@ function WebDesignPage() {
         </div>
       </section>
 
-      {/* Testimonial */}
-      <section className="wd-testi">
+      {/* Process snapshot */}
+      <section className="wd-process">
         <div className="shell">
-          <div className="wd-testi-inner">
-            <div className="wd-testi-eyebrow">What people are saying</div>
-            <blockquote className="wd-quote">
-              "Josiah and Desiree do great work with a personal touch. From the initial proposal, through the design process, to maintenance and service once the site was up and running, the folks at COLEwebdev have always been there to answer all our questions and solve any problems. Highly recommended for any small to medium-sized business that needs their web presence improved."
-            </blockquote>
-            <div className="wd-testi-meta">
-              <a href="https://womr.org/" target="_blank" rel="noopener noreferrer">
-                <img
-                  className="wd-testi-img"
-                  src="assets/womr-website-design-build-wordpress-ecommerce-cape-cod-xsmall.jpg"
-                  alt="WOMR"
-                  loading="lazy"
-                />
-              </a>
-              <div>
-                <div className="wd-testi-name">Matty Dread</div>
-                <div className="wd-testi-role">WOMR · womr.org</div>
-              </div>
-            </div>
-            <p className="wd-testi-note">
-              Are you a happy client? Please write a{' '}
-              <a href="https://tinyurl.com/ybhyf3jp" target="_blank" rel="noopener noreferrer">
-                Google Review
-              </a>{' '}
-              to let others know how you feel.
-            </p>
+          <div className="wd-process-hd">
+            <span className="eyebrow">How it works</span>
+            <h2 className="wd-process-hl">From first call to launch day.</h2>
           </div>
-        </div>
-      </section>
-
-      {/* Recent launch + news */}
-      <section className="wd-posts">
-        <div className="shell">
-          <div className="wd-posts-grid">
-            {RECENT_POSTS.map(post => (
-              <div key={post.title} className="wd-post-card">
-                <div className="wd-post-type">{post.type}</div>
-                <a href={post.href} target="_blank" rel="noopener noreferrer">
-                  <img
-                    className="wd-post-img"
-                    src={post.img}
-                    alt={post.title}
-                    loading="lazy"
-                  />
-                </a>
-                <div className="wd-post-body">
-                  <div className="wd-post-meta">
-                    <span className="wd-post-date">{post.date}</span>
-                    <span className="wd-post-cat">{post.category}</span>
-                  </div>
-                  <h3 className="wd-post-title">
-                    <a href={post.href} target="_blank" rel="noopener noreferrer">
-                      {post.title}
-                    </a>
-                  </h3>
-                  <p className="wd-post-excerpt">{post.excerpt}</p>
-                  <a
-                    className="btn btn--ghost btn--sm wd-post-link"
-                    href={post.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {post.cta} <span className="arrow">→</span>
-                  </a>
+          <div className="wd-process-steps">
+            {PROCESS_STEPS.map(step => (
+              <div key={step.num} className="wd-process-step">
+                <div className="wd-process-num">{step.num}</div>
+                <div className="wd-process-info">
+                  <div className="wd-process-label">{step.label}</div>
+                  <p className="wd-process-body">{step.body}</p>
                 </div>
               </div>
             ))}
+          </div>
+          <div className="wd-process-more">
+            <a href="process.html" className="wd-process-link">See the full process <span className="arrow">→</span></a>
           </div>
         </div>
       </section>
@@ -265,6 +227,77 @@ function WebDesignPage() {
         </div>
       </section>
 
+      {/* Testimonial */}
+      <section className="wd-testi">
+        <div className="shell">
+          <div className="wd-testi-inner">
+            <div className="wd-testi-eyebrow">What people are saying</div>
+            <blockquote className="wd-quote">
+              "Josiah and Desiree do great work with a personal touch. From the initial proposal, through the design process, to maintenance and service once the site was up and running, the folks at COLEwebdev have always been there to answer all our questions and solve any problems. Highly recommended for any small to medium-sized business that needs their web presence improved."
+            </blockquote>
+            <div className="wd-testi-meta">
+              <a href="https://womr.org/" target="_blank" rel="noopener noreferrer">
+                <img
+                  className="wd-testi-img"
+                  src="assets/womr-website-design-build-wordpress-ecommerce-cape-cod-xsmall.jpg"
+                  alt="WOMR"
+                  loading="lazy"
+                />
+              </a>
+              <div>
+                <div className="wd-testi-name">Matty Dread</div>
+                <div className="wd-testi-role">WOMR · womr.org</div>
+              </div>
+            </div>
+            <div className="wd-testi-stars">
+              <span className="wd-stars">★★★★★</span>
+              <span className="wd-stars-label">4.8 · 72 Google reviews</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Recent launch + news */}
+      <section className="wd-posts">
+        <div className="shell">
+          <div className="wd-posts-grid">
+            {RECENT_POSTS.map(post => (
+              <div key={post.title} className="wd-post-card">
+                <div className="wd-post-type">{post.type}</div>
+                <a href={post.href} target="_blank" rel="noopener noreferrer">
+                  <img
+                    className="wd-post-img"
+                    src={post.img}
+                    alt={post.title}
+                    loading="lazy"
+                  />
+                </a>
+                <div className="wd-post-body">
+                  <div className="wd-post-meta">
+                    <span className="wd-post-date">{post.date}</span>
+                    <span className="wd-post-cat">{post.category}</span>
+                  </div>
+                  <h3 className="wd-post-title">
+                    <a href={post.href} target="_blank" rel="noopener noreferrer">
+                      {post.title}
+                    </a>
+                  </h3>
+                  <p className="wd-post-excerpt">{post.excerpt}</p>
+                  <a
+                    className="btn btn--ghost btn--sm wd-post-link"
+                    href={post.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {post.cta} <span className="arrow">→</span>
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Accessibility callout */}
       <section className="wd-a11y">
         <div className="shell">
@@ -300,6 +333,7 @@ function WebDesignPage() {
               { icon: '≡', name: 'Restaurants', href: 'cape-cod-restaurant-web-design.html' },
               { icon: '▣', name: 'Real Estate', href: 'cape-cod-real-estate-web-design.html' },
               { icon: '◈', name: 'Chambers of Commerce', href: 'cape-cod-chamber-web-design.html' },
+              { icon: '▲', name: 'Contractors', href: 'cape-cod-contractor-web-design.html' },
             ].map(function(ind) {
               return (
                 <a key={ind.name} href={ind.href} className="wd-industry-chip">
