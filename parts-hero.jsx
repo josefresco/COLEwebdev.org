@@ -3,19 +3,40 @@ const { useState, useEffect, useRef } = React;
 
 /* ============================================================
    Analytics — GA4 (G-6BC2DK7FDY)
-   Loads on every page. Tracks page views, phone clicks, email clicks.
-   Form submit events are fired per-form in their own success handlers.
+   Stub is synchronous (< 1ms, no network). gtag.js loads after idle.
+   Form submit events fire per-form in their own success handlers.
    ============================================================ */
 (function () {
   var G = 'G-6BC2DK7FDY';
-  var s = document.createElement('script');
-  s.async = true;
-  s.src = 'https://www.googletagmanager.com/gtag/js?id=' + G;
-  document.head.appendChild(s);
+
+  // Preconnect so DNS + TLS are ready before the script loads
+  ['https://www.googletagmanager.com', 'https://www.google-analytics.com'].forEach(function (h) {
+    var l = document.createElement('link');
+    l.rel = 'preconnect';
+    l.href = h;
+    document.head.appendChild(l);
+  });
+
+  // Synchronous stub — queues all calls until gtag.js arrives, zero network cost
   window.dataLayer = window.dataLayer || [];
   window.gtag = function () { window.dataLayer.push(arguments); };
   window.gtag('js', new Date());
   window.gtag('config', G);
+
+  // Load gtag.js only after the page is idle — never competes with critical resources
+  function loadGA() {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + G;
+    document.head.appendChild(s);
+  }
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(loadGA, { timeout: 2000 });
+  } else {
+    window.addEventListener('load', function () { setTimeout(loadGA, 200); });
+  }
+
+  // Single delegated listener — one handler for all tel: and mailto: links on every page
   document.addEventListener('click', function (e) {
     var a = e.target.closest('a[href]');
     if (!a) return;
