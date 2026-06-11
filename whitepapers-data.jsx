@@ -1036,7 +1036,7 @@ window.WHITEPAPERS_DATA = [
         heading: 'DIY Maintenance vs. a Care Plan',
         body: [
           'Technically capable business owners can maintain WordPress themselves, applying updates, managing backups, and reviewing security reports. The question is whether it\'s a good use of your time. A typical maintenance routine takes 1–2 hours per month if done properly, and longer when something goes wrong.',
-          'A WordPress care plan delegates all of that for a flat monthly rate. COLEwebdev\'s care plans include all of the above (updates, backups, security monitoring, uptime alerts, and a monthly plain-English report) plus a bank of hours each month for content updates or small changes. For most small business owners, the time savings alone justify the cost before the security protection is even factored in.',
+          'A WordPress care plan delegates all of that for a flat rate. COLEwebdev\'s care plans cover updates, backups, security monitoring, uptime alerts, speed checks, and a front-end review after every update cycle — on a Bi-Annual, Quarterly, or Monthly schedule with no long-term contract. For most small business owners, the time savings alone justify the cost before the security protection is even factored in.',
         ],
       },
     ],

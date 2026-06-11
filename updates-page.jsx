@@ -139,7 +139,7 @@ function UpdatesPage() {
             <span className="eyebrow um-careplan-eyebrow">High volume of edits?</span>
             <h2 className="um-careplan-hl">A Care Plan may be more cost-effective.</h2>
             <p className="um-careplan-body">
-              If you find yourself requesting edits every month, our Care Plans bundle ongoing updates, WordPress maintenance, backups, security monitoring, and priority support into a single monthly rate, often at a lower effective hourly cost than ad-hoc billing.
+              If you find yourself requesting edits regularly, our Care Plans bundle WordPress maintenance, backups, security monitoring, uptime alerts, and priority support into a flat rate — Bi-Annual, Quarterly, or Monthly. Often more cost-effective than ad-hoc billing once you add it up.
             </p>
             <a className="btn btn--primary" href="hosting.html">
               See Hosting + Care Plans <span className="arrow">→</span>

@@ -13,7 +13,7 @@ const FAQ_CATEGORIES = [
       },
       {
         q: 'Are there ongoing costs after launch?',
-        a: 'Yes. Hosting, domain registration, and optional care plan maintenance are recurring costs. Hosting starts at $30/month and includes backups, security monitoring, and a human you can actually email. We walk you through every ongoing cost before your project starts so you know exactly what you\'re committing to.',
+        a: 'Yes. Hosting, domain registration, and optional care plan maintenance are recurring costs. Managed hosting includes daily backups, security monitoring, WordPress updates, and a real person to email. We walk you through every ongoing cost before your project starts so you know exactly what you\'re committing to.',
       },
       {
         q: 'Do you offer payment plans?',
@@ -49,7 +49,7 @@ const FAQ_CATEGORIES = [
     questions: [
       {
         q: 'Can I edit my website myself after it\'s built?',
-        a: 'Yes, if you want to. WordPress builds include a straightforward admin dashboard where you can update text, add blog posts, swap images, and more without touching code. If you\'d rather hand that off to us, our care plans include a set number of content updates each month.',
+        a: 'Yes, if you want to. WordPress builds include a straightforward admin dashboard where you can update text, add blog posts, swap images, and more without touching code. If you\'d rather hand that off, our Updates service handles one-off changes, or our Care Plans cover ongoing maintenance so the site stays healthy without you thinking about it.',
       },
       {
         q: 'Who owns the website when it\'s done?',
@@ -57,7 +57,7 @@ const FAQ_CATEGORIES = [
       },
       {
         q: 'What if I need changes after launch?',
-        a: 'Small tweaks are part of normal life. We get it. You can hire us for one-off updates, or sign up for a monthly care plan that covers routine changes, security updates, and backups. Either way, you\'re never stranded.',
+        a: 'Small tweaks are part of normal life. We get it. You can hire us for one-off updates, or add a Care Plan that covers WordPress maintenance, security monitoring, backups, and uptime alerts on a Bi-Annual, Quarterly, or Monthly schedule. Either way, you\'re never stranded.',
       },
     ],
   },
@@ -129,7 +129,7 @@ const FAQ_CATEGORIES = [
     questions: [
       {
         q: 'What does a website care plan include?',
-        a: 'Our care plans cover everything that keeps a WordPress site healthy: monthly core and plugin updates, daily automated backups to off-site storage, security monitoring, uptime alerts, and a monthly plain-English report on your site\'s status. Plans also include a bank of support hours each month for content edits and small changes, so you have someone to call when something needs updating.',
+        a: 'Our care plans cover everything that keeps a WordPress site healthy: core, theme, and plugin updates applied each visit, daily automated backups to off-site storage, security monitoring, uptime alerts, speed checks, and a front-end review after every update cycle. Plans come in Bi-Annual, Quarterly, and Monthly frequencies — no long-term contracts.',
       },
       {
         q: 'What happens if my site gets hacked?',
