@@ -61,7 +61,7 @@
     <loc>https://colewebdev.org/seo.html</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.3</priority>
+    <priority>0.8</priority>
   </url>
 
   <url>
@@ -93,7 +93,7 @@
 
   <url>
     <loc>https://colewebdev.org/updates.html</loc>
-    <lastmod>2026-05-28</lastmod>
+    <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -128,7 +128,7 @@
 
   <url>
     <loc>https://colewebdev.org/whitepapers.html</loc>
-    <lastmod>2026-05-12</lastmod>
+    <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -359,7 +359,7 @@
 
   <url>
     <loc>https://colewebdev.org/faq.html</loc>
-    <lastmod>2026-05-13</lastmod>
+    <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -583,7 +583,7 @@
 
   <url>
     <loc>https://colewebdev.org/privacy.html</loc>
-    <lastmod>2026-05-13</lastmod>
+    <lastmod>2026-06-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -600,6 +600,27 @@
     <lastmod>2026-05-13</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://colewebdev.org/consulting.html</loc>
+    <lastmod>2026-06-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://colewebdev.org/service-area.html</loc>
+    <lastmod>2026-06-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://colewebdev.org/social-news.html</loc>
+    <lastmod>2026-06-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
 
 </urlset>
