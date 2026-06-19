@@ -90,27 +90,9 @@ const PHASES = [
 ];
 
 function ProcessStep({ step, index }) {
-  const [visible, setVisible] = React.useState(false);
-  const ref = React.useRef(null);
-
-  React.useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) { setVisible(true); observer.disconnect(); } },
-      { threshold: 0.12 }
-    );
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <section
-      ref={ref}
       className="proc-step"
-      style={{
-        opacity: visible ? 1 : 0,
-        transform: visible ? 'translateY(0)' : 'translateY(24px)',
-        transition: 'opacity 0.6s ease, transform 0.6s ease',
-      }}
     >
       <span className="proc-watermark" aria-hidden="true">{step.n}</span>
       <div className="shell">

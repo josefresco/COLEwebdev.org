@@ -103,27 +103,9 @@ const SERVICES = [
 ];
 
 function ServiceItem({ svc, index }) {
-  const [visible, setVisible] = React.useState(false);
-  const ref = React.useRef(null);
-
-  React.useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) { setVisible(true); observer.disconnect(); } },
-      { threshold: 0.10 }
-    );
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <section
-      ref={ref}
       className="svc-item"
-      style={{
-        opacity: visible ? 1 : 0,
-        transform: visible ? 'translateY(0)' : 'translateY(24px)',
-        transition: 'opacity 0.6s ease, transform 0.6s ease',
-      }}
     >
       <span className="svc-watermark" aria-hidden="true">{svc.n}</span>
       <div className="shell">

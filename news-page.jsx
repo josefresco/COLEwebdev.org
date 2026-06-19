@@ -95,29 +95,13 @@ function getPostMeta(post) {
   return { img, cat };
 }
 
-function NewsCard({ post, index }) {
-  const [visible, setVisible] = React.useState(false);
-  const ref = React.useRef(null);
-
-  React.useEffect(() => {
-    const t = setTimeout(() => {
-      const observer = new IntersectionObserver(
-        ([e]) => { if (e.isIntersecting) { setVisible(true); observer.disconnect(); } },
-        { threshold: 0.08 }
-      );
-      if (ref.current) observer.observe(ref.current);
-      return () => observer.disconnect();
-    }, index * 60);
-    return () => clearTimeout(t);
-  }, [index]);
-
+function NewsCard({ post }) {
   const { img, cat } = getPostMeta(post);
   const title = decodeHtml(post.title.rendered);
   const excerpt = decodeHtml(post.excerpt.rendered);
 
   return (
     <a
-      ref={ref}
       className="ns-card"
       href={post.link}
       target="_blank"
@@ -249,7 +233,7 @@ function NewsPage() {
                 <div className="ns-state">No posts in this category yet.</div>
               ) : (
                 <div className="ns-grid">
-                  {visible.map((post, i) => <NewsCard key={post.id} post={post} index={i} />)}
+                  {visible.map((post) => <NewsCard key={post.id} post={post} />)}
                 </div>
               )}
 
