@@ -84,7 +84,7 @@ const FAQ_CATEGORIES = [
   {
     id: 'seo',
     label: 'SEO & Google',
-    glyph: '⚡',
+    glyph: '↗',
     color: 'green',
     questions: [
       {

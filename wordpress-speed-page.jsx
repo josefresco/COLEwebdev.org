@@ -9,7 +9,7 @@ const WPS_OPTIMIZATIONS = [
     body: 'Convert to WebP, lazy-load off-screen images, resize to display dimensions, and serve from CDN. Images are usually the single biggest drag on load time.',
   },
   {
-    icon: '⚡',
+    icon: '↗',
     bg: 'rgba(242,107,31,0.12)',
     color: '#F26B1F',
     title: 'Server-Level Caching',

@@ -32,7 +32,7 @@ const UM_PROCESS = [
 const UM_OPT_SERVICES = [
   {
     href: 'wordpress-speed.html',
-    icon: '⚡',
+    icon: '↗',
     color: '#5CC035',
     bg: 'rgba(92,192,53,0.1)',
     title: 'WordPress Speed Optimization',

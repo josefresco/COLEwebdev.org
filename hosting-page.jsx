@@ -7,7 +7,7 @@ const HC_INCLUDES = [
   { icon: '⌘', bg: 'rgba(123,192,67,0.14)', color: '#5DA02E', title: 'WordPress Updates', body: 'Core, theme, and plugin updates applied and tested each month. No more "update available" banners you\'re afraid to click.' },
   { icon: '◎', bg: 'rgba(14,42,74,0.10)', color: '#0E2A4A', title: 'Uptime Monitoring', body: 'We\'re alerted the moment your site goes down — usually before you notice. Most issues are resolved before customers see them.' },
   { icon: '↗', bg: 'rgba(242,107,31,0.14)', color: '#F26B1F', title: 'Speed Optimization', body: 'Image compression, caching, and CDN delivery keep your Core Web Vitals green and your pages loading fast on any device.' },
-  { icon: '⚡', bg: 'rgba(14,42,74,0.10)', color: '#0E2A4A', title: 'Priority Support', body: 'A real person to email when something looks off. Care Plan clients jump the queue — you\'re not waiting behind new project work.' },
+  { icon: '✦', bg: 'rgba(14,42,74,0.10)', color: '#0E2A4A', title: 'Priority Support', body: 'A real person to email when something looks off. Care Plan clients jump the queue — you\'re not waiting behind new project work.' },
 ];
 
 const BASE_FEATURES = [

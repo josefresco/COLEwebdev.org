@@ -33,7 +33,7 @@ const POD_FEATURES = [
 
 const BENEFITS = [
   {
-    icon: '⚡',
+    icon: '↗',
     bg: 'rgba(242,107,31,0.14)',
     color: '#F26B1F',
     title: 'Fast Setup',

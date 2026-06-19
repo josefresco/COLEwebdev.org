@@ -2,7 +2,7 @@
 
 const WPH_FEATURES = [
   {
-    icon: '⚡',
+    icon: '↗',
     bg: 'rgba(242,107,31,0.12)',
     color: '#F26B1F',
     title: 'WordPress-Optimized Infrastructure',
@@ -259,7 +259,7 @@ function WPHostingPage() {
       {/* Speed optimization tie-in */}
       <section className="wph-speed">
         <div className="shell wph-speed-inner">
-          <div className="wph-speed-badge">⚡</div>
+          <div className="wph-speed-badge">↗</div>
           <div className="wph-speed-text">
             <span className="eyebrow wph-speed-eyebrow">Also available</span>
             <h2 className="wph-speed-hl">Need a faster WordPress site?</h2>

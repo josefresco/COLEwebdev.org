@@ -393,7 +393,7 @@ function Header() {
               {/* Grow & Market */}
               <div className="nav-dd-group nav-dd-group--sep">Grow &amp; Market</div>
               <a href="seo.html" className="nav-dd-item">
-                <span className="nav-dd-glyph orange">⚡</span>
+                <span className="nav-dd-glyph orange">↗</span>
                 <div>
                   <div className="nav-dd-title">SEO &amp; Local Search</div>
                   <div className="nav-dd-desc">Show up when neighbors search for what you sell.</div>

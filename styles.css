@@ -1199,10 +1199,7 @@ p, li {
 .estimator-result .price-range {
   font-family: var(--serif);
   font-size: 36px;
-  background: linear-gradient(135deg, var(--brand-blue), var(--brand-green));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: var(--brand-blue);
   margin: 6px 0 12px;
   letter-spacing: -0.02em;
 }
@@ -1255,10 +1252,7 @@ p, li {
   font-family: var(--serif);
   font-style: italic;
   font-size: 56px;
-  background: linear-gradient(135deg, var(--brand-blue) 0%, var(--brand-green) 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: var(--brand-blue);
   line-height: 1;
   margin-bottom: 12px;
 }

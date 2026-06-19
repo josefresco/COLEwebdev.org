@@ -211,7 +211,7 @@ function ServicesPage() {
               { icon: '◎', glyph: 'navy', name: 'E-Commerce', desc: 'WooCommerce & Shopify storefronts that sell.', href: 'ecommerce.html' },
               { icon: '↻', glyph: 'green', name: 'Hosting + Care Plans', desc: 'Managed hosting with a human on the other end.', href: 'hosting.html' },
               { icon: '⌘', glyph: 'navy', name: 'AI Studio', desc: 'Booking, intake, and search powered by AI.', href: 'ai-apps.html', pill: 'NEW' },
-              { icon: '⚡', glyph: 'orange', name: 'SEO & Local Search', desc: 'Show up when neighbors search for what you sell.', href: 'seo.html' },
+              { icon: '↗', glyph: 'orange', name: 'SEO & Local Search', desc: 'Show up when neighbors search for what you sell.', href: 'seo.html' },
               { icon: '✦', glyph: 'orange', name: 'Branding', desc: 'Logos, color, print — so the site fits the rest of you.', href: 'branding.html' },
             ].map(page => (
               <a key={page.name} className="svc-page-card" href={page.href}>

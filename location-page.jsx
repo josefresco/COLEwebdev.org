@@ -2,7 +2,7 @@
 
 const SERVICES = [
   { glyph: '◇', color: 'green', title: 'Web Design', desc: 'Modern, mobile-first websites built from scratch — no templates.', href: 'website-design.html' },
-  { glyph: '⚡', color: 'orange', title: 'SEO & Local Search', desc: 'Show up when your neighbors search for what you do.', href: 'seo.html' },
+  { glyph: '↗', color: 'orange', title: 'SEO & Local Search', desc: 'Show up when your neighbors search for what you do.', href: 'seo.html' },
   { glyph: '↻', color: 'green', title: 'Hosting + Care Plans', desc: 'Backups, security, and updates — with a human to call.', href: 'hosting.html' },
   { glyph: '◐', color: 'navy', title: 'E-Commerce', desc: 'Sell online with WooCommerce or Shopify.', href: 'ecommerce.html' },
   { glyph: '✦', color: 'orange', title: 'Branding', desc: 'Logos, color systems, and print that matches your site.', href: 'branding.html' },

@@ -39,7 +39,7 @@ function NotFoundPage() {
               </div>
             </a>
             <a className="nf-link-card" href="seo.html">
-              <span className="nf-link-glyph">⚡</span>
+              <span className="nf-link-glyph">↗</span>
               <div>
                 <div className="nf-link-title">SEO & Local Search</div>
                 <div className="nf-link-desc">Show up when neighbors search.</div>

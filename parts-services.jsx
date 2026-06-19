@@ -49,7 +49,7 @@ function Services() {
 
           {/* SEO */}
           <a className="card svc-card sm" href="seo.html">
-            <div className="icon navy">⚡</div>
+            <div className="icon navy">↗</div>
             <h3>SEO &amp; Local Search</h3>
             <p>Understanding what your customers are actually searching for comes first — then we build a strategy around real data, not guesswork.</p>
             <div className="meta-row">

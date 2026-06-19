@@ -35,7 +35,7 @@ const EC_FEATURES = [
   { icon: '↗', bg: 'rgba(14,42,74,0.10)', color: '#0E2A4A', title: 'Mobile Checkout', body: 'A checkout experience optimized for phones — where over 60% of e-commerce traffic comes from. Fast, friction-free, and accessible.' },
   { icon: '◎', bg: 'rgba(242,107,31,0.14)', color: '#F26B1F', title: 'Analytics & Reporting', body: 'Sales dashboards, conversion funnels, and customer reports connected to Google Analytics 4 and your platform\'s native tools.' },
   { icon: '◐', bg: 'rgba(123,192,67,0.14)', color: '#5DA02E', title: 'SEO for Products', body: 'Product titles, descriptions, schema markup, and sitemap configuration so your items show up in Google Shopping and organic search.' },
-  { icon: '⚡', bg: 'rgba(14,42,74,0.10)', color: '#0E2A4A', title: 'Training & Handoff', body: 'A recorded walkthrough of your store admin so you can add products, run promotions, and fulfill orders confidently on day one.' },
+  { icon: '✎', bg: 'rgba(14,42,74,0.10)', color: '#0E2A4A', title: 'Training & Handoff', body: 'A recorded walkthrough of your store admin so you can add products, run promotions, and fulfill orders confidently on day one.' },
 ];
 
 const EC_PAYMENTS = [

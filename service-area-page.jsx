@@ -103,7 +103,7 @@ function ServiceAreaPage() {
           <div className="sa-svcs-grid">
             {[
               { title: 'Web Design', desc: 'Custom, mobile-first websites built from scratch.', href: 'website-design.html', glyph: '◇' },
-              { title: 'SEO & Local Search', desc: 'Show up in Google when Cape Cod customers search.', href: 'seo.html', glyph: '⚡' },
+              { title: 'SEO & Local Search', desc: 'Show up in Google when Cape Cod customers search.', href: 'seo.html', glyph: '↗' },
               { title: 'E-Commerce', desc: 'Sell online with WooCommerce or Shopify.', href: 'ecommerce.html', glyph: '◐' },
               { title: 'Branding', desc: 'Logos, color systems, and print that holds together.', href: 'branding.html', glyph: '✦' },
               { title: 'Hosting + Care Plans', desc: 'Backups, updates, and a human to call.', href: 'hosting.html', glyph: '↻' },
