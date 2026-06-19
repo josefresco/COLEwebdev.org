@@ -130,6 +130,32 @@ All shared styles live here. Never create a separate CSS file. Never use CSS-in-
 ### Page-specific styles
 Each page HTML file has an inline `<style>` block. All selectors for that page are namespaced with a 2–3 letter prefix (e.g., `.wh-` for whitepapers, `.lp-` for location pages, `.wp-` for WordPress page, `.hc-` for hosting+care).
 
+### Icon / glyph system
+The site uses **Unicode text symbols** as icons and glyphs — never emoji. Emoji render inconsistently across platforms and are a known "AI slop" tell.
+
+Current glyph vocabulary (use these; don't introduce emoji):
+
+| Glyph | Meaning |
+|---|---|
+| `◇` | Web design, custom work |
+| `◎` | Targeting, PPC, SEO targeting |
+| `✦` | Featured, priority, branding, quality |
+| `⚙` | Technical, schema, configuration |
+| `↗` | SEO, growth, speed, performance |
+| `✎` | Content, training, writing |
+| `↻` | Recurring, hosting, care plans |
+| `⌘` | AI, advanced tools, commands |
+| `◐` | Consulting, partial, e-commerce |
+| `◍` | Social media |
+| `◇` | Diamond shapes, design |
+
+### Design anti-patterns — do not introduce
+These were audited and removed in June 2026. Do not reintroduce:
+
+- **Emoji as UI icons** — use the Unicode glyph vocabulary above instead
+- **Gradient-clipped text** — no `background: linear-gradient(...); -webkit-background-clip: text; color: transparent` on headings or display text. Use `color: var(--brand-blue)` or solid brand colors.
+- **IntersectionObserver fade-in-on-scroll** — `opacity: 0 → 1` + `translateY` on scroll makes content invisible to crawlers, screenshot tools, and social preview renderers. Content must be visible on initial paint.
+
 ---
 
 ## Conventions
@@ -140,6 +166,7 @@ Each page HTML file has an inline `<style>` block. All selectors for that page a
 - No `node_modules`, no package manager
 - All data is hardcoded in arrays; no API calls except the news page's WP REST fetch
 - Commit messages follow Conventional Commits: `feat(scope): description`
+- **JSX cache-busting** — GitHub Pages CDN caches `.jsx` files. When you update a page-specific JSX file, bump the `?v=N` version string on its `<script src>` tag in the corresponding HTML file (e.g. `src="services-page.jsx?v=2"`). Currently at `v=2` on `services.html`, `process.html`, `news.html`.
 
 ---
 
