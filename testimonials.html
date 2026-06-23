@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -14,6 +14,7 @@
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
+  "@id": "https://colewebdev.org/#business",
   "name": "COLEwebdev",
   "url": "https://colewebdev.org/",
   "aggregateRating": {
@@ -21,7 +22,54 @@
     "ratingValue": "4.8",
     "reviewCount": "72",
     "bestRating": "5"
-  }
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "author": { "@type": "Person", "name": "Carol Edmondson" },
+      "name": "Inn Advisors",
+      "reviewBody": "The COLEwebdev team were a pleasure to work with and exceeded our expectations at every turn. COLEwebdev made the process easy and met every goal for both quality and timeliness. This is a creative and professional team we highly recommend."
+    },
+    {
+      "@type": "Review",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "author": { "@type": "Person", "name": "Jessica Wile" },
+      "name": "Agway of Cape Cod",
+      "reviewBody": "We've been using COLEwebdev for many years now. They worked closely with me on our redesign to incorporate everything on my wish list. They're incredibly responsive and always willing to help! Love working with this team."
+    },
+    {
+      "@type": "Review",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "author": { "@type": "Person", "name": "Matty Dread" },
+      "name": "WOMR 92.1 FM",
+      "reviewBody": "Josiah and Desiree do great work with a personal touch. From the initial proposal through maintenance and service once the site was up, the folks at COLEwebdev have always been there. Highly recommended for any small to medium-sized business."
+    },
+    {
+      "@type": "Review",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "author": { "@type": "Person", "name": "Kegan Berner" },
+      "name": "Oyster River Boatyard",
+      "reviewBody": "COLEwebdev did an outstanding job designing our website and hosts it as well. As our business grows they have seamlessly updated our site to reflect our new services. They are very easy to work with and accommodate changes and updates quickly."
+    },
+    {
+      "@type": "Review",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "author": { "@type": "Person", "name": "George Sylvestre" },
+      "name": "Sylvestre Outdoors",
+      "reviewBody": "COLEwebdev is flat out awesome! Easy to work with, understood me, my business, and my goals. Super responsive and super helpful. I'd recommend to anyone looking to build a customer centric and professional website to give them a call."
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://colewebdev.org/" },
+    { "@type": "ListItem", "position": 2, "name": "Client Testimonials", "item": "https://colewebdev.org/testimonials.html" }
+  ]
 }
 </script>
 <meta property="og:type" content="website" />
@@ -274,6 +322,7 @@
   .tm-cta { flex-direction: column; align-items: flex-start; }
 }
 </style>
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
 </head>
 <body>
 <div id="root"></div>

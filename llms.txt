@@ -1,13 +1,13 @@
 # COLEwebdev
 
-> Cape Cod's full-service web design and development studio. Custom websites, WordPress, e-commerce, SEO, hosting, and AI integrations — built for small businesses and nonprofits since 2006.
+> Cape Cod's full-service web design and development studio. Custom websites, WordPress, e-commerce, SEO, PPC, AI Engine Optimization, hosting, and AI integrations — built for small businesses and nonprofits since 2006.
 
 COLEwebdev is a husband-and-wife web studio based in Eastham, Massachusetts, on Cape Cod. Founded in 2006 by Josiah and Desiree Cole, the studio has launched 700+ websites for small businesses, nonprofits, and community organizations across the Outer Cape and beyond. Every project goes through Josiah and Desiree directly — no account managers, no outsourcing.
 
 Phone: 508-413-2043
 Email: info@colewebdev.com
-Location: Eastham, MA 02642 (serving all of Cape Cod)
-Google rating: 5★ (70+ reviews)
+Location: 3960 State Hwy, Unit 4, Eastham, MA 02642 (serving all of Cape Cod and Maine)
+Google rating: 4.8★ (72+ reviews)
 
 ## Services
 
@@ -15,33 +15,66 @@ Google rating: 5★ (70+ reviews)
 - [WordPress Websites](https://colewebdev.org/wordpress.html): Custom WordPress themes, lean plugin stack, client-managed content.
 - [Traditional Web Design](https://colewebdev.org/traditional.html): Hand-coded HTML/CSS/JS — maximum performance, zero CMS overhead.
 - [E-Commerce](https://colewebdev.org/ecommerce.html): WooCommerce and Shopify storefronts built to convert.
-- [SEO & Local Search](https://colewebdev.org/seo.html): Local SEO, Google Ads, and search strategy for Cape Cod businesses.
-- [Website Hosting + Care Plans](https://colewebdev.org/hosting.html): Managed WordPress hosting with daily backups, SSL, and human support.
+- [SEO & Local Search](https://colewebdev.org/seo.html): Local SEO, Google Business Profile, and search strategy for Cape Cod businesses.
+- [PPC & Google Ads](https://colewebdev.org/ppc.html): Paid search campaign setup and monthly management with transparent reporting.
+- [Marketing](https://colewebdev.org/marketing.html): SEO, Google Ads, social media, analytics, and lead capture — one local team.
 - [Branding](https://colewebdev.org/branding.html): Logo, color, print — brand identity that works across every surface.
 - [AI Studio](https://colewebdev.org/ai-apps.html): Booking, intake, and search powered by AI, integrated into existing sites.
+- [AI Engine Optimization (AIEO)](https://colewebdev.org/aieo.html): Structured content, schema, E-E-A-T signals, and citation building to get cited by ChatGPT, Perplexity, Gemini, and Claude.
+- [WordPress Hosting + Care Plans](https://colewebdev.org/hosting.html): Managed WordPress hosting with daily backups, SSL, security, and human support.
+- [WordPress Speed Optimization](https://colewebdev.org/wordpress-speed.html): Core Web Vitals improvement, image optimization, caching, and plugin audits.
+- [Web Accessibility (WCAG)](https://colewebdev.org/web-accessibility.html): WCAG 2.1 AA audits, remediation, and ADA compliance for business websites.
+- [Updates & Maintenance](https://colewebdev.org/updates.html): Hourly content edits — text, images, pages, forms. No monthly commitment.
+- [Consulting](https://colewebdev.org/consulting.html): Website strategy, audits, and CMS training.
 - [All Services](https://colewebdev.org/services.html): Full overview of all services.
+
+## Industry Specializations
+
+- [Nonprofit Web Design](https://colewebdev.org/cape-cod-nonprofit-web-design.html): Donation integration, volunteer intake, accessible sites for Cape Cod nonprofits.
+- [Church Website Design](https://colewebdev.org/cape-cod-church-web-design.html): Service schedules, sermon archives, online giving for Cape Cod churches.
+- [Hospitality Web Design](https://colewebdev.org/cape-cod-hospitality-web-design.html): Direct booking, room pages, local SEO for Cape Cod inns and B&Bs.
+- [Restaurant Web Design](https://colewebdev.org/cape-cod-restaurant-web-design.html): Mobile-first menus, reservations, and online ordering.
+- [Real Estate Web Design](https://colewebdev.org/cape-cod-real-estate-web-design.html): IDX integration, lead capture, neighborhood guides.
+- [Contractor Web Design](https://colewebdev.org/cape-cod-contractor-web-design.html): Project galleries, service area pages, local SEO.
+- [Law Firm Web Design](https://colewebdev.org/cape-cod-legal-web-design.html): Credibility-first sites for attorneys and professional services.
+- [Health & Wellness Web Design](https://colewebdev.org/cape-cod-health-web-design.html): Online booking, provider profiles, local SEO for fitness studios and practices.
+- [Marine & Charter Web Design](https://colewebdev.org/cape-cod-marine-web-design.html): Online booking and photography-led design for fishing charters and boat tours.
+- [Landscaping Web Design](https://colewebdev.org/cape-cod-landscaping-web-design.html): Before-and-after galleries and local SEO for landscapers and lawn care.
+- [Chamber of Commerce Websites](https://colewebdev.org/cape-cod-chamber-web-design.html): Member directories, event calendars, business spotlights.
+
+## Location Pages
+
+- [Cape Cod Web Design](https://colewebdev.org/cape-cod-web-design.html): Serving all 15 Cape Cod towns since 2006.
+- [Maine Web Design](https://colewebdev.org/maine-web-design.html): Farmington and Aroostook County roots, serving Maine businesses.
+- Town pages: Eastham, Orleans, Wellfleet, Provincetown, Truro, Brewster, Harwich, Dennis, Chatham, Yarmouth, Hyannis, Mashpee, Falmouth, Sandwich, Bourne.
 
 ## Portfolio
 
-- [Portfolio](https://colewebdev.org/portfolio.html): 32 featured projects across industries including hospitality, nonprofit, retail, healthcare, and community organizations on Cape Cod.
+- [Portfolio](https://colewebdev.org/portfolio.html): Featured client work across industries including hospitality, nonprofit, retail, healthcare, and community organizations.
 
 ## Resources
 
-- [Whitepapers](https://colewebdev.org/whitepapers.html): Eight in-depth guides on web design strategy — What Web Design Does, Investment Value, DIY vs Pro, 3 Types of Web Design, 7 Golden Rules, 5 Essential Principles, The 7 C's Framework, Building a Better FAQ.
-- [News](https://colewebdev.org/news.html): Recent website launches, industry news, and resources for Cape Cod business owners.
+- [Whitepapers](https://colewebdev.org/whitepapers.html): 26 in-depth guides on web design strategy.
+  - What Web Design Actually Does, Is a Website Worth the Investment?, DIY vs. Professional Web Design, Three Types of Small Business Websites, Seven Golden Rules of Web Design, Five Principles of Effective Web Design, The Seven Cs of Web Design, Web Design FAQ Guide, Google Ads Waste Guide, How to Choose a Web Designer, What Makes a Good Website?, How Much Does a Website Cost?, Why Is Web Design So Expensive?, How Long Does a Website Take to Build?, When Should I Redesign My Website?, Do I Need a Website If I Have Social Media?, WordPress vs. Squarespace, Web Design vs. Web Development, Why Isn't My Website on Google?, How Long Does SEO Take to Work?, How Do I Know If My Website Is Working?, Shopify vs. WooCommerce, What Are Core Web Vitals?, Website Accessibility & ADA Compliance, How to Improve Your Google Maps Ranking, What Is WordPress Maintenance?
+- [News & Blog](https://colewebdev.org/news.html): Recent website launches, industry news, and resources.
+- [Newsletter Archive](https://colewebdev.org/newsletter.html): Every issue of the COLEwebdev quarterly newsletter since 2020.
 
 ## Company
 
-- [About Us](https://colewebdev.org/about.html): Studio story, team bios for Josiah and Desiree Cole, awards, and community memberships.
-- [Our Process](https://colewebdev.org/process.html): How COLEwebdev scopes, designs, builds, launches, and hands off every project.
-- [Contact](https://colewebdev.org/contact.html): Start a project, request a quote, or schedule a free first-hour consultation.
+- [About Us](https://colewebdev.org/about.html): Studio story, team bios for Josiah Cole (CTO) and Desiree Cole (CEO), awards, and community memberships.
+- [Our Process](https://colewebdev.org/process.html): Four-step process: Conversation → Plan & Price → Design & Build → Launch & Care.
+- [Testimonials](https://colewebdev.org/testimonials.html): 23 client reviews, 4.8★ Google rating across 72 reviews.
+- [FAQ](https://colewebdev.org/faq.html): Answers to questions about cost, timeline, CMS, SEO, and the design process.
+- [Request a Quote](https://colewebdev.org/quote.html): Start a project with a structured quote request form.
+- [Contact](https://colewebdev.org/contact.html): Phone, email, studio address, and office hours.
 
 ## Key Facts
 
-- Founded: 2006
-- Location: Eastham, MA (Cape Cod)
+- Founded: 2006 (Josiah Cole has been building websites since 2000)
+- Location: Eastham, MA (Cape Cod) — serving Cape Cod, the Islands, Maine, and beyond
 - Founders: Josiah Cole (CTO/Webmaster) and Desiree Cole (CEO/Web Diva)
 - Projects launched: 700+
-- Specialties: Cape Cod small businesses, nonprofits, seasonal businesses, hospitality
-- Technologies: WordPress, WooCommerce, Shopify, HTML/CSS/JS, AI integrations
+- Google rating: 4.8★ across 72 reviews
 - First consultation: Free (no commitment)
+- Specialties: Cape Cod small businesses, nonprofits, seasonal businesses, hospitality, contractors, marine
+- Technologies: WordPress, WooCommerce, Shopify, HTML/CSS/JS, AI integrations, React

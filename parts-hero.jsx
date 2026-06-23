@@ -89,11 +89,15 @@ const SERVICE_LINKS = [
   { href: 'ecommerce.html', title: 'E-Commerce' },
   { groupLabel: 'Grow & Market' },
   { href: 'seo.html', title: 'SEO & Local Search' },
+  { href: 'ppc.html', title: 'PPC & Google Ads' },
   { href: 'marketing.html', title: 'Marketing' },
   { href: 'branding.html', title: 'Branding' },
   { href: 'ai-apps.html', title: 'AI Studio', pill: 'NEW' },
+  { href: 'aieo.html', title: 'AI Engine Optimization', pill: 'NEW' },
   { groupLabel: 'Care & Support' },
   { href: 'hosting.html', title: 'Hosting + Care Plans' },
+  { href: 'wordpress-speed.html', title: 'WordPress Speed' },
+  { href: 'web-accessibility.html', title: 'Web Accessibility' },
   { href: 'updates.html', title: 'Updates & Maintenance' },
   { href: 'consulting.html', title: 'Consulting' },
 ];
@@ -112,10 +116,12 @@ const SEARCH_DATA = [
   { title: 'News & Blog', desc: 'Web design tips, updates, and articles.', category: 'Company', href: 'news.html' },
   { title: 'Social News', desc: 'Live updates from our Bluesky feed.', category: 'Company', href: 'social-news.html' },
   { title: 'Request a Quote', desc: 'Get a fast, no-obligation project estimate.', category: 'Company', href: 'quote.html' },
+  { title: 'Merch Shop', desc: 'COLEwebdev branded apparel and accessories, printed on demand.', category: 'Company', href: 'shop.html' },
   { title: 'Web Design', desc: 'Modern, mobile-first websites built for your business.', category: 'Services', href: 'website-design.html' },
   { title: 'Marketing', desc: 'SEO, Google Ads, social media, analytics, and lead capture — one local team.', category: 'Services', href: 'marketing.html' },
   { title: 'PPC & Google Ads', desc: 'Paid search management — negatives, landing pages, and conversion tracking.', category: 'Services', href: 'ppc.html' },
   { title: 'AI Studio', desc: 'Chatbots, plugins, PWAs, extensions, and custom business tools.', category: 'Services', href: 'ai-apps.html' },
+  { title: 'AI Engine Optimization', desc: 'Get cited by ChatGPT, Perplexity, Gemini, and Claude — AIEO for Cape Cod businesses.', category: 'Services', href: 'aieo.html' },
   { title: 'Consulting', desc: 'Website strategy, audits, business advice, and training.', category: 'Services', href: 'consulting.html' },
   { title: 'Hosting + Care Plans', desc: 'Backups, security, updates — and a human to email.', category: 'Services', href: 'hosting.html' },
   { title: 'Updates & Maintenance', desc: 'Hourly content edits — text, images, pages, forms. No monthly commitment.', category: 'Services', href: 'updates.html' },
@@ -399,6 +405,13 @@ function Header() {
                   <div className="nav-dd-desc">Show up when neighbors search for what you sell.</div>
                 </div>
               </a>
+              <a href="ppc.html" className="nav-dd-item">
+                <span className="nav-dd-glyph orange">◎</span>
+                <div>
+                  <div className="nav-dd-title">PPC &amp; Google Ads</div>
+                  <div className="nav-dd-desc">Paid search campaigns that convert — not just clicks.</div>
+                </div>
+              </a>
               <a href="marketing.html" className="nav-dd-item">
                 <span className="nav-dd-glyph orange">↗</span>
                 <div>
@@ -420,6 +433,13 @@ function Header() {
                   <div className="nav-dd-desc">Chatbots, intake forms, booking tools, and custom apps.</div>
                 </div>
               </a>
+              <a href="aieo.html" className="nav-dd-item">
+                <span className="nav-dd-glyph navy">⌘</span>
+                <div>
+                  <div className="nav-dd-title">AI Engine Optimization <span className="nav-dd-pill">NEW</span></div>
+                  <div className="nav-dd-desc">Get cited by ChatGPT, Perplexity, and Gemini.</div>
+                </div>
+              </a>
 
               {/* Care & Support */}
               <div className="nav-dd-group nav-dd-group--sep">Care &amp; Support</div>
@@ -428,6 +448,20 @@ function Header() {
                 <div>
                   <div className="nav-dd-title">Hosting + Care Plans</div>
                   <div className="nav-dd-desc">Managed hosting with a human on the other end.</div>
+                </div>
+              </a>
+              <a href="wordpress-speed.html" className="nav-dd-item">
+                <span className="nav-dd-glyph orange">↗</span>
+                <div>
+                  <div className="nav-dd-title">WordPress Speed</div>
+                  <div className="nav-dd-desc">Core Web Vitals, caching, and image optimization.</div>
+                </div>
+              </a>
+              <a href="web-accessibility.html" className="nav-dd-item">
+                <span className="nav-dd-glyph navy">⚙</span>
+                <div>
+                  <div className="nav-dd-title">Web Accessibility (WCAG)</div>
+                  <div className="nav-dd-desc">WCAG 2.1 AA audits and ADA compliance remediation.</div>
                 </div>
               </a>
               <a href="updates.html" className="nav-dd-item">

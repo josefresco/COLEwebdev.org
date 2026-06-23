@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -35,18 +35,37 @@
     "employee": [
       {
         "@type": "Person",
+        "@id": "https://colewebdev.org/about.html#josiah",
         "name": "Josiah Cole",
-        "jobTitle": "Co-Founder & Developer",
-        "worksFor": { "@type": "Organization", "name": "COLEwebdev" }
+        "jobTitle": "Co-Founder, CTO & Webmaster",
+        "worksFor": { "@type": "Organization", "name": "COLEwebdev", "url": "https://colewebdev.org/" },
+        "email": "josiah@colewebdev.com",
+        "sameAs": ["https://www.linkedin.com/in/josiahcole/"]
       },
       {
         "@type": "Person",
+        "@id": "https://colewebdev.org/about.html#desiree",
         "name": "Desiree Cole",
-        "jobTitle": "Co-Founder & Designer",
-        "worksFor": { "@type": "Organization", "name": "COLEwebdev" }
+        "jobTitle": "Co-Founder, CEO & Web Diva",
+        "worksFor": { "@type": "Organization", "name": "COLEwebdev", "url": "https://colewebdev.org/" },
+        "email": "desiree@colewebdev.com",
+        "sameAs": [
+          "https://www.facebook.com/colewebdev",
+          "https://www.instagram.com/colewebdev"
+        ]
       }
     ]
   }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://colewebdev.org/" },
+    { "@type": "ListItem", "position": 2, "name": "About Us", "item": "https://colewebdev.org/about.html" }
+  ]
 }
 </script>
 <style>
@@ -485,6 +504,7 @@
 <meta property="og:description" content="Meet Josiah and Desiree Cole — the Cape Cod web design team behind COLEwebdev. Local since 2006, 700+ sites launched, and every project still handled personally." />
 <meta property="og:url" content="https://colewebdev.org/about.html" />
 <meta property="og:image" content="https://colewebdev.org/assets/colewebdev-team-2021.jpg" />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
 </head>
 <body>
 <div id="root"></div>

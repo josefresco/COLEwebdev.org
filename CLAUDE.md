@@ -1,5 +1,7 @@
 # CLAUDE.md
 
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
 Project guidance for Claude Code. Keep this file current whenever the architecture changes.
 
 ---
@@ -21,8 +23,8 @@ There are no lint, test, or build commands. What you edit is what ships.
 
 ## Project Scale
 
-- **~72 HTML pages** — homepage, 10+ service pages, 26 whitepaper guides, 16 town landing pages, utility pages
-- **~40 JSX files** — one per page plus shared parts
+- **~90 HTML pages** — homepage, 10+ service pages, 26 whitepaper guides, 16 town landing pages, 11 industry pages, utility pages
+- **~47 JSX files** — one per page plus shared parts
 - **~70 assets** in `assets/` — local brand images (logos, team photos, hero images)
 - **1 global stylesheet** — `styles.css` (~55KB); page-specific styles live in inline `<style>` blocks inside each HTML file
 - **External images** — portfolio/blog photos are hosted on `colewebdev.com` (WordPress), referenced by full URL
@@ -88,6 +90,13 @@ Two page types use a single renderer with per-page data injected via a global va
 **Town landing pages** (`*-web-design.html` + `location-page.jsx`):
 - Data lives in `locations-data.jsx` → `window.LOCATIONS_DATA` (array of 16 town objects)
 - Each town HTML sets `window.CURRENT_LOCATION_ID = 'town-id'` before loading the renderer
+- `cape-cod-web-design.html` also uses this renderer (id `'cape-cod'`)
+
+**Industry landing pages** (`cape-cod-*-web-design.html` + `industry-page.jsx`):
+- Data lives in `industry-data.jsx` → `window.INDUSTRY_DATA` (array of 11 industry objects)
+- Each industry HTML sets `window.CURRENT_INDUSTRY_ID = 'industry-id'` before loading the renderer
+- Industry data shape differs from location data: includes `whyCards`, `features`, `relatedIndustries`, `metaTitle`, `metaDesc` (no `nearbyTowns`)
+- `maine-web-design.html` is a standalone page with its own dedicated `maine-page.jsx` (not a shared renderer)
 
 ### News page
 `news-page.jsx` fetches live posts from the WordPress REST API:
@@ -300,7 +309,64 @@ Other pages link to `styles.css` without a version string and are served fresh o
 
 ---
 
-### 3. Add a new service page
+### 3. Add a new industry landing page
+
+**Step 1 — Add the industry object to `industry-data.jsx`** inside `window.INDUSTRY_DATA`:
+```js
+{
+  id: 'retail',
+  industry: 'Retail',
+  slug: 'cape-cod-retail-web-design',
+  heroHeadline: 'Cape Cod Retail Web Design',
+  heroSub: 'One-sentence hero subheading.',
+  intro: 'Two–three sentence intro about this industry and our work in it.',
+  whyCards: [
+    { icon: '◇', title: 'Card title', body: 'Two-sentence explanation.' },
+    { icon: '◎', title: 'Card title', body: 'Two-sentence explanation.' },
+    { icon: '✦', title: 'Card title', body: 'Two-sentence explanation.' },
+  ],
+  features: [
+    { icon: '◇', title: 'Feature', body: 'One-sentence description.' },
+    // 5–6 features total
+  ],
+  clients: [
+    { name: 'Client Name', type: 'Business Type', href: 'https://clientsite.com/' },
+  ],
+  faq: [
+    { q: 'Question?', a: 'Answer.' },
+    { q: 'Question?', a: 'Answer.' },
+    { q: 'Question?', a: 'Answer.' },
+  ],
+  relatedIndustries: [
+    { name: 'Restaurants', href: 'cape-cod-restaurant-web-design.html' },
+  ],
+  metaTitle: 'Cape Cod Retail Web Design — COLEwebdev',
+  metaDesc: 'Under 155 chars. Include primary keyword.',
+}
+```
+
+**Step 2 — Create the HTML shell.** Copy any existing `cape-cod-*-web-design.html` and update:
+- `<title>`, `<meta name="description">`, `<link rel="canonical">`
+- Schema JSON-LD: update `name`, `url`, `areaServed`
+- OG tags
+- `window.CURRENT_INDUSTRY_ID = 'retail';` — must match the `id` in step 1
+- Filename: `cape-cod-retail-web-design.html`
+
+**Step 3 — Add to `sitemap.xml`:**
+```xml
+<url>
+  <loc>https://colewebdev.org/cape-cod-retail-web-design.html</loc>
+  <lastmod>YYYY-MM-DD</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+```
+
+**Step 4 — Add cross-links** in `relatedIndustries` of adjacent industry objects and in `service-area.html` if it lists industries.
+
+---
+
+### 4. Add a new service page
 
 **Step 1 — Create `new-service-page.jsx`:**
 - Follow the pattern of any existing page (e.g. `wordpress-page.jsx`)
@@ -320,7 +386,7 @@ Other pages link to `styles.css` without a version string and are served fresh o
 
 ---
 
-### 4. Update the homepage news teaser
+### 5. Update the homepage news teaser
 
 The homepage shows 3 hardcoded news items in `parts-rest.jsx` → `News()` function (around line 287). Update this manually when new blog posts publish on `colewebdev.com`:
 
@@ -338,7 +404,7 @@ Also update the `FALLBACK_POSTS` array in `news-page.jsx` to stay within ~3 mont
 
 ---
 
-### 5. Update the homepage portfolio teaser
+### 6. Update the homepage portfolio teaser
 
 Portfolio cards are hardcoded in `parts-rest.jsx` → `Portfolio()` function (around line 48). Each card:
 ```js
@@ -357,7 +423,7 @@ Portfolio cards are hardcoded in `parts-rest.jsx` → `Portfolio()` function (ar
 
 ---
 
-### 6. Update the main navigation
+### 7. Update the main navigation
 
 All nav changes go in `parts-hero.jsx`. The file contains:
 - Desktop dropdown menus (search for `nav-dd-item` class)
@@ -368,7 +434,7 @@ When adding a nav item, update **both** desktop and mobile nav to stay in sync.
 
 ---
 
-### 7. Update the sitemap
+### 8. Update the sitemap
 
 `sitemap.xml` must stay in sync with all public pages. Update `<lastmod>` to today's date whenever a page's content changes significantly. Use these priority guidelines:
 
