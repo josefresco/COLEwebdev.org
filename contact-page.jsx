@@ -40,6 +40,7 @@ function ContactPage() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify({
+          _subject:   'Contact — COLEwebdev',
           name:       fields.name,
           company:    fields.company,
           email:      fields.email,
