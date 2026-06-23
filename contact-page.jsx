@@ -20,7 +20,6 @@ function ContactPage() {
   function validate() {
     const e = {};
     if (!fields.name.trim())    e.name    = 'Name is required.';
-    if (!fields.company.trim()) e.company = 'Company is required.';
     if (!fields.email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(fields.email))
       e.email = 'A valid email is required.';
     if (!fields.phone.trim())   e.phone   = 'Phone is required.';
@@ -165,7 +164,7 @@ function ContactPage() {
 
                       <div className="ct-field">
                         <label className="ct-label" htmlFor="ct-company">
-                          Company <span className="req">*</span>
+                          Company / Project <span className="ct-optional">(optional)</span>
                         </label>
                         <input
                           id="ct-company"

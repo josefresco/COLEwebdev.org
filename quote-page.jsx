@@ -100,6 +100,11 @@ function QuotePage() {
                 Thanks, {form.name.split(' ')[0] || 'there'}! We'll review your project details and get back to you quickly. If it's urgent, call us at <strong>508.413.2043</strong>.
               </p>
               <a className="btn btn--primary" href="index.html">Back to home <span className="arrow">→</span></a>
+              <div className="rq-success-links">
+                <a href="portfolio.html">See our work →</a>
+                <a href="process.html">How it works →</a>
+                <a href="whitepapers.html">Browse our guides →</a>
+              </div>
             </div>
           </div>
         </div>

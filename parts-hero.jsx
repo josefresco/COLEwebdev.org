@@ -729,8 +729,8 @@ function Hero({ variant }) {
             </div>
             <div className="hero-meta">
               <div>
-                <div className="stat-num">26</div>
-                <div className="stat-label">Years on the job</div>
+                <div className="stat-num">20</div>
+                <div className="stat-label">Years as COLEwebdev</div>
               </div>
               <div>
                 <div className="stat-num">700+</div>
