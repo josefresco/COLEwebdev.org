@@ -737,7 +737,7 @@ function Hero({ variant }) {
                 <div className="stat-label">Sites launched</div>
               </div>
               <div>
-                <div className="stat-num">5.0★</div>
+                <div className="stat-num">4.8★</div>
                 <div className="stat-label">Google rating</div>
               </div>
             </div>

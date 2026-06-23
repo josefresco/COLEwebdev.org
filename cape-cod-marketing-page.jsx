@@ -184,7 +184,7 @@ function CapeCodeMarketingPage() {
           {[
             { num: '2006', label: 'Working with Cape Cod businesses' },
             { num: '700+', label: 'Websites launched on the Cape and Islands' },
-            { num: '5.0★', label: 'Google rating from real local clients' },
+            { num: '4.8★', label: 'Google rating from real local clients' },
           ].map(s => (
             <div key={s.num} className="mkt-stat">
               <div className="mkt-stat-num">{s.num}</div>

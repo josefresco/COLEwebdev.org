@@ -224,7 +224,7 @@ function Testimonial() {
             <h2 style={{ marginTop: 14, fontSize: 'clamp(28px, 3vw, 42px)' }}>Twenty years of <span className="italic">happy neighbors.</span></h2>
           </div>
           <div className="testi-stat testi-stat--hd" style={{ minWidth: 180 }}>
-            <div className="num" style={{ fontSize: 36 }}>5.0★</div>
+            <div className="num" style={{ fontSize: 36 }}>4.8★</div>
             <div className="label">Google · 60+ reviews</div>
           </div>
         </div>
@@ -234,7 +234,7 @@ function Testimonial() {
             <div className={`testi-slide ${idx === i ? 'is-active' : ''}`} key={idx}>
               <div className="testi-aside">
                 <div className="testi-stat">
-                  <div className="num">5.0★</div>
+                  <div className="num">4.8★</div>
                   <div className="label">Google reviewed</div>
                 </div>
                 <div className="testi-stat">

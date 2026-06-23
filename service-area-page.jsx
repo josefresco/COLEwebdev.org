@@ -133,7 +133,7 @@ function ServiceAreaPage() {
             {[
               { num: '700+', label: 'Sites launched across Cape Cod and beyond' },
               { num: '15', label: 'Cape Cod towns served since 2006' },
-              { num: '5.0★', label: 'Google rating from Cape Cod business owners' },
+              { num: '4.8★', label: 'Google rating from Cape Cod business owners' },
             ].map(s => (
               <div key={s.num} className="sa-stat">
                 <div className="sa-stat-num">{s.num}</div>
