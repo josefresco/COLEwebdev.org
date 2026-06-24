@@ -19,9 +19,9 @@ const SA_TOWNS = [
 ];
 
 const SA_BEYOND = [
-  { name: 'Martha\'s Vineyard', note: 'Remote + occasional on-site visits' },
-  { name: 'Nantucket', note: 'Remote + occasional on-site visits' },
-  { name: 'Plymouth, MA', note: 'Remote service available' },
+  { name: 'Martha\'s Vineyard', note: 'Remote + occasional on-site visits', href: 'marthas-vineyard-web-design.html' },
+  { name: 'Nantucket', note: 'Remote + occasional on-site visits', href: 'nantucket-web-design.html' },
+  { name: 'Plymouth, MA', note: 'Remote service available', href: 'plymouth-web-design.html' },
   { name: 'New Bedford, MA', note: 'Remote service available' },
   { name: 'All of Massachusetts', note: 'Remote design and development' },
 ];
@@ -83,7 +83,12 @@ function ServiceAreaPage() {
             <p className="sa-beyond-sub">The majority of our work is done remotely — video calls, screen shares, and email. Geography is rarely a barrier.</p>
           </div>
           <div className="sa-beyond-list">
-            {SA_BEYOND.map(b => (
+            {SA_BEYOND.map(b => b.href ? (
+              <a key={b.name} href={b.href} className="sa-beyond-item sa-beyond-item--link">
+                <span className="sa-beyond-name">{b.name}</span>
+                <span className="sa-beyond-note">{b.note}</span>
+              </a>
+            ) : (
               <div key={b.name} className="sa-beyond-item">
                 <span className="sa-beyond-name">{b.name}</span>
                 <span className="sa-beyond-note">{b.note}</span>
