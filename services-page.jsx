@@ -217,6 +217,44 @@ function ServicesPage() {
         <ServiceItem key={svc.id} svc={svc} index={i} />
       ))}
 
+      {/* Industries We Serve */}
+      <section className="svc-industries">
+        <div className="shell">
+          <div className="svc-ind-hd">
+            <span className="eyebrow">Specialized sites</span>
+            <h2 className="svc-ind-hl">Built for your <em>industry.</em></h2>
+            <p className="svc-ind-sub">
+              We build specialized sites for 19 Cape Cod industries. Select yours to see what's included, pricing context, and work we've done for businesses like yours.
+            </p>
+          </div>
+          <div className="svc-ind-grid">
+            {[
+              { icon: '◎', name: 'Restaurants',       href: 'cape-cod-restaurant-web-design.html' },
+              { icon: '◷', name: 'Hospitality',       href: 'cape-cod-hospitality-web-design.html' },
+              { icon: '⚙', name: 'Contractors',       href: 'cape-cod-contractor-web-design.html' },
+              { icon: '↗', name: 'Real Estate',       href: 'cape-cod-real-estate-web-design.html' },
+              { icon: '◇', name: 'Marine & Charters', href: 'cape-cod-marine-web-design.html' },
+              { icon: '◇', name: 'Health & Wellness', href: 'cape-cod-health-web-design.html' },
+              { icon: '✦', name: 'Nonprofits',        href: 'cape-cod-nonprofit-web-design.html' },
+              { icon: '◎', name: 'Retail',            href: 'cape-cod-retail-web-design.html' },
+              { icon: '✦', name: 'Weddings & Events', href: 'cape-cod-wedding-web-design.html' },
+              { icon: '◐', name: 'Vacation Rentals',  href: 'cape-cod-vacation-rental-web-design.html' },
+              { icon: '◍', name: 'Wineries & Breweries', href: 'cape-cod-winery-web-design.html' },
+              { icon: '◇', name: 'Pet Care',          href: 'cape-cod-pet-care-web-design.html' },
+            ].map(ind => (
+              <a key={ind.name} className="svc-ind-card" href={ind.href}>
+                <span className="svc-ind-icon">{ind.icon}</span>
+                <span className="svc-ind-name">{ind.name}</span>
+                <span className="svc-ind-arrow">→</span>
+              </a>
+            ))}
+          </div>
+          <div className="svc-ind-footer">
+            <a className="btn btn--ghost" href="industries.html">See all 19 industries <span className="arrow">→</span></a>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="svc-cta-section">
         <div className="shell">

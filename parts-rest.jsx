@@ -326,6 +326,46 @@ function News() {
 }
 
 /* ============================================================
+   Industry Teaser
+   ============================================================ */
+function IndustryTeaser() {
+  const industries = [
+    { icon: '◎', color: 'orange', name: 'Restaurants',      desc: 'Menus, reservations, and online ordering.',        href: 'cape-cod-restaurant-web-design.html' },
+    { icon: '◷', color: 'blue',   name: 'Hospitality',      desc: 'Direct booking for inns, B&Bs, and hotels.',       href: 'cape-cod-hospitality-web-design.html' },
+    { icon: '⚙', color: 'navy',   name: 'Contractors',      desc: 'Project galleries and local SEO for trades.',      href: 'cape-cod-contractor-web-design.html' },
+    { icon: '↗', color: 'green',  name: 'Real Estate',      desc: 'IDX integration and lead capture for agents.',     href: 'cape-cod-real-estate-web-design.html' },
+    { icon: '◇', color: 'blue',   name: 'Marine & Charters',desc: 'Photography-led design and online booking.',       href: 'cape-cod-marine-web-design.html' },
+    { icon: '◇', color: 'green',  name: 'Health & Wellness',desc: 'Online booking and provider profiles.',            href: 'cape-cod-health-web-design.html' },
+    { icon: '✦', color: 'orange', name: 'Nonprofits',       desc: 'Donation integration and volunteer intake.',       href: 'cape-cod-nonprofit-web-design.html' },
+    { icon: '◎', color: 'navy',   name: 'Retail',           desc: 'E-commerce, catalogs, and local SEO.',            href: 'cape-cod-retail-web-design.html' },
+  ];
+
+  return (
+    <section className="section" id="industries">
+      <div className="shell">
+        <div className="s-head">
+          <div className="left">
+            <span className="eyebrow">By Industry</span>
+            <h2>Built for <span className="italic">your business.</span></h2>
+          </div>
+          <a className="btn btn--ghost" href="industries.html">All 19 industries <span className="arrow">→</span></a>
+        </div>
+        <div className="it-grid">
+          {industries.map(ind => (
+            <a key={ind.name} className="it-card" href={ind.href}>
+              <span className={`it-card-icon it-card-icon--${ind.color}`}>{ind.icon}</span>
+              <div className="it-card-name">{ind.name}</div>
+              <div className="it-card-desc">{ind.desc}</div>
+              <span className="it-card-arrow">→</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ============================================================
    CTA
    ============================================================ */
 function CTA() {
