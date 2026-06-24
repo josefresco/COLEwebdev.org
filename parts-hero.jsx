@@ -100,6 +100,15 @@ const SERVICE_LINKS = [
   { href: 'web-accessibility.html', title: 'Web Accessibility' },
   { href: 'updates.html', title: 'Updates & Maintenance' },
   { href: 'consulting.html', title: 'Consulting' },
+  { groupLabel: 'By Industry' },
+  { href: 'cape-cod-restaurant-web-design.html', title: 'Restaurants' },
+  { href: 'cape-cod-hospitality-web-design.html', title: 'Hospitality' },
+  { href: 'cape-cod-contractor-web-design.html', title: 'Contractors' },
+  { href: 'cape-cod-marine-web-design.html', title: 'Marine & Charters' },
+  { href: 'cape-cod-real-estate-web-design.html', title: 'Real Estate' },
+  { href: 'cape-cod-health-web-design.html', title: 'Health & Wellness' },
+  { href: 'cape-cod-wedding-web-design.html', title: 'Weddings & Events' },
+  { href: 'cape-cod-vacation-rental-web-design.html', title: 'Vacation Rentals' },
 ];
 
 /* ============================================================
@@ -171,6 +180,11 @@ const SEARCH_DATA = [
   { title: 'Retail Web Design', desc: 'E-commerce, product catalogs, and local SEO for Cape Cod boutiques, gift shops, and specialty stores.', category: 'Industry', href: 'cape-cod-retail-web-design.html' },
   { title: 'Automotive Web Design', desc: 'Service pages, online scheduling, and local SEO for Cape Cod auto repair shops and dealerships.', category: 'Industry', href: 'cape-cod-automotive-web-design.html' },
   { title: 'Photography Web Design', desc: 'Portfolio websites, online booking, and local SEO for Cape Cod photographers.', category: 'Industry', href: 'cape-cod-photography-web-design.html' },
+  { title: 'Wedding & Event Web Design', desc: 'Portfolio galleries, inquiry forms, and local SEO for Cape Cod venues, planners, caterers, and florists.', category: 'Industry', href: 'cape-cod-wedding-web-design.html' },
+  { title: 'Salon & Spa Web Design', desc: 'Online booking, portfolio galleries, and local SEO for Cape Cod salons and spas.', category: 'Industry', href: 'cape-cod-salon-web-design.html' },
+  { title: 'Winery & Brewery Web Design', desc: 'Online shop, events calendar, and local SEO for Cape Cod wineries and craft breweries.', category: 'Industry', href: 'cape-cod-winery-web-design.html' },
+  { title: 'Pet Care Web Design', desc: 'Online booking, facility pages, and local SEO for Cape Cod vets, groomers, and kennels.', category: 'Industry', href: 'cape-cod-pet-care-web-design.html' },
+  { title: 'Vacation Rental Web Design', desc: 'Direct booking, property photography, and local SEO to cut Airbnb commissions on Cape Cod.', category: 'Industry', href: 'cape-cod-vacation-rental-web-design.html' },
   { title: 'Maine Web Design', desc: 'Web design for Maine businesses — Farmington roots, Aroostook County presence.', category: 'Location', href: 'maine-web-design.html' },
   { title: 'Cape Cod Web Design', desc: 'Local web design studio serving all 15 Cape Cod towns since 2006.', category: 'Location', href: 'cape-cod-web-design.html' },
   { title: 'Eastham Web Design', desc: 'COLEwebdev is based in Eastham — your local web design studio.', category: 'Location', href: 'eastham-web-design.html' },
@@ -482,6 +496,58 @@ function Header() {
                 <div>
                   <div className="nav-dd-title">Consulting</div>
                   <div className="nav-dd-desc">Strategy sessions, site audits, and CMS training.</div>
+                </div>
+              </a>
+
+              {/* By Industry */}
+              <div className="nav-dd-group nav-dd-group--sep">By Industry</div>
+              <a href="cape-cod-restaurant-web-design.html" className="nav-dd-item">
+                <span className="nav-dd-glyph orange">◎</span>
+                <div>
+                  <div className="nav-dd-title">Restaurants</div>
+                  <div className="nav-dd-desc">Menus, reservations, and local SEO for Cape Cod dining.</div>
+                </div>
+              </a>
+              <a href="cape-cod-hospitality-web-design.html" className="nav-dd-item">
+                <span className="nav-dd-glyph blue">◷</span>
+                <div>
+                  <div className="nav-dd-title">Hospitality</div>
+                  <div className="nav-dd-desc">Direct booking websites for inns, B&Bs, and hotels.</div>
+                </div>
+              </a>
+              <a href="cape-cod-contractor-web-design.html" className="nav-dd-item">
+                <span className="nav-dd-glyph navy">⚙</span>
+                <div>
+                  <div className="nav-dd-title">Contractors</div>
+                  <div className="nav-dd-desc">Project galleries and local SEO for trades businesses.</div>
+                </div>
+              </a>
+              <a href="cape-cod-marine-web-design.html" className="nav-dd-item">
+                <span className="nav-dd-glyph blue">◇</span>
+                <div>
+                  <div className="nav-dd-title">Marine &amp; Charters</div>
+                  <div className="nav-dd-desc">Online booking for fishing charters and boat tours.</div>
+                </div>
+              </a>
+              <a href="cape-cod-real-estate-web-design.html" className="nav-dd-item">
+                <span className="nav-dd-glyph green">↗</span>
+                <div>
+                  <div className="nav-dd-title">Real Estate</div>
+                  <div className="nav-dd-desc">IDX integration and lead capture for Cape Cod agents.</div>
+                </div>
+              </a>
+              <a href="cape-cod-wedding-web-design.html" className="nav-dd-item">
+                <span className="nav-dd-glyph orange">✦</span>
+                <div>
+                  <div className="nav-dd-title">Weddings &amp; Events</div>
+                  <div className="nav-dd-desc">Portfolio galleries and inquiry forms for venues and planners.</div>
+                </div>
+              </a>
+              <a href="cape-cod-vacation-rental-web-design.html" className="nav-dd-item">
+                <span className="nav-dd-glyph navy">◐</span>
+                <div>
+                  <div className="nav-dd-title">Vacation Rentals</div>
+                  <div className="nav-dd-desc">Direct booking sites that cut what you pay Airbnb.</div>
                 </div>
               </a>
             </div>
