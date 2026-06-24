@@ -3370,3 +3370,64 @@ p, li {
   line-height: 1.4;
 }
 .form-privacy a { color: inherit; text-decoration: underline; }
+
+/* ============================================================
+   Industry Teaser — homepage section (parts-rest.jsx)
+   ============================================================ */
+.it-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 36px;
+}
+.it-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: var(--r-xl);
+  padding: 22px 20px 18px;
+  text-decoration: none;
+  color: var(--ink);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.2s, border-color 0.2s, transform 0.2s;
+}
+.it-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--brand-blue);
+  transform: translateY(-2px);
+}
+.it-card-icon {
+  font-size: 20px;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.it-card-icon--orange { color: var(--orange); }
+.it-card-icon--blue   { color: var(--brand-blue); }
+.it-card-icon--navy   { color: var(--navy); }
+.it-card-icon--green  { color: var(--brand-green); }
+.it-card-name {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 1.25;
+  color: var(--ink);
+}
+.it-card-desc {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.55;
+  flex: 1;
+}
+.it-card-arrow {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--brand-blue);
+  margin-top: 4px;
+}
+@media (max-width: 900px) {
+  .it-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .it-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+}

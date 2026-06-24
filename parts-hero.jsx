@@ -109,6 +109,7 @@ const SERVICE_LINKS = [
   { href: 'cape-cod-health-web-design.html', title: 'Health & Wellness' },
   { href: 'cape-cod-wedding-web-design.html', title: 'Weddings & Events' },
   { href: 'cape-cod-vacation-rental-web-design.html', title: 'Vacation Rentals' },
+  { href: 'industries.html', title: 'All Industries →' },
 ];
 
 /* ============================================================
@@ -185,6 +186,7 @@ const SEARCH_DATA = [
   { title: 'Winery & Brewery Web Design', desc: 'Online shop, events calendar, and local SEO for Cape Cod wineries and craft breweries.', category: 'Industry', href: 'cape-cod-winery-web-design.html' },
   { title: 'Pet Care Web Design', desc: 'Online booking, facility pages, and local SEO for Cape Cod vets, groomers, and kennels.', category: 'Industry', href: 'cape-cod-pet-care-web-design.html' },
   { title: 'Vacation Rental Web Design', desc: 'Direct booking, property photography, and local SEO to cut Airbnb commissions on Cape Cod.', category: 'Industry', href: 'cape-cod-vacation-rental-web-design.html' },
+  { title: 'Industries We Serve', desc: 'Web design for 19 Cape Cod industries — find your category.', category: 'Industry', href: 'industries.html' },
   { title: 'Maine Web Design', desc: 'Web design for Maine businesses — Farmington roots, Aroostook County presence.', category: 'Location', href: 'maine-web-design.html' },
   { title: 'Cape Cod Web Design', desc: 'Local web design studio serving all 15 Cape Cod towns since 2006.', category: 'Location', href: 'cape-cod-web-design.html' },
   { title: 'Eastham Web Design', desc: 'COLEwebdev is based in Eastham — your local web design studio.', category: 'Location', href: 'eastham-web-design.html' },
@@ -548,6 +550,13 @@ function Header() {
                 <div>
                   <div className="nav-dd-title">Vacation Rentals</div>
                   <div className="nav-dd-desc">Direct booking sites that cut what you pay Airbnb.</div>
+                </div>
+              </a>
+              <a href="industries.html" className="nav-dd-item">
+                <span className="nav-dd-glyph green">≡</span>
+                <div>
+                  <div className="nav-dd-title">All 19 Industries</div>
+                  <div className="nav-dd-desc">Full industry listing — find your category.</div>
                 </div>
               </a>
             </div>

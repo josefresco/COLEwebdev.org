@@ -331,6 +331,63 @@
   transform: translateX(3px);
 }
 
+/* Industries We Serve */
+.svc-industries {
+  padding: var(--pad-section) 0;
+  background: var(--paper-2);
+  border-bottom: 1px solid var(--line);
+}
+.svc-ind-hd { margin-bottom: 36px; }
+.svc-ind-hl {
+  font-family: var(--serif);
+  font-size: clamp(26px, 3vw, 38px);
+  color: var(--ink);
+  font-weight: 400;
+  margin: 8px 0 14px;
+}
+.svc-ind-hl em { font-style: italic; }
+.svc-ind-sub {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--muted);
+  max-width: 56ch;
+  margin: 0;
+}
+.svc-ind-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+.svc-ind-card {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 500;
+  transition: border-color 0.18s, box-shadow 0.18s, transform 0.18s;
+}
+.svc-ind-card:hover {
+  border-color: var(--brand-blue);
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-2px);
+}
+.svc-ind-icon { font-size: 18px; flex-shrink: 0; }
+.svc-ind-name { flex: 1; }
+.svc-ind-arrow {
+  font-size: 14px;
+  color: var(--muted);
+  flex-shrink: 0;
+  transition: color 0.18s;
+}
+.svc-ind-card:hover .svc-ind-arrow { color: var(--brand-blue); }
+.svc-ind-footer { margin-top: 28px; text-align: center; }
+
 /* Responsive */
 @media (max-width: 960px) {
   .svc-item-inner {
@@ -344,11 +401,13 @@
   .svc-pages-grid { grid-template-columns: repeat(2, 1fr); }
   .svc-cta { grid-template-columns: 1fr; }
   .svc-cta-actions { align-items: flex-start; flex-direction: row; flex-wrap: wrap; }
+  .svc-ind-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 560px) {
   .svc-cta { padding: 36px 28px; }
   .svc-hero-img { height: 36vh; }
   .svc-pages-grid { grid-template-columns: 1fr; }
+  .svc-ind-grid { grid-template-columns: 1fr 1fr; }
 }
 </style>
 <meta property="og:type" content="website" />

@@ -24,6 +24,7 @@ function App() {
         <AIShowcase />
         <Process />
         <Portfolio />
+        <IndustryTeaser />
         <CTA />
         <Testimonial />
         <News />
