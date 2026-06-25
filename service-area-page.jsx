@@ -124,6 +124,36 @@ function ServiceAreaPage() {
         </div>
       </section>
 
+      {/* Industries */}
+      <section className="sa-ind">
+        <div className="shell">
+          <div className="sa-svcs-hd">
+            <span className="eyebrow">By industry</span>
+            <h2 className="sa-svcs-hl">We know your industry.</h2>
+          </div>
+          <p className="sa-ind-sub">We've built specialized sites for 19 Cape Cod industries. Every sector has different needs — and we've solved them.</p>
+          <div className="sa-svcs-grid sa-ind-grid">
+            {[
+              { title: 'Restaurants',      desc: 'Menus, reservations, and online ordering.',      href: 'cape-cod-restaurant-web-design.html',   glyph: '◎' },
+              { title: 'Hospitality',      desc: 'Direct booking for inns, B&Bs, and hotels.',     href: 'cape-cod-hospitality-web-design.html',   glyph: '◷' },
+              { title: 'Contractors',      desc: 'Project galleries and local SEO for trades.',     href: 'cape-cod-contractor-web-design.html',    glyph: '⚙' },
+              { title: 'Real Estate',      desc: 'IDX integration and lead capture for agents.',   href: 'cape-cod-real-estate-web-design.html',   glyph: '↗' },
+              { title: 'Nonprofits',       desc: 'Donation integration and volunteer intake.',      href: 'cape-cod-nonprofit-web-design.html',     glyph: '✦' },
+              { title: 'Marine & Charters',desc: 'Photography-led design and online booking.',     href: 'cape-cod-marine-web-design.html',        glyph: '◇' },
+            ].map(s => (
+              <a key={s.title} href={s.href} className="sa-svc-card">
+                <span className="sa-svc-glyph">{s.glyph}</span>
+                <div className="sa-svc-title">{s.title}</div>
+                <div className="sa-svc-desc">{s.desc}</div>
+              </a>
+            ))}
+          </div>
+          <div className="sa-ind-footer">
+            <a className="btn btn--ghost" href="industries.html">See all 19 industries <span className="arrow">→</span></a>
+          </div>
+        </div>
+      </section>
+
       {/* Why local matters */}
       <section className="sa-why">
         <div className="shell sa-why-grid">
