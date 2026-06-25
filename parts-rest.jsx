@@ -284,11 +284,43 @@ function Testimonial() {
 /* ============================================================
    News
    ============================================================ */
-function News() {
-  const items = [
+const NEWS_API_URL = 'https://www.colewebdev.com/wp-json/wp/v2/posts';
+const NEWS_THEMES = ['t-coast', 't-tide', 't-sun'];
+const NEWS_FALLBACK = [
   { t: 't-coast', tag: 'NEWS', date: 'Apr 15, 2026', title: 'Do People Still Hire Web Designers?', body: 'Short answer: yes—more than ever. But why people hire them, and what they expect, has evolved.', href: 'https://www.colewebdev.com/do-people-still-hire-web-designers/', img: 'https://www.colewebdev.com/wp-content/uploads/2021/06/colewebdev-photo-shoot-2021-4.jpg' },
   { t: 't-tide', tag: 'NEW LAUNCH', date: 'Apr 8, 2026', title: 'A Wellness-Focused Redesign for Cape Cod Aquatics', body: 'The redesigned site reflects what they do best — helping customers invest in health and wellness.', href: 'https://www.colewebdev.com/a-wellness-focused-website-redesign-for-cape-cod-aquatics/', img: 'https://www.colewebdev.com/wp-content/uploads/2025/10/cape-cod-aquatics-website-design-build-small.jpg' },
-  { t: 't-sun', tag: 'NEWS', date: 'Feb 20, 2026', title: 'Celebrating 20 Years of Website Development', body: 'Built on custom design, powered by performance. 20 years strong — and always evolving.', href: 'https://www.colewebdev.com/celebrating-20-years-of-website-development-and-were-just-getting-started/', img: 'https://www.colewebdev.com/wp-content/uploads/2026/02/20-years-colewebdev.jpg' }];
+  { t: 't-sun', tag: 'NEWS', date: 'Feb 20, 2026', title: 'Celebrating 20 Years of Website Development', body: 'Built on custom design, powered by performance. 20 years strong — and always evolving.', href: 'https://www.colewebdev.com/celebrating-20-years-of-website-development-and-were-just-getting-started/', img: 'https://www.colewebdev.com/wp-content/uploads/2026/02/20-years-colewebdev.jpg' },
+];
+
+function newsDecodeHtml(html) {
+  return html
+    .replace(/&#(\d+);/g, function(_, n) { return String.fromCharCode(n); })
+    .replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"').replace(/&#8217;/g, '’').replace(/&#8212;/g, '—')
+    .replace(/&#8211;/g, '–').replace(/&#8216;/g, '‘')
+    .replace(/&#8220;/g, '“').replace(/&#8221;/g, '”');
+}
+
+function newsMapPost(post, i) {
+  const media = post._embedded && post._embedded['wp:featuredmedia'];
+  const img = media && media[0] ? media[0].source_url : null;
+  const cats = (post._embedded && post._embedded['wp:term'] && post._embedded['wp:term'][0]) || [];
+  const tag = cats.length ? cats[0].name.toUpperCase() : 'NEWS';
+  const title = newsDecodeHtml(post.title.rendered);
+  const body = newsDecodeHtml(post.excerpt.rendered).replace(/<[^>]+>/g, '').trim();
+  const date = new Date(post.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+  return { t: NEWS_THEMES[i % NEWS_THEMES.length], tag: tag, date: date, title: title, body: body, href: post.link, img: img };
+}
+
+function News() {
+  const [items, setItems] = React.useState(NEWS_FALLBACK);
+
+  React.useEffect(function() {
+    fetch(NEWS_API_URL + '?per_page=3&_embed=1')
+      .then(function(r) { if (!r.ok) throw new Error(); return r.json(); })
+      .then(function(data) { setItems(data.map(newsMapPost)); })
+      .catch(function() { /* keep fallback */ });
+  }, []);
 
   return (
     <section className="section bg-stripes" id="news">
@@ -302,27 +334,29 @@ function News() {
         </div>
 
         <div className="news-grid">
-          {items.map((n, i) =>
-          <article className="news-card" key={i}>
-              <div className={`thumb ${n.t}`}>
-                <img className="thumb-img" src={n.img} alt={n.title} loading="lazy" />
-                <span className="ph-label" style={{ position: 'absolute', bottom: 12, left: 12, fontFamily: 'var(--mono)', fontSize: 11, letterSpacing: '0.08em', color: n.t === 't-tide' ? 'rgba(255,255,255,0.7)' : 'var(--muted)' }}>[ ARTICLE HERO ]</span>
-              </div>
-              <div className="body">
-                <div className="row">
-                  <span>{n.tag}</span>
-                  <span>{n.date}</span>
+          {items.map(function(n, i) {
+            return (
+              <article className="news-card" key={i}>
+                <div className={`thumb ${n.t}`}>
+                  <img className="thumb-img" src={n.img} alt={n.title} loading="lazy" />
+                  <span className="ph-label" style={{ position: 'absolute', bottom: 12, left: 12, fontFamily: 'var(--mono)', fontSize: 11, letterSpacing: '0.08em', color: n.t === 't-tide' ? 'rgba(255,255,255,0.7)' : 'var(--muted)' }}>[ ARTICLE HERO ]</span>
                 </div>
-                <h4><a href={n.href} target="_blank" rel="noopener" style={{ color: 'inherit', textDecoration: 'none' }}>{n.title}</a></h4>
-                <p className="ex">{n.body}</p>
-                <span className="more">Read article <span className="arrow">→</span></span>
-              </div>
-            </article>
-          )}
+                <div className="body">
+                  <div className="row">
+                    <span>{n.tag}</span>
+                    <span>{n.date}</span>
+                  </div>
+                  <h4><a href={n.href} target="_blank" rel="noopener" style={{ color: 'inherit', textDecoration: 'none' }}>{n.title}</a></h4>
+                  <p className="ex">{n.body}</p>
+                  <span className="more">Read article <span className="arrow">→</span></span>
+                </div>
+              </article>
+            );
+          })}
         </div>
       </div>
-    </section>);
-
+    </section>
+  );
 }
 
 /* ============================================================
