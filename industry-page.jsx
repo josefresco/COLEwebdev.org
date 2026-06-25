@@ -262,17 +262,16 @@ function IndustryPage() {
           <div>
             <h2 className="ind-cta-hl">Ready to talk about your project?</h2>
             <p className="ind-cta-sub">Free consultation, written quote, no obligation. We have been building for Cape Cod {ind.industry.toLowerCase()} since 2006.</p>
-            {ind.relatedIndustries && ind.relatedIndustries.length > 0 && (
-              <div className="ind-cta-related">
+            <div className="ind-cta-related">
                 <span className="ind-cta-related-label">Also:</span>
-                {ind.relatedIndustries.map(function(r) {
+                {ind.relatedIndustries && ind.relatedIndustries.map(function(r) {
                   return (
                     <a key={r.name} href={r.href} className="ind-cta-related-link">{r.name} →</a>
                   );
                 })}
+                <a href="industries.html" className="ind-cta-related-link">All industries →</a>
                 <a href="cape-cod-web-design.html" className="ind-cta-related-link">All Cape Cod towns →</a>
               </div>
-            )}
           </div>
           <div className="ind-cta-actions">
             <a className="btn btn--accent" href="quote.html">Request a Quote <span className="arrow">→</span></a>
