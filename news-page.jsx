@@ -106,11 +106,6 @@ function NewsCard({ post }) {
       href={post.link}
       target="_blank"
       rel="noopener noreferrer"
-      style={{
-        opacity: visible ? 1 : 0,
-        transform: visible ? 'translateY(0)' : 'translateY(20px)',
-        transition: `opacity 0.5s ease ${index * 0.04}s, transform 0.5s ease ${index * 0.04}s`,
-      }}
     >
       <div className="ns-card-img">
         {img
