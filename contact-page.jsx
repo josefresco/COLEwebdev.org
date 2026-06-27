@@ -4,7 +4,7 @@ const FORM_ENDPOINT = 'https://formspree.io/f/xnjwgqld';
 
 const INITIAL = {
   name: '', company: '', email: '', phone: '',
-  website: '', message: '', newsletter: false, captcha: '',
+  website: '', message: '', newsletter: false,
 };
 
 function ContactPage() {
@@ -24,8 +24,6 @@ function ContactPage() {
       e.email = 'A valid email is required.';
     if (!fields.phone.trim())   e.phone   = 'Phone is required.';
     if (!fields.message.trim()) e.message = 'Please include a message.';
-    if (fields.captcha.trim() !== '2')
-      e.captcha = 'Hint: there are two bridges.';
     return e;
   }
 
@@ -245,23 +243,6 @@ function ContactPage() {
                         Sign me up for the COLEwebdev quarterly eNewsletter.
                       </span>
                     </label>
-
-                    <div className="ct-captcha">
-                      <p className="ct-captcha-q">
-                        <strong>Quick local check:</strong> How many vehicle bridges connect Cape Cod to the mainland?{' '}
-                        <span className="req" style={{ color: 'var(--brand-blue)' }}>*</span>
-                      </p>
-                      <input
-                        className={`ct-captcha-input${errors.captcha ? ' error' : ''}`}
-                        type="number"
-                        min="0"
-                        max="9"
-                        value={fields.captcha}
-                        onChange={e => set('captcha', e.target.value)}
-                        aria-label="Spam prevention answer"
-                      />
-                      {errors.captcha && <span className="ct-error-msg">{errors.captcha}</span>}
-                    </div>
 
                     {status === 'error' && (
                       <p className="ct-error-msg" style={{ fontSize: 14 }}>

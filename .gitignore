@@ -12,6 +12,9 @@ __MACOSX/
 *.zip
 *.tar.gz
 
+# Internal documentation
+_clients.md
+
 # Preview / scratch files
 *-preview.html
 *-draft.html
