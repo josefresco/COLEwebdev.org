@@ -352,7 +352,7 @@ function LandingPage() {
                 <p className="gl-person-bio">
                   20+ years of web design, marketing, and business development.
                   She leads client relationships, drives the creative direction, and makes sure every site actually serves the business goals behind it.
-                  Twice named 40 Under 40 by Cape &amp; Plymouth Business — she's the reason clients keep coming back, and keep referring their friends.
+                  Named 40 Under 40 by Cape &amp; Plymouth Business — she's the reason clients keep coming back, and keep referring their friends.
                 </p>
                 <div className="gl-person-tags">
                   <span className="gl-tag">Creative Direction</span>
