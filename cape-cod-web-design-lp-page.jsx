@@ -58,11 +58,6 @@ const GL_SERVICES = [
     body: 'Every site is built from scratch — no templates, no page builders. Designed to match your brand and convert visitors into customers.',
   },
   {
-    icon: '⌘',
-    title: 'AI-Powered Features',
-    body: 'We integrate the latest AI tools into real client projects — smart search, chatbots, content automation — tested in production, not just demonstrated.',
-  },
-  {
     icon: '↗',
     title: 'SEO & Performance',
     body: 'Fast-loading, mobile-first, and built for Google from day one. Technical SEO, schema markup, and Core Web Vitals are part of every build.',
