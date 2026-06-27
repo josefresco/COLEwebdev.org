@@ -48,7 +48,6 @@ const GL_CLIENTS = [
   'Dr. Moldover',
   'WOMR Radio',
   'Sylvestre Outdoors',
-  'Cape Cod Winery',
 ];
 
 const GL_SERVICES = [
