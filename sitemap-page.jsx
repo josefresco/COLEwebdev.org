@@ -83,6 +83,7 @@ const SITE_MAP = [
     label: 'Whitepapers',
     links: [
       { title: 'All Whitepapers', href: 'whitepapers.html', desc: '26 free guides on web design strategy for business owners' },
+      { title: 'Free Resources', href: 'resources.html', desc: '10 free printable PDF checklists on SEO, AI search, analytics, ads, and more' },
       { title: '01 · What Does Web Design Do?', href: 'wp-what-web-design-does.html', desc: 'How web design shapes trust, navigation, and conversions' },
       { title: '02 · Is Web Design Worth the Investment?', href: 'wp-investment-value.html', desc: 'A business case for professional web design' },
       { title: '03 · DIY vs. Hiring a Professional', href: 'wp-diy-vs-pro.html', desc: 'How to know which path is right for your business' },

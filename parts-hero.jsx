@@ -121,6 +121,7 @@ const SEARCH_DATA = [
   { title: 'Contact', desc: 'Start a project or ask a question.', category: 'Company', href: 'contact.html' },
   { title: 'Portfolio', desc: 'Recent websites and client work.', category: 'Company', href: 'portfolio.html' },
   { title: 'Case Studies', desc: 'Real project outcomes for Cape Cod clients.', category: 'Company', href: 'case-studies.html' },
+  { title: 'Free Resources', desc: 'Printable marketing checklists for small business owners.', category: 'Company', href: 'resources.html' },
   { title: 'Testimonials', desc: 'What Cape Cod business owners say about working with us.', category: 'Company', href: 'testimonials.html' },
   { title: 'About Us', desc: 'Our team, story, and community roots.', category: 'Company', href: 'about.html' },
   { title: 'Our Process', desc: 'How we scope, build, and hand off every project.', category: 'Company', href: 'process.html' },
@@ -588,6 +589,7 @@ function Header() {
             </div>
           </div>
           <a className={'nav-link' + on('whitepapers.html')} href="whitepapers.html">Whitepapers</a>
+          <a className={'nav-link' + on('resources.html')} href="resources.html">Free Resources</a>
           <div className="nav-item-dropdown">
             <a className={'nav-link' + (on('news.html') || on('social-news.html') || on('newsletter.html'))} href="news.html">News <span className="caret">▾</span></a>
             <div className="nav-dropdown nav-dropdown--sm" role="menu">
@@ -677,6 +679,7 @@ function Header() {
               <a className="mobile-nav-link" href="process.html" onClick={close}>Our Process</a>
               <a className="mobile-nav-link" href="newsletter.html" onClick={close}>Newsletter Archive</a>
               <a className="mobile-nav-link" href="whitepapers.html" onClick={close}>Whitepapers</a>
+              <a className="mobile-nav-link" href="resources.html" onClick={close}>Free Resources</a>
               <a className="mobile-nav-link" href="news.html" onClick={close}>News &amp; Blog</a>
               <a className="mobile-nav-link" href="social-news.html" onClick={close}>Social News</a>
               <a className="mobile-nav-link" href="contact.html" onClick={close}>Contact</a>
