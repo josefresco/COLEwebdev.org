@@ -3,7 +3,9 @@
 
 All P0–P4 items from the June 2026 site review are complete except those listed below.
 
-**Status check (July 2026):** Industry and location pages have grown ahead of this plan — `industry-data.jsx` now has 19 entries (was 11) and `locations-data.jsx` now has 19 entries (was 16). See the updated notes in P5 below for what's still actually missing.
+**Status check (July 2026):** Industry and location pages have grown ahead of this plan — `industry-data.jsx` now has 19 entries (was 11) and `locations-data.jsx` had grown to 19 entries (was 16), before 3 were removed — see below.
+
+**GSC doorway-page review (July 2026):** A GSC impression spike flagged possible doorway-page risk on the templated location pages. Full content review found the 16 core Cape Cod town pages and all 19 industry pages are genuinely differentiated — not find-and-replace templates. But Nantucket, Martha's Vineyard, and Plymouth had the same templated structure with zero real client work behind them (confirmed against `_clients.md`) on towns outside the actual "15 Cape Cod towns since 2006" service story. Pulled all 3: deleted `nantucket-web-design.html`, `marthas-vineyard-web-design.html`, `plymouth-web-design.html`, removed their entries from `locations-data.jsx`, `sitemap.xml`, `parts-hero.jsx` (nav search data), and `sitemap-page.jsx`, and cleaned up dangling `nearbyTowns` cross-links (Provincetown, Falmouth, Sandwich, Bourne). They remain listed as remote-service-only mentions on `service-area.html` (no dedicated page), matching the existing New Bedford/"All of Massachusetts" pattern. 5 of the remaining 16 town pages still have empty `clients: []` arrays (Harwich, Brewster, Sandwich, Bourne, Mashpee) — worth filling in with real local work if it exists.
 
 ---
 

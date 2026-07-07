@@ -19,9 +19,9 @@ const SA_TOWNS = [
 ];
 
 const SA_BEYOND = [
-  { name: 'Martha\'s Vineyard', note: 'Remote + occasional on-site visits', href: 'marthas-vineyard-web-design.html' },
-  { name: 'Nantucket', note: 'Remote + occasional on-site visits', href: 'nantucket-web-design.html' },
-  { name: 'Plymouth, MA', note: 'Remote service available', href: 'plymouth-web-design.html' },
+  { name: 'Martha\'s Vineyard', note: 'Remote + occasional on-site visits' },
+  { name: 'Nantucket', note: 'Remote + occasional on-site visits' },
+  { name: 'Plymouth, MA', note: 'Remote service available' },
   { name: 'New Bedford, MA', note: 'Remote service available' },
   { name: 'All of Massachusetts', note: 'Remote design and development' },
 ];

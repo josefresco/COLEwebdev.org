@@ -53,9 +53,6 @@ const SITE_MAP = [
       { title: 'Orleans Web Design', href: 'orleans-web-design.html', desc: 'Web design in Orleans, MA' },
       { title: 'Wellfleet Web Design', href: 'wellfleet-web-design.html', desc: 'Web design in Wellfleet, MA' },
       { title: 'Provincetown Web Design', href: 'provincetown-web-design.html', desc: 'Web design in Provincetown, MA' },
-      { title: "Martha's Vineyard Web Design", href: 'marthas-vineyard-web-design.html', desc: "Web design for MV's hospitality, restaurants, retail, and year-round service businesses" },
-      { title: 'Nantucket Web Design', href: 'nantucket-web-design.html', desc: "Web design for Nantucket's hospitality, retail, and service businesses" },
-      { title: 'Plymouth Web Design', href: 'plymouth-web-design.html', desc: 'Web design in Plymouth, MA — tourism, restaurants, contractors, and local services' },
     ],
   },
   {
