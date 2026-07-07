@@ -1,7 +1,9 @@
 # colewebdev.org — Outstanding Improvement Plan
-**Last updated:** June 2026
+**Last updated:** July 2026
 
 All P0–P4 items from the June 2026 site review are complete except those listed below.
+
+**Status check (July 2026):** Industry and location pages have grown ahead of this plan — `industry-data.jsx` now has 19 entries (was 11) and `locations-data.jsx` now has 19 entries (was 16). See the updated notes in P5 below for what's still actually missing.
 
 ---
 
@@ -39,17 +41,10 @@ No service page publishes any pricing. The quote form collects a budget range in
 
 ---
 
-### Case study index on colewebdev.org
-Individual case studies live on `colewebdev.com` (WordPress). The portfolio page links off-site, leaving no SEO-indexable case study listing on the `.org` domain.
+### Case study index on colewebdev.org — DONE
+**Update (July 2026):** Built `case-studies.html` + `case-studies-page.jsx`, listing 10 featured projects (title, client, location, industry, outcome summary, CTA). Two entries (Cape Cod Aquatics, Dyer's Beach House) link to their real `colewebdev.com` case-study articles; the rest link to the live client site since no case-study article exists for them yet. Wired into desktop + mobile nav (right after Portfolio), site search data, and `sitemap.xml`. Added a "Read case studies →" cross-link from `portfolio.html`.
 
-**What to build:** A lightweight `case-studies.html` + `case-studies-page.jsx` listing 8–10 featured projects with title, client, industry, outcome summary, and a link to the full case study on `colewebdev.com`.
-
-**Benefits:**
-- Keeps search equity on the `.org` domain
-- Gives internal linking targets from service pages ("See a real example →")
-- Ranks for `[industry] web design Cape Cod` long-tails
-
-**Implementation:** Follows the same pattern as `whitepapers.html` — hardcoded data array, shared renderer. Add to nav under Portfolio or as a footer link.
+**Still open:** Only 2 of 10 projects have a real narrative case-study article on `colewebdev.com`. Writing case-study articles for the other 8 would let their cards upgrade from "Visit the live site" to "Read the case study" with real outcome detail.
 
 ---
 
@@ -66,7 +61,7 @@ No page addresses Cape Cod's defining business reality: an intensely seasonal ec
 ---
 
 ### Village-level location pages
-The 16 current town pages cover all 15 Cape towns + Cape Cod overall. Missing are more granular pages for high-traffic village clusters:
+**Update (July 2026):** `locations-data.jsx` now has 19 entries — the original 15 Cape towns + Cape Cod overall, plus Nantucket, Martha's Vineyard, and Plymouth (broader regional expansion, not village-level). The village-level gap below is unaffected and still open:
 
 | Village | Why it matters |
 |---|---|
@@ -79,13 +74,12 @@ The 16 current town pages cover all 15 Cape towns + Cape Cod overall. Missing ar
 ---
 
 ### Additional industry pages
-Current 11 industry pages cover: nonprofit, church, hospitality, restaurant, real estate, chamber, contractor, landscaping, health, legal, marine.
+**Update (July 2026):** 19 industry pages now exist: nonprofit, church, hospitality, restaurant, real estate, chamber, contractor, landscaping, health, legal, marine, retail, automotive, photography, wedding, salon, winery, pet-care, vacation-rental. Retail (previously flagged as missing) is done.
 
-**Missing industries with real Cape Cod client volume:**
+**Still missing, real Cape Cod client volume:**
 
 | Industry | Notes |
 |---|---|
-| Retail / Boutique | Heavy Route 6A and Main St presence |
 | Arts & Galleries | Significant in Wellfleet, Provincetown, Chatham |
 | Fitness / Wellness | Yoga studios, personal trainers — distinct from the Health (medical) page |
 | Education | Private schools, tutors, educational nonprofits |
@@ -94,14 +88,8 @@ Current 11 industry pages cover: nonprofit, church, hospitality, restaurant, rea
 
 ---
 
-### Email capture on whitepaper pages
-All 26 whitepaper guides end with the generic `NewsletterBanner`. A visitor reading "How Much Does a Website Cost?" is a high-intent prospect — no targeted capture exists.
-
-**What to add:** Inline CTA at the end of each guide body (before `NewsletterBanner`), inside `whitepaper-page.jsx`. Options:
-- "Get the checklist →" (PDF lead magnet, requires asset creation)
-- "Subscribe for more guides →" (newsletter signup, zero extra assets)
-
-**Implementation:** Single change to `whitepaper-page.jsx` affects all 26 guides at once. The newsletter endpoint already exists.
+### Email capture on whitepaper pages — DONE
+**Update (July 2026):** Already implemented (commit `68358ab`). `whitepaper-page.jsx` has a "Quarterly newsletter" sidebar card (`.wpa-card--nl`) on desktop and an inline "Subscribe to Newsletter →" CTA in `.wpa-mobile-ctas` on mobile, both placed before the generic `NewsletterBanner`. No further action needed.
 
 ---
 

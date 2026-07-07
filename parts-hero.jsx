@@ -120,6 +120,7 @@ const SEARCH_DATA = [
   { title: 'Services', desc: 'Full overview of web design, SEO, hosting, and AI services.', category: 'Company', href: 'services.html' },
   { title: 'Contact', desc: 'Start a project or ask a question.', category: 'Company', href: 'contact.html' },
   { title: 'Portfolio', desc: 'Recent websites and client work.', category: 'Company', href: 'portfolio.html' },
+  { title: 'Case Studies', desc: 'Real project outcomes for Cape Cod clients.', category: 'Company', href: 'case-studies.html' },
   { title: 'Testimonials', desc: 'What Cape Cod business owners say about working with us.', category: 'Company', href: 'testimonials.html' },
   { title: 'About Us', desc: 'Our team, story, and community roots.', category: 'Company', href: 'about.html' },
   { title: 'Our Process', desc: 'How we scope, build, and hand off every project.', category: 'Company', href: 'process.html' },
@@ -562,6 +563,7 @@ function Header() {
             </div>
           </div>
           <a className={'nav-link' + on('portfolio.html')} href="portfolio.html">Portfolio</a>
+          <a className={'nav-link' + on('case-studies.html')} href="case-studies.html">Case Studies</a>
           <div className="nav-item-dropdown">
             <a className={'nav-link' + (on('about.html') || on('process.html') || on('testimonials.html'))} href="about.html">About Us <span className="caret">▾</span></a>
             <div className="nav-dropdown nav-dropdown--sm" role="menu">
@@ -672,6 +674,7 @@ function Header() {
               </div>
 
               <a className="mobile-nav-link" href="portfolio.html" onClick={close}>Portfolio</a>
+              <a className="mobile-nav-link" href="case-studies.html" onClick={close}>Case Studies</a>
               <a className="mobile-nav-link" href="testimonials.html" onClick={close}>Testimonials</a>
               <a className="mobile-nav-link" href="about.html" onClick={close}>About Us</a>
               <a className="mobile-nav-link" href="process.html" onClick={close}>Our Process</a>

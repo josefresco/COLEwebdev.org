@@ -460,15 +460,20 @@ function PortfolioPage() {
               Showing {filtered.length} of {PROJECTS.length} projects
               {active !== 'all' ? ` · ${filterLabel}` : ''}
             </span>
-            <a
-              href="https://www.colewebdev.com/portfolio/"
-              target="_blank"
-              rel="noopener"
-              className="pf-cta"
-              style={{ fontSize: 12 }}
-            >
-              Full archive on colewebdev.com <span className="pf-arrow">→</span>
-            </a>
+            <div style={{ display: 'flex', gap: 20, flexWrap: 'wrap' }}>
+              <a href="case-studies.html" className="pf-cta" style={{ fontSize: 12 }}>
+                Read case studies <span className="pf-arrow">→</span>
+              </a>
+              <a
+                href="https://www.colewebdev.com/portfolio/"
+                target="_blank"
+                rel="noopener"
+                className="pf-cta"
+                style={{ fontSize: 12 }}
+              >
+                Full archive on colewebdev.com <span className="pf-arrow">→</span>
+              </a>
+            </div>
           </div>
 
           <div className="pf-grid">

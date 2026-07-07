@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Case Studies — COLEwebdev · Cape Cod Web Design</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<meta name="description" content="Real website projects for Cape Cod businesses and nonprofits — wellness, hospitality, retail, and nonprofit case studies from COLEwebdev." />
+<link rel="canonical" href="https://colewebdev.org/case-studies.html" />
+<link rel="stylesheet" href="styles.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Case Studies — COLEwebdev Cape Cod Web Design",
+  "url": "https://colewebdev.org/case-studies.html",
+  "description": "Real website projects for Cape Cod businesses and nonprofits — wellness, hospitality, retail, and nonprofit case studies.",
+  "provider": { "@type": "ProfessionalService", "name": "COLEwebdev", "url": "https://colewebdev.org/" },
+  "hasPart": [
+    { "@type": "CreativeWork", "name": "Cape Cod Aquatics", "description": "Wellness-focused website redesign" },
+    { "@type": "CreativeWork", "name": "Dyer's Beach House", "description": "Vacation rental website refresh" },
+    { "@type": "CreativeWork", "name": "SVdP Cape Cod", "description": "Nonprofit website" },
+    { "@type": "CreativeWork", "name": "The Cape Cod Towel Company", "description": "Retail e-commerce website" },
+    { "@type": "CreativeWork", "name": "Sylvestre Outdoors", "description": "Small business website" },
+    { "@type": "CreativeWork", "name": "Truro Historical Society", "description": "Nonprofit website" },
+    { "@type": "CreativeWork", "name": "Hog Island Beer Co.", "description": "Brewery website" },
+    { "@type": "CreativeWork", "name": "Idle Times Bike Shop", "description": "Retail website" },
+    { "@type": "CreativeWork", "name": "Center for Coastal Studies", "description": "Nonprofit research website" },
+    { "@type": "CreativeWork", "name": "Falmouth Jazz", "description": "Arts nonprofit website" }
+  ]
+}
+</script>
+<style>
+/* ── Case Studies page ── */
+
+.cs-hero {
+  padding: 100px 0 56px;
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+}
+.cs-hero-hl {
+  font-family: var(--serif);
+  font-size: clamp(38px, 5.5vw, 64px);
+  line-height: 1.05;
+  color: var(--ink);
+  font-weight: 400;
+  margin: 12px 0 18px;
+  letter-spacing: -1px;
+}
+.cs-hero-sub {
+  font-size: 16px;
+  line-height: 1.68;
+  color: var(--ink-2);
+  max-width: 640px;
+  margin: 0;
+}
+.cs-hero-sub a { color: var(--brand-blue); }
+
+.cs-section { padding: var(--pad-section) 0; background: var(--paper-2); }
+.cs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap-card);
+}
+
+.cs-card {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: 26px 24px;
+  box-shadow: var(--shadow-sm);
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.35s ease, transform 0.35s ease, box-shadow 0.2s ease;
+}
+.cs-card.in { opacity: 1; transform: translateY(0); }
+.cs-card:hover { box-shadow: var(--shadow-md); }
+
+.cs-card-hd {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+.cs-card-glyph {
+  font-size: 16px;
+  color: var(--brand-green);
+}
+.cs-card-industry {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.cs-card-industry--link { text-decoration: none; }
+.cs-card-industry--link:hover { color: var(--brand-blue); }
+
+.cs-card-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  line-height: 1.3;
+  color: var(--ink);
+  margin: 0 0 4px;
+}
+.cs-card-loc {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+.cs-card-summary {
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: var(--ink-2);
+  margin: 0 0 18px;
+  flex: 1;
+}
+.cs-card-cta {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--brand-blue);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  transition: gap 0.15s ease;
+}
+.cs-card-cta:hover { gap: 9px; }
+
+.cs-more {
+  margin-top: 48px;
+  padding: 44px;
+  background: var(--navy);
+  border-radius: var(--r-xl);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.cs-more-text { font-family: var(--serif); font-size: clamp(20px, 2.5vw, 28px); color: white; line-height: 1.3; margin: 0; }
+.cs-more-text em { color: var(--brand-green); }
+
+@media (max-width: 960px) {
+  .cs-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 580px) {
+  .cs-grid { grid-template-columns: 1fr; }
+}
+</style>
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="COLEwebdev" />
+<meta property="og:title" content="Case Studies — COLEwebdev · Cape Cod Web Design" />
+<meta property="og:description" content="Real website projects for Cape Cod businesses and nonprofits — wellness, hospitality, retail, and nonprofit case studies from COLEwebdev." />
+<meta property="og:url" content="https://colewebdev.org/case-studies.html" />
+<meta property="og:image" content="https://colewebdev.org/assets/portfolio-hero.jpg" />
+<link rel="icon" href="favicon.png" type="image/png" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://colewebdev.org/" },
+    { "@type": "ListItem", "position": 2, "name": "Case Studies", "item": "https://colewebdev.org/case-studies.html" }
+  ]
+}
+</script>
+</head>
+<body>
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" integrity="sha384-DGyLxAyjq0f9SPpVevD6IgztCFlnMF6oW/XQGmfe+IsZ8TqEiDrcHkMLKI6fiB/Z" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" integrity="sha384-gTGxhz21lVGYNMcdJOyq01Edg0jhn/c22nsx0kyqP0TxaV5WVdsSH1fSDUf5YJj1" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="parts-hero.jsx"></script>
+<script type="text/babel" src="parts-services.jsx"></script>
+<script type="text/babel" src="parts-rest.jsx"></script>
+<script type="text/babel" src="case-studies-page.jsx"></script>
+</body>
+</html>
