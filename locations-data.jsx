@@ -18,6 +18,8 @@ window.LOCATIONS_DATA = [
       { name: 'Eastham Turnip Festival', type: 'Community Event', href: 'http://easthamturnipfestival.com/' },
       { name: 'Eastham 400', type: 'Nonprofit / History', href: '#' },
       { name: 'Brewster Sand & Gravel', type: 'Contractor / Materials', href: '#' },
+      { name: 'Eastham Chamber of Commerce', type: 'Chamber of Commerce', href: '#' },
+      { name: 'Wild Care', type: 'Wildlife Rescue & Rehabilitation', href: 'https://wildcarecapecod.org/' },
     ],
     faq: [
       {
@@ -58,6 +60,10 @@ window.LOCATIONS_DATA = [
       { name: 'Animal Hospital of Orleans', type: 'Veterinary', href: '#' },
       { name: 'Timmerwerk', type: 'Custom Millwork', href: 'https://timmerwerkcc.com/' },
       { name: 'Ring Bros. Marketplace', type: 'Retail', href: '#' },
+      { name: "Bird Watcher's General Store", type: 'Retail', href: 'https://birdwatchersgeneralstore.com/' },
+      { name: 'Osprey Sportfishing', type: 'Charter Fishing', href: 'https://www.ospreysportfishing.net/' },
+      { name: 'Nauset Disposal', type: 'Waste & Recycling', href: 'https://nausetdisposal.com/' },
+      { name: 'Goose Hummock Shops', type: 'Outdoor & Tackle Retail', href: 'https://goosehummockshops.com/' },
     ],
     faq: [
       {
@@ -105,6 +111,11 @@ window.LOCATIONS_DATA = [
     clients: [
       { name: 'Wellfleet Chamber of Commerce', type: 'Chamber / Community', href: 'https://www.wellfleetchamber.com/' },
       { name: 'Wellfleet Food Pantry', type: 'Nonprofit', href: '#' },
+      { name: 'The Wicked Oyster', type: 'Restaurant', href: 'https://thewickedo.com/' },
+      { name: 'Cape Cod Modern House Trust', type: 'Architecture Preservation Nonprofit', href: 'https://ccmht.org/' },
+      { name: 'Friends of Herring River', type: 'Environmental Nonprofit', href: 'https://herringriver.org/' },
+      { name: 'The Holden Inn', type: 'Inn / Lodging', href: 'https://theholdeninn.com/' },
+      { name: 'The Furies', type: 'Cleaning & Linen Service', href: 'https://furiescapecodcleaning.com/' },
     ],
     faq: [
       {
@@ -140,12 +151,15 @@ window.LOCATIONS_DATA = [
     localContext: 'Provincetown\'s market is intensely competitive online. Visitors research everything before they arrive — where to eat, where to stay, what to do — and the businesses with the strongest web presence win the booking. That means a Provincetown website needs to be fast, visually strong, mobile-perfect, and optimized for the searches your customers are running. We build all of that in.',
     industries: ['Hospitality', 'Restaurants', 'Tourism & Events', 'Arts & Culture', 'Retail', 'Nightlife'],
     clients: [
-      { name: 'Provincetown Chamber of Commerce', type: 'Chamber / Tourism', href: '#' },
-      { name: 'Veterinary Wellness Center of Ptown', type: 'Veterinary', href: '#' },
+      { name: 'Provincetown Chamber of Commerce', type: 'Chamber / Tourism', href: 'https://ptownchamber.com/' },
+      { name: 'Veterinary Wellness Center of Ptown', type: 'Veterinary', href: 'https://provincetownvet.com/' },
       { name: 'Ptown Bachelorette', type: 'Tourism / Events', href: 'https://ptownbachelorette.com/' },
       { name: 'Dolphin Fleet Whale Watch', type: 'Ecotourism', href: 'https://whalewatch.com/' },
-      { name: 'St. Mary of the Harbor', type: 'Religious Organization', href: '#' },
-      { name: 'WOMR 92.1 FM', type: 'Community Radio', href: '#' },
+      { name: 'St. Mary of the Harbor', type: 'Religious Organization', href: 'https://stmaryoftheharbor.org/' },
+      { name: 'WOMR 92.1 FM', type: 'Community Radio', href: 'https://womr.org/' },
+      { name: 'Center for Coastal Studies', type: 'Marine Research & Conservation', href: 'https://coastalstudies.org/' },
+      { name: 'The Masthead Resort & Cottages', type: 'Resort / Lodging', href: 'https://themasthead.com/' },
+      { name: "Dyer's Beach House", type: 'Vacation Rental / Lodging', href: 'https://dyersbeachhouse.com/' },
     ],
     faq: [
       {
@@ -370,7 +384,10 @@ window.LOCATIONS_DATA = [
     intro: 'Harwich is a town of contrasts: working cranberry bogs and award-winning restaurants, a busy commercial fishing harbor at Harwich Port and quiet residential neighborhoods inland. It\'s a place where the working Cape and the vacationing Cape exist side-by-side, and where local businesses have to serve both. We build websites that work for Harwich\'s full range of customers and industries.',
     localContext: 'Harwich Port is one of the Cape\'s most walkable village centers, which means foot traffic for businesses that are there — but foot traffic alone isn\'t enough in a market where customers search before they stroll. A well-optimized website ensures that when someone searches for a restaurant in Harwich, a contractor in Harwich Port, or a charter boat out of Saquatucket Harbor, your business is the one they find. We make that happen.',
     industries: ['Marine & Fishing', 'Restaurants', 'Contractors', 'Accommodations', 'Cranberry & Agriculture', 'Retail'],
-    clients: [],
+    clients: [
+      { name: 'Pleasant Bay Community Boating', type: 'Community Sailing Program', href: 'https://pbcb.cc/' },
+      { name: "Karl's Boat Shop", type: 'Boatyard & Repair', href: 'https://karlsboatshop.com/' },
+    ],
     faq: [
       {
         q: 'Do you build websites for Harwich businesses?',
@@ -404,7 +421,11 @@ window.LOCATIONS_DATA = [
     intro: 'Brewster embodies old Cape Cod — the tidal flats of Cape Cod Bay, the Cape Cod Rail Trail, the antique shops and inns along Route 6A, and a character that draws visitors who want something quieter and more authentic than the busier Mid-Cape towns. We build websites for Brewster businesses that capture that character while delivering the performance that modern customers expect.',
     localContext: 'Brewster\'s visitors are planners. They choose Brewster specifically because it\'s not Hyannis — they\'re looking for a particular kind of Cape experience, and they research it carefully before they book. That means a Brewster business website needs to do more than just exist — it needs to tell your story, rank for the right searches, and give that careful planner every reason to choose you. We build websites that convert those researching visitors into paying customers.',
     industries: ['Inns & B&Bs', 'Restaurants', 'Antiques & Retail', 'Contractors', 'Nonprofits', 'Outdoor Recreation'],
-    clients: [],
+    clients: [
+      { name: 'Sylvestre Outdoors', type: 'Outdoor Recreation / Fly-Fishing Guide', href: 'https://www.sylvestreoutdoors.com/' },
+      { name: 'Vintage Traders', type: 'Antiques & Vintage Retail', href: 'https://vintagetradersbrewster.com/' },
+      { name: 'Outermost Land Survey', type: 'Land Surveying', href: 'https://outermostlandsurvey.com/' },
+    ],
     faq: [
       {
         q: 'Do you build websites for Brewster businesses?',
@@ -589,6 +610,10 @@ window.LOCATIONS_DATA = [
     clients: [
       { name: 'Truro Historical Society', type: 'Nonprofit', href: 'https://trurohistoricalsociety.org/' },
       { name: 'Truro Vineyards', type: 'Hospitality', href: 'https://trurovineyardsofcapecod.com/' },
+      { name: 'Truro Chamber of Commerce', type: 'Chamber of Commerce', href: '#' },
+      { name: 'Reel Ezee', type: 'Fishing Charter', href: 'https://reelezee.com/' },
+      { name: 'Pamet Harbor Yacht & Tennis Club', type: 'Yacht & Tennis Club', href: 'https://pametclub.com/' },
+      { name: 'Jobi Pottery', type: 'Pottery Studio & Gallery', href: 'https://jobipottery.com/' },
     ],
     faq: [
       {
