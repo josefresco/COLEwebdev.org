@@ -560,8 +560,25 @@ function Header() {
               </a>
             </div>
           </div>
-          <a className={'nav-link' + on('portfolio.html')} href="portfolio.html">Portfolio</a>
-          <a className={'nav-link' + on('case-studies.html')} href="case-studies.html">Case Studies</a>
+          <div className="nav-item-dropdown">
+            <a className={'nav-link' + (on('portfolio.html') || on('case-studies.html'))} href="portfolio.html">Portfolio <span className="caret">▾</span></a>
+            <div className="nav-dropdown nav-dropdown--sm" role="menu">
+              <a href="portfolio.html" className="nav-dd-item">
+                <span className="nav-dd-glyph green">◇</span>
+                <div>
+                  <div className="nav-dd-title">Portfolio</div>
+                  <div className="nav-dd-desc">Recent websites and client work.</div>
+                </div>
+              </a>
+              <a href="case-studies.html" className="nav-dd-item">
+                <span className="nav-dd-glyph orange">✦</span>
+                <div>
+                  <div className="nav-dd-title">Case Studies</div>
+                  <div className="nav-dd-desc">Real project outcomes for Cape Cod clients.</div>
+                </div>
+              </a>
+            </div>
+          </div>
           <div className="nav-item-dropdown">
             <a className={'nav-link' + (on('about.html') || on('process.html') || on('testimonials.html'))} href="about.html">About Us <span className="caret">▾</span></a>
             <div className="nav-dropdown nav-dropdown--sm" role="menu">
