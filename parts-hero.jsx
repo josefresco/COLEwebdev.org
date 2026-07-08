@@ -843,7 +843,6 @@ function Trust() {
     { name: 'Cape Cod Aquatics', italic: true },
     { name: 'LOWER CAPE OUTREACH', italic: false },
     { name: 'TRURO VINEYARDS', italic: false },
-    { name: 'DENNIS CHAMBER', italic: false },
     { name: 'SVdP Cape Cod', italic: true },
     { name: 'HOG ISLAND BEER', italic: false },
     { name: 'Idle Times Bike Shop', italic: true },
