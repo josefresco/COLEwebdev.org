@@ -503,6 +503,7 @@ function Footer() {
               <li><a href="portfolio.html">Portfolio</a></li>
               <li><a href="testimonials.html">Testimonials</a></li>
               <li><a href="whitepapers.html">Whitepapers</a></li>
+              <li><a href="resources.html">Free Resources</a></li>
               <li><a href="news.html">News</a></li>
               <li><a href="faq.html">FAQ</a></li>
               <li><a href="shop.html">Shop</a></li>
