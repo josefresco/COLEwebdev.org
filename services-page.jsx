@@ -193,6 +193,8 @@ function ServicesPage() {
               { icon: '◎', glyph: 'navy', name: 'E-Commerce', desc: 'WooCommerce & Shopify storefronts that sell.', href: 'ecommerce.html' },
               { icon: '↻', glyph: 'green', name: 'Hosting + Care Plans', desc: 'Managed hosting with a human on the other end.', href: 'hosting.html' },
               { icon: '⌘', glyph: 'navy', name: 'AI Studio', desc: 'Booking, intake, and search powered by AI.', href: 'ai-apps.html', pill: 'NEW' },
+              { icon: '⌘', glyph: 'navy', name: 'AI Engine Optimization', desc: 'Get cited by ChatGPT, Perplexity, and Gemini.', href: 'aieo.html', pill: 'NEW' },
+              { icon: '⌘', glyph: 'navy', name: 'Cape Cod AI', desc: 'Our full applied-AI practice, in one place.', href: 'cape-cod-ai.html', pill: 'NEW' },
               { icon: '↗', glyph: 'orange', name: 'SEO & Local Search', desc: 'Show up when neighbors search for what you sell.', href: 'seo.html' },
               { icon: '✦', glyph: 'orange', name: 'Branding', desc: 'Logos, color, print — so the site fits the rest of you.', href: 'branding.html' },
             ].map(page => (
