@@ -94,6 +94,7 @@ const SERVICE_LINKS = [
   { href: 'branding.html', title: 'Branding' },
   { href: 'ai-apps.html', title: 'AI Studio', pill: 'NEW' },
   { href: 'aieo.html', title: 'AI Engine Optimization', pill: 'NEW' },
+  { href: 'cape-cod-ai.html', title: 'Cape Cod AI', pill: 'NEW' },
   { groupLabel: 'Care & Support' },
   { href: 'hosting.html', title: 'Hosting + Care Plans' },
   { href: 'wordpress-speed.html', title: 'WordPress Speed' },
@@ -134,6 +135,7 @@ const SEARCH_DATA = [
   { title: 'PPC & Google Ads', desc: 'Paid search management — negatives, landing pages, and conversion tracking.', category: 'Services', href: 'ppc.html' },
   { title: 'AI Studio', desc: 'Chatbots, plugins, PWAs, extensions, and custom business tools.', category: 'Services', href: 'ai-apps.html' },
   { title: 'AI Engine Optimization', desc: 'Get cited by ChatGPT, Perplexity, Gemini, and Claude — AIEO for Cape Cod businesses.', category: 'Services', href: 'aieo.html' },
+  { title: 'Cape Cod AI', desc: 'Applied AI for local businesses — custom tools, AI-ready websites, and AI engine optimization in one place.', category: 'Services', href: 'cape-cod-ai.html' },
   { title: 'Consulting', desc: 'Website strategy, audits, business advice, and training.', category: 'Services', href: 'consulting.html' },
   { title: 'Hosting + Care Plans', desc: 'Backups, security, updates — and a human to email.', category: 'Services', href: 'hosting.html' },
   { title: 'Updates & Maintenance', desc: 'Hourly content edits — text, images, pages, forms. No monthly commitment.', category: 'Services', href: 'updates.html' },
@@ -459,6 +461,13 @@ function Header() {
                 <div>
                   <div className="nav-dd-title">AI Engine Optimization <span className="nav-dd-pill">NEW</span></div>
                   <div className="nav-dd-desc">Get cited by ChatGPT, Perplexity, and Gemini.</div>
+                </div>
+              </a>
+              <a href="cape-cod-ai.html" className="nav-dd-item">
+                <span className="nav-dd-glyph navy">⌘</span>
+                <div>
+                  <div className="nav-dd-title">Cape Cod AI <span className="nav-dd-pill">NEW</span></div>
+                  <div className="nav-dd-desc">Our full applied-AI practice, in one place.</div>
                 </div>
               </a>
 

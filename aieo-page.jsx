@@ -218,6 +218,9 @@ function AieoPage() {
               <p className="aieo-cta-sub">
                 We'll audit your current presence and show you exactly where the gaps are.
               </p>
+              <p className="aieo-related">
+                <a href="cape-cod-ai.html" className="aieo-related-link">See our full Cape Cod AI practice →</a>
+              </p>
             </div>
             <div className="aieo-cta-actions">
               <a className="btn btn--accent" href="quote.html">

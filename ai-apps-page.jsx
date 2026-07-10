@@ -261,7 +261,7 @@ function AiAppsPage() {
               AI built around<br /><em>your</em> business.
             </h1>
             <p className="ai-hero-sub">
-              No generic tools. No off-the-shelf templates. Every app we build is custom — scoped to your exact workflow, built to solve a real problem. We translate the bleeding edge of AI into practical tools small business owners can actually use and rely on.
+              No generic tools. No off-the-shelf templates. Every app we build is custom — scoped to your exact workflow, built to solve a real problem. We take today's best AI tools and turn them into practical solutions small business owners can actually use and rely on.
             </p>
             <div className="ai-hero-actions">
               <a className="btn btn--accent" href="contact.html">
@@ -397,15 +397,15 @@ function AiAppsPage() {
           </div>
           <div className="ai-lead-content">
             <span className="eyebrow">AI leadership</span>
-            <h2 className="ai-lead-hl">Josiah Cole leads AI R&amp;D at COLEwebdev.</h2>
+            <h2 className="ai-lead-hl">Josiah Cole leads AI integration at COLEwebdev.</h2>
             <p className="ai-lead-p">
-              Josiah has spent the last several years at the intersection of web development and applied AI — not as a researcher, but as a builder. He evaluates new models and tools as they emerge, runs experiments on real client problems, and decides what's production-ready versus what's still hype.
+              We don't build AI models — we don't need to. Josiah's job is knowing the tools that already exist (Claude, GPT, Gemini) well enough to put them to work on real small business problems, and to teach clients what those tools can and can't actually do.
             </p>
             <p className="ai-lead-p">
               His filter is a practical one: if it doesn't work reliably for a small business owner who has zero patience for broken software, it doesn't go into a client project. The result is a practice that's more current than most agencies and more grounded than most AI consultants — one that weeds out the noise and delivers techniques that actually work.
             </p>
             <div className="ai-lead-tags">
-              {['Anthropic Claude', 'OpenAI API', 'Google Gemini', 'Applied AI Research', 'AI Product Dev'].map(t => (
+              {['Anthropic Claude', 'OpenAI API', 'Google Gemini', 'AI Integration', 'AI Product Dev'].map(t => (
                 <span key={t} className="ai-lead-tag">{t}</span>
               ))}
             </div>
@@ -426,7 +426,7 @@ function AiAppsPage() {
               Search is changing fast. ChatGPT, Perplexity, Google Gemini, and Claude are now answering questions directly — and they're pulling from web content to do it. The businesses that get cited by AI search are the ones that structured their content to be found, understood, and recommended by AI systems.
             </p>
             <p className="ai-aieo-p">
-              AIEO is how we prepare your website for that shift. We strip out the fluff, structure your content around how AI engines read and summarize, and position your business as an authoritative source. It's the next frontier of search optimization — and most small businesses haven't started yet.
+              AIEO is how we prepare your website for that shift. We strip out the fluff, structure your content around how AI engines read and summarize, and position your business as an authoritative source. It's the next stage of search optimization — and most small businesses haven't started yet.
             </p>
             <a className="btn btn--accent" href="contact.html">
               Ask about AIEO <span className="arrow">→</span>
@@ -450,6 +450,7 @@ function AiAppsPage() {
               </p>
               <div className="ai-related">
                 <span className="ai-related-label">Related:</span>
+                <a href="cape-cod-ai.html" className="ai-related-link">See our full Cape Cod AI practice.</a>
                 <a href="website-design.html" className="ai-related-link">Start with a strong website foundation.</a>
                 <a href="consulting.html" className="ai-related-link">Not sure what you need?</a>
               </div>
