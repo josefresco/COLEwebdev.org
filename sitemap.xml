@@ -121,9 +121,23 @@
 
   <url>
     <loc>https://colewebdev.org/about.html</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-07-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://colewebdev.org/josiah-cole.html</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+
+  <url>
+    <loc>https://colewebdev.org/desiree-cole.html</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
   </url>
 
   <url>
@@ -135,7 +149,7 @@
 
   <url>
     <loc>https://colewebdev.org/whitepapers.html</loc>
-    <lastmod>2026-06-12</lastmod>
+    <lastmod>2026-07-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -170,182 +184,182 @@
 
   <url>
     <loc>https://colewebdev.org/wp-what-web-design-does.html</loc>
-    <lastmod>2026-05-13</lastmod>
+    <lastmod>2026-07-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.65</priority>
   </url>
 
   <url>
     <loc>https://colewebdev.org/wp-investment-value.html</loc>
-    <lastmod>2026-05-13</lastmod>
+    <lastmod>2026-07-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.65</priority>
   </url>
 
   <url>
     <loc>https://colewebdev.org/wp-diy-vs-pro.html</loc>
-    <lastmod>2026-05-13</lastmod>
+    <lastmod>2026-07-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.65</priority>
   </url>
 
   <url>
     <loc>https://colewebdev.org/wp-three-types.html</loc>
-    <lastmod>2026-05-13</lastmod>
+    <lastmod>2026-07-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.65</priority>
   </url>
 
   <url>
     <loc>https://colewebdev.org/wp-seven-golden-rules.html</loc>
-    <lastmod>2026-05-13</lastmod>
+    <lastmod>2026-07-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.65</priority>
   </url>
 
   <url>
     <loc>https://colewebdev.org/wp-five-principles.html</loc>
-    <lastmod>2026-05-13</lastmod>
+    <lastmod>2026-07-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.65</priority>
   </url>
 
   <url>
     <loc>https://colewebdev.org/wp-seven-cs.html</loc>
-    <lastmod>2026-05-13</lastmod>
+    <lastmod>2026-07-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.65</priority>
   </url>
 
   <url>
     <loc>https://colewebdev.org/wp-faq-guide.html</loc>
-    <lastmod>2026-05-13</lastmod>
+    <lastmod>2026-07-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.65</priority>
   </url>
 
   <url>
     <loc>https://colewebdev.org/wp-how-to-choose.html</loc>
-    <lastmod>2026-05-13</lastmod>
+    <lastmod>2026-07-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.65</priority>
   </url>
 
   <url>
     <loc>https://colewebdev.org/wp-what-makes-good-website.html</loc>
-    <lastmod>2026-05-13</lastmod>
+    <lastmod>2026-07-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.65</priority>
   </url>
 
   <url>
     <loc>https://colewebdev.org/wp-google-ads-guide.html</loc>
-    <lastmod>2026-05-24</lastmod>
+    <lastmod>2026-07-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.65</priority>
   </url>
 
   <url>
     <loc>https://colewebdev.org/wp-website-cost.html</loc>
-    <lastmod>2026-05-24</lastmod>
+    <lastmod>2026-07-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.65</priority>
   </url>
 
   <url>
     <loc>https://colewebdev.org/wp-web-design-expensive.html</loc>
-    <lastmod>2026-05-24</lastmod>
+    <lastmod>2026-07-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.65</priority>
   </url>
 
   <url>
     <loc>https://colewebdev.org/wp-how-long-website.html</loc>
-    <lastmod>2026-05-24</lastmod>
+    <lastmod>2026-07-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.65</priority>
   </url>
 
   <url>
     <loc>https://colewebdev.org/wp-when-to-redesign.html</loc>
-    <lastmod>2026-05-24</lastmod>
+    <lastmod>2026-07-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.65</priority>
   </url>
 
   <url>
     <loc>https://colewebdev.org/wp-website-vs-social.html</loc>
-    <lastmod>2026-05-24</lastmod>
+    <lastmod>2026-07-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.65</priority>
   </url>
 
   <url>
     <loc>https://colewebdev.org/wp-wordpress-vs-squarespace.html</loc>
-    <lastmod>2026-05-24</lastmod>
+    <lastmod>2026-07-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.65</priority>
   </url>
 
   <url>
     <loc>https://colewebdev.org/wp-design-vs-development.html</loc>
-    <lastmod>2026-05-24</lastmod>
+    <lastmod>2026-07-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.65</priority>
   </url>
 
   <url>
     <loc>https://colewebdev.org/wp-not-showing-on-google.html</loc>
-    <lastmod>2026-05-24</lastmod>
+    <lastmod>2026-07-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.65</priority>
   </url>
 
   <url>
     <loc>https://colewebdev.org/wp-how-long-seo.html</loc>
-    <lastmod>2026-05-24</lastmod>
+    <lastmod>2026-07-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.65</priority>
   </url>
 
   <url>
     <loc>https://colewebdev.org/wp-is-my-website-working.html</loc>
-    <lastmod>2026-05-24</lastmod>
+    <lastmod>2026-07-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.65</priority>
   </url>
 
   <url>
     <loc>https://colewebdev.org/wp-shopify-vs-woocommerce.html</loc>
-    <lastmod>2026-05-24</lastmod>
+    <lastmod>2026-07-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.65</priority>
   </url>
 
   <url>
     <loc>https://colewebdev.org/wp-core-web-vitals.html</loc>
-    <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-07-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.65</priority>
   </url>
 
   <url>
     <loc>https://colewebdev.org/wp-website-accessibility.html</loc>
-    <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-07-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.65</priority>
   </url>
 
   <url>
     <loc>https://colewebdev.org/wp-google-maps-ranking.html</loc>
-    <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-07-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.65</priority>
   </url>
 
   <url>
     <loc>https://colewebdev.org/wp-wordpress-maintenance.html</loc>
-    <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-07-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.65</priority>
   </url>

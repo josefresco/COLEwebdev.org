@@ -69,6 +69,8 @@ function WhitepaperPage() {
   const next = idx < all.length - 1 ? all[idx + 1] : null;
   const relatedLinks = WP_RELATED_LINKS[id] || [];
   const images = WP_IMAGES[id] || null;
+  const team = window.TEAM_DATA || [];
+  const author = wp ? team.find(function(t) { return t.id === wp.author; }) : null;
   const [open, setOpen] = React.useState(true);
 
   React.useEffect(function() {
@@ -126,6 +128,15 @@ function WhitepaperPage() {
                 <span className="eyebrow wpa-eyebrow">Whitepaper {wp.num} of {all.length}</span>
                 <h1 className="wpa-hero-hl">{wp.title}</h1>
                 <p className="wpa-hero-sub">{wp.subtitle}</p>
+                {author && (
+                  <div className="wpa-byline">
+                    <img src={author.photo} alt={author.name} className="wpa-byline-photo" loading="lazy" />
+                    <div className="wpa-byline-info">
+                      <a href={author.slug + '.html'} className="wpa-byline-name">{author.name}</a>
+                      <span className="wpa-byline-role">{author.jobTitle}</span>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           </div>

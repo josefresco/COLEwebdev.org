@@ -3,6 +3,7 @@
 window.WHITEPAPERS_DATA = [
   {
     id: 'what-web-design-does',
+    author: 'desiree',
     num: '01',
     title: 'What Does Web Design Do?',
     subtitle: 'A Cape Cod Business Guide',
@@ -41,6 +42,7 @@ window.WHITEPAPERS_DATA = [
   },
   {
     id: 'investment-value',
+    author: 'desiree',
     num: '02',
     title: 'Is Web Design Worth the Investment?',
     subtitle: 'A Business Case for Small Business Owners',
@@ -79,6 +81,7 @@ window.WHITEPAPERS_DATA = [
   },
   {
     id: 'diy-vs-pro',
+    author: 'desiree',
     num: '03',
     title: 'DIY vs. Hiring a Professional',
     subtitle: 'How to Know Which Path Is Right for You',
@@ -117,6 +120,7 @@ window.WHITEPAPERS_DATA = [
   },
   {
     id: 'three-types',
+    author: 'josiah',
     num: '04',
     title: 'The 3 Types of Web Design',
     subtitle: 'Which Approach Is Right for Your Business?',
@@ -155,6 +159,7 @@ window.WHITEPAPERS_DATA = [
   },
   {
     id: 'seven-golden-rules',
+    author: 'desiree',
     num: '05',
     title: 'The 7 Golden Rules of Web Design',
     subtitle: 'Timeless Principles for Sites That Actually Work',
@@ -192,6 +197,7 @@ window.WHITEPAPERS_DATA = [
   },
   {
     id: 'five-principles',
+    author: 'desiree',
     num: '06',
     title: '5 Essential Principles of Effective Web Design',
     subtitle: 'The Foundation Every Business Website Needs',
@@ -229,6 +235,7 @@ window.WHITEPAPERS_DATA = [
   },
   {
     id: 'seven-cs',
+    author: 'josiah',
     num: '07',
     title: 'The 7 C\'s of Web Design',
     subtitle: 'A Framework for Building Complete Digital Experiences',
@@ -267,6 +274,7 @@ window.WHITEPAPERS_DATA = [
   },
   {
     id: 'faq-guide',
+    author: 'josiah',
     num: '08',
     title: 'Building a Better FAQ',
     subtitle: 'Questions That Convert and Get Found on Google',
@@ -305,6 +313,7 @@ window.WHITEPAPERS_DATA = [
   },
   {
     id: 'how-to-choose',
+    author: 'desiree',
     num: '09',
     title: 'How to Choose a Web Designer',
     subtitle: 'What to Look For, What to Ask, and What to Avoid',
@@ -351,6 +360,7 @@ window.WHITEPAPERS_DATA = [
   },
   {
     id: 'what-makes-good-website',
+    author: 'desiree',
     num: '10',
     title: 'What Makes a Good Website?',
     subtitle: 'The Elements That Separate Sites That Work from Sites That Don\'t',
@@ -403,6 +413,7 @@ window.WHITEPAPERS_DATA = [
   },
   {
     id: 'google-ads-guide',
+    author: 'josiah',
     num: '11',
     title: 'Why Your Google Ads Are Wasting Money',
     subtitle: 'Negative Keywords, Landing Pages & Conversion Tracking',
@@ -446,6 +457,7 @@ window.WHITEPAPERS_DATA = [
   },
   {
     id: 'website-cost',
+    author: 'desiree',
     num: '12',
     title: 'How Much Does a Website Cost?',
     subtitle: 'What Drives Price, and How to Think About the Investment',
@@ -484,6 +496,7 @@ window.WHITEPAPERS_DATA = [
   },
   {
     id: 'web-design-expensive',
+    author: 'desiree',
     num: '13',
     title: 'Why Is Web Design So Expensive?',
     subtitle: 'What You\'re Actually Buying When You Hire a Professional',
@@ -522,6 +535,7 @@ window.WHITEPAPERS_DATA = [
   },
   {
     id: 'how-long-website',
+    author: 'josiah',
     num: '14',
     title: 'How Long Does a Website Take to Build?',
     subtitle: 'A Realistic Timeline, and What Usually Slows Things Down',
@@ -560,6 +574,7 @@ window.WHITEPAPERS_DATA = [
   },
   {
     id: 'when-to-redesign',
+    author: 'josiah',
     num: '15',
     title: 'When Should I Redesign My Website?',
     subtitle: 'Data-Driven Signs It\'s Time, and the Difference Between a Refresh, Redesign, and Rebuild',
@@ -598,6 +613,7 @@ window.WHITEPAPERS_DATA = [
   },
   {
     id: 'website-vs-social',
+    author: 'desiree',
     num: '16',
     title: 'Do I Need a Website If I Have Facebook or Instagram?',
     subtitle: 'Owned Property vs. Rented Land, and What Social Media Can\'t Do',
@@ -636,6 +652,7 @@ window.WHITEPAPERS_DATA = [
   },
   {
     id: 'wordpress-vs-squarespace',
+    author: 'josiah',
     num: '17',
     title: 'Should I Use WordPress or Squarespace?',
     subtitle: 'An Honest Comparison for Small Business Owners',
@@ -674,6 +691,7 @@ window.WHITEPAPERS_DATA = [
   },
   {
     id: 'design-vs-development',
+    author: 'josiah',
     num: '18',
     title: 'What\'s the Difference Between Web Design and Web Development?',
     subtitle: 'Two Distinct Disciplines, and Why the Best Work Combines Both',
@@ -712,6 +730,7 @@ window.WHITEPAPERS_DATA = [
   },
   {
     id: 'not-showing-on-google',
+    author: 'josiah',
     num: '19',
     title: 'Why Isn\'t My Website Showing Up on Google?',
     subtitle: 'Four Fixable Problems Behind Most Visibility Issues',
@@ -750,6 +769,7 @@ window.WHITEPAPERS_DATA = [
   },
   {
     id: 'how-long-seo',
+    author: 'josiah',
     num: '20',
     title: 'How Long Does SEO Take to Work?',
     subtitle: 'Realistic Timelines, and What Good SEO Looks Like While You Wait',
@@ -788,6 +808,7 @@ window.WHITEPAPERS_DATA = [
   },
   {
     id: 'is-my-website-working',
+    author: 'josiah',
     num: '21',
     title: 'How Do I Know If My Website Is Actually Working?',
     subtitle: 'The Right Metrics to Track, and What "Working" Really Means',
@@ -826,6 +847,7 @@ window.WHITEPAPERS_DATA = [
   },
   {
     id: 'shopify-vs-woocommerce',
+    author: 'josiah',
     num: '22',
     title: 'Should I Use Shopify or WooCommerce?',
     subtitle: 'A Practical Comparison for Small Business E-Commerce',
@@ -864,6 +886,7 @@ window.WHITEPAPERS_DATA = [
   },
   {
     id: 'core-web-vitals',
+    author: 'josiah',
     num: '23',
     title: 'What Are Core Web Vitals?',
     subtitle: 'Google\'s Speed Metrics, and What They Mean for Your Rankings',
@@ -909,6 +932,7 @@ window.WHITEPAPERS_DATA = [
   },
   {
     id: 'website-accessibility',
+    author: 'josiah',
     num: '24',
     title: 'Website Accessibility and ADA Compliance',
     subtitle: 'What Small Businesses Need to Know About WCAG and Legal Risk',
@@ -954,6 +978,7 @@ window.WHITEPAPERS_DATA = [
   },
   {
     id: 'google-maps-ranking',
+    author: 'josiah',
     num: '25',
     title: 'How to Improve Your Google Maps Ranking',
     subtitle: 'Local SEO for Small Businesses That Need to Be Found',
@@ -999,6 +1024,7 @@ window.WHITEPAPERS_DATA = [
   },
   {
     id: 'wordpress-maintenance',
+    author: 'josiah',
     num: '26',
     title: 'What Is WordPress Maintenance?',
     subtitle: 'Why Your WordPress Site Needs Ongoing Care, and What Happens When It Doesn\'t',

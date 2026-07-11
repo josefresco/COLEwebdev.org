@@ -127,6 +127,7 @@ function AboutPage() {
                   Josiah has been building websites professionally for over 20 years — since the early days of the web, through every platform shift since. He handles design, development, hosting infrastructure, and anything that requires getting into the code. An early adopter by nature, he continuously invests in new technology so clients don't have to figure it out themselves.
                 </p>
                 <div className="ab-person-contact">
+                  <a className="ab-person-link" href="josiah-cole.html">Full bio →</a>
                   <a className="ab-person-link" href="mailto:josiah@colewebdev.com">josiah@colewebdev.com</a>
                   <a className="ab-person-link" href="https://www.linkedin.com/in/josiahcole/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                 </div>
@@ -146,6 +147,7 @@ function AboutPage() {
                   Desiree brings 20+ years of web design, marketing, and business development to every project. She leads client relationships, drives the creative direction, and makes sure every site actually serves the business goals behind it. Recognized by the Cape Cod business community for her work both in and outside the studio, she's the reason clients keep coming back — and referring their friends.
                 </p>
                 <div className="ab-person-contact">
+                  <a className="ab-person-link" href="desiree-cole.html">Full bio →</a>
                   <a className="ab-person-link" href="mailto:desiree@colewebdev.com">desiree@colewebdev.com</a>
                   <a className="ab-person-link" href="https://www.facebook.com/colewebdev" target="_blank" rel="noopener noreferrer">Facebook</a>
                   <a className="ab-person-link" href="https://www.instagram.com/colewebdev" target="_blank" rel="noopener noreferrer">Instagram</a>
