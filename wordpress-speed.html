@@ -320,6 +320,45 @@
   padding-top: 1px;
 }
 
+/* Cross-link nudge */
+.wps-ai-nudge {
+  padding: 28px 0;
+  background: var(--paper-2);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.wps-ai-nudge-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.wps-ai-nudge-left {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.wps-ai-nudge-tag {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: white;
+  background: var(--brand-green);
+  padding: 3px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.wps-ai-nudge-text {
+  font-size: 14px;
+  color: var(--ink-2);
+  line-height: 1.5;
+  max-width: 54ch;
+}
+.wps-ai-nudge-link { white-space: nowrap; flex-shrink: 0; }
+
 /* CTA */
 .wps-cta {
   padding: 80px 0;
@@ -422,6 +461,6 @@
 <script type="text/babel" src="parts-hero.jsx"></script>
 <script type="text/babel" src="parts-services.jsx"></script>
 <script type="text/babel" src="parts-rest.jsx"></script>
-<script type="text/babel" src="wordpress-speed-page.jsx"></script>
+<script type="text/babel" src="wordpress-speed-page.jsx?v=2"></script>
 </body>
 </html>

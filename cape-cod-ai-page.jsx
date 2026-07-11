@@ -37,6 +37,15 @@ const CAI_USES = [
     href: 'website-design.html',
     linkLabel: 'See web design',
   },
+  {
+    icon: '↗',
+    bg: 'rgba(123,192,67,0.14)',
+    color: '#5DA02E',
+    title: 'AI-Powered Speed Audits',
+    body: 'A scan of any site — WordPress, e-commerce, custom-built — with AI analysis of Core Web Vitals and PageSpeed data, and a prioritized game plan for what to fix first.',
+    href: 'ai-apps.html',
+    linkLabel: 'See speed audits',
+  },
 ];
 
 const CAI_FAQ = [
@@ -90,7 +99,7 @@ function CapeCodAiPage() {
               </a>
             </div>
             <div className="cai-hero-tags">
-              {['Rapid Prototyping', 'Custom WordPress Plugins', 'AI Chatbots', 'AI SEO Audits', 'AI Engine Optimization', 'AI-Ready Websites', 'Applied, Not Hype'].map(t => (
+              {['Rapid Prototyping', 'Custom WordPress Plugins', 'AI Chatbots', 'AI SEO Audits', 'AI Speed Audits', 'AI Engine Optimization', 'AI-Ready Websites', 'Applied, Not Hype'].map(t => (
                 <span key={t} className="cai-hero-tag">{t}</span>
               ))}
             </div>
@@ -140,7 +149,7 @@ function CapeCodAiPage() {
         <div className="shell">
           <div className="cai-hub-hd">
             <span className="eyebrow cai-hub-eyebrow">What we cover</span>
-            <h2 className="cai-hub-hl">Four sides of AI web development.</h2>
+            <h2 className="cai-hub-hl">Five sides of AI web development.</h2>
           </div>
           <div className="cai-hub-grid">
             {CAI_USES.map(u => (

@@ -57,6 +57,13 @@ const BUILD_TYPES = [
     title: 'AI-Powered SEO Audits',
     body: "We connect directly to your Google Analytics and Search Console data for a real technical SEO audit — not a generic checklist, but a diagnosis based on your actual traffic, rankings, and click-through data.",
   },
+  {
+    icon: '↗',
+    bg: 'rgba(123,192,67,0.14)',
+    color: '#5DA02E',
+    title: 'AI-Powered Speed Audits',
+    body: "We scan any site — WordPress, e-commerce, custom-built — and use AI to analyze Core Web Vitals and PageSpeed data, then build a prioritized game plan for what to fix first and why.",
+  },
 ];
 
 const PROCESS_USES = [
@@ -286,7 +293,7 @@ function AiAppsPage() {
               </a>
             </div>
             <div className="ai-hero-tags">
-              {['Rapid Prototyping', 'WordPress Plugins', 'AI Chatbots', 'Progressive Web Apps', 'Browser Extensions', 'Hosted Apps', 'SEO Audits'].map(t => (
+              {['Rapid Prototyping', 'WordPress Plugins', 'AI Chatbots', 'Progressive Web Apps', 'Browser Extensions', 'Hosted Apps', 'SEO Audits', 'Speed Audits'].map(t => (
                 <span key={t} className="ai-hero-tag">{t}</span>
               ))}
             </div>
@@ -342,7 +349,7 @@ function AiAppsPage() {
         <div className="shell">
           <div className="ai-builds-hd">
             <span className="eyebrow">What we build</span>
-            <h2 className="ai-builds-hl">Eight types of custom AI tools.</h2>
+            <h2 className="ai-builds-hl">Nine types of custom AI tools.</h2>
           </div>
           <div className="ai-builds-grid">
             {BUILD_TYPES.map(b => (

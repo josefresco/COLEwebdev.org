@@ -269,6 +269,23 @@ function WPSpeedPage() {
         </div>
       </section>
 
+      {/* AI audit nudge */}
+      <section className="wps-ai-nudge">
+        <div className="shell">
+          <div className="wps-ai-nudge-inner">
+            <div className="wps-ai-nudge-left">
+              <span className="wps-ai-nudge-tag">AI Studio</span>
+              <span className="wps-ai-nudge-text">
+                Not on WordPress? We also run AI-powered speed audits for any site — e-commerce, custom-built, anything — with a prioritized game plan for what to fix first.
+              </span>
+            </div>
+            <a className="btn btn--ghost btn--sm wps-ai-nudge-link" href="ai-apps.html">
+              See AI Studio <span className="arrow">→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="wps-cta">
         <div className="shell wps-cta-inner">
