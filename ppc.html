@@ -19,7 +19,51 @@
   "description": "Google Ads management for Cape Cod small businesses — negative keyword strategy, optimized landing pages, and conversion tracking that makes every dollar accountable.",
   "provider": { "@type": "ProfessionalService", "name": "COLEwebdev", "url": "https://colewebdev.org/" },
   "areaServed": { "@type": "State", "name": "Cape Cod, Massachusetts" },
-  "serviceType": "PPC & Google Ads Management"
+  "serviceType": "PPC & Google Ads Management",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Google Ads Services",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Google Ads Campaign Setup", "description": "Full build of a new Google Ads campaign from scratch — keyword research, ad group structure, negative keywords, ad copy, and bidding configuration." } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Google Ads Campaign Management", "description": "Ongoing monthly management of active campaigns — search term reviews, bid adjustments, ad testing, and reporting." } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Google Ads Audit", "description": "A focused audit of campaigns already running but underperforming — search terms, wasted spend, quality scores, conversion setup, and landing pages." } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Google Ads Landing Page Creation", "description": "Purpose-built, campaign-specific landing pages designed for message match, mobile speed, and a single conversion action." } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Conversion Tracking Setup", "description": "Configuration of GA4, Google Ads conversion actions, and call tracking so every lead source is measured." } }
+    ]
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do you offer Google Ads audits for campaigns we already run?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes — our Campaign Optimization service is a one-time audit and cleanup for campaigns that are already live but underperforming. We review search terms, wasted spend, quality scores, conversion tracking, and landing pages, then fix what's causing the waste in a single engagement. No ongoing retainer required." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you build a new Google Ads campaign from scratch?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes — Campaign Setup covers a full build: keyword and negative keyword research, campaign and ad group architecture, responsive search ad copy, and bidding configuration, with conversion tracking verified before anything goes live." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you manage Google Ads campaigns on an ongoing basis?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes — Campaign Management is our most common engagement: monthly management with weekly search term reviews, bid adjustments, ad testing, negative keyword expansion, and a plain-English report each month." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you build landing pages for Google Ads campaigns?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes — every campaign we run gets a purpose-built landing page tied to that specific campaign, not your homepage. It's designed for message match, mobile speed, a single call to action, and includes call tracking integration. Landing page creation is also available on its own." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need a long-term contract for Google Ads management?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No — our management is month-to-month, and we charge a flat fee rather than a percentage of ad spend. You own your Google Ads, Analytics, and Tag Manager accounts, so there's no lock-in if you decide to leave." }
+    }
+  ]
 }
 </script>
 <style>
@@ -427,6 +471,43 @@
 }
 .ppc-commit-desc { font-size: 14px; line-height: 1.65; color: var(--muted); margin: 0; }
 
+/* FAQ */
+.ppc-faq {
+  padding: 80px 0;
+  background: var(--paper-2);
+  border-top: 1px solid var(--line);
+}
+.ppc-faq-inner { max-width: 760px; }
+.ppc-faq-hl {
+  font-family: var(--serif);
+  font-size: clamp(26px, 3.2vw, 42px);
+  color: var(--ink);
+  font-weight: 400;
+  margin: 8px 0 32px;
+  line-height: 1.15;
+}
+.ppc-faq-list { display: flex; flex-direction: column; gap: 10px; }
+.ppc-faq-item {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: 18px 22px;
+}
+.ppc-faq-q {
+  font-size: 15.5px;
+  font-weight: 600;
+  color: var(--ink);
+  cursor: pointer;
+  list-style: none;
+}
+.ppc-faq-q::-webkit-details-marker { display: none; }
+.ppc-faq-a {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--ink-2);
+  margin: 12px 0 0;
+}
+
 /* CTA */
 .ppc-cta-section { padding: 80px 0; background: white; border-top: 1px solid var(--line); }
 .ppc-cta {
@@ -514,6 +595,6 @@
 <script type="text/babel" src="parts-hero.jsx"></script>
 <script type="text/babel" src="parts-services.jsx"></script>
 <script type="text/babel" src="parts-rest.jsx"></script>
-<script type="text/babel" src="ppc-page.jsx"></script>
+<script type="text/babel" src="ppc-page.jsx?v=2"></script>
 </body>
 </html>

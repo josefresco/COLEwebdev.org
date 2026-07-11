@@ -110,6 +110,29 @@ const PPC_STEPS = [
   },
 ];
 
+const PPC_FAQ = [
+  {
+    q: 'Do you offer Google Ads audits for campaigns we already run?',
+    a: "Yes — our Campaign Optimization service is a one-time audit and cleanup for campaigns that are already live but underperforming. We review search terms, wasted spend, quality scores, conversion tracking, and landing pages, then fix what's causing the waste in a single engagement. No ongoing retainer required.",
+  },
+  {
+    q: 'Can you build a new Google Ads campaign from scratch?',
+    a: 'Yes — Campaign Setup covers a full build: keyword and negative keyword research, campaign and ad group architecture, responsive search ad copy, and bidding configuration, with conversion tracking verified before anything goes live.',
+  },
+  {
+    q: 'Do you manage Google Ads campaigns on an ongoing basis?',
+    a: 'Yes — Campaign Management is our most common engagement: monthly management with weekly search term reviews, bid adjustments, ad testing, negative keyword expansion, and a plain-English report each month.',
+  },
+  {
+    q: 'Do you build landing pages for Google Ads campaigns?',
+    a: "Yes — every campaign we run gets a purpose-built landing page tied to that specific campaign, not your homepage. It's designed for message match, mobile speed, a single call to action, and includes call tracking integration. Landing page creation is also available on its own.",
+  },
+  {
+    q: 'Do I need a long-term contract for Google Ads management?',
+    a: "No — our management is month-to-month, and we charge a flat fee rather than a percentage of ad spend. You own your Google Ads, Analytics, and Tag Manager accounts, so there's no lock-in if you decide to leave.",
+  },
+];
+
 const PPC_COMMITMENTS = [
   {
     icon: '✓',
@@ -298,6 +321,22 @@ function PpcPage() {
                   <p className="ppc-commit-desc">{c.desc}</p>
                 </div>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="ppc-faq">
+        <div className="shell ppc-faq-inner">
+          <span className="eyebrow">Common questions</span>
+          <h2 className="ppc-faq-hl">Audit, setup, management, landing pages — answered.</h2>
+          <div className="ppc-faq-list">
+            {PPC_FAQ.map(f => (
+              <details key={f.q} className="ppc-faq-item">
+                <summary className="ppc-faq-q">{f.q}</summary>
+                <p className="ppc-faq-a">{f.a}</p>
+              </details>
             ))}
           </div>
         </div>
