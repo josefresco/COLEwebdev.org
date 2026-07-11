@@ -2,6 +2,13 @@
 
 const BUILD_TYPES = [
   {
+    icon: '◇',
+    bg: 'rgba(123,192,67,0.14)',
+    color: '#5DA02E',
+    title: 'Rapid Prototyping',
+    body: 'Fast, clickable design prototypes built with AI — so you can see and react to a real idea in days, not weeks, before we commit to a full build.',
+  },
+  {
     icon: '⚙',
     bg: 'rgba(14,42,74,0.10)',
     color: '#0E2A4A',
@@ -272,7 +279,7 @@ function AiAppsPage() {
               </a>
             </div>
             <div className="ai-hero-tags">
-              {['WordPress Plugins', 'AI Chatbots', 'Progressive Web Apps', 'Browser Extensions', 'Hosted Apps'].map(t => (
+              {['Rapid Prototyping', 'WordPress Plugins', 'AI Chatbots', 'Progressive Web Apps', 'Browser Extensions', 'Hosted Apps'].map(t => (
                 <span key={t} className="ai-hero-tag">{t}</span>
               ))}
             </div>
@@ -282,7 +289,7 @@ function AiAppsPage() {
 
       <SummaryStrip
         summary="Custom AI apps, chatbots, and integrations built around your specific workflow — not generic off-the-shelf tools. Practical AI that small businesses can actually rely on."
-        points={['Custom-Built', 'WordPress Integration', 'Practical AI', 'No-Code Handoff']}
+        points={['Custom-Built', 'Faster & Lower Cost', 'WordPress Integration', 'Practical AI', 'No-Code Handoff']}
       />
 
       {/* Philosophy */}
@@ -296,6 +303,9 @@ function AiAppsPage() {
             </p>
             <p className="ai-phil-p">
               Getting to 90% is fast. That first working version often surprises clients — it's already doing the job. But pushing to 100% is where projects transform. That last iteration is where the tool stops feeling like software and starts feeling like it was always part of how you work. We know how to get you there.
+            </p>
+            <p className="ai-phil-p">
+              AI-assisted development also changes the math on cost and speed. Work that used to take weeks of custom coding can often be prototyped and built in days — which means lower project costs and a faster path to launch, without cutting corners on quality.
             </p>
           </div>
           <div className="ai-phil-aside">
@@ -325,7 +335,7 @@ function AiAppsPage() {
         <div className="shell">
           <div className="ai-builds-hd">
             <span className="eyebrow">What we build</span>
-            <h2 className="ai-builds-hl">Six types of custom AI tools.</h2>
+            <h2 className="ai-builds-hl">Seven types of custom AI tools.</h2>
           </div>
           <div className="ai-builds-grid">
             {BUILD_TYPES.map(b => (

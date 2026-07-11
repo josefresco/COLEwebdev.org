@@ -6,7 +6,7 @@ const CAI_USES = [
     bg: 'rgba(14,42,74,0.10)',
     color: '#0E2A4A',
     title: 'Custom AI Tools',
-    body: 'Chatbots, intake forms, booking assistants, and internal apps — built around your exact workflow, not a generic template.',
+    body: 'Rapid design prototypes, chatbots, intake forms, and internal apps — built around your exact workflow, faster and at lower cost than traditional development.',
     href: 'ai-apps.html',
     linkLabel: 'See AI Studio',
   },
@@ -81,7 +81,7 @@ function CapeCodAiPage() {
               </a>
             </div>
             <div className="cai-hero-tags">
-              {['AI Chatbots', 'AI Engine Optimization', 'AI-Ready Websites', 'Applied, Not Hype'].map(t => (
+              {['Rapid Prototyping', 'AI Chatbots', 'AI Engine Optimization', 'AI-Ready Websites', 'Applied, Not Hype'].map(t => (
                 <span key={t} className="cai-hero-tag">{t}</span>
               ))}
             </div>
