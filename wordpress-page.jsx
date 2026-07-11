@@ -298,6 +298,23 @@ function WordPressPage() {
         </div>
       </section>
 
+      {/* Custom plugin nudge */}
+      <section className="wp-trad-nudge">
+        <div className="shell">
+          <div className="wp-trad-nudge-inner">
+            <div className="wp-trad-nudge-left">
+              <span className="wp-trad-nudge-tag" style={{ background: 'var(--brand-green)' }}>AI Studio</span>
+              <span className="wp-trad-nudge-text">
+                Need functionality no plugin offers? We build custom WordPress plugins with AI — faster and at lower cost than traditional development.
+              </span>
+            </div>
+            <a className="btn btn--ghost btn--sm wp-trad-nudge-link" href="ai-apps.html">
+              See AI Studio <span className="arrow">→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="wp-cta-section">
         <div className="shell">
