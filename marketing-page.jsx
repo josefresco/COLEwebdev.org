@@ -174,6 +174,13 @@ function MarketingPage() {
               ))}
             </div>
           </div>
+          <div className="mkg-seo-ai-note">
+            <span className="mkg-seo-ai-tag">AI Studio</span>
+            <span className="mkg-seo-ai-text">
+              Want a deeper technical audit? We also run AI-powered SEO audits using your live Google Analytics and Search Console data — not a generic checklist.
+            </span>
+            <a href="ai-apps.html" className="mkg-seo-ai-link">See AI Studio →</a>
+          </div>
         </div>
       </section>
 

@@ -242,6 +242,43 @@
 .mkg-seo-step-label { font-size: 15px; font-weight: 600; color: var(--ink); margin-bottom: 8px; }
 .mkg-seo-step-body { font-size: 13px; line-height: 1.65; color: var(--ink-2); margin: 0; }
 
+.mkg-seo-ai-note {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 32px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+}
+.mkg-seo-ai-tag {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: white;
+  background: var(--brand-green);
+  padding: 3px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.mkg-seo-ai-text {
+  font-size: 14px;
+  color: var(--ink-2);
+  line-height: 1.5;
+  flex: 1;
+  min-width: 240px;
+}
+.mkg-seo-ai-link {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--brand-blue);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.mkg-seo-ai-link:hover { text-decoration: underline; }
+
 /* Paid Search sub-section */
 .mkg-paid-grid {
   display: grid;
@@ -472,6 +509,6 @@
 <script type="text/babel" src="parts-hero.jsx"></script>
 <script type="text/babel" src="parts-services.jsx"></script>
 <script type="text/babel" src="parts-rest.jsx"></script>
-<script type="text/babel" src="marketing-page.jsx"></script>
+<script type="text/babel" src="marketing-page.jsx?v=2"></script>
 </body>
 </html>
