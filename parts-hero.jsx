@@ -87,16 +87,21 @@ const SERVICE_LINKS = [
   { href: 'wordpress.html', title: 'WordPress Design' },
   { href: 'traditional.html', title: 'Traditional Web Design' },
   { href: 'ecommerce.html', title: 'E-Commerce' },
+  { href: 'cape-cod-website-redesign.html', title: 'Website Redesign' },
   { groupLabel: 'Grow & Market' },
   { href: 'seo.html', title: 'SEO & Local Search' },
   { href: 'ppc.html', title: 'PPC & Google Ads' },
   { href: 'marketing.html', title: 'Marketing' },
   { href: 'branding.html', title: 'Branding' },
+  { href: 'cape-cod-social-media-marketing.html', title: 'Social Media Marketing' },
+  { href: 'cape-cod-email-marketing.html', title: 'Email Marketing' },
+  { href: 'cape-cod-google-business-profile.html', title: 'Google Business Profile' },
   { href: 'ai-apps.html', title: 'AI Studio', pill: 'NEW' },
   { href: 'aieo.html', title: 'AI Engine Optimization', pill: 'NEW' },
   { href: 'cape-cod-ai.html', title: 'Cape Cod AI', pill: 'NEW' },
   { groupLabel: 'Care & Support' },
   { href: 'hosting.html', title: 'Hosting + Care Plans' },
+  { href: 'wordpress-maintenance.html', title: 'WordPress Maintenance' },
   { href: 'wordpress-speed.html', title: 'WordPress Speed' },
   { href: 'web-accessibility.html', title: 'Web Accessibility' },
   { href: 'updates.html', title: 'Updates & Maintenance' },
@@ -145,6 +150,11 @@ const SEARCH_DATA = [
   { title: 'WordPress Speed Optimization', desc: 'Core Web Vitals, image optimization, caching, and plugin audits.', category: 'Services', href: 'wordpress-speed.html' },
   { title: 'Web Accessibility (WCAG)', desc: 'WCAG 2.1 AA audits, remediation, and ADA compliance for business websites.', category: 'Services', href: 'web-accessibility.html' },
   { title: 'Traditional Web Design', desc: 'Static HTML/CSS sites — fast, secure, no CMS needed.', category: 'Services', href: 'traditional.html' },
+  { title: 'Website Redesign', desc: 'Rebuild an outdated site — content migrated, rankings preserved.', category: 'Services', href: 'cape-cod-website-redesign.html' },
+  { title: 'Social Media Marketing', desc: 'Content creation, community management, and paid social ads.', category: 'Services', href: 'cape-cod-social-media-marketing.html' },
+  { title: 'Email Marketing', desc: 'Campaign strategy, templates, and monthly sends in Mailchimp or Klaviyo.', category: 'Services', href: 'cape-cod-email-marketing.html' },
+  { title: 'Google Business Profile', desc: 'GBP setup, optimization, and review strategy for local pack rankings.', category: 'Services', href: 'cape-cod-google-business-profile.html' },
+  { title: 'WordPress Maintenance', desc: 'Monthly updates, backups, and security for any host.', category: 'Services', href: 'wordpress-maintenance.html' },
   { title: 'What Web Design Actually Does', desc: 'How a professional website drives real business results.', category: 'Whitepapers', href: 'wp-what-web-design-does.html' },
   { title: 'Is a Website Worth the Investment?', desc: 'A clear-eyed look at ROI for small business websites.', category: 'Whitepapers', href: 'wp-investment-value.html' },
   { title: 'DIY vs. Professional Web Design', desc: 'When to build it yourself and when to hire a pro.', category: 'Whitepapers', href: 'wp-diy-vs-pro.html' },
@@ -418,6 +428,13 @@ function Header() {
                   <div className="nav-dd-desc">WooCommerce &amp; Shopify storefronts that sell.</div>
                 </div>
               </a>
+              <a href="cape-cod-website-redesign.html" className="nav-dd-item">
+                <span className="nav-dd-glyph blue">↻</span>
+                <div>
+                  <div className="nav-dd-title">Website Redesign</div>
+                  <div className="nav-dd-desc">Rebuild an outdated site without losing your rankings.</div>
+                </div>
+              </a>
 
               {/* Grow & Market */}
               <div className="nav-dd-group nav-dd-group--sep">Grow &amp; Market</div>
@@ -449,6 +466,27 @@ function Header() {
                   <div className="nav-dd-desc">Logos, color, print — so the site fits the rest of you.</div>
                 </div>
               </a>
+              <a href="cape-cod-social-media-marketing.html" className="nav-dd-item">
+                <span className="nav-dd-glyph orange">◍</span>
+                <div>
+                  <div className="nav-dd-title">Social Media Marketing</div>
+                  <div className="nav-dd-desc">Content, community management, and paid social.</div>
+                </div>
+              </a>
+              <a href="cape-cod-email-marketing.html" className="nav-dd-item">
+                <span className="nav-dd-glyph orange">✎</span>
+                <div>
+                  <div className="nav-dd-title">Email Marketing</div>
+                  <div className="nav-dd-desc">Campaigns and newsletters in Mailchimp or Klaviyo.</div>
+                </div>
+              </a>
+              <a href="cape-cod-google-business-profile.html" className="nav-dd-item">
+                <span className="nav-dd-glyph orange">◎</span>
+                <div>
+                  <div className="nav-dd-title">Google Business Profile</div>
+                  <div className="nav-dd-desc">Rank in the local 3-pack and Google Maps.</div>
+                </div>
+              </a>
               <a href="ai-apps.html" className="nav-dd-item">
                 <span className="nav-dd-glyph navy">⌘</span>
                 <div>
@@ -478,6 +516,13 @@ function Header() {
                 <div>
                   <div className="nav-dd-title">Hosting + Care Plans</div>
                   <div className="nav-dd-desc">Managed hosting with a human on the other end.</div>
+                </div>
+              </a>
+              <a href="wordpress-maintenance.html" className="nav-dd-item">
+                <span className="nav-dd-glyph green">⚙</span>
+                <div>
+                  <div className="nav-dd-title">WordPress Maintenance</div>
+                  <div className="nav-dd-desc">Monthly updates and security for any host.</div>
                 </div>
               </a>
               <a href="wordpress-speed.html" className="nav-dd-item">
