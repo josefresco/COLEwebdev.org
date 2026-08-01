@@ -62,7 +62,7 @@ function UpdatesPage() {
           <div className="shell">
             <span className="eyebrow um-eyebrow">Services · Updates &amp; Maintenance</span>
             <h1 className="um-hero-hl">
-              Need something changed? <em>We'll handle it.</em>
+              Cape Cod Website Updates <em>&amp; Maintenance.</em>
             </h1>
             <p className="um-hero-sub">
               Simple, hourly-rate edits for businesses that need content updated, pages added, or small changes made, without committing to a monthly plan. You tell us what to fix. We fix it.

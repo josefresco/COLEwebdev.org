@@ -107,7 +107,7 @@ function WordPressPage() {
           <div className="shell">
             <span className="eyebrow wp-eyebrow">Services · WordPress Website Design</span>
             <h1 className="wp-hero-hl">
-              WordPress, built <em>the right way.</em>
+              Cape Cod WordPress <em>Design + Build.</em>
             </h1>
             <p className="wp-hero-sub">
               The world's most powerful CMS — configured lean, designed custom, and handed off so you can actually run it. No bloated themes, no plugin overload, no "it was working yesterday."

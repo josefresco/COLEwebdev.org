@@ -279,7 +279,7 @@ function AiAppsPage() {
           <div className="shell">
             <span className="eyebrow ai-eyebrow">Services · AI Studio</span>
             <h1 className="ai-hero-hl">
-              AI built around<br /><em>your</em> business.
+              Custom AI Tools <em>for Cape Cod.</em>
             </h1>
             <p className="ai-hero-sub">
               No generic tools. No off-the-shelf templates. Every app we build is custom — scoped to your exact workflow, built to solve a real problem. We take today's best AI tools and turn them into practical solutions small business owners can actually use and rely on.

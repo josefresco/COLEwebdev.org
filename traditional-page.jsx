@@ -100,7 +100,7 @@ function TraditionalPage() {
           <div className="shell">
             <span className="eyebrow tr-eyebrow">Services · Traditional Website Design</span>
             <h1 className="tr-hero-hl">
-              Hand-built. <em>No CMS.</em><br />No compromise.
+              Cape Cod Hand-Coded <em>Website Design.</em>
             </h1>
             <p className="tr-hero-sub">
               Pure HTML, CSS, and JavaScript — crafted line by line for businesses that want maximum speed, security, and design precision without the overhead of a content management system.

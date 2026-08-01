@@ -124,7 +124,7 @@ function ConsultingPage() {
           <div className="shell">
             <span className="eyebrow cn-eyebrow">Services · Consulting</span>
             <h1 className="cn-hero-hl">
-              Expert guidance for your <em>next move.</em>
+              Cape Cod Web <em>&amp; Business Consulting.</em>
             </h1>
             <p className="cn-hero-sub">
               COLEwebdev consulting puts 35+ years of hands-on web and business experience to work for you — from website strategy and platform decisions to training, audits, and one-on-one coaching for Cape Cod businesses and beyond.

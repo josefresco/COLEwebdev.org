@@ -56,7 +56,7 @@ function BrandingPage() {
           <div className="shell">
             <span className="eyebrow br-eyebrow">Services · Branding</span>
             <h1 className="br-hero-hl">
-              A brand <em>worth remembering.</em>
+              Cape Cod Logo <em>&amp; Brand Design.</em>
             </h1>
             <p className="br-hero-sub">
               Logos, color systems, typography, and print collateral — built to work together and built to last. We make sure your brand looks as good offline as it does online.

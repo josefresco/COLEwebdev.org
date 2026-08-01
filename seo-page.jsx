@@ -75,7 +75,7 @@ function SeoPage() {
           <div className="shell">
             <span className="eyebrow seo-eyebrow">Services · SEO &amp; Local Search</span>
             <h1 className="seo-hero-hl">
-              Get found where your<br />customers are <em>searching.</em>
+              Cape Cod SEO <em>&amp; Local Search.</em>
             </h1>
             <p className="seo-hero-sub">
               Ethical, measurable local SEO for small businesses on Cape Cod. No smoke, no mirrors — just higher rankings, more calls, and results you can actually see.

@@ -68,7 +68,7 @@ function HostingPage() {
           <div className="shell">
             <span className="eyebrow hc-eyebrow">Services · Hosting + Care Plans</span>
             <h1 className="hc-hero-hl">
-              Your site, <em>taken care of.</em>
+              Cape Cod WordPress Hosting <em>+ Care Plans.</em>
             </h1>
             <p className="hc-hero-sub">
               Managed WordPress hosting, daily backups, security monitoring, and a real person to call — so you can run your business without worrying about your website.

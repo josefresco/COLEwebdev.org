@@ -131,7 +131,7 @@ function EcommercePage() {
           <div className="shell">
             <span className="eyebrow ec-eyebrow">Services · E-Commerce</span>
             <h1 className="ec-hero-hl">
-              A store that <em>works as hard</em><br />as you do.
+              Cape Cod E-Commerce <em>Website Design.</em>
             </h1>
             <p className="ec-hero-sub">
               WooCommerce and Shopify storefronts built to sell — with clean design, fast checkout, and all the setup done for you. We build it, you run it.
