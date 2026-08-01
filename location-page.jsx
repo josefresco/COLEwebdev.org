@@ -1,5 +1,37 @@
 /* global React, ReactDOM */
 
+const INDUSTRY_URLS = {
+  'Nonprofits': 'cape-cod-nonprofit-web-design.html',
+  'Churches': 'cape-cod-church-web-design.html',
+  'Hospitality': 'cape-cod-hospitality-web-design.html',
+  'Hotels': 'cape-cod-hospitality-web-design.html',
+  'Restaurants': 'cape-cod-restaurant-web-design.html',
+  'Food & Beverage': 'cape-cod-restaurant-web-design.html',
+  'Real Estate': 'cape-cod-real-estate-web-design.html',
+  'Chambers': 'cape-cod-chamber-web-design.html',
+  'Chambers of Commerce': 'cape-cod-chamber-web-design.html',
+  'Retail': 'cape-cod-retail-web-design.html',
+  'Marine': 'cape-cod-marine-web-design.html',
+  'Boating': 'cape-cod-marine-web-design.html',
+  'Healthcare': 'cape-cod-health-web-design.html',
+  'Health': 'cape-cod-health-web-design.html',
+  'Medical': 'cape-cod-health-web-design.html',
+  'Contractors': 'cape-cod-contractor-web-design.html',
+  'Construction': 'cape-cod-contractor-web-design.html',
+  'Legal': 'cape-cod-legal-web-design.html',
+  'Law': 'cape-cod-legal-web-design.html',
+  'Landscaping': 'cape-cod-landscaping-web-design.html',
+  'Automotive': 'cape-cod-automotive-web-design.html',
+  'Pet Care': 'cape-cod-pet-care-web-design.html',
+  'Photography': 'cape-cod-photography-web-design.html',
+  'Salons': 'cape-cod-salon-web-design.html',
+  'Salon': 'cape-cod-salon-web-design.html',
+  'Vacation Rentals': 'cape-cod-vacation-rental-web-design.html',
+  'Weddings': 'cape-cod-wedding-web-design.html',
+  'Wineries': 'cape-cod-winery-web-design.html',
+  'Breweries': 'cape-cod-winery-web-design.html',
+};
+
 const SERVICES = [
   { glyph: '◇', color: 'green', title: 'Web Design', desc: 'Modern, mobile-first websites built from scratch — no templates.', href: 'website-design.html' },
   { glyph: '↗', color: 'orange', title: 'SEO & Local Search', desc: 'Show up when your neighbors search for what you do.', href: 'seo.html' },
@@ -68,9 +100,12 @@ function LocationPage() {
               <p className="lp-intro-body">{loc.localContext}</p>
               {loc.industries && loc.industries.length > 0 && (
                 <div className="lp-industries">
-                  {loc.industries.map((ind, i) => (
-                    <span key={i} className="lp-industry-chip">{ind}</span>
-                  ))}
+                  {loc.industries.map((ind, i) => {
+                    const href = INDUSTRY_URLS[ind];
+                    return href
+                      ? <a key={i} href={href} className="lp-industry-chip">{ind}</a>
+                      : <span key={i} className="lp-industry-chip">{ind}</span>;
+                  })}
                 </div>
               )}
               <div className="lp-intro-stats">
@@ -256,6 +291,19 @@ function LocationPage() {
               { name: 'Restaurants', href: 'cape-cod-restaurant-web-design.html' },
               { name: 'Real Estate', href: 'cape-cod-real-estate-web-design.html' },
               { name: 'Chambers', href: 'cape-cod-chamber-web-design.html' },
+              { name: 'Retail', href: 'cape-cod-retail-web-design.html' },
+              { name: 'Marine', href: 'cape-cod-marine-web-design.html' },
+              { name: 'Healthcare', href: 'cape-cod-health-web-design.html' },
+              { name: 'Contractors', href: 'cape-cod-contractor-web-design.html' },
+              { name: 'Legal', href: 'cape-cod-legal-web-design.html' },
+              { name: 'Landscaping', href: 'cape-cod-landscaping-web-design.html' },
+              { name: 'Automotive', href: 'cape-cod-automotive-web-design.html' },
+              { name: 'Pet Care', href: 'cape-cod-pet-care-web-design.html' },
+              { name: 'Photography', href: 'cape-cod-photography-web-design.html' },
+              { name: 'Salons', href: 'cape-cod-salon-web-design.html' },
+              { name: 'Vacation Rentals', href: 'cape-cod-vacation-rental-web-design.html' },
+              { name: 'Weddings', href: 'cape-cod-wedding-web-design.html' },
+              { name: 'Wineries', href: 'cape-cod-winery-web-design.html' },
             ].map(function(ind, i) {
               return (
                 <a key={i} href={ind.href} className="lp-ind-link">{ind.name} →</a>
