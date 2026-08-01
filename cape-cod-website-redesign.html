@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Cape Cod Website Redesign — COLEwebdev</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<meta name="description" content="Website redesign for Cape Cod businesses. We rebuild from scratch while preserving SEO rankings, migrating your content, and improving conversions." />
+<link rel="canonical" href="https://colewebdev.org/cape-cod-website-redesign.html" />
+<link rel="stylesheet" href="styles.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Cape Cod Website Redesign",
+  "url": "https://colewebdev.org/cape-cod-website-redesign.html",
+  "description": "Website redesign for Cape Cod businesses — we rebuild your site from scratch while preserving your SEO rankings, migrating content, and improving conversions.",
+  "provider": { "@type": "ProfessionalService", "name": "COLEwebdev", "url": "https://colewebdev.org/" },
+  "areaServed": { "@type": "Place", "name": "Cape Cod, Massachusetts" },
+  "serviceType": "Website Redesign"
+}
+</script>
+<style>
+/* ── Website Redesign page ── */
+
+/* Hero */
+.wr-hero {
+  display: flex;
+  flex-direction: column;
+}
+.wr-hero-img {
+  height: 48vh;
+  min-height: 280px;
+  background-image: url('assets/portfolio-hero.jpg');
+  background-size: cover;
+  background-position: center 40%;
+  position: relative;
+  flex-shrink: 0;
+  transform: scale(1.03);
+  transition: transform 8s ease;
+}
+.wr-hero-img.loaded { transform: scale(1); }
+.wr-hero-img::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 120px;
+  background: linear-gradient(to bottom, transparent, var(--paper));
+}
+.wr-hero-text {
+  background: var(--paper);
+  padding: 52px 0 64px;
+}
+.wr-hero-hl {
+  font-family: var(--serif);
+  font-size: clamp(36px, 5vw, 68px);
+  line-height: 1.1;
+  margin: 16px 0 20px;
+  font-weight: 400;
+  color: var(--ink);
+  max-width: 18ch;
+}
+.wr-hero-hl em { font-style: italic; color: var(--brand-blue); }
+.wr-hero-sub {
+  font-size: clamp(15px, 1.6vw, 17px);
+  color: var(--muted);
+  max-width: 54ch;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Content sections */
+.wr-section {
+  padding: var(--pad-section) 0;
+  background: var(--paper);
+}
+.wr-section--alt {
+  background: white;
+}
+.wr-section-hl {
+  font-family: var(--serif);
+  font-size: clamp(28px, 3.2vw, 42px);
+  line-height: 1.18;
+  margin: 12px 0 16px;
+  color: var(--ink);
+  font-weight: 400;
+}
+.wr-section-hl em { font-style: italic; color: var(--brand-blue); }
+.wr-section-sub {
+  font-size: clamp(15px, 1.4vw, 16px);
+  line-height: 1.75;
+  color: var(--ink-2);
+  max-width: 58ch;
+  margin: 0;
+}
+.wr-body {
+  font-size: clamp(15px, 1.4vw, 16px);
+  line-height: 1.78;
+  color: var(--ink-2);
+  max-width: 52ch;
+  margin: 0 0 18px;
+}
+.wr-body strong { color: var(--ink); font-weight: 600; }
+
+/* Signs grid */
+.wr-signs-hd {
+  margin-bottom: 48px;
+  max-width: 640px;
+}
+.wr-signs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.wr-sign-card {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: var(--r-xl);
+  padding: 24px 22px;
+  box-shadow: var(--shadow-sm);
+}
+.wr-sign-icon {
+  font-size: 20px;
+  color: var(--brand-blue);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.wr-sign-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+.wr-sign-body {
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: var(--ink-2);
+  margin: 0;
+}
+
+/* Split layout */
+.wr-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: start;
+}
+
+/* Bullet points */
+.wr-points {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.wr-point {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 16px;
+  align-items: baseline;
+}
+.wr-point-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--brand-blue);
+  font-weight: 600;
+  padding-top: 2px;
+}
+.wr-point-body {
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: var(--ink-2);
+}
+
+/* Compare card */
+.wr-split-visual {
+  position: relative;
+}
+.wr-compare-card {
+  border: 1px solid var(--line);
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+.wr-compare-row {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 0;
+  border-bottom: 1px solid var(--line);
+  padding: 14px 20px;
+}
+.wr-compare-row:last-child { border-bottom: none; }
+.wr-compare-row--head {
+  background: var(--navy);
+  color: rgba(255,255,255,0.6);
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 12px 20px;
+}
+.wr-compare-row--head span:last-child { color: var(--brand-green); }
+.wr-compare-factor {
+  font-size: 13.5px;
+  color: var(--ink);
+  font-weight: 500;
+}
+.wr-compare-new {
+  font-size: 13px;
+  color: var(--muted);
+}
+.wr-compare-redesign {
+  font-size: 13px;
+  color: var(--brand-blue);
+  font-weight: 500;
+}
+
+/* Process */
+.wr-process {
+  padding: var(--pad-section) 0;
+  background: var(--paper-2);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.wr-process-hd { margin-bottom: 40px; }
+.wr-process-hl {
+  font-family: var(--serif);
+  font-size: clamp(26px, 3vw, 38px);
+  color: var(--ink);
+  font-weight: 400;
+  margin: 10px 0 0;
+}
+.wr-process-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+.wr-process-step {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+.wr-process-num {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: var(--brand-blue);
+  font-weight: 600;
+  padding-top: 3px;
+  flex-shrink: 0;
+}
+.wr-process-label {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+.wr-process-body {
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: var(--ink-2);
+  margin: 0;
+}
+.wr-process-more {
+  margin-top: 40px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+}
+.wr-process-link {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--brand-blue);
+  text-decoration: none;
+}
+.wr-process-link:hover { text-decoration: underline; }
+
+/* Preserve grid */
+.wr-preserve-hd {
+  margin-bottom: 48px;
+  max-width: 640px;
+}
+.wr-preserve-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.wr-preserve-card {
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: var(--r-xl);
+  padding: 28px 26px;
+  box-shadow: var(--shadow-sm);
+}
+.wr-preserve-icon {
+  font-size: 22px;
+  color: var(--brand-blue);
+  display: block;
+  margin-bottom: 14px;
+}
+.wr-preserve-label {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+.wr-preserve-body {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--ink-2);
+  margin: 0;
+}
+
+/* Approach cards */
+.wr-approaches {
+  padding: var(--pad-section) 0;
+  background: var(--paper-2);
+  border-top: 1px solid var(--line);
+}
+.wr-approaches-hd { margin-bottom: 40px; }
+.wr-approaches-hl {
+  font-family: var(--serif);
+  font-size: clamp(26px, 3vw, 38px);
+  color: var(--ink);
+  font-weight: 400;
+  margin: 10px 0 0;
+}
+.wr-approaches-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.wr-approach-card {
+  border-radius: var(--r-xl);
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.wr-approach-card--wp {
+  background: #0E2A4A;
+  border: 1px solid rgba(0,115,170,0.3);
+}
+.wr-approach-card--tr {
+  background: #1E2330;
+  border: 1px solid rgba(108,142,191,0.25);
+}
+.wr-approach-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.wr-approach-icon {
+  font-size: 20px;
+  color: rgba(255,255,255,0.5);
+}
+.wr-approach-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+}
+.wr-approach-hl {
+  font-family: var(--serif);
+  font-size: clamp(22px, 2.4vw, 28px);
+  color: white;
+  font-weight: 400;
+  margin: 0;
+  line-height: 1.2;
+}
+.wr-approach-card--wp .wr-approach-hl em { color: #3EB0EF; font-style: italic; }
+.wr-approach-card--tr .wr-approach-hl em { color: #7BC043; font-style: italic; }
+.wr-approach-body {
+  font-size: 14px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.65);
+  margin: 0;
+}
+.wr-approach-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+.wr-approach-list li {
+  font-size: 13px;
+  color: rgba(255,255,255,0.55);
+  padding-left: 16px;
+  position: relative;
+}
+.wr-approach-list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: rgba(255,255,255,0.25);
+}
+.wr-approach-btn { align-self: flex-start; margin-top: 4px; }
+.wr-approach-btn--tr {
+  color: rgba(255,255,255,0.75);
+  border-color: rgba(255,255,255,0.25);
+}
+.wr-approach-btn--tr:hover {
+  color: white;
+  border-color: rgba(255,255,255,0.6);
+}
+
+/* CTA */
+.wr-cta-section { padding: var(--pad-section) 0; }
+.wr-cta {
+  background: var(--ink);
+  border-radius: var(--r-xl);
+  padding: 64px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 40px;
+  align-items: center;
+}
+.wr-cta-hl {
+  font-family: var(--serif);
+  font-size: clamp(26px, 3vw, 38px);
+  color: white;
+  margin: 0 0 12px;
+  font-weight: 400;
+}
+.wr-cta-hl em { font-style: italic; color: var(--brand-green); }
+.wr-cta-sub {
+  color: rgba(255,255,255,0.65);
+  font-size: 15px;
+  line-height: 1.65;
+  max-width: 48ch;
+  margin: 0;
+}
+.wr-cta-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-end;
+  flex-shrink: 0;
+}
+.wr-area-note { font-size: 13px; color: rgba(255,255,255,0.45); margin: 8px 0 0; }
+.wr-area-note a { color: var(--brand-green); }
+.wr-cta-guides {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.wr-cta-guides-label {
+  font-size: 11px;
+  font-family: var(--mono);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+}
+.wr-cta-guide-link { font-size: 13px; color: rgba(255,255,255,0.7); text-decoration: none; }
+.wr-cta-guide-link:hover { color: white; }
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .wr-process-steps { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 960px) {
+  .wr-split {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .wr-signs-grid { grid-template-columns: 1fr 1fr; }
+  .wr-approaches-grid { grid-template-columns: 1fr; }
+  .wr-cta { grid-template-columns: 1fr; }
+  .wr-cta-actions { align-items: flex-start; flex-direction: row; flex-wrap: wrap; }
+  .wr-preserve-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+  .wr-signs-grid { grid-template-columns: 1fr; }
+  .wr-process-steps { grid-template-columns: 1fr; gap: 24px; }
+  .wr-preserve-grid { grid-template-columns: 1fr; }
+  .wr-point { grid-template-columns: 1fr; gap: 4px; }
+}
+@media (max-width: 560px) {
+  .wr-hero-img { height: 36vh; }
+  .wr-cta { padding: 36px 28px; }
+}
+</style>
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="COLEwebdev" />
+<meta property="og:title" content="Cape Cod Website Redesign — COLEwebdev" />
+<meta property="og:description" content="Website redesign for Cape Cod businesses. We rebuild from scratch while preserving SEO rankings, migrating your content, and improving conversions." />
+<meta property="og:url" content="https://colewebdev.org/cape-cod-website-redesign.html" />
+<meta property="og:image" content="https://colewebdev.org/assets/portfolio-hero.jpg" />
+<link rel="icon" href="favicon.png" type="image/png" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://colewebdev.org/" },
+    { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://colewebdev.org/services.html" },
+    { "@type": "ListItem", "position": 3, "name": "Website Redesign", "item": "https://colewebdev.org/cape-cod-website-redesign.html" }
+  ]
+}
+</script>
+</head>
+<body>
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" integrity="sha384-DGyLxAyjq0f9SPpVevD6IgztCFlnMF6oW/XQGmfe+IsZ8TqEiDrcHkMLKI6fiB/Z" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" integrity="sha384-gTGxhz21lVGYNMcdJOyq01Edg0jhn/c22nsx0kyqP0TxaV5WVdsSH1fSDUf5YJj1" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="parts-hero.jsx"></script>
+<script type="text/babel" src="parts-services.jsx"></script>
+<script type="text/babel" src="parts-rest.jsx"></script>
+<script type="text/babel" src="cape-cod-website-redesign-page.jsx"></script>
+</body>
+</html>

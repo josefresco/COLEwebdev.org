@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Cape Cod Google Business Profile Optimization — COLEwebdev</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<meta name="description" content="Google Business Profile setup and optimization for Cape Cod businesses. Rank in the local 3-pack and Google Maps with a fully optimized GBP listing." />
+<link rel="canonical" href="https://colewebdev.org/cape-cod-google-business-profile.html" />
+<link rel="stylesheet" href="styles.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Google Business Profile Optimization",
+  "url": "https://colewebdev.org/cape-cod-google-business-profile.html",
+  "description": "Google Business Profile setup and optimization for Cape Cod businesses. Rank in the local 3-pack and Google Maps with a fully optimized GBP listing.",
+  "provider": { "@type": "ProfessionalService", "name": "COLEwebdev", "url": "https://colewebdev.org/" },
+  "areaServed": { "@type": "Place", "name": "Cape Cod, Massachusetts" },
+  "serviceType": "Google Business Profile Optimization"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://colewebdev.org/" },
+    { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://colewebdev.org/services.html" },
+    { "@type": "ListItem", "position": 3, "name": "Google Business Profile Optimization", "item": "https://colewebdev.org/cape-cod-google-business-profile.html" }
+  ]
+}
+</script>
+<style>
+/* ── GBP Optimization page ── */
+
+/* Hero */
+.gbp-hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 52vh;
+  display: flex;
+  align-items: center;
+}
+.gbp-hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 110% -10%, rgba(0,115,170,0.4), transparent 60%),
+    radial-gradient(ellipse 60% 80% at -10% 110%, rgba(92,192,53,0.15), transparent 60%),
+    linear-gradient(160deg, #0E2A4A 0%, #14385C 45%, #1B4A77 100%);
+}
+.gbp-hero-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent, transparent 48px,
+    rgba(255,255,255,0.018) 48px, rgba(255,255,255,0.018) 49px
+  );
+}
+.gbp-hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 100px 0 96px;
+  width: 100%;
+}
+.gbp-eyebrow {
+  color: var(--brand-green) !important;
+}
+.gbp-eyebrow::before {
+  background: var(--brand-green) !important;
+}
+.gbp-hero-hl {
+  font-family: var(--serif);
+  font-size: clamp(32px, 5vw, 70px);
+  line-height: 1.08;
+  margin: 18px 0 22px;
+  font-weight: 400;
+  color: white;
+  max-width: 18ch;
+}
+.gbp-hero-hl em { font-style: italic; color: var(--brand-green); }
+.gbp-hero-sub {
+  font-size: clamp(15px, 1.6vw, 18px);
+  color: rgba(255,255,255,0.72);
+  max-width: 52ch;
+  line-height: 1.7;
+  margin: 0 0 36px;
+}
+.gbp-hero-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.gbp-ghost {
+  color: rgba(255,255,255,0.7) !important;
+  border-color: rgba(255,255,255,0.22) !important;
+}
+
+/* Why section */
+.gbp-why {
+  padding: var(--pad-section) 0;
+  background: var(--paper);
+}
+.gbp-why-grid {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 80px;
+  align-items: start;
+}
+.gbp-why-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  position: sticky;
+  top: 32px;
+}
+.gbp-stat {
+  border-left: 3px solid var(--brand-blue);
+  padding-left: 20px;
+}
+.gbp-stat-num {
+  display: block;
+  font-family: var(--serif);
+  font-size: clamp(36px, 4vw, 52px);
+  line-height: 1;
+  color: var(--ink);
+  font-weight: 400;
+  margin-bottom: 6px;
+}
+.gbp-stat-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  line-height: 1.5;
+  display: block;
+}
+.gbp-why-body {
+  display: flex;
+  flex-direction: column;
+}
+.gbp-why-hl {
+  font-family: var(--serif);
+  font-size: clamp(26px, 3vw, 40px);
+  line-height: 1.18;
+  margin: 12px 0 24px;
+  color: var(--ink);
+  font-weight: 400;
+}
+.gbp-why-hl em { font-style: italic; color: var(--brand-blue); }
+.gbp-body {
+  font-size: clamp(15px, 1.4vw, 16px);
+  line-height: 1.78;
+  color: var(--ink-2);
+  max-width: 52ch;
+  margin: 0 0 18px;
+}
+
+/* What we optimize */
+.gbp-optimize {
+  padding: var(--pad-section) 0;
+  background: white;
+}
+.gbp-optimize-hd {
+  margin-bottom: 48px;
+}
+.gbp-optimize-hl {
+  font-family: var(--serif);
+  font-size: clamp(26px, 3vw, 40px);
+  color: var(--ink);
+  font-weight: 400;
+  margin: 12px 0 10px;
+}
+.gbp-optimize-sub {
+  font-size: 16px;
+  color: var(--muted);
+  max-width: 54ch;
+  line-height: 1.6;
+  margin: 0;
+}
+.gbp-optimize-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+.gbp-opt-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--r-xl);
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+.gbp-opt-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+.gbp-opt-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(0,115,170,0.1);
+  color: var(--brand-blue);
+  display: grid;
+  place-items: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+.gbp-opt-name {
+  font-family: var(--serif);
+  font-size: 20px;
+  color: var(--ink);
+  font-weight: 400;
+  margin: 0;
+}
+.gbp-opt-body {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* Review management */
+.gbp-reviews {
+  padding: var(--pad-section) 0;
+  background: var(--navy);
+  position: relative;
+  overflow: hidden;
+}
+.gbp-reviews::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent, transparent 40px,
+    rgba(255,255,255,0.015) 40px, rgba(255,255,255,0.015) 41px
+  );
+}
+.gbp-reviews-hd {
+  margin-bottom: 52px;
+  position: relative;
+  z-index: 1;
+}
+.gbp-reviews .eyebrow { color: var(--brand-green); }
+.gbp-reviews .eyebrow::before { background: var(--brand-green); }
+.gbp-reviews-hl {
+  font-family: var(--serif);
+  font-size: clamp(26px, 3vw, 40px);
+  color: white;
+  font-weight: 400;
+  margin: 12px 0 14px;
+}
+.gbp-reviews-hl em { font-style: italic; color: var(--brand-green); }
+.gbp-reviews-sub {
+  font-size: 15px;
+  color: rgba(255,255,255,0.65);
+  max-width: 58ch;
+  line-height: 1.65;
+  margin: 0;
+}
+.gbp-reviews-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  position: relative;
+  z-index: 1;
+}
+.gbp-review-step {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: var(--r-lg);
+  padding: 32px 26px 28px;
+  backdrop-filter: blur(4px);
+}
+.gbp-review-num {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: var(--brand-green);
+  margin-bottom: 8px;
+}
+.gbp-review-label {
+  font-family: var(--serif);
+  font-size: 20px;
+  color: white;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+.gbp-review-body {
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: rgba(255,255,255,0.68);
+  margin: 0;
+}
+
+/* Ongoing management */
+.gbp-manage {
+  padding: var(--pad-section) 0;
+  background: var(--paper-2);
+  border-top: 1px solid var(--line);
+}
+.gbp-manage-hd {
+  margin-bottom: 44px;
+}
+.gbp-manage-hl {
+  font-family: var(--serif);
+  font-size: clamp(26px, 3vw, 40px);
+  color: var(--ink);
+  font-weight: 400;
+  margin: 12px 0 14px;
+}
+.gbp-manage-hl em { font-style: italic; color: var(--brand-blue); }
+.gbp-manage-sub {
+  font-size: 16px;
+  color: var(--muted);
+  max-width: 56ch;
+  line-height: 1.6;
+  margin: 0;
+}
+.gbp-manage-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+.gbp-manage-card {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: var(--r-xl);
+  padding: 28px 28px;
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  box-shadow: var(--shadow-sm);
+}
+.gbp-manage-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(0,115,170,0.1);
+  color: var(--brand-blue);
+  display: grid;
+  place-items: center;
+  font-size: 18px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.gbp-manage-label {
+  font-family: var(--serif);
+  font-size: 19px;
+  color: var(--ink);
+  font-weight: 400;
+  margin-bottom: 6px;
+}
+.gbp-manage-desc {
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* CTA */
+.gbp-cta-section { padding: var(--pad-section) 0; background: white; }
+.gbp-cta {
+  background: var(--ink);
+  border-radius: var(--r-xl);
+  padding: 64px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 40px;
+  align-items: center;
+}
+.gbp-cta-hl {
+  font-family: var(--serif);
+  font-size: clamp(26px, 3vw, 38px);
+  color: white;
+  margin: 0 0 12px;
+  font-weight: 400;
+}
+.gbp-cta-hl em { font-style: italic; color: var(--brand-green); }
+.gbp-cta-sub {
+  color: rgba(255,255,255,0.65);
+  font-size: 15px;
+  line-height: 1.65;
+  max-width: 48ch;
+  margin: 0;
+}
+.gbp-cta-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-end;
+  flex-shrink: 0;
+}
+.gbp-area-note { font-size: 13px; color: rgba(255,255,255,0.45); margin: 8px 0 0; }
+.gbp-area-note a { color: var(--brand-green); }
+.gbp-related { display: flex; flex-direction: column; gap: 8px; margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); }
+.gbp-related-label { font-size: 11px; font-family: var(--mono); letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 4px; }
+.gbp-related-link { font-size: 13px; color: rgba(255,255,255,0.7); text-decoration: none; }
+.gbp-related-link:hover { color: white; }
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .gbp-why-grid { grid-template-columns: 240px 1fr; gap: 56px; }
+  .gbp-why-stats { position: static; }
+}
+@media (max-width: 960px) {
+  .gbp-why-grid { grid-template-columns: 1fr; gap: 48px; }
+  .gbp-why-stats { flex-direction: row; gap: 24px; flex-wrap: wrap; }
+  .gbp-stat { flex: 1 1 160px; }
+  .gbp-optimize-grid { grid-template-columns: repeat(2, 1fr); }
+  .gbp-reviews-steps { grid-template-columns: repeat(2, 1fr); }
+  .gbp-cta { grid-template-columns: 1fr; }
+  .gbp-cta-actions { align-items: flex-start; flex-direction: row; flex-wrap: wrap; }
+}
+@media (max-width: 560px) {
+  .gbp-optimize-grid { grid-template-columns: 1fr; }
+  .gbp-reviews-steps { grid-template-columns: 1fr; }
+  .gbp-manage-grid { grid-template-columns: 1fr; }
+  .gbp-cta { padding: 36px 28px; }
+  .gbp-hero-actions { flex-direction: column; align-items: flex-start; }
+}
+</style>
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="COLEwebdev" />
+<meta property="og:title" content="Cape Cod Google Business Profile Optimization — COLEwebdev" />
+<meta property="og:description" content="Google Business Profile setup and optimization for Cape Cod businesses. Rank in the local 3-pack and Google Maps with a fully optimized GBP listing." />
+<meta property="og:url" content="https://colewebdev.org/cape-cod-google-business-profile.html" />
+<meta property="og:image" content="https://colewebdev.org/assets/portfolio-hero.jpg" />
+<link rel="icon" href="favicon.png" type="image/png" />
+</head>
+<body>
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" integrity="sha384-DGyLxAyjq0f9SPpVevD6IgztCFlnMF6oW/XQGmfe+IsZ8TqEiDrcHkMLKI6fiB/Z" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" integrity="sha384-gTGxhz21lVGYNMcdJOyq01Edg0jhn/c22nsx0kyqP0TxaV5WVdsSH1fSDUf5YJj1" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="parts-hero.jsx"></script>
+<script type="text/babel" src="parts-services.jsx"></script>
+<script type="text/babel" src="parts-rest.jsx"></script>
+<script type="text/babel" src="cape-cod-google-business-profile-page.jsx"></script>
+</body>
+</html>
