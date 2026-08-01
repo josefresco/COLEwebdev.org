@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Cape Cod WordPress Maintenance — COLEwebdev</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<meta name="description" content="Monthly WordPress maintenance for Cape Cod businesses — updates, security, backups, and a local team to call when something breaks. No long-term contracts." />
+<link rel="canonical" href="https://colewebdev.org/wordpress-maintenance.html" />
+<link rel="stylesheet" href="styles.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "WordPress Maintenance",
+  "url": "https://colewebdev.org/wordpress-maintenance.html",
+  "description": "Monthly WordPress maintenance for Cape Cod businesses. Core updates, plugin and theme updates, security scans, backup verification, and priority support.",
+  "provider": { "@type": "ProfessionalService", "name": "COLEwebdev", "url": "https://colewebdev.org/" },
+  "areaServed": { "@type": "Place", "name": "Cape Cod, Massachusetts" },
+  "serviceType": "WordPress Maintenance"
+}
+</script>
+<style>
+/* ── WordPress Maintenance page ── */
+
+.wm-hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 56vh;
+  display: flex;
+  align-items: center;
+}
+.wm-hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 60% at 100% 0%, rgba(0,115,170,0.35), transparent 55%),
+    radial-gradient(ellipse 50% 60% at 0% 100%, rgba(0,60,100,0.40), transparent 55%),
+    linear-gradient(150deg, #071929 0%, #0E2A4A 55%, #0A2240 100%);
+}
+.wm-hero-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 18px,
+    rgba(255,255,255,0.02) 18px,
+    rgba(255,255,255,0.02) 19px
+  );
+}
+.wm-hero-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 100px 0 80px;
+}
+.wm-eyebrow { color: rgba(255,255,255,0.6); }
+.wm-hero-hl {
+  font-family: var(--serif);
+  font-size: clamp(40px, 6vw, 76px);
+  line-height: 1.05;
+  color: white;
+  font-weight: 400;
+  margin: 12px 0 20px;
+  letter-spacing: -1px;
+}
+.wm-hero-hl em { color: #5CC8F5; font-style: italic; }
+.wm-hero-sub {
+  font-size: 17px;
+  line-height: 1.65;
+  color: rgba(255,255,255,0.72);
+  max-width: 540px;
+  margin: 0 0 36px;
+}
+.wm-hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+.wm-ghost { color: rgba(255,255,255,0.85); border-color: rgba(255,255,255,0.3); }
+.wm-ghost:hover { border-color: rgba(255,255,255,0.7); color: white; }
+
+/* What's included */
+.wm-includes {
+  padding: 80px 0;
+  background: var(--paper);
+}
+.wm-includes-hd { margin-bottom: 48px; }
+.wm-includes-hl {
+  font-family: var(--serif);
+  font-size: clamp(28px, 3.5vw, 44px);
+  color: var(--ink);
+  font-weight: 400;
+  margin: 8px 0 0;
+}
+.wm-includes-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+.wm-inc-card {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: var(--r-xl);
+  padding: 26px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: var(--shadow-sm);
+}
+.wm-inc-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 11px;
+  display: grid;
+  place-items: center;
+  font-size: 17px;
+  flex-shrink: 0;
+}
+.wm-inc-title {
+  font-family: var(--serif);
+  font-size: 18px;
+  color: var(--ink);
+  font-weight: 400;
+}
+.wm-inc-body {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--ink-2);
+}
+
+/* Why maintenance matters */
+.wm-why {
+  padding: 80px 0;
+  background: var(--navy);
+}
+.wm-why-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+.wm-why-hl {
+  font-family: var(--serif);
+  font-size: clamp(28px, 3.5vw, 44px);
+  color: white;
+  font-weight: 400;
+  margin: 8px 0 20px;
+  line-height: 1.15;
+}
+.wm-why-p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.7);
+  margin: 0 0 16px;
+}
+.wm-why-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.wm-why-stat {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 14px;
+  padding: 22px 28px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.wm-why-stat-num {
+  font-family: var(--serif);
+  font-size: 36px;
+  color: #5CC8F5;
+  font-style: italic;
+  flex-shrink: 0;
+  min-width: 80px;
+}
+.wm-why-stat-label {
+  font-size: 14px;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.45;
+}
+
+/* Cost of skipping it */
+.wm-risks {
+  padding: 80px 0;
+  background: var(--paper-2);
+  border-top: 1px solid var(--line);
+}
+.wm-risks-hd { margin-bottom: 48px; }
+.wm-risks-hl {
+  font-family: var(--serif);
+  font-size: clamp(28px, 3.5vw, 44px);
+  color: var(--ink);
+  font-weight: 400;
+  margin: 8px 0 0;
+}
+.wm-risks-sub {
+  font-size: 14px;
+  color: var(--muted);
+  font-family: var(--mono);
+  letter-spacing: 0.04em;
+  margin-top: 8px;
+}
+.wm-risks-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+.wm-risk-card {
+  background: white;
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--brand-blue);
+  border-radius: var(--r-xl);
+  padding: 28px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: var(--shadow-sm);
+}
+.wm-risk-icon {
+  font-size: 18px;
+  color: var(--brand-blue);
+  line-height: 1;
+}
+.wm-risk-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  color: var(--ink);
+  font-weight: 400;
+}
+.wm-risk-body {
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--ink-2);
+}
+
+/* Host-agnostic note */
+.wm-note {
+  padding: 60px 0;
+  background: var(--paper);
+  border-top: 1px solid var(--line);
+}
+.wm-note-inner {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  background: rgba(0,115,170,0.06);
+  border: 1px solid rgba(0,115,170,0.18);
+  border-radius: var(--r-xl);
+  padding: 36px 40px;
+}
+.wm-note-glyph {
+  font-size: 32px;
+  color: var(--brand-blue);
+  flex-shrink: 0;
+  line-height: 1;
+  margin-top: 2px;
+}
+.wm-note-text { flex: 1; }
+.wm-note-title {
+  font-family: var(--serif);
+  font-size: 22px;
+  color: var(--ink);
+  font-weight: 400;
+  margin: 0 0 10px;
+}
+.wm-note-body {
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: var(--ink-2);
+  margin: 0 0 16px;
+}
+.wm-note-link {
+  font-size: 13px;
+}
+.wm-note-link a { color: var(--brand-blue); text-decoration: none; }
+.wm-note-link a:hover { text-decoration: underline; }
+
+/* CTA */
+.wm-cta {
+  padding: 80px 0;
+  background: var(--paper);
+  border-top: 1px solid var(--line);
+}
+.wm-cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.wm-cta-hl {
+  font-family: var(--serif);
+  font-size: clamp(24px, 3vw, 38px);
+  color: var(--ink);
+  font-weight: 400;
+  margin: 0 0 8px;
+  font-style: italic;
+}
+.wm-cta-sub {
+  font-size: 15px;
+  color: var(--ink-2);
+  margin: 0;
+}
+.wm-area-note { font-size: 13px; color: var(--muted); margin: 8px 0 0; }
+.wm-area-note a { color: var(--brand-blue); }
+.wm-related {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+.wm-related-label {
+  font-size: 11px;
+  font-family: var(--mono);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.wm-related-link { font-size: 13px; color: var(--ink-2); text-decoration: none; }
+.wm-related-link:hover { color: var(--ink); }
+
+/* Responsive */
+@media (max-width: 960px) {
+  .wm-includes-grid { grid-template-columns: repeat(2, 1fr); }
+  .wm-why-grid { grid-template-columns: 1fr; gap: 48px; }
+  .wm-cta-inner { flex-direction: column; align-items: flex-start; }
+  .wm-note-inner { flex-direction: column; gap: 20px; padding: 28px 24px; }
+}
+@media (max-width: 640px) {
+  .wm-risks-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  .wm-includes-grid { grid-template-columns: 1fr; }
+  .wm-hero-actions { flex-direction: column; align-items: flex-start; }
+}
+</style>
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="COLEwebdev" />
+<meta property="og:title" content="Cape Cod WordPress Maintenance — COLEwebdev" />
+<meta property="og:description" content="Monthly WordPress maintenance for Cape Cod businesses — updates, security, backups, and a local team to call when something breaks. No long-term contracts." />
+<meta property="og:url" content="https://colewebdev.org/wordpress-maintenance.html" />
+<meta property="og:image" content="https://colewebdev.org/assets/portfolio-hero.jpg" />
+<link rel="icon" href="favicon.png" type="image/png" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://colewebdev.org/" },
+    { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://colewebdev.org/services.html" },
+    { "@type": "ListItem", "position": 3, "name": "WordPress Maintenance", "item": "https://colewebdev.org/wordpress-maintenance.html" }
+  ]
+}
+</script>
+</head>
+<body>
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" integrity="sha384-DGyLxAyjq0f9SPpVevD6IgztCFlnMF6oW/XQGmfe+IsZ8TqEiDrcHkMLKI6fiB/Z" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" integrity="sha384-gTGxhz21lVGYNMcdJOyq01Edg0jhn/c22nsx0kyqP0TxaV5WVdsSH1fSDUf5YJj1" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="parts-hero.jsx"></script>
+<script type="text/babel" src="parts-services.jsx"></script>
+<script type="text/babel" src="parts-rest.jsx"></script>
+<script type="text/babel" src="wordpress-maintenance-page.jsx"></script>
+</body>
+</html>
