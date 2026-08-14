@@ -2789,6 +2789,83 @@ p, li {
   .ss-summary { font-size: 13px; min-width: 0; }
 }
 
+/* ─── Service group sidebar nav (svc-) ────────────────────── */
+.svc-subnav {
+  background: var(--paper);
+  border-top: 1px solid rgba(14,42,74,0.08);
+  border-bottom: 1px solid rgba(14,42,74,0.08);
+  padding: 32px 0;
+}
+.svc-subnav-shell {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 40px;
+  align-items: start;
+}
+.svc-sidebar {
+  position: sticky;
+  top: 96px;
+}
+.svc-sidebar-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--navy);
+  padding: 4px 12px;
+  border-radius: 999px;
+  display: inline-block;
+  margin-bottom: 14px;
+}
+.svc-sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.svc-sidebar-link {
+  font-size: 14px;
+  color: var(--ink);
+  padding: 8px 12px;
+  border-radius: var(--r-sm);
+  border-left: 2px solid transparent;
+  line-height: 1.35;
+}
+.svc-sidebar-link:hover { background: rgba(14,42,74,0.05); }
+.svc-sidebar-link.is-active {
+  color: var(--brand-blue);
+  font-weight: 600;
+  background: rgba(33,146,188,0.08);
+  border-left-color: var(--brand-blue);
+}
+.svc-subnav-blurb {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--muted);
+  margin: 0;
+  align-self: center;
+}
+@media (max-width: 900px) {
+  .svc-subnav { padding: 20px 0; }
+  .svc-subnav-shell { grid-template-columns: 1fr; gap: 14px; }
+  .svc-sidebar { position: static; }
+  .svc-sidebar nav {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 8px;
+    padding-bottom: 4px;
+  }
+  .svc-sidebar-link {
+    white-space: nowrap;
+    border-left: none;
+    border-bottom: 2px solid transparent;
+    background: rgba(14,42,74,0.05);
+    flex-shrink: 0;
+  }
+  .svc-sidebar-link.is-active { border-bottom-color: var(--brand-blue); border-left-color: transparent; }
+}
+
 /* ─── Whitepaper Guide Panel (wpa-guide-) ─────────────────── */
 .wpa-guide-wrap {
   padding: 28px 0 0;

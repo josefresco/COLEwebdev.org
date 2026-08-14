@@ -151,6 +151,8 @@ function ConsultingPage() {
         points={['Website Strategy', 'Website Audits', 'Business Coaching', 'Platform Advice']}
       />
 
+      <ServiceSideNav group="care" current="consulting.html" />
+
       {/* What we offer */}
       <section className="cn-offers">
         <div className="shell">

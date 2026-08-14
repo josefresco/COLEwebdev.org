@@ -98,6 +98,8 @@ function HostingPage() {
         points={['Daily Backups', 'Security Monitoring', 'WordPress Updates', 'Priority Support']}
       />
 
+      <ServiceSideNav group="care" current="hosting.html" />
+
       {/* What's included */}
       <section className="hc-includes">
         <div className="shell">

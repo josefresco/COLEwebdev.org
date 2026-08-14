@@ -154,6 +154,8 @@ function WPSpeedPage() {
         points={['Core Web Vitals', 'Image Optimization', 'Plugin Audit', 'Staging Tested']}
       />
 
+      <ServiceSideNav group="care" current="wordpress-speed.html" />
+
       {/* Core Web Vitals */}
       <section className="wps-vitals">
         <div className="shell">

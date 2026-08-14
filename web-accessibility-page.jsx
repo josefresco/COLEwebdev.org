@@ -82,6 +82,8 @@ function WCAPage() {
         points={['WCAG 2.1 AA', 'ADA Protection', 'Screen Reader Tested', 'SEO Benefit']}
       />
 
+      <ServiceSideNav group="care" current="web-accessibility.html" />
+
       {/* Why it matters */}
       <section className="wca-why">
         <div className="shell">

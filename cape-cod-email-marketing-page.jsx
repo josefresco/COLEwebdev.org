@@ -92,6 +92,8 @@ function EmailMarketingPage() {
         points={['Campaign Strategy', 'Template Design', 'List Management', 'Performance Reporting']}
       />
 
+      <ServiceSideNav group="grow" current="cape-cod-email-marketing.html" />
+
       {/* What's included */}
       <section className="em-included">
         <div className="shell">

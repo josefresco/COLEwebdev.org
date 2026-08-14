@@ -78,6 +78,8 @@ function BrandingPage() {
         points={['Logo Design', 'Color Systems', 'Print-Ready', 'Brand Guidelines']}
       />
 
+      <ServiceSideNav group="grow" current="branding.html" />
+
       {/* What we do */}
       <section className="br-what">
         <div className="shell">

@@ -306,6 +306,8 @@ function AiAppsPage() {
         points={['Custom-Built', 'Faster & Lower Cost', 'WordPress Integration', 'Practical AI', 'No-Code Handoff']}
       />
 
+      <ServiceSideNav group="grow" current="ai-apps.html" />
+
       {/* Philosophy */}
       <section className="ai-phil">
         <div className="shell ai-phil-grid">

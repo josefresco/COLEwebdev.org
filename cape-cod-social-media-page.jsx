@@ -136,6 +136,8 @@ function SocialMediaPage() {
         points={['Content Creation', 'Community Management', 'Paid Social Ads', 'Monthly Reporting']}
       />
 
+      <ServiceSideNav group="grow" current="cape-cod-social-media-marketing.html" />
+
       {/* What's included */}
       <section className="sm-services">
         <div className="shell">

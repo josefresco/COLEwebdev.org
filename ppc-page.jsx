@@ -195,6 +195,8 @@ function PpcPage() {
         points={['Google Ads', 'Negative Keywords', 'Conversion Tracking', 'Cape Cod PPC']}
       />
 
+      <ServiceSideNav group="grow" current="ppc.html" />
+
       {/* The problem */}
       <section className="ppc-problem">
         <div className="shell ppc-problem-grid">

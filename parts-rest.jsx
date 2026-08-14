@@ -621,4 +621,66 @@ function SummaryStrip({ summary, points }) {
   );
 }
 
-Object.assign(window, { Process, Portfolio, Testimonial, News, CTA, NewsletterBanner, Footer, SummaryStrip });
+/* ============================================================
+   ServiceSideNav — sidebar nav for the Grow & Market and
+   Care & Support page families (services dropdown collapses
+   these into one item each; this is how users move between
+   the sibling pages once they land on one).
+   ============================================================ */
+const SVC_GROUPS = {
+  grow: {
+    label: 'Grow & Market',
+    blurb: 'SEO, paid ads, social, email, and AI tools working together to bring in customers.',
+    items: [
+      { href: 'cape-cod-marketing.html', title: 'Marketing' },
+      { href: 'ppc.html', title: 'PPC & Google Ads' },
+      { href: 'branding.html', title: 'Branding' },
+      { href: 'cape-cod-social-media-marketing.html', title: 'Social Media Marketing' },
+      { href: 'cape-cod-email-marketing.html', title: 'Email Marketing' },
+      { href: 'cape-cod-google-business-profile.html', title: 'Google Business Profile' },
+      { href: 'ai-apps.html', title: 'AI Studio' },
+      { href: 'aieo.html', title: 'AI Engine Optimization' },
+      { href: 'cape-cod-ai.html', title: 'Cape Cod AI' },
+    ],
+  },
+  care: {
+    label: 'Care & Support',
+    blurb: 'Hosting, maintenance, updates, and consulting to keep your site running.',
+    items: [
+      { href: 'hosting.html', title: 'Hosting + Care Plans' },
+      { href: 'wordpress-maintenance.html', title: 'WordPress Maintenance' },
+      { href: 'wordpress-speed.html', title: 'WordPress Speed' },
+      { href: 'web-accessibility.html', title: 'Web Accessibility' },
+      { href: 'updates.html', title: 'Updates & Maintenance' },
+      { href: 'consulting.html', title: 'Consulting' },
+    ],
+  },
+};
+
+function ServiceSideNav({ group, current }) {
+  const data = SVC_GROUPS[group];
+  if (!data) return null;
+  return (
+    <section className="svc-subnav">
+      <div className="shell svc-subnav-shell">
+        <aside className="svc-sidebar" aria-label={data.label + ' menu'}>
+          <span className="svc-sidebar-label">{data.label}</span>
+          <nav>
+            {data.items.map(item => (
+              <a
+                key={item.href}
+                href={item.href}
+                className={'svc-sidebar-link' + (item.href === current ? ' is-active' : '')}
+              >
+                {item.title}
+              </a>
+            ))}
+          </nav>
+        </aside>
+        <p className="svc-subnav-blurb">{data.blurb}</p>
+      </div>
+    </section>
+  );
+}
+
+Object.assign(window, { Process, Portfolio, Testimonial, News, CTA, NewsletterBanner, Footer, SummaryStrip, ServiceSideNav });

@@ -112,6 +112,8 @@ function CapeCodAiPage() {
         points={['Custom AI Tools', 'AI Search Visibility', 'Local Team', 'No Off-the-Shelf Hype']}
       />
 
+      <ServiceSideNav group="grow" current="cape-cod-ai.html" />
+
       {/* Why local */}
       <section className="cai-why">
         <div className="shell cai-why-grid">

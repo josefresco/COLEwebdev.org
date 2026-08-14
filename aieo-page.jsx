@@ -101,6 +101,8 @@ function AieoPage() {
         </div>
       </div>
 
+      <ServiceSideNav group="grow" current="aieo.html" />
+
       {/* What is AIEO */}
       <section className="aieo-what">
         <div className="shell aieo-what-grid">

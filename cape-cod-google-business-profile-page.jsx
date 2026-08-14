@@ -97,6 +97,8 @@ function GBPPage() {
         points={['GBP Setup & Optimization', 'Photo Management', 'Review Strategy', 'Local Pack Rankings']}
       />
 
+      <ServiceSideNav group="grow" current="cape-cod-google-business-profile.html" />
+
       {/* Why GBP matters */}
       <section className="gbp-why">
         <div className="shell gbp-why-grid">

@@ -87,6 +87,8 @@ function UpdatesPage() {
         points={['Hourly Rate', 'No Retainer', 'Any CMS', 'No Commitment']}
       />
 
+      <ServiceSideNav group="care" current="updates.html" />
+
       {/* What we update */}
       <section className="um-edits">
         <div className="shell">

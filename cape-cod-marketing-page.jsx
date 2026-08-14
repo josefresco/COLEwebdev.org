@@ -112,6 +112,8 @@ function CapeCodeMarketingPage() {
         points={['SEO', 'Google Ads', 'Social Media', 'Local Team']}
       />
 
+      <ServiceSideNav group="grow" current="cape-cod-marketing.html" />
+
       {/* Services */}
       <section className="mkt-services">
         <div className="shell">

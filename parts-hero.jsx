@@ -89,23 +89,9 @@ const SERVICE_LINKS = [
   { href: 'ecommerce.html', title: 'E-Commerce' },
   { href: 'cape-cod-website-redesign.html', title: 'Website Redesign' },
   { groupLabel: 'Grow & Market' },
-  { href: 'seo.html', title: 'SEO & Local Search' },
-  { href: 'ppc.html', title: 'PPC & Google Ads' },
-  { href: 'marketing.html', title: 'Marketing' },
-  { href: 'branding.html', title: 'Branding' },
-  { href: 'cape-cod-social-media-marketing.html', title: 'Social Media Marketing' },
-  { href: 'cape-cod-email-marketing.html', title: 'Email Marketing' },
-  { href: 'cape-cod-google-business-profile.html', title: 'Google Business Profile' },
-  { href: 'ai-apps.html', title: 'AI Studio', pill: 'NEW' },
-  { href: 'aieo.html', title: 'AI Engine Optimization', pill: 'NEW' },
-  { href: 'cape-cod-ai.html', title: 'Cape Cod AI', pill: 'NEW' },
+  { href: 'cape-cod-marketing.html', title: 'Grow & Market' },
   { groupLabel: 'Care & Support' },
-  { href: 'hosting.html', title: 'Hosting + Care Plans' },
-  { href: 'wordpress-maintenance.html', title: 'WordPress Maintenance' },
-  { href: 'wordpress-speed.html', title: 'WordPress Speed' },
-  { href: 'web-accessibility.html', title: 'Web Accessibility' },
-  { href: 'updates.html', title: 'Updates & Maintenance' },
-  { href: 'consulting.html', title: 'Consulting' },
+  { href: 'hosting.html', title: 'Care & Support' },
   { groupLabel: 'By Industry' },
   { href: 'cape-cod-restaurant-web-design.html', title: 'Restaurants' },
   { href: 'cape-cod-hospitality-web-design.html', title: 'Hospitality' },
@@ -438,74 +424,11 @@ function Header() {
 
               {/* Grow & Market */}
               <div className="nav-dd-group nav-dd-group--sep">Grow &amp; Market</div>
-              <a href="seo.html" className="nav-dd-item">
+              <a href="cape-cod-marketing.html" className="nav-dd-item">
                 <span className="nav-dd-glyph orange">↗</span>
                 <div>
-                  <div className="nav-dd-title">SEO &amp; Local Search</div>
-                  <div className="nav-dd-desc">Show up when neighbors search for what you sell.</div>
-                </div>
-              </a>
-              <a href="ppc.html" className="nav-dd-item">
-                <span className="nav-dd-glyph orange">◎</span>
-                <div>
-                  <div className="nav-dd-title">PPC &amp; Google Ads</div>
-                  <div className="nav-dd-desc">Paid search campaigns that convert — not just clicks.</div>
-                </div>
-              </a>
-              <a href="marketing.html" className="nav-dd-item">
-                <span className="nav-dd-glyph orange">↗</span>
-                <div>
-                  <div className="nav-dd-title">Marketing</div>
-                  <div className="nav-dd-desc">Paid ads, social, email, analytics, and lead capture.</div>
-                </div>
-              </a>
-              <a href="branding.html" className="nav-dd-item">
-                <span className="nav-dd-glyph orange">✦</span>
-                <div>
-                  <div className="nav-dd-title">Branding</div>
-                  <div className="nav-dd-desc">Logos, color, print — so the site fits the rest of you.</div>
-                </div>
-              </a>
-              <a href="cape-cod-social-media-marketing.html" className="nav-dd-item">
-                <span className="nav-dd-glyph orange">◍</span>
-                <div>
-                  <div className="nav-dd-title">Social Media Marketing</div>
-                  <div className="nav-dd-desc">Content, community management, and paid social.</div>
-                </div>
-              </a>
-              <a href="cape-cod-email-marketing.html" className="nav-dd-item">
-                <span className="nav-dd-glyph orange">✎</span>
-                <div>
-                  <div className="nav-dd-title">Email Marketing</div>
-                  <div className="nav-dd-desc">Campaigns and newsletters in Mailchimp or Klaviyo.</div>
-                </div>
-              </a>
-              <a href="cape-cod-google-business-profile.html" className="nav-dd-item">
-                <span className="nav-dd-glyph orange">◎</span>
-                <div>
-                  <div className="nav-dd-title">Google Business Profile</div>
-                  <div className="nav-dd-desc">Rank in the local 3-pack and Google Maps.</div>
-                </div>
-              </a>
-              <a href="ai-apps.html" className="nav-dd-item">
-                <span className="nav-dd-glyph navy">⌘</span>
-                <div>
-                  <div className="nav-dd-title">AI Studio <span className="nav-dd-pill">NEW</span></div>
-                  <div className="nav-dd-desc">Chatbots, intake forms, booking tools, and custom apps.</div>
-                </div>
-              </a>
-              <a href="aieo.html" className="nav-dd-item">
-                <span className="nav-dd-glyph navy">⌘</span>
-                <div>
-                  <div className="nav-dd-title">AI Engine Optimization <span className="nav-dd-pill">NEW</span></div>
-                  <div className="nav-dd-desc">Get cited by ChatGPT, Perplexity, and Gemini.</div>
-                </div>
-              </a>
-              <a href="cape-cod-ai.html" className="nav-dd-item">
-                <span className="nav-dd-glyph navy">⌘</span>
-                <div>
-                  <div className="nav-dd-title">Cape Cod AI <span className="nav-dd-pill">NEW</span></div>
-                  <div className="nav-dd-desc">Our full applied-AI practice, in one place.</div>
+                  <div className="nav-dd-title">Grow &amp; Market</div>
+                  <div className="nav-dd-desc">SEO, PPC, branding, social, email, and AI tools.</div>
                 </div>
               </a>
 
@@ -514,43 +437,8 @@ function Header() {
               <a href="hosting.html" className="nav-dd-item">
                 <span className="nav-dd-glyph green">↻</span>
                 <div>
-                  <div className="nav-dd-title">Hosting + Care Plans</div>
-                  <div className="nav-dd-desc">Managed hosting with a human on the other end.</div>
-                </div>
-              </a>
-              <a href="wordpress-maintenance.html" className="nav-dd-item">
-                <span className="nav-dd-glyph green">⚙</span>
-                <div>
-                  <div className="nav-dd-title">WordPress Maintenance</div>
-                  <div className="nav-dd-desc">Monthly updates and security for any host.</div>
-                </div>
-              </a>
-              <a href="wordpress-speed.html" className="nav-dd-item">
-                <span className="nav-dd-glyph orange">↗</span>
-                <div>
-                  <div className="nav-dd-title">WordPress Speed</div>
-                  <div className="nav-dd-desc">Core Web Vitals, caching, and image optimization.</div>
-                </div>
-              </a>
-              <a href="web-accessibility.html" className="nav-dd-item">
-                <span className="nav-dd-glyph navy">⚙</span>
-                <div>
-                  <div className="nav-dd-title">Web Accessibility (WCAG)</div>
-                  <div className="nav-dd-desc">WCAG 2.1 AA audits and ADA compliance remediation.</div>
-                </div>
-              </a>
-              <a href="updates.html" className="nav-dd-item">
-                <span className="nav-dd-glyph blue">✎</span>
-                <div>
-                  <div className="nav-dd-title">Updates &amp; Maintenance</div>
-                  <div className="nav-dd-desc">Quick-turn edits — text, images, pages, forms.</div>
-                </div>
-              </a>
-              <a href="consulting.html" className="nav-dd-item">
-                <span className="nav-dd-glyph green">◇</span>
-                <div>
-                  <div className="nav-dd-title">Consulting</div>
-                  <div className="nav-dd-desc">Strategy sessions, site audits, and CMS training.</div>
+                  <div className="nav-dd-title">Care &amp; Support</div>
+                  <div className="nav-dd-desc">Hosting, maintenance, updates, and consulting.</div>
                 </div>
               </a>
 

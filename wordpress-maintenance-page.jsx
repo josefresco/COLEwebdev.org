@@ -57,6 +57,8 @@ function WPMaintenancePage() {
         points={['Monthly Updates', 'Daily Backups', 'Security Monitoring', 'Priority Support']}
       />
 
+      <ServiceSideNav group="care" current="wordpress-maintenance.html" />
+
       {/* What's included each month */}
       <section className="wm-includes">
         <div className="shell">
