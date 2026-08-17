@@ -424,6 +424,7 @@ function PortfolioPage() {
             <div className="pfhero-grid">
               <div>
                 <span className="eyebrow">Our Work</span>
+                <h1 className="pfhero-hl">Cape Cod Web Design Portfolio</h1>
                 <p className="pfhero-num">700<sup>+</sup></p>
                 <p className="pfhero-sub">
                   Sites launched for small businesses on Cape Cod &amp; the Islands since 2006.
