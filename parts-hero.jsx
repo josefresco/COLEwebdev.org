@@ -89,6 +89,7 @@ const SERVICE_LINKS = [
   { href: 'cape-cod-website-redesign.html', title: 'Website Redesign' },
   { href: 'cape-cod-marketing.html', title: 'Grow & Market' },
   { href: 'hosting.html', title: 'Care & Support' },
+  { href: 'ai-apps.html', title: 'AI Studio', pill: 'NEW' },
 ];
 
 /* ============================================================
@@ -419,6 +420,13 @@ function Header() {
                 <div>
                   <div className="nav-dd-title">Care &amp; Support</div>
                   <div className="nav-dd-desc">Hosting, maintenance, updates, and consulting.</div>
+                </div>
+              </a>
+              <a href="ai-apps.html" className="nav-dd-item">
+                <span className="nav-dd-glyph navy">⌘</span>
+                <div>
+                  <div className="nav-dd-title">AI Studio <span className="nav-dd-pill">NEW</span></div>
+                  <div className="nav-dd-desc">Chatbots, intake forms, booking tools, and custom apps.</div>
                 </div>
               </a>
             </div>
