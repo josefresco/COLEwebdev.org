@@ -82,26 +82,13 @@ function ColeLogo({ height = 34, dark = false }) {
    Header
    ============================================================ */
 const SERVICE_LINKS = [
-  { groupLabel: 'Design & Build' },
   { href: 'website-design.html', title: 'Web Design + Build' },
   { href: 'wordpress.html', title: 'WordPress Design' },
   { href: 'traditional.html', title: 'Traditional Web Design' },
   { href: 'ecommerce.html', title: 'E-Commerce' },
   { href: 'cape-cod-website-redesign.html', title: 'Website Redesign' },
-  { groupLabel: 'Grow & Market' },
   { href: 'cape-cod-marketing.html', title: 'Grow & Market' },
-  { groupLabel: 'Care & Support' },
   { href: 'hosting.html', title: 'Care & Support' },
-  { groupLabel: 'By Industry' },
-  { href: 'cape-cod-restaurant-web-design.html', title: 'Restaurants' },
-  { href: 'cape-cod-hospitality-web-design.html', title: 'Hospitality' },
-  { href: 'cape-cod-contractor-web-design.html', title: 'Contractors' },
-  { href: 'cape-cod-marine-web-design.html', title: 'Marine & Charters' },
-  { href: 'cape-cod-real-estate-web-design.html', title: 'Real Estate' },
-  { href: 'cape-cod-health-web-design.html', title: 'Health & Wellness' },
-  { href: 'cape-cod-wedding-web-design.html', title: 'Weddings & Events' },
-  { href: 'cape-cod-vacation-rental-web-design.html', title: 'Vacation Rentals' },
-  { href: 'industries.html', title: 'All Industries →' },
 ];
 
 /* ============================================================
@@ -383,9 +370,7 @@ function Header() {
           <a className={'nav-link' + onHome} href="index.html">Home</a>
           <div className="nav-item-dropdown">
             <a className={'nav-link' + on('services.html')} href="services.html">Services <span className="caret">▾</span></a>
-            <div className="nav-dropdown" role="menu">
-              {/* Design & Build */}
-              <div className="nav-dd-group">Design &amp; Build</div>
+            <div className="nav-dropdown nav-dropdown--wide" role="menu">
               <a href="website-design.html" className="nav-dd-item">
                 <span className="nav-dd-glyph green">◇</span>
                 <div>
@@ -422,8 +407,6 @@ function Header() {
                 </div>
               </a>
 
-              {/* Grow & Market */}
-              <div className="nav-dd-group nav-dd-group--sep">Grow &amp; Market</div>
               <a href="cape-cod-marketing.html" className="nav-dd-item">
                 <span className="nav-dd-glyph orange">↗</span>
                 <div>
@@ -431,73 +414,11 @@ function Header() {
                   <div className="nav-dd-desc">SEO, PPC, branding, social, email, and AI tools.</div>
                 </div>
               </a>
-
-              {/* Care & Support */}
-              <div className="nav-dd-group nav-dd-group--sep">Care &amp; Support</div>
               <a href="hosting.html" className="nav-dd-item">
                 <span className="nav-dd-glyph green">↻</span>
                 <div>
                   <div className="nav-dd-title">Care &amp; Support</div>
                   <div className="nav-dd-desc">Hosting, maintenance, updates, and consulting.</div>
-                </div>
-              </a>
-
-              {/* By Industry */}
-              <div className="nav-dd-group nav-dd-group--sep">By Industry</div>
-              <a href="cape-cod-restaurant-web-design.html" className="nav-dd-item">
-                <span className="nav-dd-glyph orange">◎</span>
-                <div>
-                  <div className="nav-dd-title">Restaurants</div>
-                  <div className="nav-dd-desc">Menus, reservations, and local SEO for Cape Cod dining.</div>
-                </div>
-              </a>
-              <a href="cape-cod-hospitality-web-design.html" className="nav-dd-item">
-                <span className="nav-dd-glyph blue">◷</span>
-                <div>
-                  <div className="nav-dd-title">Hospitality</div>
-                  <div className="nav-dd-desc">Direct booking websites for inns, B&Bs, and hotels.</div>
-                </div>
-              </a>
-              <a href="cape-cod-contractor-web-design.html" className="nav-dd-item">
-                <span className="nav-dd-glyph navy">⚙</span>
-                <div>
-                  <div className="nav-dd-title">Contractors</div>
-                  <div className="nav-dd-desc">Project galleries and local SEO for trades businesses.</div>
-                </div>
-              </a>
-              <a href="cape-cod-marine-web-design.html" className="nav-dd-item">
-                <span className="nav-dd-glyph blue">◇</span>
-                <div>
-                  <div className="nav-dd-title">Marine &amp; Charters</div>
-                  <div className="nav-dd-desc">Online booking for fishing charters and boat tours.</div>
-                </div>
-              </a>
-              <a href="cape-cod-real-estate-web-design.html" className="nav-dd-item">
-                <span className="nav-dd-glyph green">↗</span>
-                <div>
-                  <div className="nav-dd-title">Real Estate</div>
-                  <div className="nav-dd-desc">IDX integration and lead capture for Cape Cod agents.</div>
-                </div>
-              </a>
-              <a href="cape-cod-wedding-web-design.html" className="nav-dd-item">
-                <span className="nav-dd-glyph orange">✦</span>
-                <div>
-                  <div className="nav-dd-title">Weddings &amp; Events</div>
-                  <div className="nav-dd-desc">Portfolio galleries and inquiry forms for venues and planners.</div>
-                </div>
-              </a>
-              <a href="cape-cod-vacation-rental-web-design.html" className="nav-dd-item">
-                <span className="nav-dd-glyph navy">◐</span>
-                <div>
-                  <div className="nav-dd-title">Vacation Rentals</div>
-                  <div className="nav-dd-desc">Direct booking sites that cut what you pay Airbnb.</div>
-                </div>
-              </a>
-              <a href="industries.html" className="nav-dd-item">
-                <span className="nav-dd-glyph green">≡</span>
-                <div>
-                  <div className="nav-dd-title">All 19 Industries</div>
-                  <div className="nav-dd-desc">Full industry listing — find your category.</div>
                 </div>
               </a>
             </div>
