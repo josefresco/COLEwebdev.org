@@ -23,8 +23,8 @@ There are no lint, test, or build commands. What you edit is what ships.
 
 ## Project Scale
 
-- **~90 HTML pages** — homepage, 10+ service pages, 26 whitepaper guides, 16 town landing pages, 11 industry pages, utility pages
-- **~47 JSX files** — one per page plus shared parts
+- **~105 HTML pages** — homepage, 10+ service pages, 26 whitepaper guides, 16 town landing pages, 19 industry pages, utility pages
+- **~54 JSX files** — one per page plus shared parts
 - **~70 assets** in `assets/` — local brand images (logos, team photos, hero images)
 - **1 global stylesheet** — `styles.css` (~55KB); page-specific styles live in inline `<style>` blocks inside each HTML file
 - **External images** — portfolio/blog photos are hosted on `colewebdev.com` (WordPress), referenced by full URL
@@ -110,7 +110,7 @@ A `FALLBACK_POSTS` array is used if the API call fails (CORS, offline, etc.). Up
 - `density`: `"comfortable"` | `"compact"` — sets `data-density` on `<html>`, triggering CSS variable overrides for spacing
 - `heroVariant`: `"orb"` | `"marquee"` | `"grid"` — switches the `<Hero>` visualization
 
-The `TweaksPanel` UI activates via browser `postMessage('__activate_edit_mode')`. State persists in `localStorage`.
+The `TweaksPanel` UI activates via browser `postMessage('__activate_edit_mode')` (deactivate with `'__deactivate_edit_mode'`). State persists in `localStorage`. The default tweak values in `app.jsx` are wrapped in `/*EDITMODE-BEGIN*/ ... /*EDITMODE-END*/` comments — leave these markers in place when editing defaults.
 
 ---
 
@@ -175,7 +175,7 @@ These were audited and removed in June 2026. Do not reintroduce:
 - No `node_modules`, no package manager
 - All data is hardcoded in arrays; no API calls except the news page's WP REST fetch
 - Commit messages follow Conventional Commits: `feat(scope): description`
-- **JSX cache-busting** — GitHub Pages CDN caches `.jsx` files. When you update a page-specific JSX file, bump the `?v=N` version string on its `<script src>` tag in the corresponding HTML file (e.g. `src="services-page.jsx?v=2"`). Currently at `v=2` on `services.html`, `process.html`, `news.html`.
+- **JSX cache-busting** — GitHub Pages CDN caches `.jsx` files. When you update a page-specific JSX file, bump the `?v=N` version string on its `<script src>` tag in the corresponding HTML file (e.g. `src="services-page.jsx?v=3"`). Versions are tracked independently per page/file — check the current value in that HTML file before bumping rather than assuming a site-wide number.
 
 ---
 
