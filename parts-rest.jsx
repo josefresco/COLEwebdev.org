@@ -522,6 +522,7 @@ function Footer() {
               <li><a href="branding.html">Branding</a></li>
               <li><a href="ecommerce.html">E-Commerce</a></li>
               <li><a href="consulting.html">Consulting</a></li>
+              <li><a href="cape-cod-web-design.html">Cape Cod Web Design</a></li>
               <li><a href="service-area.html">Service Area</a></li>
             </ul>
           </div>
