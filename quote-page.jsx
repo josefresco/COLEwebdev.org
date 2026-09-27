@@ -9,6 +9,8 @@ const SERVICES_OPTIONS = [
   'Premium WordPress Hosting',
   'Logo & Branding',
   'Website Move',
+  'SEO Snapshot / Audit',
+  'Google Ads / PPC',
   'Other',
 ];
 

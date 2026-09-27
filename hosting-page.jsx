@@ -65,30 +65,38 @@ function HostingPage() {
       <div className="hc-hero">
         <div className="hc-hero-bg" aria-hidden="true" />
         <div className="hc-hero-content">
-          <div className="shell">
-            <span className="eyebrow hc-eyebrow">Services · Hosting + Care Plans</span>
-            <h1 className="hc-hero-hl">
-              Cape Cod WordPress Hosting <em>+ Care Plans.</em>
-            </h1>
-            <p className="hc-hero-sub">
-              Managed WordPress hosting, daily backups, security monitoring, and a real person to call — so you can run your business without worrying about your website.
-            </p>
-            <div className="hc-hero-actions">
-              <a className="btn btn--accent" href="contact.html">
-                Ask about Care Plans <span className="arrow">→</span>
-              </a>
-              <a className="btn btn--ghost hc-ghost" href="tel:5084132043">
-                508.413.2043
-              </a>
-            </div>
-            <div className="hc-partners">
-              <span className="hc-partners-label">Hosting partners</span>
-              <div className="hc-partners-logos">
-                <img src="assets/wpengine-logo-white.svg" alt="WP Engine" className="hc-partner-logo" />
-                <img src="assets/pressable-logo.png" alt="Pressable" className="hc-partner-logo" />
-                <img src="assets/hostgator-logo-white.png" alt="HostGator" className="hc-partner-logo" />
+          <div className="shell svc-hero-grid">
+            <div className="svc-hero-copy">
+              <span className="eyebrow hc-eyebrow">Services · Hosting + Care Plans</span>
+              <h1 className="hc-hero-hl">
+                Cape Cod WordPress Hosting <em>+ Care Plans.</em>
+              </h1>
+              <p className="hc-hero-sub">
+                Managed WordPress hosting, daily backups, security monitoring, and a real person to call — so you can run your business without worrying about your website.
+              </p>
+              <div className="hc-hero-actions">
+                <a className="btn btn--accent" href="contact.html">
+                  Ask about Care Plans <span className="arrow">→</span>
+                </a>
+                <a className="btn btn--ghost hc-ghost" href="tel:5084132043">
+                  508.413.2043
+                </a>
+              </div>
+              <div className="hc-partners">
+                <span className="hc-partners-label">Hosting partners</span>
+                <div className="hc-partners-logos">
+                  <img src="assets/wpengine-logo-white.svg" alt="WP Engine" className="hc-partner-logo" />
+                  <img src="assets/pressable-logo.png" alt="Pressable" className="hc-partner-logo" />
+                  <img src="assets/hostgator-logo-white.png" alt="HostGator" className="hc-partner-logo" />
+                </div>
               </div>
             </div>
+            <ServiceLeadForm
+              service="Hosting & Care Plans"
+              title="Ask about Care Plans"
+              cta="Send request"
+              notePlaceholder="Where is your site hosted now? (optional)"
+            />
           </div>
         </div>
       </div>

@@ -264,8 +264,8 @@ function PpcPage() {
       <div className="ppc-hero">
         <div className="ppc-hero-bg" aria-hidden="true" />
         <div className="ppc-hero-content">
-          <div className="shell ppc-hero-grid">
-            <div className="ppc-hero-copy">
+          <div className="shell svc-hero-grid">
+            <div className="svc-hero-copy">
               <span className="eyebrow ppc-eyebrow">Services · PPC &amp; Google Ads</span>
               <h1 className="ppc-hero-hl">
                 Paid ads that stop <em>wasting</em> your budget.
@@ -287,7 +287,13 @@ function PpcPage() {
                 ))}
               </div>
             </div>
-            <PpcHeroViz />
+            <ServiceLeadForm
+              service="PPC & Google Ads"
+              title="Get a free Google Ads audit"
+              sub="We'll look for wasted spend, missing negatives, and tracking gaps."
+              cta="Request free audit"
+              notePlaceholder="Rough monthly ad spend, if running (optional)"
+            />
           </div>
         </div>
       </div>
@@ -397,8 +403,12 @@ function PpcPage() {
       <section className="ppc-pillars">
         <div className="shell">
           <div className="ppc-pillars-hd">
-            <span className="eyebrow">Three pillars</span>
-            <h2 className="ppc-pillars-hl">Fix these and you fix most of the waste.</h2>
+            <div>
+              <span className="eyebrow">Three pillars</span>
+              <h2 className="ppc-pillars-hl">Fix these and you fix most of the waste.</h2>
+              <p className="ppc-pillars-sub">A well-run campaign looks like this: the right search, a matching ad, excluded junk terms, and a tracked result.</p>
+            </div>
+            <PpcHeroViz />
           </div>
           <div className="ppc-pillars-grid">
             {PPC_PILLARS.map(p => {

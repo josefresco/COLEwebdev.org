@@ -32,22 +32,30 @@ function WPMaintenancePage() {
       <div className="wm-hero">
         <div className="wm-hero-bg" aria-hidden="true" />
         <div className="wm-hero-content">
-          <div className="shell">
-            <span className="eyebrow wm-eyebrow">Services · Care &amp; Support</span>
-            <h1 className="wm-hero-hl">
-              Cape Cod WordPress <em>Maintenance.</em>
-            </h1>
-            <p className="wm-hero-sub">
-              Monthly WordPress maintenance for Cape Cod businesses — updates, backups, security, and a real person to call when something breaks.
-            </p>
-            <div className="wm-hero-actions">
-              <a className="btn btn--accent" href="index.html#cta">
-                Start your maintenance plan <span className="arrow">→</span>
-              </a>
-              <a className="btn btn--ghost wm-ghost" href="tel:5084132043">
-                508.413.2043
-              </a>
+          <div className="shell svc-hero-grid">
+            <div className="svc-hero-copy">
+              <span className="eyebrow wm-eyebrow">Services · Care &amp; Support</span>
+              <h1 className="wm-hero-hl">
+                Cape Cod WordPress <em>Maintenance.</em>
+              </h1>
+              <p className="wm-hero-sub">
+                Monthly WordPress maintenance for Cape Cod businesses — updates, backups, security, and a real person to call when something breaks.
+              </p>
+              <div className="wm-hero-actions">
+                <a className="btn btn--accent" href="index.html#cta">
+                  Start your maintenance plan <span className="arrow">→</span>
+                </a>
+                <a className="btn btn--ghost wm-ghost" href="tel:5084132043">
+                  508.413.2043
+                </a>
+              </div>
             </div>
+            <ServiceLeadForm
+              service="WordPress Maintenance"
+              title="Start a maintenance plan"
+              cta="Send request"
+              notePlaceholder="Anything broken or overdue right now? (optional)"
+            />
           </div>
         </div>
       </div>

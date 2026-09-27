@@ -119,32 +119,40 @@ function WPSpeedPage() {
       <div className="wps-hero">
         <div className="wps-hero-bg" aria-hidden="true" />
         <div className="wps-hero-content">
-          <div className="shell">
-            <span className="eyebrow wps-eyebrow">Services · WordPress Speed Optimization</span>
-            <h1 className="wps-hero-hl">
-              Your WordPress site, <em>faster.</em>
-            </h1>
-            <p className="wps-hero-sub">
-              Most WordPress sites leave 40–60 PageSpeed points on the table. We audit and fix what's actually slowing yours down: images, caching, plugins, code, and Core Web Vitals.
-            </p>
-            <div className="wps-hero-actions">
-              <a className="btn btn--accent" href="quote.html">
-                Get a speed audit <span className="arrow">→</span>
-              </a>
-              <a className="btn btn--ghost wps-ghost" href="wordpress-hosting.html">
-                See WordPress Hosting <span className="arrow">→</span>
-              </a>
+          <div className="shell svc-hero-grid">
+            <div className="svc-hero-copy">
+              <span className="eyebrow wps-eyebrow">Services · WordPress Speed Optimization</span>
+              <h1 className="wps-hero-hl">
+                Your WordPress site, <em>faster.</em>
+              </h1>
+              <p className="wps-hero-sub">
+                Most WordPress sites leave 40–60 PageSpeed points on the table. We audit and fix what's actually slowing yours down: images, caching, plugins, code, and Core Web Vitals.
+              </p>
+              <div className="wps-hero-actions">
+                <a className="btn btn--accent" href="quote.html">
+                  Get a speed audit <span className="arrow">→</span>
+                </a>
+                <a className="btn btn--ghost wps-ghost" href="wordpress-hosting.html">
+                  See WordPress Hosting <span className="arrow">→</span>
+                </a>
+              </div>
+              <div className="wps-spec-strip">
+                {WPS_SPECS.map(function(s) {
+                  return (
+                    <div key={s.label} className="wps-spec">
+                      <span className="wps-spec-val">{s.value}</span>
+                      <span className="wps-spec-label">{s.label}</span>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
-            <div className="wps-spec-strip">
-              {WPS_SPECS.map(function(s) {
-                return (
-                  <div key={s.label} className="wps-spec">
-                    <span className="wps-spec-val">{s.value}</span>
-                    <span className="wps-spec-label">{s.label}</span>
-                  </div>
-                );
-              })}
-            </div>
+            <ServiceLeadForm
+              service="WordPress Speed"
+              title="Get a free speed check"
+              cta="Request speed check"
+              notePlaceholder="Which pages feel slowest? (optional)"
+            />
           </div>
         </div>
       </div>

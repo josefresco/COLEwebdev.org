@@ -181,12 +181,6 @@
   color: rgba(255,255,255,0.65);
 }
 
-.seo-hero-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
-  gap: 56px;
-  align-items: center;
-}
 
 
 /* The problem section */
@@ -480,34 +474,16 @@
 
 .seo-offerings-grid { grid-template-columns: repeat(3, 1fr); }
 
-/* Hero illustration: audit report */
-.seo-hviz { position: relative; margin: 0; padding: 28px 0 40px; }
-.seo-hviz-card {
-  background: white;
-  border-radius: 18px;
-  box-shadow: 0 24px 60px rgba(0,0,0,0.35);
-  color: var(--ink);
-  overflow: hidden;
-}
-.seo-hviz-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 12px;
-  padding: 16px 20px;
-  border-bottom: 1px solid var(--line);
-}
-.seo-hviz-title { font-family: var(--serif); font-size: 19px; line-height: 1.2; }
-.seo-hviz-site { font-family: var(--mono); font-size: 11px; color: var(--muted); }
-.seo-hviz-sum { display: grid; grid-template-columns: repeat(3, 1fr); border-bottom: 1px solid var(--line); }
-.seo-hviz-sum div { padding: 12px 20px; border-right: 1px solid var(--line); }
+/* Audit report illustration (inside the side-menu snapshot panel) */
+.seo-hviz-sum { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--line); border-radius: 8px; margin-bottom: 8px; }
+.seo-hviz-sum div { padding: 10px 14px; border-right: 1px solid var(--line); }
 .seo-hviz-sum div:last-child { border-right: none; }
 .seo-hviz-sum b { display: block; font-family: var(--serif); font-size: 26px; font-weight: 400; font-style: italic; line-height: 1; }
 .seo-hviz-sum span { font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
 .seo-hviz-sum .is-crit b { color: #B53A0B; }
 .seo-hviz-sum .is-ser b { color: #8A5A00; }
 .seo-hviz-sum .is-mod b { color: var(--ink-2); }
-.seo-hviz-rows { list-style: none; margin: 0; padding: 10px 12px 14px; display: grid; gap: 4px; }
+.seo-hviz-rows { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
 .seo-hviz-rows li {
   display: grid;
   grid-template-columns: auto minmax(0, 1fr);
@@ -535,33 +511,8 @@
 .seo-sev--crit { color: #A8430C; background: rgba(242,107,31,0.14); }
 .seo-sev--ser { color: #8A5A00; background: rgba(230,160,20,0.16); }
 .seo-sev--mod { color: var(--ink-2); background: rgba(14,42,74,0.07); }
-.seo-hviz-chip {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 12px;
-  border-radius: 999px;
-  padding: 8px 14px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.3);
-  white-space: nowrap;
-  background: var(--navy);
-  color: white;
-  border: 1px solid rgba(255,255,255,0.18);
-}
-.seo-hviz-chip--a { top: -4px; right: 16px; }
-.seo-hviz-chip--b { bottom: 6px; left: -14px; }
+.seo-hviz-src { display: flex; align-items: center; gap: 8px; margin-top: 10px; font-size: 12px; color: var(--muted); }
 .seo-hviz-dot { width: 8px; height: 8px; border-radius: 50%; background: #5CC035; box-shadow: 0 0 0 3px rgba(92,192,53,0.25); }
-.seo-hviz-cap {
-  position: absolute;
-  bottom: 12px;
-  right: 0;
-  font-family: var(--mono);
-  font-size: 9.5px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.4);
-}
 
 /* Audit coverage */
 .seo-cover {
@@ -657,8 +608,6 @@
 
 /* Responsive */
 @media (max-width: 960px) {
-  .seo-hero-grid { grid-template-columns: 1fr; gap: 24px; }
-  .seo-hviz { max-width: 520px; }
   .seo-problem-grid { grid-template-columns: 1fr; gap: 48px; }
   .seo-offerings-grid { grid-template-columns: 1fr; }
   .seo-offering-card--full { grid-column: 1; }
@@ -670,11 +619,6 @@
   .seo-cta-actions { align-items: flex-start; flex-direction: row; flex-wrap: wrap; }
 }
 @media (max-width: 560px) {
-  .seo-hviz { padding-bottom: 64px; }
-  .seo-hviz-chip--a { right: 0; }
-  .seo-hviz-chip--b { left: 0; bottom: 22px; }
-  .seo-hviz-cap { bottom: 0; }
-  .seo-hviz-sum div { padding: 10px 12px; }
   .seo-cover-grid { grid-template-columns: 1fr; }
   .seo-how-steps { grid-template-columns: 1fr; }
   .seo-cta { padding: 36px 28px; }
@@ -725,7 +669,7 @@
 <script type="text/babel" src="tweaks-panel.jsx"></script>
 <script type="text/babel" src="parts-hero.jsx"></script>
 <script type="text/babel" src="parts-services.jsx"></script>
-<script type="text/babel" src="parts-rest.jsx?v=3"></script>
-<script type="text/babel" src="seo-page.jsx?v=2"></script>
+<script type="text/babel" src="parts-rest.jsx?v=4"></script>
+<script type="text/babel" src="seo-page.jsx?v=3"></script>
 </body>
 </html>

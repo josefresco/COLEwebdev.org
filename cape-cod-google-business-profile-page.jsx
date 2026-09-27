@@ -72,22 +72,30 @@ function GBPPage() {
       <div className="gbp-hero">
         <div className="gbp-hero-bg" aria-hidden="true" />
         <div className="gbp-hero-content">
-          <div className="shell">
-            <span className="eyebrow gbp-eyebrow">Services · Grow &amp; Market</span>
-            <h1 className="gbp-hero-hl">
-              Cape Cod Google Business <em>Profile Optimization.</em>
-            </h1>
-            <p className="gbp-hero-sub">
-              Show up in Google Maps and the local pack for Cape Cod searches. We optimize and manage your Google Business Profile to put your business in front of customers actively looking for you.
-            </p>
-            <div className="gbp-hero-actions">
-              <a className="btn btn--accent" href="index.html#cta">
-                Get a free GBP audit <span className="arrow">→</span>
-              </a>
-              <a className="btn btn--ghost gbp-ghost" href="tel:5084132043">
-                508.413.2043
-              </a>
+          <div className="shell svc-hero-grid">
+            <div className="svc-hero-copy">
+              <span className="eyebrow gbp-eyebrow">Services · Grow &amp; Market</span>
+              <h1 className="gbp-hero-hl">
+                Cape Cod Google Business <em>Profile Optimization.</em>
+              </h1>
+              <p className="gbp-hero-sub">
+                Show up in Google Maps and the local pack for Cape Cod searches. We optimize and manage your Google Business Profile to put your business in front of customers actively looking for you.
+              </p>
+              <div className="gbp-hero-actions">
+                <a className="btn btn--accent" href="index.html#cta">
+                  Get a free GBP audit <span className="arrow">→</span>
+                </a>
+                <a className="btn btn--ghost gbp-ghost" href="tel:5084132043">
+                  508.413.2043
+                </a>
+              </div>
             </div>
+            <ServiceLeadForm
+              service="Google Business Profile"
+              title="Get a free profile review"
+              cta="Request review"
+              notePlaceholder="Your business name as it appears on Google (optional)"
+            />
           </div>
         </div>
       </div>

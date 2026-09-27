@@ -121,27 +121,35 @@ function ConsultingPage() {
         <img className="cn-hero-img" src="assets/consulting-hero.jpg" alt="" aria-hidden="true" />
         <div className="cn-hero-bg" aria-hidden="true" />
         <div className="cn-hero-content">
-          <div className="shell">
-            <span className="eyebrow cn-eyebrow">Services · Consulting</span>
-            <h1 className="cn-hero-hl">
-              Cape Cod Web <em>&amp; Business Consulting.</em>
-            </h1>
-            <p className="cn-hero-sub">
-              COLEwebdev consulting puts 35+ years of hands-on web and business experience to work for you — from website strategy and platform decisions to training, audits, and one-on-one coaching for Cape Cod businesses and beyond.
-            </p>
-            <div className="cn-hero-actions">
-              <a className="btn btn--accent" href="contact.html">
-                Book a consultation <span className="arrow">→</span>
-              </a>
-              <a className="btn btn--ghost cn-ghost" href="tel:5084132043">
-                508.413.2043
-              </a>
+          <div className="shell svc-hero-grid">
+            <div className="svc-hero-copy">
+              <span className="eyebrow cn-eyebrow">Services · Consulting</span>
+              <h1 className="cn-hero-hl">
+                Cape Cod Web <em>&amp; Business Consulting.</em>
+              </h1>
+              <p className="cn-hero-sub">
+                COLEwebdev consulting puts 35+ years of hands-on web and business experience to work for you — from website strategy and platform decisions to training, audits, and one-on-one coaching for Cape Cod businesses and beyond.
+              </p>
+              <div className="cn-hero-actions">
+                <a className="btn btn--accent" href="contact.html">
+                  Book a consultation <span className="arrow">→</span>
+                </a>
+                <a className="btn btn--ghost cn-ghost" href="tel:5084132043">
+                  508.413.2043
+                </a>
+              </div>
+              <div className="cn-tags">
+                {['Website Strategy', 'Business Consulting', 'Website Audits', 'Training & Coaching'].map(t => (
+                  <span key={t} className="cn-tag">{t}</span>
+                ))}
+              </div>
             </div>
-            <div className="cn-tags">
-              {['Website Strategy', 'Business Consulting', 'Website Audits', 'Training & Coaching'].map(t => (
-                <span key={t} className="cn-tag">{t}</span>
-              ))}
-            </div>
+            <ServiceLeadForm
+              service="Consulting"
+              title="Book a free intro call"
+              cta="Request a call"
+              notePlaceholder="What are you working on? (optional)"
+            />
           </div>
         </div>
       </div>

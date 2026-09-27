@@ -687,6 +687,85 @@ function ServiceSideNav({ group, current, children }) {
   );
 }
 
+/* Short hero lead form for service pages. Posts to the same Formspree
+   inbox as the quote and contact forms; `service` tags the subject line. */
+const SERVICE_LEAD_ENDPOINT = 'https://formspree.io/f/xnjwgqld';
+
+function ServiceLeadForm({ service, title = 'Get a free quote', sub = 'No obligation. A real person replies.', cta = 'Send request', notePlaceholder = 'What do you need help with? (optional)' }) {
+  const [form, setForm] = React.useState({ name: '', email: '', website: '', message: '', _gotcha: '' });
+  const [status, setStatus] = React.useState('idle');
+  const [error, setError] = React.useState('');
+  const uid = 'slf-' + service.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+
+  const set = (k) => (e) => {
+    const v = e.target.value;
+    setForm(f => Object.assign({}, f, { [k]: v }));
+  };
+
+  const submit = async (e) => {
+    e.preventDefault();
+    if (!form.name.trim()) { setError('name'); return; }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim())) { setError('email'); return; }
+    setError('');
+    setStatus('submitting');
+    try {
+      const res = await fetch(SERVICE_LEAD_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          _subject: service + ' Lead — COLEwebdev',
+          _gotcha: form._gotcha,
+          service: service,
+          name: form.name.trim(),
+          email: form.email.trim(),
+          website: form.website.trim(),
+          message: form.message.trim(),
+          page: window.location.pathname,
+        }),
+      });
+      if (!res.ok) throw new Error();
+      setStatus('success');
+      if (window.gtag) window.gtag('event', 'form_submit', { event_category: 'lead', form_name: 'service_lead', service: service });
+    } catch (err) {
+      setStatus('error');
+    }
+  };
+
+  if (status === 'success') {
+    return (
+      <div className="slf slf--done" role="status">
+        <div className="slf-done-icon" aria-hidden="true">✓</div>
+        <p className="slf-title">Got it, thanks.</p>
+        <p className="slf-sub">We'll be in touch soon. Need us sooner? Call <a href="tel:5084132043">508.413.2043</a>.</p>
+      </div>
+    );
+  }
+
+  return (
+    <form className="slf" onSubmit={submit} noValidate>
+      <p className="slf-title">{title}</p>
+      <p className="slf-sub">{sub}</p>
+      <div className="slf-fields">
+        <label className="slf-label" htmlFor={uid + '-name'}>Your name (required)</label>
+        <input id={uid + '-name'} className="slf-input" type="text" autoComplete="name" placeholder="Your name *" value={form.name} onChange={set('name')} aria-invalid={error === 'name'} />
+        <label className="slf-label" htmlFor={uid + '-email'}>Email (required)</label>
+        <input id={uid + '-email'} className="slf-input" type="email" autoComplete="email" placeholder="Email address *" value={form.email} onChange={set('email')} aria-invalid={error === 'email'} />
+        <label className="slf-label" htmlFor={uid + '-web'}>Website (optional)</label>
+        <input id={uid + '-web'} className="slf-input" type="text" inputMode="url" autoComplete="url" placeholder="Your website (optional)" value={form.website} onChange={set('website')} />
+        <label className="slf-label" htmlFor={uid + '-msg'}>Message (optional)</label>
+        <textarea id={uid + '-msg'} className="slf-input slf-textarea" rows={2} placeholder={notePlaceholder} value={form.message} onChange={set('message')} />
+        <input className="slf-hp" type="text" name="_gotcha" tabIndex={-1} autoComplete="off" aria-hidden="true" value={form._gotcha} onChange={set('_gotcha')} />
+      </div>
+      {error && <p className="slf-error" role="alert">{error === 'name' ? 'Please add your name.' : 'Please enter a valid email address.'}</p>}
+      {status === 'error' && <p className="slf-error" role="alert">Something went wrong. Please try again or call 508.413.2043.</p>}
+      <button className="btn btn--accent slf-btn" type="submit" disabled={status === 'submitting'}>
+        {status === 'submitting' ? 'Sending…' : <React.Fragment>{cta} <span className="arrow">→</span></React.Fragment>}
+      </button>
+      <p className="form-privacy">By submitting, you agree to our <a href="privacy.html">Privacy Policy</a>.</p>
+    </form>
+  );
+}
+
 /* Service snapshot: copy + illustration that fills the ServiceSideNav gap.
    Graphics are HTML/CSS mockups built from the Svs* primitives below. */
 function SvcSnapshot({ accent, eyebrow, title, intro, points, link, children }) {
@@ -790,4 +869,4 @@ function SvsMeters({ items }) {
   );
 }
 
-Object.assign(window, { Process, Portfolio, Testimonial, News, CTA, NewsletterBanner, Footer, SummaryStrip, ServiceSideNav, SvcSnapshot, SvsWindow, SvsRows, SvsFlow, SvsChat, SvsMeters });
+Object.assign(window, { Process, Portfolio, Testimonial, News, CTA, NewsletterBanner, Footer, SummaryStrip, ServiceSideNav, ServiceLeadForm, SvcSnapshot, SvsWindow, SvsRows, SvsFlow, SvsChat, SvsMeters });

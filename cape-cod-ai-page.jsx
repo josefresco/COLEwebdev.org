@@ -80,29 +80,37 @@ function CapeCodAiPage() {
       <div className="cai-hero">
         <div className="cai-hero-bg" aria-hidden="true" />
         <div className="cai-hero-content">
-          <div className="shell">
-            <span className="eyebrow cai-eyebrow">Cape Cod AI</span>
-            <h1 className="cai-hero-hl">
-              AI web development<br />for <em>Cape Cod</em> businesses.
-            </h1>
-            <p className="cai-hero-sub">
-              We build custom AI tools, make your site legible to AI search engines, and lay the technical
-              groundwork every AI system reads first — all under one local team that actually understands
-              what a Cape Cod small business needs from AI, and what's still hype.
-            </p>
-            <div className="cai-hero-actions">
-              <a className="btn btn--accent" href="contact.html">
-                Talk to our AI lead <span className="arrow">→</span>
-              </a>
-              <a className="btn btn--ghost cai-ghost" href="tel:5084132043">
-                508.413.2043
-              </a>
+          <div className="shell svc-hero-grid">
+            <div className="svc-hero-copy">
+              <span className="eyebrow cai-eyebrow">Cape Cod AI</span>
+              <h1 className="cai-hero-hl">
+                AI web development<br />for <em>Cape Cod</em> businesses.
+              </h1>
+              <p className="cai-hero-sub">
+                We build custom AI tools, make your site legible to AI search engines, and lay the technical
+                groundwork every AI system reads first — all under one local team that actually understands
+                what a Cape Cod small business needs from AI, and what's still hype.
+              </p>
+              <div className="cai-hero-actions">
+                <a className="btn btn--accent" href="contact.html">
+                  Talk to our AI lead <span className="arrow">→</span>
+                </a>
+                <a className="btn btn--ghost cai-ghost" href="tel:5084132043">
+                  508.413.2043
+                </a>
+              </div>
+              <div className="cai-hero-tags">
+                {['Rapid Prototyping', 'Custom WordPress Plugins', 'AI Chatbots', 'AI SEO Audits', 'AI Speed Audits', 'AI Engine Optimization', 'AI-Ready Websites', 'Applied, Not Hype'].map(t => (
+                  <span key={t} className="cai-hero-tag">{t}</span>
+                ))}
+              </div>
             </div>
-            <div className="cai-hero-tags">
-              {['Rapid Prototyping', 'Custom WordPress Plugins', 'AI Chatbots', 'AI SEO Audits', 'AI Speed Audits', 'AI Engine Optimization', 'AI-Ready Websites', 'Applied, Not Hype'].map(t => (
-                <span key={t} className="cai-hero-tag">{t}</span>
-              ))}
-            </div>
+            <ServiceLeadForm
+              service="Cape Cod AI"
+              title="Talk to our AI team"
+              cta="Start a conversation"
+              notePlaceholder="What would you like AI to help with? (optional)"
+            />
           </div>
         </div>
       </div>

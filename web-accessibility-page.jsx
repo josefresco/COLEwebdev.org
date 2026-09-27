@@ -51,28 +51,36 @@ function WCAPage() {
       <div className="wca-hero">
         <div className="wca-hero-bg" aria-hidden="true" />
         <div className="wca-hero-content">
-          <div className="shell">
-            <span className="eyebrow wca-eyebrow">Services · Web Accessibility</span>
-            <h1 className="wca-hero-hl">
-              Websites built <em>for everyone.</em>
-            </h1>
-            <p className="wca-hero-sub">
-              WCAG 2.1 AA compliance audits, remediation, and ongoing monitoring. Protect your business from ADA exposure, reach more customers, and build sites that actually work for everyone.
-            </p>
-            <div className="wca-hero-actions">
-              <a className="btn btn--accent" href="quote.html">
-                Request an accessibility audit <span className="arrow">→</span>
-              </a>
-              <a className="btn btn--ghost wca-ghost" href="website-design.html">
-                Web Design Services <span className="arrow">→</span>
-              </a>
+          <div className="shell svc-hero-grid">
+            <div className="svc-hero-copy">
+              <span className="eyebrow wca-eyebrow">Services · Web Accessibility</span>
+              <h1 className="wca-hero-hl">
+                Websites built <em>for everyone.</em>
+              </h1>
+              <p className="wca-hero-sub">
+                WCAG 2.1 AA compliance audits, remediation, and ongoing monitoring. Protect your business from ADA exposure, reach more customers, and build sites that actually work for everyone.
+              </p>
+              <div className="wca-hero-actions">
+                <a className="btn btn--accent" href="quote.html">
+                  Request an accessibility audit <span className="arrow">→</span>
+                </a>
+                <a className="btn btn--ghost wca-ghost" href="website-design.html">
+                  Web Design Services <span className="arrow">→</span>
+                </a>
+              </div>
+              <div className="wca-hero-tags">
+                <span className="wca-tag">WCAG 2.1 AA</span>
+                <span className="wca-tag">ADA Compliance</span>
+                <span className="wca-tag">Screen Reader Testing</span>
+                <span className="wca-tag">Keyboard Navigation</span>
+              </div>
             </div>
-            <div className="wca-hero-tags">
-              <span className="wca-tag">WCAG 2.1 AA</span>
-              <span className="wca-tag">ADA Compliance</span>
-              <span className="wca-tag">Screen Reader Testing</span>
-              <span className="wca-tag">Keyboard Navigation</span>
-            </div>
+            <ServiceLeadForm
+              service="Web Accessibility"
+              title="Request an accessibility audit"
+              cta="Request audit"
+              notePlaceholder="Any deadline or complaint driving this? (optional)"
+            />
           </div>
         </div>
       </div>

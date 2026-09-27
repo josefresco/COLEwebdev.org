@@ -276,27 +276,35 @@ function AiAppsPage() {
         <div className="ai-hero-bg" aria-hidden="true" />
         <NeuralCanvas />
         <div className="ai-hero-content">
-          <div className="shell">
-            <span className="eyebrow ai-eyebrow">Services · AI Studio</span>
-            <h1 className="ai-hero-hl">
-              Custom AI Tools <em>for Cape Cod.</em>
-            </h1>
-            <p className="ai-hero-sub">
-              No generic tools. No off-the-shelf templates. Every app we build is custom — scoped to your exact workflow, built to solve a real problem. We take today's best AI tools and turn them into practical solutions small business owners can actually use and rely on.
-            </p>
-            <div className="ai-hero-actions">
-              <a className="btn btn--accent" href="contact.html">
-                Start a conversation <span className="arrow">→</span>
-              </a>
-              <a className="btn btn--ghost ai-ghost" href="tel:5084132043">
-                508.413.2043
-              </a>
+          <div className="shell svc-hero-grid">
+            <div className="svc-hero-copy">
+              <span className="eyebrow ai-eyebrow">Services · AI Studio</span>
+              <h1 className="ai-hero-hl">
+                Custom AI Tools <em>for Cape Cod.</em>
+              </h1>
+              <p className="ai-hero-sub">
+                No generic tools. No off-the-shelf templates. Every app we build is custom — scoped to your exact workflow, built to solve a real problem. We take today's best AI tools and turn them into practical solutions small business owners can actually use and rely on.
+              </p>
+              <div className="ai-hero-actions">
+                <a className="btn btn--accent" href="contact.html">
+                  Start a conversation <span className="arrow">→</span>
+                </a>
+                <a className="btn btn--ghost ai-ghost" href="tel:5084132043">
+                  508.413.2043
+                </a>
+              </div>
+              <div className="ai-hero-tags">
+                {['Rapid Prototyping', 'WordPress Plugins', 'AI Chatbots', 'Progressive Web Apps', 'Browser Extensions', 'Hosted Apps', 'SEO Audits', 'Speed Audits'].map(t => (
+                  <span key={t} className="ai-hero-tag">{t}</span>
+                ))}
+              </div>
             </div>
-            <div className="ai-hero-tags">
-              {['Rapid Prototyping', 'WordPress Plugins', 'AI Chatbots', 'Progressive Web Apps', 'Browser Extensions', 'Hosted Apps', 'SEO Audits', 'Speed Audits'].map(t => (
-                <span key={t} className="ai-hero-tag">{t}</span>
-              ))}
-            </div>
+            <ServiceLeadForm
+              service="AI Studio"
+              title="Tell us what to build"
+              cta="Start a conversation"
+              notePlaceholder="Describe the tool or problem (optional)"
+            />
           </div>
         </div>
       </div>

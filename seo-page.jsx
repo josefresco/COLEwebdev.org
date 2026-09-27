@@ -83,7 +83,7 @@ const SEO_FAQ = [
   },
 ];
 
-function SeoHeroViz() {
+function SeoAuditViz() {
   const rows = [
     ['crit', 'Critical', '14 pages blocked from indexing'],
     ['crit', 'Critical', 'Redirect loop on /services'],
@@ -92,34 +92,22 @@ function SeoHeroViz() {
     ['mod', 'Moderate', 'Missing alt text on 38 images'],
   ];
   return (
-    <figure className="seo-hviz" aria-label="Illustration: an SEO audit report with issues ranked by severity">
-      <div className="seo-hviz-card">
-        <div className="seo-hviz-head">
-          <span className="seo-hviz-title">SEO audit</span>
-          <span className="seo-hviz-site">yourbusiness.com</span>
-        </div>
-        <div className="seo-hviz-sum">
-          <div className="is-crit"><b>2</b><span>Critical</span></div>
-          <div className="is-ser"><b>2</b><span>Serious</span></div>
-          <div className="is-mod"><b>1</b><span>Moderate</span></div>
-        </div>
-        <ul className="seo-hviz-rows">
-          {rows.map(([sev, label, text]) => (
-            <li key={text}>
-              <span className={'seo-sev seo-sev--' + sev}>{label}</span>
-              <span>{text}</span>
-            </li>
-          ))}
-        </ul>
+    <SvsWindow title="SEO audit · yourbusiness.com">
+      <div className="seo-hviz-sum">
+        <div className="is-crit"><b>2</b><span>Critical</span></div>
+        <div className="is-ser"><b>2</b><span>Serious</span></div>
+        <div className="is-mod"><b>1</b><span>Moderate</span></div>
       </div>
-      <div className="seo-hviz-chip seo-hviz-chip--a">
-        <span className="seo-hviz-dot" aria-hidden="true" /> Search Console connected
-      </div>
-      <div className="seo-hviz-chip seo-hviz-chip--b">
-        <span className="seo-hviz-dot" aria-hidden="true" /> Google Analytics connected
-      </div>
-      <figcaption className="seo-hviz-cap">Illustrative example</figcaption>
-    </figure>
+      <ul className="seo-hviz-rows">
+        {rows.map(([sev, label, text]) => (
+          <li key={text}>
+            <span className={'seo-sev seo-sev--' + sev}>{label}</span>
+            <span>{text}</span>
+          </li>
+        ))}
+      </ul>
+      <div className="seo-hviz-src"><span className="seo-hviz-dot" /> Search Console + Analytics connected</div>
+    </SvsWindow>
   );
 }
 
@@ -132,8 +120,8 @@ function SeoPage() {
       <div className="seo-hero">
         <div className="seo-hero-bg" aria-hidden="true" />
         <div className="seo-hero-content">
-          <div className="shell seo-hero-grid">
-            <div className="seo-hero-copy">
+          <div className="shell svc-hero-grid">
+            <div className="svc-hero-copy">
               <span className="eyebrow seo-eyebrow">Services · SEO Audits &amp; Remediation</span>
               <h1 className="seo-hero-hl">
                 Cape Cod SEO audits that <em>end in fixes.</em>
@@ -155,7 +143,13 @@ function SeoPage() {
                 ))}
               </div>
             </div>
-            <SeoHeroViz />
+            <ServiceLeadForm
+              service="SEO Snapshot"
+              title="Get a free SEO snapshot"
+              sub="We'll flag the biggest problems and tell you if a full audit is worth it."
+              cta="Request snapshot"
+              notePlaceholder="Anything specific worrying you? (optional)"
+            />
           </div>
         </div>
       </div>
@@ -179,13 +173,7 @@ function SeoPage() {
           ]}
           link={{ href: 'wp-not-showing-on-google.html', text: "Read: why your site isn't showing on Google" }}
         >
-          <SvsWindow title="Engagement">
-            <SvsFlow steps={[
-              { k: 'Snapshot', v: 'Free first look' },
-              { k: 'Audit', v: 'Prioritized report' },
-              { k: 'Remediation', v: 'Fixed and verified' },
-            ]} />
-          </SvsWindow>
+          <SeoAuditViz />
         </SvcSnapshot>
       </ServiceSideNav>
 

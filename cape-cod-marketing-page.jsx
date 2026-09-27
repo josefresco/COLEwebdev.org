@@ -81,29 +81,37 @@ function CapeCodeMarketingPage() {
       <div className="mkt-hero">
         <div className="mkt-hero-bg" aria-hidden="true" />
         <div className="mkt-hero-content">
-          <div className="shell">
-            <span className="eyebrow mkt-eyebrow">COLEwebdev · Cape Cod Marketing</span>
-            <h1 className="mkt-hero-hl">
-              Marketing that works<br />for <em>Cape Cod businesses.</em>
-            </h1>
-            <p className="mkt-hero-sub">
-              Search, paid ads, social, design, and analytics — all under one roof,
-              with a local team that knows your market, your seasons, and your customers.
-              No agency mystery. Just results you can measure.
-            </p>
-            <div className="mkt-hero-actions">
-              <a className="btn btn--accent" href="quote.html">
-                Get a free consultation <span className="arrow">→</span>
-              </a>
-              <a className="btn btn--ghost mkt-ghost" href="tel:5084132043">
-                508.413.2043
-              </a>
+          <div className="shell svc-hero-grid">
+            <div className="svc-hero-copy">
+              <span className="eyebrow mkt-eyebrow">COLEwebdev · Cape Cod Marketing</span>
+              <h1 className="mkt-hero-hl">
+                Marketing that works<br />for <em>Cape Cod businesses.</em>
+              </h1>
+              <p className="mkt-hero-sub">
+                Search, paid ads, social, design, and analytics — all under one roof,
+                with a local team that knows your market, your seasons, and your customers.
+                No agency mystery. Just results you can measure.
+              </p>
+              <div className="mkt-hero-actions">
+                <a className="btn btn--accent" href="quote.html">
+                  Get a free consultation <span className="arrow">→</span>
+                </a>
+                <a className="btn btn--ghost mkt-ghost" href="tel:5084132043">
+                  508.413.2043
+                </a>
+              </div>
+              <div className="mkt-hero-tags">
+                {['SEO', 'Google Ads', 'Social', 'Landing Pages', 'Analytics', 'Lead Capture'].map(t => (
+                  <span key={t} className="mkt-hero-tag">{t}</span>
+                ))}
+              </div>
             </div>
-            <div className="mkt-hero-tags">
-              {['SEO', 'Google Ads', 'Social', 'Landing Pages', 'Analytics', 'Lead Capture'].map(t => (
-                <span key={t} className="mkt-hero-tag">{t}</span>
-              ))}
-            </div>
+            <ServiceLeadForm
+              service="Marketing"
+              title="Get a free consultation"
+              cta="Request consultation"
+              notePlaceholder="Which channels are you using now? (optional)"
+            />
           </div>
         </div>
       </div>

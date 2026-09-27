@@ -67,22 +67,30 @@ function EmailMarketingPage() {
       <div className="em-hero">
         <div className="em-hero-bg" aria-hidden="true" />
         <div className="em-hero-content">
-          <div className="shell">
-            <span className="eyebrow em-eyebrow">Services · Grow &amp; Market</span>
-            <h1 className="em-hero-hl">
-              Cape Cod Email <em>Marketing.</em>
-            </h1>
-            <p className="em-hero-sub">
-              Email campaigns and newsletters for Cape Cod small businesses — built in Mailchimp or Klaviyo, designed to open, and written to convert.
-            </p>
-            <div className="em-hero-actions">
-              <a className="btn btn--accent" href="index.html#cta">
-                Talk about your list <span className="arrow">→</span>
-              </a>
-              <a className="btn btn--ghost em-ghost" href="tel:5084132043">
-                508.413.2043
-              </a>
+          <div className="shell svc-hero-grid">
+            <div className="svc-hero-copy">
+              <span className="eyebrow em-eyebrow">Services · Grow &amp; Market</span>
+              <h1 className="em-hero-hl">
+                Cape Cod Email <em>Marketing.</em>
+              </h1>
+              <p className="em-hero-sub">
+                Email campaigns and newsletters for Cape Cod small businesses — built in Mailchimp or Klaviyo, designed to open, and written to convert.
+              </p>
+              <div className="em-hero-actions">
+                <a className="btn btn--accent" href="index.html#cta">
+                  Talk about your list <span className="arrow">→</span>
+                </a>
+                <a className="btn btn--ghost em-ghost" href="tel:5084132043">
+                  508.413.2043
+                </a>
+              </div>
             </div>
+            <ServiceLeadForm
+              service="Email Marketing"
+              title="Talk about your email"
+              cta="Send request"
+              notePlaceholder="Which email platform do you use? (optional)"
+            />
           </div>
         </div>
       </div>

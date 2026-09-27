@@ -111,22 +111,30 @@ function SocialMediaPage() {
       <div className="sm-hero">
         <div className="sm-hero-bg" aria-hidden="true" />
         <div className="sm-hero-content">
-          <div className="shell">
-            <span className="eyebrow sm-eyebrow">Services · Grow &amp; Market</span>
-            <h1 className="sm-hero-hl">
-              Cape Cod Social Media <em>Marketing.</em>
-            </h1>
-            <p className="sm-hero-sub">
-              Facebook, Instagram, and LinkedIn management for Cape Cod small businesses — content that builds your audience and drives real results.
-            </p>
-            <div className="sm-hero-actions">
-              <a className="btn btn--accent" href="index.html#cta">
-                Start the conversation <span className="arrow">→</span>
-              </a>
-              <a className="btn btn--ghost sm-ghost" href="tel:5084132043">
-                508.413.2043
-              </a>
+          <div className="shell svc-hero-grid">
+            <div className="svc-hero-copy">
+              <span className="eyebrow sm-eyebrow">Services · Grow &amp; Market</span>
+              <h1 className="sm-hero-hl">
+                Cape Cod Social Media <em>Marketing.</em>
+              </h1>
+              <p className="sm-hero-sub">
+                Facebook, Instagram, and LinkedIn management for Cape Cod small businesses — content that builds your audience and drives real results.
+              </p>
+              <div className="sm-hero-actions">
+                <a className="btn btn--accent" href="index.html#cta">
+                  Start the conversation <span className="arrow">→</span>
+                </a>
+                <a className="btn btn--ghost sm-ghost" href="tel:5084132043">
+                  508.413.2043
+                </a>
+              </div>
             </div>
+            <ServiceLeadForm
+              service="Social Media"
+              title="Talk about your social"
+              cta="Send request"
+              notePlaceholder="Which platforms are you on now? (optional)"
+            />
           </div>
         </div>
       </div>

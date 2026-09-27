@@ -53,22 +53,30 @@ function BrandingPage() {
         <img className="br-hero-img" src="assets/branding-hero.jpg" alt="" aria-hidden="true" />
         <div className="br-hero-bg" aria-hidden="true" />
         <div className="br-hero-content">
-          <div className="shell">
-            <span className="eyebrow br-eyebrow">Services · Branding</span>
-            <h1 className="br-hero-hl">
-              Cape Cod Logo <em>&amp; Brand Design.</em>
-            </h1>
-            <p className="br-hero-sub">
-              Logos, color systems, typography, and print collateral — built to work together and built to last. We make sure your brand looks as good offline as it does online.
-            </p>
-            <div className="br-hero-actions">
-              <a className="btn btn--accent" href="contact.html">
-                Start a branding project <span className="arrow">→</span>
-              </a>
-              <a className="btn btn--ghost br-ghost" href="tel:5084132043">
-                508.413.2043
-              </a>
+          <div className="shell svc-hero-grid">
+            <div className="svc-hero-copy">
+              <span className="eyebrow br-eyebrow">Services · Branding</span>
+              <h1 className="br-hero-hl">
+                Cape Cod Logo <em>&amp; Brand Design.</em>
+              </h1>
+              <p className="br-hero-sub">
+                Logos, color systems, typography, and print collateral — built to work together and built to last. We make sure your brand looks as good offline as it does online.
+              </p>
+              <div className="br-hero-actions">
+                <a className="btn btn--accent" href="contact.html">
+                  Start a branding project <span className="arrow">→</span>
+                </a>
+                <a className="btn btn--ghost br-ghost" href="tel:5084132043">
+                  508.413.2043
+                </a>
+              </div>
             </div>
+            <ServiceLeadForm
+              service="Branding"
+              title="Start a branding project"
+              cta="Send request"
+              notePlaceholder="New logo, refresh, or full identity? (optional)"
+            />
           </div>
         </div>
       </div>

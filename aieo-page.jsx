@@ -74,29 +74,37 @@ function AieoPage() {
       <div className="aieo-hero">
         <div className="aieo-hero-bg" aria-hidden="true" />
         <div className="aieo-hero-content">
-          <div className="shell">
-            <span className="eyebrow aieo-eyebrow">Services · AI Engine Optimization</span>
-            <h1 className="aieo-hero-hl">
-              Get found by<br /><em>AI search.</em>
-            </h1>
-            <p className="aieo-hero-sub">
-              ChatGPT, Perplexity, Google Gemini, and Claude now answer questions directly
-              — pulling from websites to do it. AIEO is how you make sure your business
-              is the one they cite.
-            </p>
-            <div className="aieo-hero-actions">
-              <a className="btn btn--accent" href="quote.html">
-                Start a conversation <span className="arrow">→</span>
-              </a>
-              <a className="btn btn--ghost aieo-ghost" href="tel:5084132043">
-                508.413.2043
-              </a>
+          <div className="shell svc-hero-grid">
+            <div className="svc-hero-copy">
+              <span className="eyebrow aieo-eyebrow">Services · AI Engine Optimization</span>
+              <h1 className="aieo-hero-hl">
+                Get found by<br /><em>AI search.</em>
+              </h1>
+              <p className="aieo-hero-sub">
+                ChatGPT, Perplexity, Google Gemini, and Claude now answer questions directly
+                — pulling from websites to do it. AIEO is how you make sure your business
+                is the one they cite.
+              </p>
+              <div className="aieo-hero-actions">
+                <a className="btn btn--accent" href="quote.html">
+                  Start a conversation <span className="arrow">→</span>
+                </a>
+                <a className="btn btn--ghost aieo-ghost" href="tel:5084132043">
+                  508.413.2043
+                </a>
+              </div>
+              <div className="aieo-hero-tags">
+                {['Structured Content', 'Schema Markup', 'E-E-A-T', 'Entity Optimization', 'Citation Building'].map(t => (
+                  <span key={t} className="aieo-hero-tag">{t}</span>
+                ))}
+              </div>
             </div>
-            <div className="aieo-hero-tags">
-              {['Structured Content', 'Schema Markup', 'E-E-A-T', 'Entity Optimization', 'Citation Building'].map(t => (
-                <span key={t} className="aieo-hero-tag">{t}</span>
-              ))}
-            </div>
+            <ServiceLeadForm
+              service="AIEO"
+              title="Get found by AI search"
+              cta="Start a conversation"
+              notePlaceholder="What do customers ask about your business? (optional)"
+            />
           </div>
         </div>
       </div>

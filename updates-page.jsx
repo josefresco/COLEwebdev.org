@@ -59,25 +59,33 @@ function UpdatesPage() {
       <div className="um-hero">
         <div className="um-hero-bg" aria-hidden="true" />
         <div className="um-hero-content">
-          <div className="shell">
-            <span className="eyebrow um-eyebrow">Services · Updates &amp; Maintenance</span>
-            <h1 className="um-hero-hl">
-              Cape Cod Website Updates <em>&amp; Maintenance.</em>
-            </h1>
-            <p className="um-hero-sub">
-              Simple, hourly-rate edits for businesses that need content updated, pages added, or small changes made, without committing to a monthly plan. You tell us what to fix. We fix it.
-            </p>
-            <div className="um-hero-actions">
-              <a className="btn btn--accent" href="contact.html">
-                Submit an edit request <span className="arrow">→</span>
-              </a>
-              <a className="btn btn--ghost um-ghost" href="hosting.html">
-                See Care Plans instead <span className="arrow">→</span>
-              </a>
+          <div className="shell svc-hero-grid">
+            <div className="svc-hero-copy">
+              <span className="eyebrow um-eyebrow">Services · Updates &amp; Maintenance</span>
+              <h1 className="um-hero-hl">
+                Cape Cod Website Updates <em>&amp; Maintenance.</em>
+              </h1>
+              <p className="um-hero-sub">
+                Simple, hourly-rate edits for businesses that need content updated, pages added, or small changes made, without committing to a monthly plan. You tell us what to fix. We fix it.
+              </p>
+              <div className="um-hero-actions">
+                <a className="btn btn--accent" href="contact.html">
+                  Submit an edit request <span className="arrow">→</span>
+                </a>
+                <a className="btn btn--ghost um-ghost" href="hosting.html">
+                  See Care Plans instead <span className="arrow">→</span>
+                </a>
+              </div>
+              <div className="um-hero-note">
+                Billed at our standard hourly rate
+              </div>
             </div>
-            <div className="um-hero-note">
-              Billed at our standard hourly rate
-            </div>
+            <ServiceLeadForm
+              service="Website Updates"
+              title="Request an edit"
+              cta="Send request"
+              notePlaceholder="What needs to change? (optional)"
+            />
           </div>
         </div>
       </div>
