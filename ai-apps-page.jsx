@@ -286,7 +286,7 @@ function AiAppsPage() {
                 No generic tools. No off-the-shelf templates. Every app we build is custom — scoped to your exact workflow, built to solve a real problem. We take today's best AI tools and turn them into practical solutions small business owners can actually use and rely on.
               </p>
               <div className="ai-hero-actions">
-                <a className="btn btn--accent" href="contact.html">
+                <a className="btn btn--accent" href="#lead-form">
                   Start a conversation <span className="arrow">→</span>
                 </a>
                 <a className="btn btn--ghost ai-ghost" href="tel:5084132043">

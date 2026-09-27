@@ -93,7 +93,7 @@ function CapeCodeMarketingPage() {
                 No agency mystery. Just results you can measure.
               </p>
               <div className="mkt-hero-actions">
-                <a className="btn btn--accent" href="quote.html">
+                <a className="btn btn--accent" href="#lead-form">
                   Get a free consultation <span className="arrow">→</span>
                 </a>
                 <a className="btn btn--ghost mkt-ghost" href="tel:5084132043">

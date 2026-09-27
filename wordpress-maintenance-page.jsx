@@ -42,7 +42,7 @@ function WPMaintenancePage() {
                 Monthly WordPress maintenance for Cape Cod businesses — updates, backups, security, and a real person to call when something breaks.
               </p>
               <div className="wm-hero-actions">
-                <a className="btn btn--accent" href="index.html#cta">
+                <a className="btn btn--accent" href="#lead-form">
                   Start your maintenance plan <span className="arrow">→</span>
                 </a>
                 <a className="btn btn--ghost wm-ghost" href="tel:5084132043">

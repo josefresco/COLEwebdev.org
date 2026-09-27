@@ -121,7 +121,7 @@ function SocialMediaPage() {
                 Facebook, Instagram, and LinkedIn management for Cape Cod small businesses — content that builds your audience and drives real results.
               </p>
               <div className="sm-hero-actions">
-                <a className="btn btn--accent" href="index.html#cta">
+                <a className="btn btn--accent" href="#lead-form">
                   Start the conversation <span className="arrow">→</span>
                 </a>
                 <a className="btn btn--ghost sm-ghost" href="tel:5084132043">

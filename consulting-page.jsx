@@ -131,7 +131,7 @@ function ConsultingPage() {
                 COLEwebdev consulting puts 35+ years of hands-on web and business experience to work for you — from website strategy and platform decisions to training, audits, and one-on-one coaching for Cape Cod businesses and beyond.
               </p>
               <div className="cn-hero-actions">
-                <a className="btn btn--accent" href="contact.html">
+                <a className="btn btn--accent" href="#lead-form">
                   Book a consultation <span className="arrow">→</span>
                 </a>
                 <a className="btn btn--ghost cn-ghost" href="tel:5084132043">

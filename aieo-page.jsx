@@ -86,7 +86,7 @@ function AieoPage() {
                 is the one they cite.
               </p>
               <div className="aieo-hero-actions">
-                <a className="btn btn--accent" href="quote.html">
+                <a className="btn btn--accent" href="#lead-form">
                   Start a conversation <span className="arrow">→</span>
                 </a>
                 <a className="btn btn--ghost aieo-ghost" href="tel:5084132043">

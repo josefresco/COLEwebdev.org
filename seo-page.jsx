@@ -130,7 +130,7 @@ function SeoPage() {
                 We find what is keeping your site out of Google, rank every issue by severity, and then fix it on your site. No monthly retainer and no report that sits in a drawer.
               </p>
               <div className="seo-hero-actions">
-                <a className="btn btn--accent" href="quote.html">
+                <a className="btn btn--accent" href="#lead-form">
                   Get a free SEO snapshot <span className="arrow">→</span>
                 </a>
                 <a className="btn btn--ghost seo-ghost" href="tel:5084132043">

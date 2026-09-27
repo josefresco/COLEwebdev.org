@@ -129,7 +129,7 @@ function WPSpeedPage() {
                 Most WordPress sites leave 40–60 PageSpeed points on the table. We audit and fix what's actually slowing yours down: images, caching, plugins, code, and Core Web Vitals.
               </p>
               <div className="wps-hero-actions">
-                <a className="btn btn--accent" href="quote.html">
+                <a className="btn btn--accent" href="#lead-form">
                   Get a speed audit <span className="arrow">→</span>
                 </a>
                 <a className="btn btn--ghost wps-ghost" href="wordpress-hosting.html">

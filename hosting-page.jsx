@@ -75,7 +75,7 @@ function HostingPage() {
                 Managed WordPress hosting, daily backups, security monitoring, and a real person to call — so you can run your business without worrying about your website.
               </p>
               <div className="hc-hero-actions">
-                <a className="btn btn--accent" href="contact.html">
+                <a className="btn btn--accent" href="#lead-form">
                   Ask about Care Plans <span className="arrow">→</span>
                 </a>
                 <a className="btn btn--ghost hc-ghost" href="tel:5084132043">

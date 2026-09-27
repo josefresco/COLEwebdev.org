@@ -61,7 +61,7 @@ function WCAPage() {
                 WCAG 2.1 AA compliance audits, remediation, and ongoing monitoring. Protect your business from ADA exposure, reach more customers, and build sites that actually work for everyone.
               </p>
               <div className="wca-hero-actions">
-                <a className="btn btn--accent" href="quote.html">
+                <a className="btn btn--accent" href="#lead-form">
                   Request an accessibility audit <span className="arrow">→</span>
                 </a>
                 <a className="btn btn--ghost wca-ghost" href="website-design.html">

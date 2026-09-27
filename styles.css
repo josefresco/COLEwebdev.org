@@ -2846,6 +2846,7 @@ p, li {
 }
 .svc-hero-copy { min-width: 0; }
 .slf {
+  scroll-margin-top: 96px;
   background: white;
   color: var(--ink);
   border-radius: var(--r-xl);

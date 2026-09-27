@@ -63,7 +63,7 @@ function BrandingPage() {
                 Logos, color systems, typography, and print collateral — built to work together and built to last. We make sure your brand looks as good offline as it does online.
               </p>
               <div className="br-hero-actions">
-                <a className="btn btn--accent" href="contact.html">
+                <a className="btn btn--accent" href="#lead-form">
                   Start a branding project <span className="arrow">→</span>
                 </a>
                 <a className="btn btn--ghost br-ghost" href="tel:5084132043">

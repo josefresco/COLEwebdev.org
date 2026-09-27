@@ -274,7 +274,7 @@ function PpcPage() {
                 Most Google Ads campaigns spend 30–60% of their budget on clicks that were never going to convert. COLEwebdev builds campaigns around the three things that prevent waste: tight negative keyword management, purpose-built landing pages, and real conversion tracking.
               </p>
               <div className="ppc-hero-actions">
-                <a className="btn btn--accent" href="quote.html">
+                <a className="btn btn--accent" href="#lead-form">
                   Get a free audit <span className="arrow">→</span>
                 </a>
                 <a className="btn btn--ghost ppc-ghost" href="tel:5084132043">

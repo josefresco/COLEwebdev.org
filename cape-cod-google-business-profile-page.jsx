@@ -82,7 +82,7 @@ function GBPPage() {
                 Show up in Google Maps and the local pack for Cape Cod searches. We optimize and manage your Google Business Profile to put your business in front of customers actively looking for you.
               </p>
               <div className="gbp-hero-actions">
-                <a className="btn btn--accent" href="index.html#cta">
+                <a className="btn btn--accent" href="#lead-form">
                   Get a free GBP audit <span className="arrow">→</span>
                 </a>
                 <a className="btn btn--ghost gbp-ghost" href="tel:5084132043">

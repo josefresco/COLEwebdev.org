@@ -77,7 +77,7 @@ function EmailMarketingPage() {
                 Email campaigns and newsletters for Cape Cod small businesses — built in Mailchimp or Klaviyo, designed to open, and written to convert.
               </p>
               <div className="em-hero-actions">
-                <a className="btn btn--accent" href="index.html#cta">
+                <a className="btn btn--accent" href="#lead-form">
                   Talk about your list <span className="arrow">→</span>
                 </a>
                 <a className="btn btn--ghost em-ghost" href="tel:5084132043">

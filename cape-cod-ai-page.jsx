@@ -92,7 +92,7 @@ function CapeCodAiPage() {
                 what a Cape Cod small business needs from AI, and what's still hype.
               </p>
               <div className="cai-hero-actions">
-                <a className="btn btn--accent" href="contact.html">
+                <a className="btn btn--accent" href="#lead-form">
                   Talk to our AI lead <span className="arrow">→</span>
                 </a>
                 <a className="btn btn--ghost cai-ghost" href="tel:5084132043">

@@ -69,7 +69,7 @@ function UpdatesPage() {
                 Simple, hourly-rate edits for businesses that need content updated, pages added, or small changes made, without committing to a monthly plan. You tell us what to fix. We fix it.
               </p>
               <div className="um-hero-actions">
-                <a className="btn btn--accent" href="contact.html">
+                <a className="btn btn--accent" href="#lead-form">
                   Submit an edit request <span className="arrow">→</span>
                 </a>
                 <a className="btn btn--ghost um-ghost" href="hosting.html">
