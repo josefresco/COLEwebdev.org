@@ -658,7 +658,7 @@ const SVC_GROUPS = {
   },
 };
 
-function ServiceSideNav({ group, current }) {
+function ServiceSideNav({ group, current, children }) {
   const data = SVC_GROUPS[group];
   if (!data) return null;
   return (
@@ -678,7 +678,9 @@ function ServiceSideNav({ group, current }) {
             ))}
           </nav>
         </aside>
-        <p className="svc-subnav-blurb">{data.blurb}</p>
+        {children
+          ? <div className="svc-subnav-main">{children}</div>
+          : <p className="svc-subnav-blurb">{data.blurb}</p>}
       </div>
     </section>
   );

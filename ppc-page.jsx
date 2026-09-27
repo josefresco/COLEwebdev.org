@@ -3,6 +3,7 @@
 const PPC_OFFERINGS = [
   {
     type: 'One-time',
+    icon: '⚙',
     name: 'Campaign Setup',
     desc: 'Full build of a new Google Ads campaign from scratch — keyword research, ad group structure, negative keyword foundation, responsive search ad copy, and bidding configuration. Conversion tracking is verified before anything goes live.',
     includes: [
@@ -16,6 +17,7 @@ const PPC_OFFERINGS = [
   {
     type: 'Ongoing monthly',
     featured: true,
+    icon: '↻',
     name: 'Campaign Management',
     desc: 'Monthly management of active campaigns — weekly search term reviews, bid adjustments, A/B ad testing, negative keyword expansion, and a plain-English report with results and next steps.',
     includes: [
@@ -29,6 +31,7 @@ const PPC_OFFERINGS = [
   {
     type: 'One-time · à la carte',
     full: true,
+    icon: '↗',
     name: 'Campaign Optimization',
     desc: "A focused audit and cleanup for campaigns already running but underperforming. We review search terms, wasted spend, quality scores, conversion setup, and landing pages — then fix what's causing the waste in a single engagement. No ongoing retainer required.",
     includes: [
@@ -42,6 +45,7 @@ const PPC_OFFERINGS = [
   },
   {
     type: 'One-time',
+    icon: '◇',
     name: 'Landing Page Creation',
     desc: 'A purpose-built landing page tied to a specific campaign — not your homepage. Designed for message match, mobile speed, and a single conversion action. Includes call tracking integration.',
     includes: [
@@ -54,6 +58,7 @@ const PPC_OFFERINGS = [
   },
   {
     type: 'One-time',
+    icon: '◎',
     name: 'Conversion Tracking Setup',
     desc: 'Configuration of GA4, Google Ads conversion actions, and call tracking so every lead source is measured. A prerequisite for Smart bidding and meaningful reporting — most small business accounts skip this entirely.',
     includes: [
@@ -156,6 +161,100 @@ const PPC_COMMITMENTS = [
   },
 ];
 
+/* Illustrations: plain HTML/CSS mockups, no Google marks */
+
+function PpcHeroViz() {
+  return (
+    <figure className="ppc-hviz" aria-label="Illustration: a search ad with negative keywords, a matching landing page, and call tracking">
+      <div className="ppc-hviz-search">
+        <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><circle cx="7" cy="7" r="5" fill="none" stroke="currentColor" strokeWidth="1.6" /><path d="M11 11l3.5 3.5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" /></svg>
+        <span>lawn care cape cod</span>
+      </div>
+      <div className="ppc-hviz-ad">
+        <div className="ppc-hviz-sponsored">Sponsored</div>
+        <div className="ppc-hviz-url">
+          <span className="ppc-hviz-fav" aria-hidden="true">◇</span>
+          yourbusiness.com <span className="ppc-hviz-path">› cape-cod-lawn-care</span>
+        </div>
+        <div className="ppc-hviz-hl">Cape Cod Lawn Care | Free Estimates This Week</div>
+        <p className="ppc-hviz-desc">Local crews, weekly service, and spring cleanups from Falmouth to Provincetown. Call for a same-day quote.</p>
+        <div className="ppc-hviz-links">
+          <span>Spring Cleanup</span><span>Weekly Mowing</span><span>Get a Quote</span>
+        </div>
+      </div>
+      <div className="ppc-hviz-chip ppc-hviz-chip--neg">
+        <span className="ppc-hviz-chip-label">Negatives</span>
+        <span>−jobs</span><span>−diy</span><span>−free</span>
+      </div>
+      <div className="ppc-hviz-chip ppc-hviz-chip--track">
+        <span className="ppc-hviz-dot" aria-hidden="true" /> Call tracked · conversion recorded
+      </div>
+      <figcaption className="ppc-hviz-cap">Illustrative example</figcaption>
+    </figure>
+  );
+}
+
+function PpcVizTerms() {
+  const rows = [
+    ['lawn care cape cod', true],
+    ['lawn care jobs', false],
+    ['diy lawn care tips', false],
+    ['lawn service falmouth ma', true],
+  ];
+  return (
+    <div className="ppc-viz" aria-hidden="true">
+      <div className="ppc-viz-bar">Search terms report</div>
+      <ul className="ppc-viz-terms">
+        {rows.map(([t, keep]) => (
+          <li key={t} className={keep ? 'is-keep' : 'is-neg'}>
+            <span className="ppc-viz-term">{t}</span>
+            <span className="ppc-viz-flag">{keep ? '✓ keep' : '− negative'}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function PpcVizMatch() {
+  return (
+    <div className="ppc-viz ppc-viz-match" aria-hidden="true">
+      <div className="ppc-viz-mini-ad">
+        <span className="ppc-viz-mini-tag">Ad</span>
+        <span className="ppc-viz-hi">Cape Cod Lawn Care</span>
+        <span className="ppc-viz-line" />
+      </div>
+      <div className="ppc-viz-arrow">→</div>
+      <div className="ppc-viz-page">
+        <span className="ppc-viz-page-bar"><i /><i /><i /></span>
+        <span className="ppc-viz-hi">Cape Cod Lawn Care</span>
+        <span className="ppc-viz-line" />
+        <span className="ppc-viz-line ppc-viz-line--short" />
+        <span className="ppc-viz-btn">Call now</span>
+      </div>
+    </div>
+  );
+}
+
+function PpcVizTrack() {
+  const steps = [['Click', 'Ad'], ['Action', 'Call · Form'], ['Recorded', 'Google Ads + GA4']];
+  return (
+    <div className="ppc-viz ppc-viz-track" aria-hidden="true">
+      {steps.map(([k, v], i) => (
+        <React.Fragment key={k}>
+          <div className={'ppc-viz-node' + (i === steps.length - 1 ? ' is-done' : '')}>
+            <span className="ppc-viz-node-k">{k}</span>
+            <span className="ppc-viz-node-v">{v}</span>
+          </div>
+          {i < steps.length - 1 && <span className="ppc-viz-link" />}
+        </React.Fragment>
+      ))}
+    </div>
+  );
+}
+
+const PPC_PILLAR_VIZ = { '01': PpcVizTerms, '02': PpcVizMatch, '03': PpcVizTrack };
+
 function PpcPage() {
   return (
     <React.Fragment>
@@ -165,27 +264,30 @@ function PpcPage() {
       <div className="ppc-hero">
         <div className="ppc-hero-bg" aria-hidden="true" />
         <div className="ppc-hero-content">
-          <div className="shell">
-            <span className="eyebrow ppc-eyebrow">Services · PPC &amp; Google Ads</span>
-            <h1 className="ppc-hero-hl">
-              Paid ads that stop <em>wasting</em> your budget.
-            </h1>
-            <p className="ppc-hero-sub">
-              Most Google Ads campaigns spend 30–60% of their budget on clicks that were never going to convert. COLEwebdev builds campaigns around the three things that prevent waste: tight negative keyword management, purpose-built landing pages, and real conversion tracking.
-            </p>
-            <div className="ppc-hero-actions">
-              <a className="btn btn--accent" href="quote.html">
-                Get a free audit <span className="arrow">→</span>
-              </a>
-              <a className="btn btn--ghost ppc-ghost" href="tel:5084132043">
-                508.413.2043
-              </a>
+          <div className="shell ppc-hero-grid">
+            <div className="ppc-hero-copy">
+              <span className="eyebrow ppc-eyebrow">Services · PPC &amp; Google Ads</span>
+              <h1 className="ppc-hero-hl">
+                Paid ads that stop <em>wasting</em> your budget.
+              </h1>
+              <p className="ppc-hero-sub">
+                Most Google Ads campaigns spend 30–60% of their budget on clicks that were never going to convert. COLEwebdev builds campaigns around the three things that prevent waste: tight negative keyword management, purpose-built landing pages, and real conversion tracking.
+              </p>
+              <div className="ppc-hero-actions">
+                <a className="btn btn--accent" href="quote.html">
+                  Get a free audit <span className="arrow">→</span>
+                </a>
+                <a className="btn btn--ghost ppc-ghost" href="tel:5084132043">
+                  508.413.2043
+                </a>
+              </div>
+              <div className="ppc-tags">
+                {['Google Ads', 'Negative Keywords', 'Landing Pages', 'Conversion Tracking', 'Cape Cod PPC'].map(t => (
+                  <span key={t} className="ppc-tag">{t}</span>
+                ))}
+              </div>
             </div>
-            <div className="ppc-tags">
-              {['Google Ads', 'Negative Keywords', 'Landing Pages', 'Conversion Tracking', 'Cape Cod PPC'].map(t => (
-                <span key={t} className="ppc-tag">{t}</span>
-              ))}
-            </div>
+            <PpcHeroViz />
           </div>
         </div>
       </div>
@@ -195,7 +297,35 @@ function PpcPage() {
         points={['Google Ads', 'Negative Keywords', 'Conversion Tracking', 'Cape Cod PPC']}
       />
 
-      <ServiceSideNav group="grow" current="ppc.html" />
+      <ServiceSideNav group="grow" current="ppc.html">
+        <div className="ppc-lead">
+          <img
+            className="ppc-lead-photo"
+            src="assets/josiah-cole-cape-cod-website-designer.jpg"
+            alt="Josiah Cole, Co-Founder and CTO at COLEwebdev"
+            width="160"
+            height="160"
+          />
+          <div className="ppc-lead-content">
+            <span className="eyebrow">Who runs your campaigns</span>
+            <h2 className="ppc-lead-hl">Josiah Cole handles the technical side of every campaign.</h2>
+            <p className="ppc-lead-p">
+              Josiah is COLEwebdev's co-founder and CTO, and he has been building websites professionally for over 20 years. That background matters in paid search: most wasted ad spend traces back to technical gaps, like conversion tags that never fire, landing pages that load slowly on mobile, or search term data nobody reads.
+            </p>
+            <p className="ppc-lead-p">
+              He wrote <a href="wp-google-ads-guide.html">our guide on why Google Ads campaigns waste money</a>, and he applies the same approach to client accounts: verify the tracking, tighten the targeting, and build the landing page before scaling the budget. You work with him directly, not an account manager relaying messages.
+            </p>
+            <div className="ppc-lead-foot">
+              <div className="ppc-lead-tags">
+                {['Google Ads', 'GA4', 'Google Tag Manager', 'Conversion Tracking', 'Landing Pages'].map(t => (
+                  <span key={t} className="ppc-lead-tag">{t}</span>
+                ))}
+              </div>
+              <a className="ppc-lead-link" href="josiah-cole.html">Full bio <span className="arrow">→</span></a>
+            </div>
+          </div>
+        </div>
+      </ServiceSideNav>
 
       {/* The problem */}
       <section className="ppc-problem">
@@ -249,7 +379,10 @@ function PpcPage() {
                   <span className={'ppc-offering-type' + (o.featured ? ' ppc-offering-type--featured' : '')}>{o.type}</span>
                   {o.featured && <span className="ppc-offering-rec">Most common</span>}
                 </div>
-                <div className="ppc-offering-name">{o.name}</div>
+                <div className="ppc-offering-name">
+                  <span className="ppc-offering-icon" aria-hidden="true">{o.icon}</span>
+                  {o.name}
+                </div>
                 <div className="ppc-offering-desc">{o.desc}</div>
                 <ul className="ppc-offering-list">
                   {o.includes.map(item => <li key={item}>{item}</li>)}
@@ -268,14 +401,18 @@ function PpcPage() {
             <h2 className="ppc-pillars-hl">Fix these and you fix most of the waste.</h2>
           </div>
           <div className="ppc-pillars-grid">
-            {PPC_PILLARS.map(p => (
+            {PPC_PILLARS.map(p => {
+              const Viz = PPC_PILLAR_VIZ[p.num];
+              return (
               <div key={p.num} className="ppc-pillar">
+                <Viz />
                 <span className="ppc-pillar-num">Pillar {p.num}</span>
                 <div className="ppc-pillar-title">{p.title}</div>
                 <div className="ppc-pillar-body">{p.body}</div>
                 <div className="ppc-pillar-detail">{p.detail}</div>
               </div>
-            ))}
+              );
+            })}
           </div>
           <div className="ppc-pillars-guide">
             <p className="ppc-guide-note">
@@ -284,38 +421,6 @@ function PpcPage() {
             <a className="btn btn--accent" href="wp-google-ads-guide.html">
               Read: Why Your Google Ads Are Wasting Money <span className="arrow">→</span>
             </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Josiah profile */}
-      <section className="ppc-lead">
-        <div className="shell ppc-lead-grid">
-          <div className="ppc-lead-photo-wrap">
-            <img
-              className="ppc-lead-photo"
-              src="assets/josiah-cole-cape-cod-website-designer.jpg"
-              alt="Josiah Cole, Co-Founder and CTO at COLEwebdev"
-              width="240"
-              height="240"
-              loading="lazy"
-            />
-          </div>
-          <div className="ppc-lead-content">
-            <span className="eyebrow">Who runs your campaigns</span>
-            <h2 className="ppc-lead-hl">Josiah Cole handles the technical side of every campaign.</h2>
-            <p className="ppc-lead-p">
-              Josiah is COLEwebdev's co-founder and CTO, and he has been building websites professionally for over 20 years. That background matters in paid search: most wasted ad spend traces back to technical gaps, like conversion tags that never fire, landing pages that load slowly on mobile, or search term data nobody reads.
-            </p>
-            <p className="ppc-lead-p">
-              He wrote our guide on why Google Ads campaigns waste money, and he applies the same approach to client accounts: verify the tracking, tighten the targeting, and build the landing page before scaling the budget. You work with him directly, not an account manager relaying messages.
-            </p>
-            <div className="ppc-lead-tags">
-              {['Google Ads', 'GA4', 'Google Tag Manager', 'Conversion Tracking', 'Landing Pages', 'Technical SEO'].map(t => (
-                <span key={t} className="ppc-lead-tag">{t}</span>
-              ))}
-            </div>
-            <a className="ppc-lead-link" href="josiah-cole.html">Full bio <span className="arrow">→</span></a>
           </div>
         </div>
       </section>
