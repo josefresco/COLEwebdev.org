@@ -288,6 +288,38 @@ function PpcPage() {
         </div>
       </section>
 
+      {/* Josiah profile */}
+      <section className="ppc-lead">
+        <div className="shell ppc-lead-grid">
+          <div className="ppc-lead-photo-wrap">
+            <img
+              className="ppc-lead-photo"
+              src="assets/josiah-cole-cape-cod-website-designer.jpg"
+              alt="Josiah Cole, Co-Founder and CTO at COLEwebdev"
+              width="240"
+              height="240"
+              loading="lazy"
+            />
+          </div>
+          <div className="ppc-lead-content">
+            <span className="eyebrow">Who runs your campaigns</span>
+            <h2 className="ppc-lead-hl">Josiah Cole handles the technical side of every campaign.</h2>
+            <p className="ppc-lead-p">
+              Josiah is COLEwebdev's co-founder and CTO, and he has been building websites professionally for over 20 years. That background matters in paid search: most wasted ad spend traces back to technical gaps, like conversion tags that never fire, landing pages that load slowly on mobile, or search term data nobody reads.
+            </p>
+            <p className="ppc-lead-p">
+              He wrote our guide on why Google Ads campaigns waste money, and he applies the same approach to client accounts: verify the tracking, tighten the targeting, and build the landing page before scaling the budget. You work with him directly, not an account manager relaying messages.
+            </p>
+            <div className="ppc-lead-tags">
+              {['Google Ads', 'GA4', 'Google Tag Manager', 'Conversion Tracking', 'Landing Pages', 'Technical SEO'].map(t => (
+                <span key={t} className="ppc-lead-tag">{t}</span>
+              ))}
+            </div>
+            <a className="ppc-lead-link" href="josiah-cole.html">Full bio <span className="arrow">→</span></a>
+          </div>
+        </div>
+      </section>
+
       {/* How we work */}
       <section className="ppc-how">
         <div className="shell">
