@@ -371,6 +371,12 @@
   </url>
 
   <url>
+    <loc>https://colewebdev.org/seo.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://colewebdev.org/ppc.html</loc>
     <lastmod>2026-09-27</lastmod>
     <changefreq>monthly</changefreq>

@@ -113,6 +113,7 @@ function AieoPage() {
             'E-E-A-T and entity signals AI systems trust',
             'Fresh, accurate content that stays citable',
           ]}
+          link={{ href: 'seo.html', text: 'Start with an SEO audit' }}
         >
           <SvsWindow title="AI answer">
             <SvsChat messages={[
@@ -189,7 +190,7 @@ function AieoPage() {
           <div className="aieo-vs-hd">
             <span className="eyebrow">How they differ</span>
             <h2 className="aieo-vs-hl">AIEO and SEO are not the same thing.</h2>
-            <p className="aieo-vs-sub">They work together — but optimizing for one does not guarantee success with the other.</p>
+            <p className="aieo-vs-sub">They work together — but optimizing for one does not guarantee success with the other. AIEO builds on a clean SEO foundation, so <a href="seo.html">start with an SEO audit</a> if yours needs work.</p>
           </div>
           <div className="aieo-vs-table">
             <div className="aieo-vs-header">

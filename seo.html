@@ -2,32 +2,116 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<meta http-equiv="refresh" content="0;url=cape-cod-marketing.html" />
-<script>window.location.replace('cape-cod-marketing.html');</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Cape Cod SEO & Local Search Services — COLEwebdev</title>
+<title>Cape Cod SEO Audits & Remediation — COLEwebdev</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-<meta name="description" content="Local SEO and search optimization for Cape Cod businesses. COLEwebdev helps you rank in Google for the searches your customers are actually running." />
-<link rel="canonical" href="https://colewebdev.org/cape-cod-marketing.html" />
+<meta name="description" content="Cape Cod SEO audits built on your Google Analytics and Search Console data, then hands-on fixes. Start with a free SEO snapshot." />
+<link rel="canonical" href="https://colewebdev.org/seo.html" />
 <link rel="stylesheet" href="styles.css" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "SEO & Local Search",
+  "name": "SEO Audits & Remediation",
   "url": "https://colewebdev.org/seo.html",
-  "description": "Local SEO, Google Ads, and search strategy for Cape Cod small businesses. Ethical, transparent, focused on measurable results — no smoke and mirrors.",
-  "provider": { "@type": "ProfessionalService", "name": "COLEwebdev", "url": "https://colewebdev.org/" },
-  "areaServed": { "@type": "Place", "name": "Cape Cod, Massachusetts" },
-  "serviceType": "SEO Services"
+  "description": "SEO audits and remediation for Cape Cod businesses: a free SEO snapshot, a full audit built on your Google Analytics and Search Console data, and hands-on fixes verified in Search Console.",
+  "provider": {
+    "@type": "ProfessionalService",
+    "name": "COLEwebdev",
+    "url": "https://colewebdev.org/"
+  },
+  "areaServed": {
+    "@type": "Place",
+    "name": "Cape Cod, Massachusetts"
+  },
+  "serviceType": "SEO Audit and Remediation",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "SEO Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Free SEO Snapshot",
+          "description": "A quick outside-in review of your site and Google Business Profile that flags the most obvious SEO problems."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Full SEO Audit",
+          "description": "An in-depth technical, on-page, local, and content audit built on your Google Analytics and Search Console data, delivered as a prioritized report."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "SEO Remediation",
+          "description": "Hands-on fixes for the issues found in the audit, implemented on your site and verified in Search Console."
+        }
+      }
+    ]
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between the free SEO snapshot and the full audit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The free snapshot is a quick outside-in review of your site and Google Business Profile that flags the most obvious problems. The full audit is a paid, in-depth engagement: we connect to your Google Analytics and Search Console data, crawl the whole site, and deliver a prioritized report of every issue we find."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you fix the problems or just report them?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We fix them. Remediation is a separate engagement after the audit: we work through the report in priority order, fix the issues directly on your site, and verify each fix in Search Console."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you need access to my Google accounts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For the full audit, yes: read access to Google Analytics and Search Console lets us diagnose problems from your real traffic and indexing data instead of guesses. The free snapshot needs no access at all."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer monthly SEO retainers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. We focus on audits and remediation: find what is holding your site back, fix it, and verify the fix. Many clients come back for a fresh audit after a redesign, a platform move, or a drop in traffic."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does it take to see results after remediation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Technical fixes like indexing and crawl errors can show up in Search Console within weeks. Ranking changes usually take longer and depend on your competition. Our guide on how long SEO takes covers realistic timelines."
+      }
+    }
+  ]
 }
 </script>
 <style>
-/* ── SEO & Local Search page ── */
+/* ── SEO Audits & Remediation page ── */
 
-/* Hero — CSS gradient, brand navy */
 .seo-hero {
   position: relative;
   overflow: hidden;
@@ -47,39 +131,32 @@
   content: '';
   position: absolute;
   inset: 0;
-  background-image: repeating-linear-gradient(
-    -45deg,
-    transparent, transparent 48px,
-    rgba(255,255,255,0.018) 48px, rgba(255,255,255,0.018) 49px
-  );
+  background-image:
+    repeating-linear-gradient(60deg, transparent, transparent 58px, rgba(255,255,255,0.015) 58px, rgba(255,255,255,0.015) 59px);
 }
 .seo-hero-content {
   position: relative;
   z-index: 1;
-  padding: 100px 0 96px;
+  padding: 100px 0 88px;
   width: 100%;
 }
-.seo-eyebrow {
-  color: var(--brand-green) !important;
-}
-.seo-eyebrow::before {
-  background: var(--brand-green) !important;
-}
+.seo-eyebrow { color: rgba(255,255,255,0.6); }
 .seo-hero-hl {
   font-family: var(--serif);
-  font-size: clamp(36px, 5.5vw, 76px);
-  line-height: 1.08;
-  margin: 18px 0 22px;
+  font-size: clamp(38px, 5.5vw, 74px);
+  line-height: 1.07;
+  margin: 16px 0 22px;
   font-weight: 400;
   color: white;
-  max-width: 16ch;
+  max-width: 18ch;
+  letter-spacing: -0.5px;
 }
-.seo-hero-hl em { font-style: italic; color: var(--brand-green); }
+.seo-hero-hl em { font-style: italic; color: #2A9FD6; }
 .seo-hero-sub {
-  font-size: clamp(15px, 1.6vw, 18px);
+  font-size: clamp(15px, 1.6vw, 17px);
   color: rgba(255,255,255,0.72);
-  max-width: 50ch;
-  line-height: 1.7;
+  max-width: 52ch;
+  line-height: 1.72;
   margin: 0 0 36px;
 }
 .seo-hero-actions {
@@ -92,316 +169,277 @@
   color: rgba(255,255,255,0.7) !important;
   border-color: rgba(255,255,255,0.22) !important;
 }
+.seo-tags { display: flex; gap: 10px; margin-top: 32px; flex-wrap: wrap; }
+.seo-tag {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 5px 13px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.18);
+  color: rgba(255,255,255,0.65);
+}
 
-/* Why section */
-.seo-why {
-  padding: var(--pad-section) 0;
+.seo-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  gap: 56px;
+  align-items: center;
+}
+
+
+/* The problem section */
+.seo-problem {
+  padding: 80px 0;
   background: var(--paper);
 }
-.seo-why-grid {
+.seo-problem-grid {
   display: grid;
-  grid-template-columns: 300px 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 80px;
-  align-items: start;
+  align-items: center;
 }
-.seo-why-stats {
+.seo-problem-hl {
+  font-family: var(--serif);
+  font-size: clamp(26px, 3.2vw, 40px);
+  color: var(--ink);
+  font-weight: 400;
+  margin: 8px 0 20px;
+  line-height: 1.2;
+}
+.seo-problem-hl em { font-style: italic; color: #0073AA; }
+.seo-problem-body { font-size: 15px; line-height: 1.75; color: var(--ink-2); margin: 0 0 16px; }
+.seo-stats {
   display: flex;
   flex-direction: column;
-  gap: 32px;
-  position: sticky;
-  top: 32px;
+  gap: 0;
+  border: 1px solid var(--line);
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  background: white;
+  box-shadow: var(--shadow-sm);
 }
 .seo-stat {
-  border-left: 3px solid var(--brand-green);
-  padding-left: 20px;
+  padding: 28px 32px;
+  border-bottom: 1px solid var(--line);
 }
+.seo-stat:last-child { border-bottom: none; }
 .seo-stat-num {
-  display: block;
   font-family: var(--serif);
-  font-size: clamp(36px, 4vw, 52px);
+  font-size: clamp(34px, 4vw, 52px);
+  color: #0073AA;
+  font-style: italic;
   line-height: 1;
-  color: var(--ink);
-  font-weight: 400;
   margin-bottom: 6px;
 }
-.seo-stat-label {
-  font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: 0.06em;
-  color: var(--muted);
-  line-height: 1.5;
-  display: block;
-}
-.seo-why-body {
-  display: flex;
-  flex-direction: column;
-}
-.seo-why-hl {
-  font-family: var(--serif);
-  font-size: clamp(28px, 3.2vw, 42px);
-  line-height: 1.18;
-  margin: 12px 0 24px;
-  color: var(--ink);
-  font-weight: 400;
-}
-.seo-why-hl em { font-style: italic; color: var(--brand-blue); }
-.seo-body {
-  font-size: clamp(15px, 1.4vw, 16px);
-  line-height: 1.78;
-  color: var(--ink-2);
-  max-width: 52ch;
-  margin: 0 0 18px;
-}
+.seo-stat-label { font-size: 13.5px; color: var(--ink-2); line-height: 1.5; }
 
-/* Services grid */
-.seo-services {
-  padding: var(--pad-section) 0;
+/* Service offerings */
+.seo-offerings {
+  padding: 80px 0;
   background: white;
+  border-top: 1px solid var(--line);
 }
-.seo-services-hd {
-  margin-bottom: 48px;
-}
-.seo-services-hl {
+.seo-offerings-hd { margin-bottom: 48px; }
+.seo-offerings-hl {
   font-family: var(--serif);
   font-size: clamp(28px, 3.2vw, 42px);
   color: var(--ink);
   font-weight: 400;
   margin: 12px 0 10px;
 }
-.seo-services-sub {
+.seo-offerings-sub {
   font-size: 16px;
   color: var(--muted);
   max-width: 52ch;
   line-height: 1.6;
   margin: 0;
 }
-.seo-services-grid {
+.seo-offerings-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 }
-.seo-svc-card {
+.seo-offering-card {
   background: var(--paper);
   border: 1px solid var(--line);
   border-radius: var(--r-xl);
-  padding: 32px 28px;
+  padding: 32px 30px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  gap: 14px;
 }
-.seo-svc-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
+.seo-offering-card--full { grid-column: 1 / -1; }
+.seo-offering-card--featured {
+  border-left: 3px solid #0073AA;
+  background: rgba(0,115,170,0.03);
 }
-.seo-svc-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
-  background: rgba(33,146,188,0.12);
-  color: var(--brand-blue);
-  display: grid;
-  place-items: center;
-  font-size: 18px;
-  flex-shrink: 0;
+.seo-offering-top { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.seo-offering-type {
+  font-family: var(--mono);
+  font-size: 9.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  padding: 3px 10px;
+  border-radius: 999px;
 }
-.seo-svc-name {
+.seo-offering-type--featured {
+  color: #0073AA;
+  background: rgba(0,115,170,0.08);
+  border-color: rgba(0,115,170,0.3);
+}
+.seo-offering-rec {
+  font-family: var(--mono);
+  font-size: 9.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: white;
+  background: #0073AA;
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+.seo-offering-name {
   font-family: var(--serif);
-  font-size: 20px;
+  font-size: 22px;
   color: var(--ink);
   font-weight: 400;
-  margin: 0;
 }
-.seo-svc-body {
+.seo-offering-desc {
   font-size: 14px;
-  line-height: 1.7;
-  color: var(--muted);
-  margin: 0;
+  line-height: 1.72;
+  color: var(--ink-2);
+}
+.seo-offering-list {
+  list-style: none;
+  padding: 0;
+  margin: 6px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+.seo-offering-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--ink-2);
+  line-height: 1.5;
+}
+.seo-offering-list li::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #0073AA;
+  flex-shrink: 0;
+  margin-top: 6px;
+}
+
+
+/* Offering glyphs */
+.seo-offering-name { display: flex; align-items: center; gap: 12px; }
+.seo-offering-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: rgba(0,115,170,0.1);
+  color: #0073AA;
+  display: grid;
+  place-items: center;
+  font-family: var(--sans);
+  font-size: 17px;
+  flex-shrink: 0;
 }
 
 /* How we work */
 .seo-how {
-  padding: var(--pad-section) 0;
-  background: var(--navy);
-  position: relative;
-  overflow: hidden;
+  padding: 80px 0;
+  background: var(--paper-2);
+  border-top: 1px solid var(--line);
 }
-.seo-how::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: repeating-linear-gradient(
-    -45deg,
-    transparent, transparent 40px,
-    rgba(255,255,255,0.015) 40px, rgba(255,255,255,0.015) 41px
-  );
-}
-.seo-how-hd {
-  margin-bottom: 52px;
-  position: relative;
-  z-index: 1;
-}
-.seo-how .eyebrow { color: var(--brand-green); }
-.seo-how .eyebrow::before { background: var(--brand-green); }
+.seo-how-hd { margin-bottom: 48px; }
 .seo-how-hl {
   font-family: var(--serif);
   font-size: clamp(28px, 3.2vw, 42px);
-  color: white;
+  color: var(--ink);
   font-weight: 400;
   margin: 12px 0 0;
 }
 .seo-how-steps {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-  position: relative;
-  z-index: 1;
+  gap: 20px;
 }
-.seo-how-step {
-  background: rgba(255,255,255,0.07);
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: var(--r-lg);
-  padding: 32px 26px 28px;
-  backdrop-filter: blur(4px);
-}
-.seo-how-num {
-  font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: 0.18em;
-  color: var(--brand-green);
-  margin-bottom: 8px;
-}
-.seo-how-label {
-  font-family: var(--serif);
-  font-size: 22px;
-  color: white;
-  font-weight: 400;
-  margin-bottom: 12px;
-}
-.seo-how-body {
-  font-size: 13.5px;
-  line-height: 1.65;
-  color: rgba(255,255,255,0.68);
-  margin: 0;
-}
-
-/* Commitments */
-.seo-commit {
-  padding: var(--pad-section) 0;
-  background: var(--paper-2);
-  border-top: 1px solid var(--line);
-}
-.seo-commit-hd {
-  margin-bottom: 44px;
-}
-.seo-commit-hl {
-  font-family: var(--serif);
-  font-size: clamp(28px, 3.2vw, 42px);
-  color: var(--ink);
-  font-weight: 400;
-  margin: 12px 0 0;
-}
-.seo-commit-hl em { font-style: italic; color: var(--brand-blue); }
-.seo-commit-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-}
-.seo-commit-card {
+.seo-step {
   background: white;
   border: 1px solid var(--line);
   border-radius: var(--r-xl);
-  padding: 28px 28px;
+  padding: 28px 24px;
   display: flex;
-  align-items: flex-start;
-  gap: 18px;
-  box-shadow: var(--shadow-sm);
+  flex-direction: column;
+  gap: 12px;
 }
-.seo-commit-check {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: rgba(92,192,53,0.15);
-  color: var(--brand-green-deep);
-  display: grid;
-  place-items: center;
-  font-size: 14px;
-  flex-shrink: 0;
-  margin-top: 2px;
-}
-.seo-commit-label {
+.seo-step-num {
   font-family: var(--serif);
-  font-size: 19px;
+  font-size: 44px;
+  line-height: 1;
+  font-style: italic;
+  color: var(--line-2);
+}
+.seo-step-label {
+  font-family: var(--serif);
+  font-size: 20px;
   color: var(--ink);
   font-weight: 400;
-  margin-bottom: 6px;
 }
-.seo-commit-desc {
-  font-size: 14px;
-  line-height: 1.65;
-  color: var(--muted);
-  margin: 0;
-}
+.seo-step-body { font-size: 13px; line-height: 1.65; color: var(--muted); }
 
-/* Testimonial */
-.seo-testi {
-  padding: var(--pad-section) 0;
-  background: var(--paper);
+
+/* FAQ */
+.seo-faq {
+  padding: 80px 0;
+  background: var(--paper-2);
+  border-top: 1px solid var(--line);
 }
-.seo-testi-inner {
-  max-width: 760px;
-  margin: 0 auto;
-  text-align: center;
-}
-.seo-quote-mark {
+.seo-faq-inner { max-width: 760px; }
+.seo-faq-hl {
   font-family: var(--serif);
-  font-size: 96px;
-  line-height: 0.5;
-  color: var(--brand-blue);
-  opacity: 0.22;
-  display: block;
-  margin-bottom: 16px;
-}
-.seo-quote {
-  font-family: var(--serif);
-  font-size: clamp(19px, 2.2vw, 25px);
-  line-height: 1.6;
+  font-size: clamp(26px, 3.2vw, 42px);
   color: var(--ink);
-  font-style: italic;
-  margin: 0 0 32px;
-  border: none;
-  padding: 0;
+  font-weight: 400;
+  margin: 8px 0 32px;
+  line-height: 1.15;
 }
-.seo-testi-meta {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 14px;
+.seo-faq-list { display: flex; flex-direction: column; gap: 10px; }
+.seo-faq-item {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: 18px 22px;
 }
-.seo-testi-img {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: var(--shadow-md);
-}
-.seo-testi-name {
+.seo-faq-q {
+  font-size: 15.5px;
   font-weight: 600;
-  font-size: 14px;
-  text-align: left;
+  color: var(--ink);
+  cursor: pointer;
+  list-style: none;
 }
-.seo-testi-role {
-  font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: 0.06em;
-  color: var(--muted);
-  text-transform: uppercase;
-  margin-top: 3px;
-  text-align: left;
+.seo-faq-q::-webkit-details-marker { display: none; }
+.seo-faq-a {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--ink-2);
+  margin: 12px 0 0;
 }
 
 /* CTA */
-.seo-cta-section { padding: var(--pad-section) 0; background: white; }
+.seo-cta-section { padding: 80px 0; background: white; border-top: 1px solid var(--line); }
 .seo-cta {
   background: var(--ink);
   border-radius: var(--r-xl);
@@ -413,12 +451,12 @@
 }
 .seo-cta-hl {
   font-family: var(--serif);
-  font-size: clamp(26px, 3vw, 38px);
+  font-size: clamp(24px, 3vw, 38px);
   color: white;
   margin: 0 0 12px;
   font-weight: 400;
 }
-.seo-cta-hl em { font-style: italic; color: var(--brand-green); }
+.seo-cta-hl em { font-style: italic; color: #2A9FD6; }
 .seo-cta-sub {
   color: rgba(255,255,255,0.65);
   font-size: 15px;
@@ -433,41 +471,220 @@
   align-items: flex-end;
   flex-shrink: 0;
 }
-
-/* Service area note + related links */
 .seo-area-note { font-size: 13px; color: rgba(255,255,255,0.45); margin: 8px 0 0; }
-.seo-area-note a { color: var(--brand-green); }
+.seo-area-note a { color: #2A9FD6; }
 .seo-related { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); }
 .seo-related-label { font-size: 11px; font-family: var(--mono); letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.4); }
 .seo-related-link { font-size: 13px; color: rgba(255,255,255,0.7); text-decoration: none; }
 .seo-related-link:hover { color: white; }
 
-/* Responsive */
-@media (max-width: 1024px) {
-  .seo-why-grid { grid-template-columns: 240px 1fr; gap: 56px; }
-  .seo-why-stats { position: static; }
+.seo-offerings-grid { grid-template-columns: repeat(3, 1fr); }
+
+/* Hero illustration: audit report */
+.seo-hviz { position: relative; margin: 0; padding: 28px 0 40px; }
+.seo-hviz-card {
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.35);
+  color: var(--ink);
+  overflow: hidden;
 }
+.seo-hviz-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--line);
+}
+.seo-hviz-title { font-family: var(--serif); font-size: 19px; line-height: 1.2; }
+.seo-hviz-site { font-family: var(--mono); font-size: 11px; color: var(--muted); }
+.seo-hviz-sum { display: grid; grid-template-columns: repeat(3, 1fr); border-bottom: 1px solid var(--line); }
+.seo-hviz-sum div { padding: 12px 20px; border-right: 1px solid var(--line); }
+.seo-hviz-sum div:last-child { border-right: none; }
+.seo-hviz-sum b { display: block; font-family: var(--serif); font-size: 26px; font-weight: 400; font-style: italic; line-height: 1; }
+.seo-hviz-sum span { font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+.seo-hviz-sum .is-crit b { color: #B53A0B; }
+.seo-hviz-sum .is-ser b { color: #8A5A00; }
+.seo-hviz-sum .is-mod b { color: var(--ink-2); }
+.seo-hviz-rows { list-style: none; margin: 0; padding: 10px 12px 14px; display: grid; gap: 4px; }
+.seo-hviz-rows li {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  padding: 7px 8px;
+  border-radius: 8px;
+  font-size: 13px;
+  line-height: 1.35;
+  color: var(--ink);
+}
+.seo-hviz-rows li::before { content: none; }
+.seo-hviz-rows li:nth-child(odd) { background: var(--paper); }
+.seo-sev {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 3px 7px;
+  border-radius: 999px;
+  min-width: 64px;
+  text-align: center;
+}
+.seo-sev--crit { color: #A8430C; background: rgba(242,107,31,0.14); }
+.seo-sev--ser { color: #8A5A00; background: rgba(230,160,20,0.16); }
+.seo-sev--mod { color: var(--ink-2); background: rgba(14,42,74,0.07); }
+.seo-hviz-chip {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  border-radius: 999px;
+  padding: 8px 14px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+  white-space: nowrap;
+  background: var(--navy);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.18);
+}
+.seo-hviz-chip--a { top: -4px; right: 16px; }
+.seo-hviz-chip--b { bottom: 6px; left: -14px; }
+.seo-hviz-dot { width: 8px; height: 8px; border-radius: 50%; background: #5CC035; box-shadow: 0 0 0 3px rgba(92,192,53,0.25); }
+.seo-hviz-cap {
+  position: absolute;
+  bottom: 12px;
+  right: 0;
+  font-family: var(--mono);
+  font-size: 9.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+}
+
+/* Audit coverage */
+.seo-cover {
+  padding: 80px 0;
+  background: var(--paper-2);
+  border-top: 1px solid var(--line);
+}
+.seo-cover-hd { margin-bottom: 40px; max-width: 720px; }
+.seo-cover-hl, .seo-fix-hl, .seo-aieo-hl {
+  font-family: var(--serif);
+  font-size: clamp(28px, 3.2vw, 42px);
+  color: var(--ink);
+  font-weight: 400;
+  margin: 12px 0 12px;
+  line-height: 1.15;
+}
+.seo-cover-sub { font-size: 15px; line-height: 1.7; color: var(--muted); margin: 0; }
+.seo-cover-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.seo-cover-card {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: var(--r-xl);
+  padding: 26px 24px;
+}
+.seo-cover-top { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+.seo-cover-name { font-family: var(--serif); font-size: 20px; color: var(--ink); }
+.seo-cover-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 7px; }
+.seo-cover-list li { position: relative; padding-left: 16px; font-size: 13.5px; line-height: 1.5; color: var(--ink-2); margin: 0; }
+.seo-cover-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #2A9FD6;
+}
+.seo-cover-data {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+  padding: 18px 22px;
+  border-radius: var(--r-lg);
+  background: white;
+  border: 1px dashed rgba(0,115,170,0.35);
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--ink-2);
+}
+.seo-cover-data strong { color: var(--ink); }
+
+/* Remediation: found -> fixed */
+.seo-fix { padding: 88px 0; background: white; border-top: 1px solid var(--line); }
+.seo-fix-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 460px); gap: 64px; align-items: center; }
+.seo-fix-p { font-size: 15px; line-height: 1.75; color: var(--ink-2); margin: 0 0 16px; }
+.seo-fix-p a { color: #0073AA; text-decoration: underline; text-underline-offset: 3px; }
+.seo-fixlist { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.seo-fixlist li {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 10px;
+  margin: 0;
+  border-radius: 8px;
+  background: var(--paper);
+  font-size: 13px;
+  line-height: 1.35;
+  color: var(--ink);
+}
+.seo-fixlist li::before { content: none; }
+.seo-fixed { font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.06em; text-transform: uppercase; color: #2F6F14; background: rgba(92,192,53,0.14); padding: 3px 8px; border-radius: 999px; white-space: nowrap; }
+
+/* AIEO band */
+.seo-aieo { padding: 72px 0; background: var(--paper); border-top: 1px solid var(--line); }
+.seo-aieo-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 32px;
+  align-items: center;
+  padding: 40px 44px;
+  border-radius: var(--r-xl);
+  background: var(--navy);
+  color: white;
+}
+.seo-aieo-hl { color: white; margin-top: 8px; }
+.seo-aieo-hl em { font-style: italic; color: #8FD46B; }
+.seo-aieo-p { font-size: 15px; line-height: 1.7; color: rgba(255,255,255,0.72); margin: 0; max-width: 62ch; }
+.seo-aieo-card .eyebrow { color: rgba(255,255,255,0.55); }
+
+/* Responsive */
 @media (max-width: 960px) {
-  .seo-why-grid { grid-template-columns: 1fr; gap: 48px; }
-  .seo-why-stats { flex-direction: row; gap: 24px; flex-wrap: wrap; }
-  .seo-stat { flex: 1 1 160px; }
-  .seo-services-grid { grid-template-columns: repeat(2, 1fr); }
+  .seo-hero-grid { grid-template-columns: 1fr; gap: 24px; }
+  .seo-hviz { max-width: 520px; }
+  .seo-problem-grid { grid-template-columns: 1fr; gap: 48px; }
+  .seo-offerings-grid { grid-template-columns: 1fr; }
+  .seo-offering-card--full { grid-column: 1; }
+  .seo-cover-grid { grid-template-columns: repeat(2, 1fr); }
+  .seo-fix-grid { grid-template-columns: 1fr; gap: 40px; }
   .seo-how-steps { grid-template-columns: repeat(2, 1fr); }
+  .seo-aieo-card { grid-template-columns: 1fr; padding: 32px 28px; }
   .seo-cta { grid-template-columns: 1fr; }
   .seo-cta-actions { align-items: flex-start; flex-direction: row; flex-wrap: wrap; }
 }
 @media (max-width: 560px) {
-  .seo-services-grid { grid-template-columns: 1fr; }
+  .seo-hviz { padding-bottom: 64px; }
+  .seo-hviz-chip--a { right: 0; }
+  .seo-hviz-chip--b { left: 0; bottom: 22px; }
+  .seo-hviz-cap { bottom: 0; }
+  .seo-hviz-sum div { padding: 10px 12px; }
+  .seo-cover-grid { grid-template-columns: 1fr; }
   .seo-how-steps { grid-template-columns: 1fr; }
-  .seo-commit-grid { grid-template-columns: 1fr; }
   .seo-cta { padding: 36px 28px; }
   .seo-hero-actions { flex-direction: column; align-items: flex-start; }
 }
 </style>
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="COLEwebdev" />
-<meta property="og:title" content="Cape Cod SEO & Local Search Services — COLEwebdev" />
-<meta property="og:description" content="Local SEO and search optimization for Cape Cod businesses. COLEwebdev helps you rank in Google for the searches your customers are actually running." />
+<meta property="og:title" content="Cape Cod SEO Audits & Remediation — COLEwebdev" />
+<meta property="og:description" content="Cape Cod SEO audits built on your Google Analytics and Search Console data, then hands-on fixes. Start with a free SEO snapshot." />
 <meta property="og:url" content="https://colewebdev.org/seo.html" />
 <meta property="og:image" content="https://colewebdev.org/assets/portfolio-hero.jpg" />
 <link rel="icon" href="favicon.png" type="image/png" />
@@ -476,9 +693,24 @@
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://colewebdev.org/" },
-    { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://colewebdev.org/services.html" },
-    { "@type": "ListItem", "position": 3, "name": "SEO & Local Search", "item": "https://colewebdev.org/seo.html" }
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://colewebdev.org/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Services",
+      "item": "https://colewebdev.org/services.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "SEO Audits & Remediation",
+      "item": "https://colewebdev.org/seo.html"
+    }
   ]
 }
 </script>
@@ -493,7 +725,7 @@
 <script type="text/babel" src="tweaks-panel.jsx"></script>
 <script type="text/babel" src="parts-hero.jsx"></script>
 <script type="text/babel" src="parts-services.jsx"></script>
-<script type="text/babel" src="parts-rest.jsx"></script>
-<script type="text/babel" src="seo-page.jsx"></script>
+<script type="text/babel" src="parts-rest.jsx?v=3"></script>
+<script type="text/babel" src="seo-page.jsx?v=2"></script>
 </body>
 </html>

@@ -1,221 +1,371 @@
 /* global React, ReactDOM */
 
-const SEO_SERVICES = [
+const SEO_OFFERINGS = [
   {
+    type: 'Free',
     icon: '◎',
-    name: 'Keyword Research & Strategy',
-    body: 'We find the exact terms your local customers use — not just high-volume guesses. Every campaign starts with research grounded in your market, your geography, and your competition.',
+    name: 'SEO Snapshot',
+    desc: 'A quick outside-in review of your site and Google Business Profile. We flag the most obvious problems and tell you plainly whether a full audit is worth it.',
+    includes: [
+      'Indexing and crawlability spot check',
+      'Title, meta, and heading review of key pages',
+      'Google Business Profile check',
+      'Mobile speed check',
+      'Short written summary, no obligation',
+    ],
   },
   {
-    icon: '◇',
-    name: 'On-Page Optimization',
-    body: 'Titles, meta descriptions, heading structure, schema markup, and internal linking — the technical foundation that search engines read before anything else.',
+    type: 'One-time · paid',
+    featured: true,
+    icon: '⚙',
+    name: 'Full SEO Audit',
+    desc: 'An in-depth audit built on your own Google Analytics and Search Console data, plus a full-site crawl. Every issue is ranked by severity so you know what to fix first.',
+    includes: [
+      'Technical crawl of every page',
+      'Search Console indexing and query analysis',
+      'On-page, content, and internal link review',
+      'Local SEO: profile, citations, service areas',
+      'Core Web Vitals and schema review',
+      'Prioritized report: critical, serious, moderate',
+    ],
   },
   {
-    icon: '◐',
-    name: 'Google Business Profile',
-    body: 'Setup, optimization, and ongoing management of your GBP listing — the card that appears in Google Maps and the local pack when customers search near you.',
-  },
-  {
-    icon: '✦',
-    name: 'Local Citations',
-    body: 'Consistent Name, Address, and Phone number across directories, review sites, and local listings signals trust to Google. We audit and fix inconsistencies that quietly hurt rankings.',
-  },
-  {
-    icon: '✎',
-    name: 'Content Strategy',
-    body: 'New service pages, location pages, and blog posts written to rank for terms your customers actually search for — and to convert the visitors who land on them.',
-  },
-  {
+    type: 'One-time · scoped',
     icon: '↗',
-    name: 'Monthly Reporting',
-    body: 'Clear, plain-English reports showing keyword rankings, organic traffic, and what we worked on — no jargon, no vanity metrics, just the numbers that connect to your business.',
+    name: 'Remediation',
+    desc: 'We fix what the audit found, directly on your site, in priority order. Then we verify each fix in Search Console instead of assuming it worked.',
+    includes: [
+      'Fixes implemented, not just recommended',
+      'Critical and serious issues first',
+      'Redirects, indexing, and crawl errors resolved',
+      'Titles, headings, schema, and internal links rewritten',
+      'Verification and re-indexing requests in Search Console',
+    ],
   },
 ];
 
-const HOW_STEPS = [
+const SEO_COVERAGE = [
+  { icon: '⚙', name: 'Technical', items: ['Indexing and crawl errors', 'Robots.txt and XML sitemaps', 'Redirect chains and broken links', 'Duplicate and canonical issues'] },
+  { icon: '◇', name: 'On-page', items: ['Titles and meta descriptions', 'Heading structure', 'Internal linking', 'Image alt text'] },
+  { icon: '◎', name: 'Local', items: ['Google Business Profile', 'Name, address, phone consistency', 'Service area and town pages', 'Local citations'] },
+  { icon: '✎', name: 'Content', items: ['Thin and duplicate pages', 'Keyword gaps vs. competitors', 'Pages competing for the same term', 'Search queries you almost rank for'] },
+  { icon: '↗', name: 'Speed', items: ['Largest Contentful Paint', 'Interaction to Next Paint', 'Cumulative Layout Shift', 'Mobile performance'] },
+  { icon: '⌘', name: 'Schema & AI readiness', items: ['Structured data errors', 'Business and service schema', 'FAQ markup', 'Content AI answers can cite'] },
+];
+
+const SEO_STEPS = [
+  { n: '01', label: 'Snapshot', body: 'A free first look at your site and Google Business Profile. If a full audit will not pay for itself, we will tell you.' },
+  { n: '02', label: 'Audit', body: 'We connect to Analytics and Search Console, crawl the site, and deliver a prioritized report with every issue ranked by severity.' },
+  { n: '03', label: 'Remediate', body: 'We fix the issues on your site in priority order, starting with anything that keeps pages out of Google.' },
+  { n: '04', label: 'Verify', body: 'We confirm each fix in Search Console, request re-indexing, and hand you a summary of what changed.' },
+];
+
+const SEO_FAQ = [
   {
-    n: '01',
-    label: 'Audit',
-    body: 'We start with a full review of your current rankings, site health, Google Business Profile, and local citation landscape.',
+    q: "What is the difference between the free SEO snapshot and the full audit?",
+    a: "The free snapshot is a quick outside-in review of your site and Google Business Profile that flags the most obvious problems. The full audit is a paid, in-depth engagement: we connect to your Google Analytics and Search Console data, crawl the whole site, and deliver a prioritized report of every issue we find.",
   },
   {
-    n: '02',
-    label: 'Strategy',
-    body: 'A written plan with target keywords, priority pages, and a 90-day roadmap — specific to your business and your Cape Cod market.',
+    q: "Do you fix the problems or just report them?",
+    a: "We fix them. Remediation is a separate engagement after the audit: we work through the report in priority order, fix the issues directly on your site, and verify each fix in Search Console.",
   },
   {
-    n: '03',
-    label: 'Execute',
-    body: 'On-page fixes, content creation, citation building, and GBP updates — implemented consistently, month after month.',
+    q: "Do you need access to my Google accounts?",
+    a: "For the full audit, yes: read access to Google Analytics and Search Console lets us diagnose problems from your real traffic and indexing data instead of guesses. The free snapshot needs no access at all.",
   },
   {
-    n: '04',
-    label: 'Report',
-    body: "Monthly ranking and traffic reports with plain-English takeaways and next steps. You always know exactly what's happening.",
+    q: "Do you offer monthly SEO retainers?",
+    a: "No. We focus on audits and remediation: find what is holding your site back, fix it, and verify the fix. Many clients come back for a fresh audit after a redesign, a platform move, or a drop in traffic.",
+  },
+  {
+    q: "How long does it take to see results after remediation?",
+    a: "Technical fixes like indexing and crawl errors can show up in Search Console within weeks. Ranking changes usually take longer and depend on your competition. Our guide on how long SEO takes covers realistic timelines.",
   },
 ];
 
-const COMMITMENTS = [
-  { icon: '✓', label: 'White-hat only', desc: 'Ethical tactics that build lasting rankings — no tricks that risk a Google penalty.' },
-  { icon: '✓', label: 'No long-term contracts', desc: 'Month-to-month. We earn your business every month, not just once.' },
-  { icon: '✓', label: 'Local focus', desc: "Cape Cod is our backyard. We understand the seasonal rhythms and local intent that generic agencies miss." },
-  { icon: '✓', label: 'Real communication', desc: 'A person answers when you call. Reports come with explanations, not just numbers.' },
-];
+function SeoHeroViz() {
+  const rows = [
+    ['crit', 'Critical', '14 pages blocked from indexing'],
+    ['crit', 'Critical', 'Redirect loop on /services'],
+    ['ser', 'Serious', '22 duplicate title tags'],
+    ['ser', 'Serious', 'Business name differs across listings'],
+    ['mod', 'Moderate', 'Missing alt text on 38 images'],
+  ];
+  return (
+    <figure className="seo-hviz" aria-label="Illustration: an SEO audit report with issues ranked by severity">
+      <div className="seo-hviz-card">
+        <div className="seo-hviz-head">
+          <span className="seo-hviz-title">SEO audit</span>
+          <span className="seo-hviz-site">yourbusiness.com</span>
+        </div>
+        <div className="seo-hviz-sum">
+          <div className="is-crit"><b>2</b><span>Critical</span></div>
+          <div className="is-ser"><b>2</b><span>Serious</span></div>
+          <div className="is-mod"><b>1</b><span>Moderate</span></div>
+        </div>
+        <ul className="seo-hviz-rows">
+          {rows.map(([sev, label, text]) => (
+            <li key={text}>
+              <span className={'seo-sev seo-sev--' + sev}>{label}</span>
+              <span>{text}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div className="seo-hviz-chip seo-hviz-chip--a">
+        <span className="seo-hviz-dot" aria-hidden="true" /> Search Console connected
+      </div>
+      <div className="seo-hviz-chip seo-hviz-chip--b">
+        <span className="seo-hviz-dot" aria-hidden="true" /> Google Analytics connected
+      </div>
+      <figcaption className="seo-hviz-cap">Illustrative example</figcaption>
+    </figure>
+  );
+}
 
 function SeoPage() {
   return (
     <React.Fragment>
       <Header />
 
-      {/* Hero — CSS gradient, no image dependency */}
+      {/* Hero */}
       <div className="seo-hero">
         <div className="seo-hero-bg" aria-hidden="true" />
         <div className="seo-hero-content">
-          <div className="shell">
-            <span className="eyebrow seo-eyebrow">Services · SEO &amp; Local Search</span>
-            <h1 className="seo-hero-hl">
-              Cape Cod SEO <em>&amp; Local Search.</em>
-            </h1>
-            <p className="seo-hero-sub">
-              Ethical, measurable local SEO for small businesses on Cape Cod. No smoke, no mirrors — just higher rankings, more calls, and results you can actually see.
-            </p>
-            <div className="seo-hero-actions">
-              <a className="btn btn--accent" href="index.html#cta">
-                Start with a free audit <span className="arrow">→</span>
-              </a>
-              <a className="btn btn--ghost seo-ghost" href="tel:5084132043">
-                508.413.2043
-              </a>
+          <div className="shell seo-hero-grid">
+            <div className="seo-hero-copy">
+              <span className="eyebrow seo-eyebrow">Services · SEO Audits &amp; Remediation</span>
+              <h1 className="seo-hero-hl">
+                Cape Cod SEO audits that <em>end in fixes.</em>
+              </h1>
+              <p className="seo-hero-sub">
+                We find what is keeping your site out of Google, rank every issue by severity, and then fix it on your site. No monthly retainer and no report that sits in a drawer.
+              </p>
+              <div className="seo-hero-actions">
+                <a className="btn btn--accent" href="quote.html">
+                  Get a free SEO snapshot <span className="arrow">→</span>
+                </a>
+                <a className="btn btn--ghost seo-ghost" href="tel:5084132043">
+                  508.413.2043
+                </a>
+              </div>
+              <div className="seo-tags">
+                {['SEO Audit', 'Technical SEO', 'Local SEO', 'Search Console', 'Remediation'].map(t => (
+                  <span key={t} className="seo-tag">{t}</span>
+                ))}
+              </div>
             </div>
+            <SeoHeroViz />
           </div>
         </div>
       </div>
 
       <SummaryStrip
-        summary="Ethical local SEO that puts Cape Cod businesses in front of customers when they search — measured in real rankings, calls, and results you can see."
-        points={['Local SEO', 'Google Business Profile', 'Monthly Reports', 'No Black Hat']}
+        summary="SEO audits built on your own Analytics and Search Console data, followed by hands-on fixes verified in Search Console. Start with a free snapshot."
+        points={['SEO Audits', 'Remediation', 'Local SEO', 'Cape Cod']}
       />
 
-      {/* Why local search matters */}
-      <section className="seo-why">
-        <div className="shell seo-why-grid">
-          <div className="seo-why-stats">
-            <div className="seo-stat">
-              <span className="seo-stat-num">46%</span>
-              <span className="seo-stat-label">of all Google searches have local intent</span>
-            </div>
-            <div className="seo-stat">
-              <span className="seo-stat-num">78%</span>
-              <span className="seo-stat-label">of local mobile searches result in an offline purchase</span>
-            </div>
-            <div className="seo-stat">
-              <span className="seo-stat-num">#1</span>
-              <span className="seo-stat-label">the position where over 27% of all clicks go</span>
-            </div>
-          </div>
-          <div className="seo-why-body">
-            <span className="eyebrow">Why it matters</span>
-            <h2 className="seo-why-hl">
-              Local search is how your neighbors <em>find you.</em>
+      <ServiceSideNav group="grow" current="seo.html">
+        <SvcSnapshot
+          accent="#0073AA"
+          eyebrow="At a glance"
+          title="Find it, fix it, prove it."
+          intro="Most SEO problems are fixable and specific: pages Google cannot index, duplicate titles, listings that disagree. We audit, fix, and verify."
+          points={[
+            'Free snapshot to see if a full audit is worth it',
+            'Full audit built on your Analytics and Search Console data',
+            'Remediation done on your site, not handed back as homework',
+            'Every fix verified in Search Console',
+          ]}
+          link={{ href: 'wp-not-showing-on-google.html', text: "Read: why your site isn't showing on Google" }}
+        >
+          <SvsWindow title="Engagement">
+            <SvsFlow steps={[
+              { k: 'Snapshot', v: 'Free first look' },
+              { k: 'Audit', v: 'Prioritized report' },
+              { k: 'Remediation', v: 'Fixed and verified' },
+            ]} />
+          </SvsWindow>
+        </SvcSnapshot>
+      </ServiceSideNav>
+
+      {/* The problem */}
+      <section className="seo-problem">
+        <div className="shell seo-problem-grid">
+          <div>
+            <span className="eyebrow">The problem</span>
+            <h2 className="seo-problem-hl">
+              Most sites have SEO problems <em>nobody mentioned.</em>
             </h2>
-            <p className="seo-body">
-              When someone in Brewster searches "plumber near me" or a Provincetown visitor looks for "best clam chowder Cape Cod" — your position in those results directly determines whether your phone rings.
+            <p className="seo-problem-body">
+              A page accidentally set to noindex. A redirect that loops. Twenty pages sharing one title tag. A business name spelled three different ways across directories. None of it shows up when you look at your own site, and all of it costs you rankings.
             </p>
-            <p className="seo-body">
-              Most small businesses have an SEO problem they don't know about: inconsistent listings, unoptimized Google Business Profiles, pages with no clear keyword focus. These are fixable problems with measurable payoffs.
+            <p className="seo-problem-body">
+              An audit turns "we should do some SEO" into a specific, ranked list of problems. Remediation turns that list into fixes.
             </p>
-            <p className="seo-body">
-              COLEwebdev has been building websites on Cape Cod since 2000. We understand the seasonal search patterns, the local competition, and the specific terms your customers type — because this is our market too.
-            </p>
+            <a className="btn btn--primary" href="wp-how-long-seo.html" style={{ marginTop: '8px', display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+              Read: how long SEO takes to work <span className="arrow">→</span>
+            </a>
+          </div>
+          <div className="seo-stats">
+            <div className="seo-stat">
+              <div className="seo-stat-num">46%</div>
+              <div className="seo-stat-label">of all Google searches have local intent</div>
+            </div>
+            <div className="seo-stat">
+              <div className="seo-stat-num">78%</div>
+              <div className="seo-stat-label">of local mobile searches result in an offline purchase</div>
+            </div>
+            <div className="seo-stat">
+              <div className="seo-stat-num">27%</div>
+              <div className="seo-stat-label">of all clicks go to the #1 organic result</div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Services grid */}
-      <section className="seo-services">
+      {/* Offerings */}
+      <section className="seo-offerings">
         <div className="shell">
-          <div className="seo-services-hd">
-            <span className="eyebrow">What we do</span>
-            <h2 className="seo-services-hl">Six things that move the needle.</h2>
-            <p className="seo-services-sub">
-              Local SEO isn't one tactic — it's a system. These are the levers we pull every month.
+          <div className="seo-offerings-hd">
+            <span className="eyebrow">Services</span>
+            <h2 className="seo-offerings-hl">Three steps, no retainer.</h2>
+            <p className="seo-offerings-sub">
+              Start free. Commission a full audit if the snapshot shows it is worth it. Then have us fix what we find.
             </p>
           </div>
-          <div className="seo-services-grid">
-            {SEO_SERVICES.map(svc => (
-              <div key={svc.name} className="seo-svc-card">
-                <div className="seo-svc-icon">{svc.icon}</div>
-                <h3 className="seo-svc-name">{svc.name}</h3>
-                <p className="seo-svc-body">{svc.body}</p>
+          <div className="seo-offerings-grid">
+            {SEO_OFFERINGS.map(o => (
+              <div key={o.name} className={['seo-offering-card', o.featured && 'seo-offering-card--featured'].filter(Boolean).join(' ')}>
+                <div className="seo-offering-top">
+                  <span className={'seo-offering-type' + (o.featured ? ' seo-offering-type--featured' : '')}>{o.type}</span>
+                  {o.featured && <span className="seo-offering-rec">Most thorough</span>}
+                </div>
+                <div className="seo-offering-name">
+                  <span className="seo-offering-icon" aria-hidden="true">{o.icon}</span>
+                  {o.name}
+                </div>
+                <div className="seo-offering-desc">{o.desc}</div>
+                <ul className="seo-offering-list">
+                  {o.includes.map(item => <li key={item}>{item}</li>)}
+                </ul>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* How we work */}
+      {/* Audit coverage */}
+      <section className="seo-cover">
+        <div className="shell">
+          <div className="seo-cover-hd">
+            <span className="eyebrow">What the full audit covers</span>
+            <h2 className="seo-cover-hl">Six areas, one ranked report.</h2>
+            <p className="seo-cover-sub">Every finding gets a severity (critical, serious, or moderate) and a plain-English explanation of what it costs you.</p>
+          </div>
+          <div className="seo-cover-grid">
+            {SEO_COVERAGE.map(c => (
+              <div key={c.name} className="seo-cover-card">
+                <div className="seo-cover-top">
+                  <span className="seo-offering-icon" aria-hidden="true">{c.icon}</span>
+                  <span className="seo-cover-name">{c.name}</span>
+                </div>
+                <ul className="seo-cover-list">
+                  {c.items.map(i => <li key={i}>{i}</li>)}
+                </ul>
+              </div>
+            ))}
+          </div>
+          <div className="seo-cover-data">
+            <strong>Built on your real data.</strong> With read access to Google Analytics and Search Console, we diagnose from your actual traffic, queries, and indexing reports, not a generic checklist.
+          </div>
+        </div>
+      </section>
+
+      {/* Remediation */}
+      <section className="seo-fix">
+        <div className="shell seo-fix-grid">
+          <div>
+            <span className="eyebrow">Remediation</span>
+            <h2 className="seo-fix-hl">We fix it. Then we prove it.</h2>
+            <p className="seo-fix-p">
+              An audit is only useful if someone acts on it. Remediation works through the report in priority order, starting with anything that keeps pages out of Google entirely.
+            </p>
+            <p className="seo-fix-p">
+              Each fix is checked in Search Console, and we request re-indexing where it helps. If slow pages are part of the problem, our <a href="wordpress-speed.html">WordPress speed work</a> picks up where the audit leaves off.
+            </p>
+          </div>
+          <div aria-hidden="true">
+            <SvsWindow title="Remediation log">
+              <ul className="seo-fixlist">
+                {[
+                  ['crit', 'Critical', 'Removed noindex from 14 service pages'],
+                  ['crit', 'Critical', 'Fixed redirect loop on /services'],
+                  ['ser', 'Serious', 'Rewrote 22 duplicate title tags'],
+                  ['ser', 'Serious', 'Matched business name across listings'],
+                  ['mod', 'Moderate', 'Added alt text to 38 images'],
+                ].map(([sev, label, text]) => (
+                  <li key={text}>
+                    <span className={'seo-sev seo-sev--' + sev}>{label}</span>
+                    <span>{text}</span>
+                    <span className="seo-fixed">✓ Verified</span>
+                  </li>
+                ))}
+              </ul>
+            </SvsWindow>
+          </div>
+        </div>
+      </section>
+
+      {/* How it works */}
       <section className="seo-how">
         <div className="shell">
           <div className="seo-how-hd">
-            <span className="eyebrow">How we work</span>
-            <h2 className="seo-how-hl">A repeatable process, not a one-time fix.</h2>
+            <span className="eyebrow">How it works</span>
+            <h2 className="seo-how-hl">From first look to verified fix.</h2>
           </div>
           <div className="seo-how-steps">
-            {HOW_STEPS.map(step => (
-              <div key={step.n} className="seo-how-step">
-                <div className="seo-how-num">{step.n}</div>
-                <div className="seo-how-label">{step.label}</div>
-                <p className="seo-how-body">{step.body}</p>
+            {SEO_STEPS.map(s => (
+              <div key={s.n} className="seo-step">
+                <div className="seo-step-num">{s.n}</div>
+                <div className="seo-step-label">{s.label}</div>
+                <div className="seo-step-body">{s.body}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Commitments */}
-      <section className="seo-commit">
+      {/* AIEO cross-link */}
+      <section className="seo-aieo">
         <div className="shell">
-          <div className="seo-commit-hd">
-            <span className="eyebrow">Our commitments</span>
-            <h2 className="seo-commit-hl">
-              What you can always <em>count on.</em>
-            </h2>
-          </div>
-          <div className="seo-commit-grid">
-            {COMMITMENTS.map(c => (
-              <div key={c.label} className="seo-commit-card">
-                <div className="seo-commit-check">{c.icon}</div>
-                <div>
-                  <div className="seo-commit-label">{c.label}</div>
-                  <p className="seo-commit-desc">{c.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonial */}
-      <section className="seo-testi">
-        <div className="shell">
-          <div className="seo-testi-inner">
-            <span className="seo-quote-mark" aria-hidden="true">"</span>
-            <blockquote className="seo-quote">
-              Josiah and Desiree do great work with a personal touch. From the initial proposal through the design process, to maintenance and service once the site was up and running — the folks at COLEwebdev have always been there to answer all our questions and solve any problems.
-            </blockquote>
-            <div className="seo-testi-meta">
-              <img
-                className="seo-testi-img"
-                src="assets/womr-website-design-build-wordpress-ecommerce-cape-cod-xsmall.jpg"
-                alt="WOMR"
-                loading="lazy"
-              />
-              <div>
-                <div className="seo-testi-name">Matty Dread</div>
-                <div className="seo-testi-role">WOMR · womr.org</div>
-              </div>
+          <div className="seo-aieo-card">
+            <div>
+              <span className="eyebrow">Beyond the blue link</span>
+              <h2 className="seo-aieo-hl">SEO gets you ranked. AIEO gets you <em>cited.</em></h2>
+              <p className="seo-aieo-p">
+                ChatGPT, Perplexity, Gemini, and Claude now answer questions directly and name their sources. AI Engine Optimization builds on a clean SEO foundation so AI answers recommend you too.
+              </p>
             </div>
+            <a className="btn btn--accent" href="aieo.html">
+              Explore AIEO <span className="arrow">→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="seo-faq">
+        <div className="shell seo-faq-inner">
+          <span className="eyebrow">Common questions</span>
+          <h2 className="seo-faq-hl">Snapshot, audit, remediation: answered.</h2>
+          <div className="seo-faq-list">
+            {SEO_FAQ.map(f => (
+              <details key={f.q} className="seo-faq-item">
+                <summary className="seo-faq-q">{f.q}</summary>
+                <p className="seo-faq-a">{f.a}</p>
+              </details>
+            ))}
           </div>
         </div>
       </section>
@@ -225,33 +375,21 @@ function SeoPage() {
         <div className="shell">
           <div className="seo-cta">
             <div>
-              <h2 className="seo-cta-hl">
-                Start with a free <em>SEO audit.</em>
-              </h2>
-              <p className="seo-cta-sub">
-                We'll take a look at your current rankings, your Google Business Profile, and your biggest opportunities — at no charge. No commitment required.
-              </p>
-              <p className="seo-area-note">
-                Serving businesses across all 15 Cape Cod towns.{' '}
-                <a href="service-area.html">See our full service area →</a>
-              </p>
+              <h2 className="seo-cta-hl">Start with a free <em>SEO snapshot.</em></h2>
+              <p className="seo-cta-sub">We will look at your site and Google Business Profile, flag the biggest problems, and tell you honestly whether a full audit is worth it.</p>
+              <p className="seo-area-note">Serving Cape Cod businesses and beyond. <a href="service-area.html">See our full service area →</a></p>
               <div className="seo-related">
                 <span className="seo-related-label">Related:</span>
-                <a href="website-design.html" className="seo-related-link">SEO works best on a fast, well-built site.</a>
-                <a href="consulting.html" className="seo-related-link">Not sure where to start?</a>
-                <a href="wp-how-long-seo.html" className="seo-related-link">How long does SEO take? →</a>
-                <a href="wp-not-showing-on-google.html" className="seo-related-link">Why isn't my site showing up on Google? →</a>
+                <a href="aieo.html" className="seo-related-link">AI Engine Optimization</a>
+                <a href="cape-cod-google-business-profile.html" className="seo-related-link">Google Business Profile</a>
+                <a href="ppc.html" className="seo-related-link">Need traffic now? Google Ads</a>
               </div>
             </div>
             <div className="seo-cta-actions">
-              <a className="btn btn--primary" href="index.html#cta">
-                Request free audit <span className="arrow">→</span>
+              <a className="btn btn--accent" href="quote.html">
+                Get a free SEO snapshot <span className="arrow">→</span>
               </a>
-              <a
-                className="btn btn--ghost"
-                href="tel:5084132043"
-                style={{ color: 'rgba(255,255,255,0.7)', borderColor: 'rgba(255,255,255,0.2)' }}
-              >
+              <a className="btn btn--ghost seo-ghost" href="tel:5084132043">
                 508.413.2043
               </a>
             </div>

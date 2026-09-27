@@ -5,7 +5,8 @@ const SERVICES = [
     glyph: '↗',
     color: 'green',
     title: 'SEO',
-    desc: 'Rank in Google for the searches your customers are actually running — local, seasonal, and intent-driven. AI-powered audits available using your live Analytics and Search Console data.',
+    desc: 'SEO audits built on your live Analytics and Search Console data, then hands-on fixes for everything we find.',
+    href: 'seo.html',
   },
   {
     glyph: '◎',

@@ -634,6 +634,7 @@ const SVC_GROUPS = {
     blurb: 'SEO, paid ads, social, email, and AI tools working together to bring in customers.',
     items: [
       { href: 'cape-cod-marketing.html', title: 'Marketing' },
+      { href: 'seo.html', title: 'SEO Audits' },
       { href: 'ppc.html', title: 'PPC & Google Ads' },
       { href: 'branding.html', title: 'Branding' },
       { href: 'cape-cod-social-media-marketing.html', title: 'Social Media Marketing' },
