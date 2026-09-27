@@ -98,7 +98,30 @@ function HostingPage() {
         points={['Daily Backups', 'Security Monitoring', 'WordPress Updates', 'Priority Support']}
       />
 
-      <ServiceSideNav group="care" current="hosting.html" />
+      <ServiceSideNav group="care" current="hosting.html">
+        <SvcSnapshot
+          accent="#5CC035"
+          eyebrow="At a glance"
+          title="Hosting that is watched, not just rented."
+          intro="Your site runs on WordPress-tuned servers, and a real person is alerted when something goes wrong, usually before you notice."
+          points={[
+            'Managed WordPress hosting tuned for speed',
+            'Automated daily backups stored off-site',
+            'Malware scanning, firewall, and uptime monitoring',
+            'Under one hour average response for Care Plan clients',
+          ]}
+        >
+          <SvsWindow title="Site health">
+            <SvsRows rows={[
+              { label: 'Uptime monitor', tag: 'Online', tone: 'good' },
+              { label: 'Daily backup (off-site)', tag: 'Complete', tone: 'good' },
+              { label: 'Malware scan', tag: 'Clean', tone: 'good' },
+              { label: 'WordPress core + plugins', tag: 'Up to date', tone: 'good' },
+              { label: 'Firewall + login protection', tag: 'Active', tone: 'good' },
+            ]} />
+          </SvsWindow>
+        </SvcSnapshot>
+      </ServiceSideNav>
 
       {/* What's included */}
       <section className="hc-includes">

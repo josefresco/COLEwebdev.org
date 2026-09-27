@@ -92,7 +92,36 @@ function EmailMarketingPage() {
         points={['Campaign Strategy', 'Template Design', 'List Management', 'Performance Reporting']}
       />
 
-      <ServiceSideNav group="grow" current="cape-cod-email-marketing.html" />
+      <ServiceSideNav group="grow" current="cape-cod-email-marketing.html">
+        <SvcSnapshot
+          accent="#5CC035"
+          eyebrow="At a glance"
+          title="A campaign calendar built around the Cape's seasons."
+          intro="We plan the year's sends, design templates that match your brand, write the copy, and report on what each campaign actually earned."
+          points={[
+            'Seasonal campaigns for summer, shoulder season, and winter',
+            'Segments for locals, visitors, and past customers',
+            'Subject line and send-time A/B testing',
+            'Built in Mailchimp, Klaviyo, or Constant Contact',
+          ]}
+        >
+          <SvsWindow title="Campaign calendar">
+            {[
+              ['We are open for the season', 'May', false],
+              ['The summer menu is here', 'Jun', false],
+              ['September only: shoulder-season special', 'Sep', true],
+              ['Still here all winter: a thank-you for locals', 'Dec', true],
+              ['We miss you (re-engagement series)', 'Auto', true],
+            ].map(([subj, when, read]) => (
+              <div key={subj} className={'svs-mail' + (read ? ' is-read' : '')}>
+                <span className="svs-mail-dot" />
+                <span className="svs-mail-subj">{subj}</span>
+                <span className="svs-mail-when">{when}</span>
+              </div>
+            ))}
+          </SvsWindow>
+        </SvcSnapshot>
+      </ServiceSideNav>
 
       {/* What's included */}
       <section className="em-included">

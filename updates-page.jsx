@@ -87,7 +87,28 @@ function UpdatesPage() {
         points={['Hourly Rate', 'No Retainer', 'Any CMS', 'No Commitment']}
       />
 
-      <ServiceSideNav group="care" current="updates.html" />
+      <ServiceSideNav group="care" current="updates.html">
+        <SvcSnapshot
+          accent="#5CC035"
+          eyebrow="At a glance"
+          title="Small changes, handled fast."
+          intro="Send a quick list or an annotated screenshot. We confirm the time before we start and bill only for the time actually spent."
+          points={[
+            'Text, image, and page updates',
+            'Forms, navigation, and plugin settings',
+            'Layout tweaks without a full redesign',
+            'No surprise bills: scope changes are flagged first',
+          ]}
+        >
+          <SvsWindow title="Change request">
+            <SvsFlow steps={[
+              { k: 'Request', v: 'Update summer hours on Contact' },
+              { k: 'Estimate', v: 'Confirmed before work starts' },
+              { k: 'Done', v: 'Reviewed and invoiced' },
+            ]} />
+          </SvsWindow>
+        </SvcSnapshot>
+      </ServiceSideNav>
 
       {/* What we update */}
       <section className="um-edits">

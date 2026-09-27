@@ -306,7 +306,29 @@ function AiAppsPage() {
         points={['Custom-Built', 'Faster & Lower Cost', 'WordPress Integration', 'Practical AI', 'No-Code Handoff']}
       />
 
-      <ServiceSideNav group="grow" current="ai-apps.html" />
+      <ServiceSideNav group="grow" current="ai-apps.html">
+        <SvcSnapshot
+          accent="#5CC035"
+          eyebrow="At a glance"
+          title="Custom tools built around how you work."
+          intro="We use AI to build faster and cheaper than traditional development, then hand you software shaped to your process, not a vendor's."
+          points={[
+            'Clickable prototypes in days, before a full build',
+            'Custom WordPress plugins with no subscription bloat',
+            'Chatbots trained on your business that hand off to a person',
+            'Hosted business apps we build and maintain',
+          ]}
+        >
+          <SvsWindow title="Website assistant">
+            <SvsChat messages={[
+              { from: 'user', text: 'Do you do spring cleanups in Harwich?' },
+              { from: 'ai', text: 'Yes, we cover Harwich and the rest of the Lower Cape. Want me to set up a quote visit?' },
+              { from: 'user', text: 'Sure, can I talk to someone first?' },
+              { from: 'ai', text: 'Of course. I have passed your number to the office and someone will call you today.' },
+            ]} />
+          </SvsWindow>
+        </SvcSnapshot>
+      </ServiceSideNav>
 
       {/* Philosophy */}
       <section className="ai-phil">

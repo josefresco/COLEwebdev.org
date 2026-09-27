@@ -57,7 +57,32 @@ function WPMaintenancePage() {
         points={['Monthly Updates', 'Daily Backups', 'Security Monitoring', 'Priority Support']}
       />
 
-      <ServiceSideNav group="care" current="wordpress-maintenance.html" />
+      <ServiceSideNav group="care" current="wordpress-maintenance.html">
+        <SvcSnapshot
+          accent="#0073AA"
+          eyebrow="At a glance"
+          title="Seven checks, every visit."
+          intro="Each maintenance visit follows the same checklist, so updates get tested, backups get verified, and small problems get caught before customers see them."
+          points={[
+            'Core, plugin, and theme updates tested before they go live',
+            'Security scan and a backup confirmed restorable',
+            'Broken link, speed, and console error checks',
+          ]}
+          link={{ href: 'wp-wordpress-maintenance.html', text: 'Read: what WordPress maintenance covers' }}
+        >
+          <SvsWindow title="Maintenance report">
+            <SvsRows rows={[
+              { label: 'WordPress core', tag: 'Updated', tone: 'good' },
+              { label: 'Plugins + themes', tag: 'Updated', tone: 'good' },
+              { label: 'Security scan', tag: 'Clean', tone: 'good' },
+              { label: 'Backup', tag: 'Restorable', tone: 'good' },
+              { label: 'Broken links', tag: '2 fixed', tone: 'warn' },
+              { label: 'Speed test', tag: 'Passed', tone: 'good' },
+              { label: 'Console errors', tag: 'None', tone: 'good' },
+            ]} />
+          </SvsWindow>
+        </SvcSnapshot>
+      </ServiceSideNav>
 
       {/* What's included each month */}
       <section className="wm-includes">

@@ -97,7 +97,33 @@ function GBPPage() {
         points={['GBP Setup & Optimization', 'Photo Management', 'Review Strategy', 'Local Pack Rankings']}
       />
 
-      <ServiceSideNav group="grow" current="cape-cod-google-business-profile.html" />
+      <ServiceSideNav group="grow" current="cape-cod-google-business-profile.html">
+        <SvcSnapshot
+          accent="#5CC035"
+          eyebrow="At a glance"
+          title="Your profile, kept current every month."
+          intro="Your Google Business Profile is often the first thing a customer sees. We keep it complete, active, and consistent with every other listing you have."
+          points={[
+            'Business info, categories, and service areas set up correctly',
+            'Monthly posts and quarterly photo refreshes',
+            'Q&A monitoring and a review-request process',
+            'Professional responses to every review',
+          ]}
+          link={{ href: 'wp-google-maps-ranking.html', text: 'Read: how Google Maps ranking works' }}
+        >
+          <SvsWindow title="Business profile">
+            <div className="svs-listing-name">Your Business</div>
+            <div className="svs-listing-cat">Landscaper · Orleans, MA</div>
+            <div className="svs-listing-open"><b>Open</b> · Closes 5 PM</div>
+            <div className="svs-listing-btns"><span>Call</span><span>Directions</span><span>Website</span></div>
+            <SvsRows rows={[
+              { label: 'Monthly post', tag: 'Published', tone: 'good' },
+              { label: 'Photos', tag: 'Refreshed', tone: 'good' },
+              { label: 'New question', tag: 'Answered', tone: 'good' },
+            ]} />
+          </SvsWindow>
+        </SvcSnapshot>
+      </ServiceSideNav>
 
       {/* Why GBP matters */}
       <section className="gbp-why">

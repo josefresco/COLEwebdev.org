@@ -112,7 +112,29 @@ function CapeCodeMarketingPage() {
         points={['SEO', 'Google Ads', 'Social Media', 'Local Team']}
       />
 
-      <ServiceSideNav group="grow" current="cape-cod-marketing.html" />
+      <ServiceSideNav group="grow" current="cape-cod-marketing.html">
+        <SvcSnapshot
+          accent="#F26B1F"
+          eyebrow="At a glance"
+          title="Every channel, one scoreboard."
+          intro="SEO, Google Ads, social, and email all feed the same place: a landing page built for one action, with tracking that tells you which channel sent the lead."
+          points={[
+            'Local SEO and Google Ads for high-intent searches',
+            'Social and email to stay in front of locals and visitors',
+            'Landing pages and lead capture built into your site',
+            'Full attribution with GA4, Tag Manager, and Meta Pixel',
+          ]}
+          link={{ href: 'ppc.html', text: 'See how we run Google Ads' }}
+        >
+          <SvsWindow title="Lead attribution">
+            <SvsFlow steps={[
+              { k: 'Channel', v: 'Search · Social · Email' },
+              { k: 'Landing page', v: 'One offer, one action' },
+              { k: 'Tracked lead', v: 'GA4 + Tag Manager' },
+            ]} />
+          </SvsWindow>
+        </SvcSnapshot>
+      </ServiceSideNav>
 
       {/* Services */}
       <section className="mkt-services">

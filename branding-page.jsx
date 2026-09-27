@@ -78,7 +78,36 @@ function BrandingPage() {
         points={['Logo Design', 'Color Systems', 'Print-Ready', 'Brand Guidelines']}
       />
 
-      <ServiceSideNav group="grow" current="branding.html" />
+      <ServiceSideNav group="grow" current="branding.html">
+        <SvcSnapshot
+          accent="#F26B1F"
+          eyebrow="At a glance"
+          title="A complete identity, not just a logo."
+          intro="Every branding project delivers a system your team can use on day one: the mark, the colors, the type, and the rules that hold them together."
+          points={[
+            'Logo in wordmark, icon, and combination versions',
+            'Color palette chosen for accessibility and print',
+            'Typography licensed for web, print, and digital',
+            'Brand guidelines your whole team can follow',
+          ]}
+        >
+          <SvsWindow title="Brand kit">
+            <div className="svs-swatches">
+              <span className="svs-swatch" style={{ background: '#0E2A4A', color: 'rgba(255,255,255,0.8)' }}>Primary</span>
+              <span className="svs-swatch" style={{ background: '#F26B1F', color: 'white' }}>Accent</span>
+              <span className="svs-swatch" style={{ background: '#E8D9BD', color: '#0E2A4A' }}>Sand</span>
+              <span className="svs-swatch" style={{ background: '#F7F3EA', color: '#0E2A4A', border: '1px solid rgba(14,42,74,0.1)' }}>Paper</span>
+            </div>
+            <div className="svs-specimen">
+              <span className="svs-specimen-aa">Aa</span>
+              <span className="svs-specimen-meta">Display serif for headlines<br />Clean sans for body copy</span>
+            </div>
+            <div className="svs-files">
+              {['SVG', 'PNG', 'PDF', 'EPS'].map(f => <span key={f} className="svs-tag svs-tag--muted">{f}</span>)}
+            </div>
+          </SvsWindow>
+        </SvcSnapshot>
+      </ServiceSideNav>
 
       {/* What we do */}
       <section className="br-what">

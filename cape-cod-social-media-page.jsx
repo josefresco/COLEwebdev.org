@@ -136,7 +136,35 @@ function SocialMediaPage() {
         points={['Content Creation', 'Community Management', 'Paid Social Ads', 'Monthly Reporting']}
       />
 
-      <ServiceSideNav group="grow" current="cape-cod-social-media-marketing.html" />
+      <ServiceSideNav group="grow" current="cape-cod-social-media-marketing.html">
+        <SvcSnapshot
+          accent="#5CC035"
+          eyebrow="At a glance"
+          title="Show up where Cape Cod scrolls."
+          intro="A content calendar built around the Cape's seasons, posts written in your voice, and replies to comments and DMs so your pages never go quiet."
+          points={[
+            'Content strategy tied to local events and peak seasons',
+            'Posts, captions, and scheduling handled for you',
+            'Community management for comments, DMs, and reviews',
+            'Paid social targeted by ZIP code and interest',
+          ]}
+        >
+          <SvsWindow title="Scheduled post">
+            <div className="svs-post-head">
+              <span className="svs-avatar">◍</span>
+              <span>
+                <span className="svs-post-name">Your Business</span><br />
+                <span className="svs-post-meta">Wellfleet, MA · Friday 9:00 AM</span>
+              </span>
+            </div>
+            <div className="svs-post-img" />
+            <p className="svs-post-cap">Summer hours start Friday. Open 7 days, 8 to 8, through Labor Day. See you at the shop.</p>
+            <div className="svs-files">
+              {['Facebook', 'Instagram', 'Google Business'].map(f => <span key={f} className="svs-tag svs-tag--good">{f}</span>)}
+            </div>
+          </SvsWindow>
+        </SvcSnapshot>
+      </ServiceSideNav>
 
       {/* What's included */}
       <section className="sm-services">

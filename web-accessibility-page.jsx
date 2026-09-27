@@ -82,7 +82,31 @@ function WCAPage() {
         points={['WCAG 2.1 AA', 'ADA Protection', 'Screen Reader Tested', 'SEO Benefit']}
       />
 
-      <ServiceSideNav group="care" current="web-accessibility.html" />
+      <ServiceSideNav group="care" current="web-accessibility.html">
+        <SvcSnapshot
+          accent="#5CC035"
+          eyebrow="At a glance"
+          title="Built for every visitor, tested by a person."
+          intro="Automated scanners catch roughly 30% of accessibility issues. We pair them with a developer's manual review, then fix what we find in code."
+          points={[
+            'Audits against WCAG 2.1 AA',
+            'Issues ranked critical, serious, or moderate',
+            'Fixes tested with NVDA, VoiceOver, and keyboard only',
+          ]}
+          link={{ href: 'wp-website-accessibility.html', text: 'Read: our website accessibility guide' }}
+        >
+          <SvsWindow title="WCAG 2.1 AA checklist">
+            <SvsRows rows={[
+              { label: 'Keyboard navigation', tag: 'Pass', tone: 'good' },
+              { label: 'Color contrast 4.5:1', tag: 'Fixed', tone: 'warn' },
+              { label: 'Image alt text', tag: 'Pass', tone: 'good' },
+              { label: 'Form labels', tag: 'Fixed', tone: 'warn' },
+              { label: 'Visible focus', tag: 'Pass', tone: 'good' },
+              { label: 'Zoom to 200%', tag: 'Pass', tone: 'good' },
+            ]} />
+          </SvsWindow>
+        </SvcSnapshot>
+      </ServiceSideNav>
 
       {/* Why it matters */}
       <section className="wca-why">

@@ -154,7 +154,29 @@ function WPSpeedPage() {
         points={['Core Web Vitals', 'Image Optimization', 'Plugin Audit', 'Staging Tested']}
       />
 
-      <ServiceSideNav group="care" current="wordpress-speed.html" />
+      <ServiceSideNav group="care" current="wordpress-speed.html">
+        <SvcSnapshot
+          accent="#5CC035"
+          eyebrow="At a glance"
+          title="We fix what Google measures."
+          intro="We work on the three Core Web Vitals directly, not just the overall PageSpeed score, and start with the changes that move them most."
+          points={[
+            'Image optimization, WebP, and lazy loading',
+            'Server-level caching and CDN delivery',
+            'Plugin audit and database cleanup',
+            'A hosting upgrade path if the server is the bottleneck',
+          ]}
+          link={{ href: 'wp-core-web-vitals.html', text: 'Read: Core Web Vitals explained' }}
+        >
+          <SvsWindow title="Core Web Vitals targets" note="Google's 'good' thresholds">
+            <SvsMeters items={[
+              { label: 'Largest Contentful Paint', target: '≤ 2.5 s', pos: 34 },
+              { label: 'Interaction to Next Paint', target: '≤ 200 ms', pos: 28 },
+              { label: 'Cumulative Layout Shift', target: '≤ 0.1', pos: 18 },
+            ]} />
+          </SvsWindow>
+        </SvcSnapshot>
+      </ServiceSideNav>
 
       {/* Core Web Vitals */}
       <section className="wps-vitals">

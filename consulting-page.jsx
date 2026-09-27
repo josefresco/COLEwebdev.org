@@ -151,7 +151,34 @@ function ConsultingPage() {
         points={['Website Strategy', 'Website Audits', 'Business Coaching', 'Platform Advice']}
       />
 
-      <ServiceSideNav group="care" current="consulting.html" />
+      <ServiceSideNav group="care" current="consulting.html">
+        <SvcSnapshot
+          accent="#5CC035"
+          eyebrow="At a glance"
+          title="Straight answers from people who run businesses here."
+          intro="Strategy, audits, and training from Josiah and Desiree Cole. You leave each engagement with a prioritized plan, not a sales pitch."
+          points={[
+            'Website strategy before you rebuild or redesign',
+            'Honest audits with a prioritized action list',
+            'Hands-on training so your team can update the site',
+          ]}
+          link={{ href: 'about.html', text: 'Meet Josiah and Desiree' }}
+        >
+          <SvsWindow title="Since 2006" note={null}>
+            <div className="svs-stats">
+              <div className="svs-stat"><div className="svs-stat-num">2006</div><div className="svs-stat-label">Founded in Eastham, MA</div></div>
+              <div className="svs-stat"><div className="svs-stat-num">700+</div><div className="svs-stat-label">Client projects delivered</div></div>
+              <div className="svs-stat"><div className="svs-stat-num">35+</div><div className="svs-stat-label">Combined years of experience</div></div>
+            </div>
+            <SvsRows rows={[
+              { label: 'Fix mobile page speed', tag: 'High', tone: 'bad' },
+              { label: 'Rewrite homepage headline', tag: 'High', tone: 'bad' },
+              { label: 'Set up conversion tracking', tag: 'Medium', tone: 'warn' },
+            ]} />
+            <div className="svs-win-note" style={{ padding: '10px 0 0' }}>Example action list</div>
+          </SvsWindow>
+        </SvcSnapshot>
+      </ServiceSideNav>
 
       {/* What we offer */}
       <section className="cn-offers">

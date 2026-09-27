@@ -686,4 +686,107 @@ function ServiceSideNav({ group, current, children }) {
   );
 }
 
-Object.assign(window, { Process, Portfolio, Testimonial, News, CTA, NewsletterBanner, Footer, SummaryStrip, ServiceSideNav });
+/* Service snapshot: copy + illustration that fills the ServiceSideNav gap.
+   Graphics are HTML/CSS mockups built from the Svs* primitives below. */
+function SvcSnapshot({ accent, eyebrow, title, intro, points, link, children }) {
+  return (
+    <div className="svs" style={accent ? { '--svs-accent': accent } : undefined}>
+      <div className="svs-copy">
+        {eyebrow && <span className="eyebrow">{eyebrow}</span>}
+        <h2 className="svs-hl">{title}</h2>
+        {intro && <p className="svs-intro">{intro}</p>}
+        {points && (
+          <ul className="svs-points">
+            {points.map(pt => <li key={pt}>{pt}</li>)}
+          </ul>
+        )}
+        {link && <a className="svs-link" href={link.href}>{link.text} <span className="arrow">→</span></a>}
+      </div>
+      <figure className="svs-viz" aria-hidden="true">
+        {children}
+      </figure>
+    </div>
+  );
+}
+
+function SvsWindow({ title, note = 'Illustrative example', children }) {
+  return (
+    <div className="svs-win">
+      <div className="svs-win-bar">
+        <span className="svs-win-dots"><i /><i /><i /></span>
+        <span className="svs-win-title">{title}</span>
+      </div>
+      <div className="svs-win-body">{children}</div>
+      {note && <div className="svs-win-note">{note}</div>}
+    </div>
+  );
+}
+
+// rows: [{ label, tag, tone: 'good' | 'warn' | 'bad' | 'muted', strike }]
+function SvsRows({ rows }) {
+  return (
+    <ul className="svs-rows">
+      {rows.map(r => (
+        <li key={r.label} className={'svs-row' + (r.strike ? ' is-strike' : '')}>
+          <span className="svs-row-label">{r.label}</span>
+          {r.tag && <span className={'svs-tag svs-tag--' + (r.tone || 'muted')}>{r.tag}</span>}
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+// steps: [{ k, v }]; the last step is marked done
+function SvsFlow({ steps }) {
+  return (
+    <div className="svs-flow">
+      {steps.map((st, i) => (
+        <React.Fragment key={st.k}>
+          <div className={'svs-node' + (i === steps.length - 1 ? ' is-done' : '')}>
+            <span className="svs-node-k">{st.k}</span>
+            <span className="svs-node-v">{st.v}</span>
+          </div>
+          {i < steps.length - 1 && <span className="svs-flow-link" />}
+        </React.Fragment>
+      ))}
+    </div>
+  );
+}
+
+// messages: [{ from: 'user' | 'ai', text, cite }]
+function SvsChat({ messages }) {
+  return (
+    <div className="svs-chat">
+      {messages.map((m, i) => (
+        <div key={i} className={'svs-bubble svs-bubble--' + m.from}>
+          {m.text}
+          {m.cite && <span className="svs-cite">Source: {m.cite}</span>}
+        </div>
+      ))}
+    </div>
+  );
+}
+
+// items: [{ label, target, pos }] where pos (0-100) places the marker along the track
+function SvsMeters({ items }) {
+  return (
+    <div className="svs-meters">
+      {items.map(m => (
+        <div key={m.label} className="svs-meter">
+          <div className="svs-meter-top">
+            <span className="svs-meter-label">{m.label}</span>
+            <span className="svs-meter-target">{m.target}</span>
+          </div>
+          <div className="svs-meter-track">
+            <span className="svs-meter-zone svs-meter-zone--good" />
+            <span className="svs-meter-zone svs-meter-zone--mid" />
+            <span className="svs-meter-zone svs-meter-zone--bad" />
+            <span className="svs-meter-mark" style={{ left: m.pos + '%' }} />
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+Object.assign(window, { Process, Portfolio, Testimonial, News, CTA, NewsletterBanner, Footer, SummaryStrip, ServiceSideNav, SvcSnapshot, SvsWindow, SvsRows, SvsFlow, SvsChat, SvsMeters });

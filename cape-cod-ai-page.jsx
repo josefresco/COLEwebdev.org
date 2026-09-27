@@ -112,7 +112,30 @@ function CapeCodAiPage() {
         points={['Custom AI Tools', 'AI Search Visibility', 'Local Team', 'No Off-the-Shelf Hype']}
       />
 
-      <ServiceSideNav group="grow" current="cape-cod-ai.html" />
+      <ServiceSideNav group="grow" current="cape-cod-ai.html">
+        <SvcSnapshot
+          accent="#5CC035"
+          eyebrow="At a glance"
+          title="Practical AI, sized for a small business."
+          intro="No hype and no enterprise pricing. We pick the AI work that pays off for a Cape Cod business and skip the rest."
+          points={[
+            'Custom AI tools, chatbots, and internal apps',
+            'SEO and speed audits built on your real data',
+            'AI Engine Optimization so AI answers cite you',
+            'AI-ready sites with clean markup and real schema',
+          ]}
+          link={{ href: 'ai-apps.html', text: 'See what we build in the AI Studio' }}
+        >
+          <SvsWindow title="AI roadmap">
+            <SvsRows rows={[
+              { label: 'SEO audit from Analytics + Search Console', tag: 'Start here', tone: 'good' },
+              { label: 'Speed audit with a fix-first plan', tag: 'Quick win', tone: 'good' },
+              { label: 'Schema and AIEO structure', tag: 'Next', tone: 'muted' },
+              { label: 'Chatbot or custom tool', tag: 'When ready', tone: 'muted' },
+            ]} />
+          </SvsWindow>
+        </SvcSnapshot>
+      </ServiceSideNav>
 
       {/* Why local */}
       <section className="cai-why">

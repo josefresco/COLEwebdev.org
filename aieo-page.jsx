@@ -101,7 +101,27 @@ function AieoPage() {
         </div>
       </div>
 
-      <ServiceSideNav group="grow" current="aieo.html" />
+      <ServiceSideNav group="grow" current="aieo.html">
+        <SvcSnapshot
+          accent="#5CC035"
+          eyebrow="At a glance"
+          title="Get cited, not just ranked."
+          intro="ChatGPT, Perplexity, Gemini, and Claude answer questions directly and name their sources. AIEO structures your site so you are one of them."
+          points={[
+            'Answer-structured content and FAQ formatting',
+            'Schema markup that says what you do and where',
+            'E-E-A-T and entity signals AI systems trust',
+            'Fresh, accurate content that stays citable',
+          ]}
+        >
+          <SvsWindow title="AI answer">
+            <SvsChat messages={[
+              { from: 'user', text: 'Who does emergency plumbing in Orleans?' },
+              { from: 'ai', text: 'Several local plumbers offer 24/7 emergency service in Orleans. One option lists same-day response across the Lower Cape and posts its service area and hours clearly.', cite: 'yourbusiness.com' },
+            ]} />
+          </SvsWindow>
+        </SvcSnapshot>
+      </ServiceSideNav>
 
       {/* What is AIEO */}
       <section className="aieo-what">
