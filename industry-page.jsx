@@ -1,7 +1,5 @@
 /* global React, ReactDOM */
 
-const IND_FORM_ENDPOINT = 'https://formspree.io/f/xnjwgqld';
-
 const IND_REVIEWS = [
   {
     name: 'Ann Mahoney',
@@ -16,65 +14,6 @@ const IND_REVIEWS = [
     quote: "Desiree and the Cole group did a fantastic job building our website. Very professional, personal, and communicative. Wouldn't go anywhere else.",
   },
 ];
-
-function IndLeadForm({ industry }) {
-  const [form, setForm] = React.useState({ name: '', email: '', phone: '', message: '' });
-  const [status, setStatus] = React.useState('idle');
-
-  const set = (k) => (e) => setForm(function(f) { return Object.assign({}, f, { [k]: e.target.value }); });
-
-  const submit = async function(e) {
-    e.preventDefault();
-    setStatus('submitting');
-    try {
-      const res = await fetch(IND_FORM_ENDPOINT, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify({
-          _subject: industry + ' Lead — COLEwebdev',
-          name: form.name,
-          email: form.email,
-          phone: form.phone,
-          message: form.message,
-        }),
-      });
-      if (!res.ok) throw new Error();
-      setStatus('success');
-      if (window.gtag) window.gtag('event', 'form_submit', { event_category: 'lead', form_name: 'industry_lead', industry: industry });
-    } catch {
-      setStatus('error');
-    }
-  };
-
-  if (status === 'success') {
-    return (
-      <div className="ind-lead-card ind-lead-success">
-        <div className="ind-lead-success-icon">✓</div>
-        <p className="ind-lead-success-hl">Got it, thanks!</p>
-        <p className="ind-lead-success-sub">We'll be in touch quickly.</p>
-      </div>
-    );
-  }
-
-  return (
-    <form className="ind-lead-card" onSubmit={submit} noValidate>
-      <p className="ind-lead-card-hl">Get a Free Quote</p>
-      <p className="ind-lead-card-sub">No obligation. We reply fast.</p>
-      <div className="ind-lead-fields">
-        <input className="ind-lead-input" type="text" placeholder="Your name *" required value={form.name} onChange={set('name')} />
-        <input className="ind-lead-input" type="email" placeholder="Email address *" required value={form.email} onChange={set('email')} />
-        <input className="ind-lead-input" type="tel" placeholder="Phone number" value={form.phone} onChange={set('phone')} />
-        <textarea className="ind-lead-input ind-lead-textarea" placeholder="Tell us about your project..." rows={3} value={form.message} onChange={set('message')} />
-      </div>
-      {status === 'error' && <p className="ind-lead-error">Something went wrong — please try again or call 508.413.2043.</p>}
-      <button className="btn btn--accent ind-lead-btn" type="submit" disabled={status === 'submitting'}>
-        {status === 'submitting' ? 'Sending…' : <React.Fragment>Request a Quote <span className="arrow">→</span></React.Fragment>}
-      </button>
-      <p className="ind-lead-footer-note">Or call <a href="tel:5084132043">508.413.2043</a></p>
-      <p className="form-privacy">By submitting, you agree to our <a href="privacy.html">Privacy Policy</a>.</p>
-    </form>
-  );
-}
 
 function IndFAQItem({ q, a }) {
   const [open, setOpen] = React.useState(false);
@@ -134,7 +73,12 @@ function IndustryPage() {
                   <span className="ind-chip">Cape Cod Local</span>
                 </div>
               </div>
-              <IndLeadForm industry={ind.industry} />
+              <ServiceLeadForm
+                service={ind.industry + ' Web Design'}
+                title="Get a free quote"
+                cta="Request quote"
+                notePlaceholder="Tell us about your business (optional)"
+              />
             </div>
           </div>
         </div>
