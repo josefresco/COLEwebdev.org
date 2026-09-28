@@ -166,14 +166,23 @@ function ServicesPage() {
       <div className="svc-hero">
         <div ref={heroRef} className="svc-hero-img" />
         <div className="svc-hero-text">
-          <div className="shell">
-            <span className="eyebrow">What we offer</span>
-            <h1 className="svc-hero-hl">
-              Services built for <em>real businesses.</em>
-            </h1>
-            <p className="svc-hero-sub">
-              From full website builds to ongoing care, e-commerce, hosting, and marketing — one team, one phone number, 20+ years on Cape Cod. We pick the right tool for the job and stick around to make sure it keeps working.
-            </p>
+          <div className="shell svc-hero-grid">
+            <div className="svc-hero-copy">
+              <span className="eyebrow">What we offer</span>
+              <h1 className="svc-hero-hl">
+                Services built for <em>real businesses.</em>
+              </h1>
+              <p className="svc-hero-sub">
+                From full website builds to ongoing care, e-commerce, hosting, and marketing — one team, one phone number, 20+ years on Cape Cod. We pick the right tool for the job and stick around to make sure it keeps working.
+              </p>
+            </div>
+            <ServiceLeadForm
+              service="General Inquiry"
+              variant="light lift"
+              title="Get a free quote"
+              cta="Request quote"
+              notePlaceholder="What can we help with? (optional)"
+            />
           </div>
         </div>
       </div>

@@ -2884,6 +2884,11 @@ p, li {
 .slf-btn { width: 100%; justify-content: center; }
 .slf .form-privacy { text-align: center; }
 .slf--done { text-align: center; padding: 36px 26px; }
+/* On light hero bands: softer shadow; lift overlaps the photo band above */
+.slf--light { border: 1px solid var(--line); box-shadow: var(--shadow-md); }
+@media (min-width: 961px) {
+  .slf--lift { position: relative; z-index: 2; margin-top: -200px; }
+}
 .slf-done-icon {
   width: 44px;
   height: 44px;

@@ -691,10 +691,11 @@ function ServiceSideNav({ group, current, children }) {
    inbox as the quote and contact forms; `service` tags the subject line. */
 const SERVICE_LEAD_ENDPOINT = 'https://formspree.io/f/xnjwgqld';
 
-function ServiceLeadForm({ service, title = 'Get a free quote', sub = 'No obligation. A real person replies.', cta = 'Send request', notePlaceholder = 'What do you need help with? (optional)' }) {
+function ServiceLeadForm({ service, variant, title = 'Get a free quote', sub = 'No obligation. A real person replies.', cta = 'Send request', notePlaceholder = 'What do you need help with? (optional)' }) {
   const [form, setForm] = React.useState({ name: '', email: '', website: '', message: '', _gotcha: '' });
   const [status, setStatus] = React.useState('idle');
   const [error, setError] = React.useState('');
+  const cls = 'slf' + (variant ? ' slf--' + variant.split(' ').join(' slf--') : '');
   const uid = 'slf-' + service.toLowerCase().replace(/[^a-z0-9]+/g, '-');
 
   // Hero buttons link to #lead-form: scroll the form into view and focus the first field
@@ -750,7 +751,7 @@ function ServiceLeadForm({ service, title = 'Get a free quote', sub = 'No obliga
 
   if (status === 'success') {
     return (
-      <div id="lead-form" className="slf slf--done" role="status">
+      <div id="lead-form" className={cls + ' slf--done'} role="status">
         <div className="slf-done-icon" aria-hidden="true">✓</div>
         <p className="slf-title">Got it, thanks.</p>
         <p className="slf-sub">We'll be in touch soon. Need us sooner? Call <a href="tel:5084132043">508.413.2043</a>.</p>
@@ -759,7 +760,7 @@ function ServiceLeadForm({ service, title = 'Get a free quote', sub = 'No obliga
   }
 
   return (
-    <form id="lead-form" className="slf" onSubmit={submit} noValidate>
+    <form id="lead-form" className={cls} onSubmit={submit} noValidate>
       <p className="slf-title">{title}</p>
       <p className="slf-sub">{sub}</p>
       <div className="slf-fields">

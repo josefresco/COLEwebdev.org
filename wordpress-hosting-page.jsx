@@ -102,32 +102,40 @@ function WPHostingPage() {
       <div className="wph-hero">
         <div className="wph-hero-bg" aria-hidden="true" />
         <div className="wph-hero-content">
-          <div className="shell">
-            <span className="eyebrow wph-eyebrow">Services · WordPress Hosting</span>
-            <h1 className="wph-hero-hl">
-              Hosting built for <em>WordPress.</em>
-            </h1>
-            <p className="wph-hero-sub">
-              Not shared hosting with a WordPress installer bolted on. Purpose-built infrastructure — isolated environments, global CDN, staging, and enterprise security — managed entirely by us.
-            </p>
-            <div className="wph-hero-actions">
-              <a className="btn btn--accent" href="quote.html">
-                Ask about hosting <span className="arrow">→</span>
-              </a>
-              <a className="btn btn--ghost wph-ghost" href="hosting.html">
-                See Care Plans <span className="arrow">→</span>
-              </a>
+          <div className="shell svc-hero-grid">
+            <div className="svc-hero-copy">
+              <span className="eyebrow wph-eyebrow">Services · WordPress Hosting</span>
+              <h1 className="wph-hero-hl">
+                Hosting built for <em>WordPress.</em>
+              </h1>
+              <p className="wph-hero-sub">
+                Not shared hosting with a WordPress installer bolted on. Purpose-built infrastructure — isolated environments, global CDN, staging, and enterprise security — managed entirely by us.
+              </p>
+              <div className="wph-hero-actions">
+                <a className="btn btn--accent" href="#lead-form">
+                  Ask about hosting <span className="arrow">→</span>
+                </a>
+                <a className="btn btn--ghost wph-ghost" href="hosting.html">
+                  See Care Plans <span className="arrow">→</span>
+                </a>
+              </div>
+              <div className="wph-spec-strip">
+                {WPH_SPECS.map(function(s) {
+                  return (
+                    <div key={s.label} className="wph-spec">
+                      <span className="wph-spec-val">{s.value}</span>
+                      <span className="wph-spec-label">{s.label}</span>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
-            <div className="wph-spec-strip">
-              {WPH_SPECS.map(function(s) {
-                return (
-                  <div key={s.label} className="wph-spec">
-                    <span className="wph-spec-val">{s.value}</span>
-                    <span className="wph-spec-label">{s.label}</span>
-                  </div>
-                );
-              })}
-            </div>
+            <ServiceLeadForm
+              service="WordPress Hosting"
+              title="Ask about hosting"
+              cta="Send request"
+              notePlaceholder="Where is your site hosted now? (optional)"
+            />
           </div>
         </div>
       </div>

@@ -128,27 +128,35 @@ function EcommercePage() {
         <img className="ec-hero-img" src="assets/ecommerce-hero.jpg" alt="" aria-hidden="true" />
         <div className="ec-hero-bg" aria-hidden="true" />
         <div className="ec-hero-content">
-          <div className="shell">
-            <span className="eyebrow ec-eyebrow">Services · E-Commerce</span>
-            <h1 className="ec-hero-hl">
-              Cape Cod E-Commerce <em>Website Design.</em>
-            </h1>
-            <p className="ec-hero-sub">
-              WooCommerce and Shopify storefronts built to sell — with clean design, fast checkout, and all the setup done for you. We build it, you run it.
-            </p>
-            <div className="ec-hero-actions">
-              <a className="btn btn--accent" href="contact.html">
-                Start a store <span className="arrow">→</span>
-              </a>
-              <a className="btn btn--ghost ec-ghost" href="tel:5084132043">
-                508.413.2043
-              </a>
+          <div className="shell svc-hero-grid">
+            <div className="svc-hero-copy">
+              <span className="eyebrow ec-eyebrow">Services · E-Commerce</span>
+              <h1 className="ec-hero-hl">
+                Cape Cod E-Commerce <em>Website Design.</em>
+              </h1>
+              <p className="ec-hero-sub">
+                WooCommerce and Shopify storefronts built to sell — with clean design, fast checkout, and all the setup done for you. We build it, you run it.
+              </p>
+              <div className="ec-hero-actions">
+                <a className="btn btn--accent" href="#lead-form">
+                  Start a store <span className="arrow">→</span>
+                </a>
+                <a className="btn btn--ghost ec-ghost" href="tel:5084132043">
+                  508.413.2043
+                </a>
+              </div>
+              <div className="ec-platform-tags">
+                {['WooCommerce', 'Shopify', 'Stripe', 'PayPal', 'Square', 'Authorize.net', 'USPS / UPS / FedEx', 'Google Shopping'].map(t => (
+                  <span key={t} className="ec-platform-tag">{t}</span>
+                ))}
+              </div>
             </div>
-            <div className="ec-platform-tags">
-              {['WooCommerce', 'Shopify', 'Stripe', 'PayPal', 'Square', 'Authorize.net', 'USPS / UPS / FedEx', 'Google Shopping'].map(t => (
-                <span key={t} className="ec-platform-tag">{t}</span>
-              ))}
-            </div>
+            <ServiceLeadForm
+              service="E-Commerce"
+              title="Get a free store quote"
+              cta="Request quote"
+              notePlaceholder="What do you sell, and roughly how many products? (optional)"
+            />
           </div>
         </div>
       </div>

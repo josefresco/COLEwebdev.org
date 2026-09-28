@@ -104,30 +104,38 @@ function WordPressPage() {
       <div className="wp-hero">
         <div className="wp-hero-bg" aria-hidden="true" />
         <div className="wp-hero-content">
-          <div className="shell">
-            <span className="eyebrow wp-eyebrow">Services · WordPress Website Design</span>
-            <h1 className="wp-hero-hl">
-              Cape Cod WordPress <em>Design + Build.</em>
-            </h1>
-            <p className="wp-hero-sub">
-              The world's most powerful CMS — configured lean, designed custom, and handed off so you can actually run it. No bloated themes, no plugin overload, no "it was working yesterday."
-            </p>
-            <div className="wp-hero-actions">
-              <a className="btn btn--accent" href="contact.html">
-                Start a project <span className="arrow">→</span>
-              </a>
-              <a className="btn btn--ghost wp-ghost" href="tel:5084132043">
-                508.413.2043
-              </a>
+          <div className="shell svc-hero-grid">
+            <div className="svc-hero-copy">
+              <span className="eyebrow wp-eyebrow">Services · WordPress Website Design</span>
+              <h1 className="wp-hero-hl">
+                Cape Cod WordPress <em>Design + Build.</em>
+              </h1>
+              <p className="wp-hero-sub">
+                The world's most powerful CMS — configured lean, designed custom, and handed off so you can actually run it. No bloated themes, no plugin overload, no "it was working yesterday."
+              </p>
+              <div className="wp-hero-actions">
+                <a className="btn btn--accent" href="#lead-form">
+                  Start a project <span className="arrow">→</span>
+                </a>
+                <a className="btn btn--ghost wp-ghost" href="tel:5084132043">
+                  508.413.2043
+                </a>
+              </div>
+              <div className="wp-hero-tags">
+                <span className="wp-hero-tag">WordPress</span>
+                <span className="wp-hero-tag">WooCommerce</span>
+                <span className="wp-hero-tag">Gutenberg</span>
+                <span className="wp-hero-tag">Custom Themes</span>
+                <span className="wp-hero-tag">Plugin-Lite</span>
+                <span className="wp-hero-tag">Client-Managed</span>
+              </div>
             </div>
-            <div className="wp-hero-tags">
-              <span className="wp-hero-tag">WordPress</span>
-              <span className="wp-hero-tag">WooCommerce</span>
-              <span className="wp-hero-tag">Gutenberg</span>
-              <span className="wp-hero-tag">Custom Themes</span>
-              <span className="wp-hero-tag">Plugin-Lite</span>
-              <span className="wp-hero-tag">Client-Managed</span>
-            </div>
+            <ServiceLeadForm
+              service="WordPress Design"
+              title="Get a free WordPress quote"
+              cta="Request quote"
+              notePlaceholder="New site, or rebuilding an existing one? (optional)"
+            />
           </div>
         </div>
       </div>

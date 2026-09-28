@@ -134,12 +134,21 @@ function WebsiteRedesignPage() {
       <div className="wr-hero">
         <div ref={heroRef} className="wr-hero-img" />
         <div className="wr-hero-text">
-          <div className="shell">
-            <span className="eyebrow">Services · Design &amp; Build</span>
-            <h1 className="wr-hero-hl">Cape Cod Website <em>Redesign.</em></h1>
-            <p className="wr-hero-sub">
-              Your business has outgrown your old website. We rebuild it from scratch — faster, smarter, and designed for how Cape Cod customers search today.
-            </p>
+          <div className="shell svc-hero-grid">
+            <div className="svc-hero-copy">
+              <span className="eyebrow">Services · Design &amp; Build</span>
+              <h1 className="wr-hero-hl">Cape Cod Website <em>Redesign.</em></h1>
+              <p className="wr-hero-sub">
+                Your business has outgrown your old website. We rebuild it from scratch — faster, smarter, and designed for how Cape Cod customers search today.
+              </p>
+            </div>
+            <ServiceLeadForm
+              service="Website Redesign"
+              variant="light lift"
+              title="Get a free redesign quote"
+              cta="Request quote"
+              notePlaceholder="What's not working on your current site? (optional)"
+            />
           </div>
         </div>
       </div>

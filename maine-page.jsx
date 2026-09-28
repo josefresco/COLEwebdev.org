@@ -60,29 +60,37 @@ function MainePage() {
         <div className="mn-hero-img" aria-hidden="true" />
         <div className="mn-hero-overlay" aria-hidden="true" />
         <div className="mn-hero-content">
-          <div className="shell">
-            <span className="eyebrow mn-eyebrow">COLEwebdev · Maine Web Design</span>
-            <h1 className="mn-hero-hl">
-              Maine web design,<br />from <em>people who know it.</em>
-            </h1>
-            <p className="mn-hero-sub">
-              Josiah Cole grew up in Farmington. We work regularly in Aroostook County and beyond.
-              When you hire COLEwebdev, you're not working with a distant agency — you're working
-              with a studio with genuine Maine roots and 20 years of experience.
-            </p>
-            <div className="mn-hero-actions">
-              <a className="btn btn--accent" href="quote.html">
-                Get a free estimate <span className="arrow">→</span>
-              </a>
-              <a className="btn btn--ghost mn-ghost" href="tel:5084132043">
-                508.413.2043
-              </a>
+          <div className="shell svc-hero-grid">
+            <div className="svc-hero-copy">
+              <span className="eyebrow mn-eyebrow">COLEwebdev · Maine Web Design</span>
+              <h1 className="mn-hero-hl">
+                Maine web design,<br />from <em>people who know it.</em>
+              </h1>
+              <p className="mn-hero-sub">
+                Josiah Cole grew up in Farmington. We work regularly in Aroostook County and beyond.
+                When you hire COLEwebdev, you're not working with a distant agency — you're working
+                with a studio with genuine Maine roots and 20 years of experience.
+              </p>
+              <div className="mn-hero-actions">
+                <a className="btn btn--accent" href="#lead-form">
+                  Get a free estimate <span className="arrow">→</span>
+                </a>
+                <a className="btn btn--ghost mn-ghost" href="tel:5084132043">
+                  508.413.2043
+                </a>
+              </div>
+              <div className="mn-hero-tags">
+                {['Farmington, ME', 'Aroostook County', 'Web Design', 'WordPress', 'E-Commerce', 'SEO'].map(t => (
+                  <span key={t} className="mn-hero-tag">{t}</span>
+                ))}
+              </div>
             </div>
-            <div className="mn-hero-tags">
-              {['Farmington, ME', 'Aroostook County', 'Web Design', 'WordPress', 'E-Commerce', 'SEO'].map(t => (
-                <span key={t} className="mn-hero-tag">{t}</span>
-              ))}
-            </div>
+            <ServiceLeadForm
+              service="Maine Web Design"
+              title="Get a free quote"
+              cta="Request quote"
+              notePlaceholder="Where in Maine is your business? (optional)"
+            />
           </div>
         </div>
       </div>

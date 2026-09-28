@@ -72,16 +72,24 @@ function LocationPage() {
       <div className="lp-hero">
         <div className="lp-hero-bg" aria-hidden="true" />
         <div className="lp-hero-content">
-          <div className="shell">
-            <span className="eyebrow lp-eyebrow">
-              Cape Cod Web Design · {loc.city}, {loc.state}
-            </span>
-            <h1 className="lp-hero-hl">{loc.heroHeadline}</h1>
-            <p className="lp-hero-sub">{loc.heroSub}</p>
-            <div className="lp-hero-actions">
-              <a className="btn btn--accent" href="quote.html">Get a Free Quote <span className="arrow">→</span></a>
-              <a className="btn btn--ghost lp-ghost" href="tel:5084132043">508.413.2043</a>
+          <div className="shell svc-hero-grid">
+            <div className="svc-hero-copy">
+              <span className="eyebrow lp-eyebrow">
+                Cape Cod Web Design · {loc.city}, {loc.state}
+              </span>
+              <h1 className="lp-hero-hl">{loc.heroHeadline}</h1>
+              <p className="lp-hero-sub">{loc.heroSub}</p>
+              <div className="lp-hero-actions">
+                <a className="btn btn--accent" href="#lead-form">Get a Free Quote <span className="arrow">→</span></a>
+                <a className="btn btn--ghost lp-ghost" href="tel:5084132043">508.413.2043</a>
+              </div>
             </div>
+            <ServiceLeadForm
+              service={loc.city + ' Web Design'}
+              title="Get a free quote"
+              cta="Request quote"
+              notePlaceholder="What does your business do? (optional)"
+            />
           </div>
         </div>
       </div>

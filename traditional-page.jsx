@@ -97,30 +97,38 @@ function TraditionalPage() {
         <img className="tr-hero-img" src="assets/traditional-hero.jpg" alt="" aria-hidden="true" />
         <div className="tr-hero-bg" aria-hidden="true" />
         <div className="tr-hero-content">
-          <div className="shell">
-            <span className="eyebrow tr-eyebrow">Services · Traditional Website Design</span>
-            <h1 className="tr-hero-hl">
-              Cape Cod Hand-Coded <em>Website Design.</em>
-            </h1>
-            <p className="tr-hero-sub">
-              Pure HTML, CSS, and JavaScript — crafted line by line for businesses that want maximum speed, security, and design precision without the overhead of a content management system.
-            </p>
-            <div className="tr-hero-actions">
-              <a className="btn btn--accent" href="contact.html">
-                Start a project <span className="arrow">→</span>
-              </a>
-              <a className="btn btn--ghost tr-ghost" href="tel:5084132043">
-                508.413.2043
-              </a>
+          <div className="shell svc-hero-grid">
+            <div className="svc-hero-copy">
+              <span className="eyebrow tr-eyebrow">Services · Traditional Website Design</span>
+              <h1 className="tr-hero-hl">
+                Cape Cod Hand-Coded <em>Website Design.</em>
+              </h1>
+              <p className="tr-hero-sub">
+                Pure HTML, CSS, and JavaScript — crafted line by line for businesses that want maximum speed, security, and design precision without the overhead of a content management system.
+              </p>
+              <div className="tr-hero-actions">
+                <a className="btn btn--accent" href="#lead-form">
+                  Start a project <span className="arrow">→</span>
+                </a>
+                <a className="btn btn--ghost tr-ghost" href="tel:5084132043">
+                  508.413.2043
+                </a>
+              </div>
+              <div className="tr-hero-tags">
+                <span className="tr-hero-tag">HTML</span>
+                <span className="tr-hero-tag">CSS</span>
+                <span className="tr-hero-tag">JavaScript</span>
+                <span className="tr-hero-tag">No CMS</span>
+                <span className="tr-hero-tag">No Plugins</span>
+                <span className="tr-hero-tag">Static</span>
+              </div>
             </div>
-            <div className="tr-hero-tags">
-              <span className="tr-hero-tag">HTML</span>
-              <span className="tr-hero-tag">CSS</span>
-              <span className="tr-hero-tag">JavaScript</span>
-              <span className="tr-hero-tag">No CMS</span>
-              <span className="tr-hero-tag">No Plugins</span>
-              <span className="tr-hero-tag">Static</span>
-            </div>
+            <ServiceLeadForm
+              service="Traditional Web Design"
+              title="Get a free quote"
+              cta="Request quote"
+              notePlaceholder="Roughly how many pages do you need? (optional)"
+            />
           </div>
         </div>
       </div>

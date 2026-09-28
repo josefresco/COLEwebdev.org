@@ -81,12 +81,21 @@ function WebDesignPage() {
       <div className="wd-hero">
         <div ref={heroRef} className="wd-hero-img" />
         <div className="wd-hero-text">
-          <div className="shell">
-            <span className="eyebrow">Services</span>
-            <h1 className="wd-hero-hl">Cape Cod Website Design <em>+ Build.</em></h1>
-            <p className="wd-hero-sub">
-              100% custom design solutions — no templates, no shortcuts. Built to look great, navigate easily, and get visitors to take action.
-            </p>
+          <div className="shell svc-hero-grid">
+            <div className="svc-hero-copy">
+              <span className="eyebrow">Services</span>
+              <h1 className="wd-hero-hl">Cape Cod Website Design <em>+ Build.</em></h1>
+              <p className="wd-hero-sub">
+                100% custom design solutions — no templates, no shortcuts. Built to look great, navigate easily, and get visitors to take action.
+              </p>
+            </div>
+            <ServiceLeadForm
+              service="Web Design"
+              variant="light lift"
+              title="Get a free website quote"
+              cta="Request quote"
+              notePlaceholder="What does your business do? (optional)"
+            />
           </div>
         </div>
       </div>
