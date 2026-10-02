@@ -258,6 +258,12 @@ p, li {
   margin: 0 auto;
   box-shadow: var(--shadow-sm);
 }
+/* Full-bleed heroes (bg layer or photo strip) otherwise sit flush against
+   the floating nav; give them a gap and clip the photo's scale() overflow. */
+.site-header + :has(> [class*="hero-bg"], > [class*="hero-img"]) {
+  margin-top: 16px;
+  overflow: clip;
+}
 .nav-logo {
   display: flex;
   align-items: center;
