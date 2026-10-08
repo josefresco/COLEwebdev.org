@@ -311,5 +311,5 @@ function WPHostingPage() {
   );
 }
 
-const wphRoot = ReactDOM.createRoot(document.getElementById('root'));
+const wphRoot = createAppRoot(document.getElementById('root'));
 wphRoot.render(<WPHostingPage />);

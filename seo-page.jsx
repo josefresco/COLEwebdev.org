@@ -391,5 +391,5 @@ function SeoPage() {
   );
 }
 
-const seoRoot = ReactDOM.createRoot(document.getElementById('root'));
+const seoRoot = createAppRoot(document.getElementById('root'));
 seoRoot.render(<SeoPage />);

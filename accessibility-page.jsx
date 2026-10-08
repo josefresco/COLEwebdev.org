@@ -135,5 +135,5 @@ function AccessibilityPage() {
   );
 }
 
-const acRoot = ReactDOM.createRoot(document.getElementById('root'));
+const acRoot = createAppRoot(document.getElementById('root'));
 acRoot.render(<AccessibilityPage />);

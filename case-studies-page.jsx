@@ -172,5 +172,5 @@ function CaseStudiesPage() {
   );
 }
 
-const csRoot = ReactDOM.createRoot(document.getElementById('root'));
+const csRoot = createAppRoot(document.getElementById('root'));
 csRoot.render(<CaseStudiesPage />);

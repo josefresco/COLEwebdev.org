@@ -343,4 +343,4 @@ function SocialMediaPage() {
   );
 }
 
-ReactDOM.createRoot(document.getElementById('root')).render(<SocialMediaPage />);
+createAppRoot(document.getElementById('root')).render(<SocialMediaPage />);

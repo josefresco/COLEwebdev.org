@@ -236,5 +236,5 @@ function SocialNewsPage() {
   );
 }
 
-const snRoot = ReactDOM.createRoot(document.getElementById('root'));
+const snRoot = createAppRoot(document.getElementById('root'));
 snRoot.render(<SocialNewsPage />);

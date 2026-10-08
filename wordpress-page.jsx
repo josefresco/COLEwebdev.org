@@ -363,5 +363,5 @@ function WordPressPage() {
   );
 }
 
-const wpRoot = ReactDOM.createRoot(document.getElementById('root'));
+const wpRoot = createAppRoot(document.getElementById('root'));
 wpRoot.render(<WordPressPage />);

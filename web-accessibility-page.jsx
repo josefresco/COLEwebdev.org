@@ -263,5 +263,5 @@ function WCAPage() {
   );
 }
 
-const wcaRoot = ReactDOM.createRoot(document.getElementById('root'));
+const wcaRoot = createAppRoot(document.getElementById('root'));
 wcaRoot.render(<WCAPage />);

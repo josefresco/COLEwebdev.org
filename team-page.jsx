@@ -120,5 +120,5 @@ function TeamPage() {
   );
 }
 
-const teamRoot = ReactDOM.createRoot(document.getElementById('root'));
+const teamRoot = createAppRoot(document.getElementById('root'));
 teamRoot.render(<TeamPage />);

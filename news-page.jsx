@@ -251,5 +251,5 @@ function NewsPage() {
   );
 }
 
-const nsRoot = ReactDOM.createRoot(document.getElementById('root'));
+const nsRoot = createAppRoot(document.getElementById('root'));
 nsRoot.render(<NewsPage />);

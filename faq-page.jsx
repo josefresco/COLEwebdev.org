@@ -301,5 +301,5 @@ function FAQPage() {
   );
 }
 
-const fqRoot = ReactDOM.createRoot(document.getElementById('root'));
+const fqRoot = createAppRoot(document.getElementById('root'));
 fqRoot.render(<FAQPage />);

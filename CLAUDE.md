@@ -8,23 +8,42 @@ Project guidance for Claude Code. Keep this file current whenever the architectu
 
 ## Stack Overview
 
-**No build tooling.** This is a client-side React 18 SPA using CDN-loaded React, ReactDOM, and Babel Standalone (in-browser JSX transpilation). There is no `package.json`, no npm scripts, no bundler, no `.gitignore` needed.
+**One small build step, no bundler.** This is a React 18 site using CDN-loaded React and ReactDOM. JSX source files (`*.jsx`) are compiled ahead of time by esbuild into `js/*.js`, and every page is pre-rendered to static HTML so crawlers, AI bots, and link previews see real content. In the browser, React hydrates that markup instead of rebuilding it. There is no Babel Standalone and no in-browser transpilation.
 
-To develop locally, serve the directory over HTTP:
+Tooling lives in `build/` (its own `package.json`; `build/node_modules/` is gitignored):
+```
+cd build
+npm install        # first time only
+npm run build      # compile JSX → js/, rewrite script tags, pre-render all pages
+npm run verify     # load every page with React's dev build and report hydration mismatches
+```
+
+**Run `npm run build` after every `.jsx` or `.html` change and commit the results** (`js/*.js` and the updated `*.html`) together with your source edits. GitHub Pages serves the committed files as-is, so an unbuilt change does not ship. The build is idempotent: a re-run with no source changes modifies nothing.
+
+To preview locally, serve the repo root over HTTP after building:
 ```
 python -m http.server 8080
-# or: npx serve .
 # then open http://localhost:8080
 ```
 
-There are no lint, test, or build commands. What you edit is what ships.
+### How the build works (`build/build.mjs`)
+1. **Compile** every root-level `*.jsx` to a minified `js/<name>.js`. Output stays a plain (non-module) script, so top-level names are shared globals across files, as before.
+2. **Rewrite** each `*.html`: removes any Babel `<script>`, turns `<script type="text/babel" src="x.jsx">` into `<script defer src="js/x.js?v=<content-hash>">`, and makes sure `js/mount.js` loads first. The `?v=` hash is automatic cache-busting; never edit it by hand.
+3. **Pre-render** each page in headless Chromium: the page's mount call hands its root element to `ReactDOMServer.renderToString`, and the markup is written into `<div id="root">…</div><!--/root-->`. Never hand-edit anything between those two markers; it is overwritten on every build. Everything outside them (meta tags, JSON-LD, inline styles) is yours to edit.
+
+Redirect stubs (pages with `<meta http-equiv="refresh">`) are skipped and keep an empty root.
+
+### Rules the build depends on
+- **Unique top-level names across all scripts a page loads.** Files share one global scope, so two files declaring `const useState` (or any same top-level `const`/`let`) is a `SyntaxError` and the build fails with "Identifier '…' has already been declared". Reuse the existing global or rename. (`parts-hero.jsx` already declares `useState`, `useEffect`, `useRef` for every page.)
+- **Mount with `createAppRoot`, not `ReactDOM.createRoot`** (see `mount.jsx`).
+- **The first render must be deterministic.** It runs at build time and again in the visitor's browser, and the two must match. Read `localStorage`, `window.innerWidth`, `matchMedia`, the current time, `Math.random()`, or fetched data inside `useEffect`, never during render. `npm run verify` catches violations; production React silently keeps mismatched attributes, so don't skip it after nontrivial component changes.
 
 ---
 
 ## Project Scale
 
 - **~105 HTML pages** — homepage, 10+ service pages, 26 whitepaper guides, 16 town landing pages, 19 industry pages, utility pages
-- **~54 JSX files** — one per page plus shared parts
+- **~60 JSX files** — one per page plus shared parts (compiled to `js/*.js`)
 - **~70 assets** in `assets/` — local brand images (logos, team photos, hero images)
 - **1 global stylesheet** — `styles.css` (~55KB); page-specific styles live in inline `<style>` blocks inside each HTML file
 - **External images** — portfolio/blog photos are hosted on `colewebdev.com` (WordPress), referenced by full URL
@@ -36,20 +55,24 @@ There are no lint, test, or build commands. What you edit is what ships.
 ### Homepage (`index.html`)
 Scripts load in this exact order — later files depend on earlier ones:
 
-1. `tweaks-panel.jsx` — `useTweaks` hook + `TweaksPanel` dev UI
-2. `parts-hero.jsx` — `Header`, `Hero`, `Trust`
-3. `parts-services.jsx` — `Services`
-4. `parts-rest.jsx` — `Estimator`, `AIShowcase`, `Process`, `Portfolio`, `CTA`, `Testimonial`, `News`, `NewsletterBanner`, `Footer`
-5. `app.jsx` — root `App` component, mounts to `<div id="root">`
+1. `mount.jsx` — `createAppRoot` (hydrate pre-rendered markup)
+2. `tweaks-panel.jsx` — `useTweaks` hook + `TweaksPanel` dev UI
+3. `parts-hero.jsx` — `Header`, `Hero`, `Trust`
+4. `parts-services.jsx` — `Services`
+5. `parts-rest.jsx` — `Estimator`, `AIShowcase`, `Process`, `Portfolio`, `CTA`, `Testimonial`, `News`, `NewsletterBanner`, `Footer`
+6. `app.jsx` — root `App` component, mounts to `<div id="root">`
 
 ### All other pages
 Each page loads:
-1. `tweaks-panel.jsx`
-2. `parts-hero.jsx` (provides `Header`)
-3. `parts-services.jsx`
-4. `parts-rest.jsx` (provides `NewsletterBanner`, `Footer`)
-5. Any data file the page needs (e.g. `whitepapers-data.jsx`, `locations-data.jsx`)
-6. The page-specific JSX file (e.g. `wordpress-page.jsx`)
+1. `mount.jsx`
+2. `tweaks-panel.jsx`
+3. `parts-hero.jsx` (provides `Header`)
+4. `parts-services.jsx`
+5. `parts-rest.jsx` (provides `NewsletterBanner`, `Footer`)
+6. Any data file the page needs (e.g. `whitepapers-data.jsx`, `locations-data.jsx`)
+7. The page-specific JSX file (e.g. `wordpress-page.jsx`)
+
+In the built HTML these appear as `<script defer src="js/<name>.js?v=<hash>">` tags; the list above names the source files.
 
 ---
 
@@ -69,15 +92,16 @@ Every page follows the same structure:
 - `<script type="application/ld+json">` — Schema.org structured data
 - OG tags (`og:title`, `og:description`, `og:image`, `og:url`, `og:type`)
 - Inline `<style>` block for page-specific CSS
-- React CDN scripts + Babel
-- Shared JSX `<script>` tags
-- Page-specific JSX `<script>` tag
+- `<div id="root">…</div><!--/root-->` holding the pre-rendered markup (generated)
+- React CDN scripts
+- Shared `<script defer src="js/…">` tags (generated from the `.jsx` sources)
+- Page-specific script tag
 - Optional `window.CURRENT_*` variable (for shared renderers)
 
 **`page-name-page.jsx`** — the React component:
 - Imports nothing (no ES modules) — everything is global via CDN/script order
 - Renders `<Header />`, page content, `<NewsletterBanner />`, `<Footer />`
-- Calls `ReactDOM.createRoot(document.getElementById('root')).render(...)`
+- Calls `createAppRoot(document.getElementById('root')).render(...)`
 
 ### Data-driven shared renderers
 Two page types use a single renderer with per-page data injected via a global variable:
@@ -175,7 +199,7 @@ These were audited and removed in June 2026. Do not reintroduce:
 - No `node_modules`, no package manager
 - All data is hardcoded in arrays; no API calls except the news page's WP REST fetch
 - Commit messages follow Conventional Commits: `feat(scope): description`
-- **JSX cache-busting** — GitHub Pages CDN caches `.jsx` files. When you update a page-specific JSX file, bump the `?v=N` version string on its `<script src>` tag in the corresponding HTML file (e.g. `src="services-page.jsx?v=3"`). Versions are tracked independently per page/file — check the current value in that HTML file before bumping rather than assuming a site-wide number.
+- **JSX cache-busting** is automatic: the build stamps each `js/*.js` script tag with a content hash (`?v=<hash>`). Don't bump versions by hand.
 
 ---
 
@@ -187,13 +211,14 @@ These were audited and removed in June 2026. Do not reintroduce:
 **DNS:** A `CNAME` file in the repo root maps the custom domain. Do not delete or modify it.
 
 ### How deployment works
-Push to `main` → GitHub Pages automatically serves the updated files. There is no build step, no CI pipeline, no cache invalidation to trigger. Static files are served directly from the repo root. Propagation is typically under 60 seconds.
+Run `npm run build` in `build/`, commit the source and generated files, then push to `main` → GitHub Pages automatically serves the committed files. The build runs locally, not on GitHub: there is no CI pipeline and no cache invalidation to trigger. Static files are served directly from the repo root. Propagation is typically under 60 seconds.
 
 ### Git workflow
 ```
 git pull origin main          # always pull before starting work
 # ... make changes ...
-git add <specific files>
+(cd build && npm run build && npm run verify)
+git add <specific files> js/
 git commit -m "feat(scope): description"
 git push origin main          # this is the deploy
 ```
@@ -371,12 +396,12 @@ Other pages link to `styles.css` without a version string and are served fresh o
 **Step 1 — Create `new-service-page.jsx`:**
 - Follow the pattern of any existing page (e.g. `wordpress-page.jsx`)
 - Render `<Header />`, page sections, `<NewsletterBanner />`, `<Footer />`
-- End with `ReactDOM.createRoot(document.getElementById('root')).render(<NewServicePage />);`
+- End with `createAppRoot(document.getElementById('root')).render(<NewServicePage />);`
 
 **Step 2 — Create `new-service.html`:**
 - Copy an existing service page HTML shell
 - Update all meta, schema, OG tags
-- `<script type="text/babel" src="new-service-page.jsx"></script>` as the last script
+- `<script type="text/babel" src="new-service-page.jsx"></script>` as the last script (the build rewrites it to `js/new-service-page.js?v=…`); a copied shell's existing script tags and pre-rendered markup are fine to leave, the build replaces them
 
 **Step 3 — Add to `sitemap.xml`** with an appropriate `priority` (0.75–0.9 for services).
 

@@ -67,5 +67,5 @@ function ResourcesPage() {
   );
 }
 
-const resRoot = ReactDOM.createRoot(document.getElementById('root'));
+const resRoot = createAppRoot(document.getElementById('root'));
 resRoot.render(<ResourcesPage />);

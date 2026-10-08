@@ -281,4 +281,4 @@ function GBPPage() {
   );
 }
 
-ReactDOM.createRoot(document.getElementById('root')).render(<GBPPage />);
+createAppRoot(document.getElementById('root')).render(<GBPPage />);

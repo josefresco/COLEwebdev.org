@@ -1,0 +1,1 @@
+function createAppRoot(e){return{render(t){if(typeof window.__PRERENDER__=="function"){window.__PRERENDER__(t);return}e.hasChildNodes()?ReactDOM.hydrateRoot(e,t):ReactDOM.createRoot(e).render(t)}}}Object.assign(window,{createAppRoot});

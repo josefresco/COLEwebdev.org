@@ -162,5 +162,5 @@ function PrivacyPage() {
   );
 }
 
-const ppRoot = ReactDOM.createRoot(document.getElementById('root'));
+const ppRoot = createAppRoot(document.getElementById('root'));
 ppRoot.render(<PrivacyPage />);

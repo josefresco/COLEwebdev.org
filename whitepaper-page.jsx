@@ -354,5 +354,5 @@ function WhitepaperPage() {
   );
 }
 
-const wpaRoot = ReactDOM.createRoot(document.getElementById('root'));
+const wpaRoot = createAppRoot(document.getElementById('root'));
 wpaRoot.render(<WhitepaperPage />);

@@ -529,5 +529,5 @@ function AiAppsPage() {
   );
 }
 
-const aiRoot = ReactDOM.createRoot(document.getElementById('root'));
+const aiRoot = createAppRoot(document.getElementById('root'));
 aiRoot.render(<AiAppsPage />);

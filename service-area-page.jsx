@@ -198,5 +198,5 @@ function ServiceAreaPage() {
   );
 }
 
-const saRoot = ReactDOM.createRoot(document.getElementById('root'));
+const saRoot = createAppRoot(document.getElementById('root'));
 saRoot.render(<ServiceAreaPage />);

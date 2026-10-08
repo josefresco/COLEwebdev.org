@@ -202,4 +202,4 @@ function WPMaintenancePage() {
   );
 }
 
-ReactDOM.createRoot(document.getElementById('root')).render(<WPMaintenancePage />);
+createAppRoot(document.getElementById('root')).render(<WPMaintenancePage />);

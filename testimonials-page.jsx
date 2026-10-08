@@ -1,6 +1,6 @@
 /* global React, ReactDOM */
 
-const TESTIMONIALS = [
+const ALL_TESTIMONIALS = [
   {
     name: 'Marianne',
     business: 'Eastham Turnip Festival & Eastham Public Library',
@@ -200,7 +200,7 @@ function TestimonialsPage() {
       <section className="tm-grid-section">
         <div className="shell">
           <div className="tm-grid">
-            {TESTIMONIALS.map(function(t, i) {
+            {ALL_TESTIMONIALS.map(function(t, i) {
               return <TestimonialCard key={i} t={t} />;
             })}
           </div>
@@ -278,5 +278,5 @@ function TestimonialsPage() {
   );
 }
 
-const tmRoot = ReactDOM.createRoot(document.getElementById('root'));
+const tmRoot = createAppRoot(document.getElementById('root'));
 tmRoot.render(<TestimonialsPage />);

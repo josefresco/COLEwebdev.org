@@ -82,5 +82,5 @@ function NotFoundPage() {
   );
 }
 
-const nfRoot = ReactDOM.createRoot(document.getElementById('root'));
+const nfRoot = createAppRoot(document.getElementById('root'));
 nfRoot.render(<NotFoundPage />);

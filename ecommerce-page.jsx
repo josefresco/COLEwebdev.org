@@ -296,5 +296,5 @@ function EcommercePage() {
   );
 }
 
-const ecRoot = ReactDOM.createRoot(document.getElementById('root'));
+const ecRoot = createAppRoot(document.getElementById('root'));
 ecRoot.render(<EcommercePage />);

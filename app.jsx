@@ -1,5 +1,4 @@
 /* global React, ReactDOM, useTweaks, TweaksPanel, TweakSection, TweakRadio */
-const { useState, useEffect } = React;
 
 const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
   "density": "comfortable",
@@ -58,4 +57,4 @@ function App() {
   );
 }
 
-ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+createAppRoot(document.getElementById('root')).render(<App />);

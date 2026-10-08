@@ -271,5 +271,5 @@ function AieoPage() {
   );
 }
 
-const aieoRoot = ReactDOM.createRoot(document.getElementById('root'));
+const aieoRoot = createAppRoot(document.getElementById('root'));
 aieoRoot.render(<AieoPage />);
