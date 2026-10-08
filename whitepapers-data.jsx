@@ -1068,4 +1068,60 @@ window.WHITEPAPERS_DATA = [
     ],
     takeaway: 'WordPress maintenance isn\'t optional once your site handles real business data, customer inquiries, or booking. The cost of proper maintenance is a fraction of the cost of a successful hack or a data loss event. The right question isn\'t "can I afford maintenance?", it\'s "can I afford not to have it?"',
   },
+  {
+    id: 'seasonal-business',
+    author: 'desiree',
+    num: '27',
+    title: 'Web Design for Seasonal Cape Cod Businesses',
+    subtitle: 'Planning a Website Around a Twelve-Week Summer',
+    summary: 'A Cape Cod business can earn most of its year between Memorial Day and Labor Day. Your website has to be ready before the season starts, work on a visitor\'s phone in July, and keep earning after the crowds leave.',
+    sections: [
+      {
+        heading: 'Your Website Runs on the Cape Cod Calendar',
+        body: [
+          'Most web design advice assumes steady, year-round demand. Cape Cod doesn\'t work that way. A Wellfleet restaurant, a Chatham inn, a Provincetown gallery, or an Orleans charter boat can see more customers in July and August than in the rest of the year combined, and the website has to be built for that shape.',
+          'Online demand doesn\'t peak when the season does. Visitors book rentals, inns, and charters in winter and spring, months before they arrive. Summer searches look different: "open now," "near me," "takeout," "rain day," mostly from phones in a parking lot or on the beach. Then, after Labor Day, your audience narrows to year-round residents and shoulder-season visitors. One website has to serve all three moments.',
+        ],
+      },
+      {
+        heading: 'Build in the Off-Season, Launch Before Memorial Day',
+        body: [
+          'The worst time to start a website project is June. You are short-staffed, the phone is ringing, and nobody has time to write copy or review a design. The best time is the quiet stretch between Columbus Day and the end of winter, when owners can actually think about their business.',
+          'A standard small business site takes about 4 to 8 weeks from kickoff to launch, and the biggest variable is content: photos, menus, rates, and copy. Working backward from a mid-May launch, that means starting by early March at the latest, and earlier if you need online booking, e-commerce, or new photography. Photos are a special case: the best ones are shot in summer, so plan this year\'s shoot for next year\'s site.',
+          'Launching in April or early May also gives Google a few weeks to crawl and index the new site before peak search volume arrives, so you aren\'t debuting a brand-new site in the middle of your busiest week.',
+        ],
+      },
+      {
+        heading: 'Design for the Summer Visitor on a Phone',
+        body: [
+          'In peak season, your typical visitor is on a phone with a spotty signal, and they want one of four things: are you open, where are you, can I book, and what does it cost. A seasonal business site should answer all four within one scroll of the homepage.',
+          'In practice that means today\'s hours near the top, a tap-to-call phone number, a tap-to-navigate address, and a booking, reservation, or order button that works on a small screen. Menus and rate sheets belong on real web pages, not PDFs that are slow to open and invisible to Google. Pages need to load fast on a weak connection, which means compressed images and no heavy sliders or autoplay video.',
+        ],
+      },
+      {
+        heading: 'Make Seasonal Changes Without Calling a Developer',
+        body: [
+          'Seasonal businesses change more often than most: opening dates, shoulder-season hours, summer menus, holiday closures, weather cancellations. If every change requires an email to your web designer, the site will fall behind, and an outdated "We\'re open!" banner in November costs you trust.',
+          'Build the site so you can make those edits yourself: an announcement bar you can switch on and off, hours entered in one place and shown everywhere, and menus or rates you can edit like a document. Keep your Google Business Profile in step with the site. Set special hours for holidays and seasonal closures there too, because many visitors will see your hours on Google Maps before they ever reach your website, and conflicting hours lose customers.',
+        ],
+      },
+      {
+        heading: 'The Off-Season Is When You Build Next Summer',
+        body: [
+          'A closed business still has a website that works for it. In the off-season, the site\'s job shifts from "come in today" to "plan your visit": opening dates for next year, early-booking offers, gift cards, and an email signup so last summer\'s customers hear from you first.',
+          'This is also the time for the work that pays off slowly: publishing a few genuinely useful pages (a guide to your town, a seasonal FAQ, what to expect on a first visit), collecting and answering reviews, and reviewing which pages actually drove calls and bookings last summer. Businesses that stay open year-round should give year-round residents a reason to choose them in February, not just a summer menu that never comes down.',
+        ],
+      },
+      {
+        heading: 'A Seasonal Website Checklist',
+        body: [
+          'Winter (January to March): plan any redesign or new features, write and update content, update rates and opening dates, and schedule next summer\'s photography. Confirm your domain, hosting, and SSL renewals so nothing lapses during the busy months.',
+          'Spring (April to May): publish summer hours on the site and on Google Business Profile, test booking and contact forms on a phone, check page speed, and turn on any pre-season announcement. Run WordPress, plugin, and theme updates now, not in July.',
+          'Summer (June to August): keep hours, menus, and availability current, respond to reviews, and avoid major site changes. Hold redesign ideas for the fall.',
+          'Fall (September to December): post shoulder-season and closing dates, switch the homepage to off-season messaging, collect emails for next year, and review last season\'s analytics to decide what to fix before spring.',
+        ],
+      },
+    ],
+    takeaway: 'Plan your website on the Cape Cod calendar: build it in the quiet months, launch before Memorial Day, design it for a visitor on a phone in July, and make it easy for you to update hours and announcements as the season turns.',
+  },
 ];

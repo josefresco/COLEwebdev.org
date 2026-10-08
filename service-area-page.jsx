@@ -71,6 +71,9 @@ function ServiceAreaPage() {
               </a>
             ))}
           </div>
+          <p className="sa-villages">
+            Village pages: <a href="osterville-centerville-web-design.html">Osterville &amp; Centerville (Barnstable) →</a>
+          </p>
         </div>
       </section>
 

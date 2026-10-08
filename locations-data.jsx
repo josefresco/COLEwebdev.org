@@ -241,6 +241,7 @@ window.LOCATIONS_DATA = [
     clients: [
       { name: 'SVdP Cape Cod', type: 'Nonprofit', href: 'https://www.svdpcapecod.com/' },
       { name: 'Cape Cod Aquatics', type: 'Retail / Wellness', href: 'https://capecodaquatics.com/' },
+      { name: 'Fitness 500', type: 'Fitness Club', href: 'https://www.fitness500club.com/' },
     ],
     faq: [
       {
@@ -260,6 +261,7 @@ window.LOCATIONS_DATA = [
       { name: 'Yarmouth', href: 'yarmouth-web-design.html' },
       { name: 'Dennis', href: 'dennis-web-design.html' },
       { name: 'Chatham', href: 'chatham-web-design.html' },
+      { name: 'Osterville & Centerville', href: 'osterville-centerville-web-design.html' },
     ],
     metaTitle: 'Hyannis Web Design — COLEwebdev · Cape Cod',
     metaDesc: 'Web design for Hyannis, MA businesses. COLEwebdev builds fast, mobile-first websites for the Cape\'s commercial hub — retail, medical, hospitality, and more.',
@@ -637,5 +639,44 @@ window.LOCATIONS_DATA = [
     metaTitle: 'Truro Web Design — COLEwebdev · Cape Cod',
     metaDesc: 'Web design for Truro, MA businesses and organizations. COLEwebdev builds websites for the Outer Cape\'s most distinctive community — vineyards, arts, nonprofits, and more.',
     schemaLocality: 'Truro',
+  },
+  {
+    id: 'osterville',
+    city: 'Osterville & Centerville',
+    state: 'MA',
+    slug: 'osterville-centerville-web-design',
+    heroHeadline: 'Osterville & Centerville Web Design',
+    heroSub: 'Websites for the villages of Barnstable\'s south side, from Osterville\'s Main Street to Centerville and Cotuit.',
+    intro: 'Osterville and Centerville are two of the seven villages of the Town of Barnstable, and they have their own identities, their own associations, and their own customers, distinct from busy Hyannis next door. We have built websites for the Osterville Village Association, the Osterville Anglers Club, the Centerville Civic Association, and Carl F. Riedell & Son, the master plumbers based in Osterville, so we know how these communities present themselves online.',
+    localContext: 'Business here leans on long relationships: second-home owners who return every summer, year-round families, boatyards, contractors, and property services that look after homes while their owners are away. Websites for this market need to look established and trustworthy, answer the question "do you serve my village?" clearly, and make it easy for a homeowner in another state to request service or book ahead of the season. Village associations and civic groups need something different: event calendars, member news, and a simple way for volunteers to keep everything current.',
+    industries: ['Contractors', 'Marine', 'Real Estate', 'Nonprofits', 'Retail', 'Restaurants'],
+    clients: [
+      { name: 'Osterville Village Association', type: 'Village Association', href: 'https://ostervillevillage.com/' },
+      { name: 'Centerville Civic Association', type: 'Civic Association', href: 'https://centervillecivic.org/' },
+      { name: 'Osterville Anglers Club', type: 'Recreational Fishing Club', href: 'https://www.ostervilleanglersclub.com/' },
+      { name: 'Carl F. Riedell & Son', type: 'Master Plumbers, Osterville', href: 'https://carlriedell.com/' },
+    ],
+    faq: [
+      {
+        q: 'Should an Osterville or Centerville business target "Barnstable" or the village name?',
+        a: 'Both. Many locals and second-home owners search by village ("Osterville plumber," "Centerville restaurants"), while visitors and directories often use Barnstable or Hyannis. We structure your site and Google Business Profile so you appear for the village name you are actually in and for the town, without stuffing pages with place names.',
+      },
+      {
+        q: 'Many of our customers are second-home owners who live out of state. How should the website handle that?',
+        a: 'Make it easy to do business from a distance. That means online service requests and scheduling, clear information about seasonal openings and closings, a way to pay bills online, and an email list for pre-season reminders. Carl F. Riedell & Son\'s site, for example, includes a seasonal maintenance request form and online bill pay for exactly this reason.',
+      },
+      {
+        q: 'Do you work with village associations and civic groups?',
+        a: 'Yes. We built the websites for the Osterville Village Association and the Centerville Civic Association. These sites are run by volunteers, so we build them on WordPress with simple editing for events, news, and member information, and we train the people who will maintain them.',
+      },
+    ],
+    nearbyTowns: [
+      { name: 'Hyannis', href: 'hyannis-web-design.html' },
+      { name: 'Mashpee', href: 'mashpee-web-design.html' },
+      { name: 'Sandwich', href: 'sandwich-web-design.html' },
+    ],
+    metaTitle: 'Osterville & Centerville Web Design · COLEwebdev',
+    metaDesc: 'Web design for Osterville, Centerville, and Cotuit businesses and organizations. Trusted by the Osterville Village Association and Centerville Civic Association.',
+    schemaLocality: 'Osterville',
   },
 ];

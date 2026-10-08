@@ -54,7 +54,7 @@ Google rating: 4.8★ (72+ reviews)
 
 ## Resources
 
-- [Whitepapers](https://colewebdev.org/whitepapers.html): 26 in-depth guides on web design strategy.
+- [Whitepapers](https://colewebdev.org/whitepapers.html): 27 in-depth guides on web design strategy.
   - What Web Design Actually Does, Is a Website Worth the Investment?, DIY vs. Professional Web Design, Three Types of Small Business Websites, Seven Golden Rules of Web Design, Five Principles of Effective Web Design, The Seven Cs of Web Design, Web Design FAQ Guide, Google Ads Waste Guide, How to Choose a Web Designer, What Makes a Good Website?, How Much Does a Website Cost?, Why Is Web Design So Expensive?, How Long Does a Website Take to Build?, When Should I Redesign My Website?, Do I Need a Website If I Have Social Media?, WordPress vs. Squarespace, Web Design vs. Web Development, Why Isn't My Website on Google?, How Long Does SEO Take to Work?, How Do I Know If My Website Is Working?, Shopify vs. WooCommerce, What Are Core Web Vitals?, Website Accessibility & ADA Compliance, How to Improve Your Google Maps Ranking, What Is WordPress Maintenance?
 - [News & Blog](https://colewebdev.org/news.html): Recent website launches, industry news, and resources.
 - [Newsletter Archive](https://colewebdev.org/newsletter.html): Every issue of the COLEwebdev quarterly newsletter since 2020.

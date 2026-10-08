@@ -369,6 +369,12 @@
     <changefreq>yearly</changefreq>
     <priority>0.65</priority>
   </url>
+  <url>
+    <loc>https://colewebdev.org/wp-seasonal-business.html</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.65</priority>
+  </url>
 
   <url>
     <loc>https://colewebdev.org/seo.html</loc>
@@ -537,6 +543,24 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://colewebdev.org/cape-cod-arts-web-design.html</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://colewebdev.org/cape-cod-fitness-web-design.html</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://colewebdev.org/cape-cod-education-web-design.html</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
   <url>
     <loc>https://colewebdev.org/industries.html</loc>
@@ -632,6 +656,12 @@
   <url>
     <loc>https://colewebdev.org/hyannis-web-design.html</loc>
     <lastmod>2026-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://colewebdev.org/osterville-centerville-web-design.html</loc>
+    <lastmod>2026-10-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
