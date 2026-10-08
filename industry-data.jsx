@@ -661,7 +661,9 @@ window.INDUSTRY_DATA = [
       { icon: '◻', title: 'Reviews & Reputation', body: 'Google review integration and testimonials that show prospective clients the experience of real pet owners before they book.' },
       { icon: '◈', title: 'Emergency Contact & After-Hours Info', body: 'Prominently displayed emergency contact information and after-hours protocol. The most important feature for a client whose pet needs care outside business hours.' },
     ],
-    clients: [],
+    clients: [
+      { name: 'Animal Hospital of Orleans', type: 'Veterinary', href: 'https://www.colewebdev.com/colewebdev-launches-new-website-for-animal-hospital-of-orleans/' },
+    ],
     faq: [
       { q: 'Can clients complete new patient paperwork online before their first appointment?', a: "Yes. We set up digital intake forms that clients complete before arriving — pet health history, vaccination records, owner contact information, and authorization forms. The completed forms route directly to your staff before the appointment. This saves time at check-in and makes the first experience smoother for clients and their pets." },
       { q: 'How do we handle the seasonality of a Cape Cod pet care business?', a: "The summer spike in Cape Cod pet care demand is real and worth planning for on your website. We build landing pages and content targeting seasonal searches — boarding availability, summer grooming, vacation pet care — and set up booking flows that capture summer demand without overwhelming your off-season capacity. We also help you capture email addresses from seasonal clients for year-round marketing." },
