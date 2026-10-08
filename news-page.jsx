@@ -6,67 +6,67 @@ const PER_PAGE = 9;
 /* Fallback posts used only if the API call fails (CORS, offline, etc.) */
 const FALLBACK_POSTS = [
   {
-    id: 10216, link: 'https://www.colewebdev.com/a-fresh-look-for-the-truro-historical-society-website/',
-    date: '2026-04-30T09:53:54',
-    title: { rendered: 'A Fresh Look for the Truro Historical Society Website' },
-    excerpt: { rendered: 'The Truro Historical Society recently received a much-needed website redesign that brings new life to its online presence while honoring the town&#8217;s rich history.' },
-    _embedded: { 'wp:featuredmedia': [{ source_url: 'https://www.colewebdev.com/wp-content/uploads/2025/05/truro-historical-society-custom-website-launch-cape-cod-small.jpg' }], 'wp:term': [[{ name: 'New Website Launch' }]] },
+    id: 11151, link: 'https://www.colewebdev.com/a-fresh-look-for-pierce-plumbing-new-logo-website-launch/',
+    date: '2026-10-08T09:49:41',
+    title: { rendered: 'A Fresh Look for Pierce Plumbing: New Logo &amp; Website Launch' },
+    excerpt: { rendered: 'We&#8217;re excited to announce the launch of a brand-new website and logo for Pierce Plumbing, a trusted plumbing company serving Cape Cod.' },
+    _embedded: { 'wp:featuredmedia': [{ source_url: 'https://www.colewebdev.com/wp-content/uploads/2026/01/COLEwebdev-Website-Launch-Pierce-Plumbing-SM.jpg' }], 'wp:term': [[{ name: 'New Website Launch' }]] },
   },
   {
-    id: 10357, link: 'https://www.colewebdev.com/do-people-still-hire-web-designers/',
-    date: '2026-04-15T09:45:48',
-    title: { rendered: 'Do People Still Hire Web Designers?' },
-    excerpt: { rendered: 'Short answer: yes&#8212;more than ever. But why people hire them, and what they expect, has evolved.' },
-    _embedded: { 'wp:featuredmedia': [{ source_url: 'https://www.colewebdev.com/wp-content/uploads/2021/06/colewebdev-photo-shoot-2021-4.jpg' }], 'wp:term': [[{ name: 'News' }]] },
+    id: 11050, link: 'https://www.colewebdev.com/introducing-the-new-cape-side-music-website/',
+    date: '2026-09-24T15:05:41',
+    title: { rendered: 'Introducing the New Cape Side Music Website' },
+    excerpt: { rendered: 'Based on Cape Cod, Thom Dutton is an accomplished harpist who shares his love of music through performances, published works, and recordings.' },
+    _embedded: { 'wp:featuredmedia': [{ source_url: 'https://www.colewebdev.com/wp-content/uploads/2026/09/COLEwebdev-Website-Launch-csm.jpg' }], 'wp:term': [[{ name: 'New Website Launch' }]] },
   },
   {
-    id: 10214, link: 'https://www.colewebdev.com/a-wellness-focused-website-redesign-for-cape-cod-aquatics/',
-    date: '2026-04-08T09:39:59',
-    title: { rendered: 'A Wellness-Focused Website Redesign for Cape Cod Aquatics' },
-    excerpt: { rendered: 'The redesigned website now reflects what Cape Cod Aquatics does best: helping customers invest in their health and wellness with high-quality products and reliable service.' },
-    _embedded: { 'wp:featuredmedia': [{ source_url: 'https://www.colewebdev.com/wp-content/uploads/2025/10/cape-cod-aquatics-website-design-build-small.jpg' }], 'wp:term': [[{ name: 'New Website Launch' }]] },
+    id: 10997, link: 'https://www.colewebdev.com/how-to-add-colewebdev-as-a-delegate-user-in-network-solutions/',
+    date: '2026-09-11T11:40:59',
+    title: { rendered: 'How to Add COLEwebdev as a Delegate User in Network Solutions' },
+    excerpt: { rendered: 'Learn how to securely add COLEwebdev as a delegate user in Network Solutions so our team can manage your website, domain, and DNS without needing your password.' },
+    _embedded: { 'wp:featuredmedia': [{ source_url: 'https://www.colewebdev.com/wp-content/uploads/2026/09/add-delegate-user-network-solutions.jpg' }], 'wp:term': [[{ name: 'Resources' }]] },
   },
   {
-    id: 10212, link: 'https://www.colewebdev.com/dyers-beach-house-website-redesign-a-coastal-refresh/',
-    date: '2026-03-25T09:24:17',
-    title: { rendered: 'Dyer&#8217;s Beach House Website Redesign: A Coastal Refresh' },
-    excerpt: { rendered: 'Our goal was to create a modern, unified website that captures the unique character of Dyer&#8217;s Beach House while making it easier for visitors to explore the properties and book their stay.' },
-    _embedded: { 'wp:featuredmedia': [{ source_url: 'https://www.colewebdev.com/wp-content/uploads/2025/09/dyers-beach-house-website-design-build-wordpress-cape-cod-500.jpg' }], 'wp:term': [[{ name: 'New Website Launch' }]] },
+    id: 10906, link: 'https://www.colewebdev.com/why-were-building-all-new-websites-with-divi-5/',
+    date: '2026-08-28T10:31:42',
+    title: { rendered: 'Why We&#8217;re Building All New Websites with Divi 5' },
+    excerpt: { rendered: 'Divi 5 has been rebuilt from the ground up with performance and flexibility in mind. The new architecture allows us to create custom websites that are lean, efficient, and designed to generate results.' },
+    _embedded: { 'wp:featuredmedia': [{ source_url: 'https://www.colewebdev.com/wp-content/uploads/2026/08/divi4-divi-5.jpg' }], 'wp:term': [[{ name: 'News' }]] },
   },
   {
-    id: 10255, link: 'https://www.colewebdev.com/what-is-the-average-cost-of-a-web-designer/',
-    date: '2026-03-19T12:37:31',
-    title: { rendered: 'What is the average cost of a web designer?' },
-    excerpt: { rendered: 'If you&#8217;re a business owner in Eastham, Wellfleet, or anywhere on Cape Cod, you&#8217;ve probably asked the same question: &#8220;What should a website actually cost?&#8221;' },
-    _embedded: { 'wp:featuredmedia': [{ source_url: 'https://www.colewebdev.com/wp-content/uploads/2026/03/What-is-the-average-cost-of-a-web-designer.jpg' }], 'wp:term': [[{ name: 'News' }]] },
+    id: 10769, link: 'https://www.colewebdev.com/taking-a-short-break-to-recharge/',
+    date: '2026-08-11T08:52:00',
+    title: { rendered: 'Taking a Short Break to Recharge' },
+    excerpt: { rendered: 'At COLEwebdev, we believe our best work comes from staying energized and inspired.' },
+    _embedded: { 'wp:featuredmedia': [{ source_url: 'https://www.colewebdev.com/wp-content/uploads/2026/07/jamaica-vacation-2026.jpg' }], 'wp:term': [[{ name: 'News' }]] },
   },
   {
-    id: 10208, link: 'https://www.colewebdev.com/a-modern-refresh-for-cornerstone-fundraising/',
-    date: '2026-03-11T09:23:28',
-    title: { rendered: 'A Modern Refresh for Cornerstone Fundraising' },
-    excerpt: { rendered: 'We partnered with Cornerstone Fundraising to transform their outdated WordPress site into a modern, flexible platform designed to better represent their brand.' },
-    _embedded: { 'wp:featuredmedia': [{ source_url: 'https://www.colewebdev.com/wp-content/uploads/2026/03/cornerstone-fundraising-website-design-cape-cod-small.jpg' }], 'wp:term': [[{ name: 'New Website Launch' }]] },
+    id: 10821, link: 'https://www.colewebdev.com/new-website-launch-for-idle-time-bike-shop-cycling-club/',
+    date: '2026-08-05T10:15:43',
+    title: { rendered: 'New Website Launch for Idle Time Bike Shop Cycling Club' },
+    excerpt: { rendered: 'We&#8217;re excited to announce the launch of a brand-new website for the Idle Time Bike Shop Cycling Club!' },
+    _embedded: { 'wp:featuredmedia': [{ source_url: 'https://www.colewebdev.com/wp-content/uploads/2026/08/COLEwebdev-Website-Launch-Idle-Times-Bike-Shop-Club-500.jpg' }], 'wp:term': [[{ name: 'New Website Launch' }]] },
   },
   {
-    id: 10190, link: 'https://www.colewebdev.com/celebrating-20-years-of-website-development-and-were-just-getting-started/',
-    date: '2026-02-20T00:00:00',
-    title: { rendered: 'Celebrating 20 Years of Website Development &#8212; And We&#8217;re Just Getting Started' },
-    excerpt: { rendered: 'Built on Custom Design, Powered by Performance. 20 Years Strong &#8212; And Always Evolving.' },
-    _embedded: { 'wp:featuredmedia': [{ source_url: 'https://www.colewebdev.com/wp-content/uploads/2026/02/20-years-colewebdev.jpg' }], 'wp:term': [[{ name: 'News' }]] },
+    id: 10688, link: 'https://www.colewebdev.com/update-your-website-to-stay-ai-competitive/',
+    date: '2026-07-27T08:22:55',
+    title: { rendered: 'Update Your Website to Stay AI Competitive' },
+    excerpt: { rendered: 'In the age of AI, frequent updates are more important than ever.' },
+    _embedded: { 'wp:featuredmedia': [{ source_url: 'https://www.colewebdev.com/wp-content/uploads/2026/07/Update-Your-Website-to-Stay-AI-Competitive.jpg' }], 'wp:term': [[{ name: 'Resources' }]] },
   },
   {
-    id: 10185, link: 'https://www.colewebdev.com/form-february-please-test-your-contact-forms/',
-    date: '2026-02-04T00:00:00',
-    title: { rendered: 'Form February: Please Test Your Contact Forms' },
-    excerpt: { rendered: 'Our annual reminder: test your website contact forms today. It takes two minutes and could save you months of missed leads.' },
-    _embedded: { 'wp:featuredmedia': [{ source_url: 'https://www.colewebdev.com/wp-content/uploads/2026/02/formfeb.png' }], 'wp:term': [[{ name: 'News' }]] },
+    id: 10673, link: 'https://www.colewebdev.com/colewebdev-launches-new-website-for-animal-hospital-of-orleans/',
+    date: '2026-07-22T11:49:25',
+    title: { rendered: 'COLEwebdev Launches New Website for Animal Hospital of Orleans' },
+    excerpt: { rendered: 'It was time for an update that reflected the high level of care and professionalism that Animal Hospital of Orleans provides every day.' },
+    _embedded: { 'wp:featuredmedia': [{ source_url: 'https://www.colewebdev.com/wp-content/uploads/2025/06/animal-hospital-orleans-website-design-build-small.jpg' }], 'wp:term': [[{ name: 'New Website Launch' }]] },
   },
   {
-    id: 10180, link: 'https://www.colewebdev.com/colewebdev-2025-year-in-review/',
-    date: '2026-01-06T00:00:00',
-    title: { rendered: 'COLEwebdev 2025 Year in Review' },
-    excerpt: { rendered: 'We continued designing effective websites that help businesses and organizations expand their reach and grow their brands across Cape Cod and beyond.' },
-    _embedded: { 'wp:featuredmedia': [{ source_url: 'https://www.colewebdev.com/wp-content/uploads/2026/01/colewebdev-2025-recap.jpg' }], 'wp:term': [[{ name: 'News' }]] },
+    id: 10654, link: 'https://www.colewebdev.com/how-to-find-a-local-website-designer/',
+    date: '2026-07-08T09:32:56',
+    title: { rendered: 'How to find a local website designer?' },
+    excerpt: { rendered: 'Finding the right person to build your digital storefront can feel overwhelming. You need someone who understands your business goals, your market, and the technical side of development.' },
+    _embedded: { 'wp:featuredmedia': [{ source_url: 'https://www.colewebdev.com/wp-content/uploads/2026/07/how-to-find-a-local-website-designer.jpg' }], 'wp:term': [[{ name: 'News' }]] },
   },
 ];
 
@@ -126,13 +126,15 @@ function NewsCard({ post }) {
 }
 
 function NewsPage() {
-  const [posts, setPosts] = React.useState([]);
+  /* Start from the fallback so the pre-rendered page (and crawlers) get real
+     posts instead of a loading state; the live API replaces them on load. */
+  const [posts, setPosts] = React.useState(FALLBACK_POSTS);
   const [page, setPage] = React.useState(1);
   const [totalPages, setTotalPages] = React.useState(1);
-  const [status, setStatus] = React.useState('loading'); /* loading | ready | error */
+  const [status, setStatus] = React.useState('ready'); /* loading | ready | error */
   const [loadingMore, setLoadingMore] = React.useState(false);
   const [filter, setFilter] = React.useState('All');
-  const [categories, setCategories] = React.useState(['All']);
+  const [categories, setCategories] = React.useState(() => extractCats(FALLBACK_POSTS));
 
   function extractCats(data, existing = ['All']) {
     const s = new Set(existing);

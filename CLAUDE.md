@@ -128,7 +128,7 @@ Two page types use a single renderer with per-page data injected via a global va
 ```
 https://www.colewebdev.com/wp-json/wp/v2/posts
 ```
-A `FALLBACK_POSTS` array is used if the API call fails (CORS, offline, etc.). Update the fallback when the real posts drift more than a few months behind.
+The page renders `FALLBACK_POSTS` first (that's what the pre-rendered HTML and crawlers see), then swaps in live posts from the API; the fallback also stays if the API call fails. Keep it to the latest 9 posts and refresh it when real posts drift more than a few months ahead.
 
 ### App-level controls (homepage only)
 `app.jsx` uses `useTweaks` (from `tweaks-panel.jsx`) to manage:
@@ -429,7 +429,7 @@ Other pages link to `styles.css` without a version string and are served fresh o
 
 ### 5. Update the homepage news teaser
 
-The homepage shows 3 hardcoded news items in `parts-rest.jsx` → `News()` function (around line 287). Update this manually when new blog posts publish on `colewebdev.com`:
+The homepage `News()` teaser in `parts-rest.jsx` fetches the latest 3 posts live, but starts from the hardcoded `NEWS_FALLBACK` array, which is what the pre-rendered HTML and crawlers see. Update it when new blog posts publish on `colewebdev.com`:
 
 ```js
 { t: 't-tide', tag: 'NEW LAUNCH', date: 'May 24, 2026',
@@ -442,6 +442,8 @@ The homepage shows 3 hardcoded news items in `parts-rest.jsx` → `News()` funct
 Theme classes for the thumbnail: `t-tide` (blue), `t-coast` (light), `t-sun` (warm). Keep 3 items max.
 
 Also update the `FALLBACK_POSTS` array in `news-page.jsx` to stay within ~3 months of the live WP blog.
+
+**Getting post data:** Claude's cloud sandbox can't reach `colewebdev.com` directly. Use the Pressable connector instead: `run_site_wpcli_commands` on site `1340193` (www.colewebdev.com) with read-only commands such as `post list --post_type=post --post_status=publish --posts_per_page=9 --fields=ID,post_date --format=csv`, `post get <id> --fields=post_title,post_excerpt,post_name --format=json`, `post term list <id> category --field=name`, and `post meta list <id> --keys=_thumbnail_id` (then `post list --post_type=attachment --post__in=<thumb ids> --fields=ID,guid`). Read results with `list_site_wordpress_operations`; each output is trimmed to ~500 characters, so query a few fields at a time, and keep batches small (large batches hit "too many locks, refusing").
 
 ---
 
