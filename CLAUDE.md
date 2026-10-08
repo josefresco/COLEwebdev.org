@@ -18,7 +18,7 @@ npm run build      # compile JSX → js/, rewrite script tags, pre-render all pa
 npm run verify     # load every page with React's dev build and report hydration mismatches
 ```
 
-**Run `npm run build` after every `.jsx` or `.html` change and commit the results** (`js/*.js` and the updated `*.html`) together with your source edits. GitHub Pages serves the committed files as-is, so an unbuilt change does not ship. The build is idempotent: a re-run with no source changes modifies nothing.
+**Run `npm run build` and `npm run verify` after every `.jsx` or `.html` change and commit the results** (`js/*.js` and the updated `*.html`) together with your source edits. The deploy Action rebuilds from source anyway (see Hosting & Deployment), so a forgotten build still ships correctly, but committing the output keeps the repo, local previews, and PR diffs truthful. The build is idempotent: a re-run with no source changes modifies nothing.
 
 To preview locally, serve the repo root over HTTP after building:
 ```
@@ -211,7 +211,9 @@ These were audited and removed in June 2026. Do not reintroduce:
 **DNS:** A `CNAME` file in the repo root maps the custom domain. Do not delete or modify it.
 
 ### How deployment works
-Run `npm run build` in `build/`, commit the source and generated files, then push to `main` → GitHub Pages automatically serves the committed files. The build runs locally, not on GitHub: there is no CI pipeline and no cache invalidation to trigger. Static files are served directly from the repo root. Propagation is typically under 60 seconds.
+`.github/workflows/build-deploy.yml` runs on every push to `main`: it installs the tooling, runs `npm run build` and `npm run verify`, and deploys the result to GitHub Pages (Pages source must be set to **GitHub Actions** in repo settings). A hydration mismatch or build error fails the run and nothing deploys. Pull requests run the same build and check without deploying, and the run warns if the committed `js/`/`*.html` were stale.
+
+The deployed site is assembled from the repo minus source and tooling: `*.jsx`, `*.md`, `build/`, `devtools/`, `.github/`, and dotfiles are not published. Propagation after a green run is typically under a minute.
 
 ### Git workflow
 ```
@@ -220,7 +222,7 @@ git pull origin main          # always pull before starting work
 (cd build && npm run build && npm run verify)
 git add <specific files> js/
 git commit -m "feat(scope): description"
-git push origin main          # this is the deploy
+git push origin main          # triggers the build-and-deploy Action
 ```
 
 Always add specific files by name — avoid `git add .` to prevent accidentally committing preview files or local artifacts (`badge-preview.html`, `process-hero-preview.html`, the `devtools/` directory, etc.).
