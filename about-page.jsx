@@ -92,7 +92,7 @@ function AboutPage() {
             <div className="ab-story-media">
               <img
                 className="ab-story-img"
-                src="assets/website-design-deveopment-cape-cod-2021.jpg"
+                src="assets/website-design-deveopment-cape-cod-2021.webp"
                 alt="COLEwebdev team"
                 loading="lazy"
               />
@@ -116,7 +116,7 @@ function AboutPage() {
             <div className="ab-person">
               <img
                 className="ab-person-img"
-                src="assets/josiah-cole-cape-cod-website-designer.jpg"
+                src="assets/josiah-cole-cape-cod-website-designer.webp"
                 alt="Josiah Cole"
                 loading="lazy"
               />
@@ -136,7 +136,7 @@ function AboutPage() {
             <div className="ab-person">
               <img
                 className="ab-person-img"
-                src="assets/desiree-cole-webdiva-cape-cod-website-designer.jpg"
+                src="assets/desiree-cole-webdiva-cape-cod-website-designer.webp"
                 alt="Desiree Cole"
                 loading="lazy"
               />

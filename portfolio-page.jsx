@@ -396,7 +396,7 @@ function PortfolioPage() {
 
   React.useEffect(() => {
     const img = new Image();
-    img.src = 'assets/portfolio-hero.jpg';
+    img.src = 'assets/portfolio-hero.webp';
     img.onload = () => { if (heroRef.current) heroRef.current.classList.add('loaded'); };
   }, []);
 

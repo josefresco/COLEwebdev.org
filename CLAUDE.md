@@ -160,6 +160,19 @@ All shared styles live here. Never create a separate CSS file. Never use CSS-in-
 
 **Layout:** 1280px max-width `.shell` container. `clamp()` for fluid type. CSS Grid for most layouts.
 
+### Images
+Page images are WebP, sized to about **twice the largest width they display at** (e.g. an image shown at 600px wide → 1200px file). Convert new photos and graphics with:
+```
+cd build
+npm run images -- ../assets/new-photo.jpg --width 1200            # photos
+npm run images -- ../assets/new-chart.png --width 1800 --quality 85  # text-heavy graphics
+```
+This writes `assets/new-photo.webp` next to the original; reference the `.webp` in JSX and CSS.
+
+- **Keep the JPG/PNG original** when it's used for `og:image`, `twitter:image`, or JSON-LD. Social platforms and structured-data consumers handle JPG/PNG more reliably than WebP, so those tags stay on the original file.
+- **Below-the-fold images** get `loading="lazy"`; the hero / first visible image does not.
+- **Large content images** should carry `width` and `height` attributes matching the file's intrinsic size (with CSS `height: auto`) so the page doesn't jump while they load. See `WP_IMAGES` in `whitepaper-page.jsx`.
+
 ### Page-specific styles
 Each page HTML file has an inline `<style>` block. All selectors for that page are namespaced with a 2–3 letter prefix (e.g., `.wh-` for whitepapers, `.lp-` for location pages, `.wp-` for WordPress page, `.hc-` for hosting+care).
 

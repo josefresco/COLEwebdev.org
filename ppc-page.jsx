@@ -307,7 +307,7 @@ function PpcPage() {
         <div className="ppc-lead">
           <img
             className="ppc-lead-photo"
-            src="assets/josiah-cole-cape-cod-website-designer.jpg"
+            src="assets/josiah-cole-cape-cod-website-designer.webp"
             alt="Josiah Cole, Co-Founder and CTO at COLEwebdev"
             width="160"
             height="160"

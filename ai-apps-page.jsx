@@ -445,7 +445,7 @@ function AiAppsPage() {
           <div className="ai-lead-photo-wrap">
             <img
               className="ai-lead-photo"
-              src="assets/josiah-cole-cape-cod-website-designer.jpg"
+              src="assets/josiah-cole-cape-cod-website-designer.webp"
               alt="Josiah Cole, AI Lead at COLEwebdev"
               width="240"
               height="240"
