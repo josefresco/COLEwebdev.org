@@ -27,6 +27,7 @@ const WP_RELATED_LINKS = {
   'website-accessibility':   [{ text: 'Web Accessibility (WCAG)', href: 'web-accessibility.html' }, { text: 'Website Design + Build', href: 'website-design.html' }, { text: 'Contact Us', href: 'contact.html' }],
   'google-maps-ranking':     [{ text: 'SEO & Local Search', href: 'seo.html' }, { text: 'Cape Cod Marketing', href: 'cape-cod-marketing.html' }, { text: 'Request a Quote', href: 'quote.html' }],
   'wordpress-maintenance':   [{ text: 'Hosting + Care Plans', href: 'hosting.html' }, { text: 'Updates & Maintenance', href: 'updates.html' }, { text: 'WordPress Design', href: 'wordpress.html' }],
+  'seasonal-business':       [{ text: 'Hospitality Web Design', href: 'cape-cod-hospitality-web-design.html' }, { text: 'Restaurant Web Design', href: 'cape-cod-restaurant-web-design.html' }, { text: 'Google Business Profile', href: 'cape-cod-google-business-profile.html' }, { text: 'Request a Quote', href: 'quote.html' }],
 };
 
 // Sizes are the intrinsic [width, height] of each file; they reserve layout

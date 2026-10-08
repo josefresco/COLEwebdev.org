@@ -252,6 +252,9 @@ function ServicesPage() {
               { icon: '◐', name: 'Vacation Rentals',  href: 'cape-cod-vacation-rental-web-design.html' },
               { icon: '◍', name: 'Wineries & Breweries', href: 'cape-cod-winery-web-design.html' },
               { icon: '◇', name: 'Pet Care',          href: 'cape-cod-pet-care-web-design.html' },
+              { icon: '✦', name: 'Arts & Galleries',  href: 'cape-cod-arts-web-design.html' },
+              { icon: '↗', name: 'Fitness & Wellness', href: 'cape-cod-fitness-web-design.html' },
+              { icon: '✎', name: 'Education',         href: 'cape-cod-education-web-design.html' },
             ].map(ind => (
               <a key={ind.name} className="svc-ind-card" href={ind.href}>
                 <span className="svc-ind-icon">{ind.icon}</span>

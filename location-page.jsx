@@ -29,6 +29,14 @@ const INDUSTRY_URLS = {
   'Vacation Rentals': 'cape-cod-vacation-rental-web-design.html',
   'Weddings': 'cape-cod-wedding-web-design.html',
   'Wineries': 'cape-cod-winery-web-design.html',
+  'Art Galleries': 'cape-cod-arts-web-design.html',
+  'Arts & Galleries': 'cape-cod-arts-web-design.html',
+  'Arts': 'cape-cod-arts-web-design.html',
+  'Arts & Culture': 'cape-cod-arts-web-design.html',
+  'Arts & Theater': 'cape-cod-arts-web-design.html',
+  'Fitness & Wellness': 'cape-cod-fitness-web-design.html',
+  'Fitness': 'cape-cod-fitness-web-design.html',
+  'Education': 'cape-cod-education-web-design.html',
   'Breweries': 'cape-cod-winery-web-design.html',
 };
 
@@ -229,6 +237,11 @@ function LocationPage() {
                 business patterns, local Google search behavior, and what Cape Cod customers expect
                 from a business website. That context shapes every site we build.
               </p>
+              <p className="lp-why-body">
+                Running a seasonal business in {loc.city}? Our guide
+                to <a href="wp-seasonal-business.html">web design for seasonal Cape Cod businesses</a> covers
+                when to build, what summer visitors need on a phone, and how to stay visible after Labor Day.
+              </p>
               <a href="about.html" className="lp-why-link">Meet the team →</a>
             </div>
             <div className="lp-why-details">
@@ -295,6 +308,9 @@ function LocationPage() {
               { name: 'Vacation Rentals', href: 'cape-cod-vacation-rental-web-design.html' },
               { name: 'Weddings', href: 'cape-cod-wedding-web-design.html' },
               { name: 'Wineries', href: 'cape-cod-winery-web-design.html' },
+              { name: 'Arts & Galleries', href: 'cape-cod-arts-web-design.html' },
+              { name: 'Fitness', href: 'cape-cod-fitness-web-design.html' },
+              { name: 'Education', href: 'cape-cod-education-web-design.html' },
             ].map(function(ind, i) {
               return (
                 <a key={i} href={ind.href} className="lp-ind-link">{ind.name} →</a>

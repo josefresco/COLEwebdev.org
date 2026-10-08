@@ -43,7 +43,7 @@ Redirect stubs (pages with `<meta http-equiv="refresh">`) are skipped and keep a
 
 ## Project Scale
 
-- **~105 HTML pages** — homepage, 10+ service pages, 26 whitepaper guides, 16 town landing pages, 19 industry pages, utility pages
+- **~115 HTML pages** — homepage, 10+ service pages, 27 whitepaper guides, 16 town landing pages + 1 village page, 22 industry pages, utility pages
 - **~60 JSX files** — one per page plus shared parts (compiled to `js/*.js`)
 - **~70 assets** in `assets/` — local brand images (logos, team photos, hero images)
 - **1 global stylesheet** — `styles.css` (~55KB); page-specific styles live in inline `<style>` blocks inside each HTML file
@@ -108,17 +108,19 @@ Every page follows the same structure:
 Two page types use a single renderer with per-page data injected via a global variable:
 
 **Whitepaper guides** (`wp-*.html` + `whitepaper-page.jsx`):
-- Data lives in `whitepapers-data.jsx` → `window.WHITEPAPERS_DATA` (array of 26 objects)
+- Data lives in `whitepapers-data.jsx` → `window.WHITEPAPERS_DATA` (array of 27 objects)
 - Each guide HTML sets `window.CURRENT_WP_ID = 'guide-id'` before loading the renderer
 - The listing page (`whitepapers.html`) uses `whitepapers-page.jsx` (separate renderer)
 
 **Town landing pages** (`*-web-design.html` + `location-page.jsx`):
-- Data lives in `locations-data.jsx` → `window.LOCATIONS_DATA` (array of 16 town objects)
+- Data lives in `locations-data.jsx` → `window.LOCATIONS_DATA` (array of 17 objects: 16 towns plus the Osterville & Centerville village page)
 - Each town HTML sets `window.CURRENT_LOCATION_ID = 'town-id'` before loading the renderer
-- `cape-cod-web-design.html` also uses this renderer (id `'cape-cod'`)
+- `cape-cod-web-design.html` also uses this renderer (id `'cape-cod'`), as does the village page `osterville-centerville-web-design.html` (id `'osterville'`)
+- Village pages are added only where real client work exists in that village (doorway-page risk; see `site-plan-2026.md`). Woods Hole was skipped for that reason.
+- The "Why us" section links every town page to the seasonal-business guide (`wp-seasonal-business.html`)
 
 **Industry landing pages** (`cape-cod-*-web-design.html` + `industry-page.jsx`):
-- Data lives in `industry-data.jsx` → `window.INDUSTRY_DATA` (array of 11 industry objects)
+- Data lives in `industry-data.jsx` → `window.INDUSTRY_DATA` (array of 22 industry objects)
 - Each industry HTML sets `window.CURRENT_INDUSTRY_ID = 'industry-id'` before loading the renderer
 - Industry data shape differs from location data: includes `whyCards`, `features`, `relatedIndustries`, `metaTitle`, `metaDesc` (no `nearbyTowns`)
 - `maine-web-design.html` is a standalone page with its own dedicated `maine-page.jsx` (not a shared renderer)

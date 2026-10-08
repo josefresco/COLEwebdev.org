@@ -52,7 +52,9 @@ No service page publishes any pricing. The quote form collects a budget range in
 
 ## P5 — Content Expansion
 
-### Seasonal business content
+### Seasonal business content — DONE (Oct 2026)
+**Update (Oct 2026):** Published guide #27, `wp-seasonal-business.html` ("Web Design for Seasonal Cape Cod Businesses"). Linked from every town page via the shared "Why us" section in `location-page.jsx`, plus search, sitemap, and the whitepapers listing.
+
 No page addresses Cape Cod's defining business reality: an intensely seasonal economy. High-intent search queries like "seasonal website preparation" or "Cape Cod summer traffic" are entirely uncaptured.
 
 **Options:**
@@ -62,7 +64,9 @@ No page addresses Cape Cod's defining business reality: an intensely seasonal ec
 
 ---
 
-### Village-level location pages
+### Village-level location pages — PARTIAL (Oct 2026)
+**Update (Oct 2026):** Checked the full Pressable client roster (196 live sites) and colewebdev.com posts. Built `osterville-centerville-web-design.html` (id `osterville`) backed by four real clients: Osterville Village Association, Centerville Civic Association, Osterville Anglers Club, Carl F. Riedell & Son. **Skipped Woods Hole and Barnstable Village:** no client work found there, so a page would be the kind of doorway page the July review removed. Revisit if real work lands there.
+
 **Update (July 2026):** `locations-data.jsx` now has 19 entries — the original 15 Cape towns + Cape Cod overall, plus Nantucket, Martha's Vineyard, and Plymouth (broader regional expansion, not village-level). The village-level gap below is unaffected and still open:
 
 | Village | Why it matters |
@@ -75,7 +79,9 @@ No page addresses Cape Cod's defining business reality: an intensely seasonal ec
 
 ---
 
-### Additional industry pages
+### Additional industry pages — DONE (Oct 2026)
+**Update (Oct 2026):** Added Arts & Galleries (`cape-cod-arts-web-design.html`), Fitness & Wellness (`cape-cod-fitness-web-design.html`), and Education (`cape-cod-education-web-design.html`), each listing verified clients from the Pressable roster. 22 industry pages total.
+
 **Update (July 2026):** 19 industry pages now exist: nonprofit, church, hospitality, restaurant, real estate, chamber, contractor, landscaping, health, legal, marine, retail, automotive, photography, wedding, salon, winery, pet-care, vacation-rental. Retail (previously flagged as missing) is done.
 
 **Still missing, real Cape Cod client volume:**
