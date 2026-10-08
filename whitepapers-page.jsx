@@ -461,5 +461,5 @@ function WhitepapersPage() {
   );
 }
 
-const whRoot = ReactDOM.createRoot(document.getElementById('root'));
+const whRoot = createAppRoot(document.getElementById('root'));
 whRoot.render(<WhitepapersPage />);

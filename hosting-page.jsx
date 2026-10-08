@@ -242,5 +242,5 @@ function HostingPage() {
   );
 }
 
-const hcRoot = ReactDOM.createRoot(document.getElementById('root'));
+const hcRoot = createAppRoot(document.getElementById('root'));
 hcRoot.render(<HostingPage />);

@@ -400,5 +400,5 @@ function WebDesignPage() {
   );
 }
 
-const wdRoot = ReactDOM.createRoot(document.getElementById('root'));
+const wdRoot = createAppRoot(document.getElementById('root'));
 wdRoot.render(<WebDesignPage />);

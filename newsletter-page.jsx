@@ -169,5 +169,5 @@ function NewsletterPage() {
   );
 }
 
-const naRoot = ReactDOM.createRoot(document.getElementById('root'));
+const naRoot = createAppRoot(document.getElementById('root'));
 naRoot.render(<NewsletterPage />);

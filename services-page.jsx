@@ -300,5 +300,5 @@ function ServicesPage() {
   );
 }
 
-const svcRoot = ReactDOM.createRoot(document.getElementById('root'));
+const svcRoot = createAppRoot(document.getElementById('root'));
 svcRoot.render(<ServicesPage />);

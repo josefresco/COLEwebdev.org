@@ -255,5 +255,5 @@ function UpdatesPage() {
   );
 }
 
-const umRoot = ReactDOM.createRoot(document.getElementById('root'));
+const umRoot = createAppRoot(document.getElementById('root'));
 umRoot.render(<UpdatesPage />);

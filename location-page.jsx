@@ -344,5 +344,5 @@ function LocationPage() {
   );
 }
 
-const lpRoot = ReactDOM.createRoot(document.getElementById('root'));
+const lpRoot = createAppRoot(document.getElementById('root'));
 lpRoot.render(<LocationPage />);

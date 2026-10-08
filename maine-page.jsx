@@ -292,5 +292,5 @@ function MainePage() {
   );
 }
 
-const mnRoot = ReactDOM.createRoot(document.getElementById('root'));
+const mnRoot = createAppRoot(document.getElementById('root'));
 mnRoot.render(<MainePage />);

@@ -523,5 +523,5 @@ function PpcPage() {
   );
 }
 
-const ppcRoot = ReactDOM.createRoot(document.getElementById('root'));
+const ppcRoot = createAppRoot(document.getElementById('root'));
 ppcRoot.render(<PpcPage />);

@@ -246,5 +246,5 @@ function BrandingPage() {
   );
 }
 
-const brRoot = ReactDOM.createRoot(document.getElementById('root'));
+const brRoot = createAppRoot(document.getElementById('root'));
 brRoot.render(<BrandingPage />);

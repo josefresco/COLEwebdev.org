@@ -308,5 +308,5 @@ function ContactPage() {
   );
 }
 
-const ctRoot = ReactDOM.createRoot(document.getElementById('root'));
+const ctRoot = createAppRoot(document.getElementById('root'));
 ctRoot.render(<ContactPage />);

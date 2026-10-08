@@ -241,5 +241,5 @@ function ShopPage() {
   );
 }
 
-const shRoot = ReactDOM.createRoot(document.getElementById('root'));
+const shRoot = createAppRoot(document.getElementById('root'));
 shRoot.render(<ShopPage />);

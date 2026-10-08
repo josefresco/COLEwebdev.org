@@ -65,5 +65,5 @@ function IndustriesPage() {
   );
 }
 
-const ihRoot = ReactDOM.createRoot(document.getElementById('root'));
+const ihRoot = createAppRoot(document.getElementById('root'));
 ihRoot.render(<IndustriesPage />);

@@ -1,6 +1,7 @@
 .claude/
 uploads/
 devtools/node_modules/
+build/node_modules/
 
 # OS artifacts
 Thumbs.db

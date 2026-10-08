@@ -433,5 +433,5 @@ function LandingPage() {
   );
 }
 
-const glRoot = ReactDOM.createRoot(document.getElementById('root'));
+const glRoot = createAppRoot(document.getElementById('root'));
 glRoot.render(<LandingPage />);

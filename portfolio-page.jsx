@@ -500,5 +500,5 @@ function PortfolioPage() {
   );
 }
 
-const pfRoot = ReactDOM.createRoot(document.getElementById('root'));
+const pfRoot = createAppRoot(document.getElementById('root'));
 pfRoot.render(<PortfolioPage />);

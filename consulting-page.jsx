@@ -300,5 +300,5 @@ function ConsultingPage() {
   );
 }
 
-const cnRoot = ReactDOM.createRoot(document.getElementById('root'));
+const cnRoot = createAppRoot(document.getElementById('root'));
 cnRoot.render(<ConsultingPage />);

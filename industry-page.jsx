@@ -230,5 +230,5 @@ function IndustryPage() {
   );
 }
 
-const indRoot = ReactDOM.createRoot(document.getElementById('root'));
+const indRoot = createAppRoot(document.getElementById('root'));
 indRoot.render(<IndustryPage />);

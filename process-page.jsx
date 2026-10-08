@@ -233,5 +233,5 @@ function ProcessPage() {
   );
 }
 
-const procRoot = ReactDOM.createRoot(document.getElementById('root'));
+const procRoot = createAppRoot(document.getElementById('root'));
 procRoot.render(<ProcessPage />);

@@ -247,5 +247,5 @@ function AboutPage() {
   );
 }
 
-const abRoot = ReactDOM.createRoot(document.getElementById('root'));
+const abRoot = createAppRoot(document.getElementById('root'));
 abRoot.render(<AboutPage />);

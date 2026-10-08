@@ -248,5 +248,5 @@ function CapeCodAiPage() {
   );
 }
 
-const capeCodAiRoot = ReactDOM.createRoot(document.getElementById('root'));
+const capeCodAiRoot = createAppRoot(document.getElementById('root'));
 capeCodAiRoot.render(<CapeCodAiPage />);

@@ -348,5 +348,5 @@ function WPSpeedPage() {
   );
 }
 
-const wpsRoot = ReactDOM.createRoot(document.getElementById('root'));
+const wpsRoot = createAppRoot(document.getElementById('root'));
 wpsRoot.render(<WPSpeedPage />);

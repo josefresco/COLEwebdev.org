@@ -1,0 +1,80 @@
+# Builds the site (compile JSX, pre-render every page), checks hydration, and
+# deploys to GitHub Pages. Pull requests run the same build + check without
+# deploying, so a broken page fails the PR instead of reaching the live site.
+#
+# Requires: Settings → Pages → Build and deployment → Source = "GitHub Actions".
+
+name: Build and deploy
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: build-deploy-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: build
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: build/package-lock.json
+
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+
+      - name: Build (compile JSX, pre-render pages)
+        run: npm run build
+
+      - name: Check hydration
+        run: npm run verify
+
+      - name: Warn if committed files were stale
+        run: |
+          if ! git diff --quiet -- ..; then
+            echo "::warning::Committed js/ or *.html were out of date; deploying the fresh build. Run 'npm run build' in build/ and commit to keep the repo in sync."
+            git diff --stat -- .. | tail -5
+          fi
+
+      - name: Assemble site
+        working-directory: .
+        run: |
+          rsync -a --delete \
+            --exclude='.git*' --exclude='.github/' --exclude='.claude/' \
+            --exclude='build/' --exclude='devtools/' --exclude='uploads/' \
+            --exclude='*.jsx' --exclude='*.md' --exclude='_site/' \
+            ./ _site/
+          touch _site/.nojekyll
+
+      - uses: actions/upload-pages-artifact@v3
+        if: github.event_name != 'pull_request'
+        with:
+          path: _site
+
+  deploy:
+    if: github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

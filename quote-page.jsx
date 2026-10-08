@@ -330,5 +330,5 @@ function QuotePage() {
   );
 }
 
-const rqRoot = ReactDOM.createRoot(document.getElementById('root'));
+const rqRoot = createAppRoot(document.getElementById('root'));
 rqRoot.render(<QuotePage />);

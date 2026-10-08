@@ -366,4 +366,4 @@ function WebsiteRedesignPage() {
   );
 }
 
-ReactDOM.createRoot(document.getElementById('root')).render(<WebsiteRedesignPage />);
+createAppRoot(document.getElementById('root')).render(<WebsiteRedesignPage />);

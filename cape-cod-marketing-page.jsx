@@ -261,5 +261,5 @@ function CapeCodeMarketingPage() {
   );
 }
 
-const mktRoot = ReactDOM.createRoot(document.getElementById('root'));
+const mktRoot = createAppRoot(document.getElementById('root'));
 mktRoot.render(<CapeCodeMarketingPage />);

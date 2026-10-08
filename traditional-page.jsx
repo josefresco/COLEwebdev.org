@@ -317,5 +317,5 @@ function TraditionalPage() {
   );
 }
 
-const trRoot = ReactDOM.createRoot(document.getElementById('root'));
+const trRoot = createAppRoot(document.getElementById('root'));
 trRoot.render(<TraditionalPage />);

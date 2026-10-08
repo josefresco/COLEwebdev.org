@@ -171,5 +171,5 @@ function SitemapPage() {
   );
 }
 
-const smRoot = ReactDOM.createRoot(document.getElementById('root'));
+const smRoot = createAppRoot(document.getElementById('root'));
 smRoot.render(<SitemapPage />);

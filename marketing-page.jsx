@@ -366,5 +366,5 @@ function MarketingPage() {
   );
 }
 
-const mkgRoot = ReactDOM.createRoot(document.getElementById('root'));
+const mkgRoot = createAppRoot(document.getElementById('root'));
 mkgRoot.render(<MarketingPage />);

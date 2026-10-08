@@ -274,4 +274,4 @@ function EmailMarketingPage() {
   );
 }
 
-ReactDOM.createRoot(document.getElementById('root')).render(<EmailMarketingPage />);
+createAppRoot(document.getElementById('root')).render(<EmailMarketingPage />);
