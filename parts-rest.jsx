@@ -602,6 +602,30 @@ function Footer() {
 }
 
 /* ============================================================
+   Structured data (JSON-LD)
+   Rendered in the page body, not injected into <head> from an effect,
+   so pre-rendering bakes it into the static HTML and crawlers that
+   don't run JavaScript still see it.
+   ============================================================ */
+function JsonLd({ data }) {
+  // Escape "<" so no string in the data can close the script tag early.
+  const json = JSON.stringify(data).replace(/</g, '\\u003c');
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: json }} />;
+}
+
+function faqPageSchema(items) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: items.map((item) => ({
+      '@type': 'Question',
+      name: item.q,
+      acceptedAnswer: { '@type': 'Answer', text: item.a },
+    })),
+  };
+}
+
+/* ============================================================
    Summary Strip — TL;DR band for service & location pages
    ============================================================ */
 function SummaryStrip({ summary, points }) {
@@ -887,4 +911,4 @@ function SvsMeters({ items }) {
   );
 }
 
-Object.assign(window, { Process, Portfolio, Testimonial, News, CTA, NewsletterBanner, Footer, SummaryStrip, ServiceSideNav, ServiceLeadForm, SvcSnapshot, SvsWindow, SvsRows, SvsFlow, SvsChat, SvsMeters });
+Object.assign(window, { Process, Portfolio, Testimonial, News, CTA, NewsletterBanner, Footer, SummaryStrip, ServiceSideNav, ServiceLeadForm, SvcSnapshot, SvsWindow, SvsRows, SvsFlow, SvsChat, SvsMeters, JsonLd, faqPageSchema });

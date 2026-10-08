@@ -34,26 +34,10 @@ const MN_FAQ = [
 ];
 
 function MainePage() {
-  React.useEffect(() => {
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.id = 'mn-faq-schema';
-    script.textContent = JSON.stringify({
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      mainEntity: MN_FAQ.map(item => ({
-        '@type': 'Question',
-        name: item.q,
-        acceptedAnswer: { '@type': 'Answer', text: item.a },
-      })),
-    });
-    document.head.appendChild(script);
-    return () => { const el = document.getElementById('mn-faq-schema'); if (el) el.remove(); };
-  }, []);
-
   return (
     <React.Fragment>
       <Header />
+      <JsonLd data={faqPageSchema(MN_FAQ)} />
 
       {/* Hero — mountain photo background */}
       <div className="mn-hero">

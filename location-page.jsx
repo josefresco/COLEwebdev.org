@@ -46,27 +46,10 @@ function LocationPage() {
   const loc = (window.LOCATIONS_DATA || []).find(l => l.id === window.CURRENT_LOCATION_ID);
   if (!loc) return <div style={{ padding: 40 }}>Location not found.</div>;
 
-  React.useEffect(() => {
-    if (!loc.faq || loc.faq.length === 0) return;
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.id = 'lp-faq-schema';
-    script.textContent = JSON.stringify({
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      mainEntity: loc.faq.map(item => ({
-        '@type': 'Question',
-        name: item.q,
-        acceptedAnswer: { '@type': 'Answer', text: item.a },
-      })),
-    });
-    document.head.appendChild(script);
-    return () => { const el = document.getElementById('lp-faq-schema'); if (el) el.remove(); };
-  }, []);
-
   return (
     <React.Fragment>
       <Header />
+      {loc.faq && loc.faq.length > 0 && <JsonLd data={faqPageSchema(loc.faq)} />}
 
       {/* Hero */}
       <div className="lp-hero">

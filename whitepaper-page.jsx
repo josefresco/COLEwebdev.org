@@ -82,30 +82,6 @@ function WhitepaperPage() {
   const author = wp ? team.find(function(t) { return t.id === wp.author; }) : null;
   const [open, setOpen] = React.useState(true);
 
-  React.useEffect(function() {
-    if (!wp) return;
-    var faqSchema = {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      mainEntity: wp.sections.map(function(sec) {
-        return {
-          '@type': 'Question',
-          name: sec.heading,
-          acceptedAnswer: { '@type': 'Answer', text: sec.body.join(' ') },
-        };
-      }),
-    };
-    var script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.id = 'wpa-faq-schema';
-    script.textContent = JSON.stringify(faqSchema);
-    document.head.appendChild(script);
-    return function() {
-      var el = document.getElementById('wpa-faq-schema');
-      if (el) el.remove();
-    };
-  }, [wp ? wp.id : null]);
-
   if (!wp) {
     return (
       <React.Fragment>
@@ -124,6 +100,7 @@ function WhitepaperPage() {
   return (
     <React.Fragment>
       <Header />
+      <JsonLd data={faqPageSchema(wp.sections.map(function(sec) { return { q: sec.heading, a: sec.body.join(' ') }; }))} />
 
       {/* Hero */}
       <div className="wpa-hero">
