@@ -100,7 +100,6 @@ function WhitepaperPage() {
   return (
     <React.Fragment>
       <Header />
-      <JsonLd data={faqPageSchema(wp.sections.map(function(sec) { return { q: sec.heading, a: sec.body.join(' ') }; }))} />
 
       {/* Hero */}
       <div className="wpa-hero">
