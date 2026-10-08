@@ -8,7 +8,7 @@ const SERVICES = [
     name: 'Website Design + Build',
     tag: 'Flagship',
     headline: '100% custom — built around your brand, not a template.',
-    img: 'assets/website-design-build-cape-cod-colewebdev.jpg',
+    img: 'assets/website-design-build-cape-cod-colewebdev.webp',
     body: [
       'From a 4-page coastal contractor site to a 60-page nonprofit hub — we design, build, and launch it end to end. No outsourcing. No page builders. Just a site that looks and works exactly like your business.',
       'Every project starts with a real consultation, ends with hands-on training, and includes everything: design proofs, mobile layout, CMS setup, and a thorough hand-off.',
@@ -22,7 +22,7 @@ const SERVICES = [
     icon: '◐',
     name: 'WordPress Websites',
     headline: "The world's most powerful CMS, built right.",
-    img: 'assets/consultation-colewebdev.jpg',
+    img: 'assets/consultation-colewebdev.webp',
     body: [
       "WordPress powers over 40% of the web for a reason. We build clean, fast, maintainable WordPress sites — not bloated, plugin-heavy ones that slow down over time.",
       "You'll be able to edit your own content from day one. We build editor experiences that make sense for people who aren't developers.",
@@ -36,7 +36,7 @@ const SERVICES = [
     icon: '✎',
     name: 'Website Updates',
     headline: 'Keep your site current — without the headache.',
-    img: 'assets/josiah-chromebook-iphone.png',
+    img: 'assets/josiah-chromebook-iphone.webp',
     body: [
       'Got a site that just needs new photos, updated hours, or a fresh page? We handle quick-turn edits, new pages, and content refreshes — billed by the hour or by a block of time.',
       'Already a hosting client? Many routine updates are included. Just send us an email.',
@@ -50,7 +50,7 @@ const SERVICES = [
     icon: '◎',
     name: 'e-Commerce',
     headline: 'Storefronts that sell — without the complexity.',
-    img: 'assets/colewebdev-production-website.jpg',
+    img: 'assets/colewebdev-production-website.webp',
     body: [
       "WooCommerce and Shopify storefronts built to convert browsers into buyers. We handle products, payment setup, shipping rules, and the thousand small details that make or break an online store.",
       "We've launched stores from 10 products to 1,000+. Whatever the scale, the goal is the same: make it effortless for your customers to buy.",
@@ -78,7 +78,7 @@ const SERVICES = [
     icon: '⌘',
     name: 'Website Consulting',
     headline: 'Get an outside expert in your corner.',
-    img: 'assets/planning-colewebdev.jpg',
+    img: 'assets/planning-colewebdev.webp',
     body: [
       "Not sure what your next move should be? Have a site that isn't performing? We offer focused consulting sessions to review your current site, identify opportunities, and give you a concrete plan — with no obligation to hire us for anything else.",
       "We've been building websites since 2000. We've seen every problem — and we know what actually fixes them.",
@@ -92,7 +92,7 @@ const SERVICES = [
     icon: '↗',
     name: 'Website Marketing',
     headline: 'Get found. Get called. Get customers.',
-    img: 'assets/proposal-colewebdev.jpg',
+    img: 'assets/proposal-colewebdev.webp',
     body: [
       'A beautiful website only works if people can find it. We offer SEO, Google Ads, and social media consulting — focused on local, measurable results that actually matter for small businesses on Cape Cod.',
       'Ethical, transparent, no smoke and mirrors. You see exactly what is happening and why — every month.',
@@ -152,7 +152,7 @@ function ServicesPage() {
 
   React.useEffect(() => {
     const img = new Image();
-    img.src = 'assets/colewebdev-website-design-build-cape-cod-modern-mountains-1.jpg';
+    img.src = 'assets/colewebdev-website-design-build-cape-cod-modern-mountains-1.webp';
     img.onload = () => {
       if (heroRef.current) heroRef.current.classList.add('loaded');
     };

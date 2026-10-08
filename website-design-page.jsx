@@ -55,7 +55,7 @@ const RECENT_POSTS = [
     title: 'Do People Still Hire Web Designers?',
     date: 'Apr 15, 2026',
     category: 'News',
-    img: 'assets/colewebdev-photo-shoot-2021-4.jpg',
+    img: 'assets/colewebdev-photo-shoot-2021-4.webp',
     excerpt: 'Short answer: yes — more than ever. But why people hire them, and what they expect, has evolved.',
     href: 'https://www.colewebdev.com/do-people-still-hire-web-designers/',
     cta: 'Read more',
@@ -137,7 +137,7 @@ function WebDesignPage() {
           <div className="wd-split-media">
             <img
               className="wd-split-img"
-              src="assets/colewebdev-team-2021.jpg"
+              src="assets/colewebdev-team-2021.webp"
               alt="Cape Cod Website Development"
               loading="lazy"
             />

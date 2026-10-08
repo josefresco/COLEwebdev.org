@@ -29,29 +29,38 @@ const WP_RELATED_LINKS = {
   'wordpress-maintenance':   [{ text: 'Hosting + Care Plans', href: 'hosting.html' }, { text: 'Updates & Maintenance', href: 'updates.html' }, { text: 'WordPress Design', href: 'wordpress.html' }],
 };
 
+// Sizes are the intrinsic [width, height] of each file; they reserve layout
+// space before the image loads (CSS scales them with height: auto).
 const WP_IMAGES = {
   'what-web-design-does': {
-    infographic: 'assets/wp-what-web-design-does-infographic.png',
+    infographic: 'assets/wp-what-web-design-does-infographic.webp',
+    infographicSize: [1792, 1000],
     infographicAlt: 'The Strategic Power of Web Design — infographic',
   },
   'diy-vs-pro': {
-    photo: 'assets/wp-diy-vs-pro-photo.png',
+    photo: 'assets/wp-diy-vs-pro-photo.webp',
+    photoSize: [600, 327],
     photoAlt: 'A business owner weighing DIY vs hiring a professional web designer',
-    infographic: 'assets/wp-diy-vs-pro-infographic.png',
+    infographic: 'assets/wp-diy-vs-pro-infographic.webp',
+    infographicSize: [1792, 1000],
     infographicAlt: 'DIY vs Professional Web Design — comparison infographic',
   },
   'investment-value': {
-    photo: 'assets/wp-investment-value-photo.png',
+    photo: 'assets/wp-investment-value-photo.webp',
+    photoSize: [600, 327],
     photoAlt: 'Stacking coins representing the return on investment from a professional website',
-    infographic: 'assets/wp-investment-value-infographic.png',
+    infographic: 'assets/wp-investment-value-infographic.webp',
+    infographicSize: [1792, 1000],
     infographicAlt: 'Website: Cost or Investment? — infographic',
   },
   'three-types': {
-    infographic: 'assets/wp-three-types-infographic.png',
+    infographic: 'assets/wp-three-types-infographic.webp',
+    infographicSize: [1408, 768],
     infographicAlt: 'The 3 Types of Web Design — infographic',
   },
   'seven-golden-rules': {
-    infographic: 'assets/wp-seven-golden-rules-infographic.png',
+    infographic: 'assets/wp-seven-golden-rules-infographic.webp',
+    infographicSize: [1408, 768],
     infographicAlt: 'The 7 Golden Rules of Web Design — infographic',
   },
 };
@@ -72,30 +81,6 @@ function WhitepaperPage() {
   const team = window.TEAM_DATA || [];
   const author = wp ? team.find(function(t) { return t.id === wp.author; }) : null;
   const [open, setOpen] = React.useState(true);
-
-  React.useEffect(function() {
-    if (!wp) return;
-    var faqSchema = {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      mainEntity: wp.sections.map(function(sec) {
-        return {
-          '@type': 'Question',
-          name: sec.heading,
-          acceptedAnswer: { '@type': 'Answer', text: sec.body.join(' ') },
-        };
-      }),
-    };
-    var script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.id = 'wpa-faq-schema';
-    script.textContent = JSON.stringify(faqSchema);
-    document.head.appendChild(script);
-    return function() {
-      var el = document.getElementById('wpa-faq-schema');
-      if (el) el.remove();
-    };
-  }, [wp ? wp.id : null]);
 
   if (!wp) {
     return (
@@ -201,6 +186,8 @@ function WhitepaperPage() {
                   <img
                     src={images.infographic}
                     alt={images.infographicAlt}
+                    width={images.infographicSize[0]}
+                    height={images.infographicSize[1]}
                     className="wpa-infographic-img"
                     loading="lazy"
                   />
@@ -275,6 +262,8 @@ function WhitepaperPage() {
                   <img
                     src={images.photo}
                     alt={images.photoAlt}
+                    width={images.photoSize[0]}
+                    height={images.photoSize[1]}
                     className="wpa-sidebar-photo-img"
                     loading="lazy"
                   />

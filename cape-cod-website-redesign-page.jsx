@@ -1,6 +1,6 @@
 /* global React, ReactDOM */
 
-const WR_HERO_IMG = 'assets/portfolio-hero.jpg';
+const WR_HERO_IMG = 'assets/portfolio-hero.webp';
 
 const SIGNS_ITEMS = [
   {

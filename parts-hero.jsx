@@ -65,7 +65,7 @@ function WMark({ size = 28, color = '#7BC043' }) {
 function ColeLogo({ height = 34, dark = false }) {
   return (
     <img
-      src="assets/colewebdev-logo.png"
+      src="assets/colewebdev-logo.webp"
       alt="COLEwebdev — Ask more of your website"
       style={{
         height,
@@ -595,7 +595,7 @@ function HeroOrb() {
     <div className="hero-scene">
       <img
         className="hero-scene-img"
-        src="assets/hero-cwb-scene.png"
+        src="assets/hero-cwb-scene.webp"
         alt="COLEwebdev — CWB monogram with Cape Cod mountains and sun" />
       
     </div>);

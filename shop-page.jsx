@@ -87,7 +87,7 @@ function ShopPage() {
         <div className="shell sh-hero-grid">
           <div className="sh-hero-img-wrap">
             <img
-              src="assets/colewebdev-merch.jpg"
+              src="assets/colewebdev-merch.webp"
               alt="COLEwebdev branded merchandise"
               className="sh-hero-img"
               loading="eager"

@@ -32,29 +32,10 @@ function IndustryPage() {
   const ind = (window.INDUSTRY_DATA || []).find(function(i) { return i.id === window.CURRENT_INDUSTRY_ID; });
   if (!ind) return <div style={{ padding: 40 }}>Industry not found.</div>;
 
-  React.useEffect(function() {
-    if (!ind.faq || ind.faq.length === 0) return;
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.id = 'ind-faq-schema';
-    script.textContent = JSON.stringify({
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      mainEntity: ind.faq.map(function(item) {
-        return {
-          '@type': 'Question',
-          name: item.q,
-          acceptedAnswer: { '@type': 'Answer', text: item.a },
-        };
-      }),
-    });
-    document.head.appendChild(script);
-    return function() { const el = document.getElementById('ind-faq-schema'); if (el) el.remove(); };
-  }, []);
-
   return (
     <React.Fragment>
       <Header />
+      {ind.faq && ind.faq.length > 0 && <JsonLd data={faqPageSchema(ind.faq)} />}
 
       {/* Hero — two-column with inline lead form */}
       <div className="ind-hero">

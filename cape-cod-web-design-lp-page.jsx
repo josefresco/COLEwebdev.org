@@ -224,7 +224,7 @@ function LandingPage() {
       <header className="gl-header">
         <div className="gl-header-inner gl-shell">
           <a href="index.html" className="gl-logo-link" aria-label="COLEwebdev — home">
-            <img src="assets/colewebdev-logo.png" alt="COLEwebdev" className="gl-logo-img" />
+            <img src="assets/colewebdev-logo.webp" alt="COLEwebdev" className="gl-logo-img" />
           </a>
           <a href="tel:5084132043" className="gl-header-phone">
             <span className="gl-phone-label">Call us free</span>
@@ -320,7 +320,7 @@ function LandingPage() {
             <div className="gl-person">
               <img
                 className="gl-person-img"
-                src="assets/josiah-cole-cape-cod-website-designer.jpg"
+                src="assets/josiah-cole-cape-cod-website-designer.webp"
                 alt="Josiah Cole, Co-Founder and CTO of COLEwebdev"
                 loading="lazy"
               />
@@ -342,7 +342,7 @@ function LandingPage() {
             <div className="gl-person">
               <img
                 className="gl-person-img"
-                src="assets/desiree-cole-webdiva-cape-cod-website-designer.jpg"
+                src="assets/desiree-cole-webdiva-cape-cod-website-designer.webp"
                 alt="Desiree Cole, Co-Founder and CEO of COLEwebdev"
                 loading="lazy"
               />

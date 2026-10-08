@@ -5,7 +5,7 @@ const STEPS = [
     n: '01',
     name: 'Consultation',
     title: 'A real conversation. No confusing buzzwords.',
-    img: 'assets/consultation-colewebdev.jpg',
+    img: 'assets/consultation-colewebdev.webp',
     badge: '1 hour · free',
     body: [
       'It all begins with a real, down-to-earth conversation between you and the web experts at COLEwebdev. We offer every business 1 free hour of consultation time.',
@@ -16,7 +16,7 @@ const STEPS = [
     n: '02',
     name: 'Proposal',
     title: 'A fixed price. In writing. No surprises.',
-    img: 'assets/planning-colewebdev.jpg',
+    img: 'assets/planning-colewebdev.webp',
     badge: 'fixed price',
     body: [
       'Based on the information gathered from the initial consultation we create a written proposal — a concise, easy-to-understand breakdown of exactly what we\'ll build and what it costs.',
@@ -27,7 +27,7 @@ const STEPS = [
     n: '03',
     name: 'Planning',
     title: 'Every detail scheduled before a pixel moves.',
-    img: 'assets/proposal-colewebdev.jpg',
+    img: 'assets/proposal-colewebdev.webp',
     body: [
       'Once the proposal is agreed upon and a deposit made, we begin planning. Meetings, photoshoots, content creation tasks — everything gets a date on the calendar.',
       'We\'ve done this enough times to know that a well-planned project is a fast project.',
@@ -37,7 +37,7 @@ const STEPS = [
     n: '04',
     name: 'Design',
     title: '100% custom. Built around your brand.',
-    img: 'assets/website-design-build-cape-cod-colewebdev.jpg',
+    img: 'assets/website-design-build-cape-cod-colewebdev.webp',
     badge: '100% custom',
     body: [
       'The first and most important project element to begin is the design. Based on the current state of your logo and branding, COLEwebdev works with you to create something attractive and effective.',
@@ -48,7 +48,7 @@ const STEPS = [
     n: '05',
     name: 'Content',
     title: 'Your voice. Our expertise. Great copy.',
-    img: 'assets/josiah-chromebook-iphone.png',
+    img: 'assets/josiah-chromebook-iphone.webp',
     body: [
       'You\'re the expert in your business — and your site needs to sound like it. While we\'re hard at work designing, we need you to gather and create content: copy, photography, and supporting media.',
       'Where you need help, we bring in our trusted network of photographers and copywriters to fill the gaps.',
@@ -58,7 +58,7 @@ const STEPS = [
     n: '06',
     name: 'Production',
     title: 'Built right the first time.',
-    img: 'assets/colewebdev-production-website.jpg',
+    img: 'assets/colewebdev-production-website.webp',
     body: [
       'With an approved design and content in hand, we move into the production phase. This is where the project gets detailed — and where COLEwebdev\'s two-plus decades of experience make the difference.',
       'Both the client and our team stay in close contact throughout. You see progress weekly, and nothing goes live without your sign-off.',

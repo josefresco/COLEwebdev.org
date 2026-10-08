@@ -214,8 +214,8 @@ function Estimator() {
               <div style={{ marginTop: 28, display: 'flex', alignItems: 'flex-start', gap: 16 }}>
                 <div style={{ display: 'flex', gap: 0, flexShrink: 0, width: 88 }}>
                   {[
-                  { src: 'assets/josiah-cole-cape-cod-website-designer.jpg', alt: 'Josiah Cole', ring: '#5CC035' },
-                  { src: 'assets/desiree-cole-webdiva-cape-cod-website-designer.jpg', alt: 'Desiree Cole', ring: '#2192BC' }].
+                  { src: 'assets/josiah-cole-cape-cod-website-designer.webp', alt: 'Josiah Cole', ring: '#5CC035' },
+                  { src: 'assets/desiree-cole-webdiva-cape-cod-website-designer.webp', alt: 'Desiree Cole', ring: '#2192BC' }].
                   map((p, i) =>
                   <img
                     key={i}

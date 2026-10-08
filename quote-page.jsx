@@ -142,8 +142,8 @@ function QuotePage() {
             <aside className="rq-sidebar">
               <div className="rq-sidebar-card">
                 <div className="rq-sidebar-avatars">
-                  <img src="assets/josiah-cole-cape-cod-website-designer.jpg" alt="Josiah Cole" className="rq-avatar" />
-                  <img src="assets/desiree-cole-webdiva-cape-cod-website-designer.jpg" alt="Desiree Cole" className="rq-avatar" />
+                  <img src="assets/josiah-cole-cape-cod-website-designer.webp" alt="Josiah Cole" className="rq-avatar" />
+                  <img src="assets/desiree-cole-webdiva-cape-cod-website-designer.webp" alt="Desiree Cole" className="rq-avatar" />
                 </div>
                 <p className="rq-sidebar-note">Every quote goes through Josiah & Desiree directly. No sales team, no runaround.</p>
                 <div className="rq-sidebar-divider" />

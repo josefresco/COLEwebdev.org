@@ -36,6 +36,7 @@ Redirect stubs (pages with `<meta http-equiv="refresh">`) are skipped and keep a
 ### Rules the build depends on
 - **Unique top-level names across all scripts a page loads.** Files share one global scope, so two files declaring `const useState` (or any same top-level `const`/`let`) is a `SyntaxError` and the build fails with "Identifier '…' has already been declared". Reuse the existing global or rename. (`parts-hero.jsx` already declares `useState`, `useEffect`, `useRef` for every page.)
 - **Mount with `createAppRoot`, not `ReactDOM.createRoot`** (see `mount.jsx`).
+- **Structured data built from page data goes in the render, not an effect.** Use `<JsonLd data={...} />` (and `faqPageSchema(items)` for FAQs) from `parts-rest.jsx`. Anything a `useEffect` adds to `<head>` is invisible to the pre-renderer, so crawlers that don't run JavaScript never see it.
 - **The first render must be deterministic.** It runs at build time and again in the visitor's browser, and the two must match. Read `localStorage`, `window.innerWidth`, `matchMedia`, the current time, `Math.random()`, or fetched data inside `useEffect`, never during render. `npm run verify` catches violations; production React silently keeps mismatched attributes, so don't skip it after nontrivial component changes.
 
 ---
@@ -159,6 +160,19 @@ All shared styles live here. Never create a separate CSS file. Never use CSS-in-
 | `--shadow-sm`, `--shadow-md` | Box shadows |
 
 **Layout:** 1280px max-width `.shell` container. `clamp()` for fluid type. CSS Grid for most layouts.
+
+### Images
+Page images are WebP, sized to about **twice the largest width they display at** (e.g. an image shown at 600px wide → 1200px file). Convert new photos and graphics with:
+```
+cd build
+npm run images -- ../assets/new-photo.jpg --width 1200            # photos
+npm run images -- ../assets/new-chart.png --width 1800 --quality 85  # text-heavy graphics
+```
+This writes `assets/new-photo.webp` next to the original; reference the `.webp` in JSX and CSS.
+
+- **Keep the JPG/PNG original** when it's used for `og:image`, `twitter:image`, or JSON-LD. Social platforms and structured-data consumers handle JPG/PNG more reliably than WebP, so those tags stay on the original file.
+- **Below-the-fold images** get `loading="lazy"`; the hero / first visible image does not.
+- **Large content images** should carry `width` and `height` attributes matching the file's intrinsic size (with CSS `height: auto`) so the page doesn't jump while they load. See `WP_IMAGES` in `whitepaper-page.jsx`.
 
 ### Page-specific styles
 Each page HTML file has an inline `<style>` block. All selectors for that page are namespaced with a 2–3 letter prefix (e.g., `.wh-` for whitepapers, `.lp-` for location pages, `.wp-` for WordPress page, `.hc-` for hosting+care).
@@ -493,4 +507,5 @@ When adding a nav item, update **both** desktop and mobile nav to stay in sync.
   - FAQ page → `FAQPage`
   - About page → `AboutPage`
   - Process page → `HowTo`
+- [ ] Page-specific FAQ schema: render `<JsonLd data={faqPageSchema(faq)} />` in the component; static schema can stay in the HTML `<head>`. Don't emit the same `@type` in both places.
 - [ ] Add to `sitemap.xml`

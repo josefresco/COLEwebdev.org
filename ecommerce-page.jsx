@@ -125,7 +125,7 @@ function EcommercePage() {
 
       {/* Hero */}
       <div className="ec-hero">
-        <img className="ec-hero-img" src="assets/ecommerce-hero.jpg" alt="" aria-hidden="true" />
+        <img className="ec-hero-img" src="assets/ecommerce-hero.webp" alt="" aria-hidden="true" />
         <div className="ec-hero-bg" aria-hidden="true" />
         <div className="ec-hero-content">
           <div className="shell svc-hero-grid">

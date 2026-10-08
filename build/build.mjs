@@ -32,7 +32,7 @@ const BABEL_TAG = /[ \t]*<script src="https:\/\/unpkg\.com\/@babel\/standalone@[
 // Matches both the source form and the built form so the rewrite is idempotent.
 const SCRIPT_TAG = /<script (?:type="text\/babel" src="([\w-]+)\.jsx(?:\?v=\w+)?"|defer src="js\/([\w-]+)\.js(?:\?v=\w+)?")><\/script>/g;
 const ROOT_UNMARKED = /<div id="root"><\/div>(?!<!--\/root-->)/;
-const ROOT_BUILT = /<div id="root">[\s\S]*?<\/div><!--\/root-->/;
+const ROOT_BUILT = /<div id="root">[\s\S]*?<\/div>(?:<!--\/root-->)+/; // tolerate repeated end markers from older builds
 
 // unpkg URL → local file, so pre-rendering is offline and uses the exact same
 // React build the live pages load (verified identical via the SRI hashes).

@@ -100,7 +100,7 @@ window.LOCATIONS_DATA = [
     founderStory: {
       name: 'Desiree Cole',
       role: 'Co-Founder & Designer',
-      img: 'assets/desiree-cole-webdiva-cape-cod-website-designer.jpg',
+      img: 'assets/desiree-cole-webdiva-cape-cod-website-designer.webp',
       headline: 'Wellfleet is where Desiree grew up.',
       body: [
         'COLEwebdev co-founder and lead designer Desiree Cole is a Wellfleet native — raised on the oyster flats and tidal creeks, the drive-in, the galleries, the kind of small community where everyone knows everyone and the character of the place runs unmistakably deep. She graduated from Nauset High School, and her parents and extended family have been in the hospitality industry on Cape Cod for generations, still owning and operating several Cape Cod motels. Growing up watching her family run seasonal accommodations businesses gave Desiree an early, practical education in entrepreneurship — what it takes to build a customer relationship before the guest ever arrives, and how much first impressions matter when your livelihood depends on them.',
@@ -599,7 +599,7 @@ window.LOCATIONS_DATA = [
     founderStory: {
       name: 'Josiah Cole',
       role: 'Co-Founder & Developer',
-      img: 'assets/josiah-cole-cape-cod-website-designer.jpg',
+      img: 'assets/josiah-cole-cape-cod-website-designer.webp',
       headline: 'Truro is where Josiah grew up.',
       body: [
         'COLEwebdev co-founder Josiah Cole is a sixth-generation Truro native — raised where the Cape narrows between bay and ocean, where the light in late afternoon hits the cliffs differently than anywhere else in New England and where the pace of life is something you feel before you can describe it. He graduated from Provincetown High School, and his parents ran a small business in Truro — a carpet and upholstery cleaning company that served homes and businesses across Cape Cod. Watching them build and sustain that business gave Josiah a ground-level education in entrepreneurship — what it takes to earn a customer\'s trust, show up reliably, and build a reputation in a community where word travels fast.',
